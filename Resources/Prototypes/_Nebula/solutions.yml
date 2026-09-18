@@ -1,0 +1,9 @@
+- type: entity
+  parent: Solution
+  id: StainSolution
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    id: stain
+    solution:
+      maxVol: 5

@@ -18,6 +18,7 @@ using Content.Shared.EntityEffects.Effects.Solution;
 using Content.Shared.FixedPoint;
 using Content.Shared.Fluids;
 using Content.Shared.Forensics;
+using Content.Shared.Inventory;
 using Content.Shared.Forensics.Components;
 using Content.Shared.Gibbing;
 using Content.Shared.HealthExaminable;
@@ -48,6 +49,7 @@ public sealed partial class BloodstreamSystem : EntitySystem
     [Dependency] private MobStateSystem _mobStateSystem = default!;
     [Dependency] private DamageableSystem _damageableSystem = default!;
     [Dependency] private MetabolizerSystem _metabolizer = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
 
     public override void Update(float frameTime)
     {
@@ -575,7 +577,33 @@ public sealed partial class BloodstreamSystem : EntitySystem
                         dna.Freshness = now;
                 }
             }
-            // </Goob>
+            // Goobstation end
+
+            // Funky start
+            var stainEv = new SpilledOnEvent(ent.Owner, tempSolution);
+            RaiseLocalEvent(ent.Owner, stainEv);
+
+            // stain neighbors
+            var xform = Transform(ent.Owner);
+            var lookup = _lookup.GetEntitiesInRange(xform.Coordinates, 1.5f);
+            foreach (var uid in lookup)
+            {
+                if (ent.Owner == uid)
+                    continue;
+
+                // only try staining things that have an inventory
+                // event is relayed by InventoryComponent
+                if (!HasComp<InventoryComponent>(ent))
+                    continue;
+
+                var neighborStainEv = new SpilledOnEvent(uid, tempSolution);
+                RaiseLocalEvent(ent, neighborStainEv);
+
+                if (tempSolution.Volume <= 0)
+                    break;
+            }
+            // Funky end
+
             _puddle.TrySpillAt(ent.Owner, tempSolution, out _, sound: false);
 
             tempSolution.RemoveAllSolution();

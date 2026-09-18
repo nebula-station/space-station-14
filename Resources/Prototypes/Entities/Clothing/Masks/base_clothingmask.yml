@@ -50,6 +50,20 @@
   - type: Tag # goob edit
     tags:
     - Mask
+  # Nebula start
+  - type: SolutionManager
+    solutions:
+    - StainSolution
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      mask:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: maskblood
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: maskbloodicon
+  # Nebula end
 
 - type: entity
   abstract: true

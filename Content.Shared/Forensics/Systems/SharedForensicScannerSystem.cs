@@ -31,7 +31,8 @@ public sealed partial class SharedForensicScannerSystem : EntitySystem
     [Dependency] private ForensicsSystem _forensicsSystem = default!;
     [Dependency] private TagSystem _tag = default!;
 
-    private static readonly ProtoId<TagPrototype> DNASolutionScannableTag = "DNASolutionScannable";
+    // Nebula privat >> public
+    public static readonly ProtoId<TagPrototype> DNASolutionScannableTag = "DNASolutionScannable";
 
     [SubscribeLocalEvent]
     private void OnScannerUpdate(Entity<ForensicScannerComponent> scanner, ref AfterAutoHandleStateEvent args)
@@ -107,7 +108,7 @@ public sealed partial class SharedForensicScannerSystem : EntitySystem
     private void OnUtilityVerb(Entity<ForensicScannerComponent> scanner, ref GetVerbsEvent<UtilityVerb> args)
     {
         if (!args.CanInteract || !args.CanAccess)
-                return;
+            return;
 
         var evArgs = args;
 
@@ -128,7 +129,7 @@ public sealed partial class SharedForensicScannerSystem : EntitySystem
     private void OnAfterInteract(Entity<ForensicScannerComponent> scanner, ref AfterInteractEvent args)
     {
         if (args.Target == null || !args.CanReach)
-                return;
+            return;
 
         StartScan(scanner, args.User, args.Target.Value);
     }
@@ -137,7 +138,7 @@ public sealed partial class SharedForensicScannerSystem : EntitySystem
     private void OnAfterInteractUsing(Entity<ForensicScannerComponent> scanner, ref AfterInteractUsingEvent args)
     {
         if (args.Handled || !args.CanReach)
-                return;
+            return;
 
         if (!TryComp<ForensicPadComponent>(args.Used, out var pad))
             return;

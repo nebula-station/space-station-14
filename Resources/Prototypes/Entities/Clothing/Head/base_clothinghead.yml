@@ -27,6 +27,20 @@
     - ClothMade
     - WhitelistChameleon
     - DroneUsable # Goobstation
+  # Nebula start
+  - type: SolutionManager
+    solutions:
+    - StainSolution
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      head:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: helmetblood
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: helmetbloodicon
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -214,6 +228,22 @@
     - HeadSide
     - FacialHair
   - type: FaceHuggerBlocker # Goobstation
+  # Nebula start
+  - type: SolutionManager
+    solutions:
+    - StainSolution
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      head:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: helmetblood
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: helmetbloodicon
+  - type: StainBlocker
+    slots: [MASK]
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -304,3 +334,17 @@
     - Hair
     - HeadTop
     - HeadSide
+  # Nebula start
+  - type: SolutionManager
+    solutions:
+    - StainSolution
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      head:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: helmetblood
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: helmetbloodicon
+  # Nebula end

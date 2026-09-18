@@ -40,6 +40,27 @@
       reagents:
       - ReagentId: Fiber
         Quantity: 30
+  # Nebula start
+  - type: SolutionManager
+    solutions:
+    - StainSolution
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      jumpsuit:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: uniformblood
+    itemVisuals:
+      left:
+      - sprite: _Nebula/Effects/Stains/jumpsuit.rsi
+        state: inhand-right
+      right:
+      - sprite: _Nebula/Effects/Stains/jumpsuit.rsi
+        state: inhand-left
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: uniformbloodicon
+  # Nebula end
   - type: Tag
     tags:
     - ClothMade
@@ -55,6 +76,23 @@
   - type: Clothing
     slots: [innerclothing]
     femaleMask: UniformTop
+  # Nebula start
+  - type: Stainable
+    clothingVisuals:
+      jumpsuit:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: uniformblood
+    itemVisuals:
+      left:
+      - sprite: _Nebula/Effects/Stains/jumpskirt.rsi
+        state: inhand-right
+      right:
+      - sprite: _Nebula/Effects/Stains/jumppskirt.rsi
+        state: inhand-left
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: uniformbloodicon
+  # Nebula end
 
 
 - type: entity
@@ -99,3 +137,20 @@
     foldVerbText: fold-verb-clothing-jacket
   - type: FoldableClothing
     foldedEquippedPrefix: folded
+  # Nebula start
+  - type: Stainable
+    clothingVisuals:
+      jumpsuit:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: uniformblood
+    itemVisuals:
+      left:
+      - sprite: _Nebula/Effects/Stains/jumpskirt.rsi
+        state: inhand-right
+      right:
+      - sprite: _Nebula/Effects/Stains/jumpskirt.rsi
+        state: inhand-left
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: uniformbloodicon
+  # Nebula end

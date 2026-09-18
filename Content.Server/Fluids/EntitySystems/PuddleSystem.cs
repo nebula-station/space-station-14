@@ -4,6 +4,7 @@ using Content.Trauma.Common.Fluids;
 using Robust.Shared.Prototypes;
 // </Trauma>
 using Content.Server.Fluids.Components;
+using Content.Shared.Inventory;
 using Content.Server.Spreader;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
@@ -18,6 +19,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Maps;
 using Content.Shared.Popups;
 using Content.Shared.Slippery;
+using Content.Shared.Standing;
 using Robust.Shared.Collections;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -38,6 +40,11 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
     [Dependency] private SharedSolutionContainerSystem _solutionContainerSystem = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private TurfSystem _turf = default!;
+    // Funky start
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private ReactiveSystem _reactive = default!;
+    [Dependency] private StandingStateSystem _standing = default!;
+    // Funky end
 
     [Dependency] private EntityQuery<PuddleComponent> _puddleQuery = default!;
     [Dependency] private EntityQuery<EvaporationSparkleComponent> _evaporationSparklesQuery = default!;
@@ -457,6 +464,9 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
                     ("target", Identity.Entity(owner, EntityManager))),
                 owner,
                 PopupType.SmallCaution);
+
+            var stainEv = new SpilledOnEvent(owner, splitSolution.Clone()); // Funky
+            RaiseLocalEvent(owner, stainEv); // Funky
         }
 
         _color.RaiseEffect(spilled.GetColor(ProtoMan), targets,
@@ -596,4 +606,87 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
 
         return false;
     }
+
+    // Funky start
+    #region Staining
+
+    [SubscribeLocalEvent]
+    private void OnCrawlInPuddle(Entity<StandingStateComponent> ent, ref MoveEvent args) // Gaby
+    {
+        if (!_standing.IsDown((ent.Owner, ent.Comp)))
+            return;
+
+        var gridUid = args.NewPosition.GetGridUid(EntityManager);
+        if (!gridUid.HasValue || !TryComp<MapGridComponent>(gridUid, out var grid))
+            return;
+
+        if (args.OldPosition.GetGridUid(EntityManager) != gridUid ||
+            _map.CoordinatesToTile(gridUid.Value, grid, args.OldPosition) == _map.CoordinatesToTile(gridUid.Value, grid, args.NewPosition))
+            return;
+
+        var tile = _map.GetTileRef(gridUid.Value, grid, args.NewPosition);
+
+        if (!TryGetPuddle(tile, out var puddleUid) || !_puddleQuery.TryGetComponent(puddleUid, out var puddleComp))
+            return;
+
+        var isSuperSlippery = TryComp<SlipperyComponent>(puddleUid, out var slippery) && slippery.SlipData.SuperSlippery;
+        var slippedEv = new SlippedEvent(puddleUid, isSuperSlippery);
+        RaiseLocalEvent(ent.Owner, slippedEv);
+
+        // Copies a part of OnPuddleSlip
+        if (HasComp<ReactiveComponent>(ent.Owner) && !HasComp<SlidingComponent>(ent.Owner))
+        {
+            if (!_solutionContainerSystem.ResolveSolution(puddleUid, puddleComp.SolutionName, ref puddleComp.Solution, out var solution))
+                return;
+
+            var splitSol = _solutionContainerSystem.SplitSolution(puddleComp.Solution.Value, solution.Volume * 0.15f);
+
+            _reactive.DoEntityReaction(ent.Owner, splitSol, ReactionMethod.Touch);
+        }
+    }
+
+    // Stain when stepping on puddles
+    // FIXME in future
+    // [SubscribeLocalEvent]
+    private void OnStepInPuddle(Entity<InventoryComponent> ent, ref MoveEvent args)
+    {
+        // Only if upright
+        if (_standing.IsDown(ent.Owner))
+            return;
+
+        // Only on tile change
+        var gridUid = args.NewPosition.GetGridUid(EntityManager);
+        if (!gridUid.HasValue || !TryComp<MapGridComponent>(gridUid, out var grid))
+            return;
+
+        if (args.OldPosition.GetGridUid(EntityManager) != gridUid ||
+            _map.CoordinatesToTile(gridUid.Value, grid, args.OldPosition) == _map.CoordinatesToTile(gridUid.Value, grid, args.NewPosition))
+            return;
+
+        var tile = _map.GetTileRef(gridUid.Value, grid, args.NewPosition);
+
+        if (!TryGetPuddle(tile, out var puddleUid) || !_puddleQuery.TryGetComponent(puddleUid, out var puddleComp))
+            return;
+
+        // Logic to stain shoes
+        if (!_solutionContainerSystem.ResolveSolution(puddleUid, puddleComp.SolutionName, ref puddleComp.Solution, out var solution))
+            return;
+
+        if (solution.Volume <= FixedPoint2.Zero)
+            return;
+
+        var transferAmount = FixedPoint2.Min(FixedPoint2.New(1), solution.Volume);
+        var splitSol = _solutionContainerSystem.SplitSolution(puddleComp.Solution.Value, transferAmount);
+
+        // Target shoes using InventorySystem
+        if (_inventory.TryGetSlotEntity(ent.Owner, "shoes", out var shoes))
+        {
+            var spilledEvent = new SpilledOnEvent(puddleUid, splitSol);
+            var relayedEvent = new InventoryRelayedEvent<SpilledOnEvent>(spilledEvent, shoes.Value);
+            RaiseLocalEvent(shoes.Value, relayedEvent);
+        }
+    }
+
+    #endregion
+    // Funky end
 }

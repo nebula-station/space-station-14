@@ -2,6 +2,8 @@ using Content.Shared.DoAfter;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 using Robust.Shared.Serialization;
+using Content.Shared.Inventory;
+using Content.Shared.Chemistry.Components;
 
 namespace Content.Shared.Fluids;
 
@@ -46,3 +48,13 @@ public record struct SprayAttemptEvent(EntityUid? User, bool Cancelled = false, 
         Cancelled = true;
     }
 }
+
+// Funky start
+public sealed partial class SpilledOnEvent(EntityUid source, Solution solution) : EntityEventArgs, IInventoryRelayEvent
+{
+    public SlotFlags TargetSlots { get; } = SlotFlags.WITHOUT_POCKET;
+
+    public EntityUid Source = source;
+    public Solution Solution = solution;
+}
+// Funky end

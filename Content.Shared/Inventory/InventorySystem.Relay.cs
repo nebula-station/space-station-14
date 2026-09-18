@@ -12,6 +12,7 @@ using Content.Shared.Explosion;
 using Content.Shared.Eye.Blinding.Systems;
 using Content.Shared.Flash;
 using Content.Shared.Glue;
+using Content.Shared.Fluids;
 using Content.Shared.Gravity;
 using Content.Shared.IdentityManagement.Components;
 using Content.Shared.Implants;
@@ -68,6 +69,11 @@ public partial class InventorySystem
         SubscribeLocalEvent<InventoryComponent, BeforeEmoteEvent>(RelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, StoodEvent>(RelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, DownedEvent>(RelayInventoryEvent);
+
+        // Funky start
+        SubscribeLocalEvent<InventoryComponent, SlippedEvent>(RelayInventoryEvent);
+        SubscribeLocalEvent<InventoryComponent, SpilledOnEvent>(RelayInventoryEvent);
+        // Funky end
 
         // by-ref events
         SubscribeLocalEvent<InventoryComponent, AccentGetEvent>(RefRelayInventoryEvent);

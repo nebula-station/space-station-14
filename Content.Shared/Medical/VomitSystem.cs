@@ -123,6 +123,11 @@ public sealed partial class VomitSystem : EntitySystem
                 }
             }
 
+            // Funky start
+            var stainEv = new SpilledOnEvent(uid, solution.Clone());
+            RaiseLocalEvent(uid, stainEv);
+            // Nebula end
+
             // Makes a vomit solution the size of 90% of the chemicals removed from the chemstream
             solution.AddReagent(new ReagentId(VomitPrototype, _bloodstream.GetEntityBloodData((uid, bloodStream))), vomitAmount);
         }
