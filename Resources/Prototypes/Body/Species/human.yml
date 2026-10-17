@@ -86,6 +86,8 @@
       Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
     species: Human
+  - type: Sprinter # Nebula change
+    staminaDrainRate: 8
 
 - type: entity
   parent:

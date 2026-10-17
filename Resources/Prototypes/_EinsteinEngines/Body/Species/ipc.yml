@@ -114,6 +114,8 @@
   - type: SwappableInstrument
     instrumentList:
       "Daw": { 0: 0 }
+  - type: Sprinter # Nebula change
+    sprintSpeedMultiplier: 1.2
   - type: UserInterface
     interfaces:
       enum.HumanoidMarkingModifierKey.Key:

@@ -104,6 +104,7 @@ public sealed partial class StationRecordsSystem : EntitySystem
             profile.Name,
             profile.Age,
             profile.Species,
+            profile.CustomSpecies,
             profile.Gender,
             jobId,
             fingerprintComponent?.Fingerprint,
@@ -143,6 +144,7 @@ public sealed partial class StationRecordsSystem : EntitySystem
         string name,
         int age,
         string species,
+        string customspecies, // Nebula
         Gender gender,
         string jobId,
         string? mobFingerprint,
@@ -154,7 +156,7 @@ public sealed partial class StationRecordsSystem : EntitySystem
 
         // when adding a record that already exists use the old one
         // this happens when respawning as the same character
-        if (GetRecordByName(station.AsNullable(), name) is {} id)
+        if (GetRecordByName(station.AsNullable(), name) is { } id)
         {
             SetIdKey(idUid, new StationRecordKey(id, station));
             return;
@@ -175,6 +177,7 @@ public sealed partial class StationRecordsSystem : EntitySystem
             JobIcon = jobPrototype.Icon,
             JobPrototype = jobId,
             Species = species,
+            CustomSpecies = customspecies, // Nebula
             Gender = gender,
             DisplayPriority = displayPriority,
             Fingerprint = mobFingerprint,

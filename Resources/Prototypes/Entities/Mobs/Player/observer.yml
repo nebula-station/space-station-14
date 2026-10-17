@@ -111,6 +111,7 @@
     overlayColor: '#FFFFFF00'
     noiseAmount: 0 # In case default values change
     noiseMultiplier: 0 # In case default values change
+  - type: Sprinter # Nebula change
 
 # proto for player ghosts specifically
 - type: entity

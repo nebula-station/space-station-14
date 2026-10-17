@@ -45,7 +45,7 @@ namespace Content.IntegrationTests.Tests.Preferences
             return new()
             {
                 Name = "Charlie Charlieson",
-                FlavorText = "The biggest boy around.",
+                // FlavorText = "The biggest boy around.", Nebula edit
                 Species = "Human",
                 Age = 21,
                 Appearance = new(

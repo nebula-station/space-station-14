@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Client.UserInterface.Systems.Guidebook;
+using Content.Shared._Nebula.ERP;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Guidebook;
 using Content.Shared.Humanoid;
@@ -47,8 +48,18 @@ public sealed partial class HumanoidProfileEditor
             return;
         }
 
-        PronounsButton.SelectId((int)Profile.Gender);
+        PronounsButton.SelectId((int) Profile.Gender);
     }
+
+    // Nebula start
+    private void UpdateERPStatusControls()
+    {
+        if (Profile == null)
+            return;
+
+        ERPStatusButton.SelectId((int) Profile.ERPStatus);
+    }
+    // Nebula end
 
     private void UpdateAgeEdit()
     {
@@ -80,13 +91,13 @@ public sealed partial class HumanoidProfileEditor
         // add button for each sex
         foreach (var sex in sexes)
         {
-            SexButton.AddItem(Loc.GetString($"humanoid-profile-editor-sex-{sex.ToString().ToLower()}-text"), (int)sex);
+            SexButton.AddItem(Loc.GetString($"humanoid-profile-editor-sex-{sex.ToString().ToLower()}-text"), (int) sex);
         }
 
         if (sexes.Contains(Profile.Sex))
-            SexButton.SelectId((int)Profile.Sex);
+            SexButton.SelectId((int) Profile.Sex);
         else
-            SexButton.SelectId((int)sexes[0]);
+            SexButton.SelectId((int) sexes[0]);
     }
 
     private void UpdateEyePickers()
@@ -114,7 +125,7 @@ public sealed partial class HumanoidProfileEditor
         _voices.AddRange(availableVoices.Select(protoId => _prototypeManager.Index(protoId)));
 
         if (_voices.All(proto => Profile?.Voice != proto.ID))
-            SetVoice(speciesPrototype.DefaultSoundsBySex[(int)Profile.Sex]);
+            SetVoice(speciesPrototype.DefaultSoundsBySex[(int) Profile.Sex]);
 
         for (var i = 0; i < availableVoices.Count; i++)
         {
@@ -139,38 +150,38 @@ public sealed partial class HumanoidProfileEditor
         switch (strategy.InputType)
         {
             case SkinColorationStrategyInput.Unary:
+            {
+                if (!Skin.Visible)
                 {
-                    if (!Skin.Visible)
-                    {
-                        Skin.Visible = true;
-                        RgbSkinColorContainer.Visible = false;
-                    }
-
-                    Skin.Value = strategy.ToUnary(Profile.Appearance.SkinColor);
-
-                    break;
+                    Skin.Visible = true;
+                    RgbSkinColorContainer.Visible = false;
                 }
+
+                Skin.Value = strategy.ToUnary(Profile.Appearance.SkinColor);
+
+                break;
+            }
             case SkinColorationStrategyInput.Color:
-                {
-                    if (!RgbSkinColorContainer.Visible)
-                    {
-                        Skin.Visible = false;
-                        RgbSkinColorContainer.Visible = true;
-                    }
-
-                    _rgbSkinColorSelector.Color = strategy.ClosestSkinColor(Profile.Appearance.SkinColor);
-
-                    break;
-                }
-            // <Trauma>
-            case SkinColorationStrategyInput.NoColor:
+            {
+                if (!RgbSkinColorContainer.Visible)
                 {
                     Skin.Visible = false;
-                    RgbSkinColorContainer.Visible = false;
-                    _markingsModel.SetOrganSkinColor(Color.White);
-                    Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(Color.White));
-                    break;
+                    RgbSkinColorContainer.Visible = true;
                 }
+
+                _rgbSkinColorSelector.Color = strategy.ClosestSkinColor(Profile.Appearance.SkinColor);
+
+                break;
+            }
+            // <Trauma>
+            case SkinColorationStrategyInput.NoColor:
+            {
+                Skin.Visible = false;
+                RgbSkinColorContainer.Visible = false;
+                _markingsModel.SetOrganSkinColor(Color.White);
+                Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(Color.White));
+                break;
+            }
             // </Trauma>
         }
     }
@@ -182,7 +193,7 @@ public sealed partial class HumanoidProfileEditor
             return;
         }
 
-        SpawnPriorityButton.SelectId((int)Profile.SpawnPriority);
+        SpawnPriorityButton.SelectId((int) Profile.SpawnPriority);
     }
 
     /// <summary>
@@ -263,13 +274,23 @@ public sealed partial class HumanoidProfileEditor
 
         // this does the same as above but for voice
         if (_prototypeManager.TryIndex(Profile?.Species, out var prototype))
-            SetVoice(prototype.DefaultSoundsBySex[(int)newSex]);
+            SetVoice(prototype.DefaultSoundsBySex[(int) newSex]);
 
         UpdateGenderControls();
         UpdateVoiceControls();
         _markingsModel.SetOrganSexes(newSex);
         ReloadPreview();
     }
+
+    // Nebula start
+    private void SetERPStatus(ERPStatus newStatus)
+    {
+        Profile = Profile?.WithERPStatus(newStatus);
+        UpdateERPStatusControls();
+
+        SetDirty();
+    }
+    // Nebula end
 
     private void SetVoice(ProtoId<EmoteSoundsPrototype> newVoice)
     {
@@ -320,35 +341,35 @@ public sealed partial class HumanoidProfileEditor
         switch (strategy.InputType)
         {
             case SkinColorationStrategyInput.Unary:
+            {
+                if (!Skin.Visible)
                 {
-                    if (!Skin.Visible)
-                    {
-                        Skin.Visible = true;
-                        RgbSkinColorContainer.Visible = false;
-                    }
-
-                    var color = strategy.FromUnary(Skin.Value);
-
-                    _markingsModel.SetOrganSkinColor(color);
-                    Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
-
-                    break;
+                    Skin.Visible = true;
+                    RgbSkinColorContainer.Visible = false;
                 }
+
+                var color = strategy.FromUnary(Skin.Value);
+
+                _markingsModel.SetOrganSkinColor(color);
+                Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
+
+                break;
+            }
             case SkinColorationStrategyInput.Color:
+            {
+                if (!RgbSkinColorContainer.Visible)
                 {
-                    if (!RgbSkinColorContainer.Visible)
-                    {
-                        Skin.Visible = false;
-                        RgbSkinColorContainer.Visible = true;
-                    }
-
-                    var color = strategy.ClosestSkinColor(_rgbSkinColorSelector.Color);
-
-                    _markingsModel.SetOrganSkinColor(color);
-                    Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
-
-                    break;
+                    Skin.Visible = false;
+                    RgbSkinColorContainer.Visible = true;
                 }
+
+                var color = strategy.ClosestSkinColor(_rgbSkinColorSelector.Color);
+
+                _markingsModel.SetOrganSkinColor(color);
+                Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
+
+                break;
+            }
         }
 
         ReloadProfilePreview();

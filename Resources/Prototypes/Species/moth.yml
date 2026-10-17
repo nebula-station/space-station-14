@@ -16,3 +16,11 @@
   - UnisexMoth
   voices:
   - UnisexMoth
+  # Nebula start
+  minHeight: 0.8
+  defaultHeight: 1
+  maxHeight: 1.20
+  minWidth: 0.80
+  defaultWidth: 1
+  maxWidth: 1.25
+  # Nebula end

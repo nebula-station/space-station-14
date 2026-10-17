@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Common.Barks;
+using Content.Shared._Nebula.DetailExaminable;
 using Content.Shared.Body;
-using Content.Shared.DetailExaminable;
 using Content.Shared.Preferences;
 using Content.Trauma.Common.Knowledge;
 using Content.Trauma.Common.Knowledge.Systems;
@@ -79,15 +79,20 @@ public sealed partial class HumanoidProfileSystem
             !_visualBody.TryGatherMarkingsData(ent.Owner, null, out var organs, out _, out var markings))
             return null;
 
-        var flavortext = CompOrNull<DetailExaminableComponent>(ent)?.Content ?? string.Empty;
         // THANK YOU FOR NOT STORING THESE ANYWHERE!!!!!
         var eyeColor = GetEyeColor(organs) ?? Color.Black;
         var skinColor = GetSkinColor(organs) ?? Color.White; // curse of yakub
         var appearance = new HumanoidCharacterAppearance(eyeColor, skinColor, markings);
         return new HumanoidCharacterProfile(
             Name(ent),
-            flavortext,
             ent.Comp.Species,
+            // Nebula start
+            ent.Comp.Height,
+            ent.Comp.Width,
+            ent.Comp.CustomSpecies,
+            ent.Comp.DetailExaminableData,
+            ent.Comp.ERPStatus,
+            // Nebula end
             ent.Comp.Age,
             ent.Comp.Sex,
             ent.Comp.Voice,
@@ -135,7 +140,7 @@ public sealed partial class HumanoidProfileSystem
     public void SetEyeColor(EntityUid mob, Color color)
     {
         if (!TryComp<BodyComponent>(mob, out var body) ||
-            _body.GetOrgan(mob, EyesCategory) is not {} eyes ||
+            _body.GetOrgan(mob, EyesCategory) is not { } eyes ||
             !TryComp<VisualOrganComponent>(eyes, out var visual) ||
             visual.Profile.EyeColor == color)
             return;

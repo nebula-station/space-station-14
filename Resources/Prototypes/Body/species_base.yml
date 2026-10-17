@@ -199,6 +199,7 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
+  - type: ERPManager # Nebula
 
 - type: entity
   abstract: true

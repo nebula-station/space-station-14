@@ -1,3 +1,5 @@
+using Content.Shared._Nebula.DetailExaminable;
+using Content.Shared._Nebula.ERP;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
@@ -31,6 +33,23 @@ public sealed partial class HumanoidProfileComponent : Component
 
     [DataField, AutoNetworkedField]
     public int Age = 18;
+
+    // Nebula start
+    [DataField, AutoNetworkedField]
+    public float Height;
+
+    [DataField, AutoNetworkedField]
+    public float Width;
+
+    [DataField, AutoNetworkedField]
+    public string CustomSpecies = string.Empty;
+
+    [DataField, AutoNetworkedField]
+    public DetailExaminableData DetailExaminableData = new();
+
+    [DataField, AutoNetworkedField]
+    public ERPStatus ERPStatus = ERPStatus.Ask;
+    // Nebula end
 
     [DataField, AutoNetworkedField]
     public ProtoId<SpeciesPrototype> Species = HumanoidCharacterProfile.DefaultSpecies;

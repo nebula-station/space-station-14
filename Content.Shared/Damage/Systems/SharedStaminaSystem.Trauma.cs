@@ -43,4 +43,17 @@ public abstract partial class SharedStaminaSystem
 
         Dirty(target, stamina);
     }
+
+    // Nebula start
+    public void ModifyStaminaDrain(EntityUid target, string key, float newValue, StaminaComponent? component = null)
+    {
+        if (!Resolve(target, ref component, false))
+            return;
+
+        if (component.ActiveDrains.ContainsKey(key))
+            component.ActiveDrains[key] = (newValue, component.ActiveDrains[key].Item2, component.ActiveDrains[key].Item3, component.ActiveDrains[key].Item4);
+
+        Dirty(target, component);
+    }
+    // Nebula end
 }
