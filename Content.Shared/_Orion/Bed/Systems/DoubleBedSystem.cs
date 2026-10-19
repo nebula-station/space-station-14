@@ -8,11 +8,11 @@ using Content.Shared.Tag;
 
 namespace Content.Shared._Orion.Bed.Systems;
 
-public sealed class DoubleBedSystem : EntitySystem
+public sealed partial class DoubleBedSystem : EntitySystem
 {
-    [Dependency] private readonly TagSystem _tagSystem = default!;
-    [Dependency] private readonly PlaceableSurfaceSystem _placeableSurface = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private TagSystem _tagSystem = default!;
+    [Dependency] private PlaceableSurfaceSystem _placeableSurface = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
 
     public override void Initialize()
     {
