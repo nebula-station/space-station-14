@@ -15,10 +15,9 @@
       NitrousOxide: stationNO
       Frezon: danger
       BZ: danger
-      Healium: ignore 
+      Healium: ignore
       Nitrium: danger
       Pluoxium: ignore
-      Aphrodisiac: ignore
 
 - type: entity
   parent: [AirSensorVaporBase, AirSensor]
