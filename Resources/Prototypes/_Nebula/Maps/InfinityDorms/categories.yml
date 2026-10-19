@@ -1,7 +1,11 @@
 - type: infinityDormRoomCategory
-  id: Warm
-  color: "#978d33aa"
+  id: General
+  color: "#7c4f1caa"
 
 - type: infinityDormRoomCategory
-  id: Cold
-  color: "#557e7eaa"
+  id: Unusual
+  color: "#801e37aa"
+
+- type: infinityDormRoomCategory
+  id: Exotic
+  color: "#1c772caa"

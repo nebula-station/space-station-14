@@ -53,13 +53,3 @@ infinity-dorm-teleporter-popup-client-pidor = Ну ты тоже не ахуев
 infinity-dorm-teleporter-popup-rate-limit = Слишком часто. Попробуйте немножко позже
 
 infinity-dorm-teleporter-popup-closed = Данные дормы закрыты
-
-infinity-dorm-avrora-name = Аврора
-
-
-infinity-dorm-category-name-warm = Тёплое
-infinity-dorm-category-name-cold = Холодное
-
-infinity-dorm-room-name-aurora = Аврора
-infinity-dorm-room-desc-aurora = Просторный зимний номер с уютным местом у камина.
-
