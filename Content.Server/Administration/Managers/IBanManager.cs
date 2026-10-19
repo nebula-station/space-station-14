@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
+using Content.Server._Nebula.Discord;
 using Content.Shared.Database;
 using Content.Shared.Roles;
 using Robust.Shared.Network;
@@ -77,7 +78,7 @@ public interface IBanManager
 /// </summary>
 /// <seealso cref="CreateServerBanInfo"/>
 /// <seealso cref="CreateRoleBanInfo"/>
-[Access(typeof(BanManager), Other = AccessPermissions.Execute)]
+[Access(typeof(BanManager), typeof(NebulaWebhooks), Other = AccessPermissions.Execute)] // Nebula add webhooks
 public abstract class CreateBanInfo
 {
     [Access(Other = AccessPermissions.Read)]
@@ -222,7 +223,7 @@ public abstract class CreateBanInfo
     public CreateBanInfo WithMinutes(int minutes)
     {
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(minutes);
-        return WithMinutes((uint)minutes);
+        return WithMinutes((uint) minutes);
     }
 
     /// <summary>

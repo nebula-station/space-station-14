@@ -91,6 +91,10 @@ namespace Content.Server.Database
                 .Property(log => log.Markings)
                 .HasConversion(jsonByteArrayConverter);
 
+            modelBuilder.Entity<Profile>() // Nebula edit
+                .Property(log => log.DetailExaminable)
+                .HasConversion(jsonByteArrayConverter);
+
             modelBuilder.Entity<Profile>()
                 .Property(log => log.OrganMarkings)
                 .HasConversion(jsonByteArrayConverter);

@@ -20,8 +20,8 @@ public static class ClientPackaging
         if (!skipBuild)
         {
             // <Trauma> - replaced copypaste with module helper method
-            await ModulePackaging.BuildModules("Client", configuration, logBuild,
-                extraFlags: [ "-p:ExtraDefineConstants=USE_ROBUST", "-p:NuGetAudit=false" ]); // audit is done by regular builds, RT being fucked is not my problem
+            // Nebula
+            await ModulePackaging.BuildModules("Client", configuration, logBuild);
             // </Trauma>
         }
 

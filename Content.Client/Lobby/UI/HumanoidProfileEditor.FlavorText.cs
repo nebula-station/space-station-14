@@ -1,5 +1,6 @@
+using Content.Client.FlavorText;
+using Content.Shared._Nebula.DetailExaminable;
 using Robust.Client.UserInterface.Controls;
-using Robust.Shared.Utility;
 
 namespace Content.Client.Lobby.UI;
 
@@ -8,7 +9,6 @@ public sealed partial class HumanoidProfileEditor
     private bool _allowFlavorText;
 
     private FlavorText.FlavorText? _flavorText;
-    private TextEdit? _flavorTextEdit;
 
     /// <summary>
     /// Refreshes the flavor text editor status.
@@ -23,38 +23,37 @@ public sealed partial class HumanoidProfileEditor
             _flavorText = new FlavorText.FlavorText();
             TabContainer.AddChild(_flavorText);
             TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
-            _flavorTextEdit = _flavorText.CFlavorTextInput;
 
-            _flavorText.OnFlavorTextChanged += OnFlavorTextChange;
+            _flavorText.OnTextChanged += OnFlavorFieldChanged; // Nebula edit
         }
         else
         {
             if (_flavorText == null)
                 return;
 
+            // Nebula start
+            _flavorText.OnTextChanged -= OnFlavorFieldChanged;
+
             TabContainer.RemoveChild(_flavorText);
-            _flavorText.OnFlavorTextChanged -= OnFlavorTextChange;
             _flavorText.Dispose();
-            _flavorTextEdit?.Dispose();
-            _flavorTextEdit = null;
             _flavorText = null;
+            // Nebula end
         }
     }
 
-    private void OnFlavorTextChange(string content)
+    // Nebula start
+    private void OnFlavorFieldChanged(FlavorTextField field, string text)
     {
-        if (Profile is null)
+        if (Profile == null)
             return;
 
-        Profile = Profile.WithFlavorText(content);
-        SetDirty();
+        Profile = Profile.WithDetailExaminableData(Profile.DetailExaminableData.CopyWithChangedField(field, text));
+        SetDirty(); ;
     }
 
     private void UpdateFlavorTextEdit()
     {
-        if (_flavorTextEdit != null)
-        {
-            _flavorTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
-        }
+        _flavorText?.SetData(Profile?.DetailExaminableData ?? new DetailExaminableData());
     }
+    // Nebula end
 }

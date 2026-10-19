@@ -61,6 +61,8 @@
     suffocationThreshold: -5
   - type: StepTriggerImmune
   - type: NoSlip
+  - type: Sprinter # Nebula change
+    staminaDrainRate: 8
   - type: Puller
     needsHands: false
   - type: Targeting

@@ -195,4 +195,22 @@ public sealed partial class TraumaCVars
         CVarDef.Create("trauma.special_audio_volume", 1f, CVar.ARCHIVE | CVar.CLIENTONLY);
 
     #endregion
+
+    // Nebula start
+    #region ShitCode
+
+    /// <summary>
+    ///     Are height/width sliders enabled
+    /// </summary>
+    public static readonly CVarDef<bool> HeightSliders =
+        CVarDef.Create("trauma.height_sliders_enabled", true, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
+    ///     Is sprinting enabled
+    /// </summary>
+    public static readonly CVarDef<bool> SprintEnabled =
+        CVarDef.Create("trauma.sprint_enabled", true, CVar.SERVER | CVar.REPLICATED);
+
+    #endregion
+    // Nebula end
 }

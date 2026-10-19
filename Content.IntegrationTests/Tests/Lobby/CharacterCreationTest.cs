@@ -114,7 +114,7 @@ public sealed class CharacterCreationTest : GameTest
             Assert.That(a.Species, Is.EqualTo(b.Species));
             Assert.That(a.PreferenceUnavailable, Is.EqualTo(b.PreferenceUnavailable));
             Assert.That(a.SpawnPriority, Is.EqualTo(b.SpawnPriority));
-            Assert.That(a.FlavorText, Is.EqualTo(b.FlavorText));
+            // Assert.That(a.FlavorText, Is.EqualTo(b.FlavorText)); Nebula
             Assert.That(a.JobPriorities, Is.EquivalentTo(b.JobPriorities));
             Assert.That(a.AntagPreferences, Is.EquivalentTo(b.AntagPreferences));
             Assert.That(a.TraitPreferences, Is.EquivalentTo(b.TraitPreferences));

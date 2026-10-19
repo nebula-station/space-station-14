@@ -5,7 +5,6 @@
   id: FleshMimic
   components:
   # general
-  - DetailExaminable
   - Dna
   - Fingerprint
   - RandomSprite

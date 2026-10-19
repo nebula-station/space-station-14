@@ -8,6 +8,7 @@
   components:
   - type: NeedsTongue # almost all humanoids need to have a tongue to speak
   - type: EatingNeedsOrgan # need a mouth/head to eat
+  - type: Sprinter # Nebula
 
 - type: entity
   abstract: true

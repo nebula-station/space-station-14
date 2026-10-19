@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Shared.Administration;
+using Content.Server._Nebula.Discord;
 using Content.Server.Administration;
 using Content.Server.Administration.Commands;
 using Content.Server.Administration.Managers;
@@ -17,6 +18,7 @@ public sealed partial class TimeTransferPanelEui : BaseEui
     [Dependency] private ILogManager _log = default!;
     [Dependency] private IPlayerLocator _playerLocator = default!;
     [Dependency] private IServerDbManager _databaseMan = default!;
+    [Dependency] private NebulaWebhooks _webhooks = default!; // Nebula edit
 
     private readonly ISawmill _sawmill;
 
@@ -70,10 +72,12 @@ public sealed partial class TimeTransferPanelEui : BaseEui
     {
         var updateList = new List<PlayTimeUpdate>();
 
+        Dictionary<string, TimeSpan> changedData = []; // Nebula edit
         foreach (var data in timeData)
         {
             var time = TimeSpan.FromMinutes(PlayTimeCommandUtilities.CountMinutes(data.TimeString));
             updateList.Add(new PlayTimeUpdate(userId, data.PlaytimeTracker, time));
+            changedData.Add(data.PlaytimeTracker, time); // Nebula edit
         }
 
         await _databaseMan.UpdatePlayTimes(updateList);
@@ -81,6 +85,8 @@ public sealed partial class TimeTransferPanelEui : BaseEui
         _sawmill.Info($"{Player.Name} ({Player.UserId} saved {updateList.Count} trackers for {userId})");
 
         SendMessage(new TimeTransferWarningEuiMessage(Loc.GetString("time-transfer-panel-warning-set-success"), Color.LightGreen));
+
+        _webhooks.SendTimeChangedMessage(Player.UserId, userId, changedData, true); // Nebula edit
     }
 
     public async void AddTime(NetUserId userId, List<TimeTransferData> timeData)
@@ -96,9 +102,11 @@ public sealed partial class TimeTransferPanelEui : BaseEui
 
         var updateList = new List<PlayTimeUpdate>();
 
+        Dictionary<string, TimeSpan> changedData = []; // Nebula edit
         foreach (var data in timeData)
         {
             var time = TimeSpan.FromMinutes(PlayTimeCommandUtilities.CountMinutes(data.TimeString));
+            changedData.Add(data.PlaytimeTracker, time); // Nebula edit
             if (playTimeDict.TryGetValue(data.PlaytimeTracker, out var addTime))
                 time += addTime;
 
@@ -110,6 +118,8 @@ public sealed partial class TimeTransferPanelEui : BaseEui
         _sawmill.Info($"{Player.Name} ({Player.UserId} saved {updateList.Count} trackers for {userId})");
 
         SendMessage(new TimeTransferWarningEuiMessage(Loc.GetString("time-transfer-panel-warning-add-success"), Color.LightGreen));
+
+        _webhooks.SendTimeChangedMessage(Player.UserId, userId, changedData); // Nebula edit
     }
 
     public override async void Opened()

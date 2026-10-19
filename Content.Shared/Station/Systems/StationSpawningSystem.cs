@@ -8,7 +8,6 @@ using Content.Shared.Access.Systems;
 using Content.Shared.Body;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
-using Content.Shared.DetailExaminable;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Humanoid;
@@ -376,11 +375,6 @@ public sealed partial class StationSpawningSystem : EntitySystem
             _visualBody.ApplyProfileTo(entity.Value, profile);
             _humanoidProfile.ApplyProfileTo(entity.Value, profile);
             _metadata.SetEntityName(entity.Value, profile.Name);
-
-            if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
-            {
-                AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
-            }
         }
 
         if (loadout != null)

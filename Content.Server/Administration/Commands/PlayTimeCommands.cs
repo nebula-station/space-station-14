@@ -1,3 +1,4 @@
+using Content.Server._Nebula.Discord;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Shared.Administration;
 using Content.Shared.Players.PlayTimeTracking;
@@ -146,6 +147,7 @@ public sealed partial class PlayTimeAddRoleCommand : IConsoleCommand
 {
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private PlayTimeTrackingManager _playTimeTracking = default!;
+    [Dependency] private NebulaWebhooks _webhooks = default!; // Nebula edit
 
     public string Command => "playtime_addrole";
     public string Description => Loc.GetString("cmd-playtime_addrole-desc");
@@ -169,6 +171,7 @@ public sealed partial class PlayTimeAddRoleCommand : IConsoleCommand
         var role = args[1];
 
         var m = PlayTimeCommandUtilities.CountMinutes(args[2]);
+        var timeSpan = TimeSpan.FromMinutes(m); // Nebula edit
 
         _playTimeTracking.AddTimeToTracker(player, role, TimeSpan.FromMinutes(m));
         var time = _playTimeTracking.GetPlayTimeForTracker(player, role);
@@ -176,6 +179,12 @@ public sealed partial class PlayTimeAddRoleCommand : IConsoleCommand
             ("username", userName),
             ("role", role),
             ("time", time)));
+
+        // Nebula start
+        Dictionary<string, TimeSpan> pairs = new() { { role, timeSpan } };
+        if (shell.Player != null)
+            _webhooks.SendTimeChangedMessage(shell.Player.UserId, player.UserId, pairs);
+        // Nebula end
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

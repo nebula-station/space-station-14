@@ -12,6 +12,7 @@ using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences.Loadouts;
+using Content.Shared.Random.Helpers;
 using Content.Shared.Roles;
 using Content.Shared.Speech.Components;
 using Content.Shared.Traits;
@@ -27,6 +28,9 @@ using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 using Robust.Shared;
 using YamlDotNet.RepresentationModel;
+using Content.Shared._Nebula.CCVar;
+using Content.Shared._Nebula.DetailExaminable;
+using Content.Shared._Nebula.ERP;
 
 namespace Content.Shared.Preferences
 {
@@ -77,12 +81,6 @@ namespace Content.Shared.Preferences
         public string Name { get; set; } = "John Doe";
 
         /// <summary>
-        /// Detailed text that can appear for the character if <see cref="CCVars.FlavorText"/> is enabled.
-        /// </summary>
-        [DataField]
-        public string FlavorText { get; set; } = string.Empty;
-
-        /// <summary>
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
         /// </summary>
         [DataField]
@@ -99,6 +97,23 @@ namespace Content.Shared.Preferences
 
         [DataField]
         public Gender Gender { get; private set; } = Gender.Male;
+
+        // Nebula start
+        [DataField]
+        public float Height { get; private set; }
+
+        [DataField]
+        public float Width { get; private set; }
+
+        [DataField]
+        public DetailExaminableData DetailExaminableData = new();
+
+        [DataField]
+        public string CustomSpecies { get; set; } = string.Empty;
+
+        [DataField]
+        public ERPStatus ERPStatus { get; set; } = ERPStatus.Ask;
+        //  Nebula end
 
         /// <summary>
         /// Stores markings, eye colors, etc for the profile.
@@ -135,8 +150,14 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode.SpawnAsOverflow;
         public HumanoidCharacterProfile(
             string name,
-            string flavortext,
             string species,
+            // Nebula start
+            float height,
+            float width,
+            string customspecies,
+            DetailExaminableData detailExaminable,
+            ERPStatus erpStatus,
+            // Nebula end
             int age,
             Sex sex,
             ProtoId<EmoteSoundsPrototype> voice,
@@ -151,11 +172,17 @@ namespace Content.Shared.Preferences
             // <Trauma>
             ProtoId<BarkPrototype> barkVoice,
             KnowledgeProfile knowledge)
-            // </Trauma>
+        // </Trauma>
         {
             Name = name;
-            FlavorText = flavortext;
             Species = species;
+            // Nebula start
+            Height = height;
+            Width = width;
+            CustomSpecies = customspecies;
+            DetailExaminableData = detailExaminable;
+            ERPStatus = erpStatus;
+            // Nebula end
             Age = age;
             Sex = sex;
             Voice = voice;
@@ -190,8 +217,14 @@ namespace Content.Shared.Preferences
         /// <summary>Copy constructor</summary>
         public HumanoidCharacterProfile(HumanoidCharacterProfile other)
             : this(other.Name,
-                other.FlavorText,
                 other.Species,
+                // Nebula start
+                other.Height,
+                other.Width,
+                other.CustomSpecies,
+                other.DetailExaminableData,
+                other.ERPStatus,
+                // Nebula end
                 other.Age,
                 other.Sex,
                 other.Voice,
@@ -206,7 +239,7 @@ namespace Content.Shared.Preferences
                 // <Trauma>
                 other.BarkVoice,
                 other.Knowledge)
-                // </Trauma>
+        // </Trauma>
         {
         }
 
@@ -285,6 +318,17 @@ namespace Content.Shared.Preferences
                 .Where(x => ignoredSpecies == null ? x.RoundStart : x.RoundStart && !ignoredSpecies.Contains(x.ID))
                 .ToArray();
             var species = random.Pick(pool);
+
+            // Nebula start
+            var height = 1f;
+            var width = 1f;
+            if (prototypeManager.TryIndex<SpeciesPrototype>(species, out var speciesPrototype))
+            {
+                height = random.NextFloat(speciesPrototype.MinHeight, speciesPrototype.MaxHeight); // Nebula changes
+                width = random.NextFloat(speciesPrototype.MinWidth, speciesPrototype.MaxWidth); // Nebula changes
+            }
+            // Nebula end
+
             return species;
         }
 
@@ -381,7 +425,7 @@ namespace Content.Shared.Preferences
             var speciesProto = prototypeManager.Index(profile.Species);
 
             profile.Sex = (randomizeCfg & RandomizeCfg.Sex) != 0 ? RandomSex(speciesProto) : baseProfile.Sex;
-            profile.Voice = speciesProto.DefaultSoundsBySex[(int)profile.Sex];
+            profile.Voice = speciesProto.DefaultSoundsBySex[(int) profile.Sex];
             profile.Gender = (randomizeCfg & RandomizeCfg.Gender) != 0 ? RandomGender(profile.Sex) : baseProfile.Gender;
             profile.Name = (randomizeCfg & RandomizeCfg.Name) != 0 ? RandomName(speciesProto, profile.Gender) : baseProfile.Name;
             profile.Age = (randomizeCfg & RandomizeCfg.Age) != 0 ? RandomAge(speciesProto) : baseProfile.Age;
@@ -415,11 +459,22 @@ namespace Content.Shared.Preferences
             return new(this) { Name = name };
         }
 
-        public HumanoidCharacterProfile WithFlavorText(string flavorText)
+        // Nebula start
+        public HumanoidCharacterProfile WithCustomSpecies(string customspecies)
         {
-            return new(this) { FlavorText = flavorText };
+            return new(this) { CustomSpecies = customspecies };
         }
 
+        public HumanoidCharacterProfile WithDetailExaminableData(DetailExaminableData data)
+        {
+            return new(this) { DetailExaminableData = data };
+        }
+
+        public HumanoidCharacterProfile WithERPStatus(ERPStatus status)
+        {
+            return new(this) { ERPStatus = status };
+        }
+        // Nebula end
         public HumanoidCharacterProfile WithAge(int age)
         {
             return new(this) { Age = age };
@@ -444,6 +499,17 @@ namespace Content.Shared.Preferences
         {
             return new(this) { Species = species };
         }
+
+        // Nebula start
+        public HumanoidCharacterProfile WithHeight(float height)
+        {
+            return new(this) { Height = height };
+        }
+        public HumanoidCharacterProfile WithWidth(float width)
+        {
+            return new(this) { Width = width };
+        }
+        // Nebula end
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -643,13 +709,19 @@ namespace Content.Shared.Preferences
             if (BarkVoice != other.BarkVoice) return false;
             if (!Knowledge.MemberwiseEquals(other.Knowledge)) return false;
             // </Trauma>
+            // Nebula start
+            if (Height != other.Height) return false;
+            if (Width != other.Width) return false;
+            if (CustomSpecies != other.CustomSpecies) return false;
+            if (!DetailExaminableData.Equals(other.DetailExaminableData)) return false;
+            if (ERPStatus != other.ERPStatus) return false;
+            // Nebula end
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
             if (!_antagPreferences.SequenceEqual(other._antagPreferences)) return false;
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
-            if (FlavorText != other.FlavorText) return false;
             return Appearance.Equals(other.Appearance);
         }
 
@@ -674,7 +746,7 @@ namespace Content.Shared.Preferences
 
             var voice = Voice;
             if (!speciesPrototype.Voices.Contains(voice))
-                voice = speciesPrototype.DefaultSoundsBySex[(int)sex];
+                voice = speciesPrototype.DefaultSoundsBySex[(int) sex];
 
             // ensure the species can be that sex and their age fits the founds
             if (!speciesPrototype.Sexes.Contains(sex))
@@ -725,17 +797,30 @@ namespace Content.Shared.Preferences
                 name = GetName(Species, gender);
             }
 
+            // Nebula start
+            var height = Height;
+            if (speciesPrototype != null)
+                height = Math.Clamp(Height, speciesPrototype.MinHeight, speciesPrototype.MaxHeight);
 
-            string flavortext;
-            var maxFlavorTextLength = configManager.GetCVar(CCVars.MaxFlavorTextLength);
-            if (FlavorText.Length > maxFlavorTextLength)
-            {
-                flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText)[..maxFlavorTextLength];
-            }
+            var width = Width;
+            if (speciesPrototype != null)
+                width = Math.Clamp(Width, speciesPrototype.MinWidth, speciesPrototype.MaxWidth);
+
+            var customSpeciesMaxLength = configManager.GetCVar(NCCVars.MaxCustomSpeciesLength);
+            string customSpecies;
+            if (CustomSpecies.Length > customSpeciesMaxLength)
+                customSpecies = FormattedMessage.RemoveMarkupOrThrow(CustomSpecies)[..customSpeciesMaxLength];
             else
+                customSpecies = FormattedMessage.RemoveMarkupOrThrow(CustomSpecies);
+
+            var erpStatus = ERPStatus switch
             {
-                flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
-            }
+                ERPStatus.Ask => ERPStatus.Ask,
+                ERPStatus.Full => ERPStatus.Full,
+                ERPStatus.Never => ERPStatus.Never,
+                _ => ERPStatus.Ask
+            };
+            // Nebula end
 
             var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex);
 
@@ -784,8 +869,14 @@ namespace Content.Shared.Preferences
                          .ToList();
 
             Name = name;
-            FlavorText = flavortext;
             Age = age;
+            // Nebula start
+            Height = height;
+            Width = width;
+            CustomSpecies = customSpecies;
+            DetailExaminableData = DetailExaminableData.Sanitized(configManager);
+            ERPStatus = erpStatus;
+            // Nebula end
             Sex = sex;
             Voice = voice;
             Gender = gender;
@@ -906,19 +997,25 @@ namespace Content.Shared.Preferences
             hashCode.Add(_traitPreferences);
             hashCode.Add(_loadouts);
             hashCode.Add(Name);
-            hashCode.Add(FlavorText);
             hashCode.Add(Species);
+            // Nebula start
+            hashCode.Add(Height);
+            hashCode.Add(Width);
+            hashCode.Add(CustomSpecies);
+            hashCode.Add(DetailExaminableData);
+            hashCode.Add(ERPStatus);
+            // Nebula end
             hashCode.Add(Age);
-            hashCode.Add((int)Sex);
+            hashCode.Add((int) Sex);
             hashCode.Add(Voice);
-            hashCode.Add((int)Gender);
+            hashCode.Add((int) Gender);
             hashCode.Add(Appearance);
             // <Trauma>
             hashCode.Add(BarkVoice);
             hashCode.Add(Knowledge);
             // </Trauma>
-            hashCode.Add((int)SpawnPriority);
-            hashCode.Add((int)PreferenceUnavailable);
+            hashCode.Add((int) SpawnPriority);
+            hashCode.Add((int) PreferenceUnavailable);
             return hashCode.ToHashCode();
         }
 

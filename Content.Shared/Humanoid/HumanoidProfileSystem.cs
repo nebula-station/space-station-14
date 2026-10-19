@@ -27,6 +27,13 @@ public sealed partial class HumanoidProfileSystem : EntitySystem
         ent.Comp.Age = profile.Age;
         ent.Comp.Species = profile.Species;
         ent.Comp.Voice = profile.Voice;
+        // Nebula start
+        ent.Comp.Height = profile.Height;
+        ent.Comp.Width = profile.Width;
+        ent.Comp.CustomSpecies = profile.CustomSpecies;
+        ent.Comp.DetailExaminableData = profile.DetailExaminableData;
+        ent.Comp.ERPStatus = profile.ERPStatus;
+        // Nebula end
         ent.Comp.Sex = profile.Sex;
         Dirty(ent);
         // <Trauma>
@@ -46,7 +53,7 @@ public sealed partial class HumanoidProfileSystem : EntitySystem
     private void OnExamined(Entity<HumanoidProfileComponent> ent, ref ExaminedEvent args)
     {
         var identity = Identity.Entity(ent, EntityManager);
-        var species = GetSpeciesRepresentation(ent.Comp.Species).ToLower();
+        var species = GetSpeciesRepresentation(ent.Comp.Species, ent.Comp.CustomSpecies).ToLower(); // Nebula edit
         var age = GetAgeRepresentation(ent.Comp.Species, ent.Comp.Age);
 
         args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));
@@ -55,10 +62,17 @@ public sealed partial class HumanoidProfileSystem : EntitySystem
     /// <summary>
     /// Takes ID of the species prototype, returns UI-friendly name of the species.
     /// </summary>
-    public string GetSpeciesRepresentation(ProtoId<SpeciesPrototype> species)
+    public string GetSpeciesRepresentation(ProtoId<SpeciesPrototype> species, string customSpecies) // Nebula edit
     {
+        // Nebula start
         if (ProtoMan.TryIndex(species, out var speciesPrototype))
-            return Loc.GetString(speciesPrototype.Name);
+        {
+            if (string.IsNullOrEmpty(customSpecies))
+                return Loc.GetString(speciesPrototype.Name);
+            else
+                return customSpecies;
+        }
+        // Nebula end
 
         Log.Error($"Tried to get representation of unknown species: {species}"); // Trauma - fix it being unformatted
         return Loc.GetString("humanoid-appearance-component-unknown-species");

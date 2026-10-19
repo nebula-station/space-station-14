@@ -9,6 +9,7 @@ using Robust.Server.Player;
 using Robust.Shared.Network;
 using DbAdminRank = Content.Server.Database.AdminRank;
 using static Content.Shared.Administration.PermissionsEuiMsg;
+using Content.Server._Nebula.Discord;
 
 
 namespace Content.Server.Administration.UI
@@ -19,6 +20,7 @@ namespace Content.Server.Administration.UI
         [Dependency] private IServerDbManager _db = default!;
         [Dependency] private IAdminManager _adminManager = default!;
         [Dependency] private ILogManager _logManager = default!;
+        [Dependency] private NebulaWebhooks _webhooks = default!; // Nebula edit
 
         private readonly ISawmill _sawmill;
         private bool _isLoading;
@@ -154,6 +156,8 @@ namespace Content.Server.Administration.UI
             await _db.RemoveAdminRankAsync(rr.Id);
 
             _adminManager.ReloadAdminsWithRank(rr.Id);
+
+            _webhooks.SendRankDeletedMessage(Player.UserId, rank); // Nebula edit
         }
 
         private async Task HandleUpdateAdminRank(UpdateAdminRank ur)
@@ -176,6 +180,17 @@ namespace Content.Server.Administration.UI
                 return;
             }
 
+            // Nebula start
+            DbAdminRank oldRank = new()
+            {
+                Id = rank.Id,
+                Flags = rank.Flags,
+                Name = rank.Name,
+                Admins = rank.Admins
+
+            };
+            // Nebula end
+
             rank.Flags = GenRankFlagList(ur.Flags);
             rank.Name = ur.Name;
 
@@ -185,6 +200,8 @@ namespace Content.Server.Administration.UI
             _sawmill.Info($"{Player} updated admin rank {rank.Name}/{flagText}.");
 
             _adminManager.ReloadAdminsWithRank(ur.Id);
+
+            _webhooks.SendRankChangedMessage(Player.UserId, oldRank, rank); // Nebula add
         }
 
         private async Task HandleAddAdminRank(AddAdminRank ar)
@@ -205,6 +222,8 @@ namespace Content.Server.Administration.UI
 
             var flagText = string.Join(' ', AdminFlagsHelper.FlagsToNames(ar.Flags).Select(f => $"+{f}"));
             _sawmill.Info($"{Player} added admin rank {rank.Name}/{flagText}.");
+
+            _webhooks.SendRankCreatedMessage(Player.UserId, rank); // Nebula edit
         }
 
         private async Task HandleRemoveAdmin(RemoveAdmin ra)
@@ -231,6 +250,8 @@ namespace Content.Server.Administration.UI
             {
                 _adminManager.ReloadAdmin(player);
             }
+
+            _webhooks.SendAdminDeletedMessage(Player.UserId, admin); // Nebula edit
         }
 
         private async Task HandleUpdateAdmin(UpdateAdmin ua)
@@ -259,6 +280,18 @@ namespace Content.Server.Administration.UI
                 return;
             }
 
+            // Nebula start
+            Admin oldAdmin = new()
+            {
+                Title = admin.Title,
+                AdminRankId = admin.AdminRankId,
+                Flags = admin.Flags,
+                Suspended = admin.Suspended,
+                AdminRank = admin.AdminRank,
+                UserId = admin.UserId
+            };
+            // Nebula end
+
             admin.Title = ua.Title;
             admin.AdminRankId = ua.RankId;
             admin.Flags = GenAdminFlagList(ua.PosFlags, ua.NegFlags);
@@ -277,6 +310,15 @@ namespace Content.Server.Administration.UI
             {
                 _adminManager.ReloadAdmin(player);
             }
+
+            // Nebula start
+            if (admin.AdminRankId != null)
+                admin.AdminRank = await _db.GetAdminRankAsync(admin.AdminRankId.Value);
+            else
+                admin.AdminRank = null;
+
+            _webhooks.SendAdminChangedMessage(Player.UserId, oldAdmin, admin);
+            // Nebula end
         }
 
         private async Task HandleCreateAdmin(AddAdmin ca)
@@ -352,6 +394,13 @@ namespace Content.Server.Administration.UI
             {
                 _adminManager.ReloadAdmin(player);
             }
+
+            // Nebula start
+            if (admin.AdminRankId != null)
+                admin.AdminRank = await _db.GetAdminRankAsync(admin.AdminRankId.Value);
+
+            _webhooks.SendAdminAddMessage(Player.UserId, admin);
+            // Nebula end
         }
 
         // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
@@ -422,14 +471,14 @@ namespace Content.Server.Administration.UI
             var negFlagList = AdminFlagsHelper.FlagsToNames(negFlags);
 
             return posFlagList
-                .Select(f => new AdminFlag {Negative = false, Flag = f})
-                .Concat(negFlagList.Select(f => new AdminFlag {Negative = true, Flag = f}))
+                .Select(f => new AdminFlag { Negative = false, Flag = f })
+                .Concat(negFlagList.Select(f => new AdminFlag { Negative = true, Flag = f }))
                 .ToList();
         }
 
         private static List<AdminRankFlag> GenRankFlagList(AdminFlags flags)
         {
-            return AdminFlagsHelper.FlagsToNames(flags).Select(f => new AdminRankFlag {Flag = f}).ToList();
+            return AdminFlagsHelper.FlagsToNames(flags).Select(f => new AdminRankFlag { Flag = f }).ToList();
         }
 
         private bool UserAdminFlagCheck(AdminFlags flags)

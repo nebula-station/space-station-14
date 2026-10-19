@@ -12,6 +12,7 @@ using Content.Shared.Traits;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Shared._Nebula.DetailExaminable;
 
 namespace Content.Shared.Humanoid;
 
@@ -60,10 +61,10 @@ public sealed partial class HumanoidCharacterProfileV1
     public string Name;
 
     [DataField]
-    public string FlavorText;
-
-    [DataField]
     public ProtoId<SpeciesPrototype> Species;
+
+    [DataField] // Nebula
+    public string CustomSpecies;
 
     [DataField]
     public int Age;
@@ -73,6 +74,17 @@ public sealed partial class HumanoidCharacterProfileV1
 
     [DataField]
     public Gender Gender;
+
+    // Nebula start
+    [DataField]
+    public float Width;
+
+    [DataField]
+    public float Height;
+
+    [DataField]
+    public DetailExaminableData DetailExaminableData;
+    // Nebula end
 
     [DataField]
     public HumanoidCharacterAppearanceV1 Appearance;
@@ -91,7 +103,7 @@ public sealed partial class HumanoidCharacterProfileV1
 
     public HumanoidCharacterProfile ToV2()
     {
-        return new(Name, FlavorText, Species, Age, Sex, GetDefaultVoice(Species, Sex), Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts,
+        return new HumanoidCharacterProfile(Name, Species, Height, Width, string.Empty, DetailExaminableData, _Nebula.ERP.ERPStatus.Ask, Age, Sex, GetDefaultVoice(Species, Sex), Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts,
             BarkVoice, new()); // Trauma
     }
 
@@ -101,7 +113,7 @@ public sealed partial class HumanoidCharacterProfileV1
         var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
 
         var speciesPrototye = prototypeManager.Index(species);
-        return speciesPrototye.DefaultSoundsBySex[(int)sex];
+        return speciesPrototye.DefaultSoundsBySex[(int) sex];
     }
 }
 

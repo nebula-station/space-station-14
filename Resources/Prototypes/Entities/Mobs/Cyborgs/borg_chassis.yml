@@ -31,7 +31,7 @@
     inherentRadioChannels:
     - Common
     # - Binary # Goobstation - replaced with collective mind
-
+  - type: ERPManager # Nebula
 
 - type: entity
   id: BorgChassisGeneric

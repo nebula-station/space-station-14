@@ -171,6 +171,8 @@
     allowedStates:
     - Dead
   - type: Rootable
+  - type: Sprinter # Nebula change
+    canSprint: false
 
 - type: entity
   parent: OrganBaseOrganic

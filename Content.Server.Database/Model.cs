@@ -452,12 +452,18 @@ namespace Content.Server.Database
         public int Id { get; set; }
         public int Slot { get; set; }
         [Column("char_name")] public string CharacterName { get; set; } = null!;
-        public string FlavorText { get; set; } = null!;
         public int Age { get; set; }
         public string Sex { get; set; } = null!;
         public string? Voice { get; set; } = null!; // If null, the voice gets defaulted to the sex associated value
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;
+        // Nebula start
+        public float Height { get; set; } = 1f;
+        public float Width { get; set; } = 1f;
+        public string CustomSpecies { get; set; } = null!;
+        [Column(TypeName = "jsonb")] public JsonDocument? DetailExaminable { get; set; } = null!;
+        public string ERPStatus { get; set; } = null!;
+        // Nebula end
         // <Trauma>
         public string BarkVoice { get; set; } = null!;
         public Dictionary<string, int> KnowledgeMastery { get; set; } = new();

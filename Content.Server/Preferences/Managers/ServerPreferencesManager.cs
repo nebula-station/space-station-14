@@ -26,6 +26,8 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Utility;
+using Content.Shared._Nebula.DetailExaminable;
+using Content.Shared._Nebula.ERP;
 
 namespace Content.Server.Preferences.Managers
 {
@@ -121,9 +123,9 @@ namespace Content.Server.Preferences.Managers
                 speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(species);
             }
 
-            var voice = profile.Voice ?? speciesPrototype.DefaultSoundsBySex[(int)sex];
+            var voice = profile.Voice ?? speciesPrototype.DefaultSoundsBySex[(int) sex];
             if (!_prototypeManager.HasIndex(voice))
-                voice = speciesPrototype.DefaultSoundsBySex[(int)sex];
+                voice = speciesPrototype.DefaultSoundsBySex[(int) sex];
 
             if (profile.OrganMarkings?.RootElement is { } element)
             {
@@ -179,10 +181,26 @@ namespace Content.Server.Preferences.Managers
                 loadouts[role.RoleName] = loadout;
             }
 
+            // Nebula start
+            var detailExaminable = profile.DetailExaminable is { } doc
+                ? TryDeserialize<DetailExaminableData>(doc) ?? new DetailExaminableData()
+                : new DetailExaminableData();
+
+            var erpStatus = ERPStatus.Ask;
+            if (Enum.TryParse<ERPStatus>(profile.ERPStatus, true, out var erpStatusVal))
+                erpStatus = erpStatusVal;
+            // Nebula end
+
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
-                profile.FlavorText,
                 species,
+                // Nebula start
+                profile.Height,
+                profile.Width,
+                profile.CustomSpecies,
+                detailExaminable,
+                erpStatus,
+                // Nebula end
                 profile.Age,
                 sex,
                 voice,
@@ -202,7 +220,7 @@ namespace Content.Server.Preferences.Managers
                 // <Trauma>
                 profile.BarkVoice ?? HumanoidProfileSystem.DefaultBarkVoice,
                 KnowledgeProfile.Verify(profile.KnowledgeMastery, _prototypeManager)
-                // </Trauma>
+            // </Trauma>
             );
         }
 

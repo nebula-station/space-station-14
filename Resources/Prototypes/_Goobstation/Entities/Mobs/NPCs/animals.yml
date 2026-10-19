@@ -775,6 +775,8 @@
     attributes:
       proper: true
       gender: male
+  - type: Sprinter # Nebula change
+    staminaDrainRate: 2
   - type: TemperatureSpeed
     thresholds:
       293: 0.8

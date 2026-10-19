@@ -13,6 +13,7 @@ using Robust.Client.Graphics;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using System.Numerics;
 
 namespace Content.Client.Body;
 
@@ -267,8 +268,24 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
 
             applied.Add(marking);
         }
+        ScaleProfile(target.Owner, target.Comp); // Nebula edit
         ent.Comp.AppliedMarkings = applied;
     }
+
+    // Nebula start
+    private void ScaleProfile(EntityUid target, SpriteComponent humanoidSprite)
+    {
+        if (!TryComp<HumanoidProfileComponent>(target, out var humanoidProfile))
+            return;
+
+        var speciesPrototype = ProtoMan.Index(humanoidProfile.Species);
+
+        var height = Math.Clamp(humanoidProfile.Height, speciesPrototype.MinHeight, speciesPrototype.MaxHeight);
+        var width = Math.Clamp(humanoidProfile.Width, speciesPrototype.MinWidth, speciesPrototype.MaxWidth);
+
+        _sprite.SetScale((target, humanoidSprite), new Vector2(width, height));
+    }
+    // Nebula end
 
     private void RemoveMarkings(Entity<VisualOrganMarkingsComponent> ent, Entity<SpriteComponent?> target)
     {
