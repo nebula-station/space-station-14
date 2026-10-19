@@ -10144,11 +10144,6 @@ entities:
           decals:
           - 142,60
         - node:
-            id: cyr_ya
-            color: '#FFFFFFFF'
-          decals:
-          - 151.21426,49.055897
-        - node:
             id: BrickCornerOverlayNE
             color: '#AE6716B2'
           decals:
@@ -10748,11 +10743,6 @@ entities:
             color: '#EFB34196'
           decals:
           - 97,69
-        - node:
-            id: cyr_i
-            color: '#FFFFFFFF'
-          decals:
-          - 127.81001,65.61097
         - node:
             id: dot
             color: '#FFFFFFFF'
@@ -14193,16 +14183,6 @@ entities:
           decals:
           - 127.18613,100.94663
           - 127.983,100.96226
-        - node:
-            id: cyr_l
-            color: '#FFFFFFFF'
-          decals:
-          - 105.12267,124.00535
-        - node:
-            id: cyr_p
-            color: '#FFFFFFFF'
-          decals:
-          - 102.8883,123.98972
         - node:
             id: e
             color: '#FFFFFFFF'
