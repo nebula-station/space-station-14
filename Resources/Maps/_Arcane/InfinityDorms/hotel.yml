@@ -84,7 +84,6 @@ entities:
         None: 0.25
       dampingModifier: 0.25
     - type: ImplicitRoof
-    - type: FTLDrive
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -1670,66 +1669,6 @@ entities:
     - type: TileHistory
       chunkHistory: {}
     - type: ExplosionAirtightGrid
-  - uid: 3
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 2
-    - type: Solution
-      solution:
-        maxVol: 10
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Fiber
-          Quantity: 10
-    - type: ContainedSolution
-      containerName: food
-      container: 2
-  - uid: 5
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 4
-    - type: Solution
-      solution:
-        maxVol: 10
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Fiber
-          Quantity: 10
-    - type: ContainedSolution
-      containerName: food
-      container: 4
-  - uid: 7
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 6
-    - type: Solution
-      solution:
-        maxVol: 12
-        name: food
-        reagents:
-        - data: []
-          ReagentId: ToxinTrash
-          Quantity: 5
-        - data: []
-          ReagentId: Microplastics
-          Quantity: 2
-    - type: ContainedSolution
-      containerName: food
-      container: 6
 - proto: ActionHailer
   entities:
   - uid: 9
@@ -2852,36 +2791,6 @@ entities:
       inSlotFlag: EYES
     - type: Physics
       canCollide: False
-- proto: ClothingHandsBDSMgloves
-  entities:
-  - uid: 2
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      pos: 35.205418,-3.484467
-      parent: 1
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          temperature: 293.15
-          canReact: True
-          maxVol: 0
-          name: food
-          reagents: []
-      containers:
-      - food
-    - type: EmitSoundOnCollide
-      nextSound: -485.1942811
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 3
-    - type: Forensics
-      residues: []
-      dNAs: []
-      fibers: []
-      fingerprints: []
 - proto: ClothingHeadHatBeretFrench
   entities:
   - uid: 207
@@ -2989,36 +2898,6 @@ entities:
     - type: Transform
       pos: 22.753277,-5.5774975
       parent: 1
-- proto: ClothingUnderwearCondom
-  entities:
-  - uid: 4
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      pos: 35.554897,-4.16948
-      parent: 1
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          temperature: 293.15
-          canReact: True
-          maxVol: 0
-          name: food
-          reagents: []
-      containers:
-      - food
-    - type: EmitSoundOnCollide
-      nextSound: -485.1942811
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 5
-    - type: Forensics
-      residues: []
-      dNAs: []
-      fibers: []
-      fingerprints: []
 - proto: ClothingUniformJumpskirtBartender
   entities:
   - uid: 209
@@ -3030,14 +2909,7 @@ entities:
       inSlotFlag: INNERCLOTHING
     - type: Physics
       canCollide: False
-- proto: ClothingUniformJumpskirtElegantMaid
-  entities:
-  - uid: 216
-    components:
-    - type: Transform
-      pos: 35.551098,-3.3240788
-      parent: 1
-- proto: ClothingUniformJumpsuitVeteranSecurity
+- proto: ClothingUniformJumpsuitHoS
   entities:
   - uid: 17
     components:
@@ -3079,44 +2951,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 23.5,-12.5
       parent: 1
-- proto: Condom
-  entities:
-  - uid: 222
-    components:
-    - type: Transform
-      pos: 23.19588,-13.39897
-      parent: 1
-- proto: CondomTrash
-  entities:
-  - uid: 6
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      pos: 35.179897,-4.2423964
-      parent: 1
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          temperature: 293.15
-          canReact: True
-          maxVol: 0
-          name: food
-          reagents: []
-      containers:
-      - food
-    - type: EmitSoundOnCollide
-      nextSound: -485.1942811
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 7
-    - type: Forensics
-      residues: []
-      dNAs: []
-      fibers: []
-      fingerprints: []
-- proto: CrateFreezerDonk
+- proto: CrateFreezer
   entities:
   - uid: 223
     components:
@@ -3228,22 +3063,6 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: DogDildo
-  entities:
-  - uid: 261
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      pos: 35.336147,-5.2423964
-      parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -485.1942811
-    - type: Forensics
-      residues: []
-      dNAs: []
-      fibers: []
-      fingerprints: []
 - proto: DoubleBed
   entities:
   - uid: 262
@@ -5099,45 +4918,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 23.5,-5.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 17
-        outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 16
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 15
-        mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 10
-        eyes: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 13
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 14
-        suitstorage: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        back: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 12
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 9
     - type: Inventory
       blockedSlotsList:
       - UNDERWEAR
@@ -5155,45 +4935,6 @@ entities:
       anchored: True
       pos: 29.5,-0.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 209
-        outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 208
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        eyes: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 206
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 207
-        suitstorage: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 210
-        back: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 205
-    - type: Inventory
-      hiddenSlotsList:
-      - UNDERWEAR
-      blockedSlotsList:
-      - UNDERSHIRT
     - type: Physics
       bodyType: Static
     - type: FrenchAccent
@@ -6135,7 +5876,7 @@ entities:
     - type: Transform
       pos: 22.5,-9.5
       parent: 1
-- proto: PowerCellBluespaceReactor
+- proto: PowerCellMicroreactor
   entities:
   - uid: 471
     components:
@@ -7079,13 +6820,6 @@ entities:
     - type: Transform
       pos: 32.5,-0.5
       parent: 1
-- proto: VendingMachineLove
-  entities:
-  - uid: 771
-    components:
-    - type: Transform
-      pos: 36.5,-5.5
-      parent: 1
 - proto: WallCobblebrick
   entities:
   - uid: 772
@@ -7940,24 +7674,6 @@ entities:
       inSlotFlag: SUITSTORAGE
     - type: Physics
       canCollide: False
-- proto: Whip
-  entities:
-  - uid: 935
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      pos: 34.8825,-3.359467
-      parent: 1
-    - type: MeleeWeapon
-      nextAttack: -76.2280224
-    - type: EmitSoundOnCollide
-      nextSound: -485.1942811
-    - type: Forensics
-      residues: []
-      dNAs: []
-      fibers: []
-      fingerprints: []
 - proto: WoodDoor
   entities:
   - uid: 936

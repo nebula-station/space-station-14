@@ -2,9 +2,6 @@ infinity-dorm-category-name-general = Классика
 infinity-dorm-category-name-unusual = Необычное
 infinity-dorm-category-name-exotic = Экзотическое
 
-infinity-dorm-room-name-aurora = Аврора
-infinity-dorm-room-desc-aurora = Просторный зимний номер с уютным местом у камина.
-
 infinity-dorm-room-name-nature = Природа
 infinity-dorm-room-desc-nature = Приятный отдых на природе.
 

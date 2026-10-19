@@ -16,11 +16,6 @@
   gridPath: /Maps/_Arcane/InfinityDorms/hotel.yml
 
 - type: infinityDormRoom
-  id: Apartment
-  category: General
-  gridPath: /Maps/_Arcane/InfinityDorms/apartment.yml
-
-- type: infinityDormRoom
   id: Bath
   category: General
   gridPath: /Maps/_Arcane/InfinityDorms/bath.yml
@@ -33,11 +28,6 @@
   id: Aurora
   category: Unusual
   gridPath: /Maps/_Arcane/InfinityDorms/aurora.yml
-
-- type: infinityDormRoom
-  id: Pivo
-  category: Unusual
-  gridPath: /Maps/_Arcane/InfinityDorms/pivo.yml
 
 - type: infinityDormRoom
   id: Techno

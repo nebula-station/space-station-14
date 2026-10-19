@@ -79,7 +79,6 @@ entities:
         None: 0.25
       dampingModifier: 0.25
     - type: ImplicitRoof
-    - type: FTLDrive
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -714,13 +713,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 5.5,-2.5
-      parent: 1
-- proto: BouquetRedRose
-  entities:
-  - uid: 24
-    components:
-    - type: Transform
-      pos: -4.14361,-9.580445
       parent: 1
 - proto: Bucket
   entities:
@@ -1493,67 +1485,56 @@ entities:
   - uid: 173
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -3.5,-12.5
       parent: 1
   - uid: 174
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -2.5,-12.5
       parent: 1
   - uid: 175
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -1.5,-12.5
       parent: 1
   - uid: 176
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -0.5,-12.5
       parent: 1
   - uid: 177
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -4.5,-12.5
       parent: 1
   - uid: 178
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -7.5,-9.5
       parent: 1
   - uid: 179
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -7.5,-10.5
       parent: 1
   - uid: 180
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -2.5,-2.5
       parent: 1
   - uid: 181
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -1.5,-2.5
       parent: 1
   - uid: 182
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -5.5,-2.5
       parent: 1
   - uid: 183
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -4.5,-2.5
       parent: 1
   - uid: 184
@@ -1569,25 +1550,21 @@ entities:
   - uid: 186
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -2.5,5.5
       parent: 1
   - uid: 187
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -3.5,5.5
       parent: 1
   - uid: 188
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -4.5,5.5
       parent: 1
   - uid: 189
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -5.5,5.5
       parent: 1
   - uid: 190
@@ -2063,13 +2040,11 @@ entities:
   - uid: 284
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -1.5,-6.5
       parent: 1
   - uid: 285
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -3.5,-6.5
       parent: 1
 - proto: ClockworkWindow
@@ -2199,17 +2174,6 @@ entities:
     - type: Transform
       pos: -8.5,-1.5
       parent: 1
-- proto: ClothingEyesWelding
-  entities:
-  - uid: 309
-    components:
-    - type: Transform
-      parent: 308
-    - type: Clothing
-      inSlot: eyes
-      inSlotFlag: EYES
-    - type: Physics
-      canCollide: False
 - proto: ClothingOuterArmorClock
   entities:
   - uid: 312
@@ -3332,44 +3296,6 @@ entities:
     - type: Transform
       pos: 1.5,-8.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 310
-        outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        eyes: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 309
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        suitstorage: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        back: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-    - type: Inventory
-      blockedSlotsList:
-      - UNDERSHIRT
-      - UNDERWEAR
 - proto: MannequinMan
   entities:
   - uid: 314
@@ -3377,44 +3303,6 @@ entities:
     - type: Transform
       pos: -2.5,-11.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 316
-        outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 315
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        eyes: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        suitstorage: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        back: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-    - type: Inventory
-      blockedSlotsList:
-      - UNDERSHIRT
-      - UNDERWEAR
 - proto: MannequinWoman
   entities:
   - uid: 311
@@ -3422,45 +3310,6 @@ entities:
     - type: Transform
       pos: -1.5,-11.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 313
-        outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 312
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        eyes: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        suitstorage: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        back: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-    - type: Inventory
-      hiddenSlotsList:
-      - UNDERWEAR
-      blockedSlotsList:
-      - UNDERSHIRT
 - proto: MopItem
   entities:
   - uid: 27

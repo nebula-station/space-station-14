@@ -83,7 +83,6 @@ entities:
         None: 0.25
       dampingModifier: 0.25
     - type: ImplicitRoof
-    - type: FTLDrive
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -1948,7 +1947,7 @@ entities:
     - type: Transform
       pos: 4.3988333,14.733444
       parent: 1
-- proto: CrateFreezerKitchen
+- proto: CrateFreezer
   entities:
   - uid: 235
     components:
@@ -5847,18 +5846,6 @@ entities:
     - type: Transform
       pos: -8.5,-4.5
       parent: 1
-- proto: HandledBoomBox
-  entities:
-  - uid: 887
-    components:
-    - type: Transform
-      pos: -2.509101,7.6833186
-      parent: 1
-  - uid: 888
-    components:
-    - type: Transform
-      pos: -10.624143,6.627322
-      parent: 1
 - proto: HydroponicsToolClippers
   entities:
   - uid: 889
@@ -7810,26 +7797,12 @@ entities:
     - type: Transform
       pos: -13.5,-7.5
       parent: 1
-- proto: VendingMachineLove
-  entities:
-  - uid: 1205
-    components:
-    - type: Transform
-      pos: -13.5,-8.5
-      parent: 1
 - proto: VendingMachineSeedsUnlocked
   entities:
   - uid: 1206
     components:
     - type: Transform
       pos: -9.5,-1.5
-      parent: 1
-- proto: VendingMachineUnderwear
-  entities:
-  - uid: 1207
-    components:
-    - type: Transform
-      pos: -13.5,-9.5
       parent: 1
 - proto: VinylPlayer
   entities:

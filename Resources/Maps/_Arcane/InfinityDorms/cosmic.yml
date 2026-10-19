@@ -74,7 +74,6 @@ entities:
         None: 0.25
       dampingModifier: 0.25
     - type: ImplicitRoof
-    - type: FTLDrive
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -2196,26 +2195,13 @@ entities:
   - uid: 247
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 6.5,9.5
       parent: 1
   - uid: 248
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 8.5,9.5
       parent: 1
-- proto: ClothingEyesGlassesGar
-  entities:
-  - uid: 250
-    components:
-    - type: Transform
-      parent: 249
-    - type: Clothing
-      inSlot: eyes
-      inSlotFlag: EYES
-    - type: Physics
-      canCollide: False
 - proto: ClothingOuterWinterCosmic
   entities:
   - uid: 252
@@ -2223,17 +2209,6 @@ entities:
     - type: Transform
       pos: 15.682196,-3.2026572
       parent: 1
-- proto: ClothingUniformJumpsuitGalaxyBlue
-  entities:
-  - uid: 251
-    components:
-    - type: Transform
-      parent: 249
-    - type: Clothing
-      inSlot: jumpsuit
-      inSlotFlag: INNERCLOTHING
-    - type: Physics
-      canCollide: False
 - proto: CosmicChair
   entities:
   - uid: 253
@@ -3517,13 +3492,6 @@ entities:
     - type: Transform
       pos: 3.5,8.5
       parent: 1
-- proto: HandledBoomBox
-  entities:
-  - uid: 439
-    components:
-    - type: Transform
-      pos: -6.5034122,-4.4019003
-      parent: 1
 - proto: InfiniteDormExitDoor
   entities:
   - uid: 440
@@ -3546,56 +3514,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,2.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        mop_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 12
-        trashbag_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 13
-        bucket_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 11
-        plunger_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        goldenplunger_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        wetfloorsign_slot4: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        wetfloorsign_slot3: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        wetfloorsign_slot2: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        wetfloorsign_slot1: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        lightreplacer_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        spraybottle_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: KitchenElectricGrill
   entities:
   - uid: 442
@@ -3642,51 +3560,6 @@ entities:
       parent: 1
     missingComponents:
     - AccessReader
-- proto: Mannequin
-  entities:
-  - uid: 249
-    components:
-    - type: Transform
-      pos: 15.5,-1.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 251
-        outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        eyes: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 250
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        suitstorage: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-        back: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
-    - type: Inventory
-      blockedSlotsList:
-      - UNDERSHIRT
-      - UNDERWEAR
 - proto: MopItem
   entities:
   - uid: 12
