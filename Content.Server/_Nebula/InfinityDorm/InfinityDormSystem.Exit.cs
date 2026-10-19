@@ -17,8 +17,6 @@ namespace Content.Server._Nebula.InfinityDorm;
 
 public sealed partial class InfinityDormSystem
 {
-    private Dictionary<EntityUid, TimeSpan> _nextExitAction = [];
-
     #region BUI events
 
     [SubscribeLocalEvent]
@@ -80,7 +78,7 @@ public sealed partial class InfinityDormSystem
 
         RemComp<InfinityDormVisitorComponent>(actor);
 
-        DeleteGridIfWithoutPlayers(grid);
+        AddWorldToDeleteTimer(grid);
 
         _adminLog.Add(LogType.Action, LogImpact.Medium,
             $"User ({ToPrettyString(ent.Owner)}) exited from infinity dorm");
@@ -121,20 +119,16 @@ public sealed partial class InfinityDormSystem
         if (!TryComp<InfinityDormComponent>(grid, out var dorm))
             return;
 
-        if (_mapVisitors.TryGetValue(grid, out var visitors) && visitors.Count > 0)
+        if (!CheckIsGridEmpty(grid))
             return;
-
-        var query = EntityQueryEnumerator<InfinityDormVisitorComponent, TransformComponent>();
-        while (query.MoveNext(out _, out _, out var xform))
-        {
-            if (xform.GridUid == grid)
-                return;
-        }
 
         if (TryComp<InfinityDormTeleporterComponent>(dorm.TeleporterUid, out var teleporter))
             teleporter.ConnectedMaps.Remove(dorm.Number);
 
         _mapVisitors.Remove(grid);
+
+        if (_currentUserWorlds.ContainsKey(dorm.Creator))
+            _currentUserWorlds[dorm.Creator].Remove(grid);
 
         _adminLog.Add(LogType.Action, LogImpact.Low,
             $"Dorm #{dorm.Number} ({ToPrettyString(grid)}) deleted: no players left");

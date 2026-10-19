@@ -2,7 +2,8 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Client._Nebula.InfinityDorms.PlayersList;
+using Content.Client._Nebula.InfinityDorms.Teleporter.Players;
+using Content.Client._Nebula.InfinityDorms.Teleporter.Rooms;
 using Content.Shared._Nebula.InfinityDorm.Messages;
 using Content.Shared._Nebula.InfinityDorms;
 using Content.Shared._Nebula.InfinityDorms.Components;
@@ -11,16 +12,15 @@ using Robust.Client.UserInterface;
 
 namespace Content.Client._Nebula.InfinityDorms.Teleporter;
 
-public sealed partial class InfinityDormTeleporterBUI : BoundUserInterface
+public sealed partial class InfinityDormTeleporterBUI(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
 {
     private InfinityDormTeleporterWindow? _window;
     private InfinityDormPlayersWindow? _playersWindow;
     private List<List<InfinityDormVisitorData>> _players = [];
 
 
-    public InfinityDormTeleporterBUI(EntityUid owner, Enum uiKey) : base(owner, uiKey)
-    {
-    }
+    private InfinityDormRoomsWindow? _roomsWindow;
+    private List<InfinityDormRoomData>? _userRooms;
 
     protected override void Open()
     {
@@ -43,6 +43,7 @@ public sealed partial class InfinityDormTeleporterBUI : BoundUserInterface
         };
 
         _window.PlayersListPressed += OpenPlayersWindow;
+        _window.RoomsListPressed += OnRoomsListPressed;
     }
 
     private void Teleport()
@@ -57,7 +58,7 @@ public sealed partial class InfinityDormTeleporterBUI : BoundUserInterface
     {
         if (_playersWindow is { Disposed: false })
         {
-            _playersWindow.MoveToFront();
+            _playersWindow.Close();
             return;
         }
 
@@ -76,5 +77,37 @@ public sealed partial class InfinityDormTeleporterBUI : BoundUserInterface
 
         _players = cast.Players;
         _playersWindow?.Populate(_players);
+    }
+
+    private void OnRoomsListPressed()
+    {
+        if (_roomsWindow is { Disposed: false })
+        {
+            _roomsWindow.Close();
+            return;
+        }
+
+        _roomsWindow = new InfinityDormRoomsWindow();
+        _roomsWindow.OnClose += () => _playersWindow = null;
+        _roomsWindow.Populate(_userRooms);
+        _roomsWindow.OpenCentered();
+    }
+
+    protected override void ReceiveMessage(BoundUserInterfaceMessage message)
+    {
+        if (message is not InfinityDormTeleportPrivateBUIMessage msg)
+            return;
+
+        _userRooms = msg.Rooms;
+        _roomsWindow?.Populate(_userRooms);
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+
+
+        _roomsWindow?.Close();
+        _playersWindow?.Close();
     }
 }

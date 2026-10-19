@@ -34,3 +34,12 @@ public struct InfinityDormServerVisitorData
     public required EntityUid UserId;
 }
 
+[Serializable, NetSerializable]
+public struct InfinityDormRoomData
+{
+    public int Visitors;
+    public TimeSpan DeletesAt;
+    public string RoomName;
+    public int RoomNumber;
+}
+

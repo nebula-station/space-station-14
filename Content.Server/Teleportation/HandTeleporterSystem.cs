@@ -7,6 +7,7 @@ using Content.Shared.Popups;
 using Content.Shared.Teleportation.Components;
 using Content.Shared.Teleportation.Systems;
 using Robust.Server.Audio;
+using Content.Shared._Nebula.Teleportation.Events;
 
 namespace Content.Server.Teleportation;
 
@@ -42,6 +43,20 @@ public sealed partial class HandTeleporterSystem : EntitySystem
     {
         if (args.Cancelled || args.Handled)
             return;
+
+        // Nebula start
+        var ev = new HandTeleporterPortalAttemptEvent(args.Args.User);
+        RaiseLocalEvent(uid, ref ev, broadcast: true);
+
+        if (ev.Cancelled)
+        {
+            if (ev.Reason != null)
+                _popup.PopupEntity(Loc.GetString(ev.Reason), uid, args.Args.User);
+
+            args.Handled = true;
+            return;
+        }
+        // Nebula end
 
         HandlePortalUpdating(uid, component, args.Args.User);
 

@@ -52,4 +52,23 @@ infinity-dorm-teleporter-popup-client-pidor = Ну ты тоже не ахуев
 
 infinity-dorm-teleporter-popup-rate-limit = Слишком часто. Попробуйте немножко позже
 
+infinity-dorm-teleporter-popup-rooms-limit = Вы достигли лимита одновременных комнат. Пожалуйста дождитесь их очистки ({ $count })
+
 infinity-dorm-teleporter-popup-closed = Данные дормы закрыты
+
+infinity-dorm-rooms-ui-title = Ваши комнаты
+
+infinity-dorm-rooms-ui-empty = У вас нет личных комнат
+
+infinity-dorm-rooms-ui-unnamed = Без названия
+
+infinity-dorm-rooms-ui-number = № { $number }
+
+infinity-dorm-rooms-ui-visitors = Посетителей: { $count }
+
+infinity-dorm-rooms-ui-deletes = Удаление через: { $time }
+
+infinity-dorm-teleporter-ui-rooms-list-button = Мои комнаты
+
+
+infinity-dorm-system-hand-teleport-attempt = Вы не можете использовать телепортер в данной зоне!

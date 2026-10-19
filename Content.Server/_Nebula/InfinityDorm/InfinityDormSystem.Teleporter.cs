@@ -21,11 +21,6 @@ namespace Content.Server._Nebula.InfinityDorm;
 
 public sealed partial class InfinityDormSystem : EntitySystem
 {
-
-    private Dictionary<EntityUid, TimeSpan> _nextTeleporterAction = [];
-
-    private Dictionary<EntityUid, List<InfinityDormServerVisitorData>> _mapVisitors = [];
-
     private readonly int _step = 100;
     private float _lastPosition = -1000f;
     private MapId _dormsMapId = MapId.Nullspace;
@@ -49,11 +44,6 @@ public sealed partial class InfinityDormSystem : EntitySystem
         if (!args.UiKey.Equals(InfinityDormTeleporterUiKey.Key))
             return;
 
-        UpdateTeleporterUi(ent);
-    }
-
-    private void UpdateTeleporterUi(Entity<InfinityDormTeleporterComponent> ent)
-    {
         var players = new List<List<InfinityDormVisitorData>>();
 
         foreach (var (_, grid) in ent.Comp.ConnectedMaps)
@@ -74,6 +64,39 @@ public sealed partial class InfinityDormSystem : EntitySystem
         }
 
         _ui.SetUiState(ent.Owner, InfinityDormTeleporterUiKey.Key, new InfinityDormTeleportBUIState(players));
+
+        var userRooms = GetUserWorldsData(args.Actor);
+        _ui.ServerSendUiMessage(ent.Owner, InfinityDormTeleporterUiKey.Key,
+            new InfinityDormTeleportPrivateBUIMessage(userRooms), args.Actor);
+    }
+
+    private List<InfinityDormRoomData>? GetUserWorldsData(EntityUid uid)
+    {
+        if (!_currentUserWorlds.ContainsKey(uid))
+            return null;
+
+        List<InfinityDormRoomData> answer = [];
+        foreach (var gridUid in _currentUserWorlds[uid])
+        {
+            if (!TryComp<InfinityDormComponent>(gridUid, out var dormComponent))
+                continue;
+
+            var data = new InfinityDormRoomData
+            {
+                RoomNumber = dormComponent.Number,
+                RoomName = dormComponent.MapName
+            };
+
+            if (_mapVisitors.ContainsKey(gridUid))
+                data.Visitors = _mapVisitors[gridUid].Count;
+
+            if (_worldDeleteNodes.ContainsKey(gridUid))
+                data.DeletesAt = _worldDeleteNodes[gridUid]!.Value.Deadline;
+
+            answer.Add(data);
+        }
+
+        return answer;
     }
 
     #endregion
@@ -139,6 +162,8 @@ public sealed partial class InfinityDormSystem : EntitySystem
         if (!TeleportToDorm(args.Actor, grid))
             return;
 
+        RemoveWorldFromDeleteTimer(grid);
+
         var accessReader = EnsureComp<AccessReaderComponent>(ent.Owner);
         _accessReader.LogAccess((ent.Owner, accessReader), args.Actor);
 
@@ -158,6 +183,15 @@ public sealed partial class InfinityDormSystem : EntitySystem
         if (IsDormExists(ent.Comp, args.Number))
             return true;
 
+        var roomsCount = GetUserWorldsCount(args.Actor);
+        if (roomsCount >= _roomsLimit)
+        {
+            _popup.PopupEntity(Loc.GetString(messageId: "infinity-dorm-teleporter-popup-rooms-limit", ("count", roomsCount)),
+                ent.Owner, args.Actor, PopupType.MediumCaution);
+
+            return true;
+        }
+
         if (!_proto.TryIndex<InfinityDormRoomPrototype>(args.Room, out var dormProto))
             return false;
 
@@ -175,6 +209,7 @@ public sealed partial class InfinityDormSystem : EntitySystem
         dormComp.Number = args.Number;
         dormComp.Coordinates = new EntityCoordinates(grid.Value, Transform(args.Actor).LocalPosition);
         dormComp.MapCoordinates = _transform.GetMapCoordinates(Transform(args.Actor));
+        dormComp.MapName = Loc.GetString("infinity-dorm-room-name-" + dormProto.ID.ToLower());
 
         ent.Comp.ConnectedMaps[args.Number] = grid.Value.Owner;
 
@@ -187,6 +222,11 @@ public sealed partial class InfinityDormSystem : EntitySystem
             _mapVisitors.Remove(grid.Value);
 
         _mapVisitors.Add(grid.Value, []);
+
+        if (!_currentUserWorlds.ContainsKey(args.Actor))
+            _currentUserWorlds[args.Actor] = [grid.Value];
+        else
+            _currentUserWorlds[args.Actor].Add(grid.Value);
 
         return true;
     }
@@ -216,6 +256,14 @@ public sealed partial class InfinityDormSystem : EntitySystem
 
     #endregion
     #region Helpers
+
+    private int GetUserWorldsCount(EntityUid uid)
+    {
+        if (_currentUserWorlds.ContainsKey(uid))
+            return _currentUserWorlds[uid].Count;
+
+        return 0;
+    }
 
     private InfinityDormServerVisitorData GetServerDormVisitorData(EntityUid user)
     {

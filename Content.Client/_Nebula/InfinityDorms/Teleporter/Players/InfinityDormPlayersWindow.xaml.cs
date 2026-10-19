@@ -13,7 +13,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client._Nebula.InfinityDorms.PlayersList;
+namespace Content.Client._Nebula.InfinityDorms.Teleporter.Players;
 
 [GenerateTypedNameReferences]
 public sealed partial class InfinityDormPlayersWindow : FancyWindow

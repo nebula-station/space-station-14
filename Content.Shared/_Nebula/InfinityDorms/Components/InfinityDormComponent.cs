@@ -26,4 +26,7 @@ public sealed partial class InfinityDormComponent : Component
 
     [ViewVariables(VVAccess.ReadOnly)]
     public EntityUid TeleporterUid;
+
+    [DataField]
+    public string MapName = string.Empty;
 }

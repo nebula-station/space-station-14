@@ -32,6 +32,11 @@
                         HorizontalExpand="True"
                         Margin="0 0 0 4"/>
 
+                <Button Name="RoomsListButton"
+                        Text="{Loc infinity-dorm-teleporter-ui-rooms-list-button}"
+                        HorizontalExpand="True"
+                        Margin="0 0 0 4"/>
+
                 <Label Text="{Loc infinity-dorm-teleporter-ui-current-room-label}"
                        StyleClasses="LabelSubText"
                        HorizontalAlignment="Center"/>

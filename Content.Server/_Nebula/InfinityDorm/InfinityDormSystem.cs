@@ -4,7 +4,10 @@
 
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Administration.Logs;
+using Content.Shared._Nebula.CCVar;
+using Content.Shared._Nebula.InfinityDorms;
 using Content.Shared._Nebula.InfinityDorms.Components;
+using Content.Shared._Nebula.Teleportation.Events;
 using Content.Shared.Access.Systems;
 using Content.Shared.ActionBlocker;
 using Content.Shared.AlertLevel;
@@ -17,6 +20,7 @@ using Content.Shared.Tag;
 using Content.Trauma.Common.Effects;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
+using Robust.Shared.Configuration;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
@@ -45,12 +49,37 @@ public sealed partial class InfinityDormSystem : EntitySystem
     [Dependency] private ContainerSystem _container = default!;
     [Dependency] private TagSystem _tag = default!;
     [Dependency] private UserInterfaceSystem _ui = default!;
+    [Dependency] private IConfigurationManager _cfgManager = default!;
 
+    private static readonly TimeSpan WorldDeletingCheckDelay = TimeSpan.FromSeconds(30);
+
+    /// <summary>
+    /// Key = griduid | Value = current world visitors data
+    /// </summary>
+    private Dictionary<EntityUid, List<InfinityDormServerVisitorData>> _mapVisitors = [];
+
+    /// <summary>
+    /// Key = userUid, value = [ GridUid ]
+    /// </summary>
+    private Dictionary<EntityUid, List<EntityUid>> _currentUserWorlds = [];
+
+    private Dictionary<EntityUid, TimeSpan> _nextTeleporterAction = [];
+    private Dictionary<EntityUid, TimeSpan> _nextExitAction = [];
+    private TimeSpan _nextWorldDeleteCheck = TimeSpan.Zero;
+
+    private LinkedList<(EntityUid Uid, TimeSpan Deadline)> _worldDeleteQueue = [];
+    private Dictionary<EntityUid, LinkedListNode<(EntityUid Uid, TimeSpan Deadline)>> _worldDeleteNodes = [];
+
+    private TimeSpan _roomDeleteTimer = TimeSpan.Zero;
+    private int _roomsLimit = 1;
     private ISawmill _sawmill = default!;
 
     public override void Initialize()
     {
         base.Initialize();
+
+        _cfgManager.OnValueChanged(NCCVars.RoomDeleteTimer, value => _roomDeleteTimer = TimeSpan.FromMinutes(value), true);
+        _cfgManager.OnValueChanged(NCCVars.RoomsLimit, value => _roomsLimit = value, true);
 
         _sawmill = _logManager.GetSawmill("infinity-dorm");
     }
@@ -112,4 +141,75 @@ public sealed partial class InfinityDormSystem : EntitySystem
     }
 
     #endregion
+    #region Security
+
+    [SubscribeLocalEvent]
+    private void OnHandTeleporterPortalAttempt(Entity<InfinityDormVisitorComponent> ent, ref HandTeleporterPortalAttemptEvent args)
+    {
+        args.Cancel("infinity-dorm-system-hand-teleport-attempt");
+    }
+
+    #endregion
+    #region AutoDelete
+
+    private bool CheckIsGridEmpty(EntityUid grid)
+    {
+        if (_mapVisitors.TryGetValue(grid, out var visitors) && visitors.Count > 0)
+            return false;
+
+        var query = EntityQueryEnumerator<InfinityDormVisitorComponent, TransformComponent>();
+        while (query.MoveNext(out _, out _, out var xform))
+        {
+            if (xform.GridUid == grid)
+                return false;
+        }
+
+        return true;
+    }
+
+    private void AddWorldToDeleteTimer(EntityUid uid)
+    {
+        if (_worldDeleteNodes.ContainsKey(uid))
+            return;
+
+        if (!TryComp<InfinityDormComponent>(uid, out var comp))
+            return;
+
+        var deadline = _timing.CurTime + _roomDeleteTimer;
+
+        var node = _worldDeleteQueue.AddLast((uid, deadline));
+        _worldDeleteNodes[uid] = node;
+    }
+
+    private void RemoveWorldFromDeleteTimer(EntityUid uid)
+    {
+        if (!_worldDeleteNodes.Remove(uid, out var node))
+            return;
+
+        _worldDeleteQueue.Remove(node);
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        if (_nextWorldDeleteCheck > _timing.CurTime)
+            return;
+
+        _nextWorldDeleteCheck = _timing.CurTime + WorldDeletingCheckDelay;
+
+        while (_worldDeleteQueue.First is { } first &&
+            first.Value.Deadline <= _timing.CurTime)
+        {
+            var (uid, _) = first.Value;
+
+            DeleteGridIfWithoutPlayers(uid);
+
+            _worldDeleteQueue.RemoveFirst();
+            _worldDeleteNodes.Remove(uid);
+        }
+    }
+
+    #endregion
+
 }

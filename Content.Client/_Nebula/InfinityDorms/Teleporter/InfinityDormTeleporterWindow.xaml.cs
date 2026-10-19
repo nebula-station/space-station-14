@@ -23,6 +23,7 @@ public sealed partial class InfinityDormTeleporterWindow : FancyWindow
 
     public Action? ConfirmPressed;
     public Action? PlayersListPressed;
+    public Action? RoomsListPressed;
 
     public ProtoId<InfinityDormRoomCategoryPrototype>? CurrentRoomId;
     public int SelectedNumber = 0;
@@ -38,20 +39,21 @@ public sealed partial class InfinityDormTeleporterWindow : FancyWindow
 
         Confirm.OnPressed += _ => ConfirmPressed?.Invoke();
         PlayersListButton.OnPressed += _ => PlayersListPressed?.Invoke();
+        RoomsListButton.OnPressed += _ => RoomsListPressed?.Invoke();
 
         NumberInput.OnTextChanged += OnInputChanged;
     }
 
     private void OnInputChanged(LineEdit.LineEditEventArgs args)
     {
-        if (!int.TryParse(args.Text, out var value) || value < MinValueForRoomId || value >= MaxValueForRoomId)
+        if (!int.TryParse(args.Text, out var value)
+            || value < MinValueForRoomId
+            || value >= MaxValueForRoomId
+            || CurrentRoomId == null)
         {
             Confirm.Disabled = true;
             return;
         }
-
-        if (CurrentRoomId == null)
-            Confirm.Disabled = true;
 
         SelectedNumber = value;
         Confirm.Disabled = false;
@@ -132,5 +134,6 @@ public sealed partial class InfinityDormTeleporterWindow : FancyWindow
     {
         CurrentRoomId = room.ID;
         CurrentRoom.Text = Loc.GetString("infinity-dorm-room-name-" + room.ID.ToLower());
+        OnInputChanged(new LineEdit.LineEditEventArgs(NumberInput, NumberInput.Text));
     }
 }
