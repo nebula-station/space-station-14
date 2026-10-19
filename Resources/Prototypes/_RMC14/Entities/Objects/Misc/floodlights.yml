@@ -24,7 +24,7 @@
     offset: "0.0,0.5"
     drawdepth: Mobs
   - type: InteractionOutline
-  - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: PointLight
     enabled: false
@@ -91,7 +91,7 @@
         - MachineMask
         layer:
         - WallLayer
-        
+
 - type: entity
   parent: RMCTallFloodlight
   id: RMCStreetlight
