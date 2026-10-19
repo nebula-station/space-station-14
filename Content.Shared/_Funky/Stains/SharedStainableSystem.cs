@@ -182,7 +182,9 @@ public abstract partial class SharedStainableSystem : EntitySystem
         {
             _appearance.QueueUpdate(ent.Owner, appearance);
 
-            if (TryComp<MetaDataComponent>(ent.Owner, out var meta) && meta.EntityLifeStage < EntityLifeStage.Terminating)
+            var meta = MetaData(ent.Owner);
+
+            if (meta != null && meta.EntityLifeStage < EntityLifeStage.Terminating)
                 Dirty(ent.Owner, appearance);
         }
     }
