@@ -14,7 +14,7 @@
     maxChargeRate: 1.0e9
     supplyRampTolerance: 1.0e9
     supplyRampRate: 1.0e9
-  - type: GravitySource
+  - type: GravityGenerator
 
 - type: entity
   parent: OmniControlUnit

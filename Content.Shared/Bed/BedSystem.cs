@@ -69,7 +69,7 @@ public sealed partial class BedSystem : EntitySystem
         Dirty(bed);
 
         // Single action entity, cannot strap multiple entities to the same bed.
-        DebugTools.AssertEqual(args.Strap.Comp.BuckledEntities.Count, 1);
+        //        DebugTools.AssertEqual(args.Strap.Comp.BuckledEntities.Count, 1); // Orion-Edit: DoubleBed
     }
 
     private void OnUnstrapped(Entity<HealOnBuckleComponent> bed, ref UnstrappedEvent args)
@@ -85,7 +85,10 @@ public sealed partial class BedSystem : EntitySystem
             _sleepingSystem.TryWaking(args.Buckle.Owner);
         }
 
-        RemComp<HealOnBuckleHealingComponent>(bed);
+        // Orion start Check for double bed
+        if (args.Strap.Comp.BuckledEntities.Count == 0)
+            RemComp<HealOnBuckleHealingComponent>(bed);
+        // Orion end
     }
 
     private void OnStasisStrapped(Entity<StasisBedComponent> ent, ref StrappedEvent args)
