@@ -1,0 +1,5 @@
+ent-NanorepLockerTeleporter = телепорт шкафчика представителя Nanotrasen
+    .desc = Устройство, позволяющее запросить доставку шкафчика представителя Nanotrasen.
+ent-UniqueNanorepLockerTeleporter = { ent-NanorepLockerTeleporter }
+    .suffix = Уникальный
+    .desc = { ent-NanorepLockerTeleporter.desc }

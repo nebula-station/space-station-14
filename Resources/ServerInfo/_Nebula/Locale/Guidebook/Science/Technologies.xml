@@ -1,0 +1,24 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+# Технологии
+
+Все технологии имеют определенную стоимость и требования к уровню для их изучения. Их открытие расширяет ассортимент рецептов, доступных для печати на фабрикаторах и станках.
+
+Ниже перечислены различные технологии и соответствующие им дисциплины.
+
+## Промышленность
+<GuideTechDisciplineEmbed Discipline="Industrial"/>
+
+## Арсенал
+<GuideTechDisciplineEmbed Discipline="Arsenal"/>
+
+## Экспериментальное
+<GuideTechDisciplineEmbed Discipline="Experimental"/>
+
+## Гражданские службы
+<GuideTechDisciplineEmbed Discipline="CivilianServices"/>
+
+</Document>

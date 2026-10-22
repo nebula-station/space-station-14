@@ -80,3 +80,5 @@ autodoc-body-symmetry-Left = Левая
 autodoc-body-symmetry-Right = Правая
 
 autodoc-submit = Отправить
+
+autodoc-body-part-Wings = Крылья

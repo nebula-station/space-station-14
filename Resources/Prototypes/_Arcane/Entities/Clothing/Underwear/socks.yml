@@ -1,0 +1,47 @@
+- type: entity
+  parent: ClothingSocksBase
+  id: ClothingSocksBeer
+  name: beer stockings
+  description: Beer stockings.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Socks/beer_stokings.rsi
+
+- type: entity
+  parent: ClothingSocksBase
+  id: ClothingSocksLatexStockings
+  name: latex stockings
+  description: A black stockings made of very lightweight latex.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Socks/latex_stokings.rsi
+
+- type: entity
+  parent: ClothingSocksBase
+  id: ClothingSocksWhiteRigged
+  name: white rigged stockings
+  description: White stockings equipped with tactical rig straps.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Socks/white_rigged_stockings.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Socks/white_rigged_stockings.rsi
+  - type: Storage
+    grid:
+    - 0,0,1,1
+    maxItemSize: Small
+    whitelist:
+      tags:
+      - CombatKnife
+      - KitchenKnife
+      - Knife
+      - Paper
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface

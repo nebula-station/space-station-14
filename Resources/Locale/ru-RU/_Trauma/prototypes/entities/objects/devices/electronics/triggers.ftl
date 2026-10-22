@@ -1,0 +1,10 @@
+ent-HolyTimer = священный таймер-триггер
+    .desc = Во имя Грааля...
+ent-MinibombTimerTrigger = таймер-триггер минибомбы
+    .desc = Зловещий таймер.
+ent-SilentTimerTrigger = механический триггер с чекой
+    .desc = Механический таймер-триггер без писка.
+ent-SupermatterTimerTrigger = таймер суперматерии
+    .desc = Притягательный таймер.
+ent-WhiteHoleTimerTrigger = таймер-триггер белой дыры
+    .desc = Отталкивающий таймер.

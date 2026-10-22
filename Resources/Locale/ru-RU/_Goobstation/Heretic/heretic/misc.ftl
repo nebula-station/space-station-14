@@ -70,3 +70,6 @@ lionhunter-rifle-examine-message =
     Only special hunter's ammunition has this effect.
 
 lionhunter-rifle-aim-message = прицеливание...
+
+heretic-clothing-component-wear = Вы чувствуете, как распускаетесь по нитке, нося { $item }!
+heretic-sacraments-can-attack = Теперь вы можете безопасно атаковать { $heretic }!

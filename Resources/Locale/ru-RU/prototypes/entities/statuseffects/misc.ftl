@@ -1,0 +1,27 @@
+ent-MobStatusEffectBase = { ent-StatusEffectBase }
+    .desc = { ent-StatusEffectBase.desc }
+ent-MobStatusEffectDebuff = { ent-MobStatusEffectBase }
+    .desc = { ent-MobStatusEffectBase.desc }
+ent-StatusEffectBase = { "" }
+    .desc = { "" }
+ent-StatusEffectDrowsiness = сонливость
+    .desc = { ent-MobStatusEffectBase.desc }
+ent-StatusEffectDrunk = опьянение
+    .desc = { ent-StatusEffectWoozy.desc }
+ent-StatusEffectForcedSleeping = принудительный сон
+    .desc = { ent-MobStatusEffectBase.desc }
+ent-StatusEffectSSDSleeping = принудительный сон
+    .desc = { ent-MobStatusEffectBase.desc }
+ent-StatusEffectSeeingRainbow = галлюцинации
+    .desc = { ent-MobStatusEffectBase.desc }
+ent-StatusEffectWoozy = головокружение
+    .desc = { ent-MobStatusEffectDebuff.desc }
+
+ent-StatusEffectBlindness = временная слепота
+ent-StatusEffectFlashed = ослеплён
+ent-StatusEffectForcedItemCatEars = насильные кошачьи ушки
+ent-StatusEffectForcedItemMaid = насильный костюм горничной
+ent-StatusEffectMimeMuted = заглушён
+ent-StatusEffectMuted = заглушён
+ent-StatusEffectPressureImmunity = иммунитет к давлению
+ent-StatusEffectVentriloquistPuppetMuted = заглушён

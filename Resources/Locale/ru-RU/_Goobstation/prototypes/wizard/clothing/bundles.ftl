@@ -1,0 +1,19 @@
+ent-ClothingBackpackOblivionEnforcerBundle = { ent-ClothingBackpack }
+    .suffix = Набор Стража Бездны
+    .desc = { ent-ClothingBackpack.desc }
+ent-ClothingBackpackWizardClownBundle = { ent-ClothingBackpackClown }
+    .suffix = Набор Клоун-Мага
+    .desc = { ent-ClothingBackpackClown.desc }
+ent-ClothingBackpackWizardMimeBundle = { ent-ClothingBackpackMime }
+    .suffix = Набор Мим-Мага
+    .desc = { ent-ClothingBackpackMime.desc }
+ent-ToolboxTider = { ent-ToolboxMechanical }
+    .desc = Готовы к новому порядку приливов?
+    .suffix = Приливник
+ent-ToolboxTiderFilled = { ent-ToolboxTider }
+    .suffix = Набор Мага-Приливника
+    .desc = { ent-ToolboxTider.desc }
+
+ent-ClothingBackpackPaper = рюкзак
+    .desc = Вы носите это на спине и кладёте в него предметы.
+    .suffix = Пачка бумаг волшебника

@@ -1,7 +1,7 @@
-roles-antag-insurgent-name = повстанец
+roles-antag-insurgent-name = Повстанец
 roles-antag-insurgent-objective = Проберитесь на станцию, устройте хаос и попытайтесь захватить её!
 
-insurgent-round-end-agent-name = повстанец
+insurgent-round-end-agent-name = Повстанец
 
 objective-issuer-insurgents = повстанцы
 

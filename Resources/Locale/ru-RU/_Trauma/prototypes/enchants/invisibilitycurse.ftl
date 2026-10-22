@@ -1,0 +1,1 @@
+ent-CurseInvisibility = Проклятие невидимости

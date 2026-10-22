@@ -1,0 +1,17 @@
+ent-TintedWindow = матовое окно
+    .desc = { ent-Window.desc }
+ent-TintedWindowTransparent = { ent-TintedWindow }
+    .suffix = Прозрачное
+    .desc = { ent-TintedWindow.desc }
+ent-Window = окно
+    .desc = Смотри не заляпай.
+ent-WindowDiagonal = { ent-Window }
+    .suffix = Диагональ
+    .desc = { ent-Window.desc }
+ent-WindowDirectional = направленное окно
+    .desc = Смотри не заляпай.
+ent-WindowFrostedDirectional = направленное матовое окно
+    .desc = Смотри не заляпай.
+ent-WindowRCDResistant = { ent-Window }
+    .suffix = РСУ защита
+    .desc = { ent-Window.desc }

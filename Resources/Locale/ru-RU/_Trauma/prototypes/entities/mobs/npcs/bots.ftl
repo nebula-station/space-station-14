@@ -1,0 +1,12 @@
+ent-BoogieBotSpawner = буги-бот
+    .desc = Зажигай!
+ent-ED209Endoskeleton = эндоскелет ED-209
+    .desc = Каркас, на котором собирается ED-209.
+ent-MobBoogieBotD1 = буги-бот
+    .desc = Зажигай!
+ent-MobBoogieBotD2 = буги-бот
+    .desc = Зажигай!
+ent-MobBoogieBotD3 = буги-бот
+    .desc = Зажигай!
+ent-MobED209 = ED-209
+    .desc = Старший брат офицера Бипски.

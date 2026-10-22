@@ -1,0 +1,14 @@
+ent-ClothingBackpackDuffelSyndicateBurner = комплект "Горелка"
+    .desc = Винтовка "Горелка" крупного калибра, с боекомплектом из бронебойных и фугасных патронов.
+ent-ClothingBackpackDuffelSyndicateFilledCandy = комплект с конфетами
+    .desc = Набитый до отказа конфетами комплект. Кто-то явно сладкоежка!
+ent-ClothingBackpackDuffelSyndicateFilledHE1SG8 = комплект HE1S-G8
+    .desc = Этот комплект содержит винтовку HE1S-G8 и 19 патронов для настоящего веселья.
+ent-ClothingBackpackDuffelSyndicateFilledWhimsy = комплект радости и веселья Синдиката
+    .desc = Набор всего, что нужно агенту Синдиката для весёлого времяпрепровождения.
+ent-ClothingBackpackDuffelSyndicateM90Bundle = комплект M-90
+    .desc = Комплект с штурмовой винтовкой M-90 от Синдиката и двумя запасными магазинами.
+ent-ClothingBackpackDuffelSyndicateMedicHardsuitBundle = комплект скафандра медика Синдиката
+    .desc = Скафандр боевого медика из излишков, упакован для вашего ЛАРПа.
+ent-ClothingBackpackDuffelSyndicateStealthHardsuitBundle = комплект скрытного скафандра Cybersun
+    .desc = Продвинутый скрытный скафандр Cybersun, собранный в комплект.

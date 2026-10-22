@@ -1,0 +1,1 @@
+ent-SalvageMineObjective = Обогатить компанию

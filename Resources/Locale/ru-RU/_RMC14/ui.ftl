@@ -29,7 +29,6 @@ rmc-ui-shoutout-info =
 rmc-ui-save = Сохранить
 rmc-ui-ghost-color = Цвет призрака
 rmc-ui-ghost-color-clear = Очистить
-rmc-ui-ghost-color-save = Сохранить
 rmc-ui-shoutout-nt = [bold]NanoTrasen финансируется: [color=green]{ $name }[/color]![/bold]
 rmc-ui-discord = Discord
 rmc-ui-patreon = Patreon

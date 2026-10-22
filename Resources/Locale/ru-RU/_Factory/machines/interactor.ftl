@@ -1,0 +1,10 @@
+signal-port-description-harm-mode = Порт для переключения режима вреда или установки значения HIGH/LOW. Интерактор будет бить цель инструментом в руке, как в режиме вреда.
+signal-port-description-machine-repeating = Порт для управления автоматическим перезапуском после завершения.
+signal-port-description-tool-drop-locked = Порт для переключения блокировки выбрасывания инструмента или установки значения HIGH/LOW. Пока блокировка включена, инструмент невозможно выбросить никаким способом.
+signal-port-description-tool-pickup-locked = Порт для переключения блокировки подбирания инструмента или установки значения HIGH/LOW. Пока блокировка включена, инструмент невозможно подобрать никаким способом.
+signal-port-description-use-in-hand = Порт для переключения режима использования в руке или установки значения HIGH/LOW. Цели игнорируются, а к инструменту в руке применяется Z или Alt+Z.
+signal-port-name-harm-mode = Режим вреда
+signal-port-name-machine-repeating = Повтор
+signal-port-name-tool-drop-locked = Блокировка выбрасывания
+signal-port-name-tool-pickup-locked = Блокировка подбирания
+signal-port-name-use-in-hand = Режим использования в руке

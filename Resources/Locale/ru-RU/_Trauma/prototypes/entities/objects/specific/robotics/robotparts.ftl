@@ -1,0 +1,10 @@
+ent-EDAiCoreElectronics = модуль ядра ИИ ED-209
+    .desc = Центр управления ИИ для ED-209.
+ent-EDHead = голова ED-209
+ent-EDIFFElectronics = модуль свой-чужой ED-209
+    .desc = Электрический модуль свой-чужой для ED-209.
+ent-EDLegL = правая нога ED-209
+ent-EDLegR = левая нога ED-209
+ent-EDShell = корпус ED-209
+ent-EDWeaponControlsElectronics = модуль управления оружием и наведения ED-209
+    .desc = Электрическое управление наведением для ED-209.

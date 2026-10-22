@@ -1,0 +1,288 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Generic
+
+- type: borgSubtype
+  parentBorgType: generic
+  id: generic_tall
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/generic.rsi
+  dummyPrototype: BorgChassisGenericTall
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: generic
+  id: generic_tall_mme
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/genericMme.rsi
+  dummyPrototype: BorgChassisGenericTallMme
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+# Mining
+
+- type: borgSubtype
+  parentBorgType: mining
+  id: mining_drake
+  haveMotionAnimation: true
+  spritePath: _Nebula/Mobs/Silicons/Drakes/miner.rsi
+  dummyPrototype: BorgChassisMiningDrake
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+    BellyUp: "0, 0"
+    DeepRest: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: mining
+  id: mining_tall_cargo
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/cargo.rsi
+  dummyPrototype: BorgChassisMiningTallCargo
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: mining
+  id: mining_tall_cargo_f
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/cargoF.rsi
+  dummyPrototype: BorgChassisMiningTallCargoF
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: mining
+  id: mining_tall
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/miner.rsi
+  dummyPrototype: BorgChassisMiningTall
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: mining
+  id: mining_tall_meka
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/minerMeka.rsi
+  dummyPrototype: BorgChassisMiningTallMeka
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: mining
+  id: mining_tall_mme
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/minerMme.rsi
+  dummyPrototype: BorgChassisMiningTallMme
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+# Engineer
+
+- type: borgSubtype
+  parentBorgType: engineering
+  id: engineer_drake
+  spritePath: _Nebula/Mobs/Silicons/Drakes/engineer.rsi
+  dummyPrototype: BorgChassisEngineerDrake
+  haveMotionAnimation: true
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+    BellyUp: "0, 0"
+    DeepRest: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: engineering
+  id: engineer_tall
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/engineer.rsi
+  dummyPrototype: BorgChassisEngineerTall
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+
+# Medical
+
+- type: borgSubtype
+  parentBorgType: medical
+  id: medical_drake
+  haveMotionAnimation: true
+  spritePath: _Nebula/Mobs/Silicons/Drakes/medical.rsi
+  dummyPrototype: BorgChassisMedicalDrake
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+    BellyUp: "0, 0"
+    DeepRest: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: medical
+  id: medical_tall
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/medical.rsi
+  dummyPrototype: BorgChassisMedicalTall
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: medical
+  id: medical_tall_meka
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/medicalMeka.rsi
+  dummyPrototype: BorgChassisMedicalTallMeka
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: medical
+  id: medical_tall_mme
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/medicalMme.rsi
+  dummyPrototype: BorgChassisMedicalTallMme
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+# Service
+
+- type: borgSubtype
+  parentBorgType: service
+  id: service_drake
+  haveMotionAnimation: true
+  spritePath: _Nebula/Mobs/Silicons/Drakes/service.rsi
+  dummyPrototype: BorgChassisServiceDrake
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+    BellyUp: "0, 0"
+    DeepRest: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: service
+  id: service_tall
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/service.rsi
+  dummyPrototype: BorgChassisServiceTall
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: service
+  id: service_tall_meka
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/serviceMeka.rsi
+  dummyPrototype: BorgChassisServiceTallMeka
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: service
+  id: service_tall_mme
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/serviceMme.rsi
+  dummyPrototype: BorgChassisServiceTallMme
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+# Janitor
+
+- type: borgSubtype
+  parentBorgType: janitor
+  id: janitor_drake
+  haveMotionAnimation: true
+  spritePath: _Nebula/Mobs/Silicons/Drakes/janitor.rsi
+  dummyPrototype: BorgChassisJanitorDrake
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+    BellyUp: "0, 0"
+    DeepRest: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: janitor
+  id: janitor_tall
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/janitor.rsi
+  dummyPrototype: BorgChassisJanitorTall
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: janitor
+  id: janitor_tall_meka
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/janitorMeka.rsi
+  dummyPrototype: BorgChassisJanitorTallMeka
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"
+
+- type: borgSubtype
+  parentBorgType: janitor
+  id: janitor_tall_mme
+  haveMotionAnimation: false
+  spritePath: _Nebula/Mobs/Silicons/Tallrobot/janitorMme.rsi
+  dummyPrototype: BorgChassisJanitorTallMme
+  statesWhiteList:
+    Base: "1,1"
+    Sit: "0.1, 0.1"
+    Rest: "0.1, 0.1"
+    Wreck: "0, 0"

@@ -30,9 +30,6 @@ traitor-role-greeting =
     Ваши цели и кодовые слова указаны в меню персонажа. Используйте аплинк, чтобы купить нужные инструменты для миссии.
     Смерть Nanotrasen!
 
-traitor-title-codewords = Кодовые слова
-traitor-title-equipment = Снаряжение
-
 traitor-role-codewords =
     Кодовые слова: [color=lightgray]
     {$codewords}.[/color]

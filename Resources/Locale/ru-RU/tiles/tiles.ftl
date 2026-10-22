@@ -144,3 +144,19 @@ tiles-white-marble = белый мрамор
 tiles-dark-marble = тёмный мрамор
 tiles-plasma-marble = плазма мрамор
 tiles-uranium-marble = урановый мрамор
+
+tiles-dark-astro-grass = тёмная астро-трава
+tiles-desert-astro-sand = пустынный астро-песок
+tiles-light-astro-grass = лёгкая астро-трава
+tiles-xenoborg-floor = ксеноборг-плитка
+
+tiles-dark-floor-horizontal-slats-bordered = тёмная стальная горизонтальная реечная плитка с окантовкой
+tiles-dark-floor-slats-continuous = тёмная стальная сплошная реечная плитка
+tiles-dark-floor-vertical-slats-bordered = тёмная стальная вертикальная реечная плитка с окантовкой
+tiles-rcd-plating = обшивка РЦД
+tiles-steel-floor-horizontal-slats-bordered = стальная горизонтальная реечная плитка с окантовкой
+tiles-steel-floor-slats-continuous = стальная сплошная реечная плитка
+tiles-steel-floor-vertical-slats-bordered = стальная вертикальная реечная плитка с окантовкой
+tiles-white-floor-horizontal-slats-bordered = белая стальная горизонтальная реечная плитка с окантовкой
+tiles-white-floor-slats-continuous = белая стальная сплошная реечная плитка
+tiles-white-floor-vertical-slats-bordered = белая стальная вертикальная реечная плитка с окантовкой

@@ -1,0 +1,12 @@
+ent-BulletGrenadeBirdshot = { ent-PelletShotgun }
+    .desc = { ent-PelletShotgun.desc }
+ent-BulletGrenadeSlug = осколочная граната
+    .desc = { ent-BaseBullet.desc }
+ent-BulletGrenadeSpread0000Buckshot = { ent-PelletShotgun }
+    .desc = { ent-PelletShotgun.desc }
+ent-BulletGrenadeSpread00Buckshot = { ent-PelletShotgun }
+    .desc = { ent-PelletShotgun.desc }
+ent-BulletGrenadeSpreadBeanbag = { ent-PelletShotgun }
+    .desc = { ent-PelletShotgun.desc }
+ent-BulletGrenadeSpreadBirdshot = { ent-PelletShotgun }
+    .desc = { ent-PelletShotgun.desc }

@@ -12,7 +12,6 @@ store-category-wearables = Экипировка
 store-category-implants = Импланты
 store-category-job = Работа
 store-category-pointless = Безделушки
-store-category-contractor = Наёмник
 store-discounted-items = Скидки
 # Revenant
 store-category-abilities = Способности
@@ -22,3 +21,7 @@ store-caregory-spellbook-defensive = Защитные заклинания
 store-caregory-spellbook-utility = Вспомогательные заклинания
 store-caregory-spellbook-equipment = Волшебное снаряжение
 store-caregory-spellbook-events = Заклинания событий
+
+store-category-nukie-delivery = Предложения
+
+store-category-objective = Цели

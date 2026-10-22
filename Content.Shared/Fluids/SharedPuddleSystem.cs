@@ -25,6 +25,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared._Funky.Stains;
 
 namespace Content.Shared.Fluids;
 
@@ -148,6 +149,21 @@ public abstract partial class SharedPuddleSystem : EntitySystem
             args.Sound = proto.FootstepSound;
         }
     }
+
+    // Funky start
+    [SubscribeLocalEvent]
+    private void OnGetStainableSolution(Entity<PuddleComponent> entity, ref GetStainableSolutionEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (!_solutionContainerSystem.ResolveSolution(entity.Owner, entity.Comp.SolutionName, ref entity.Comp.Solution, out var solution))
+            return;
+
+        args.Solution = solution;
+        args.Handled = true;
+    }
+    // Funky end
 
     private void HandlePuddleExamined(Entity<PuddleComponent> entity, ref ExaminedEvent args)
     {

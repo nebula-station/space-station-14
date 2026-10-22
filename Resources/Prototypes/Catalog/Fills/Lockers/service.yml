@@ -98,6 +98,8 @@
     - id: BoxLightMixed
     - id: Holoprojector
     - id: WireBrush
+    - id: FlatpackWashingMachine # Nebula
+      amount: 2
     - !type:AllSelector
       rolls: 2
       children:

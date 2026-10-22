@@ -40,7 +40,7 @@ public sealed partial class InventoryUIController : UIController, IOnStateEntere
     private readonly Dictionary<string, ItemSlotButtonContainer> _slotGroups = new();
 
     private StrippingWindow? _strippingWindow;
-    private ItemSlotButtonContainer? _inventoryHotbar;
+    private InventoryDisplay? _inventoryHotbar; // Lua
     private SlotButton? _inventoryButton;
 
     private SlotControl? _lastHovered;
@@ -90,9 +90,10 @@ public sealed partial class InventoryUIController : UIController, IOnStateEntere
         CommandBinds.Unregister<ClientInventorySystem>();
     }
 
-    private SlotButton CreateSlotButton(SlotData data)
+    private SlotButton CreateSlotButton(SlotData data, float uiScale = 1f) // Lua
     {
         var button = new SlotButton(data);
+        button.ApplyUiScale(uiScale); // Lua
         button.Pressed += ItemPressed;
         button.StoragePressed += StoragePressed;
         button.Hover += SlotButtonHovered;
@@ -100,7 +101,7 @@ public sealed partial class InventoryUIController : UIController, IOnStateEntere
         return button;
     }
 
-    public void RegisterInventoryBarContainer(ItemSlotButtonContainer inventoryHotbar)
+    public void RegisterInventoryBarContainer(InventoryDisplay inventoryHotbar) // Lua
     {
         _inventoryHotbar = inventoryHotbar;
     }
@@ -140,10 +141,19 @@ public sealed partial class InventoryUIController : UIController, IOnStateEntere
 
         foreach (var (_, data) in clientInv.SlotData)
         {
-            if (!data.ShowInWindow || !_slotGroups.TryGetValue(data.SlotGroup, out var container))
-                continue;
+            // Lua start
+            if (data.ShowInWindow && !data.HasSlotGroup)
+            {
+                if (_inventoryHotbar == null)
+                    continue;
 
-            if (!container.TryGetButton(data.SlotName, out var button))
+                if (!_inventoryHotbar.TryGetButton(data.SlotName, out _))
+                    _inventoryHotbar.AddButton(CreateSlotButton(data, data.UiWindowScale), data.ButtonOffset, data.UiWindowScale);
+            }
+            // Lua end
+            else if (!data.ShowInWindow || !_slotGroups.TryGetValue(data.SlotGroup, out var container)) // Lua
+                continue;
+            else if (!container.TryGetButton(data.SlotName, out var button)) // Lua
             {
                 button = CreateSlotButton(data);
                 container.TryAddButton(button);
@@ -161,42 +171,8 @@ public sealed partial class InventoryUIController : UIController, IOnStateEntere
 
         if (_inventoryButton != null)
             _inventoryButton.Visible = clothing.Count != 0;
-        if (clothing.Count == 0)
-            return;
 
-        foreach (var child in new List<Control>(_inventoryHotbar.Children))
-        {
-            if (child is not SlotControl)
-                _inventoryHotbar.RemoveChild(child);
-        }
-
-        var maxWidth = clothing.Max(p => p.Value.ButtonOffset.X) + 1;
-        var maxIndex = clothing.Select(p => GetIndex(p.Value.ButtonOffset)).Max();
-
-        _inventoryHotbar.MaxColumns = maxWidth;
-        _inventoryHotbar.Columns = maxWidth;
-
-        for (var i = 0; i <= maxIndex; i++)
-        {
-            var index = i;
-            if (clothing.FirstOrNull(p => GetIndex(p.Value.ButtonOffset) == index) is { } pair)
-            {
-                if (_inventoryHotbar.TryGetButton(pair.Key, out var slot))
-                    slot.SetPositionLast();
-            }
-            else
-            {
-                _inventoryHotbar.AddChild(new Control
-                {
-                    MinSize = new Vector2(64, 64)
-                });
-            }
-        }
-
-        int GetIndex(Vector2i position)
-        {
-            return position.Y * maxWidth + position.X;
-        }
+        _inventoryHotbar.Relayout(); // Lua
     }
 
     private void UpdateStrippingWindow(InventorySlotsComponent? clientInv)
@@ -214,8 +190,8 @@ public sealed partial class InventoryUIController : UIController, IOnStateEntere
 
             if (!_strippingWindow!.InventoryButtons.TryGetButton(data.SlotName, out var button))
             {
-                button = CreateSlotButton(data);
-                _strippingWindow!.InventoryButtons.AddButton(button, data.ButtonOffset);
+                button = CreateSlotButton(data, data.UiWindowScale); // Lua
+                _strippingWindow!.InventoryButtons.AddButton(button, data.ButtonOffset, data.UiWindowScale); // Lua
             }
 
             var showStorage = _entities.HasComponent<StorageComponent>(data.HeldEntity);
@@ -372,6 +348,16 @@ public sealed partial class InventoryUIController : UIController, IOnStateEntere
 
     private void AddSlot(SlotData data)
     {
+        // Lua start
+        if (!data.HasSlotGroup)
+        {
+            if (_inventoryHotbar != null && !_inventoryHotbar.TryGetButton(data.SlotName, out _))
+                _inventoryHotbar.AddButton(CreateSlotButton(data, data.UiWindowScale), data.ButtonOffset, data.UiWindowScale);
+
+            return;
+        }
+        // Lua end
+
         if (!_slotGroups.TryGetValue(data.SlotGroup, out var slotGroup))
             return;
 
@@ -381,6 +367,14 @@ public sealed partial class InventoryUIController : UIController, IOnStateEntere
 
     private void RemoveSlot(SlotData data)
     {
+        // Lua start
+        if (!data.HasSlotGroup)
+        {
+            _inventoryHotbar?.RemoveButton(data.SlotName);
+            return;
+        }
+        // Lua end
+
         if (!_slotGroups.TryGetValue(data.SlotGroup, out var slotGroup))
             return;
 
@@ -433,7 +427,7 @@ public sealed partial class InventoryUIController : UIController, IOnStateEntere
             inventoryButton.StorageButton.Visible = showStorage;
         }
 
-        if (_slotGroups.GetValueOrDefault(group)?.GetButton(name) is not { } button)
+        if ((_slotGroups.GetValueOrDefault(group)?.GetButton(name) ?? _inventoryHotbar?.GetButton(name)) is not { } button) // Lua
             return;
 
         if (_entities.TryGetComponent(entity, out VirtualItemComponent? virtb))

@@ -10,3 +10,6 @@ tool-quality-hammering-name = Забивание
 tool-quality-hammering-tool-name = Кувалда
 tool-quality-painting-name = Окрашивание
 tool-quality-painting-tool-name = Краскопульт
+
+tool-quality-sharpening-name = Заточка
+tool-quality-sharpening-tool-name = Точильный инструмент

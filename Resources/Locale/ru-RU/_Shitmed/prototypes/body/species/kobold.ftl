@@ -1,0 +1,12 @@
+ent-AppearanceKobold = внешность кобольда
+ent-OrganKoboldArmLeft = левая рука
+ent-OrganKoboldArmRight = правая рука
+ent-OrganKoboldFootLeft = левая стопа
+ent-OrganKoboldFootRight = правая стопа
+ent-OrganKoboldHandLeft = левая кисть
+ent-OrganKoboldHandRight = правая кисть
+ent-OrganKoboldHead = голова
+ent-OrganKoboldLegLeft = левая нога
+ent-OrganKoboldLegRight = правая нога
+ent-OrganKoboldTail = хвост
+ent-OrganKoboldTorso = торс

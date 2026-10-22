@@ -1,0 +1,68 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="{Loc infinity-dorm-teleporter-ui-title}"
+                      MinSize="600 300"
+                      SetSize="600 320">
+    <BoxContainer Orientation="Horizontal"
+                  HorizontalExpand="True"
+                  VerticalExpand="True">
+
+        <BoxContainer Orientation="Vertical"
+                      SetWidth="220"
+                      Margin="8">
+            <LineEdit Name="NumberInput"
+                      PlaceHolder="{Loc infinity-dorm-teleporter-ui-input-number}"
+                      HidePlaceHolderOnFocus="True"
+                      HorizontalExpand="True"/>
+
+            <Button Name="Confirm"
+                    Text="{Loc infinity-dorm-teleporter-ui-button-confirm}"
+                    Margin="0 6 0 0"
+                    Disabled="True"/>
+
+            <PanelContainer StyleClasses="LowDivider"
+                            HorizontalExpand="True"
+                            MinHeight="2"
+                            Margin="0 2"/>
+
+            <BoxContainer Orientation="Vertical"
+                          VerticalExpand="True">
+                <Button Name="PlayersListButton"
+                        Text="{Loc infinity-dorm-teleporter-ui-players-list-button}"
+                        HorizontalExpand="True"
+                        Margin="0 0 0 4"/>
+
+                <Button Name="RoomsListButton"
+                        Text="{Loc infinity-dorm-teleporter-ui-rooms-list-button}"
+                        HorizontalExpand="True"
+                        Margin="0 0 0 4"/>
+
+                <Label Text="{Loc infinity-dorm-teleporter-ui-current-room-label}"
+                       StyleClasses="LabelSubText"
+                       HorizontalAlignment="Center"/>
+
+                <Label Name="CurrentRoom"
+                       Text="{Loc infinity-dorm-teleporter-ui-dont-selected}"
+                       HorizontalAlignment="Center"/>
+            </BoxContainer>
+        </BoxContainer>
+
+        <PanelContainer StyleClasses="LowDivider"
+                        VerticalExpand="True"
+                        MinWidth="2"/>
+
+        <PanelContainer StyleClasses="PanelDark"
+                        HorizontalExpand="True"
+                        VerticalExpand="True">
+            <ScrollContainer HScrollEnabled="False"
+                             HorizontalExpand="True"
+                             VerticalExpand="True">
+                <BoxContainer Name="RoomsContainer"
+                              Orientation="Vertical"
+                              HorizontalExpand="True"
+                              Margin="6">
+                </BoxContainer>
+            </ScrollContainer>
+        </PanelContainer>
+    </BoxContainer>
+</controls:FancyWindow>

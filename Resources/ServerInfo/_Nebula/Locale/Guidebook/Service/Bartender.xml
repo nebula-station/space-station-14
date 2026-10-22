@@ -1,0 +1,32 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+# Бармен
+Работа бармена довольно проста: подавайте напитки. Люди будут приходить к вам и просить напитки, а ваша задача - просто передать их им.
+
+[textlink="Нажмите здесь, чтобы увидеть полный список напитков." link="Drinks"]
+
+<Box>
+Реагенты для напитков можно найти в разных местах:
+</Box>
+<Box>
+<GuideEntityEmbed Entity="BoozeDispenser"/>
+<GuideEntityEmbed Entity="SodaDispenser"/>
+<GuideEntityEmbed Entity="VendingMachineBooze"/>
+</Box>
+
+<Box>
+Не забудьте сосуды для их подачи!
+</Box>
+<Box>
+<GuideEntityEmbed Entity="DrinkGlass" Caption="Стакан"/>
+<GuideEntityEmbed Entity="DrinkGlassCoupeShaped"/>
+<GuideEntityEmbed Entity="DrinkShotGlass"/>
+<GuideEntityEmbed Entity="DrinkShaker"/>
+<GuideEntityEmbed Entity="DrinkJigger"/>
+</Box>
+
+Список всех напитков, которые могут заказать, есть в разделе «Справочные таблицы».
+</Document>

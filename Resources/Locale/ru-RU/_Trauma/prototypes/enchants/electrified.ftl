@@ -1,0 +1,1 @@
+ent-EnchantElectrified = Под напряжением

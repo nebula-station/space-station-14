@@ -1,0 +1,68 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+  # Добыча и хранение газа
+  Газы часто используются безвозвратно. Будь то потеря в [textlink="космосе" link="Spacing"] или использование в камере сгорания, станции необходимо уметь производить больше газа, чтобы восполнять потери.
+  Также необходимо хранить этот газ безопасно и эффективно.
+
+  ## Газодобытчики
+  Газодобытчики используются для пополнения запасов газа на станции. Они находятся в резервуарах для хранения газа в атмосферном отделе.
+
+  <Box>
+    <GuideEntityEmbed Entity="GasMinerOxygenStation"/>
+    <GuideEntityEmbed Entity="GasMinerNitrogenStation"/>
+  </Box>
+
+  Газодобытчики постоянно производят газ комнатной температуры и подают его в открытую атмосферу. Для работы им не требуется питание, и они никогда не останавливаются, если только не достигнут заданного [bold]предельного давления[/bold].
+
+  Вы можете узнать больше о газодобытчиках, осмотрев их с помощью [color=yellow][bold][keybind="ExamineEntity"][/bold][/color].
+  Попробуйте осмотреть газодобытчики, представленные выше.
+
+  Газодобытчики бывают разных уровней: у больших версий предельное давление выше, чем у маленьких.
+
+  <Box>
+    <GuideEntityEmbed Entity="GasMinerNitrogen" Caption="300 кПа"/>
+    <GuideEntityEmbed Entity="GasMinerNitrogenStation" Caption="1000 кПа"/>
+    <GuideEntityEmbed Entity="GasMinerNitrogenStationLarge" Caption="4500 кПа"/>
+  </Box>
+
+  ## Хранение газа
+  Камеры в атмосферном отделе используются для хранения газа, производимого газодобытчиками, и для обеспечения им других процессов.
+
+  <Box>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ReinforcedPlasmaWindow" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="GasOutletInjector" Rotation="270" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="GasMinerOxygenStation" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="GasPassiveVent" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
+  </Box>
+
+  <Box>
+    [color=#999999][italic]Пример небольшого резервуара для хранения газа[italic][/color]
+  </Box>
+
+  Различные атмосферные процессы подают и забирают газы из камер.
+  Например:
+  - Газодобытчик подает свежие газы в камеру, если есть место.
+  - Сеть рециркуляции (автобус) подает восстановленные газы в резервуары для хранения и повторного использования.
+  - Системы вроде распределительной сети и камеры сгорания отбирают газы из камер.
+
+  Камеры спроектированы так, чтобы их можно было измерять с помощью [textlink="газоанализатора" link="AtmosTools"].
+  Так как насос в камеру является [textlink="пассивной вентиляцией" link="PassiveVent"], вы можете использовать [textlink="газоанализатор" link="AtmosTools"], чтобы измерить состав газа на входе [textlink="насоса" link="Pumps"], который отдает газ в камеру.
+</Document>

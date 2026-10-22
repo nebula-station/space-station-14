@@ -1,0 +1,31 @@
+<Document>
+# Гражданские
+[color=#6c6a78]Гражданские[/color] — сборный «отдел» для должностей, которые плохо вписываются в другие.
+
+Ответственности у этих должностей почти нет, и ожидается от вас лишь одно — не быть полным вредителем.
+
+## Персонал
+Примерно в порядке того, насколько это настоящая работа. Возможны варианты.
+
+  <Box>
+    <GuideEntityEmbed Entity="ToyFigurineJanitor" Caption="Уборщик"/>
+    <GuideEntityEmbed Entity="ToyFigurineChaplain" Caption="Священник"/>
+    <GuideEntityEmbed Entity="ToyFigurineLibrarian" Caption="Библиотекарь"/>
+    <GuideEntityEmbed Entity="ToyFigurineLawyer" Caption="Юрист"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ToyFigurineMime" Caption="Мим"/>
+    <GuideEntityEmbed Entity="ToyFigurineClown" Caption="Клоун"/>
+    <GuideEntityEmbed Entity="ToyFigurineMusician" Caption="Музыкант"/>
+    <GuideEntityEmbed Entity="ToyFigurinePassenger" Caption="Ассистент"/>
+  </Box>
+
+## Грейтайд повсюду
+Если вы хотите играть за [color=#6c6a78]ассистента[/color], чтобы ломать всё без причины, — здесь к этому относятся строже, чем на других серверах.
+Вместо этого включите антагониста [textlink="Повстанец" link="RuleS5"/] — по сути это ассистент со свободной лицензией на вредительство [color=green]сколько душе угодно[/color].
+
+## Вместе мы сила
+Гражданские — в некотором роде изгои, поэтому дружба с другими [color=#6c6a78]гражданскими[/color] может стать залогом вашего процветания и даже выживания.
+Может, если смеяться над шутками клоуна, он потом поможет вам сбежать из тюрьмы...
+А когда становится совсем туго, даже бедным уборщикам приходится отбиваться от нашествия ксеноморфов.
+</Document>

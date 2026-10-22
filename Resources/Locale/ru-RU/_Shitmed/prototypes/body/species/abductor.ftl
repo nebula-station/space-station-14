@@ -1,0 +1,14 @@
+ent-AppearanceAbductor = внешность абдуктора
+ent-OrganAbductorAppendix = аппендикс
+ent-OrganAbductorArmLeft = левая рука
+ent-OrganAbductorArmRight = правая рука
+ent-OrganAbductorFootLeft = левая стопа
+ent-OrganAbductorFootRight = правая стопа
+ent-OrganAbductorHandLeft = левая кисть
+ent-OrganAbductorHandRight = правая кисть
+ent-OrganAbductorHead = голова
+ent-OrganAbductorLegLeft = левая нога
+ent-OrganAbductorLegRight = правая нога
+ent-OrganAbductorTongue = сверхъязыковая матрица
+    .desc = Загадочная постройка, позволяющая мгновенно связываться между пользователями. Довольно впечатляюще, пока не захочется поесть.
+ent-OrganAbductorTorso = торс

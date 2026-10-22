@@ -1,0 +1,16 @@
+ent-OrganAbductorBrain = { ent-OrganHumanBrain }
+    .desc = { ent-OrganHumanBrain.desc }
+ent-OrganAbductorEars = { ent-OrganHumanEars }
+    .desc = { ent-OrganHumanEars.desc }
+ent-OrganAbductorEyes = { ent-OrganHumanEyes }
+    .desc = { ent-OrganHumanEyes.desc }
+ent-OrganAbductorHeart = { ent-OrganHumanHeart }
+    .desc = { ent-OrganHumanHeart.desc }
+ent-OrganAbductorKidneys = { ent-OrganHumanKidneys }
+    .desc = { ent-OrganHumanKidneys.desc }
+ent-OrganAbductorLiver = { ent-OrganHumanLiver }
+    .desc = { ent-OrganHumanLiver.desc }
+ent-OrganAbductorLungs = { ent-OrganHumanLungs }
+    .desc = { ent-OrganHumanLungs.desc }
+ent-OrganAbductorStomach = { ent-OrganHumanStomach }
+    .desc = { ent-OrganHumanStomach.desc }

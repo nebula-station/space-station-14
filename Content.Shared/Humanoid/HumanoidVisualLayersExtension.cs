@@ -17,6 +17,10 @@ namespace Content.Shared.Humanoid
             if (!HasSexMorph(layer) || sex == Sex.Unsexed)
                 return id;
 
+            // Nebula
+            if (sex == Sex.Futanari)
+                sex = Sex.Female;
+
             return $"{id}{sex}";
         }
 

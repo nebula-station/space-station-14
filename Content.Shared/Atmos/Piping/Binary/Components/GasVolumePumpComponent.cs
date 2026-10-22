@@ -1,3 +1,4 @@
+using Content.Shared.Guidebook; // Nebula edit
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Atmos.Piping.Binary.Components;
@@ -32,6 +33,7 @@ public sealed partial class GasVolumePumpComponent : Component
     [DataField]
     public float LowerThreshold = 0.01f;
 
+    [GuidebookData] // Nebula edit
     [DataField]
     public float HigherThreshold = DefaultHigherThreshold;
 

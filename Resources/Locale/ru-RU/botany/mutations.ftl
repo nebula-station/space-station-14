@@ -1,0 +1,12 @@
+mutation-plant-description-kudzu = Оно растёт необычно быстро и тонко.
+mutation-plant-description-ligneous = Оно одревесневшее, и для сбора урожая понадобится острый инструмент.
+mutation-plant-description-sampled = С него уже брали образец.
+mutation-plant-description-scream = Это растение почему-то выглядит нервным.
+mutation-plant-description-seedless = Собранный урожай не содержит семян.
+mutation-plant-description-unviable = Оно увядает и болеет.
+mutation-plant-noun-kudzu = рост кудзу
+mutation-plant-noun-ligneous = одревеснение
+mutation-plant-noun-sampled = шрамы от срезов
+mutation-plant-noun-scream = мандрагора
+mutation-plant-noun-seedless = бессемянность
+mutation-plant-noun-unviable = нежизнеспособность

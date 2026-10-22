@@ -1,0 +1,12 @@
+ent-ClothingHeadHatCommandMaid = чепчик
+    .desc = Изысканная шапочка для безупречной особы.
+ent-ClothingHeadHatBowsCommandMaid = чепчик с бантиками
+    .desc = Изысканная шапочка с бантами для безупречной особы.
+ent-ClothingHeadHatBlackCommandMaid = чёрный чепчик
+    .desc = Изысканная шапочка для безупречной особы.
+ent-ClothingHeadHatFlyAgaric = шляпка мухомора
+    .desc = Головной убор, напоминающий шляпку ядовитого гриба.
+ent-ClothingHeadHatOfficerCapLovemate = фуражка офицерши
+    .desc = Стой, подонок! Ты арестован!
+ent-ClothingHeadHatMaidFura = фуражка горничной
+    .desc = Аккуратная фуражка, подобающая старшей горничной.

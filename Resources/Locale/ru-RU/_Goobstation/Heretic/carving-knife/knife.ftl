@@ -10,3 +10,5 @@ carving-knife-comp-runes-count = [color=yellow][bold]{ $count } / 3[/bold] вс�
 carving-knife-comp-runes-deleted = Все вырезанные узоры уничтожены!
 alert-carving-trigger-message = { $victim } наступил на руну тревоги возле { $location }!
 alert-carving-trigger-message-coords = { $uid }, { $x }, { $y }
+
+carving-knife-ui-tooltip = { $name }. { $desc }

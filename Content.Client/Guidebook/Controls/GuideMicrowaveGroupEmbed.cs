@@ -48,7 +48,7 @@ public sealed partial class GuideMicrowaveGroupEmbed : BoxContainer, IDocumentTa
     {
         var prototypes = _prototype.EnumeratePrototypes<FoodRecipePrototype>()
             .Where(p => p.Group.Equals(group))
-            .OrderBy(p => p.Name);
+            .OrderBy(p => _prototype.Index(p.Result).Name); // Nebula edit
 
         foreach (var recipe in prototypes)
         {

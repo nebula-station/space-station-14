@@ -1,0 +1,1 @@
+ent-CurseUnremovable = Сковывающее проклятие

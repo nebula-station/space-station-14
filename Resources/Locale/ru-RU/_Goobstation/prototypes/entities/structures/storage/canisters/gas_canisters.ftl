@@ -1,0 +1,16 @@
+ent-BZCanister = канистра би-зет
+    .desc = Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится би-зет. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+ent-BZCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase.desc }
+ent-HealiumCanister = канистра хилиума
+    .desc = Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится хилиум. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+ent-HealiumCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase.desc }
+ent-NitriumCanister = канистра нитрия
+    .desc = Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится нитрий. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+ent-NitriumCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase.desc }
+ent-PluoxiumCanister = канистра плюоксия
+    .desc = Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится плюоксий. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+ent-PluoxiumCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase.desc }

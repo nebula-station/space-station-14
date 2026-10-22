@@ -743,6 +743,7 @@
     sexStateOverrides:
       Male: head_m
       Female: head_f
+      Futanari: head_f # Nebula
 
 - type: entity
   id: OrganBaseTorsoSexed
@@ -756,6 +757,7 @@
     sexStateOverrides:
       Male: torso_m
       Female: torso_f
+      Futanari: torso_f # Nebula
 
 - type: entity
   abstract: true

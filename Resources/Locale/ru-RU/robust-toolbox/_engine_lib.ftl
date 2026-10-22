@@ -71,3 +71,10 @@ zzzz-conjugate-basic =
         [epicene] { $first }
        *[other] { $second }
     }
+
+zzzz-genitive = { GENDER($ent) ->
+    [male] него
+    [female] неё
+    [epicene] них
+    *[neuter] него
+}

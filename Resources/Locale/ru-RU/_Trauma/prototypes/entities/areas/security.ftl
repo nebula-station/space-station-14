@@ -1,0 +1,15 @@
+ent-AreaArmory = оружейная
+ent-AreaBrig = бриг
+ent-AreaBrigMed = медпункт брига
+ent-AreaDetective = детектив
+ent-AreaExecution = комната казни
+ent-AreaFiringRange = стрельбище
+ent-AreaInterrogation = допросная
+ent-AreaLaborCamp = трудовой лагерь
+ent-AreaPrison = тюрьма
+ent-AreaPrisonShower = тюремный душ
+ent-AreaPrisonVisit = тюремная комната свиданий
+ent-AreaSecurity = служба безопасности
+ent-AreaSecurityCheckpoint = КПП СБ
+ent-AreaSecurityLockers = раздевалка СБ
+ent-AreaWarden = смотритель

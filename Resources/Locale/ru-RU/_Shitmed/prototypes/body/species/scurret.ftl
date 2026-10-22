@@ -1,0 +1,11 @@
+ent-AppearanceScurret = внешность скуррета
+ent-OrganScurretArmLeft = левая рука
+ent-OrganScurretArmRight = правая рука
+ent-OrganScurretFootLeft = левая стопа
+ent-OrganScurretFootRight = правая стопа
+ent-OrganScurretHandLeft = левая кисть
+ent-OrganScurretHandRight = правая кисть
+ent-OrganScurretHead = голова
+ent-OrganScurretLegLeft = левая нога
+ent-OrganScurretLegRight = правая нога
+ent-OrganScurretTorso = торс

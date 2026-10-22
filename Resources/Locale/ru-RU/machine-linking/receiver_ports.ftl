@@ -89,3 +89,10 @@ signal-port-description-logic-enable = Загружает входной сиг�
 
 signal-port-name-logic-random-input = Вход
 signal-port-description-logic-random-input = Входной порт, который принимает любой сигнал для активации случайного Выхода.
+
+signal-port-description-dock-toggle = Включает стыковочный зажим устройства при сигнале HIGH.
+signal-port-description-target-receiver = Получает информацию о цели от целеуказателя.
+signal-port-description-target-source = Отправляет информацию о цели приёмнику целей.
+signal-port-name-dock-toggle = Переключить стыковку
+signal-port-name-target-receiver = Приёмник целей
+signal-port-name-target-source = Целеуказатель

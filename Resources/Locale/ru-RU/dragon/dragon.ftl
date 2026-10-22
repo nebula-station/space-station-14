@@ -11,7 +11,5 @@ dragon-round-end-agent-name = дракон
 objective-issuer-dragon = [color=#7567b6]Космический дракон[/color]
 
 ## Nebula
-dragon-role-greeting =
-    Вы [color=#7567b6]космический дракон[/color]. Призовите 3 карповых разлома и захватите этот сектор! Станция находится {$direction}.
 
 dragon-role-briefing = Откройте 3 карповых разлома на станции ({$direction}) и захватите сектор!

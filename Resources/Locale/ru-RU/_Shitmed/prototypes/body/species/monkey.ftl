@@ -1,0 +1,12 @@
+ent-AppearanceMonkey = внешность обезьяны
+ent-OrganMonkeyArmLeft = левая рука
+ent-OrganMonkeyArmRight = правая рука
+ent-OrganMonkeyFootLeft = левая стопа
+ent-OrganMonkeyFootRight = правая стопа
+ent-OrganMonkeyHandLeft = левая кисть
+ent-OrganMonkeyHandRight = правая кисть
+ent-OrganMonkeyHead = голова
+ent-OrganMonkeyLegLeft = левая нога
+ent-OrganMonkeyLegRight = правая нога
+ent-OrganMonkeyTail = хвост
+ent-OrganMonkeyTorso = торс

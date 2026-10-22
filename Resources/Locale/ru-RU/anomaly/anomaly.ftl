@@ -92,3 +92,6 @@ anomaly-behavior-inconstancy = [color=crimson]Обнаружено непост�
 anomaly-behavior-fast = [color=crimson]Частота импульсов значительно повышена.[/color]
 anomaly-behavior-strenght = [color=crimson]Мощность импульсов значительно повышена.[/color]
 anomaly-behavior-moving = [color=crimson]Обнаружена координатная нестабильность.[/color]
+
+anomaly-scanner-doafter-examine = { CAPITALIZE(SUBJECT($user)) } [color=plum]сканирует аномалию[/color].
+anomaly-secret-admin = [color=red](ОШИБКА)[/color]

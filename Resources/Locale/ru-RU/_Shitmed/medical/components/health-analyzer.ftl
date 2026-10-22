@@ -4,15 +4,6 @@ health-analyzer-window-entity-bpm-text = ЧСС
 health-analyzer-window-entity-bpm-value-text = {$bpm} уд/мин
 health-analyzer-window-entity-bpm-stopped-text = Остановка сердца
 
-condition-heart-fibrillating = • [color=orange]Сердце {$entity} фибриллирует![/color]
-condition-heart-stopped = • [color=red]Сердце {$entity} остановилось.[/color]
-
-condition-brain-oxygen-Unstable = • [color=yellow]Пациенту не хватает воздуха.[/color]
-condition-brain-oxygen-Dangerous = • [color=orange]Мозгу пациента сильно не хватает воздуха.[/color]
-condition-brain-oxygen-Critical = • [color=red]Мозг пациента начинает отмирать из-за нехватки воздуха.[/color]
-condition-brain-oxygen-Fatal = • [color=red]Мозг пациента не получает воздуха.[/color]
-condition-body-asphyxiation-severe = • [color=red]У пациента тяжёлая гипоксемия.[/color]
-
 # inky end
 condition-body-trauma-BoneDamage-Normal = • {$woundable} имеет очень незначительное повреждение кости.
 condition-body-trauma-BoneDamage-Damaged = • Кость {$woundable} немного повреждена.

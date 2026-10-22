@@ -65,3 +65,6 @@ fracture-examine-message-15 = Мы готовились к этому?
 fracture-examine-message-16 =
     Мы думали, что мы хищники,
     но мы лишь добыча
+
+blade-arena-crit-message = Мансус доволен вашим выступлением, теперь вы можете уйти.
+blade-arena-crit-message-heretic = Вы хорошо справились, теперь вы можете уйти.

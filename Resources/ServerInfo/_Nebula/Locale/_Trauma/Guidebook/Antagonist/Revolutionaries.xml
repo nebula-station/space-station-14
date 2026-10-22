@@ -1,0 +1,150 @@
+<Document>
+  # Революционеры
+
+  <Box>
+    [color=#999999][italic]«Viva la revolución!!»[/italic][/color]
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="PosterContrabandRevolt" Caption=""/>
+  </Box>
+
+  Революционеры — антагонисты-конвертеры из рабочего класса Nanotrasen. Им нужно захватить станцию, построив гигантские военные фабрики.
+
+  ## Самое главное!
+  Глава революции — лидер, а не боец передовой. Раздавайте задачи революционерам, иначе они не будут знать, что делать.
+
+  ## Цели
+  Вы должны убить, обратить или изгнать весь [textlink="командный состав" link="Command"] станции в любом порядке.
+
+  Ваша цель — не уничтожить станцию, а [italic]захватить её[/italic], так что по возможности сводите разрушения к минимуму.
+
+  [bold]Революция провалится[/bold], если все [bold][color=#5e9cff]главы революции[/color][/bold] погибнут, — в этом случае все [color=red]революционеры[/color] отрекутся от неё.
+
+  ## Главы революции и обращение
+  [bold][color=#5e9cff]Главы революции[/color][/bold] выбираются в начале смены и получают [color=cyan]булаву[/color], [color=cyan]две агитационные брошюры[/color], [color=cyan]наручники[/color] и немного стартовых [color=cyan]деталей[/color].
+
+  <Box>
+    <GuideEntityEmbed Entity="RevMace"/>
+    <GuideEntityEmbed Entity="Handcuffs"/>
+    <GuideEntityEmbed Entity="RevPropaganda"/>
+    <GuideEntityEmbed Entity="RevGear"/>
+  </Box>
+
+  С вами могут работать и другие главы революции. Общайтесь через особый радиоимплант на канале [color=red]глав революции[/color] с помощью [bold]:j[/bold].
+
+  Чтобы переманить члена экипажа на свою сторону, оглушите его [color=#ff0000]булавой[/color], наденьте наручники и прочитайте ему [color=#ff0000]агитацию[/color] (кликнув по нему брошюрой в руке). Не забудьте снять с цели гарнитуру, иначе она позовёт на помощь!
+
+  Ещё одно препятствие — [color=cyan]импланты защиты разума[/color]. Они:
+  - Не дают обратить носителя в [color=red]революционера[/color].
+  - Отвращают революционеров от революции, лишая их верности вашему делу.
+  - Заметно меняют внешность [bold][color=#5e9cff]главы революции[/color][/bold], если вживить имплант ему, раскрывая прикрытие и отключая способность обращать.
+
+  Считайте, что у всей [color=#cb0000]службы безопасности[/color] и [color=#1b67a5]командования[/color] импланты защиты разума уже есть.
+
+  Импланты защиты разума можно удалять [color=red]разрушителями щитов[/color], когда вы их откроете.
+
+  <Box>
+    <GuideEntityEmbed Entity="RevShieldRipper"/>
+  </Box>
+
+  ## Строительство фабрик и технологии
+
+  [bold][color=red]Самое важное[/color][/bold] для главы революции — построить нормальные фабрики. Так вы расширяете дерево технологий и получаете более [color=red]опасные[/color] и мощные предметы для своих революционеров. Помните, что постройки революции [color=red][bold]очень шумные[/bold][/color], так что вскоре вам понадобится изолированное место и оборона!
+
+  ### Промышленная кузня
+
+  [bold][color=red]ВСЕГДА[/color][/bold] начинайте с кузни, а если можете себе позволить — с нескольких. В хороших базах революции 4–5 кузен постоянно производят детали.
+
+  <Box>
+    <GuideEntityEmbed Entity="RevForge"/>
+  </Box>
+
+  Она позволяет [color=cyan]создавать детали[/color] для других машин, а также простую броню и оружие, включая такие важные вещи, как булава — ваше основное оглушающее оружие.
+
+  Вот примеры того, что она может сделать:
+  <Box>
+    <GuideEntityEmbed Entity="RevGear"/>
+    <GuideEntityEmbed Entity="RevNut"/>
+    <GuideEntityEmbed Entity="RevBolt"/>
+    <GuideEntityEmbed Entity="ClothingOuterArmorRev"/>
+    <GuideEntityEmbed Entity="RevSwordBlade"/>
+  </Box>
+
+  ### Печатный станок
+
+  Печатный станок — вторая по важности постройка революции. Он позволяет [color=cyan]создавать агитацию[/color] — ваш предмет для обращения. Но печатает он очень долго, так что стройте несколько.
+
+ <Box>
+    <GuideEntityEmbed Entity="RevPrintingPress"/>
+  </Box>
+
+  Бумагу можно получить так: пусть революционеры печатают наноЗадачи со своих КПК, а затем перерабатывают их в бумагу для станка. Не стесняйтесь раздавать поручения!
+
+  <Box>
+    <GuideEntityEmbed Entity="PaperNanoTaskItem"/>
+    <GuideEntityEmbed Entity="SheetPaper"/>
+    <GuideEntityEmbed Entity="RevPropaganda"/>
+  </Box>
+
+  ### Технологии революции 2-го уровня
+
+  Наладив базовое производство, можно развиваться по дереву технологий и получить технологии 2-го уровня.
+
+  <Box>
+    <GuideEntityEmbed Entity="RevPrinter"/>
+    <GuideEntityEmbed Entity="RevRadioBench"/>
+    <GuideEntityEmbed Entity="RevMicroelectronicsAssembler"/>
+  </Box>
+
+  <Box>
+    <GuideEntityEmbed Entity="RevUniformPrinter"/>
+    <GuideEntityEmbed Entity="RevBulletPress"/>
+  </Box>
+
+  Для каждой из этих построек нужны особые компоненты — например, ключ шифрования службы безопасности для мастерской телекоммуникаций. Раздобыв их, можно собрать соответствующие устройства.
+
+  Эти постройки открывают доступ к уникальным и мощным предметам, например:
+
+  <Box>
+    <GuideEntityEmbed Entity="PinpointerCommand"/>
+    <GuideEntityEmbed Entity="RevGunParts"/>
+    <GuideEntityEmbed Entity="ClothingBeltRevWebbing"/>
+    <GuideEntityEmbed Entity="EncryptionKeyRev"/>
+  </Box>
+
+  ### Технологии революции 3-го уровня
+
+  Технологии 3-го уровня — лучшее, что революционеры могут наскрести. Все они дают доступ к сильнейшим предметам, доступным революции.
+
+  <Box>
+    <GuideEntityEmbed Entity="RevTelesphere"/>
+    <GuideEntityEmbed Entity="RevTechAnalyzer"/>
+    <GuideEntityEmbed Entity="RevPlasmaFoundry"/>
+  </Box>
+
+  Но чтобы построить любую из них, нужно убить главу отдела! Для каждой требуются уникальные предметы, доступ к которым есть только у глав.
+
+  <Box>
+    <GuideEntityEmbed Entity="HandTeleporter"/>
+    <GuideEntityEmbed Entity="ClothingShoesBootsMagAdv"/>
+    <GuideEntityEmbed Entity="BoxFolderQmClipboard"/>
+  </Box>
+
+  Подумайте о том, чтобы отправить ударную группу революционеров убить этих глав и забрать предметы — любой из них может переломить ход игры!
+
+  Вот несколько предметов технологий 3-го уровня:
+
+  <Box>
+    <GuideEntityEmbed Entity="RevCircuitBoard"/>
+    <GuideEntityEmbed Entity="Killdozer"/>
+    <GuideEntityEmbed Entity="CartridgeRocketRPG2HE"/>
+  </Box>
+
+  ## Революционер
+  [bold][color=red]Революционер[/color][/bold] — член экипажа, которого обратил [bold][color=#5e9cff]глава революции[/color][/bold].
+
+  [bold][color=red]Революционеры[/color] не могут обращать людей сами,[/bold] но вполне способны делать грязную работу и выполнять приказы.
+
+  Если вы [bold][color=red]революционер[/color][/bold] — слушайтесь глав революции!
+
+</Document>

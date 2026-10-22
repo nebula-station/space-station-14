@@ -1,0 +1,13 @@
+ent-WeaponEnergyTurretAIControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = ИИ, Борги
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+ent-WeaponEnergyTurretCommandControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = Командование
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+ent-WeaponEnergyTurretControlPanelFrame = каркас панели управления охранной турелью
+    .desc = Незавершённый настенный каркас для панели управления охранной турелью.
+ent-WeaponEnergyTurretSecurityControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = Служба безопасности
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+ent-WeaponEnergyTurretStationControlPanelBase = панель управления охранной турелью
+    .desc = Настенный интерфейс для отдалённой настройки рабочих параметров подключённых охранных турелей.

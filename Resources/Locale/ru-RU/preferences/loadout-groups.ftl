@@ -234,3 +234,7 @@ loadout-group-tramdriver-jumpsuit = Комбинезон водителя тра
 loadout-group-tramdriver-outerclothing = Костюм водителя трамвая
 loadout-group-tramdriver-hat = Головной убор водителя трамвая
 loadout-group-tramdriver-gloves = Перчатки водителя трамвая
+
+loadout-group-chaplain-bible = Священная книга
+
+loadout-group-chaplain-shoes = Обувь капеллана

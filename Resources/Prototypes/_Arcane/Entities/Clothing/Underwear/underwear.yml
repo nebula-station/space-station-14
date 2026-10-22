@@ -1,0 +1,134 @@
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearPantiesSpiderman
+  name: panties spiderman
+  description: Men's panties with a print of an ancient hero.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/panties_with_spiderman.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearBoxerWolf
+  name: boxer with wolf
+  description: Brutal boxers with a wolf print.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/boxer_wolf.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearBoxerElephant
+  name: elephant boxers
+  description: Are you sure it's not a thong?!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/boxer_elephant.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearBoxerFrance
+  name: france boxers
+  description: Boxers with the print of the ancient country "France".
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/boxer_france.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearBoxerMaidWithSuspenders
+  name: maid's boxer with suspenders
+  description: Boxers for real men.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/boxer_maidwithsuspenders.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearWarmThongs
+  name: warm thongs
+  description: Warm thongs with fur lining.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/warm_thongs.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearPussyStickers
+  name: pussy stickers
+  description: Stickers on the most intimate place for your perverted pleasures.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/pussy_stickers.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearDriada
+  name: driada panties
+  description: Patroness of trees.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/driada.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearEroticPurple
+  name: purple erotic panties
+  description: A thin panties that barely covers the genitals.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/erotic_purple.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearMedusa
+  name: medusa panties
+  description: Jelly panties.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/medusa.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearLeafs
+  name: leafs panties
+  description: 100% natural.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/leafs.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearPinkFancy
+  name: fancy pink panties
+  description: Pink like Barbie.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/pink_fancy.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearRed
+  name: red panties
+  description: Red panties.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/red.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearAx
+  name: ax panties
+  description: Uga buga.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Underwear/ax.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearBeerPants
+  name: beer pants
+  description: Beer pants.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/beer_pants.rsi

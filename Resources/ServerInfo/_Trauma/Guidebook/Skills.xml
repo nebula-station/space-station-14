@@ -16,7 +16,7 @@ Different masteries unlocks different benefits and maluses to gameplay. Experime
 There are also skill chips:
 
 <Box>
-  <GuideEntityEmbed Entity="SkillChipPassenger"/>
+  <GuideEntityEmbed Entity="SkillChipEducation"/> <!-- Nebula edit -->
 </Box>
 
 Every job has one and they provide job specific skills. They can be inserted or removed from the body through surgery.

@@ -1,0 +1,5 @@
+ent-MobCarpCaller = { ent-MobCarp }
+    .desc = { ent-MobCarp.desc }
+ent-MobSharkDragon = космическая акула
+    .suffix = Драконье потомство
+    .desc = { ent-MobShark.desc }

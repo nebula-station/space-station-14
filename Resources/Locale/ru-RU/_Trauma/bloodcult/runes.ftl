@@ -1,0 +1,12 @@
+cult-rending-already-summoning = Нельзя начать ритуал: он уже идёт.
+cult-rending-drawing-finished = Геометр Крови закончил чертить руну конца рядом с { $area }!
+cult-rending-prevented = Кто-то остановил ритуал.
+cult-rending-started = Геометр Крови начал Ритуал разрыва измерений!
+cult-rending-target-alive = Нельзя начать ритуал: цель жива.
+cult-revive-rune-already-alive = Цель уже жива.
+cult-revive-rune-no-charges = Нельзя провести ритуал воскрешения: зарядов не осталось.
+cult-rune-cant-draw = Чтобы чертить, нужен пол!
+cult-rune-erased = Руна стёрта.
+cult-rune-no-targets = Цели не найдены!
+cult-rune-not-enough-cultists = Недостаточно культистов для проведения ритуала!
+cult-teleport-not-found = Руны не найдены.

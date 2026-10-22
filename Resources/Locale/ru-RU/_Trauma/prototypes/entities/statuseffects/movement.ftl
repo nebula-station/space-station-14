@@ -1,0 +1,9 @@
+ent-HyperStatusEffect = гипер
+ent-InLavaStatusEffect = в лаве
+ent-InXenoResinEffect = в ксеносмоле
+ent-NitriumStatusEffect = ускорение от нитрия
+ent-OrganSlowdownStatusEffect = замедление от уничтоженного органа
+ent-ShadowlingAbominationStatusEffect = мерзость тенелинга
+ent-ShadowlingGlareStatusEffect = замедление от взгляда тенелинга
+ent-SluggishStatusEffect = вялость
+ent-TentacleHookStatusEffect = замедление от щупальца-крюка

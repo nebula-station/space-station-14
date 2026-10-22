@@ -1,0 +1,14 @@
+ent-ClothingUniformJumpsuitBDSMDress = БДСМ платье
+    .desc = Короткое чёрное соблазнительное платье, которое так и кричит о том, что сегодня над вами будут доминировать.
+ent-ClothingUniformJumpsuitBlackShirt = чёрная сорочка
+    .desc = Полупрозрачная сорочка для комфортного сна.
+ent-ClothingUniformJumpsuitWhiteShirt = белая сорочка
+    .desc = Полупрозрачная сорочка для комфортного сна.
+ent-ClothingUniformJumpsuitWebDress = сетчатое платье
+    .desc = Полупрозрачное сетчатое платье, сквозь которое видно твою прекрасную фигуру и новое нижнее бельё.
+ent-ClothingUniformJumpsuitSexyBloodBody = кровавое боди
+    .desc = Красный комбинезон без рукавов и штанин.
+ent-ClothingUniformJumpsuitOfficerDress = платье офицерши
+    .desc = Какой-то плохиш сейчас будет наказан!
+ent-ClothingUniformJumpsuitGentlePinkDress = нежное розовое платье
+    .desc = Милое короткое розовое платье из тонкой ткани.

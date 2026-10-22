@@ -1,0 +1,12 @@
+ent-AreaAnomalyLab = лаборатория аномалий
+ent-AreaArtifactLab = лаборатория артефактов
+ent-AreaCytology = цитология
+ent-AreaGenetics = генетика
+ent-AreaRobotics = робототехника
+ent-AreaRoboticsMechBay = мехотсек
+ent-AreaScience = научный отдел
+ent-AreaScienceBreak = комната отдыха научного отдела
+ent-AreaScienceLobby = приёмная научного отдела
+ent-AreaScienceServer = серверная
+ent-AreaTeleSci = ТелеНаука
+ent-AreaXenobio = ксенобиология

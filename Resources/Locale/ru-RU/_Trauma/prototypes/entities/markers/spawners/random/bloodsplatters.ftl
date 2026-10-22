@@ -1,0 +1,12 @@
+ent-DecalSpawnerBloodSplattersTrauma = спавнер декаль
+    .desc = { "" }
+    .suffix = Брызги крови
+ent-DecalSpawnerGibBloodSplatters = спавнер декаль
+    .desc = { "" }
+    .suffix = Брызги крови, гиб
+ent-DecalSpawnerGibBrainSplatters = спавнер декаль
+    .desc = { "" }
+    .suffix = Брызги крови, мозг
+ent-DecalSpawnerMinorBloodSplattersTrauma = спавнер декаль
+    .desc = { "" }
+    .suffix = Брызги крови, малые

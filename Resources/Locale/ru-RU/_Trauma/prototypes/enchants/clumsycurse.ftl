@@ -1,0 +1,1 @@
+ent-CurseClumsy = Проклятие клоунов

@@ -44,7 +44,6 @@ blob-target-factory-blob-invalid = Неверный тип блоба, выбе�
 blob-target-node-blob-invalid = Неверный тип блоба, выберите узловой блоб.
 blob-target-close-to-resource = Слишком близко к другому ресурсному блобу.
 blob-target-nearby-not-node = Поблизости нет узлового или ресурсного блоба.
-blob-target-close-to-node = Слишком близко к другому узлу.
 blob-target-already-produce-blobbernaut = Эта фабрика уже произвела блоббернаута.
 blob-cant-split = Вы не можете разделить ядро блоба.
 blob-not-have-nodes = У вас нет узлов.

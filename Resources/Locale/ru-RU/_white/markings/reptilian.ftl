@@ -61,3 +61,6 @@ marking-LizardChestSpinesShortMembrane = Ящер, грудь, шипы (Кор�
 marking-LizardChestSpinesShortMembrane-spines_short = Шипы
 marking-LizardChestSpinesShortMembraneWithoutTail = Ящер, грудь, шипы (Короткие, с перепонкой, без хвоста)
 marking-LizardChestSpinesShortMembraneWithoutTail-spines_short = Шипы
+
+marking-SnakeLargeTail-snake_large = Внутренняя часть
+marking-SnakeLargeTail-snake_large_overlay = Внешняя часть

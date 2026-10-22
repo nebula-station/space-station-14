@@ -6,5 +6,6 @@ namespace Content.Shared.Humanoid
         Male,
         Female,
         Unsexed,
+        Futanari, // Nebula
     }
 }

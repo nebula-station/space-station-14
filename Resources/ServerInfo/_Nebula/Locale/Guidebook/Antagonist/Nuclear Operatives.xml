@@ -1,0 +1,125 @@
+<Document>
+  # Ядерные оперативники
+
+  <Box>
+    [color=#999999][italic]«ОПЕРАТИВНИКИ, ВНИМАНИЕ. ВАШИ ЦЕЛИ ПРОСТЫ.[/italic][/color]
+  </Box>
+  <Box>
+    [color=#999999][italic]ДОСТАВЬТЕ ГРУЗ И УБИРАЙТЕСЬ, ПОКА ОН НЕ ВЗОРВАЛСЯ. НАЧИНАЙТЕ ОПЕРАЦИЮ».[/italic][/color]
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="PosterContrabandEnlistGorlex" Caption=""/>
+  </Box>
+
+  Вас только что выбрали ядерным оперативником [color=#ff0000]Синдиката[/color]. У вас одна цель — взорвать одно из лучших судов Nanotrasen ядерным зарядом.
+
+  ## Оперативники
+  Ваша команда состоит из нескольких ролей:
+  - [bold]Оперативники[/bold] — обычные бойцы, на которых ложится основная работа.
+  - [bold]Медик[/bold], который работает с реагентами, делая лекарства или химическое оружие.
+  - [bold]Командир[/bold], который составляет план и руководит командой.
+
+  <Box>
+    <GuideEntityEmbed Entity="ClothingOuterHardsuitSyndie"/>
+    <GuideEntityEmbed Entity="ClothingOuterHardsuitSyndieMedic" Caption="скафандр медика"/>
+    <GuideEntityEmbed Entity="ClothingOuterHardsuitSyndieCommander" Caption="скафандр командира"/>
+  </Box>
+
+  Если вас выбрали медиком или командиром, но вы не чувствуете себя готовым, ваши обязанности может взять на себя кто-то из товарищей.
+
+  ## Диск
+
+  Каждый оперативник начинает с [color=cyan]пинпоинтером[/color] — включите его и держите при себе. Он всегда указывает на [color=cyan]диск ядерной аутентификации.[/color]
+  Диск принадлежит [color=yellow]капитану[/color], и почти всегда он при нём. Следуйте за стрелкой пинпоинтера к диску и [italic]добудьте его любой ценой[/italic].
+
+  <Box>
+    <GuideEntityEmbed Entity="PinpointerNuclear"/>
+    <GuideEntityEmbed Entity="NukeDisk"/>
+  </Box>
+
+  ## Подготовка
+  У каждого члена отряда есть [color=cyan]аплинк[/color], через который можно купить всё необходимое для операции, как у [textlink="предателей." link="Traitors"]
+
+  <Box>
+    <GuideEntityEmbed Entity="BaseUplinkRadio200TC" Caption="ваш аплинк"/>
+  </Box>
+
+  Вам доступно то же снаряжение, что и предателям, но есть и более качественное, а телекристаллов больше.
+  <Box>
+    <GuideEntityEmbed Entity="WeaponLightMachineGunL6" Caption="Оружие"/>
+    <GuideEntityEmbed Entity="MagazineLightRifleBox" State="icon" Caption="Боеприпасы"/>
+    <GuideEntityEmbed Entity="C4" Caption="Взрывчатка"/>
+    <GuideEntityEmbed Entity="ClothingOuterHardsuitJuggernaut" Caption="Одежда"/>
+    <GuideEntityEmbed Entity="Stimpack" Caption="Химикаты"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ChameleonProjector" Caption="Обман"/>
+    <GuideEntityEmbed Entity="Emag" Caption="Саботаж"/>
+    <GuideEntityEmbed Entity="MacroBombImplanter" Caption="Импланты"/>
+    <GuideEntityEmbed Entity="BorgChassisSyndicateAssault" Caption="Союзники"/>
+    <GuideEntityEmbed Entity="ClothingEyesGlassesOutlawGlasses" Caption="Бесполезное"/>
+  </Box>
+
+  Также нужно решить, будете ли вы [color=red]объявлять войну[/color]. Это даёт [bold]каждому в команде 200 дополнительных телекристаллов[/bold].
+  Однако экипаж сразу узнает о вашем существовании и успеет как следует подготовиться к вашему прибытию.
+
+  Объявить войну может только [bold]командир[/bold]. Решайте быстро — [italic]предложение ограничено по времени![/italic]
+  <Box>
+    <GuideEntityEmbed Entity="NukeOpsDeclarationOfWar"/>
+  </Box>
+
+  ## Как добраться до станции
+  План есть, снаряжение есть. Теперь — действуйте.
+
+  Отправляйтесь с остальными оперативниками на [color=cyan]шаттл[/color].
+  На борту лежит папка с [color=cyan]кодом ядерной аутентификации[/color].
+  Запомните код, а затем [bold]проверьте, совпадает ли ID бомбы с бомбой на вашем шаттле.[/bold] Если нет — взводить придётся бомбу станции.
+
+  На шаттле есть [color=cyan]консоль IFF[/color]. Если отключить [italic]Показ IFF[/italic], она скрывает вас от других кораблей и сканеров массы.
+
+  Когда все готовы, совершите прыжок к станции и долетите до неё на [color=cyan]джетпаках[/color] с шаттла. Не забудьте код, пинпоинтеры и бомбу, если берёте её с собой.
+
+  <Box>
+    <GuideEntityEmbed Entity="BoxFolderNuclearCodes"/>
+    <GuideEntityEmbed Entity="ComputerIFFSyndicate"/>
+    <GuideEntityEmbed Entity="JetpackBlack"/>
+  </Box>
+
+  ## Бомба и порядок взведения
+  Вы зашли так далеко. Закончите дело.
+
+  - Добудьте [bold]диск ядерной аутентификации[/bold] и вставьте его в бомбу.
+  - Введите [bold]код ядерной аутентификации[/bold] и нажмите на клавиатуре «[bold]E[/bold]», чтобы подтвердить.
+  - [bold]Закрепите[/bold] бомбу на твёрдом полу внутри станции.
+  - [bold]Чтобы начать отсчёт до детонации, нажмите [color=#EB2D3A]ВЗВЕСТИ[/color][/bold]. Через 300 секунд бомба взорвётся.
+  - [bold]Защищайте бомбу от сотрудников NT и боргов[/bold], даже ценой собственных жизней! Условия операции [italic]не предусматривают вашего возвращения[/italic].
+
+  [bold]Обезвреживание[/bold] бомбы занимает 30 секунд. Её можно взвести повторно, но если позволить прервать отсчёт, шансы на успех операции падают.
+  При повторном взведении таймер продолжит с того места, где остановился.
+
+  <Box>
+    <GuideEntityEmbed Entity="NuclearBomb" Caption="Ядерная бомба"/>
+  </Box>
+
+  ## Условия победы
+
+  [color=#00ff00]Победитель[/color] раунда и масштаб победы объявляются на экране конца раунда.
+
+  [bold][color=red]Крупная победа Синдиката![/color][/bold]
+  - Бомба взрывается на станции.
+  - Экипаж эвакуируется, но бомба всё ещё взведена.
+  - Взведённую бомбу доставляют на Центральное командование эвакуационным шаттлом.
+
+  [bold][color=red]Малая победа Синдиката[/color][/bold]
+  - Хотя бы один оперативник выживает, а экипаж эвакуируется, оставив диск на станции.
+
+  [bold][color=#999999]Ничья[/color][/bold]
+  - Бомба взрывается вне станции.
+
+  [bold][color=green]Малая победа экипажа[/color][/bold]
+  - Экипаж эвакуируется с диском, а часть оперативников погибает.
+
+  [bold][color=green]Крупная победа экипажа![/color][/bold]
+  - Все оперативники погибают.
+  - Экипаж взрывает аванпост ядерных оперативников их же бомбой.
+</Document>

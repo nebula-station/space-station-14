@@ -1,0 +1,12 @@
+ent-AppearanceShattered = Разбитый облик
+ent-MobShattered = Урист МакРазбитый
+ent-OrganShatteredArmLeft = левая рука
+ent-OrganShatteredArmRight = правая рука
+ent-OrganShatteredFootLeft = левая стопа
+ent-OrganShatteredFootRight = правая стопа
+ent-OrganShatteredHandLeft = левая кисть
+ent-OrganShatteredHandRight = правая кисть
+ent-OrganShatteredHead = голова
+ent-OrganShatteredLegLeft = левая нога
+ent-OrganShatteredLegRight = правая нога
+ent-OrganShatteredTorso = торс

@@ -31,10 +31,28 @@ public sealed partial class SlotDefinition
     [DataField("stripTime")] public TimeSpan StripTime { get; private set; } = TimeSpan.FromSeconds(4f);
 
     [DataField("uiWindowPos", required: true)]
-    public Vector2i UIWindowPosition { get; private set; }
+    public Vector2 UIWindowPosition { get; private set; }
 
     [DataField("strippingWindowPos", required: true)]
     public Vector2i StrippingWindowPos { get; private set; }
+
+    // Lua start
+    public const SlotFlags CompactUiSlotFlags =
+        SlotFlags.FINGER | SlotFlags.NECKLACE |
+        SlotFlags.SOCKS | SlotFlags.UNDERWEARB | SlotFlags.UNDERWEART | SlotFlags.WALLET |
+        SlotFlags.ARMBANDRIGHT | SlotFlags.ARMBANDLEFT;
+
+    [DataField]
+    public float? UIWindowScale { get; private set; }
+
+    public float GetUiWindowScale()
+    {
+        if (UIWindowScale is { } scale)
+            return scale;
+
+        return (SlotFlags & CompactUiSlotFlags) != 0 ? 0.5f : 1f;
+    }
+    // Lua end
 
     [DataField("dependsOn")] public ProtoId<InventorySlotPrototype>? DependsOn { get; private set; } // Trauma - string -> ProtoId
 

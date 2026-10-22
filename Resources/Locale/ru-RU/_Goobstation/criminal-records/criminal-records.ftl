@@ -4,3 +4,5 @@ criminal-job-error = В криминальных записях не обнар�
 criminal-name-error = В криминальных записях не обнаружено имя
 
 criminal-records-console-not-demoted = {$name} ({$job}) больше не отмечен к понижению в должности.
+
+criminal-records-console-hostile-reason = Причина враждебности

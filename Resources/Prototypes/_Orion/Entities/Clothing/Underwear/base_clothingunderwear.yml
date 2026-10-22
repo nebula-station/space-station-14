@@ -1,0 +1,60 @@
+- type: entity
+  abstract: true
+  parent: [SolutionFood, Clothing] # Nebula edit - added SolutionFood
+  id: ClothingUnderwearBase
+  name: panties
+  description: Panties.
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Goobstation/Items/handling/cloth_pickup.ogg
+      params:
+        volume: -4
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Goobstation/Items/handling/cloth_drop.ogg
+      params:
+        volume: -4
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Goobstation/Items/handling/cloth_drop.ogg
+      params:
+        volume: -4
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - underwearb
+    equippedState: equipped-UNDERWEAR
+    equipSound:
+      collection: GenericEquip
+      params:
+        volume: -5
+  - type: Item
+    size: Small
+  - type: Butcherable
+    spawned:
+    - id: MaterialCloth1
+      amount: 2
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 100
+  - type: Edible
+    requiresSpecialDigestion: true
+  - type: Solution # Nebula edit - was SolutionContainerManager
+    solution:
+      maxVol: 10
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 10
+  - type: Sprite
+    state: icon
+  - type: TemperatureProtection
+    coefficient: 0.90
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+  - type: Armor
+    coverage:
+    - Torso

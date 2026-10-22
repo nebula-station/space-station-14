@@ -1,0 +1,25 @@
+view-variable-instance-entity-add-window-client-components = Добавить компонен [Клиент]
+view-variable-instance-entity-add-window-server-components = Добавить компонент [Сервер]
+view-variable-instance-entity-client-components-search-bar-placeholder = Поиск
+view-variable-instance-entity-client-components-tab-title = Компоненты клиента
+view-variable-instance-entity-client-variables-tab-title = Переменные клиента
+view-variable-instance-entity-server-components-add-component-button-placeholder = Добавить компонент
+view-variable-instance-entity-server-components-search-bar-placeholder = Поиск
+view-variable-instance-entity-server-components-tab-title = Компоненты сервера
+view-variable-instance-entity-server-variables-tab-title = Переменные сервера
+
+view-variables = View Variables
+vv-protoid-addwindow-title = Установить прототип
+vv-protoid-id-placeholder = Id прототипа
+vv-protoid-select-button-label = Выбрать
+vv-sound-collection = Коллекция
+vv-sound-loop = Зациклить
+vv-sound-max-distance = Максимальная дистанция
+vv-sound-none = Отсутствует
+vv-sound-path = Путь
+vv-sound-pitch = Высота
+vv-sound-play-offset = Задержка воспроизведения (сек)
+vv-sound-reference-distance = базовое расстояние
+vv-sound-rolloff-factor = Фактор спада
+vv-sound-variation = Изменение высоты тона
+vv-sound-volume = громкость

@@ -1,0 +1,17 @@
+ent-ClothingHeadsetAltRadioHost = наушники радиоведущего
+    .desc = Накладные наушники с дополнительной поролоновой подкладкой вокруг ушей.
+ent-ClothingHeadsetAltSecurityRegular = полноразмерная гарнитура службы безопасности
+    .desc = { ent-ClothingHeadsetAlt.desc }
+ent-ClothingHeadsetAltSyndicateCommander = кроваво-красная полноразмерная гарнитура
+    .desc = { ent-ClothingHeadsetAltSyndicate.desc }
+ent-ClothingHeadsetAltWarden = полноразмерная гарнитура смотрителя
+    .desc = Модифицированный модульный интерком, позволяющий быстро связываться с командным составом.
+ent-ClothingHeadsetChronolegioneer = полноразмерная футуристическая гарнитура
+    .desc = Гарнитура из будущего, способная принимать большинство частот станции.
+ent-ClothingHeadsetChronolegioneerUnremoveable = { ent-ClothingHeadsetChronolegioneer }
+    .suffix = Не снимаются
+    .desc = { ent-ClothingHeadsetChronolegioneer.desc }
+ent-ClothingHeadsetCommandService = полноразмерная гарнитура сервиса
+    .desc = Гарнитура с командный и сервисным каналом.
+ent-ClothingHeadsetDeathsquad = полноразмерная гарнитура Эскадрона Смерти
+    .desc = { ent-ClothingHeadsetAlt.desc }

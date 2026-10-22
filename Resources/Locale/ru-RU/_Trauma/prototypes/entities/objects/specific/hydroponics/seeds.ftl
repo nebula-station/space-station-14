@@ -1,0 +1,15 @@
+ent-BalloonMelonSeeds = пакет семян арбузного шарика
+ent-CherryBombSeeds = пакет семян (вишня)
+    .desc = Только на самом деле это бомбы, потому что вы злодей.
+    .suffix = бомба
+ent-ClearCornSeeds = пакет семян прозрачной кукурузы
+ent-CocaSeeds = пакет семян коки
+ent-CoconutSeeds = пакет семян кокоса
+ent-DeliciousAppleSeeds = пакет семян аппетитного яблока
+ent-LemonadeSeeds = пакет семян лимонада
+    .desc = Не путать с напитком.
+ent-MagicMushroomSeeds = пакет спор волшебных грибов
+ent-MethAppleSeeds = пакет семян мет-яблока
+ent-PeanutSeeds = пакет семян арахиса
+ent-SteelWheatSeeds = пакет семян стальной пшеницы
+ent-SynthMeatSeeds = пакет семян синтетического мяса

@@ -1,0 +1,15 @@
+ent-DreamsicleEggEffect = Апельсиновый кайф
+ent-SnowEggEffect = Снежный след!
+ent-SnowEggEffectNoDamage = Снежный след!
+ent-StatusEffectCockatricePower = эффект яйца василиска
+ent-StatusEffectDamageMod = модификатор урона изменён
+ent-StatusEffectDamageModKnightEgg = модификатор урона изменён
+ent-StatusEffectDragonPower = сила дракона
+ent-StatusEffectDreamEgg = эффект яйца грёз
+ent-StatusEffectMedusa = Превращён в камень
+ent-StatusEffectPhoenixHeal = исцеление феникса
+ent-StatusEffectPhoenixPower = эффект яйца феникса
+ent-StatusEffectShink = уменьшен
+ent-StatusEffectWizardChickenPower = эффект яйца волшебника
+ent-StatusEffectZappyPower = эффект яйца Заппи
+ent-SugarRushEffect = сахарный прилив!

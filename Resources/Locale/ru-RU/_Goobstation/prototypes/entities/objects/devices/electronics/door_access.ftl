@@ -1,0 +1,15 @@
+ent-DoorElectronicsAllService = { ent-DoorElectronics }
+    .suffix = Сервис, Закрытый
+    .desc = { ent-DoorElectronics.desc }
+ent-DoorElectronicsCentralCommandCaptain = { ent-DoorElectronics }
+    .suffix = Капитан ЦК, Закрытый
+    .desc = { ent-DoorElectronics.desc }
+ent-DoorElectronicsJournalism = { ent-DoorElectronics }
+    .suffix = Журналистика, Закрытый
+    .desc = { ent-DoorElectronics.desc }
+ent-DoorElectronicsNTR = { ent-DoorElectronics }
+    .suffix = Представитель NanoTrasen, Закрытый
+    .desc = { ent-DoorElectronics.desc }
+ent-DoorElectronicsRobotics = { ent-DoorElectronics }
+    .suffix = Робототехник, Закрытый
+    .desc = { ent-DoorElectronics.desc }

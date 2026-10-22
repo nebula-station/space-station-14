@@ -1,0 +1,9 @@
+ent-MobArachnidRandom = Урист МакПаук
+    .suffix = Случайный вид
+    .desc = { ent-MobArachnid.desc }
+ent-MobCluwneRandom = { ent-MobCluwne }
+    .suffix = Случайный вид
+    .desc = { ent-MobCluwne.desc }
+ent-MobIPCRandom = Урист МакПозитрон
+    .suffix = Случайный вид
+    .desc = { ent-MobIPC.desc }

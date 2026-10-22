@@ -50,3 +50,14 @@ device-net-id-wireless = Беспроводные
 device-net-id-apc = ЛКП
 device-net-id-atmos-devices = Атмос-устройства
 device-net-id-reserved = Резерв
+
+device-address-prefix-camera = CAM-
+device-address-prefix-camera-monitor = SCM-
+device-address-prefix-camera-router = CMR-
+device-address-prefix-camera-router-wireless = CMW-
+device-address-prefix-crew-monitor = MCM-
+device-address-prefix-crew-monitoring-server = CMS-
+device-address-unknown = ????-????
+device-frequency-prototype-name-arrivals-shuttle-timer = Таймер прибытия
+device-frequency-prototype-name-shuttle-timer = Таймер эвакуационного шаттла
+device-frequency-prototype-name-surveillance-camera = Камеры

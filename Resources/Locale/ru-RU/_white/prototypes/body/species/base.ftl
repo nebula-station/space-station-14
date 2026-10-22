@@ -1,0 +1,12 @@
+ent-OrganXenomorphArmLeft = левая рука
+ent-OrganXenomorphArmRight = правая рука
+ent-OrganXenomorphFootLeft = левая стопа
+ent-OrganXenomorphFootRight = правая стопа
+ent-OrganXenomorphHandLeft = левая кисть
+ent-OrganXenomorphHandRight = правая кисть
+ent-OrganXenomorphHead = голова
+ent-OrganXenomorphKidneys = почки
+    .desc = За это можно выручить кругленькую сумму...
+ent-OrganXenomorphLegLeft = левая нога
+ent-OrganXenomorphLegRight = правая нога
+ent-OrganXenomorphTorso = торс

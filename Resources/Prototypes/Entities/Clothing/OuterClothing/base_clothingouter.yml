@@ -27,6 +27,22 @@
   # </Trauma>
   - type: Sprite
     state: icon
+  # Nebula start
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      outerClothing:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: outerclothing
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: outerclothing
+  - type: SolutionManager # Nebula
+    solutions:
+    - StainSolution
+  - type: StainBlocker
+    slots: [INNERCLOTHING]
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -50,6 +66,18 @@
     walkModifier: 0.9
     sprintModifier: 0.9
   - type: HeldSpeedModifier
+  # Nebula start
+  - type: Stainable
+    clothingVisuals:
+      outerClothing:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: suitblood
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: suitbloodicon
+  - type: StainBlocker
+    slots: [INNERCLOTHING, FEET, GLOVES]
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -87,6 +115,14 @@
         type: StorageBoundUserInterface
   - type: StaticPrice
     price: 70
+  - type: Stainable # Nebula
+    clothingVisuals:
+      outerClothing:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: coatblood
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: coatbloodicon
 
 - type: entity
   abstract: true
@@ -125,6 +161,14 @@
     - state: icon-open
       map: ["foldedLayer"]
       visible: false
+  - type: Stainable # Nebula
+    clothingVisuals:
+      outerClothing:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: outerclothing
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: outerclothing
 
 - type: entity
   abstract: true
@@ -259,6 +303,8 @@
     - PlasmamanSafe # Trauma
     - Hardsuit
     - WhitelistChameleon
+  - type: StainBlocker # Nebula
+    slots: [INNERCLOTHING, FEET, GLOVES]
 
 - type: entity
   parent: ClothingOuterEVASuitBase
@@ -272,6 +318,8 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:Container {} # Trauma - removed Slot
+  - type: StainBlocker # Nebula
+    slots: [INNERCLOTHING, FEET, GLOVES]
 
 - type: entity
   abstract: true

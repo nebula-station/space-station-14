@@ -1,0 +1,16 @@
+ent-AnnihilateAllJanitorsObjectiveFluff = { ent-SlaughterFluffBaseObjective }
+    .desc = Уничтожьте всех уборщиков и их синтетических собратьев, ни одна метла не должна остаться нетронутой.
+ent-DriveInsaneObjectiveFluff = { ent-SlaughterFluffBaseObjective }
+    .desc = Шепчите для их страданий. Безумие — ваш дар.
+ent-HuntTheBraveObjectiveFluff = { ent-SlaughterFluffBaseObjective }
+    .desc = Найдите и накажите тех, кто достаточно глуп, чтобы сражаться с вами.
+ent-HuntTheCowardsObjectiveFluff = { ent-SlaughterFluffBaseObjective }
+    .desc = Выследите тех, кто убегает, страх лишь продлевает их страдания.
+ent-ShowCrewPowerObjectiveFluff = { ent-SlaughterFluffBaseObjective }
+    .desc = Пусть они увидят вашу ужасную мощь собственными глазами.
+ent-SlaughterFluffBaseObjective = { ent-BaseObjective }
+    .desc = { ent-BaseObjective.desc }
+ent-SpareCrewObjectiveFluff = { ent-SlaughterFluffBaseObjective }
+    .desc = Пусть кто-то выживет... только чтобы страдать дольше.
+ent-SpreadBloodObjectiveFluff = { ent-SlaughterFluffBaseObjective }
+    .desc = Окрасьте пол в красный. Каждая плита должна быть залита кровью.

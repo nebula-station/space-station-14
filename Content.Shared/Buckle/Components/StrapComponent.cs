@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Shared._Orion.Bed.Systems;
 using Content.Shared.Alert;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
@@ -9,7 +10,7 @@ using Robust.Shared.Serialization;
 namespace Content.Shared.Buckle.Components;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(SharedBuckleSystem))]
+[Access(typeof(SharedBuckleSystem), typeof(DoubleBedSystem))] // Orion-Edit: DoubleBedSystem
 public sealed partial class StrapComponent : Component
 {
     /// <summary>
@@ -42,6 +43,14 @@ public sealed partial class StrapComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public Vector2 BuckleOffset = Vector2.Zero;
+
+    // Orion-Start
+    /// <summary>
+    /// Per-entity buckle offsets keyed by buckled entity.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public Dictionary<EntityUid, Vector2> BuckleOffsets = new();
+    // Orion-End
 
     /// <summary>
     /// The angle to rotate the player by when they get strapped

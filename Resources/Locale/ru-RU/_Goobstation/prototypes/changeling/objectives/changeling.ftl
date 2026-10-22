@@ -1,0 +1,10 @@
+ent-BaseChangelingObjective = { ent-BaseObjective }
+    .desc = { ent-BaseObjective.desc }
+ent-BaseChangelingSyndicateObjective = { ent-BaseObjective }
+    .desc = { ent-BaseObjective.desc }
+ent-ChangelingSurviveObjective = Выжить
+    .desc = Я должен выжить любой ценой.
+ent-EscapeIdentityObjective = { ent-BaseChangelingObjective }
+    .desc = Мне нужно сбежать на эвакуационном челноке. Под прикрытием.
+ent-LingKillRandomHeadObjective = { ent-BaseChangelingSyndicateObjective }
+    .desc = Our worshippers requested we eliminate this high value target.

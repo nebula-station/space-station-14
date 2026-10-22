@@ -1,0 +1,12 @@
+<!--
+SPDX-License-Identifier: MIT
+-->
+
+<Document>
+# Еда
+
+Эти реагенты в основном используются на кухне. Очень полезны для поваров и/или сервисных работников.
+
+<GuideReagentGroupEmbed Group="Foods"/>
+
+</Document>

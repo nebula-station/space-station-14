@@ -4,3 +4,5 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 tiles-plating-rust = ржавый пол
+
+tiles-plating-rose-stone = пол из розового камня

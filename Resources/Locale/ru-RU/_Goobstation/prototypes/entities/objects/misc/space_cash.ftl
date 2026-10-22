@@ -1,0 +1,8 @@
+ent-SpaceCashCounterfeit = подозрительные кредиты
+    .desc = Выглядит нарисованным.
+ent-SpaceCashCounterfeit10 = { ent-SpaceCashCounterfeit }
+    .suffix = 10
+    .desc = { ent-SpaceCashCounterfeit.desc }
+ent-SpaceCashCounterfeit250 = { ent-SpaceCashCounterfeit }
+    .suffix = 250
+    .desc = { ent-SpaceCashCounterfeit.desc }

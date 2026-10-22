@@ -1,0 +1,14 @@
+ent-ClothingHeadHatHoodHereticAshCostume = { ent-ClothingHeadHatHoodHereticCostume }
+    .desc = { ent-ClothingHeadHatHoodHereticCostume.desc }
+ent-ClothingHeadHatHoodHereticBladeCostume = { ent-ClothingHeadHatHoodHereticCostume }
+    .desc = { ent-ClothingHeadHatHoodHereticCostume.desc }
+ent-ClothingHeadHatHoodHereticCostume = оккультный капюшон
+    .desc = Порванный, покрытый пылью капюшон. Под ним размыто виднеются глаза.
+ent-ClothingHeadHatHoodHereticFleshCostume = { ent-ClothingHeadHatHoodHereticCostume }
+    .desc = { ent-ClothingHeadHatHoodHereticCostume.desc }
+ent-ClothingHeadHatHoodHereticVoidCostume = { ent-ClothingHeadHatHoodHereticCostume }
+    .desc = { ent-ClothingHeadHatHoodHereticCostume.desc }
+ent-ClothingHeadHatHoodWinterCapFancy = капюшон зимней куртки капитана
+    .desc = { ent-ClothingHeadHatHoodWinterBase.desc }
+ent-ClothingHeadHatHoodZeusHood = капюшон Зевса
+    .desc = Гарантированно не слетит с головы при прыжках с небоскрёба на небоскрёб.

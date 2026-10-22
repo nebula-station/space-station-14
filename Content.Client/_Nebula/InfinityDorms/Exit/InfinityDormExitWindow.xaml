@@ -1,0 +1,55 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="{Loc infinity-dorm-exit-ui-title}"
+                      MinSize="320 220"
+                      SetSize="320 240">
+    <BoxContainer Orientation="Vertical"
+                  HorizontalExpand="True"
+                  VerticalExpand="True"
+                  Margin="8">
+
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc infinity-dorm-exit-ui-players-label}"
+                   StyleClasses="LabelSubText"
+                   HorizontalExpand="True"/>
+            <Label Name="PlayersCount"
+                   Text="0"/>
+        </BoxContainer>
+
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc infinity-dorm-exit-ui-is-closed}"
+                   StyleClasses="LabelSubText"
+                   HorizontalExpand="True"/>
+
+            <Label Name="IsClosedLabel"/>
+        </BoxContainer>
+
+        <PanelContainer StyleClasses="LowDivider"
+                        HorizontalExpand="True"
+                        MinHeight="2"
+                        Margin="0 6"/>
+
+        <CheckButton Name="ClosedToggle"
+                     Text="{Loc infinity-dorm-exit-ui-closed-toggle}"
+                     HorizontalExpand="True"
+                     ToggleMode="True"/>
+
+        <Label Name="OwnerHint"
+               Text="{Loc infinity-dorm-exit-ui-owner-only}"
+               StyleClasses="LabelSubText"
+               HorizontalAlignment="Center"
+               Margin="0 4 0 0"
+               Visible="False"/>
+
+        <Control VerticalExpand="True"/>
+
+        <PanelContainer StyleClasses="LowDivider"
+                        HorizontalExpand="True"
+                        MinHeight="2"
+                        Margin="0 2 0 6"/>
+
+        <Button Name="ExitButton"
+                Text="{Loc infinity-dorm-exit-ui-button-exit}"
+                HorizontalExpand="True"/>
+    </BoxContainer>
+</controls:FancyWindow>

@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: BaseAction
+  id: SwitchState
+  name: Change state
+  description: Change your state to another
+  components:
+  - type: Action
+    useDelay: 1
+  - type: InstantAction
+    event: !type:SwitchStateActionEvent

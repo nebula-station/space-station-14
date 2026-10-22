@@ -8,6 +8,7 @@
     func: NotEqual
   params:
     displacementSize: 127
+    displacementScale: 1 # Nebula
 
 - type: shader
   id: DisplacedDraw
@@ -15,6 +16,7 @@
   path: "/Textures/Shaders/displacement.swsl"
   params:
     displacementSize: 127
+    displacementScale: 1 # Nebula
 
 - type: shader
   id: DisplacedDrawUnshaded
@@ -22,3 +24,4 @@
   path: "/Textures/Shaders/displacement_unshaded.swsl"
   params:
     displacementSize: 127
+    displacementScale: 1 # Nebula

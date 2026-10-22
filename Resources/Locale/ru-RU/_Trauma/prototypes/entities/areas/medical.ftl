@@ -1,0 +1,15 @@
+ent-AreaChem = химия
+ent-AreaCloning = клонирование
+ent-AreaCryoPods = криокапсулы
+ent-AreaMedical = медотсек
+ent-AreaMedicalBreak = комната отдыха медотсека
+ent-AreaMedicalLobby = приёмная медотсека
+ent-AreaMedicalStorage = склад медотсека
+ent-AreaMorgue = морг
+ent-AreaParamedic = парамедик
+ent-AreaPatientRoom = палата
+ent-AreaPharmacy = аптека
+ent-AreaPsychology = психология
+ent-AreaSurgery = хирургия
+ent-AreaSurgeryTheatre = операционная
+ent-AreaVirology = вирусология

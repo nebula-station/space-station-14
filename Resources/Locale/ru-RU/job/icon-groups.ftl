@@ -12,3 +12,8 @@ job-icon-group-silicon = Синтетики
 job-icon-group-blank = Пусто
 job-icon-group-threat = Угроза
 job-icon-group-admin = Администратор
+
+job-icon-group-antagonist = Антагонист
+job-icon-group-misc = Разное
+job-icon-group-science = Наука
+job-icon-group-theatre = Театр

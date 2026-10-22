@@ -1,0 +1,9 @@
+ent-AreaAbandonedArcade = заброшенная игровая
+ent-AreaAbandonedBar = заброшенный бар
+ent-AreaAbandonedChapel = заброшенная церковь
+ent-AreaAbandonedGarden = заброшенный сад
+ent-AreaAbandonedKitchen = заброшенная кухня
+ent-AreaAbandonedLibrary = заброшенная библиотека
+ent-AreaAbandonedMed = заброшенный медотсек
+ent-AreaAbandonedSci = заброшенный научный отдел
+ent-AreaAbandonedTheatre = заброшенный театр

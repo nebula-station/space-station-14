@@ -1,0 +1,1 @@
+ent-OrganVoxTail = хвост

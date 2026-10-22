@@ -118,3 +118,57 @@
       blacklist:
         tags:
         - PetOnly
+    # Lua start
+    - name: finger
+      slotTexture: finger
+      slotFlags: FINGER
+      stripTime: 2
+      uiWindowPos: 2.0,3.5
+      strippingWindowPos: 3,4
+      displayName: Finger
+    - name: necklace
+      slotTexture: necklace
+      slotFlags: NECKLACE
+      stripTime: 2
+      uiWindowPos: 2.5,3.5
+      strippingWindowPos: 3,3
+      displayName: Necklace
+    - name: underwearb
+      slotTexture: underwearb
+      slotFlags: UNDERWEARB
+      stripTime: 6
+      uiWindowPos: 2,0.5
+      strippingWindowPos: 1,6
+      displayName: Panties
+      stripHidden: true
+    - name: underweart
+      slotTexture: underweart
+      slotFlags: UNDERWEART
+      stripTime: 6
+      uiWindowPos: 2.5,0.5
+      strippingWindowPos: 2,6
+      displayName: Bra
+      stripHidden: true
+    - name: wallet
+      slotTexture: wallet
+      slotFlags: WALLET
+      stripTime: 6
+      uiWindowPos: 2.5,0
+      strippingWindowPos: 2,3
+      dependsOn: jumpsuit
+      displayName: Wallet
+    - name: rightarmband
+      slotTexture: armband_right
+      slotFlags: ARMBANDRIGHT
+      stripTime: 6
+      uiWindowPos: 2.5,3
+      strippingWindowPos: 3,2
+      displayName: Right_armband
+    - name: leftarmband
+      slotTexture: armband_left
+      slotFlags: ARMBANDLEFT
+      stripTime: 6
+      uiWindowPos: 2,3
+      strippingWindowPos: 3,1
+      displayName: Left_armband
+    # Lua end

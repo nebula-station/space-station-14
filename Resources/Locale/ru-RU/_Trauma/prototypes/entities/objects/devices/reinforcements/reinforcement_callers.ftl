@@ -1,0 +1,9 @@
+ent-DebugReinforcementCaller = вызыватель подкрепления
+    .desc = Устройство, вызывающее подкрепление на станцию.
+    .suffix = DEBUG
+ent-ReinforcementCallerHoP = вызыватель подкрепления
+    .desc = Устройство, вызывающее подкрепление на станцию.
+    .suffix = ГП
+ent-ReinforcementCallerHos = вызыватель подкрепления
+    .desc = Устройство, вызывающее подкрепление на станцию.
+    .suffix = ГСБ

@@ -1,0 +1,17 @@
+ent-ChangelingDart = органический дротик
+    .desc = Тонкий, как игла, дротик, сформированный из кости.
+ent-ChangelingDartBlind = органический дротик ослепления
+    .suffix = Ослепление
+    .desc = { ent-ChangelingDart.desc }
+ent-ChangelingDartCryo = органический крио-дротик
+    .suffix = Крио
+    .desc = { ent-ChangelingDart.desc }
+ent-ChangelingDartLethargic = органический дротик вялости
+    .suffix = Вялость
+    .desc = { ent-ChangelingDart.desc }
+ent-ChangelingDartMute = органический дротик молчания
+    .suffix = Молчание
+    .desc = { ent-ChangelingDart.desc }
+ent-DartGunChangeling = органический стреломёт
+    .desc = Органический жало-пускатель, стреляющий биодротиками с реагентами.
+    .suffix = Неудаляемый

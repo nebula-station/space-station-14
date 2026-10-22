@@ -108,7 +108,7 @@ namespace Content.Server.Preferences.Managers
 
             var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
 
-            var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
+            var gender = sex == Sex.Male ? Gender.Male : Gender.Female; // Nebula
             if (Enum.TryParse<Gender>(profile.Gender, true, out var genderVal))
                 gender = genderVal;
 
@@ -123,9 +123,9 @@ namespace Content.Server.Preferences.Managers
                 speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(species);
             }
 
-            var voice = profile.Voice ?? speciesPrototype.DefaultSoundsBySex[(int) sex];
+            var voice = profile.Voice ?? speciesPrototype.GetDefaultSounds(sex); // Nebula edit
             if (!_prototypeManager.HasIndex(voice))
-                voice = speciesPrototype.DefaultSoundsBySex[(int) sex];
+                voice = speciesPrototype.GetDefaultSounds(sex); // Nebula edit
 
             if (profile.OrganMarkings?.RootElement is { } element)
             {

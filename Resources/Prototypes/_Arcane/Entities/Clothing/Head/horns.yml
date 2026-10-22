@@ -1,0 +1,18 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCowHorns
+  name: cow horns
+  description: Small cow horns with additional accessories!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/cow_horns.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadDemonHorns
+  name: demon horns
+  description: A cute accessory in the shape of demon horns with a little tail. Something is still missing...
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/demon_horns.rsi
+    scale: 0.65, 0.65

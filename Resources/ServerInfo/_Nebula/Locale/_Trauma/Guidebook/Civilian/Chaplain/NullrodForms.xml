@@ -1,0 +1,123 @@
+<Document>
+  # Формы нулевого стержня
+  Нулевой стержень можно превратить в особую форму, применив его на алтаре.
+
+  ## Смена алтаря
+  Внешний вид алтаря можно изменить, применив к базовому алтарю нужный предмет. Ломом предмет можно снять и вернуть алтарю базовый вид.
+  ВНИМАНИЕ: превращение нулевого стержня необратимо, так что выбирайте с умом.
+
+  ## Нулевой стержень
+  Старый надёжный нулевой стержень, с которым вы прибываете на станцию. Обычно его сразу меняют, потому что особых способностей у него нет, но драться им — настоящая демонстрация вашей робастности.
+  <Box>
+    <GuideEntityEmbed Entity="Nullrod"/>
+    <GuideEntityEmbed Entity="AltarConvert"/>
+    <GuideEntityEmbed Entity="Crowbar"/>
+  </Box>
+
+  ## Аритмичный нож
+  Время от времени даёт владельцу случайное ускорение. Может помочь догнать нечестивого врага, а может и замедлить вас до черепашьего шага, пока вы пытаетесь сбежать.
+  <Box>
+    <GuideEntityEmbed Entity="ArrythmicKnife"/>
+    <GuideEntityEmbed Entity="AltarFangs"/>
+    <GuideEntityEmbed Entity="FoodMeatBacon"/>
+  </Box>
+
+  ## Бастион
+  Будьте лордом-защитником. По-настоящему мощный щит, который, будучи установленным на тайле, блокирует все вражеские атаки. Кроме того, им можно периодически делать короткий рывок, отбрасывая и раня всех на пути.
+  <Box>
+    <GuideEntityEmbed Entity="Bulwark"/>
+    <GuideEntityEmbed Entity="AltarConvertBlue"/>
+    <GuideEntityEmbed Entity="MakeshiftShield"/>
+  </Box>
+
+  ## Казул и Шакал
+  Пара святых пистолетов и стильный пояс для них. Стреляют только вместе. Для перезарядки — молитесь.
+  <Box>
+    <GuideEntityEmbed Entity="ClothingBeltHolsterFilledChaplain"/>
+    <GuideEntityEmbed Entity="WeaponPistolCasul"/>
+    <GuideEntityEmbed Entity="WeaponPistolJackal"/>
+    <GuideEntityEmbed Entity="AltarTechnology"/>
+    <GuideEntityEmbed Entity="MicroManipulatorStockPart"/>
+  </Box>
+
+  ## Вера
+  Хилый пистолетик, который лечит людей пулями — не спрашивайте. Теми же пулями наносит святой урон нечестивым врагам. Для перезарядки — молитесь.
+  <Box>
+    <GuideEntityEmbed Entity="WeaponPistolFaith"/>
+    <GuideEntityEmbed Entity="AltarConvertWhite"/>
+    <GuideEntityEmbed Entity="IngotSilver1"/>
+  </Box>
+
+  ## Рука Бога
+  Благословение Господа самому доверенному священнику. При атаке накладывает стаки огня и святого огня. Умеет поддевать, как лом. Не снимается.
+  <Box>
+    <GuideEntityEmbed Entity="GodHand"/>
+    <GuideEntityEmbed Entity="AltarChaos"/>
+    <GuideEntityEmbed Entity="SheetPlasma1"/>
+  </Box>
+
+  ## Перчатка серого императора
+  Ведите грейтайдеров к свету Божьему. Несъёмная изолированная рука почти со всеми инструментами, какие понадобятся для руководства грейтайдом. Используйте в руке, чтобы переключать инструмент.
+  <Box>
+    <GuideEntityEmbed Entity="UristHand"/>
+    <GuideEntityEmbed Entity="AltarConvertMaint"/>
+    <GuideEntityEmbed Entity="ClothingHandsGlovesColorYellowBudget"/>
+  </Box>
+
+  ## Пасть ХонкоМатери
+  ХОНК! Огромная клоунская маска, наполненная силой ХонкоМатери. Сбивает с ног при ударе. Не удивляйтесь, если клоун её у вас украдёт.
+  <Box>
+    <GuideEntityEmbed Entity="HonkmotherMaw"/>
+    <GuideEntityEmbed Entity="AltarBananium"/>
+    <GuideEntityEmbed Entity="MaterialBananium1"/>
+  </Box>
+
+  ## Святая бензопила
+  Несъёмная бензопила. Для атаки её нужно держать двумя руками. Ну, это бензопила, которая наносит святой урон.
+  <Box>
+    <GuideEntityEmbed Entity="HolyChainsaw"/>
+    <GuideEntityEmbed Entity="AltarToolbox"/>
+    <GuideEntityEmbed Entity="ToolboxEmergency"/>
+  </Box>
+
+  ## Священный клеймор
+  DEUS VULT! Может выпускать метящий снаряд; атакуя помеченную цель, владелец лечит механические повреждения, удушье и кровопотерю.
+  <Box>
+    <GuideEntityEmbed Entity="HolyClaymore"/>
+    <GuideEntityEmbed Entity="AltarHeaven"/>
+    <GuideEntityEmbed Entity="ClothingHeadHelmetTemplar"/>
+  </Box>
+
+  ## Ирадомини
+  Мощный арбалет, для стрельбы его нужно держать двумя руками. Выпускает одну ОЧЕНЬ мощную святую стрелу, которая исчезает через минуту. Перезарядка молитвой занимает много времени, так что выбирайте позицию с умом.
+  <Box>
+    <GuideEntityEmbed Entity="WeaponPistolIradomini"/>
+    <GuideEntityEmbed Entity="AltarConvertOrange"/>
+    <GuideEntityEmbed Entity="BowImprovised"/>
+  </Box>
+
+  ## Посох монаха
+  Если по-простому — большая палка. Обрушивает шквал ударов, наносящих урон выносливости; очень полезен, чтобы догонять нечестивых.
+  <Box>
+    <GuideEntityEmbed Entity="MonkStaff"/>
+    <GuideEntityEmbed Entity="AltarDruid"/>
+    <GuideEntityEmbed Entity="MaterialWoodPlank1"/>
+  </Box>
+
+  ## Ратварское копьё
+  О? Предпочитаете старых богов? Тогда этот нулевой стержень для вас. Одноручное копьё, наполненное силой Ратвара. Вмещает больше химикатов, чем обычные копья, и наносит много святого урона при броске.
+  <Box>
+    <GuideEntityEmbed Entity="RatvarianSpear"/>
+    <GuideEntityEmbed Entity="AltarClock"/>
+    <GuideEntityEmbed Entity="PowerCellSmallPrinted"/>
+  </Box>
+
+  ## Святые чётки
+  Мейны поддержки ликуют. При молитве лечат всех вокруг, но заодно ранят находящихся рядом нечестивых.
+  <Box>
+    <GuideEntityEmbed Entity="Rosary"/>
+    <GuideEntityEmbed Entity="AltarSpaceChristian"/>
+    <GuideEntityEmbed Entity="ClothingHeadHatHoodNunHood"/>
+  </Box>
+
+</Document>

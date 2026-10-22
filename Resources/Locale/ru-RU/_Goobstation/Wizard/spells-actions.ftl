@@ -35,4 +35,3 @@ action-speech-spell-gorilla-form = БАНАНА Ж'Р!!!
 action-speech-spell-summon-stick-minions = Восстаньте, мои творения! Сойдите со страниц в этот мир!
 action-speech-spell-tile-toggle = ПР'КЛ'ТЬЕ ВМ'А!!!
 action-speech-spell-curse-of-byond = ПРОКЛЯТЬЕ БЬЙОНДА!!!
-action-speech-spell-rathen = АРС НАТХ!!!

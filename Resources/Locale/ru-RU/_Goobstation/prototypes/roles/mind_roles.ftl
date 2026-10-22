@@ -1,0 +1,21 @@
+ent-DevilMindRole = Роль Дьявола
+    .desc = { ent-BaseMindRoleAntag.desc }
+ent-MindRoleBrainwashed = Роль Порабощённого
+    .desc = { ent-BaseMindRoleAntag.desc }
+ent-MindRoleChangeling = Роль Генокрада
+    .desc = { ent-BaseMindRoleAntag.desc }
+ent-MindRoleContractor = Роль Наёмника Синдиката
+    .desc = { ent-BaseMindRoleAntag.desc }
+ent-MindRoleGhoul = Роль Гуля
+    .desc = { ent-BaseMindRoleAntag.desc }
+ent-MindRoleHeretic = Роль Еретика
+    .desc = { ent-BaseMindRoleAntag.desc }
+
+ent-DevilMindRolemidround = Роль спящего дьявола
+    .desc = Энтити роли сознания
+ent-MindRoleArenaParticipant = Участник арены
+    .desc = Энтити роли сознания
+ent-MindRoleChangelingmidround = Роль спящего генокрада
+    .desc = Энтити роли сознания
+ent-MindRoleHereticmidround = Роль спящего еретика
+    .desc = Энтити роли сознания

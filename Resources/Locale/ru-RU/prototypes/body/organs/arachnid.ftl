@@ -1,0 +1,14 @@
+ent-OrganArachnidEyes = глаза
+    .desc = Два — это уже слишком много.
+ent-OrganArachnidHeart = сердце
+    .desc = Отвратительно выносливый миниатюрный биологический насос, рассчитанный на пауков.
+ent-OrganArachnidKidneys = почки
+    .desc = Выводят токсины из кровеносной системы.
+ent-OrganArachnidLiver = печень
+    .desc = Рекомендуется подавать с бобами, под кьянти.
+ent-OrganArachnidLungs = лёгкие
+    .desc = Фильтрует кислород из атмосферы... только более жадно.
+ent-OrganArachnidStomach = желудок
+    .desc = Мерзость. Не перевариваю его.
+ent-OrganArachnidTongue = язык
+    .desc = Мясистая мышца, используемая в основном для обмана.

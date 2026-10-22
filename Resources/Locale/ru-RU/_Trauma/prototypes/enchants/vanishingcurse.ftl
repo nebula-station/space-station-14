@@ -1,0 +1,1 @@
+ent-CurseVanishing = Проклятие исчезновения

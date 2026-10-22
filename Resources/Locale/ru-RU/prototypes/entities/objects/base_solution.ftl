@@ -1,0 +1,17 @@
+ent-Solution = раствор
+ent-Solution3840 = раствор
+ent-SolutionCryo = раствор
+ent-SolutionDrinkHuge = раствор
+ent-SolutionGinormous = раствор
+ent-SolutionHuge = раствор
+ent-SolutionLarge = раствор
+ent-SolutionNormal = раствор
+ent-SolutionSmall = раствор
+ent-SolutionTiny = раствор
+ent-SolutionToolGinormous = раствор
+ent-SolutionToolLarge = раствор
+ent-SolutionToolNormal = раствор
+ent-SolutionToolSmall = раствор
+ent-SolutionToolTiny = раствор
+ent-SolutionToolVeryTiny = раствор
+ent-SolutionVeryTiny = раствор

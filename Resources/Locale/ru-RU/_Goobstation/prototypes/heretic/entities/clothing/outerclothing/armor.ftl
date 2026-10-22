@@ -1,0 +1,26 @@
+ent-ClothingOuterArmorCloakVoid = плащ пустоты
+    .desc = Черный, как смола, не отражающий свет. Рунические символы выгравированы по всей поверхности. С каждой вспышкой ты теряешь понимание того, что видишь.
+ent-ClothingOuterArmorHeretic = зловещие доспехи
+    .desc = Изорванный, пыльный комплект одеяний. Странные глаза вырисовываются изнутри.
+ent-ClothingOuterArmorHereticAsh = { ent-ClothingOuterArmorHeretic }
+    .suffix = Эш
+    .desc = { ent-ClothingOuterArmorHeretic.desc }
+ent-ClothingOuterArmorHereticBlade = { ent-ClothingOuterArmorHeretic }
+    .suffix = Клинок
+    .desc = { ent-ClothingOuterArmorHeretic.desc }
+ent-ClothingOuterArmorHereticCosmos = { ent-ClothingOuterArmorHeretic }
+    .suffix = Космос
+    .desc = { ent-ClothingOuterArmorHeretic.desc }
+ent-ClothingOuterArmorHereticFlesh = { ent-ClothingOuterArmorHeretic }
+    .suffix = Плоть
+    .desc = { ent-ClothingOuterArmorHeretic.desc }
+ent-ClothingOuterArmorHereticVoid = { ent-ClothingOuterArmorHeretic }
+    .suffix = Пустота
+    .desc = { ent-ClothingOuterArmorHeretic.desc }
+
+ent-ClothingOuterArmorHereticLock = изменчивый облик
+    .desc = Изорванный, пыльный комплект одеяний. Странные глаза вырисовываются изнутри.
+    .suffix = Замок
+ent-ClothingOuterArmorHereticRust = останки с обломков
+    .desc = Прикосновение к складкам этой простой мантии вызывает беспокойство. Даже от взгляда на неё кружится голова. Какой-то пульс грозит затянуть вас внутрь.
+    .suffix = Ржавчина

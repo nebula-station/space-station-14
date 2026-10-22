@@ -1,0 +1,9 @@
+ent-OrganVoxHeart = { ent-OrganHumanHeart }
+    .desc = Странное сердце вокса.
+ent-OrganVoxLiver = { ent-OrganHumanLiver }
+    .desc = Пахнет легковоспламеняюще.
+ent-OrganVoxLungs = { ent-OrganHumanLungs }
+    .suffix = вокс
+    .desc = Синие, анаэробные лёгкие вокса, используют азот для дыхания. Любая форма газообразного кислорода смертельно токсична при вдыхании.
+ent-OrganVoxStomach = { ent-OrganHumanStomach }
+    .desc = Живот с запахом аммиака.

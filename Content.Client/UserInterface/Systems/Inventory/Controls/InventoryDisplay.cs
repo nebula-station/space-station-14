@@ -7,14 +7,20 @@ namespace Content.Client.UserInterface.Systems.Inventory.Controls;
 
 public sealed class InventoryDisplay : LayoutContainer
 {
-    private int Columns = 0;
-    private int Rows = 0;
+    private float _columns = 0; // Lua
+    private float _rows = 0; // Lua
     private const int MarginThickness = 10;
     private const int ButtonSpacing = 5;
     private const int ButtonSize = 75;
     private readonly Control resizer;
 
-    private readonly Dictionary<string, (SlotControl, Vector2i)> _buttons = new();
+    // Lua start
+    public int CellSize { get; set; } = ButtonSize;
+    public int CellSpacing { get; set; } = ButtonSpacing;
+    public bool InvertY { get; set; }
+    // Lua end
+
+    private readonly Dictionary<string, (SlotControl, Vector2, float)> _buttons = new(); // Lua
 
     public InventoryDisplay()
     {
@@ -24,14 +30,20 @@ public sealed class InventoryDisplay : LayoutContainer
 
     public SlotControl AddButton(SlotControl newButton, Vector2i buttonOffset)
     {
+        return AddButton(newButton, new Vector2(buttonOffset.X, buttonOffset.Y)); // Lua
+    }
+
+    // Lua
+    public SlotControl AddButton(SlotControl newButton, Vector2 buttonOffset, float scale = 1f)
+    {
         AddChild(newButton);
         HorizontalExpand = true;
         VerticalExpand = true;
         InheritChildMeasure = true;
-        if (!_buttons.TryAdd(newButton.SlotName, (newButton, buttonOffset)))
+        if (!_buttons.TryAdd(newButton.SlotName, (newButton, buttonOffset, scale))) // Lua
             Logger.Warning("Tried to add button without a slot!");
-        SetPosition(newButton, buttonOffset * ButtonSize + new Vector2(ButtonSpacing, ButtonSpacing));
-        UpdateSizeData(buttonOffset);
+        UpdateSizeData(buttonOffset, scale); // Lua
+        Relayout(); // Lua
         return newButton;
     }
 
@@ -40,17 +52,30 @@ public sealed class InventoryDisplay : LayoutContainer
         return !_buttons.TryGetValue(slotName, out var foundButton) ? null : foundButton.Item1;
     }
 
-    private void UpdateSizeData(Vector2i buttonOffset)
+    private void UpdateSizeData(Vector2 buttonOffset, float scale = 1f) // Lua
     {
-        var (x, _) = buttonOffset;
-        if (x > Columns)
-            Columns = x;
-        var (_, y) = buttonOffset;
-        if (y > Rows)
-            Rows = y;
-        resizer.SetHeight = (Rows + 1) * (ButtonSize + ButtonSpacing);
-        resizer.SetWidth = (Columns + 1) * (ButtonSize + ButtonSpacing);
+        // Lua start
+        var x = buttonOffset.X + scale - 1;
+        if (x > _columns)
+            _columns = x;
+        var y = buttonOffset.Y + scale - 1;
+        if (y > _rows)
+            _rows = y;
+        resizer.SetHeight = (_rows + 1) * (CellSize + CellSpacing);
+        resizer.SetWidth = (_columns + 1) * (CellSize + CellSpacing);
+        // Lua end
     }
+
+    // Lua start
+    public void Relayout()
+    {
+        foreach (var (_, (button, offset, scale)) in _buttons)
+        {
+            var y = InvertY ? _rows + 1 - offset.Y - scale : offset.Y;
+            SetPosition(button, new Vector2(offset.X, y) * CellSize + new Vector2(CellSpacing, CellSpacing));
+        }
+    }
+    // Lua end
 
     public bool TryGetButton(string slotName, out SlotControl? button)
     {
@@ -61,19 +86,32 @@ public sealed class InventoryDisplay : LayoutContainer
 
     public void RemoveButton(string slotName)
     {
-        if (!_buttons.Remove(slotName))
+        // Lua start
+        if (!_buttons.Remove(slotName, out var removed))
             return;
+        RemoveChild(removed.Item1);
         //recalculate the size of the control when a slot is removed
-        Columns = 0;
-        Rows = 0;
-        foreach (var (_, (_, buttonOffset)) in _buttons)
+        _columns = 0;
+        _rows = 0;
+        foreach (var (_, (_, buttonOffset, scale)) in _buttons) // Lua
         {
-            UpdateSizeData(buttonOffset);
+            UpdateSizeData(buttonOffset, scale); // Lua
         }
+        Relayout();
+        // Lua end
     }
 
     public void ClearButtons()
     {
-        Children.Clear();
+        // Lua start
+        foreach (var (_, (button, _, _)) in _buttons)
+        {
+            RemoveChild(button);
+        }
+
+        _buttons.Clear();
+        _columns = 0;
+        _rows = 0;
+        // Lua end
     }
 }

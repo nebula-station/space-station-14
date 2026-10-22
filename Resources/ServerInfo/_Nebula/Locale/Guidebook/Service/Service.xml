@@ -1,0 +1,26 @@
+<Document>
+
+# Отдел обслуживания
+У [color=#9fed58]отдела обслуживания[/color], пожалуй, самая важная работа из всех: следить, чтобы экипаж был сыт и не испытывал недостатка в выпивке.
+
+## Персонал
+Персонал [color=#9fed58]отдела обслуживания[/color] — это бармены, ботаники, повара и сервисные работники.
+Руководит отделом обслуживания [bold]глава персонала[/bold], который в меньшей степени также присматривает за [textlink="прочими должностями" link="Civilian"/].
+
+  <Box>
+    <GuideEntityEmbed Entity="ToyFigurineBotanist" Caption="Ботаник"/>
+    <GuideEntityEmbed Entity="ToyFigurineBartender" Caption="Бармен"/>
+    <GuideEntityEmbed Entity="ToyFigurineChef" Caption="Повар"/>
+    <GuideEntityEmbed Entity="PlushieLizardJobServiceworker" Caption="Сервисный работник"/>
+    <GuideEntityEmbed Entity="ToyFigurineHeadOfPersonnel" Caption="ГП"/>
+  </Box>
+
+## Совместная работа
+[color=#9fed58]Отдел обслуживания[/color] — безусловно, самый [color=#a4885c]взаимосвязанный[/color] отдел.
+Большинство должностей [color=#9fed58]обслуживания[/color] требуют [color=#a4885c]сотрудничества[/color] между работниками.
+Поварам часто нужны ингредиенты, которые эффективно выращивают только ботаники. Бармен может попросить бананы для особых коктейлей.
+
+Без [color=#a4885c]взаимодействия[/color] внутри [color=#9fed58]обслуживания[/color] и за его пределами не обойтись. Другим отделам часто нужна помощь [color=#9fed58]обслуживания[/color], так что будьте начеку.
+
+Чаще всего с [color=#9fed58]обслуживанием[/color] работают [color=#a46106]снабжение[/color] и [color=#5b97bc]медицинский отдел[/color].
+</Document>

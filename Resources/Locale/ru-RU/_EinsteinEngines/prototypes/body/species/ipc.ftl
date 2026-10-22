@@ -1,0 +1,11 @@
+ent-AppearanceIPC = Внешность КПБ
+ent-OrganIPCArmLeft = левая рука
+ent-OrganIPCArmRight = правая рука
+ent-OrganIPCFootLeft = левая стопа
+ent-OrganIPCFootRight = правая стопа
+ent-OrganIPCHandLeft = левая кисть
+ent-OrganIPCHandRight = правая кисть
+ent-OrganIPCHead = голова
+ent-OrganIPCLegLeft = левая нога
+ent-OrganIPCLegRight = правая нога
+ent-OrganIPCTorso = торс

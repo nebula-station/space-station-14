@@ -1,0 +1,29 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+  # Ввод и вывод атмосферы
+  Ввод и вывод газов из существующей (или несуществующей) атмосферы — важная часть работы Атмоса.
+  <Box>
+    <GuideEntityEmbed Entity="GasVentPump"/>
+    <GuideEntityEmbed Entity="GasPassiveVent"/>
+    <GuideEntityEmbed Entity="GasOutletInjector"/>
+    <GuideEntityEmbed Entity="GasVentScrubber"/>
+    <GuideEntityEmbed Entity="PortableScrubber"/>
+  </Box>
+
+  С помощью этих устройств Атмос может вводить, выводить или очищать нежелательные газы из любой атмосферы.
+  Это позволяет поддерживать безопасную, пригодную для дыхания атмосферу.
+
+  Некоторые из этих устройств требуют [textlink="энергии" link="Power"] для работы и могут быть связаны с [textlink="воздушной сигнализацией." link="AirAlarms"].
+
+  [textlink="Связывание" link="Networking"] совместимых устройств с воздушной сигнализацией открывает больше настроек и функций. В противном случае эти устройства работают по умолчанию, как описано в подруководствах.
+
+  <Box>
+    <GuideEntityEmbed Entity="AirAlarm"/>
+    <GuideEntityEmbed Entity="Multitool"/>
+    <GuideEntityEmbed Entity="NetworkConfigurator"/>
+  </Box>
+
+</Document>

@@ -1,0 +1,10 @@
+ent-FoodMeatBingle = сырое мясо бингла
+    .desc = Пахнет как дерьмо.
+ent-FoodMeatBingleCooked = стейк из бингла
+    .desc = Всё ещё пахнет как дерьмо.
+ent-FoodMeatGondola = сырое мясо гондолы
+    .desc = Ты монстр.
+ent-FoodMeatGondolaCooked = стейк из гондолы
+    .desc = Приготовленное, жесткое мясо гондолы.
+ent-FoodMeatVoxFried = жареный "цыплёнок"
+    .desc = Сочный кусочек куриного мяса... Вроде как...

@@ -1,0 +1,12 @@
+ent-AppearanceShadow = внешность тени
+ent-OrganShadowArmLeft = левая рука
+ent-OrganShadowArmRight = правая рука
+ent-OrganShadowEyes = глаза
+ent-OrganShadowFootLeft = левая стопа
+ent-OrganShadowFootRight = правая стопа
+ent-OrganShadowHandLeft = левая кисть
+ent-OrganShadowHandRight = правая кисть
+ent-OrganShadowHead = голова
+ent-OrganShadowLegLeft = левая нога
+ent-OrganShadowLegRight = правая нога
+ent-OrganShadowTorso = торс

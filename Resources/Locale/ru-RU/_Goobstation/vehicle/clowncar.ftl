@@ -10,5 +10,3 @@ clowncar-thank-driver = Спасибо вам, { $driver }. Вы отличны�
 clowncar-quiet-in-the-back = Тихо там сзади!
 uplink-clowncar-name = машина клоуна
 uplink-clowncar-desc = От Honk Co. — идеальный инструмент для "бей и беги". Страховка в комплект не входит.
-enter-driver-seat = Управлять
-open-trunk = Открыть двери

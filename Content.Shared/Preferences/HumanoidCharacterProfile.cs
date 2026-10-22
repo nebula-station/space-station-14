@@ -376,6 +376,7 @@ namespace Content.Shared.Preferences
                     gender = Gender.Male;
                     break;
                 case Sex.Female:
+                case Sex.Futanari: // Nebula
                     gender = Gender.Female;
                     break;
             }
@@ -425,7 +426,7 @@ namespace Content.Shared.Preferences
             var speciesProto = prototypeManager.Index(profile.Species);
 
             profile.Sex = (randomizeCfg & RandomizeCfg.Sex) != 0 ? RandomSex(speciesProto) : baseProfile.Sex;
-            profile.Voice = speciesProto.DefaultSoundsBySex[(int) profile.Sex];
+            profile.Voice = speciesProto.GetDefaultSounds(profile.Sex);
             profile.Gender = (randomizeCfg & RandomizeCfg.Gender) != 0 ? RandomGender(profile.Sex) : baseProfile.Gender;
             profile.Name = (randomizeCfg & RandomizeCfg.Name) != 0 ? RandomName(speciesProto, profile.Gender) : baseProfile.Name;
             profile.Age = (randomizeCfg & RandomizeCfg.Age) != 0 ? RandomAge(speciesProto) : baseProfile.Age;
@@ -741,12 +742,13 @@ namespace Content.Shared.Preferences
                 Sex.Male => Sex.Male,
                 Sex.Female => Sex.Female,
                 Sex.Unsexed => Sex.Unsexed,
+                Sex.Futanari => Sex.Futanari, // Nebula
                 _ => Sex.Male // Invalid enum values.
             };
 
             var voice = Voice;
             if (!speciesPrototype.Voices.Contains(voice))
-                voice = speciesPrototype.DefaultSoundsBySex[(int) sex];
+                voice = speciesPrototype.GetDefaultSounds(sex);
 
             // ensure the species can be that sex and their age fits the founds
             if (!speciesPrototype.Sexes.Contains(sex))

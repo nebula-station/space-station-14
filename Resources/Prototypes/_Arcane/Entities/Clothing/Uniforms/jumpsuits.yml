@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformMajordomCommandMaid
+  name: command maid majordom
+  description: It is made of breathable fabric, which will allow you to stay on your feet for the entire shift.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Jumpsuits/command_maid.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Jumpsuits/command_maid.rsi

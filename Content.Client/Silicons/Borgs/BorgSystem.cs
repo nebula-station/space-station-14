@@ -1,3 +1,4 @@
+using Content.Shared._Nebula.Silicons.SwitchableState;
 using Content.Shared.Alert;
 using Content.Shared.Mobs;
 using Content.Shared.Power.EntitySystems;
@@ -86,6 +87,9 @@ public sealed partial class BorgSystem : SharedBorgSystem
             }
         }
 
+        if (UpdateLightLayer(ent.Owner, ent.Comp3)) // Nebula edit
+            return;
+
         if (!_appearance.TryGetData<bool>(ent.Owner, BorgVisuals.HasPlayer, out var hasPlayer, ent.Comp2))
             hasPlayer = false;
 
@@ -132,6 +136,23 @@ public sealed partial class BorgSystem : SharedBorgSystem
             _sprite.LayerSetColor((uid, sprite), layerIndex, lightColor);
         }
     }
+
+    // Nebula start
+    private bool UpdateLightLayer(EntityUid uid, SpriteComponent spriteComponent)
+    {
+        if (TryComp<BorgSwitchableStateComponent>(uid, out var stateComponent))
+        {
+            if (stateComponent.CurrentType != BorgStateType.Base)
+            {
+                _sprite.LayerSetVisible((uid, spriteComponent), BorgVisualLayers.LightStatus, false);
+                _sprite.LayerSetVisible((uid, spriteComponent), BorgVisualLayers.Light, false);
+                return true;
+            }
+        }
+
+        return false;
+    }
+    // Nebula end
 
     /// <summary>
     /// Sets the sprite states used for the borg "is there a mind or not" indication.

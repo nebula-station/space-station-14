@@ -70,3 +70,39 @@
 - type: inventorySlot
   id: pocket4
   flags: POCKET
+
+# Lua start
+
+- type: inventorySlot
+  id: necklace
+  flags: NECKLACE
+
+- type: inventorySlot
+  id: socks
+  flags: SOCKS
+
+- type: inventorySlot
+  id: underwearb
+  flags: UNDERWEARB
+
+- type: inventorySlot
+  id: underweart
+  flags: UNDERWEART
+
+- type: inventorySlot
+  id: wallet
+  flags: WALLET
+
+- type: inventorySlot
+  id: rightarmband
+  flags: ARMBANDRIGHT
+
+- type: inventorySlot
+  id: leftarmband
+  flags: ARMBANDLEFT
+
+- type: inventorySlot
+  id: finger
+  flags: FINGER
+
+# Lua end

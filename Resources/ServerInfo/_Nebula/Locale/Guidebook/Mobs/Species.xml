@@ -1,0 +1,22 @@
+<Document>
+  # Виды
+
+  В Nanotrasen работают представители множества разумных видов.
+
+  <Box>
+    <GuideEntityEmbed Entity="AppearanceHuman" Caption="Человек"/>
+    <GuideEntityEmbed Entity="AppearanceVox" Caption="Вокс"/>
+    <GuideEntityEmbed Entity="AppearanceMoth" Caption="Ниан"/>
+    <GuideEntityEmbed Entity="AppearanceReptilian" Caption="Унатх"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="AppearanceArachnid" Caption="Арахнид"/>
+    <GuideEntityEmbed Entity="AppearanceDiona" Caption="Диона"/>
+    <GuideEntityEmbed Entity="AppearanceDwarf" Caption="Дворф"/>
+    <GuideEntityEmbed Entity="AppearanceSlimePerson" Caption="Слаймолюд"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="AppearanceIPC" Caption="КПБ"/>
+  <GuideEntityEmbed Entity="MobDecapoid" Caption="Декапод"/>
+  </Box>
+</Document>

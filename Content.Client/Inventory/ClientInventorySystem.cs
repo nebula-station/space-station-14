@@ -98,7 +98,7 @@ namespace Content.Client.Inventory
             {
                 foreach (var slot in component.Slots)
                 {
-                    TryRemoveSlotData((uid, inventorySlots), (SlotData)slot);
+                    TryRemoveSlotData((uid, inventorySlots), (SlotData) slot);
                 }
             }
 
@@ -279,7 +279,7 @@ namespace Content.Client.Inventory
                 if (inventorySlots.SlotData.TryGetValue(slot.Name, out var slotData))
                     slotData.SlotDef = slot;
                 else
-                    TryAddSlotData((ent.Owner, inventorySlots), (SlotData)slot);
+                    TryAddSlotData((ent.Owner, inventorySlots), (SlotData) slot);
             }
 
             if (ent.Owner == _playerManager.LocalEntity)
@@ -294,7 +294,8 @@ namespace Content.Client.Inventory
             [ViewVariables] public bool Highlighted;
             [ViewVariables] public ContainerSlot? Container;
             [ViewVariables] public bool HasSlotGroup => SlotDef.SlotGroup != "Default";
-            [ViewVariables] public Vector2i ButtonOffset => SlotDef.UIWindowPosition;
+            [ViewVariables] public System.Numerics.Vector2 ButtonOffset => SlotDef.UIWindowPosition; // Lua
+            [ViewVariables] public float UiWindowScale => SlotDef.GetUiWindowScale(); // Lua
             [ViewVariables] public string SlotName => SlotDef.Name;
             [ViewVariables] public bool ShowInWindow => SlotDef.ShowInWindow;
             [ViewVariables] public string SlotGroup => SlotDef.SlotGroup;

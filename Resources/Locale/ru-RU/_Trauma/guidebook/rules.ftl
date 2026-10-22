@@ -35,3 +35,5 @@ guide-entry-rules-sl-crime-list = Список преступлений
 guide-entry-rules-sl-controlled-substances = Контролируемые вещества
 guide-entry-rules-sl-restricted-gear = Ограниченное снаряжение
 guide-entry-rules-sl-restricted-weapons = Ограниченное оружие
+
+guide-entry-rules-sl-rights-charter = Хартия прав

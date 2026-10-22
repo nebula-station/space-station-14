@@ -1,0 +1,22 @@
+changeling-devour-attempt-failed-protected = Биомасса этой жертвы защищена бронёй!
+changeling-devour-attempt-failed-rotting = У этого трупа только гниющая биомасса.
+changeling-devour-begin-consume-others = { CAPITALIZE(POSS-ADJ($user)) } жуткая пасть глубоко впивается в жертву.
+changeling-devour-begin-consume-self = Наша жуткая пасть глубоко впивается в жертву.
+changeling-devour-begin-windup-others = { CAPITALIZE(POSS-ADJ($user)) } жуткая пасть раскрывается с неземным голодом.
+changeling-devour-begin-windup-self = Наша жуткая пасть раскрывается с неземным голодом.
+changeling-devour-consume-complete-others = { CAPITALIZE(POSS-ADJ($user)) } жуткая пасть прячется.
+changeling-devour-consume-complete-self = Наша жуткая пасть скрывается, биомасса поглощена.
+changeling-devour-consume-failed-not-dead = Это тело ещё живо! Его нельзя поглотить!
+changeling-flesh-clothing-alert-desc = Нажмите, чтобы переключить имитацию одежды.
+changeling-flesh-clothing-alert-name = Одежда из плоти
+changeling-flesh-clothing-examine-wearer = [color=crimson]Этот предмет замаскированная часть вашего тела. Он исчезнет, если вы его снимете![/color]
+changeling-flesh-clothing-removed-popop = {CAPITALIZE(THE($item))} распадается на мясистые куски!
+changeling-paused-map-name = Карта хранения личностей генокрада
+changeling-transform-attempt-others = { CAPITALIZE(POSS-ADJ($user)) } кости хрустят, мышцы рвутся, тело превращается в другое.
+changeling-transform-attempt-self = Наши кости хрустят, мышцы рвутся, одна плоть превращается в другую.
+changeling-transform-bui-drop-identity-cannot-drop = Мы не можем избавиться от текущей личности.
+changeling-transform-bui-drop-identity-entity = Избавиться от {$entity}
+changeling-transform-bui-drop-identity-entity-popup = Мы избавились от личности {$entity}.
+changeling-transform-bui-drop-identity-menu = Избавиться от поглощённой личности.
+changeling-transform-bui-select-entity = {$entity}
+roles-antag-changeling-objective = Умный хищник, приобретающий личности своих жертв.

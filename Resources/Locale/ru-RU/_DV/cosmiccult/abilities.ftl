@@ -36,3 +36,6 @@ cosmicability-convert-mindshield = Щит разума не позволяет �
 cosmicability-convert-chaplain = Искра божественного света не позволяет влиянию подействовать!
 cosmicability-convert-mindless = У цели нет разума, сила будет потрачена впустую.
 cosmicability-convert-rotten = Влияние не действует на разлагающиеся трупы!
+
+cosmicability-chantry-spawn-error-grid = Неверное место! Пустотную часовню нужно призывать на устойчивой поверхности.
+cosmicability-chantry-spawn-error-station = Неверное место! Пустотную часовню нужно призывать на станции.

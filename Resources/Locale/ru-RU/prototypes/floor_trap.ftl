@@ -1,0 +1,17 @@
+ent-CollideFloorTrap = { "" }
+    .desc = { "" }
+ent-CollideFloorTrapSpawn = спавнер напольная ловушка
+    .desc = { ent-CollideFloorTrap.desc }
+ent-FloorTrapEMP = напольная ловушка ЭМИ
+    .desc = { ent-CollideFloorTrap.desc }
+ent-FloorTrapExplosion = напольная ловушка взрывная
+    .desc = { ent-CollideFloorTrap.desc }
+ent-SpawnFloorTrapBear = { ent-CollideFloorTrapSpawn }
+    .suffix = Медведь
+    .desc = { ent-CollideFloorTrapSpawn.desc }
+ent-SpawnFloorTrapCarp = { ent-CollideFloorTrapSpawn }
+    .suffix = Карп
+    .desc = { ent-CollideFloorTrapSpawn.desc }
+ent-SpawnFloorTrapKangaroo = { ent-CollideFloorTrapSpawn }
+    .suffix = Кенгуру
+    .desc = { ent-CollideFloorTrapSpawn.desc }

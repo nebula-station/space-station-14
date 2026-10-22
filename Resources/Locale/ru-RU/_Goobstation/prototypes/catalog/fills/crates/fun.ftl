@@ -1,0 +1,11 @@
+ent-CrateFunATV = ящик с квадроциклом
+    .desc = Абсолютно налогооблагаемое транспортное средство для помощи грузчикам.
+ent-CrateFunBingleAdmeme = Бингл
+    .suffix = Ящик с Бингл, активируемый голосом, Адмем
+    .desc = { ent-CrateBingle.desc }
+ent-CrateFunBingleLoot = добыча Бингла
+    .desc = { ent-CrateBingle.desc }
+ent-CrateFunDiscoBeachBall = ящик с пляжным диско-шаром
+    .desc = Ящик с пляжным диско-шаром, который превратит любую поездку на пляж в Студия 54.
+ent-CrateFunSyndicateSegway = ящик с сегвеем Синдиката
+    .desc = Ящик с двухколёсным аппаратом, который поможет сбежать от охраны. А может и нет.

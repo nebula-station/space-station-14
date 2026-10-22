@@ -13,3 +13,8 @@ public readonly struct SpriteMoveEvent
         IsMoving = isMoving;
     }
 }
+
+// Nebula start
+[ByRefEvent]
+public readonly record struct AfterSpriteMovementUpdateEvent(bool IsMoving);
+// Nebula end

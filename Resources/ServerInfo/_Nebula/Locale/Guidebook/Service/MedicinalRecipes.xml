@@ -1,0 +1,13 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+
+# Медицинские рецепты
+
+Эти препараты обладают интересными медицинскими эффектами или являются прямыми лекарствами.
+
+<GuideMicrowaveGroupEmbed Group="Medicinal"/>
+
+</Document>

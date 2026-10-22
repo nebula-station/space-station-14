@@ -31,9 +31,9 @@ public sealed partial class XenoArtifactNodeParser : CustomCompletionParser<(Ent
                 node =>
                 {
                     var metadata = _entityManager.GetComponent<MetaDataComponent>(node);
-                    var effect = Loc.GetString(metadata.EntityDescription);
+                    var effect = metadata.EntityDescription; // Nebula edit
                     var trigger = node.Comp.TriggerTip.HasValue
-                        ? Loc.GetString(node.Comp.TriggerTip)
+                        ? node.Comp.TriggerTip.Value.Id // Nebula edit
                         : "Unknown";
                     return new CompletionOption(
                         node.Owner.ToString(),

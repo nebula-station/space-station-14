@@ -1,0 +1,11 @@
+ent-ConquestSpawner = Конквест
+    .suffix = Адмем
+    .desc = { "" }
+ent-RandomHumanoidHECUSpawner = Оперативник HECU
+    .suffix = Роль ОБР
+    .desc = { "" }
+ent-RandomHumanoidSpawnerChronolegioneer = Хроно легионер
+    .desc = { "" }
+ent-TheGmanSpawer = Г-Мэн
+    .suffix = Адмем
+    .desc = { "" }

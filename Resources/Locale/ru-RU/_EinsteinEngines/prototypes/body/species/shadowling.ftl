@@ -1,0 +1,11 @@
+ent-AppearanceShadowling = внешность тенелинга
+ent-OrganShadowlingArmLeft = левая рука
+ent-OrganShadowlingArmRight = правая рука
+ent-OrganShadowlingFootLeft = левая стопа
+ent-OrganShadowlingFootRight = правая стопа
+ent-OrganShadowlingHandLeft = левая кисть
+ent-OrganShadowlingHandRight = правая кисть
+ent-OrganShadowlingHead = голова
+ent-OrganShadowlingLegLeft = левая нога
+ent-OrganShadowlingLegRight = правая нога
+ent-OrganShadowlingTorso = торс

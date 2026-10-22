@@ -1,0 +1,9 @@
+ent-MedkitCombatBlueFilled = { ent-MedkitCombatBlue }
+    .suffix = Заполненный, Таблетки
+    .desc = { ent-MedkitCombatBlue.desc }
+ent-MedkitCombatPurpleFilled = { ent-MedkitCombatPurple }
+    .suffix = Заполненный, КПБ
+    .desc = { ent-MedkitCombatPurple.desc }
+ent-MedkitCombatStasiziumFilled = футуристический медкит
+    .desc = Медкит, наполненный лекарствами будущего
+    .suffix = Стазизиум

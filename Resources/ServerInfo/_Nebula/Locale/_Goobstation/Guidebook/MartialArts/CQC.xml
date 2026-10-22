@@ -1,0 +1,68 @@
+<Document>
+
+  # Искусный ближний бой
+
+  <Box>
+    <GuideEntityEmbed Entity="CQCManual" Caption=""/>
+  </Box>
+
+  Искусный ближний бой — это [textlink="боевое искусство" link="MartialArts"], сосредоточенное на быстром и эффективном устранении цели при помощи простых, но мощных комбо, лишённых экзотических приёмов других боевых искусств.
+  Это в первую очередь агрессивный стиль боя, направленный на нанесение урона выносливости, созданный для быстрого подавления противников напором и сокрушительными ударами. Это искусство требует глубокого понимания намерений.
+
+  ## Комбо-атаки
+
+  ### Удар о землю
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="grab"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+  </Box>
+
+  Швыряет противника о землю, сбивая с ног и нанося ушибы. Работает только на стоящих противников.
+
+  ### Пинок
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+  </Box>
+
+  Отбрасывает противника и наносит как ушибы, так и урон выносливости. Если у противника закончилась выносливость, то отправляет его в нокаут.
+
+  ### Удержание
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="grab"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="grab"/>
+  </Box>
+
+  Фиксирует противника в удерживающей позиции, сбивая с ног и нанося урон выносливости.
+
+  ### Давление
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="grab"/>
+  </Box>
+
+  Наносит урон выносливости и отбирает у противника предмет в активной руке.
+
+  ### Серия ударов
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+  </Box>
+
+  Наносит много урона выносливости и немного ушибов противнику.
+
+  ### Подсечка
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+  </Box>
+
+  Может быть выполнена только лёжа. Сбивает противника с ног и автоматически поднимает пользователя, даже если он ползёт вручную.
+
+</Document>

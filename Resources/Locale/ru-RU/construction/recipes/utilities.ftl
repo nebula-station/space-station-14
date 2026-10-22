@@ -1,4 +1,3 @@
-construction-recipe-gas-pipe-straight = газовая труба (прямая)
 construction-recipe-gas-pipe-half = газовая труба (половинная)
 construction-recipe-gas-pipe-bend = газовая труба (угловая)
 construction-recipe-gas-pipe-t-junction = газовая труба (Т-образная)

@@ -1,0 +1,13 @@
+- type: entity
+  id: GhostRoleGhostCafeSpawner
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: ghost-role-cafe-name
+    description: ghost-role-cafe-desc
+    rules: ghost-role-component-ghost-cafe-rules
+  - type: GhostRoleMobSpawner
+    prototype: MobHuman
+    availableTakeovers: 999
+  - type: GhostRoleCopyProfile
+    gear: GhostCafeGear

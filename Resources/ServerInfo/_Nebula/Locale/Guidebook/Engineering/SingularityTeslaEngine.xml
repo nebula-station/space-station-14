@@ -1,0 +1,101 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+  # Двигатель Сингулярности / Теслы
+
+  Двигатель Сингулярности / Теслы может обеспечивать [color=#a4885c]бесконечную энергию[/color] на всю смену, делая его ценным ресурсом станции.
+
+  Он также может с той же лёгкостью [color=red]уничтожить всю станцию[/color], поэтому требует тщательной подготовки и контроля, чтобы предотвратить [bold]побег[/bold].
+
+  # Установка
+  Оба двигателя следуют одним и тем же базовым шагам установки, но имеют разные подсистемы и требования.
+
+  ## Сдерживающее поле
+  Сдерживающее поле — это поле лучей, которое удерживает сингулярность или Теслу, не давая им сбежать.
+
+  Лазерные лучи из эмиттеров и само поле могут нанести урон или выбросить вас в открытый космос; [color=#a4885c]избегайте контакта с ними[/color], когда они активны.
+
+  <Box>
+    <GuideEntityEmbed Entity="Emitter"/>
+    <GuideEntityEmbed Entity="ContainmentFieldGenerator"/>
+    <GuideEntityEmbed Entity="ContainmentField"/>
+  </Box>
+
+  Поле создается между активными Генераторами сдерживающего Поля, которые питаются от эмиттеров.
+
+  Генератор сдерживающего поля способен создать поле, если:
+  - Генератор включён,
+  - Другой генератор поля находится в пределах 8 плиток,
+  - Генераторы находятся на одной оси.
+
+  Максимальная длина сдерживающего поля — 7 плиток.
+
+  Включить генератор сдерживающего поля можно, взаимодействуя с ним нажатием на [color=yellow][bold][keybind="Use"][/bold][/color].
+  Генераторы не будут работать, если они не включены, даже при воздействии эмиттера. Не забудьте включить генераторы!
+
+  Генератор сдерживающего поля имеет внутренний уровень энергии, который заполняется при ударе эмиттером. Когда энергии достаточно, он создаёт сдерживающее поле.
+
+  Этот уровень энергии со временем снижается, и поле исчезает, когда энергия достигает нуля после небольшой задержки.
+
+  Когда сдерживающее поле активно, вы не можете выключить генератор или открепить его. Необходимо дождаться распада поля, чтобы отключить генератор.
+
+  <Box>
+    <GuideEntityEmbed Entity="ContainmentFieldGenerator" Caption=""/>
+    <GuideEntityEmbed Entity="ContainmentField" Caption="" Rotation="90" Margin="0"/>
+    <GuideEntityEmbed Entity="ContainmentField" Caption="" Rotation="90" Margin="0"/>
+    <GuideEntityEmbed Entity="ContainmentField" Caption="" Rotation="90" Margin="0"/>
+    <GuideEntityEmbed Entity="ContainmentFieldGenerator" Caption=""/>
+  </Box>
+
+  ## Эмиттеры
+  Эмиттеры — устройства, которые питают генераторы сдерживающего поля.
+
+  <Box>
+    <GuideEntityEmbed Entity="Emitter"/>
+  </Box>
+
+  Эмиттеры подключаются к кабелям СВ и излучают лазерные лучи, пока имеют питание и включены.
+
+  Рекомендуется [color=#a4885c]заблокировать эмиттеры[/color] с помощью [color=yellow][bold][keybind="AltActivateItemInWorld"][/bold][/color], чтобы предотвратить попытки посторонних отключить поле и спровоцировать побег сингулярности или Теслы.
+
+  ## Ускоритель частиц
+  Ускоритель частиц (УЧ) — это многоплиточная структура, запускающая ускоренные частицы через свои излучатели.
+
+  <Box>
+    <GuideEntityEmbed Entity="ParticleAcceleratorEndCap" Caption="" Margin="0"/>
+  </Box>
+
+  <Box>
+    <GuideEntityEmbed Entity="ParticleAcceleratorControlBox" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="ParticleAcceleratorFuelChamber" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="CableMV" Caption="" Margin="0"/>
+  </Box>
+
+  <Box>
+    <GuideEntityEmbed Entity="ParticleAcceleratorPowerBox" Caption="" Margin="0"/>
+  </Box>
+
+  <Box>
+    <GuideEntityEmbed Entity="ParticleAcceleratorEmitterStarboard" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="ParticleAcceleratorEmitterFore" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="ParticleAcceleratorEmitterPort" Caption="" Margin="0"/>
+  </Box>
+
+  Некоторые станции уже имеют недостроенный УЧ.
+  Чтобы завершить его, сначала убедитесь, что под силовой установкой УЧ есть СВ кабель, закрепите все части, а затем вставьте НВ кабель в каждую.
+
+  <Box>
+    <GuideEntityEmbed Entity="CableApcStack"/>
+  </Box>
+
+  Затем используйте отвёртку, чтобы закрепить панели.
+  [color=#a4885c]Сканируйте части[/color] с помощью консоли управления УЧ, чтобы проверить их работоспособность (УЧ не будет функционировать, если вы не отсканируете его!).
+  Если отображается как недостроенный, проверьте, что у него отсутствует.
+
+  <Box>
+    <GuideEntityEmbed Entity="ParticleAcceleratorControlBox"/>
+  </Box>
+
+</Document>

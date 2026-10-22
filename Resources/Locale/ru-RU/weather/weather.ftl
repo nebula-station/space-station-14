@@ -5,3 +5,15 @@ cmd-weather-null = Очищает погоду
 cmd-weather-error-no-arguments = Недостаточно аргументов!
 cmd-weather-error-unknown-proto = Неизвестный прототип погоды!
 cmd-weather-error-wrong-time = Неверный формат времени!
+
+cmd-weatheradd-desc = Добавить определённую погоду на карту.
+cmd-weatheradd-help = weatheradd <mapId> <prototype / null>
+cmd-weather-error-no-weather = Такой погоды нет на выбранной карте!
+cmd-weather-error-wrong-map = Карта с MapId { $id } не существует!
+cmd-weather-hint-map-id = ID карты
+cmd-weather-hint-prototype = Прототип сущности погоды
+cmd-weather-hint-time = Длительность в секундах (оставьте пустым для бесконечной)
+cmd-weatherremove-desc = Удалить определённую погоду с карты.
+cmd-weatherremove-help = weatherremove <mapId> <prototype>
+cmd-weatherset-desc = Удаляет всю погоду, кроме указанной. Если указанной погоды на карте нет, добавляет её.
+cmd-weatherset-help = weatherset <mapId> <prototype / null>

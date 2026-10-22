@@ -77,6 +77,7 @@ public sealed partial class DisplacementMapSystem : EntitySystem
         // We choose a displacement map from the possible ones, matching the size with the original layer size.
         // If there is no such a map, we use a standard 32 by 32 one
         var displacementDataLayer = data.SizeMaps[EyeManager.PixelsPerMeter];
+        var mapSize = EyeManager.PixelsPerMeter; // Nebula
         var actualRSI = _sprite.LayerGetEffectiveRsi(sprite.AsNullable(), index);
         if (actualRSI is not null)
         {
@@ -88,7 +89,14 @@ public sealed partial class DisplacementMapSystem : EntitySystem
 
             var layerSize = actualRSI.Size.X;
             if (data.SizeMaps.TryGetValue(layerSize, out var map))
+            {
                 displacementDataLayer = map;
+                mapSize = layerSize; // Nebula
+            }
+
+            // Nebula
+            if (layerSize != mapSize)
+                SetDisplacementScale(sprite, index, data, (float) layerSize / mapSize);
         }
 
         var displacementLayer = _serialization.CreateCopy(displacementDataLayer, notNullableOverride: true);
@@ -114,6 +122,21 @@ public sealed partial class DisplacementMapSystem : EntitySystem
 
         return true;
     }
+
+    // Nebula start
+    private void SetDisplacementScale(Entity<SpriteComponent> sprite, int index, DisplacementData data, float scale)
+    {
+        if (sprite.Comp[index] is not SpriteComponent.Layer { Shader: { } shader } layer)
+            return;
+
+        if (layer.ShaderPrototype != data.ShaderOverride && layer.ShaderPrototype != data.ShaderOverrideUnshaded)
+            return;
+
+        var scaled = shader.Duplicate();
+        scaled.SetParameter("displacementScale", scale);
+        sprite.Comp.LayerSetShader(index, scaled, layer.ShaderPrototype?.Id);
+    }
+    // Nebula end
 
     /// <summary>
     /// Ensures that the displacement map associated with the given layer key is not in the Sprite's LayerMap.

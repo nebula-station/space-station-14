@@ -41,6 +41,19 @@
     knockdownTimeDelta: -3
   - type: StaminaResistance # Goobstation
     damageCoefficient: 0.5
+  # Nebula start
+  - type: Tag
+    tags:
+      - WhitelistChameleon
+  - type: Stainable
+    clothingVisuals:
+      outerClothing:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: armorblood
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: armorbloodicon
+  # Nebula end
 
 #Standard armor vest, allowed for security only
 - type: entity

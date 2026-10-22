@@ -51,9 +51,9 @@ namespace Content.Client.UserInterface.Controls
             }
         }
 
-        public bool Highlight { get => HighlightRect.Visible; set => HighlightRect.Visible = value;}
+        public bool Highlight { get => HighlightRect.Visible; set => HighlightRect.Visible = value; }
 
-        public bool Blocked { get => BlockedRect.Visible; set => BlockedRect.Visible = value;}
+        public bool Blocked { get => BlockedRect.Visible; set => BlockedRect.Visible = value; }
 
         private string? _blockedTexturePath;
         public string? BlockedTexturePath
@@ -242,6 +242,28 @@ namespace Content.Client.UserInterface.Controls
         {
             AdminOverlays.AddChild(new SimpleSlotOverlay(texturePath.CanonPath, color));
         }
+
+        // Lua start
+        public void ApplyUiScale(float scale)
+        {
+            scale = Math.Clamp(scale, 0.25f, 1f);
+            var size = DefaultButtonSize * scale;
+            var texScale = 2f * scale;
+            var sizeVec = new Vector2(size, size);
+            var texVec = new Vector2(texScale, texScale);
+
+            MinSize = sizeVec;
+            SetSize = sizeVec;
+            ButtonRect.TextureScale = texVec;
+            HighlightRect.TextureScale = texVec;
+            BlockedRect.TextureScale = texVec;
+            SpriteView.Scale = texVec;
+            SpriteView.SetSize = sizeVec;
+            HoverSpriteView.Scale = texVec;
+            HoverSpriteView.SetSize = sizeVec;
+            StorageButton.Scale = new Vector2(0.75f * scale, 0.75f * scale);
+        }
+        // Lua end
 
         /// <summary>
         /// Causes the control to display a placeholder prototype, optionally faded

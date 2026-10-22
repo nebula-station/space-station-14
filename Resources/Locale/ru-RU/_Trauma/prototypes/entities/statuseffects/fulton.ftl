@@ -1,0 +1,1 @@
+ent-BeingFultonedStatusEffect = фултон прикреплён

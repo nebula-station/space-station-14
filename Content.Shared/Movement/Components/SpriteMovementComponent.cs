@@ -18,13 +18,13 @@ public sealed partial class SpriteMovementComponent : Component
     /// <summary>
     /// Layer and sprite state to use when runnin.
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField] // Nebula edit
     public Dictionary<string, PrototypeLayerData> RunLayers = new();
 
     /// <summary>
     /// Layer and sprite state to use when walking.
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField] // Nebula edit
     public Dictionary<string, PrototypeLayerData> WalkLayers = new();
 
     /// <summary>
@@ -36,4 +36,9 @@ public sealed partial class SpriteMovementComponent : Component
 
     [DataField, AutoNetworkedField]
     public bool IsMoving;
+
+    // Nebula start
+    [DataField, AutoNetworkedField]
+    public bool IsEnabled = true;
+    // Nebula end
 }

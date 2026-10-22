@@ -14,3 +14,7 @@ medusa-popup = Вы превращаетесь в каменную статую!
 action-speech-spell-fireball-phoenix = КРАСНЫЙ МАГ!!!!
 
 entity-effect-popup-fear-affected = Ваше тело отключается, пока страх контролирует вас!!
+
+clown-egg-popup = Вы чувствуете себя неуклюжим.
+cluwne-egg-popup = Вы чувствуете себя опасно неуклюжим.
+knight-egg-popup = Ваша кожа кажется прочнее обычного.

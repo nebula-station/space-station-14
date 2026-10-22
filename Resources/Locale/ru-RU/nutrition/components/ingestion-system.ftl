@@ -51,3 +51,8 @@ edible-verb-pill = проглотить
 edible-force-feed = { CAPITALIZE($user) } пытается заставить вас { $verb } что-то!
 edible-force-feed-success = { CAPITALIZE($user) } заставил вас { $verb } что-то! { $flavors }
 edible-force-feed-success-user = Вы успешно накормили { $target }
+
+-edible-satiated = { $satiated ->
+    [true] {" "}Вам кажется, что вы больше не сможете { $verb }.
+  *[false] {""}
+}

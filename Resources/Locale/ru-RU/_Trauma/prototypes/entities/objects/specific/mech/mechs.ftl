@@ -1,0 +1,14 @@
+ent-Killdozer = киллдозер
+    .desc = О нет
+ent-PowerArmorFrame = каркас брони P.O.W.A.R
+    .desc = Precise Orbital WAR, броня.
+ent-T45PowerArmor = броня P.O.W.A.R T-45
+    .desc = Precise Orbital Worn Armor для революционеров.
+ent-UnfinishedKilldozer = куча металлических деталей
+    .desc = Предчувствие недоброго.
+ent-WeaponMechMosinPorts = мосинки для бойниц
+    .desc = Несколько винтовок Мосина, модифицированных для бойниц киллдозера.
+    .suffix = Оружие меха, полное
+ent-WeaponMechMosinPortsEmpty = мосинки для бойниц
+    .desc = Несколько винтовок Мосина, модифицированных для бойниц киллдозера.
+    .suffix = Оружие меха, пустое

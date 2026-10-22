@@ -1,0 +1,16 @@
+ent-DionaCube = дионный кубик
+    .desc = { ent-MonkeyCube.desc }
+ent-DwarfCube = дворфийский кубик
+    .desc = { ent-MonkeyCube.desc }
+ent-GingerbreadCube = пряничный кубик
+    .desc = { ent-MonkeyCube.desc }
+ent-HumanCube = человеческий кубик
+    .desc = { ent-MonkeyCube.desc }
+ent-MothCube = ниановый кубик
+    .desc = { ent-MonkeyCube.desc }
+ent-ReptilianCube = рептильный кубик
+    .desc = { ent-MonkeyCube.desc }
+ent-SlimePersonCube = слаймовый кубик
+    .desc = { ent-MonkeyCube.desc }
+ent-VoxCube = воксный кубик
+    .desc = { ent-MonkeyCube.desc }

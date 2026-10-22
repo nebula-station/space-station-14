@@ -22,6 +22,3 @@ health-analyzer-window-body = Тело
 health-analyzer-window-organs = Органы
 health-analyzer-window-chemicals = Химикаты
 health-analyzer-window-conditions = Состояние
-solution-type-chemicals = Химикаты в крови
-solution-type-bloodstream = Количество крови
-solution-type-stomach = Химикаты в желудке

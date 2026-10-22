@@ -1,0 +1,10 @@
+ent-ClothingOuterArmorReactiveRD = реактивная телепортирующая броня
+    .desc = Кто-то отделил нашего научного руководителя от его собственной головы!
+    .suffix = НР
+ent-ClothingOuterArmorReactiveTeleport = реактивная телепортирующая броня
+    .desc = Реактивная броня с блюспейс-ядром.
+ent-ClothingOuterArmorReactiveTesla = реактивная тесла-броня
+    .desc = Реактивная броня с тесла-ядром.
+ent-ClothingOuterArmorReactiveUnfinished = незавершённая реактивная броня
+    .desc = Этому нужно ядро аномалии.
+    .suffix = Пустой

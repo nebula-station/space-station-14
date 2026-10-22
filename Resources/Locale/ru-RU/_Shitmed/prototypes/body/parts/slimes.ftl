@@ -1,0 +1,1 @@
+ent-OrganSlimesTorso = тело слайма

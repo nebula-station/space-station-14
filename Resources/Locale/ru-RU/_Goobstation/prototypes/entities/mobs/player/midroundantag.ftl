@@ -1,0 +1,16 @@
+ent-MobHumanChosenOne = Избранный
+    .desc = { ent-MobHuman.desc }
+ent-MobHumanDarkLord = Тёмный лорд
+    .desc = { ent-MobHuman.desc }
+ent-MobHumanDarkPriest = Тёмный жрец
+    .desc = { ent-MobHuman.desc }
+ent-MobHumanGreyTide = Грейтайд
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanMimeAssassin = Ассамим
+    .desc = { ent-MobHuman.desc }
+ent-MobHumanSingulothKnight = Рыцарь Сингулота
+    .desc = { ent-MobHuman.desc }
+ent-MobHumanTunnelClown = Тех-клоун
+    .desc = { ent-MobHuman.desc }
+ent-MobVoxRaider = Вокс налётчик
+    .desc = { ent-MobVox.desc }

@@ -1,0 +1,29 @@
+- type: entity
+  parent: BaseStructure
+  id: InfinityDormTeleporter
+  name: pondering orb
+  description: Ponderous, man... Really ponderous.
+  suffix: InfDorm
+  components:
+  - type: InfinityDormTeleporter
+    minValueForRoomId: 1
+    maxValueForRoomId: 100000
+  - type: InteractionOutline
+  - type: Physics
+    canCollide: false
+  - type: Fixtures
+  - type: Sprite
+    sprite: Objects/Fun/pondering_orb.rsi
+    layers:
+    - state: icon
+      shader: unshaded
+  - type: PointLight
+    radius: 2
+    color: "#00CCFF"
+  - type: ActivatableUI
+    key: enum.InfinityDormTeleporterUiKey.Key
+  - type: UserInterface
+    interfaces:
+     enum.InfinityDormTeleporterUiKey.Key:
+        type: InfinityDormTeleporterBUI
+  - type: AccessReader

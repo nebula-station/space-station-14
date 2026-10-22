@@ -39,6 +39,20 @@
         Blunt: 0.95
         Slash: 0.95
         Piercing: 0.95
+  # Nebula start
+  - type: SolutionManager
+    solutions:
+    - StainSolution
+  - type: Appearance
+  - type: Stainable
+    clothingVisuals:
+      gloves:
+      - sprite: _Nebula/Effects/blood.rsi
+        state: gloveblood
+    iconVisuals:
+    - sprite: _Nebula/Effects/blood.rsi
+      state: glovebloodicon
+  # Nebula end
 
 - type: entity
   abstract: true

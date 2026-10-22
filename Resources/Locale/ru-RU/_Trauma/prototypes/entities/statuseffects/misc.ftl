@@ -1,0 +1,11 @@
+ent-StatusEffectMutedDevil = заглушён
+ent-StatusEffectMutedGhoul = заглушён
+ent-StatusEffectMutedJaunt = заглушён
+ent-StatusEffectMutedMutation = заглушён
+ent-StatusEffectPressureImmunityArena = иммунитет к давлению
+ent-StatusEffectPressureImmunityBuckle = иммунитет к давлению
+ent-StatusEffectPressureImmunityDevil = иммунитет к давлению
+ent-StatusEffectPressureImmunityHeretic = иммунитет к давлению
+ent-StatusEffectPressureImmunityLing = иммунитет к давлению
+ent-StatusEffectPressureImmunityMutation = иммунитет к давлению
+ent-StatusEffectPressureImmunityOrgan = иммунитет к давлению

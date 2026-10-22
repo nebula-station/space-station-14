@@ -1,0 +1,32 @@
+<Document>
+# Медицинский отдел
+Сюда люди приходят, когда им плохо, и от работающих здесь зависит, поставят ли их на ноги.
+
+## Персонал
+Персонал [color=#5b97bc]медицинского отдела[/color] — это интерны, врачи, парамедики и химики. Руководит [color=#5b97bc]медицинским отделом[/color] главный врач.
+
+  <Box>
+    <GuideEntityEmbed Entity="ToyFigurineMedicalDoctor" Caption="Врач"/>
+    <GuideEntityEmbed Entity="ToyFigurineParamedic" Caption="Парамедик"/>
+    <GuideEntityEmbed Entity="ToyFigurineChemist" Caption="Химик"/>
+    <GuideEntityEmbed Entity="ToyFigurineChiefMedicalOfficer" Caption="Главврач"/>
+  </Box>
+
+Сейчас работа медотдела делится на два направления:
+
+## Медицинская помощь
+  <Box>
+    <GuideEntityEmbed Entity="Brutepack"/>
+    <GuideEntityEmbed Entity="Bloodpack"/>
+    <GuideEntityEmbed Entity="Ointment"/>
+    <GuideEntityEmbed Entity="Gauze"/>
+    <GuideEntityEmbed Entity="HandheldHealthAnalyzer"/>
+  </Box>
+## Химическое производство
+  <Box>
+    <GuideEntityEmbed Entity="ChemDispenser"/>
+    <GuideEntityEmbed Entity="LargeBeaker"/>
+    <GuideEntityEmbed Entity="PillCanister"/>
+    <GuideEntityEmbed Entity="ChemMaster"/>
+  </Box>
+</Document>

@@ -1,0 +1,12 @@
+ent-RandomVendingAnyMimic = спавнер случайный торговый автомат
+    .desc = { "" }
+    .suffix = Любой_Мимик
+ent-RandomVendingDrinksMimic = спавнер случайный торговый автомат
+    .desc = { "" }
+    .suffix = Напитки_Мимик
+ent-RandomVendingSnacksMimic = спавнер случайный торговый автомат
+    .desc = { "" }
+    .suffix = Снеки_Мимик
+ent-SpawnLootLockerMimic = спавнер добычи шкафа-мимика
+ent-SpawnLootToolboxMimic = спавнер добычи ящика-мимика
+ent-SpawnLootVendorMimic = спавнер добычи автомата-мимика

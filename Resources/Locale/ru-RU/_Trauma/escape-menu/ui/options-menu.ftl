@@ -18,3 +18,6 @@ ui-options-mouse-wheel-targeting = Можно менять целевую час
 ui-options-function-targeting-mod = Клавиша-модификатор смены цели (колёсико мыши)
 ui-options-function-zoom-mod = Клавиша-модификатор масштабирования камеры (колёсико мыши)
 ui-options-function-rotate-mod = Клавиша-модификатор вращения (колёсико мыши)
+
+ui-options-disable-radiation-static = Радиационный шум
+ui-options-disable-radiation-static-tooltip = Убирает шум камеры, вызванный радиацией.

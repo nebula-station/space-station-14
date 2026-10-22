@@ -1,10 +1,13 @@
+using Content.Shared._Nebula.Silicons.SwitchableState;
 using Content.Shared.Actions;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Movement.Components;
 using Content.Shared.Silicons.Borgs.Components;
+using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 
 namespace Content.Shared.Silicons.Borgs;
 
@@ -19,6 +22,8 @@ public abstract partial class SharedBorgSwitchableTypeSystem : EntitySystem
     [Dependency] private SharedActionsSystem _actionsSystem = default!;
     [Dependency] private SharedUserInterfaceSystem _userInterface = default!;
     [Dependency] private InteractionPopupSystem _interactionPopup = default!;
+    [Dependency] private ChangeSpriteSystem _switchableState = default!; // Nebula
+    [Dependency] private INetManager _net = default!; // Nebula
 
     public static readonly EntProtoId ActionId = "ActionSelectBorgType";
 
@@ -49,7 +54,7 @@ public abstract partial class SharedBorgSwitchableTypeSystem : EntitySystem
         // <Goob> - use subtypes
         if (ent.Comp.SelectedBorgType != null &&
             TryComp<BorgSwitchableSubtypeComponent>(ent, out var subtype) &&
-            subtype.BorgSubtype is {} sub)
+            subtype.BorgSubtype is { } sub)
         {
             SelectBorgModule(ent, ent.Comp.SelectedBorgType.Value, sub);
         }
@@ -126,6 +131,16 @@ public abstract partial class SharedBorgSwitchableTypeSystem : EntitySystem
         BorgTypePrototype prototype,
         BorgSubtypePrototype subtypePrototype) // Goob
     {
+        // Nebula start
+        if (!_net.IsClient)
+        {
+            _switchableState.SetupStates(entity,
+                subtypePrototype.StatesWhiteList,
+                subtypePrototype.DoAfterDuration,
+                new SpriteSpecifier.Rsi(subtypePrototype.SpritePath, prototype.SpriteBodyState));
+        }
+        // Nebula end
+
         if (TryComp(entity, out InteractionPopupComponent? popup))
         {
             _interactionPopup.SetInteractSuccessString((entity.Owner, popup), prototype.PetSuccessString);
@@ -137,7 +152,17 @@ public abstract partial class SharedBorgSwitchableTypeSystem : EntitySystem
             footstepModifier.FootstepSoundCollection = prototype.FootstepCollection;
         }
 
-        if (prototype.SpriteBodyMovementState is { } movementState)
+        // Nebula start
+        var movementState = subtypePrototype.HaveMotionAnimation switch
+        {
+            true => prototype.SpriteBodyState + "_moving",
+            false => null,
+            null => prototype.SpriteBodyMovementState,
+        };
+        // Nebula end
+
+
+        if (movementState != null) // Nebula edit
         {
             var spriteMovement = EnsureComp<SpriteMovementComponent>(entity);
             spriteMovement.NoMovementLayers.Clear();

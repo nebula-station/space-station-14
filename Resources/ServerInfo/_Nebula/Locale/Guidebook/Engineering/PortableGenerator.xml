@@ -1,0 +1,51 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+  # Портативные генераторы
+
+  Линейка портативных генераторов "П.А.К.М.А.Н." используется для обеспечения аварийного или дополнительного питания ключевых помещений, зон или даже отделов.
+  Они просты в установке и обслуживании, и могут использоваться для питания критических систем и зон в случае отключения электричества.
+
+  <Box>
+    <GuideEntityEmbed Entity="PortableGeneratorJrPacman" Caption="М.И.Н.И.П.А.К.М.А.Н." />
+    <GuideEntityEmbed Entity="PortableGeneratorPacman" Caption="П.А.К.М.А.Н." />
+    <GuideEntityEmbed Entity="PortableGeneratorSuperPacman" Caption="С.У.П.Е.Р.П.А.К.М.А.Н." />
+  </Box>
+
+  # Маленький
+
+  <Box>
+    <GuideEntityEmbed Entity="PortableGeneratorJrPacman" Caption="М.И.Н.И.П.А.К.М.А.Н." />
+    <GuideEntityEmbed Entity="WeldingFuelTank" />
+  </Box>
+
+  М.И.Н.И.П.А.К.М.А.Н. можно найти по всей станции в технических туннелях; он идеально подходит для экипажа, чтобы самостоятельно подключить его при проблемах с питанием.
+  Его выходная мощность до [color=orange][protodata="PortableGeneratorJrPacman" comp="FuelGenerator" member="MaxTargetPower" format="N0"/] Вт[/color] достаточно, чтобы питать одну или две комнаты, что может оказаться бесценным в таких местах, как Медбей или Химия в Медицинском отделе.
+
+  Настройка невероятно проста: закрепите его над [color=green]НВ[/color] кабелем, добавьте сварочное топливо и запустите.
+
+  Сварочное топливо — единственный источник топлива для М.И.Н.И.П.А.К.М.А.Н., и его можно найти в резервуарах со сварочным топливом по всей станции, обычно в обслуживающих зонах.
+
+  # Большие
+
+  <Box>
+    <GuideEntityEmbed Entity="PortableGeneratorPacman" Caption="П.А.К.М.А.Н." />
+    <GuideEntityEmbed Entity="SheetPlasma" />
+  </Box>
+
+  <Box>
+    <GuideEntityEmbed Entity="PortableGeneratorSuperPacman" Caption="С.У.П.Е.Р.П.А.К.М.А.Н." />
+    <GuideEntityEmbed Entity="SheetUranium" />
+  </Box>
+
+  П.А.К.М.А.Н. и С.У.П.Е.Р.П.А.К.М.А.Н. предназначены для использования инженерами при крупных отключениях электричества и для дополнительного питания в случае дефицита.
+  Например, для запуска крупных [textlink="engines" link="SingularityTeslaEngine"], питания отделов и т.д.
+
+  С.У.П.Е.Р.П.А.К.М.А.Н. обладает большей выходной мощностью (до [color=orange][protodata="PortableGeneratorSuperPacman" comp="FuelGenerator" member="MaxTargetPower" format="N0"/] Вт[/color]) и более долгим временем работы на максимальной мощности, но менее эффективно работает на меньших выходах.
+
+  Они подключаются напрямую к [color=yellow]СВ[/color] или [color=orange]ВВ[/color] [textlink="power cables" link="VoltageNetworks"] и могут переключаться между ними для гибкости.
+
+  С.У.П.Е.Р.П.А.К.М.А.Н. и П.А.К.М.А.Н. используют в качестве топлива листы урана и плазмы соответственно.
+</Document>

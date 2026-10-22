@@ -1,7 +1,5 @@
 ## CREW EXAMINES
 cosmic-examine-text-contraband = [color=#4cabb3]Это крайне незаконный контрабандный предмет с неизвестными свойствами![/color]
-cosmic-examine-text-structures = [color=#4cabb3]Этого объекта не должно быть на станции![/color]
-cosmic-examine-text-entities = [color=#4cabb3]Этой сущности не должно быть на станции![/color]
 cosmic-examine-text-glyphs = [color=#4cabb3]Вырезанные линии вызывают глубокое чувство тревоги при взгляде на них.[/color]
 cosmic-examine-text-abilityblank = [color=#4cabb3]Их безучастные глаза пульсируют зловещим светом![/color]
 cosmic-examine-text-abilitylapse = [color=#4cabb3]Они выглядят так, будто видят нечто, чего не должны видеть. Никто.[/color]
@@ -10,7 +8,6 @@ cosmic-examine-text-imposition = [color=#4cabb3]Барьер астрально�
 cosmic-examine-text-chantry = [color=#4cabb3]Вас охватывает жуткое ощущение, что внутри кто-то заперт![/color]
 cosmic-examine-text-effigy = [color=#4cabb3]Он излучает нестабильную аномальную энергию![/color]
 cosmic-examine-text-god = [color=#4cabb3]конец есть конец есть конец есть конец есть конец есть конец есть конец есть конец есть конец есть конец есть[/color]
-cosmic-examine-text-fracture = [color=#4cabb3]Реальность разрушается рядом с этим. Находиться поблизости может быть опасно.[/color]
 cosmic-examine-text-subtle-mark = [color=#4cabb3]В их глазах мерцают отблески потусторонней энергии.[/color]
 cosmic-examine-text-mote = [color=#4cabb3]На ощупь твёрдое, но пластичное, как будто его можно раздавить голыми руками.[/color]
 
@@ -36,3 +33,7 @@ cosmic-examine-glyph-warding = [color=#4cabb3]Преобразует устой�
 cosmic-examine-transmutable = Это можно преобразовать в [color=#4cabb3]{$result}[/color].
 cosmic-examine-transmutable-empowerment = [color=#4cabb3]Преобразовать это могут только усиленные культисты.[/color]
 cosmic-examine-transmutable-verb-text = Возможность преобразования.
+
+cosmic-examine-text-basic = [color=#4cabb3]Эта вещь не должна существовать[/color]
+cosmic-examine-text-sign = [color=#4cabb3]На инструктаже ничего не говорили о таких предупреждающих знаках.[/color]
+cosmic-examine-text-sign-cult = [color=#4cabb3]Он предупреждает о нас. Опасность — это мы.[/color]

@@ -15,3 +15,5 @@ mindcontrol-briefing-get-master = Повинуйтесь { $master }
 
 uplink-mindcontrol-implant-name = Имплантер Контроля Разума
 uplink-mindcontrol-implant-desc = Когда тебе просто нужен друг.
+
+antag-name-mind-controlled = под контролем разума

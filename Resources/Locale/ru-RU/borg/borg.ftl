@@ -44,3 +44,9 @@ borg-type-medical-transponder = борг-доктор
 borg-type-service-name = Сервисный
 borg-type-service-desc = Помогайте членам экипажа в самых разных ситуациях - от подачи закусок и напитков до занятий ботаникой и развлечений.
 borg-type-service-transponder = борг-официант
+
+borg-module-action-description = Выбрать { $moduleName }, чтобы использовать предоставляемые им инструменты.
+borg-module-action-name = Активировать { $moduleName }
+
+borg-module-incompatible = Этот модуль не совместим с { THE($existing) }.
+borg-module-prerequisite-unfulfilled = Для работы этого модуля требуется другой модуль...

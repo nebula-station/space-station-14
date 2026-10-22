@@ -24,10 +24,11 @@ guide-entry-devil-clauses = Дьявольские договоры
 guide-entry-insurgents = Повстанцы
 guide-entry-morph = Морф
 guide-entry-shadow-demon = Демон тени
-guide-entry-slasher = Слэшер
 guide-entry-slaughter-demon = Демон Резни
 guide-entry-spies = Шпионы
 
 guide-entry-skills = Навыки
 
 guide-entry-chaplain-nullrodforms = Формы нуль-жезла
+
+guide-entry-progtot = Задания предателя

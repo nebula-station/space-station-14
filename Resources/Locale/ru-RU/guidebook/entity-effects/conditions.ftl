@@ -92,3 +92,14 @@ entity-condition-guidebook-internals =
                 [true] using internals
                 *[false] breathing atmospheric air
                }
+
+entity-condition-guidebook-mouth-uncovered-condition =
+    рот существа не закрыт
+entity-condition-guidebook-total-satiation =
+    { $max ->
+        [2147483648] у цели не менее { NATURALFIXED($min, 2) } ед. { $type } в сумме
+        *[other] { $min ->
+                    [0] у цели не более { NATURALFIXED($max, 2) } ед. { $type } в сумме
+                    *[other] у цели от { NATURALFIXED($min, 2) } до { NATURALFIXED($max, 2) } ед. { $type } в сумме
+                 }
+    }

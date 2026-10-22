@@ -411,3 +411,12 @@ ui-options-admin-overlay-ghost-hide-distance = Дальность скрытия
 
 ui-options-admin-strip-overlay-title = Оверлей обыска
 ui-options-admin-strip-overlay-setting = Показывать оверлей обыска по умолчанию
+
+ui-options-admin-overlay-antag-format-off = Не показывать статус антагониста/тип роли
+ui-options-highlight-sound = Проигрывать звук упоминаний
+ui-options-highlight-volume = Громкость упоминаний в чате:
+ui-options-hotkey-default-walk = Ходьба по умолчанию
+
+ui-options-max-fps = Максимальный FPS:
+ui-options-max-fps-display-rate = Частота дисплея
+ui-options-max-fps-tooltip = Максимальная частота кадров клиента. 0 — без ограничения. Не действует при включённой вертикальной синхронизации.

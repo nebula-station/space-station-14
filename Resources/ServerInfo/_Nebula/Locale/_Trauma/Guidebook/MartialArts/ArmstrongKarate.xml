@@ -1,0 +1,75 @@
+<Document>
+
+  # Карате в стиле Армстронга
+
+  <Box>
+    <TextureEmbed Sprite="_Trauma/Interface/Misc/armstrongkarate.rsi" State="icon"/>
+  </Box>
+
+  Стиль карате, рождённый из боли и самоанализа.
+
+  ## Комбо-атаки
+
+  ### Удары-бастеры
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="grab"/>
+  </Box>
+
+  Классика Армстронга.
+
+  ### Дропкик
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="grab"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+  </Box>
+
+  Удар двумя ногами в прыжке.
+
+  ### Кулак-пулемёт
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+  </Box>
+
+  Шквал ударов кулаками.
+
+  ### Огненный шар
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+  </Box>
+
+  Взрыв пылающих эмоций.
+
+  ### Удар головой
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="grab"/>
+  </Box>
+
+  Удар головой со всей силы.
+
+  ### Стойка всадника
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
+  </Box>
+
+  Примите устойчивую стойку всадника.
+
+</Document>

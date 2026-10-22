@@ -13,7 +13,18 @@
     - map: [ "mannequin" ]
       sprite: Structures/Decoration/mannequin.rsi
       state: mannequin
+    # Lua start
+    - map: [ "underwearb" ]
+    - map: [ "underweart" ]
+    - map: [ "socks" ]
+    # Lua end
     - map: [ "jumpsuit" ]
+    # Lua start
+    - map: [ "finger" ]
+    - map: [ "leftarmband" ]
+    - map: [ "rightarmband" ]
+    - map: [ "necklace" ]
+    # Lua end
     - map: [ "outerClothing" ]
     - map: [ "eyes" ]
     - map: [ "neck" ]
@@ -87,5 +98,39 @@
         showEnts: False
         occludes: False
         ent: null
+      # Lua start
+      finger: !type:ContainerSlot
+        showEnts: False
+        occludes: False
+        ent: null
+      necklace: !type:ContainerSlot
+        showEnts: False
+        occludes: False
+        ent: null
+      socks: !type:ContainerSlot
+        showEnts: False
+        occludes: False
+        ent: null
+      underwearb: !type:ContainerSlot
+        showEnts: False
+        occludes: False
+        ent: null
+      underweart: !type:ContainerSlot
+        showEnts: False
+        occludes: False
+        ent: null
+      wallet: !type:ContainerSlot
+        showEnts: False
+        occludes: False
+        ent: null
+      rightarmband: !type:ContainerSlot
+        showEnts: False
+        occludes: False
+        ent: null
+      leftarmband: !type:ContainerSlot
+        showEnts: False
+        occludes: False
+        ent: null
+      # Lua end
   - type: Inventory
     templateId: mannequin

@@ -138,11 +138,11 @@ public sealed partial class GuidebookWindow : FancyWindow, ILinkClickHandler, IA
         EntryContainer.Visible = true;
         SearchBar.Text = "";
         EntryContainer.RemoveAllChildren();
-        using var file = _resourceManager.ContentFileReadText(entry.Text);
+        var text = _parsingMan.ReadGuideText(entry.Text); // Nebula edit
 
         SearchContainer.Visible = entry.FilterEnabled;
 
-        if (!_parsingMan.TryAddMarkup(EntryContainer, file.ReadToEnd()))
+        if (!_parsingMan.TryAddMarkup(EntryContainer, text)) // Nebula edit
         {
             // The guidebook will automatically display the in-guidebook error if it fails
 

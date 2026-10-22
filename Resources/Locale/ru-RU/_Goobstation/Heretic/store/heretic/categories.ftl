@@ -12,4 +12,8 @@ store-heretic-path-void = Путь пустоты
 store-heretic-path-rust = Путь ржавчины
 store-heretic-path-blade = Путь клинка
 store-heretic-path-cosmos = Путь космоса
-store-heretic-path-side = Побочное знание
+
+store-heretic-path-side-t1 = Побочные знания У1
+store-heretic-path-side-t2 = Побочные знания У2
+store-heretic-path-side-t3 = Побочные знания У3
+store-heretic-path-special = Особые знания

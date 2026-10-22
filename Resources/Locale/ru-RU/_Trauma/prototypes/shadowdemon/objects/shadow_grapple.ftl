@@ -1,0 +1,1 @@
+ent-ShadowGrappleProjectile = теневой захват

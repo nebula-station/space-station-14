@@ -1,0 +1,15 @@
+- type: startingGear
+  id: GhostCafeGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChameleon
+    outerClothing: ClothingOuterChameleon
+    neck: ClothingNeckChameleon
+    mask: ClothingMaskGasChameleon
+    head: ClothingHeadHatChameleon
+    gloves: ClothingHandsChameleon
+    eyes: ClothingEyesChameleon
+    ears: ClothingHeadsetChameleon
+    shoes: ClothingShoesChameleon
+    id: ChameleonPDA
+    back: ClothingBackpackChameleon
+    pocket1: ChameleonControllerImplanter

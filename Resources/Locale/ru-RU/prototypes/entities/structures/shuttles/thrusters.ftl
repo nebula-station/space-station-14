@@ -1,0 +1,26 @@
+ent-BaseThruster = ракетный двигатель
+    .desc = Ускоритель, позволяющий шаттлу передвигаться.
+ent-DebugGyroscope = { ent-BaseThruster }
+    .suffix = DEBUG
+    .desc = { ent-BaseThruster.desc }
+ent-DebugThruster = { ent-BaseThruster }
+    .suffix = DEBUG
+    .desc = { ent-BaseThruster.desc }
+ent-Gyroscope = гироскоп
+    .desc = Увеличивает потенциальное угловое вращение шаттла.
+ent-GyroscopeUnanchored = { ent-Gyroscope }
+    .suffix = Незакреплённый
+    .desc = { ent-Gyroscope.desc }
+ent-Thruster = ракетный двигатель
+    .desc = { ent-BaseThruster.desc }
+ent-ThrusterLarge = большой ракетный двигатель
+    .desc = { ent-BaseThruster.desc }
+ent-ThrusterShuttleEvac = { ent-BaseThruster }
+    .desc = { ent-BaseThruster.desc }
+    .suffix = Эвакуация, Неоткрепляемый
+ent-ThrusterUnanchored = { ent-Thruster }
+    .suffix = Незакреплённый
+    .desc = { ent-Thruster.desc }
+
+ent-ThrusterXenoborg = ракетный двигатель
+    .desc = Ускоритель, позволяющий шаттлу передвигаться.

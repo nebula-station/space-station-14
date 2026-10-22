@@ -1,0 +1,10 @@
+ent-CentcomAgentSkirt = юбка агента ЦК
+    .desc = Юбка, которую носят сотрудники юридического отделения ЦК. Пахнет сгоревшим кофе.
+ent-ClothingUniformJumpskirtCommandMaid = форма горничной командования
+    .desc = Стильная форма горничной, разработанная специльно для элитных горничных командования. Сочетает профессионализм и элегантность.
+ent-ClothingUniformJumpskirtNanotrasenRepresentative = юбка представителя NanoTrasen
+    .desc = Чёрная юбка, которую носят официальные лица.
+ent-ClothingUniformJumpskirtReporter = платье репортёра
+    .desc = Вычурное чёрное платье, созданное чтобы привлечь внимание как можно большего количества людей.
+ent-ClothingUniformSkirtMailCarrier = юбка-сарафан почтальона
+    .desc = Враг собак повсюду.

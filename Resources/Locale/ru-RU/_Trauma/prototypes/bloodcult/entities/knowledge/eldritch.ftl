@@ -1,0 +1,1 @@
+ent-EldritchKnowledge = Потусторонняя мудрость

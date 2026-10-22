@@ -1,0 +1,13 @@
+ent-AppearancePlasmaman = внешность плазмамена
+ent-OrganPlasmamanAppendix = аппендикс
+ent-OrganPlasmamanArmLeft = левая рука
+ent-OrganPlasmamanArmRight = правая рука
+ent-OrganPlasmamanEars = уши
+ent-OrganPlasmamanFootLeft = левая стопа
+ent-OrganPlasmamanFootRight = правая стопа
+ent-OrganPlasmamanHandLeft = левая кисть
+ent-OrganPlasmamanHandRight = правая кисть
+ent-OrganPlasmamanHead = голова
+ent-OrganPlasmamanLegLeft = левая нога
+ent-OrganPlasmamanLegRight = правая нога
+ent-OrganPlasmamanTorso = торс

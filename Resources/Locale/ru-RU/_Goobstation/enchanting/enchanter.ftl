@@ -6,3 +6,5 @@ enchanter-enchanted = Магическая аура мерцает вокруг 
 enchanting-tool-no-enchanter = Вам нужно поместить источник зачарования вместе с исходным предметом.
 enchanting-sacrifice-single = Душа { $target } наделяет силой { $item }!
 enchanting-sacrifice-multiple = Душа { $target } наделяет силой соседние предметы!
+
+enchanter-no-skill = У вас нет навыка!

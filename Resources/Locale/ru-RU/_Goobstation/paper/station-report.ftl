@@ -22,3 +22,6 @@ station-report-text =
     >[mono][/mono]
     подписан, [color=Green]<имя ПNT>[/color]
     >[italic]Пожалуйста, не ставьте печати и подписи на этом документе, все подписи и печати фильтруются нашей системой, вместо этого впишите своё имя в указанное поле[/italic]
+
+station-report-end-round-text = { $bodytext }
+                                { "[" }italic]Отчёт ПЦК по станции, раунд: { $roundid }{ "[" }/italic]

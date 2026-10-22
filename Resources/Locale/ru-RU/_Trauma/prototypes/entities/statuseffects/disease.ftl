@@ -1,0 +1,1 @@
+ent-StatusEffectHeartAttack = сердечный приступ

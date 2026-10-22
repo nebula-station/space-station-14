@@ -547,3 +547,37 @@ entity-effect-guidebook-plant-mutate-chemicals =
         [1] Мутирует
         *[other] мутировать
     } растение, чтобы оно производило {$name}
+
+entity-effect-guidebook-plant-change-trait =
+    { $chance ->
+        [1] { $change ->
+            [Add] Добавляет растению { $trait }
+            [Remove] Убирает у растения { $trait }
+            [Toggle] Переключает у растения { $trait }
+            *[other] Изменяет у растения { $trait }
+        }
+        *[other] { $change ->
+            [Add] добавить растению { $trait }
+            [Remove] убрать у растения { $trait }
+            [Toggle] переключить у растения { $trait }
+            *[other] изменить у растения { $trait }
+        }
+    }
+entity-effect-guidebook-plant-mutate-consume-gasses =
+    { $chance ->
+        [1] Мутирует
+        *[other] мутировать
+    } растение так, чтобы оно потребляло газы от { $minValue } до { $maxValue } моль
+entity-effect-guidebook-plant-mutate-exude-gasses =
+    { $chance ->
+        [1] Мутирует
+        *[other] мутировать
+    } растение так, чтобы оно выделяло газы от { $minValue } до { $maxValue } моль
+entity-effect-guidebook-satiate =
+    { $chance ->
+        [1] Утоляет
+        *[other] утолить
+    } { $relative ->
+        [1] { $type } в среднем темпе
+        *[other] { $type } в { NATURALFIXED($relative, 3) }x от среднего темпа
+    }

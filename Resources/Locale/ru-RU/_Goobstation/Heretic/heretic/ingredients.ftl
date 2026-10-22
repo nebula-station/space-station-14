@@ -61,3 +61,7 @@ heretic-ritual-ingredient-screwdriver = отвёртка
 heretic-ritual-ingredient-wirecutter = кусачки
 heretic-ritual-ingredient-hand = рука
 heretic-ritual-ingredient-bonfire = костёр
+
+heretic-ritual-ingredient-gold-silver = золотой или серебряный слиток
+heretic-ritual-ingredient-grenade-casing = корпус гранаты
+heretic-ritual-ingredient-rag = влажная тряпка

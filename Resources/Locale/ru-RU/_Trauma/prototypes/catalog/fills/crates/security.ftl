@@ -1,0 +1,14 @@
+ent-CrateSecurityGunpowder = ящик пороха
+    .desc = Содержит одну партию пороха. Для открытия нужен доступ СБ.
+ent-CrateSecurityWeaponLaserSidearm = ящик фазеров
+    .desc = Содержит три фазера. Для открытия нужен доступ СБ.
+ent-CrateSkillChipsSec = ящик скиллчипов СБ
+    .desc = Ящик со скиллчипами СБ. Для открытия нужен доступ СБ.
+ent-GunSafeBallisticRandom = баллистический сейф
+    .desc = Стандартное хранилище NanoTrasen.
+ent-GunSafeCburnSpear = сейф копья-диспетчера
+    .desc = Стандартное хранилище NanoTrasen.
+ent-GunSafeLaserRandom = оружейный сейф лазерных карабинов
+    .desc = Стандартное хранилище NanoTrasen.
+ent-GunSafeTruncheon = сейф дубинки
+    .desc = Стандартное хранилище NanoTrasen.

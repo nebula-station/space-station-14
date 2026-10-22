@@ -25,6 +25,9 @@
       reagents:
       - ReagentId: Fiber
         Quantity: 15
+  - type: SolutionManager # Nebula
+    solutions:
+    - StainSolution
   - type: Tag
     tags:
     - ClothMade

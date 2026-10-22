@@ -1,0 +1,10 @@
+ent-CMPlatform = платформа
+    .desc = Квадратная металлическая поверхность на четырёх ножках.
+ent-CMPlatformCorner = платформа
+    .desc = Квадратная металлическая поверхность на четырёх ножках.
+ent-RMCPlatformCornerSmall = платформа
+    .desc = Квадратная металлическая поверхность на четырёх ножках.
+ent-RMCPlatformStairLeft = { ent-CMPlatform }
+    .desc = { ent-CMPlatform.desc }
+ent-RMCPlatformStairRight = { ent-CMPlatform }
+    .desc = { ent-CMPlatform.desc }

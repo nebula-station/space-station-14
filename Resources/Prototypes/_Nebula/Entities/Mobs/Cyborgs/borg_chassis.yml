@@ -1,0 +1,212 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Generic
+
+- type: entity
+  id: BorgChassisGenericTall
+  parent: BorgChassisGeneric
+  name: tall generic cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: generic_tall
+
+- type: entity
+  id: BorgChassisGenericTallMme
+  parent: BorgChassisGeneric
+  name: tall generic cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: generic_tall_mme
+
+# Mining
+
+- type: entity
+  id: BorgChassisMiningDrake
+  parent: BorgChassisMining
+  name: drake mining cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: mining_drake
+
+- type: entity
+  id: BorgChassisMiningTallCargo
+  parent: BorgChassisMining
+  name: tall mining cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: mining_tall_cargo
+
+- type: entity
+  id: BorgChassisMiningTallCargoF
+  parent: BorgChassisMining
+  name: tall mining cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: mining_tall_cargo_f
+
+- type: entity
+  id: BorgChassisMiningTall
+  parent: BorgChassisMining
+  name: tall mining cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: mining_tall
+
+- type: entity
+  id: BorgChassisMiningTallMeka
+  parent: BorgChassisMining
+  name: tall mining cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: mining_tall_meka
+
+- type: entity
+  id: BorgChassisMiningTallMme
+  parent: BorgChassisMining
+  name: tall mining cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: mining_tall_mme
+
+# Engineer
+
+- type: entity
+  id: BorgChassisEngineerDrake
+  parent: BorgChassisEngineer
+  name: drake engineering cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: engineer_drake
+
+- type: entity
+  id: BorgChassisEngineerTall
+  parent: BorgChassisEngineer
+  name: tall engineering cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: engineer_tall
+
+# Medical
+
+- type: entity
+  id: BorgChassisMedicalDrake
+  parent: BorgChassisMedical
+  name: drake med cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: medical_drake
+
+- type: entity
+  id: BorgChassisMedicalTall
+  parent: BorgChassisMedical
+  name: tall medical cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: medical_tall
+
+- type: entity
+  id: BorgChassisMedicalTallMeka
+  parent: BorgChassisMedical
+  name: tall medical cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: medical_tall_meka
+
+- type: entity
+  id: BorgChassisMedicalTallMme
+  parent: BorgChassisMedical
+  name: tall medical cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: medical_tall_mme
+
+# Service
+
+- type: entity
+  id: BorgChassisServiceDrake
+  parent: BorgChassisService
+  name: drake service cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: service_drake
+
+- type: entity
+  id: BorgChassisServiceTall
+  parent: BorgChassisService
+  name: tall service cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: service_tall
+
+- type: entity
+  id: BorgChassisServiceTallMeka
+  parent: BorgChassisService
+  name: tall service cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: service_tall_meka
+
+- type: entity
+  id: BorgChassisServiceTallMme
+  parent: BorgChassisService
+  name: tall service cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: service_tall_mme
+
+# Janitor
+
+- type: entity
+  id: BorgChassisJanitorDrake
+  parent: BorgChassisJanitor
+  name: drake janitor cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: janitor_drake
+
+- type: entity
+  id: BorgChassisJanitorTall
+  parent: BorgChassisJanitor
+  name: tall janitor cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: janitor_tall
+
+- type: entity
+  id: BorgChassisJanitorTallMeka
+  parent: BorgChassisJanitor
+  name: tall janitor cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: janitor_tall_meka
+
+- type: entity
+  id: BorgChassisJanitorTallMme
+  parent: BorgChassisJanitor
+  name: tall janitor cyborg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BorgSwitchableSubtype
+    borgSubtype: janitor_tall_mme
+

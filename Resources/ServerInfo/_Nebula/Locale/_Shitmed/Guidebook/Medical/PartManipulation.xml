@@ -1,0 +1,42 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+  # Манипуляции с частями тела
+
+  Вот как вы можете превратить таяр в людей — или наоборот, если вы настроены особенно жестоко.
+
+  ## Анатомия
+
+  Обычно тело имеет 11 основных частей. Это:
+
+  <Box>
+  <GuideEntityEmbed Entity="OrganHumanHead" Caption="голова"/>
+  </Box>
+  <Box>
+  <GuideEntityEmbed Entity="OrganHumanHandRight" Caption="правая рука"/>
+  <GuideEntityEmbed Entity="OrganHumanArmRight" Caption="правое предплечье"/>
+  <GuideEntityEmbed Entity="OrganHumanTorso" Caption="торс"/>
+  <GuideEntityEmbed Entity="OrganHumanArmLeft" Caption="левое предплечье"/>
+  <GuideEntityEmbed Entity="OrganHumanHandLeft" Caption="левая рука"/>
+  </Box>
+  <Box>
+  <GuideEntityEmbed Entity="OrganHumanFootRight" Caption="правая нога"/>
+  <GuideEntityEmbed Entity="OrganHumanLegRight" Caption="правое бедро"/>
+  <GuideEntityEmbed Entity="OrganHumanLegLeft" Caption="левое бедро"/>
+  <GuideEntityEmbed Entity="OrganHumanFootLeft" Caption="левая нога"/>
+  </Box>
+
+  У некоторых видов может быть больше или меньше частей, например хвосты, крылья или дополнительные конечности, но это примерная структура, с которой вы столкнётесь.
+  Чтобы оторвать конечность, нужно применить операцию "Удаление части тела", которая снимет её, не навредив пациенту.
+
+  Если же вы хотите снова присоединить конечность, примените операцию "Прикрепление части тела" туда, куда хотите её прикрепить.
+  Руки прикрепляются к предплечьям, ноги — к бедрам. Всё остальное крепится к торсу.
+
+  ## Я присоединил конечность пациенту, но она не работает?
+
+  Пациент получил такие повреждения, что нервы конечности были серьёзно повреждены, и её нужно правильно вылечить, чтобы она снова заработала.
+  Для этого можно применить операции "Обработка ран" или дать пациенту использовать наружные средства на повреждённом месте.
+
+</Document>

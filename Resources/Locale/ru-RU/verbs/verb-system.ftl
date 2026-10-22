@@ -58,3 +58,5 @@ verb-common-close-ui = Закрыть UI
 verb-common-open-ui = Открыть UI
 verb-common-enter = Войти
 verb-common-exit = Выйти
+
+verb-categories-select-target = Выбрать цель

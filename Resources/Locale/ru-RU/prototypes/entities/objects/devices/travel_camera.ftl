@@ -1,0 +1,9 @@
+ent-PhotographBlack = фотография
+ent-PhotographBlue = фотография
+ent-PhotographGreen = фотография
+ent-PhotographPurple = фотография
+ent-PhotographRainbow = фотография
+ent-PhotographRed = фотография
+ent-PhotographYellow = фотография
+ent-TravelCamera = дорожная камера
+    .desc = Картинка стоит тысячи слов. Поставляется со сверхъяркой вспышкой и самозаряжающейся фотоплёнкой.

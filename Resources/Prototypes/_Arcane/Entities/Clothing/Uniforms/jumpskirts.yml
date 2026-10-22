@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformDressCommandMaid
+  name: command maid dress
+  description: It is made of breathable fabric, which will allow you to stay on your feet for the entire shift.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Jumpskirts/command_maid.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Jumpskirts/command_maid.rsi

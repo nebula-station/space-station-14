@@ -50,3 +50,6 @@ signal-port-name-power-discharging = Разрядка
 signal-port-description-power-discharging = Этот порт задействуется с высоким уровнем сигнала когда батарея разряжается, и с низким когда нет.
 signal-port-name-item-detected = Обнаружение
 signal-port-description-item-detected = Этот порт задействуется когда передатчик обнаруживает предмет.
+
+signal-port-description-doorboltstatus = Этот порт подаёт HIGH, когда дверь заблокирована болтами, и LOW, когда болты сняты.
+signal-port-name-doorboltstatus = Статус болтов двери

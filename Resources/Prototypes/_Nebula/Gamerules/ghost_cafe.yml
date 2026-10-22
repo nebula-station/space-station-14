@@ -1,0 +1,6 @@
+- type: entity
+  parent: BaseSilentGameRule
+  id: GhostCafeMapRule
+  # components:
+  # - type: LoadMapRule
+  #   mapPath: /Maps/_Nebula/ghostcafe.yml

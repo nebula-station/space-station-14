@@ -26,7 +26,6 @@ reagent-effect-guidebook-mutate-plants-nearby = Случайным образо�
 reagent-effect-guidebook-dnascramble = Перемешивает ДНК существа.
 reagent-effect-guidebook-change-species = Превращает цель в { $species }.
 reagent-effect-guidebook-change-species-random = Превращает цель в совершенно случайный вид.
-reagent-effect-guidebook-sex-change = Изменяет половую принадлежность цели.
 reagent-effect-guidebook-immunity-modifier =
     { $chance ->
         [1] Изменяет

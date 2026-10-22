@@ -1,0 +1,12 @@
+ent-AranespStatusEffect = ускорение от аранеспа
+ent-AtropineSlowdownStatusEffect = замедление от атропина
+ent-CaffeineRushStatusEffect = кофеиновый подъём
+ent-CaffeineSlowdownStatusEffect = кофеиновое замедление
+ent-EpinephrineStatusEffect = прилив эпинефрина
+ent-FentanylSlowdownStatusEffect = замедление от фентанила
+ent-MicroplasticsStatusEffect = накопление микропластика
+ent-OleoresinSlowdownStatusEffect = замедление от олеорезина
+ent-ProbitalSlowdownStatusEffect = замедление от пробитала
+ent-SarinSlowdownStatusEffect = замедление от зарина
+ent-TirimolSlowdownStatusEffect = замедление от тиримола
+ent-VisualTearsStatusEffect = слёзы

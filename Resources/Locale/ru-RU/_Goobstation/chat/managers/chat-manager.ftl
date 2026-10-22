@@ -38,6 +38,4 @@ chat-speech-verb-holier-than-thou-5 = возвещает
 chat-speech-verb-holier-than-thou-6 = декламирует
 chat-speech-verb-holier-than-thou-7 = объявляет
 chat-speech-verb-holier-than-thou-8 = вещает
-chat-speech-verb-name-station-radio = Станционное радио
-chat-speech-verb-station-radio-1 = транслирует
 chat-manager-entity-say-bolded-language-wrap-message = [BubbleHeader][bold][Name]{ $entityName }[/Name][/bold][/BubbleHeader] { $verb }, [font={ $fontType } size={ $fontSize }]"[BubbleContent][font="{ $boldFontType }" size={ $fontSize }][color={ $color }]{ $message }[/color][/font][/BubbleContent]"[/font]

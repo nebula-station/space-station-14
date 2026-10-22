@@ -1,0 +1,107 @@
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingUndershirtWarmBra
+  name: warm bra
+  description: Warm bra with fur lining.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/warm_bra.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingUndershirtCowSwimsuit
+  name: cow swimsuit
+  description: Sexy cow spot print swimsuit.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/CowSwimsuit.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingUndershirtNippleStickers
+  name: nipple stickers
+  description: Stickers for your most perverted pleasures.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/nipple_stickers.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingUndershirtHeartShapedNippleStickers
+  name: heart-shaped nipple stickers
+  description: Heart-shaped stickers for your most perverted pleasures.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/heart-shaped_nipple_stickers.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingBraBeer
+  name: beer bra
+  description: You definitely want it.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Undershirt/beer_undershirt.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingBraDriada
+  name: driada bra
+  description: Patroness of trees.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/driada.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingBraEroticPurple
+  name: purple erotic bra
+  description: A thin bra that barely covers the nipples.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/erotic_purple.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingBraMedusa
+  name: medusa bra
+  description: Jelly bra.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/medusa.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingBraLeafs
+  name: leafs bra
+  description: 100% natural.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/leafs.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingBraPinkFancy
+  name: fancy pink bra
+  description: Pink like Barbie.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/pink_fancy.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingBraRed
+  name: red bra
+  description: Red bra.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/red.rsi
+
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingBraBelts
+  name: belts
+  description: A thin black belts.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/undershirt/belts.rsi

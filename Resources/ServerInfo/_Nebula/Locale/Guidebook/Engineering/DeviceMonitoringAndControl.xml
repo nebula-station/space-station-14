@@ -1,0 +1,43 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+  # Мониторинг и управление устройствами
+  Учитывая охват всей станции сетью атмосферы, важно иметь способ мониторинга и управления устройствами из центрального пункта.
+
+  С помощью этих систем Атмосферные техники могут следить за атмосферой по всей станции и управлять ею.
+
+  <Box>
+    <GuideEntityEmbed Entity="AirAlarm" Caption=""/>
+    <GuideEntityEmbed Entity="AirSensor" Caption=""/>
+  </Box>
+  <Box>
+    ## Воздушные сигнализации
+  </Box>
+  <Box>
+    [color=#999999][italic]Мониторинг и управление атмосферными устройствами на большой территории[italic][/color]
+  </Box>
+
+  <Box>
+    <GuideEntityEmbed Entity="ComputerAlert" Caption=""/>
+  </Box>
+  <Box>
+    ## Консоль атмосферной сигнализации
+  </Box>
+  <Box>
+    [color=#999999][italic]Мониторинг всех воздушных сигнализаций на станции[italic][/color]
+  </Box>
+
+  <Box>
+    <GuideEntityEmbed Entity="ComputerAtmosMonitoring" Caption=""/>
+    <GuideEntityEmbed Entity="GasPipeSensor" Caption=""/>
+  </Box>
+  <Box>
+    ## Консоль мониторинга всей атмосферной сети
+  </Box>
+  <Box>
+    [color=#999999][italic]Мониторинг всей сети труб[italic][/color]
+  </Box>
+
+</Document>

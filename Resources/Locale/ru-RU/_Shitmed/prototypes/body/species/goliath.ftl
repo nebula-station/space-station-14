@@ -1,0 +1,1 @@
+ent-OrganGoliathTorso = торс

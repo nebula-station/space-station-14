@@ -1,0 +1,1 @@
+ent-EnchantMagicProtection = Магическая защита

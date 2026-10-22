@@ -1,0 +1,10 @@
+ent-CosmicPlatform = платформа
+    .desc = Приподнятая поверхность. Погодите, это же незаконно!
+ent-CosmicPlatformCorner = платформа
+    .desc = Приподнятая поверхность. Погодите, это же незаконно!
+ent-CosmicPlatformCornerSmall = платформа
+    .desc = Приподнятая поверхность. Погодите, это же незаконно!
+ent-CosmicPlatformStairLeft = платформа
+    .desc = Приподнятая поверхность. Погодите, это же незаконно!
+ent-CosmicPlatformStairRight = платформа
+    .desc = Приподнятая поверхность. Погодите, это же незаконно!

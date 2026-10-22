@@ -1416,3 +1416,17 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+
+# Nebula start
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: WashingMachineCircuitboard
+  name: washing machine board
+  components:
+  - type: MachineBoard
+    prototype: WashingMachine
+    stackRequirements:
+      Steel: 1
+      Manipulator: 1
+      Cable: 1
+# Nebula end

@@ -1,0 +1,9 @@
+ent-ClothingHeadHatHelmetMamluk = шлем мамлюка
+    .desc = Койф, остановивший тысячи стрел.
+ent-ClothingHeadHatHelmetVenerator = головной убор почитателя
+    .desc = Свет Христов, почему-то не испускающий света.
+ent-ClothingHeadHelmetCsij = капюшон биокостюма CSIJ
+    .desc = Костюм из извивающейся плоти, который... а, нет, это пена.
+ent-ClothingHeadHelmetRev = шлем
+    .desc = Этот боевой шлем часто носят революционеры. Он и прочный, и лёгкий.
+ent-ClothingHelmetRevFlame = шлем огнемётчика

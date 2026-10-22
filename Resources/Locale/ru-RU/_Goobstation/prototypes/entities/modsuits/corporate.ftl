@@ -1,0 +1,13 @@
+ent-ClothingModsuitBootsCorporate = ботинки корпоративного скафандра
+    .desc = Передовая пара магнитных ботинок для корпоративного скафандра.
+ent-ClothingModsuitChestplateCorporate = нагрудная пластина корпоративного скафандра
+    .desc = Передовой нагрудник, разработанный NanoTrasen для корпоративного скафандра. Оснащён сервоприводами для снижения нагрузки.
+ent-ClothingModsuitCorporate = контроллер корпоративного скафандра
+    .desc = Основной контроллер корпоративного скафандра.
+ent-ClothingModsuitGauntletsCorporate = перчатки корпоративного скафандра
+    .desc = Пара перчаток, изготовленных для корпоративного скафандра.
+ent-ClothingModsuitHelmetCorporate = шлем корпоративного скафандра
+    .desc = Передовой шлем, разработанный NanoTrasen для корпоративного скафандра. Имеет встроенный визор.
+ent-SuitStorageCorporate = { ent-SuitStorageBase }
+    .suffix = Корпоративный MOD
+    .desc = { ent-SuitStorageBase.desc }

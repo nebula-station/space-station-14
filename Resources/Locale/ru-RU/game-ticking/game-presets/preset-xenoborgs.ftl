@@ -2,11 +2,6 @@ xenoborgs-title = Xenoborgs
 xenoborgs-description = A Xenoborg Mothership was detected near the station. Stop them from turning every sentient being into a xenoborg.
 
 ## Nebula
-mothership-role-greeting =
-    Вы [color=deepskyblue]материнское ядро[/color]. Направляйте ксеноборгов: пусть доставляют материалы и разумные мозги, чтобы вы наращивали армию ксеноборгов и превращали всю углеродную жизнь в кремний.
-
-xenoborgs-role-greeting =
-    Вы [color=deepskyblue]ксеноборг[/color]. Защищайте и помогайте материнскому ядру создавать новых ксеноборгов и в конечном счёте превратите всю углеродную жизнь в кремний.
 
 xenoborg-shuttle-call = We have detected that Xenoborgs have overtaken the station. Dispatching an emergency shuttle to collect remaining personnel.
 
@@ -26,3 +21,6 @@ xenoborg-max-number = The highest number of xenoborgs was: {$count}
 
 xenoborgs-list-start = The starting xenoborg team were:
 xenoborgs-list = - [color=White]{$name}[/color] ([color=gray]{$user}[/color])
+
+mothership-welcome = Вы — ядро материнского корабля. Направляйте ксеноборгов, чтобы они приносили вам материалы и мозги с сознанием для создания армии ксеноборгов и превратить все углеродные формы жизни в синтетиков.
+xenoborgs-welcome = Вы — ксеноборг. Защищайте ядро материнского корабля и помогайте ему создавать ещё больше ксеноборгов, пока вы не превратите все углеродные формы жизни в синтетиков.

@@ -1,0 +1,51 @@
+# region Classic
+
+- type: infinityDormRoom
+  id: Nature
+  category: General
+  gridPath: /Maps/_Arcane/InfinityDorms/nature.yml
+
+- type: infinityDormRoom
+  id: Retro
+  category: General
+  gridPath: /Maps/_Arcane/InfinityDorms/retro.yml
+
+- type: infinityDormRoom
+  id: Hotel
+  category: General
+  gridPath: /Maps/_Arcane/InfinityDorms/hotel.yml
+
+- type: infinityDormRoom
+  id: Bath
+  category: General
+  gridPath: /Maps/_Arcane/InfinityDorms/bath.yml
+
+# endregion
+
+# region Unusual
+
+- type: infinityDormRoom
+  id: Aurora
+  category: Unusual
+  gridPath: /Maps/_Arcane/InfinityDorms/aurora.yml
+
+- type: infinityDormRoom
+  id: Techno
+  category: Unusual
+  gridPath: /Maps/_Arcane/InfinityDorms/techno.yml
+
+- type: infinityDormRoom
+  id: Beach
+  category: Unusual
+  gridPath: /Maps/_Arcane/InfinityDorms/beach.yml
+
+# endregion
+
+# region Exotic
+
+- type: infinityDormRoom
+  id: Cosmic
+  category: Exotic
+  gridPath: /Maps/_Arcane/InfinityDorms/cosmic.yml
+
+# endregion

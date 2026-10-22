@@ -6718,16 +6718,6 @@ entities:
           - -41,69
           - -40,69
         - node:
-            id: cyr_d
-            color: '#00000013'
-          decals:
-          - -40.981544,89.189835
-        - node:
-            id: cyr_eh
-            color: '#00000017'
-          decals:
-          - -41.37693,89.20982
-        - node:
             id: MiniTileDarkCornerNe
             color: '#D381C996'
           decals:

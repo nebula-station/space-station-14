@@ -32,7 +32,6 @@ flavor-tab-ooc-flavor = OOC-заметки
 flavor-tab-gyr = Предпочтения
 flavor-tab-nsfw = NSFW
 flavor-tab-nsfw-ooc-flavor = NSFW OOC
-flavor-tab-preview = Предпросмотр
 
 detail-examinable-window-title = Подробности
 detail-examinable-empty-flavor = Описание отсутствует.

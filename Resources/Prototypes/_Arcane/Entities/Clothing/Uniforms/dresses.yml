@@ -1,0 +1,223 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformDressWithFlowers
+  name: dress with flowers
+  description: Black dress with bright flowers. Something is clearly missing.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/dresseswithflowers.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/dresseswithflowers.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtMaidBlue
+  name: maid dress blue
+  description: A neat blue maid dress with a white apron.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/maid_blue.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/maid_blue.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtMaidLong
+  name: maid dress long
+  description: A long elegant maid dress.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/maid_long.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/maid_long.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtMaidPink
+  name: maid dress pink
+  description: A cute pink maid dress with a white apron.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/maid_pink.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/maid_pink.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtSexyDress
+  name: sexy dress
+  description: A bold and revealing dress.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/sexy_dress.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/sexy_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtSuccubusBlack
+  name: succubus dress black
+  description: A dark dress fit for a seductive demon.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/succubus_black.rsi
+    layers:
+    - state: icon
+    - state: icon_wings
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/succubus_black.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING_wings
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtSuccubusWhite
+  name: succubus dress white
+  description: A pristine white dress fit for a seductive demon.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/succubus_white.rsi
+    layers:
+    - state: icon
+    - state: icon_wings
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/succubus_white.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING_wings
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtTangoDress
+  name: tango dress
+  description: A passionate red dress perfect for dancing the tango.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/tango_dress.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/tango_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtXenoDress
+  name: xeno dress
+  description: A dress with a distinctly alien aesthetic.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/xeno_dress.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/xeno_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtWeddingBeerDress
+  name: beer wedding dress
+  description: A wedding is better with beer!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/beer_wedding.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/beer_wedding.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtFlowerPrincessDress
+  name: flower princess dress
+  description: Gentle and elegant.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/flower_princess.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/flower_princess.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtFlyAgaricDress
+  name: fly agaric dress
+  description: A dress resembling the stem of a poisonous mushroom.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/fly_agaric.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/fly_agaric.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtGentleYellowDress
+  name: gentle yellow dress
+  description: Gentle yellow dress.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/gentle_yellow.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/gentle_yellow.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtLeopardDress
+  name: leopard dress
+  description: Cocky. Boldly. You are a queen!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/leopard.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/leopard.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtPurpleEveningDress
+  name: purple evening dress
+  description: Seductive purple dress.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/purple_evening.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/purple_evening.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtSpiderDress
+  name: spider dress
+  description: A cute dress with a white web on skirt.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/spider.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/spider.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtWeddingDress
+  name: wedding dress
+  description: Bitter!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/wedding.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/wedding.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtWeddingSleevesDress
+  name: wedding dress with sleeves
+  description: Bitter!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Dresses/wedding_sleeves.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Dresses/wedding_sleeves.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtMaidStrict
+  name: strict maid dress
+  description: A strict yet elegant maid dress.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/maid_strict.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/maid_strict.rsi

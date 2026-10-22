@@ -1,0 +1,9 @@
+ent-GhostRoleSpawnerInsurgent = спавнер гост-роли повстанца
+ent-GhostRoleSpawnerMorph = спавнер гост-роли морфа
+ent-GhostRoleSpawnerShadowling = спавнер гост-роли тенелинга
+ent-SpawnPointGhostRoleFugitive = появление беглеца
+ent-SpawnPointGhostRoleHunterBounty = появление охотника за беглецами (наёмник)
+ent-SpawnPointGhostRoleHunterRussian = появление охотника за беглецами (русский)
+ent-SpawnPointGhostRoleHunterSpacepol = появление охотника за беглецами (SpacePol)
+ent-SpawnPointGhostRoleHunterSyndicate = появление охотника за беглецами (Синдикат)
+ent-SpawnPointGhostWraithRoundstart = спавнер роли призрак

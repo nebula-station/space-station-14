@@ -19,3 +19,6 @@ entity-effect-popup-vampire-light-2 = Вам стоит держаться по�
 entity-effect-popup-vampire-light-3 = Вы выглядите бледным!
 
 entity-effect-popup-strawberry-ice-addiction = Вы чувствуете потребность во вкусной розовой газировке
+
+entity-effect-popup-blood-cult-summon-dagger = Рука { $entity } на мгновение вспыхивает красным.
+entity-effect-popup-pressurized-slime-death = Блоб лопается, забрызгивая всё вокруг жидкостью!

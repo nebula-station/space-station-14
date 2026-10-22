@@ -1,0 +1,18 @@
+# Ported from Radiant Sector: https://github.com/TetrisZz/frontier-Radiant
+
+- type: entity
+  parent: BaseItem
+  id: Leash
+  name: leash
+  description: A sturdy leash. Hold it in your hand to attach or detach it.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Entities/Objects/Misc/leash.rsi
+    state: leash
+  - type: Item
+    sprite: _Nebula/Entities/Objects/Misc/leash.rsi
+    size: Small
+  - type: Leash
+    maxForce: 9000
+    frequency: 18
+    dampingRatio: 1.8

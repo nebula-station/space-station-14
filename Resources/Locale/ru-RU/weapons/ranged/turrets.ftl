@@ -10,5 +10,3 @@ deployable-turret-component-cannot-access-wires = Вы не можете пол�
 # Turret notification for station AI
 station-ai-turret-component-name = { $name } ({ $address })
 station-ai-turret-component-is-attacking-warning = { CAPITALIZE($source) } вступила в бой с враждебной целью.
-# Turret notification for station AI
-station-ai-turret-is-attacking-warning = { CAPITALIZE($source) } вступила в бой с враждебной целью.

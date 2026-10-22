@@ -1,0 +1,29 @@
+ent-LMGLaser = { ent-BasicHitscan }
+    .desc = { ent-BasicHitscan.desc }
+ent-MediumOverchargedLaser = { ent-BasicHitscan }
+    .desc = { ent-BasicHitscan.desc }
+ent-MediumRedLaser = { ent-BasicHitscan }
+    .desc = { ent-BasicHitscan.desc }
+ent-SMGLaser = { ent-BasicHitscan }
+    .desc = { ent-BasicHitscan.desc }
+ent-SMGLaserIon = { ent-BasicHitscan }
+    .desc = { ent-BasicHitscan.desc }
+ent-SMGLaserXray = { ent-BasicHitscan }
+    .desc = { ent-BasicHitscan.desc }
+
+ent-MediumPulseLaser = средний импульсный лазерный заряд
+    .desc = { ent-BaseBullet.desc }
+ent-MediumXrayLaser = средний рентгеновский лазерный заряд
+    .desc = { ent-BaseBullet.desc }
+ent-SmallOverchargedLaser = малый перезаряженный лазерный заряд
+    .desc = { ent-BaseBullet.desc }
+ent-SmallPulseLaser = малый импульсный лазерный заряд
+    .desc = { ent-BaseBullet.desc }
+ent-SmallRedLaser = малый красный лазерный заряд
+    .desc = { ent-BaseBullet.desc }
+ent-SmallXrayLaser = малый рентгеновский лазерный заряд
+    .desc = { ent-BaseBullet.desc }
+
+ent-MediumIonLaser = средний ионный лазер
+ent-RedHeavyLaserShock = красный тяжёлый шоковый лазер
+ent-SmallIonLaser = малый ионный лазер

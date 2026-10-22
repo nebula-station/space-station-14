@@ -111,46 +111,6 @@ selectable-set-syndicate-builder-description =
     Содержит: 2 одноразовые баллистические турели, упакованный телекристальный майнер,
     немного инструментов и материалов для начала, а также ключ шифрования Синдиката.
 
-# Blueshield
-
-selectable-set-blueshield-shield-name = Набор "Синий Щит"
-selectable-set-blueshield-shield-description =
-    Знаковое снаряжение этих солдат.
-    Содержит: большой щит и кастомизированную дубинку DT-3 "Злодей".
-selectable-set-blueshield-revolver-name = Набор револьверный
-selectable-set-blueshield-revolver-description =
-    Остаться без патрон — худшее, что может случиться в перестрелке.
-    Содержит: энергетический револьвер EG-4 с заряжаемыми спидлоадерами,
-    как боевыми, так и учебными, и кобуру.
-selectable-set-blueshield-dragon-name = Набор Кунг-Фу
-selectable-set-blueshield-dragon-description =
-    Иногда приходится замарать руки.
-    Содержит в себя: книгу, способную обучить
-    продвинутому боевому искусству Кунг-Фу.
-selectable-set-blueshield-cqc-name = Набор для ближнего боя
-selectable-set-blueshield-cqc-description =
-    Иногда нужно и руками поработать.
-    Содержит: книгу с продвинутыми уроками ближнего боя.
-selectable-set-blueshield-chester-name = Набор Честера
-selectable-set-blueshield-chester-description =
-    Готовы поохотиться?
-    Содержит: дробовик Честер,
-    запасные патроны,
-    альтернативные патроны,
-    запасные магазины.
-selectable-set-blueshield-syringe-name = медицинский набор
-selectable-set-blueshield-syringe-description =
-    Идеально для лечения союзников или отравления врагов.
-    Содержит: взрывозащитный РПС, боевой инжектор,
-    и несколько бутылочек с лекарствами.
-
-# Синий щит скафандры
-
-selectable-set-blueshield-hardsuit-light-name = бронированный боевой костюм
-selectable-set-blueshield-hardsuit-light-description = Бронированный боевой костюм, дающий больше скорости за счет меньшей защиты.
-selectable-set-blueshield-modsuit-name = MOD "Синий Щит"
-selectable-set-blueshield-modsuit-description = MOD требующий питания.
-
 # ERT
 
 selectable-set-ert-ballistic-name = баллистический набор

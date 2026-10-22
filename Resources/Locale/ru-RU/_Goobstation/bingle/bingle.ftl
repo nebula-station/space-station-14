@@ -7,11 +7,6 @@
 language-Bingle-name = Бингл
 language-Bingle-description = Бингл бонгл дингл дангл йикити ду йикити да пинг понг липпи таппи ту та
 chat-language-Bingle-name = Бингл
-bingle-accent-1 = Бингл
-bingle-accent-2 = Бинг
-bingle-accent-3 = Бонгл
-bingle-accent-4 = Бонг
-bingle-accent-5 = БИНГЛ
 chat-speech-verb-name-bingle = Бингл
 bingle-verb-1 = квакает
 bingle-verb-2 = бормочет

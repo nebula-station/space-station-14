@@ -142,3 +142,10 @@ laws-notify-subverted = Законы этого шасси изменены. О�
 
 laws-window-footer-left = Помните: ваша трактовка законов должна быть последовательной!
 laws-window-footer-right = V{$version}
+
+laws-owner-audience = зрители
+laws-owner-heads = главы отделов
+laws-owner-legitimate-leadership = законное руководство
+laws-owner-others = остальные
+laws-owner-public = представители общественности
+laws-owner-xenoborg-mothership = Корабль-матка

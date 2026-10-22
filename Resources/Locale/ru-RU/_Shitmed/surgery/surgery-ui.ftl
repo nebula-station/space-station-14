@@ -7,7 +7,6 @@
 surgery-verb-text = Начать операцию
 surgery-verb-message = Начата операция над этим существом.
 surgery-ui-window-title = Операция
-surgery-ui-window-require = Требуется
 surgery-ui-window-parts = < Части
 surgery-ui-window-surgeries = < Операции
 surgery-ui-window-steps = < Этапы

@@ -1,0 +1,1 @@
+ent-CurseBurning = Проклятие пламени

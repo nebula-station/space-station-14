@@ -1,0 +1,16 @@
+ent-ClothingUniformJumpsuitDisgusting = отвратительная одежда
+    .desc = Пахнет почти так же плохо, как тот, кто это носит.
+ent-ClothingUniformJumpsuitMilitaryTurtleneckRev = военный комбинезон
+    .desc = Прочный защитный комбинезон.
+ent-ClothingUniformJumpsuitOliveDrabs = оливковая форма
+    .desc = Стандартная военная форма простой оливковой расцветки. Плохой индекс маскировки.
+ent-ClothingUniformJumpsuitRancher = комбинезон фермера
+    .desc = Стандартная форма любого фермера, достойного своих кур.
+ent-ClothingUniformJumpsuitTigerStripes = тигровые полосы
+    .desc = Военная форма для специальных тайных операций. Даёт хороший индекс маскировки.
+ent-ClothingUniformJumpsuitWaiter = наряд официанта
+    .desc = Обычное дело в сфере общепита.
+ent-ClothingUniformSergeantSkirt = сержантская юбка-комбинезон
+    .desc = Форма с юбкой высококвалифицированного сотрудника службы безопасности. Они — путеводный свет безопасности этой станции.
+ent-ClothingUniformSergeantUniform = сержантская форма
+    .desc = Форма высококвалифицированного сотрудника службы безопасности. Они — путеводный свет безопасности этой станции.

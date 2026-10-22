@@ -215,13 +215,13 @@ public sealed partial class AnalysisConsoleMenu : FancyWindow
         {
             var triggerStr = new StringBuilder();
             triggerStr.Append("- ");
-            triggerStr.Append(Loc.GetString(node.Value.Comp.TriggerTip!));
+            triggerStr.Append(node.Value.Comp.TriggerTip!.Value.Id); // Nebula edit
 
             foreach (var predecessor in predecessorNodes)
             {
                 triggerStr.AppendLine();
                 triggerStr.Append("- ");
-                triggerStr.Append(Loc.GetString(predecessor.Comp.TriggerTip!));
+                triggerStr.Append(predecessor.Comp.TriggerTip!.Value.Id); // Nebula edit
             }
             TriggerValueLabel.SetMarkup(Loc.GetString("analysis-console-info-triggered-value", ("triggers", triggerStr.ToString())));
         }

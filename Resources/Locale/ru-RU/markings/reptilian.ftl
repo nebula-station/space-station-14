@@ -79,3 +79,8 @@ marking-LizardChestFin-body_fin = Унатх, плавник
 marking-LizardChestFin = Унатх, плавник
 marking-LizardSnoutSplotch-snout_splotch_primary = Морда
 marking-LizardSnoutSplotch-snout_splotch_secondary = Нос
+
+marking-LizardSnoutVisageRound = Унатх, маска (Круглая)
+marking-LizardSnoutVisageRound-visage_round = Унатх, маска (Круглая)
+marking-LizardSnoutVisageSharp = Унатх, маска (Заострённая)
+marking-LizardSnoutVisageSharp-visage_sharp = Унатх, маска (Заострённая)

@@ -19,7 +19,6 @@ cargo-console-menu-categories-label = Категории:{ " " }
 cargo-console-menu-search-bar-placeholder = Поиск
 cargo-console-menu-requests-label = Запросы
 cargo-console-menu-orders-label = Заказы
-cargo-console-menu-order-reason-description = Причина: { $reason }
 cargo-console-menu-order-row-title = { $productName } (x{ $orderAmount } за { $orderPrice }$)
 cargo-console-menu-populate-categories-all-text = Все
 cargo-console-menu-order-row-product-description = Причина: { $orderReason }
@@ -29,7 +28,6 @@ cargo-console-menu-order-row-alerts-reason-absent = Причина не указ
 cargo-console-menu-order-row-alerts-requester-unknown = Неизвестно
 cargo-console-menu-populate-orders-cargo-order-row-product-name-text = Заказ от { $orderRequester } со счёта [color={ $accountColor }]{ $account }[/color]
 cargo-console-menu-tab-title-orders = Заказы
-cargo-console-menu-account-action-transfer-limit-amount = ${ $amount }
 cargo-console-menu-tab-title-funds = Переводы
 cargo-console-menu-account-action-transfer-limit = Лимит перевода:
 cargo-console-menu-account-action-transfer-limit-unlimited-notifier = [color=gold](Безлимитно)[/color]
@@ -101,3 +99,5 @@ cargo-acquisition-slip-body = [head=3]Детали актива[/head]
     { "[bold]Заказчик:[/bold]" } { $orderer }
     { "[bold]Место доставки:[/bold]" } { $destination }
     { "[bold]Примечание:[/bold]" } { $note }
+
+cargo-console-menu-order-capacity-number = {$count}/{$capacity}

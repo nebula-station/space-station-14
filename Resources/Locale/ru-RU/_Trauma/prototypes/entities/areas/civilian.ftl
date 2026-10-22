@@ -1,0 +1,14 @@
+ent-AreaBoxingRing = боксёрский ринг
+ent-AreaChapel = церковь
+ent-AreaChapelCremate = крематорий
+ent-AreaChapelOffice = офис церкви
+ent-AreaCourtRoom = зал суда
+ent-AreaDojo = додзё
+ent-AreaJanitor = уборщик
+ent-AreaLawOffice = юридическая контора
+ent-AreaLibrary = библиотека
+ent-AreaNewsroom = студия новостей
+ent-AreaStage = сцена
+ent-AreaTheatre = театр
+ent-AreaToolStorage = склад инструментов
+    .desc = Место рождения ассистентов.

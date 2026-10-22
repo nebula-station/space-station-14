@@ -151,8 +151,13 @@ public sealed partial class SlipperySystem : EntitySystem
         var hardStun = component.SlipData.SuperSlippery;
         // </Goob>
 
-        var ev = new SlipEvent(other);
-        RaiseLocalEvent(uid, ref ev);
+        // Funky start
+        var slipEv = new SlipEvent(other);
+        RaiseLocalEvent(uid, ref slipEv);
+
+        var slippedEv = new SlippedEvent(uid, component.SlipData.SuperSlippery);
+        RaiseLocalEvent(other, slippedEv);
+        // Funky end
 
         if (_physicsQuery.TryComp(other, out var physics) && !_slidingQuery.HasComp(other))
         {
@@ -206,6 +211,8 @@ public sealed class SlipAttemptEvent : EntityEventArgs, IInventoryRelayEvent
 
     public SlotFlags TargetSlots { get; } = SlotFlags.FEET;
 
+    public bool SuperSlippery; // Funky
+
     public SlipAttemptEvent(EntityUid? slipCausingEntity)
     {
         SlipCausingEntity = slipCausingEntity;
@@ -217,9 +224,22 @@ public sealed class SlipAttemptEvent : EntityEventArgs, IInventoryRelayEvent
 /// </summary>
 /// <param name="Cancelled">If the slip should be cancelled</param>
 [ByRefEvent]
-public record struct SlipCausingAttemptEvent (bool Cancelled);
+public record struct SlipCausingAttemptEvent(bool Cancelled);
 
 /// Raised on an entity that CAUSED some other entity to slip (e.g., the banana peel).
 /// <param name="Slipped">The entity being slipped</param>
 [ByRefEvent]
 public readonly record struct SlipEvent(EntityUid Slipped);
+
+// Funky start
+/// Raised on the entity that got slipped
+/// <param name="Slipper">The entity being slipped</param>
+/// <param name="SuperSlippery">Was whatever slipped us super slippery</param>
+public sealed class SlippedEvent(EntityUid slipper, bool superSlippery) : EntityEventArgs, IInventoryRelayEvent
+{
+    public SlotFlags TargetSlots { get; } = SlotFlags.WITHOUT_POCKET;
+
+    public EntityUid Slipper = slipper;
+    public bool SuperSlippery = superSlippery;
+}
+// Funky end

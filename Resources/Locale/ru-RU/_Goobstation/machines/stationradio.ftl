@@ -7,3 +7,5 @@ signal-port-description-radio-server = Вход радиосервера, сое
 vinyl-popout-no-station = Пластинка выскакивает! Вы находитесь не на станции.
 vinyl-popout-no-power = Пластинка выскакивает! Питание отсутствует.
 vinyl-popout-no-radio-connection = Пластинка выскакивает! Проигрыватель не подключен к радиосистеме.
+
+item-slot-name-vinyl = винил

@@ -79,13 +79,24 @@ public sealed partial class SpeciesPrototype : IPrototype
     public SpeciesNaming Naming { get; private set; } = SpeciesNaming.FirstLast;
 
     [DataField]
-    public List<Sex> Sexes { get; private set; } = new() { Sex.Male, Sex.Female };
+    public List<Sex> Sexes { get; private set; } = new() { Sex.Male, Sex.Female, Sex.Futanari }; // Nebula
 
     /// <summary>
     ///     Emote sounds prototype conversion id for every sex. This is ALWAYS in the order: Male; Female; Unsexed.
     /// </summary>
     [DataField]
     public ProtoId<EmoteSoundsPrototype>[] DefaultSoundsBySex = ["MaleHuman", "FemaleHuman", "MaleHuman"];
+
+    // Nebula start
+    public ProtoId<EmoteSoundsPrototype> GetDefaultSounds(Sex sex)
+    {
+        var index = (int) sex;
+        if (index >= DefaultSoundsBySex.Length)
+            index = sex == Sex.Futanari ? (int) Sex.Female : 0;
+
+        return DefaultSoundsBySex[Math.Min(index, DefaultSoundsBySex.Length - 1)];
+    }
+    // Nebula end
 
     /// <summary>
     ///     List of user selectable voices in the menu. This should at least have the same sound banks as the defaults.

@@ -25,3 +25,8 @@
 # ent-HeadHelmetHardsuitSyndieElite = syndicate elite hardsuit helmet
 #     .desc = This helmet is employed by members of Gorlex Entertainment who consider themselves the star of their productions, but didn't manage to get the leading role.
 # SIS-Empty_Entity_File End
+
+ent-HeadHelmetHardsuitSyndieCommander = кроваво-красный шлем скафандра командира
+    .desc = Шлем исполнителя главной роли любой постановки Горлекса. Это роскошное снаряжение специально бронировано и оснащено первоклассными камерами, транслирующими всё в галактическую сеть.
+ent-HeadHelmetHardsuitSyndieElite = шлем элитного скафандра Синдиката
+    .desc = Этот шлем носят члены Gorlex Entertainment, считающие себя звёздами своих постановок, но так и не получившие главную роль.

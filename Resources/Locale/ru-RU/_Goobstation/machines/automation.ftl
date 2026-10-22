@@ -61,8 +61,6 @@ signal-port-description-fax-copy = Сигнальный порт для копи
 
 signal-port-name-machine-start = Запуск
 signal-port-description-machine-start = Сигнальный порт для однократного запуска машины.
-signal-port-name-machine-autostart = Автозапуск
-signal-port-description-machine-autostart = Сигнальный порт для управления автоматическим запуском после завершения.
 signal-port-name-machine-started = Запущено
 signal-port-description-machine-started = Сигнальный порт, который активируется после запуска машины.
 signal-port-name-machine-completed = Завершено

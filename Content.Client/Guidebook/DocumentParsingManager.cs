@@ -56,14 +56,12 @@ public sealed partial class DocumentParsingManager
         if (!_prototype.Resolve(entryId, out var entry))
             return false;
 
-        using var file = _resourceManager.ContentFileReadText(entry.Text);
-        return TryAddMarkup(control, file.ReadToEnd());
+        return TryAddMarkup(control, ReadGuideText(entry.Text)); // Nebula edit
     }
 
     public bool TryAddMarkup(Control control, GuideEntry entry)
     {
-        using var file = _resourceManager.ContentFileReadText(entry.Text);
-        return TryAddMarkup(control, file.ReadToEnd());
+        return TryAddMarkup(control, ReadGuideText(entry.Text)); // Nebula edit
     }
 
     public bool TryAddMarkup(Control control, string text)

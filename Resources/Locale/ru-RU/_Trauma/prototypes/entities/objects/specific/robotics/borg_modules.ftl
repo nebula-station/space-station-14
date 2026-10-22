@@ -1,0 +1,17 @@
+ent-BorgModuleAdvancedOmniSurgery = модуль продвинутого хирургического омнитула
+    .desc = Техническая деталь, дающая боргам новые способности.
+ent-BorgModulePKAPlaceholder = предмет
+ent-BorgModuleStickyGrenadeLauncher = модуль липкого гранатомёта киборга
+    .desc = Техническая деталь, дающая боргам новые способности.
+ent-BorgModuleSyndicateDartgun = модуль дротикомёта киборга
+    .desc = Техническая деталь, дающая боргам новые способности.
+ent-BorgModuleSyndicateDoorControl = модуль управления дверьми киборга
+    .desc = Техническая деталь, дающая боргам новые способности.
+ent-BorgModuleSyndicateJammer = модуль глушилки киборга
+    .desc = Техническая деталь, дающая боргам новые способности.
+ent-BorgModuleSyndicateRescue = спасательный модуль киборга
+    .desc = Техническая деталь, дающая боргам новые способности.
+ent-BorgModuleSyndicateSurgery = хирургический модуль борга
+    .desc = Техническая деталь, дающая боргам новые способности.
+ent-BorgModuleSyndicateTopical = модуль наружных средств киборга
+    .desc = Техническая деталь, дающая боргам новые способности.

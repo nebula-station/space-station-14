@@ -403,3 +403,5 @@ ghost-role-information-wizard-desc = ТЫ ВОЛШЕБНИК! Покажите �
 
 ghost-role-information-emotional-support-scurret-name = Слизнекотик эмоциональной поддержки
 ghost-role-information-emotional-support-scurret-description = Поддерживайте экипаж, будьте милым, часто говорите «уа».
+
+ghost-role-information-sentient-sharkminnow-name = Разумный акулий малёк

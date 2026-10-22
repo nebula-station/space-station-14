@@ -113,7 +113,7 @@ public sealed partial class HumanoidCharacterProfileV1
         var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
 
         var speciesPrototye = prototypeManager.Index(species);
-        return speciesPrototye.DefaultSoundsBySex[(int) sex];
+        return speciesPrototye.GetDefaultSounds(sex); // Nebula edit
     }
 }
 

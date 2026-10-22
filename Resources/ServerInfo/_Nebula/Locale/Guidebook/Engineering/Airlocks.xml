@@ -1,0 +1,136 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<Document>
+  # Шлюзы
+  Шлюзы используются для контроля доступа в различные зоны станции.
+
+  <Box>
+    <GuideEntityEmbed Entity="Airlock" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockGlass" Caption=""/>
+  </Box>
+
+  Шлюзы можно открыть при помощи [color=yellow][bold][keybind="Use"][/bold][/color] с пустой рукой, [color=yellow][bold][keybind="ActivateItemInWorld"][/bold][/color], если руки заняты, или столкнувшись со шлюзом.
+
+  Шлюзы откроются только при наличии ID-карты с соответствующим уровнем доступа. 
+  Карта должна находиться в руке или в слоте ID.
+  При наличии нескольких ID шлюз проверяет их все при попытке открыть. 
+  Такой же принцип работает для ID в КПК.
+
+  Требуемый уровень доступа для открытия двери можно изменить при помощи Конфигуратора доступов или Мультитулом на панеле шлюза (требуется разборка).
+
+  <Box>
+    <GuideEntityEmbed Entity="AccessConfigurator" Caption=""/>
+    <GuideEntityEmbed Entity="Multitool" Caption=""/>
+    <GuideEntityEmbed Entity="DoorElectronics" Caption=""/>
+  </Box>
+
+  Шлюзы блокируют потоки газов, поэтому их можно использовать для изоляции зон при [textlink="разгерметизации" link="Spacing"] или [textlink="пожаре" link="Fires"]. 
+  Они также сохраняют газ на своей плитке, даже когда закрыты, поэтому будьте осторожны при открытии во время или после утечки газа.
+
+  ## Болтирование и аварийный доступ
+  Шлюзы можно болтировать, чтобы предотвратить открытие или ручной взлом. В этом случае на двери загораются красные огни.
+
+  Шлюзы можно установить в режим аварийного доступа. В этом режиме любой может открыть шлюз, независимо от уровня доступа. Огни двери при этом мигает жёлтым светом.
+
+  ## Дистанционное управление
+  Шлюзами можно управлять удалённо, либо через ИИ станции, либо при помощи пульта от шлюзов.
+  <Box>
+    <GuideEntityEmbed Entity="PlayerStationAiEmpty" Caption=""/>
+  </Box>
+  <Box>
+    [color=#999999][italic]ИИ станции, управляющий всеми шлюзами удалённо[italic][/color]
+  </Box>
+
+  <Box>
+    <GuideEntityEmbed Entity="DoorRemoteEngineering" Caption=""/>
+    <GuideEntityEmbed Entity="DoorRemoteCommand" Caption=""/>
+    <GuideEntityEmbed Entity="DoorRemoteMedical" Caption=""/>
+    <GuideEntityEmbed Entity="DoorRemoteService" Caption=""/>
+    <GuideEntityEmbed Entity="DoorRemoteSecurity" Caption=""/>
+    <GuideEntityEmbed Entity="DoorRemoteResearch" Caption=""/>
+  </Box>
+  <Box>
+    [color=#999999][italic]Ценные пульты управления шлюзами. С неограниченной мощностью...[italic][/color]
+  </Box>
+
+  Руководители отделов обычно получают пульты от своих отделов. Они могут открывать, закрывать, болтировать и устанавливать аварийный доступ с их помощью.
+
+  ## Связывание
+  Шлюзы можно связать с другими устройствами через систему [textlink="Link" link="Networking"]. 
+  Это позволяет организовать правильное соединение шлюзов станции с открытым космосом или связывать несколько шлюзов вместе.
+
+  ## Дизайн
+  Шлюзы могут иметь разные стили в зависимости от отделов станции. Дизайн обычно отражает требуемый уровень доступа.
+
+  <Box>
+    <GuideEntityEmbed Entity="Airlock" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockCargo" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockCommand" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockEngineering" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockMedical" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockScience" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockSecurity" Caption=""/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="AirlockGlass" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockCargoGlass" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockCommandGlass" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockEngineeringGlass" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockMedicalGlass" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockScienceGlass" Caption=""/>
+    <GuideEntityEmbed Entity="AirlockSecurityGlass" Caption=""/>
+  </Box>
+
+  Шлюзы можно перекрашивать при помощи краскопульта.
+  <Box>
+    <GuideEntityEmbed Entity="SprayPainter" Caption=""/>
+  </Box>
+
+  ## Проводка
+  Шлюзы имеют внутреннюю проводку под панелью, которую можно открыть отвёрткой. Каждый провод управляет определённой функцией шлюза. Пульс, разрезание или починка провода влияет на работу шлюза по-разному.
+
+  Индикаторы рядом с проводами показывают состояние:
+  - Постоянный свет: система работает нормально.
+  - Мигающий свет: система неисправна или работает некорректно.
+  - Отсутствие света: система не запитана.
+
+  Ниже список проводов и их функций:
+
+  [color=#a4885c]Провод болта (БОЛТ)[/color]
+  - [color=yellow]Пульс[/color]: Болтирует или разболтирует шлюз.
+  - [color=red]Разрез[/color]: Болтирует шлюз.
+  - [color=green]Починка[/color]: Ничего не делает.
+
+  [color=#a4885c]Провод питания (ПИТН)[/color]
+  - [color=yellow]Пульс[/color]: Короткое отключение питания шлюза.
+  - [color=red]Разрез[/color]: Отключение питания или короткое замыкание, удар током при отсутствии изоляции.
+  - [color=green]Починка[/color]: Восстанавливает питание или останавливает короткое замыкание.
+
+  [color=#a4885c]Провод логов (ЛОГ)[/color]
+  - [color=yellow]Пульс[/color]: Временно отключает логирование шлюза.
+  - [color=red]Разрез[/color]: Отключает логирование.
+  - [color=green]Починка[/color]: Включает логирование.
+
+  [color=#a4885c]Индикатор света (СВЕТ)[/color]
+  - [color=yellow]Пульс[/color]: Временно отключает или включает шлюз.
+  - [color=red]Разрез[/color]: Блокирует индикатор света, сообщающий о закрытии шлюза.
+  - [color=green]Починка[/color]: Включает систему.
+
+  [color=#a4885c]Индикатор таймера (ТЙМР)[/color]
+  - [color=yellow]Пульс[/color]: Временно уменьшает таймер шлюза.
+  - [color=red]Разрез[/color]: Отключает таймер, шлюз закрывается сразу при безопасных условиях.
+  - [color=green]Починка[/color]: Включает таймер.
+
+  [color=#a4885c]Индикатор безопасности (БЕЗП)[/color]
+  - [color=yellow]Пульс[/color]: Временно отключает систему безопасности.
+  - [color=red]Разрез[/color]: Отключает систему безопасности, шлюз закроется даже при препятствии.
+  - [color=green]Починка[/color]: Включает систему безопасности.
+
+  [color=#a4885c]Индикатор доступа ИИ (ИИС)[/color]
+  - [color=yellow]Пульс[/color]: Ничего не делает.
+  - [color=red]Разрез[/color]: Отключает доступ ИИ, ИИ не может управлять шлюзом.
+  - [color=green]Починка[/color]: Включает доступ ИИ.
+
+</Document>

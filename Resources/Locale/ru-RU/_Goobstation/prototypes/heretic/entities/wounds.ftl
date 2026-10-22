@@ -1,0 +1,1 @@
+ent-WeepingAvulsion = мокнущий отрыв

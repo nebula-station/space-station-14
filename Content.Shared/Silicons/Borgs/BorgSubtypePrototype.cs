@@ -1,3 +1,5 @@
+using System.Numerics;
+using Content.Shared._Nebula.Silicons.SwitchableState;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -29,4 +31,15 @@ public sealed partial class BorgSubtypePrototype : IPrototype
     /// </summary>
     [DataField]
     public required ProtoId<BorgTypePrototype> ParentBorgType = "generic";
+
+    // Nebula start
+    [DataField]
+    public Dictionary<BorgStateType, Vector2> StatesWhiteList = [];
+
+    [DataField]
+    public bool? HaveMotionAnimation = null;
+
+    [DataField]
+    public TimeSpan DoAfterDuration = TimeSpan.FromSeconds(2);
+    // Nebula end
 }

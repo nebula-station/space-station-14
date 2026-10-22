@@ -15,7 +15,6 @@ construction-graph-tag-blue = самодельный щит
 construction-graph-tag-budget-insuls = бюджетные изолированные перчатки
 construction-graph-tag-nun-hood = капюшон монахини
 construction-graph-tag-toolbox = ящик инструментов
-construction-graph-tag-plushie-carp = плюшевый карп
 construction-graph-tag-contraband-detector-circuitboard = детектор контрабанды (машинная плата)
 construction-graph-tag-clarke-central-control-module = модуль управления Кларк (центральный)
 construction-graph-tag-clarke-peripherals-control-module = модуль управления Кларк (периферия)

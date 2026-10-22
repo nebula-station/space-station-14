@@ -11,3 +11,6 @@ roles-antag-heretic-description = Найдите источники влияни
 roles-antag-hereticmidround-name = Еретик
 roles-antag-ghoul-name = Гуль
 roles-antag-ghoul-description = Помогите своему призывателю вознестись.
+
+roles-antag-arena-participant-description = Вы заперты на арене. Единственный выход — убить кого-то другого. Убейте своего пленителя или предайте друзей — выбор за вами.
+roles-antag-arena-participant-name = Участник арены

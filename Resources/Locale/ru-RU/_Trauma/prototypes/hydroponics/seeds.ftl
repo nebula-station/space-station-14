@@ -1,0 +1,13 @@
+ent-BalloonWatermelonPlants = растение арбузного шарика
+ent-CherryBombPlants = дерево вишнёвых бомб
+ent-ClearCornPlants = початок прозрачной кукурузы
+ent-CocaPlants = куст коки
+ent-CoconutPlants = кокосовая пальма
+ent-DeliciousApplePlants = дерево аппетитных яблок
+    .desc = Аппетитно выглядят яблоки, а не дерево.
+ent-LemonadePlants = лимонадное дерево
+ent-MagicMushroomsPlants = волшебные грибы
+ent-MethApplePlants = мет-яблоня
+ent-PeanutPlants = арахисовое растение
+ent-SteelWheatPlants = стебель стальной пшеницы
+ent-SynthMeatPlants = растение синтемяса

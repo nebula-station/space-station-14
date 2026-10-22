@@ -1,0 +1,57 @@
+<Document>
+# Рыбалка
+Рыбалка — способ добывать возобновляемые ресурсы и немало еды! А ещё через неё можно достать предметы, которые больше нигде не найти...
+
+
+  <Box>
+    <GuideEntityEmbed Entity="FishBass" Caption="НАСТОЯЩАЯ РЫБА"/>
+    <GuideEntityEmbed Entity="FishTropical" Caption="НАСТОЯЩАЯ РЫБА"/>
+    <GuideEntityEmbed Entity="FishFatFuckingCunt" Caption="ТУПАЯ"/>
+  </Box>
+
+# С чего начать
+Сначала раздобудьте удочку. Её можно скрафтить или заказать в карго. Удочки не одинаковы.
+
+  <Box>
+    <GuideEntityEmbed Entity="FishingRodMakeshift" Caption="Самодельная удочка"/>
+    <GuideEntityEmbed Entity="FishingRod" Caption="Заказная удочка"/>
+    <GuideEntityEmbed Entity="FishingRodGolden" Caption="Секретная удочка..."/>
+  </Box>
+
+Затем найдите место для рыбалки. Сейчас рыбачить можно в следующих местах:
+
+  <Box>
+    <GuideEntityEmbed Entity="WaterFishingPool" Caption="Заказывается в карго"/>
+    <GuideEntityEmbed Entity="LavaFishingPool" Caption="Заказывается в карго"/>
+    <GuideEntityEmbed Entity="PlasmaFishingPool" Caption="Заказывается в карго"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="FloorWaterEntity" Caption="Встречается в природе"/>
+    <GuideEntityEmbed Entity="FloorLavaEntity" Caption="Встречается в природе"/>
+    <GuideEntityEmbed Entity="FloorLiquidPlasmaEntity" Caption="Встречается в природе"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ToiletDirtyWater" Caption="Фу!"/>
+  </Box>
+
+# Мини-игра
+
+Когда рыба клюнет, жмите кнопку «Z», чтобы её вытащить! Вот и всё.
+
+  <Box>
+    <GuideEntityEmbed Entity="BloodWritingZ" Caption="Так выглядит буква Z."/>
+  </Box>
+
+# Добыча
+
+У каждого места своя добыча. В основном это рыба, но иногда попадаются секретные предметы и прочие полезности. Обязательно разделывайте редкую рыбу, чтобы достать из неё особые предметы!
+
+  <Box>
+    <GuideEntityEmbed Entity="Wonderprod" Caption=" "/>
+    <GuideEntityEmbed Entity="ClothingHeadHelmetAbductor" Caption=" "/>
+    <GuideEntityEmbed Entity="FishAbductor" Caption="В редкой рыбе вас ждёт немало сокровищ..."/>
+    <GuideEntityEmbed Entity="ClothingOuterCoatAbductor" Caption=" "/>
+    <GuideEntityEmbed Entity="WeaponAlien" Caption=" "/>
+  </Box>
+
+</Document>

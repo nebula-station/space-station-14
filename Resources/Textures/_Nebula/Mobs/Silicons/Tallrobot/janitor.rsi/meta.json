@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "TheOOZ (https://github.com/theOOZ), AKA ghostsheep (https://twitter.com/_ghostsheep)",
+    "size": {
+        "x": 32,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "janitor",
+            "directions": 4
+        },
+        {
+            "name": "janitor_rest",
+            "directions": 4
+        },
+        {
+            "name": "janitor_sit",
+            "directions": 1
+        },
+        {
+            "name": "janitor_wreck",
+            "directions": 1
+        },
+        {
+            "name": "janitor_e",
+            "directions": 4
+        },
+        {
+            "name": "janitor_l",
+            "directions": 4
+        },
+        {
+            "name": "janitor_e_r",
+            "directions": 4
+        }
+    ]
+}
