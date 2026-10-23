@@ -3,7 +3,6 @@
 - type: marking
   id: TattooNanotrasenChest
   bodyPart: Chest
-  groupWhitelist: [Human, Slime]
   coloring:
     default:
       type: !type:TattooColoring
@@ -15,7 +14,6 @@
 - type: marking
   id: BuffChest
   bodyPart: Chest
-  groupWhitelist: [Human]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/scars.rsi
     state: buff
@@ -23,7 +21,6 @@
 - type: marking
   id: TattooTribal1
   bodyPart: Chest
-  groupWhitelist: [Human, Slime, Reptilian]
   coloring:
     default:
       type: !type:TattooColoring
@@ -35,7 +32,6 @@
 - type: marking
   id: TattooLoops
   bodyPart: Chest
-  groupWhitelist: [Human, Slime, Reptilian]
   coloring:
     default:
       type: !type:TattooColoring

@@ -4,7 +4,6 @@
 ## RobustToolbox/Robust.Shared/Utility/SpriteSpecifier.cs
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenStatic
   bodyPart: Face
   sprites:
@@ -13,7 +12,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenBlue
   bodyPart: Face
   sprites:
@@ -22,7 +20,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenBreakout
   bodyPart: Face
   sprites:
@@ -31,7 +28,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenEight
   bodyPart: Face
   sprites:
@@ -40,7 +36,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenGoggles
   bodyPart: Face
   sprites:
@@ -49,7 +44,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenExclaim
   bodyPart: Face
   sprites:
@@ -58,7 +52,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenHeart
   bodyPart: Face
   sprites:
@@ -67,7 +60,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenMonoeye
   bodyPart: Face
   sprites:
@@ -76,7 +68,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenNature
   bodyPart: Face
   sprites:
@@ -85,7 +76,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenOrange
   bodyPart: Face
   sprites:
@@ -94,7 +84,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenPink
   bodyPart: Face
   sprites:
@@ -103,7 +92,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenQuestion
   bodyPart: Face
   sprites:
@@ -112,7 +100,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenShower
   bodyPart: Face
   sprites:
@@ -121,7 +108,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenYellow
   bodyPart: Face
   sprites:
@@ -130,7 +116,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenScroll
   bodyPart: Face
   sprites:
@@ -139,7 +124,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenConsole
   bodyPart: Face
   sprites:
@@ -148,7 +132,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenRgb
   bodyPart: Face
   sprites:
@@ -157,7 +140,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenGlider
   bodyPart: Face
   sprites:
@@ -166,7 +148,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenRainbowhoriz
   bodyPart: Face
   sprites:
@@ -175,7 +156,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenBsod
   bodyPart: Face
   sprites:
@@ -184,7 +164,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenRedtext
   bodyPart: Face
   sprites:
@@ -193,7 +172,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenSinewave
   bodyPart: Face
   sprites:
@@ -202,7 +180,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenSquarewave
   bodyPart: Face
   sprites:
@@ -211,7 +188,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenEcgwave
   bodyPart: Face
   sprites:
@@ -220,7 +196,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenEyes
   bodyPart: Face
   sprites:
@@ -229,7 +204,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenEyestall
   bodyPart: Face
   sprites:
@@ -238,7 +212,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenEyesangry
   bodyPart: Face
   sprites:
@@ -247,7 +220,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenLoading
   bodyPart: Face
   sprites:
@@ -256,7 +228,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenWindowsxp
   bodyPart: Face
   sprites:
@@ -265,7 +236,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenTetris
   bodyPart: Face
   sprites:
@@ -274,7 +244,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenTv
   bodyPart: Face
   sprites:
@@ -283,7 +252,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenTextdrop
   bodyPart: Face
   sprites:
@@ -292,7 +260,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenStars
   bodyPart: Face
   sprites:
@@ -301,7 +268,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenRainbowdiag
   bodyPart: Face
   sprites:
@@ -310,7 +276,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenBlank
   bodyPart: Face
   sprites:
@@ -319,7 +284,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenSmile
   bodyPart: Face
   sprites:
@@ -327,7 +291,6 @@
       state: ipc_screen_smile
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenFrown
   bodyPart: Face
   sprites:
@@ -336,7 +299,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenRing
   bodyPart: Face
   sprites:
@@ -345,7 +307,6 @@
 
 
 - type: marking
-  groupWhitelist: [ IPC ]
   id: ScreenL
   bodyPart: Face
   sprites:

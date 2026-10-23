@@ -1,7 +1,6 @@
 - type: marking
   id: CatEars
   bodyPart: Special
-  groupWhitelist: [] # Trauma - humans are human
   coloring:
     default:
       type:
@@ -23,7 +22,6 @@
 - type: marking
   id: CatTail
   bodyPart: Tail
-  groupWhitelist: [] # Trauma - humans are human
   coloring:
     default:
       type:

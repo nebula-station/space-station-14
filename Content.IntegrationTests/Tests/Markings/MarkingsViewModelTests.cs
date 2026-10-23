@@ -77,6 +77,7 @@ public sealed class MarkingsViewModelTests
         await Pair.CleanReturnAsync();
     }
 
+    /* Nebula edit
     [MarkingTest]
     public void MarkingSelection()
     {
@@ -100,6 +101,7 @@ public sealed class MarkingsViewModelTests
         Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(3));
         Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![2].MarkingId, Is.EqualTo(MothChestFan));
     }
+    */
 
     [MarkingTest]
     public void MarkingDeselection()

@@ -7,54 +7,89 @@
   id: IPC
   limits:
     enum.HumanoidVisualLayers.Head:
-      limit: 1
+      limit: 6
       required: true
       default: [ MobIPCHeadDefault ]
     enum.HumanoidVisualLayers.Hair:
-      limit: 0
+      limit: 1
       required: false
     enum.HumanoidVisualLayers.Face:
-      limit: 1
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.Chest:
-      limit: 1
+      limit: 6
       required: true
       default: [ MobIPCChestDefault ]
     enum.HumanoidVisualLayers.HeadSide:
-      limit: 1
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.RLeg:
-      limit: 1
+      limit: 6
       required: false
       default: [ MobIPCRLegDefault ]
     enum.HumanoidVisualLayers.RFoot:
-      limit: 1
+      limit: 6
       required: false
       default: [ MobIPCRFootDefault ]
     enum.HumanoidVisualLayers.LLeg:
-      limit: 1
+      limit: 6
       required: false
       default: [ MobIPCLLegDefault ]
     enum.HumanoidVisualLayers.LFoot:
-      limit: 1
+      limit: 6
       required: false
       default: [ MobIPCLFootDefault ]
     enum.HumanoidVisualLayers.RArm:
-      limit: 1
+      limit: 6
       required: false
       default: [ MobIPCRArmDefault ]
     enum.HumanoidVisualLayers.RHand:
-      limit: 1
+      limit: 6
       required: false
       default: [ MobIPCRHandDefault ]
     enum.HumanoidVisualLayers.LArm:
-      limit: 1
+      limit: 6
       required: false
       default: [ MobIPCLArmDefault ]
     enum.HumanoidVisualLayers.LHand:
-      limit: 1
+      limit: 6
       required: false
       default: [ MobIPCLHandDefault ]
+    # Nebula start
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.SnoutCover:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Eyes:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Overlay:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.TailOverlay:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Wings:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.WingsBehind:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Special:
+      limit: 6
+      required: false
+    # Nebula end
 
 ## Mob
 

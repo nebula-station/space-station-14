@@ -229,10 +229,15 @@ namespace Content.Client.Lobby.UI
 
             SpeciesButton.OnItemSelected += args =>
             {
+                var previousSpecies = Profile?.Species; // Nebula edit
                 SpeciesButton.SelectId(args.Id);
                 SetSpecies(_species[args.Id].ID);
                 OnSkinColorOnValueChanged();
                 ResetWidthAndHeight(); // Goob
+                // Nebula start
+                if (previousSpecies != Profile?.Species)
+                    ResetMarkings();
+                // Nebula end
             };
 
             // Nebula start

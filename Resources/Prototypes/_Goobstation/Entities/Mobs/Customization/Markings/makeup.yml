@@ -3,7 +3,6 @@
 - type: marking
   id: MakeupLips
   bodyPart: Face
-  groupWhitelist: [Human, Slime, Arachnid]
   coloring:
     default:
       type:
@@ -16,7 +15,6 @@
 - type: marking
   id: MakeupBlush
   bodyPart: Face
-  groupWhitelist: [Human, Reptilian, Slime, Arachnid]
   coloring:
     default:
       type:
@@ -29,7 +27,6 @@
 - type: marking
   id: MakeupNailPolishRight
   bodyPart: RHand
-  groupWhitelist: [Human, Reptilian, Arachnid, Slime, Arachnid]
   coloring:
     default:
       type:
@@ -42,7 +39,6 @@
 - type: marking
   id: MakeupNailPolishLeft
   bodyPart: LHand
-  groupWhitelist: [Human, Reptilian, Arachnid, Slime, Arachnid]
   coloring:
     default:
       type:
@@ -57,7 +53,6 @@
 - type: marking
   id: MakeupMothLips
   bodyPart: Face
-  groupWhitelist: [Moth]
   coloring:
     default:
       type:
@@ -70,7 +65,6 @@
 - type: marking
   id: MakeupMothBlush
   bodyPart: Face
-  groupWhitelist: [Moth]
   coloring:
     default:
       type:
