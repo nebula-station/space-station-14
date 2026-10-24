@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Client._Nebula.Ghost.Roles;
 using Content.Client.Eui;
 using Content.Client.Players.PlayTimeTracking;
 using Content.Shared.Eui;
@@ -11,13 +12,13 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
     [UsedImplicitly]
     public sealed class GhostRolesEui : BaseEui
     {
-        private readonly GhostRolesWindow _window;
-        private GhostRoleRulesWindow? _windowRules = null;
+        private readonly NebulaGhostRolesWindow _window; // Nebula edit
+        private NebulaGhostRoleRulesWindow? _windowRules = null; // Nebula edit
         private uint _windowRulesId = 0;
 
         public GhostRolesEui()
         {
-            _window = new GhostRolesWindow();
+            _window = new NebulaGhostRolesWindow(); // Nebula edit
 
             _window.OnRoleRequestButtonClicked += info =>
             {
@@ -29,7 +30,7 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
                     return;
                 }
 
-                _windowRules = new GhostRoleRulesWindow(info.Rules, _ =>
+                _windowRules = new NebulaGhostRoleRulesWindow(info.Rules, _ => // Nebula edit
                 {
                     SendMessage(new RequestGhostRoleMessage(info.Identifier));
 

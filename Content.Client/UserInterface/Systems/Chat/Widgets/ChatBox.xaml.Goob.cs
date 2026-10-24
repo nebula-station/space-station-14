@@ -22,6 +22,7 @@ public partial class ChatBox
         public void Repopulate()
         {
             Contents.Clear();
+            ResetCoalescence(); // Nebula
 
             // Goobstation start
             foreach (var child in Contents.Children.ToArray())
@@ -42,6 +43,7 @@ public partial class ChatBox
         private void OnChannelFilter(ChatChannel channel, bool active)
         {
             Contents.Clear();
+            ResetCoalescence(); // Nebula
 
             // Goobstation start
             foreach (var child in Contents.Children.ToArray())

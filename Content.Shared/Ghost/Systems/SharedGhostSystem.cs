@@ -1,3 +1,4 @@
+using Content.Shared._Nebula.Ghost;
 using Content.Shared.Emoting;
 using Content.Shared.Examine;
 using Content.Shared.Ghost.Components;
@@ -5,6 +6,8 @@ using Content.Shared.Hands;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Item;
 using Content.Shared.Popups;
+using Content.Shared.Roles;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 
@@ -155,6 +158,25 @@ public struct GhostWarp
     /// Whether this warp represents a warp point or a player
     /// </summary>
     public bool IsWarpPoint { get;  }
+
+    // Nebula start
+    /// <summary>
+    /// Player name without the job, null for warp points.
+    /// </summary>
+    public string? Name { get; init; }
+
+    /// <summary>
+    /// Job of the player's mind, the same job <see cref="DisplayName"/> already shows.
+    /// </summary>
+    public ProtoId<JobPrototype>? Job { get; init; }
+
+    /// <summary>
+    /// Antagonist recognizable on sight, from the server whitelist. Never set for hidden antagonists.
+    /// </summary>
+    public bool IsVisibleAntagonist { get; init; }
+
+    public NebulaGhostWarpState State { get; init; }
+    // Nebula end
 }
 
 /// <summary>

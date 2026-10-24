@@ -193,6 +193,7 @@ namespace Content.Server.GameTicking
 
             _playerGameStatuses[session.UserId] = PlayerGameStatus.JoinedGame;
             _db.AddRoundPlayers(RoundId, session.UserId);
+            _lobbyInfoQueued = true; // Nebula
 
             if (_adminManager.HasAdminFlag(session, AdminFlags.Admin))
             {

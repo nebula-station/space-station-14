@@ -1,0 +1,73 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:nc="clr-namespace:Content.Client._Nebula.UserInterface.Controls"
+         HorizontalExpand="True"
+         VerticalExpand="True">
+    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+        <nc:ShapedPanel Name="SlotsPanel"
+                        StyleClasses="NebulaPanel"
+                        Orientation="Vertical"
+                        SetWidth="320">
+            <BoxContainer Orientation="Vertical"
+                          VerticalExpand="True"
+                          Margin="8"
+                          SeparationOverride="6">
+                <BoxContainer Orientation="Horizontal" Margin="10 6 10 2">
+                    <Label StyleClasses="NebulaTitle"
+                           HorizontalExpand="True"
+                           Text="{Loc 'nebula-character-setup-characters'}" />
+                    <Label Name="SlotCount" StyleClasses="NebulaTextMuted" VerticalAlignment="Center" />
+                </BoxContainer>
+
+                <nc:ShapedPanel StyleClasses="NebulaSection" Orientation="Vertical" VerticalExpand="True">
+                    <ScrollContainer VerticalExpand="True" HScrollEnabled="False" Margin="6">
+                        <BoxContainer Name="Characters" Orientation="Vertical" SeparationOverride="4" />
+                    </ScrollContainer>
+                </nc:ShapedPanel>
+
+                <nc:ShapedButton Name="NewCharacter"
+                                 StyleClasses="NebulaButtonFilled"
+                                 MinHeight="34"
+                                 Text="{Loc 'nebula-character-setup-new'}" />
+
+                <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+                    <nc:ShapedButton Name="StatsButton"
+                                     StyleClasses="NebulaButtonGhost"
+                                     HorizontalExpand="True"
+                                     Text="{Loc 'character-setup-gui-character-setup-stats-button'}" />
+                    <nc:ShapedButton Name="RulesButton"
+                                     StyleClasses="NebulaButtonGhost"
+                                     HorizontalExpand="True"
+                                     Text="{Loc 'character-setup-gui-character-setup-rules-button'}" />
+                </BoxContainer>
+
+                <nc:ShapedButton Name="AdminRemarksButton"
+                                 StyleClasses="NebulaButtonGhost"
+                                 Visible="False"
+                                 Text="{Loc 'character-setup-gui-character-setup-adminremarks-button'}" />
+            </BoxContainer>
+        </nc:ShapedPanel>
+
+        <nc:ShapedPanel Name="EditorPanel"
+                        StyleClasses="NebulaPanel"
+                        Orientation="Vertical"
+                        HorizontalExpand="True">
+            <BoxContainer Orientation="Horizontal" Margin="18 10 10 0" MinHeight="36">
+                <TextureRect Name="TitleIcon"
+                             StyleClasses="NebulaIcon"
+                             Stretch="KeepAspectCentered"
+                             SetSize="20 20"
+                             VerticalAlignment="Center"
+                             Margin="0 0 8 0" />
+                <Label StyleClasses="NebulaTitle"
+                       HorizontalExpand="True"
+                       VerticalAlignment="Center"
+                       Text="{Loc 'nebula-character-setup-title'}" />
+                <nc:ShapedButton Name="CloseButtonControl"
+                                 StyleClasses="NebulaButtonTonal"
+                                 VerticalAlignment="Center"
+                                 Text="{Loc 'character-setup-gui-character-setup-close-button'}" />
+            </BoxContainer>
+            <BoxContainer Name="CharEditor" HorizontalExpand="True" VerticalExpand="True" />
+        </nc:ShapedPanel>
+    </BoxContainer>
+</Control>

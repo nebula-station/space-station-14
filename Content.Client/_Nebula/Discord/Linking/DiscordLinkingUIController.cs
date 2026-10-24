@@ -13,7 +13,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Client._Nebula.Discord.Linking;
 
-public sealed partial class DiscordLinkingUIController : UIController
+public sealed partial class DiscordLinkingUIController : UIController, IOnSystemChanged<DiscordLinkingSystem>
 {
     [Dependency] private IClipboardManager _clipboard = default!;
     [Dependency] private IConfigurationManager _config = default!;
@@ -37,6 +37,28 @@ public sealed partial class DiscordLinkingUIController : UIController
         _linkingManager.CodeReceived += OnCode;
     }
 
+    public void OnSystemLoaded(DiscordLinkingSystem system)
+    {
+        system.VerifiedChanged += UpdateLabel;
+    }
+
+    public void OnSystemUnloaded(DiscordLinkingSystem system)
+    {
+        system.VerifiedChanged -= UpdateLabel;
+    }
+
+    private void UpdateLabel()
+    {
+        if (_window == null)
+            return;
+
+        var text = Loc.GetString("rmc-ui-link-discord-account-text");
+        if (LinkingSystem.IsVerified)
+            text = $"{Loc.GetString("rmc-ui-link-discord-account-already-linked")}\n\n{text}";
+
+        _window.Label.SetMarkupPermissive(text);
+    }
+
     private void OnCode(Guid code)
     {
         _code = code;
@@ -56,13 +78,7 @@ public sealed partial class DiscordLinkingUIController : UIController
 
             _window = new DiscordLinkingWindow();
             _window.OnClose += () => _window = null;
-            _window.Label.SetMarkupPermissive($"{Loc.GetString("rmc-ui-link-discord-account-text")}");
-
-            if (LinkingSystem.IsVerified)
-            {
-                _window.Label.SetMarkupPermissive(
-                    $"{Loc.GetString("rmc-ui-link-discord-account-already-linked")}\n\n{Loc.GetString("rmc-ui-link-discord-account-text")}");
-            }
+            UpdateLabel();
 
             _window.CopyButton.OnPressed += _ =>
             {
@@ -73,17 +89,8 @@ public sealed partial class DiscordLinkingUIController : UIController
             };
 
             var messageLink = _config.GetCVar(NCCVars.DiscordAccountLinkingMessageLink);
-            if (string.IsNullOrEmpty(messageLink))
-            {
-                _window.LinkButton.Visible = false;
-                _window.CopyButton.RemoveStyleClass("OpenRight");
-            }
-            else
-            {
-                _window.LinkButton.Visible = true;
-                _window.LinkButton.OnPressed += _ => _uriOpener.OpenUri(messageLink);
-                _window.CopyButton.AddStyleClass("OpenRight");
-            }
+            _window.LinkButton.Visible = !string.IsNullOrEmpty(messageLink);
+            _window.LinkButton.OnPressed += _ => _uriOpener.OpenUri(messageLink);
 
             _window.OpenCentered();
 

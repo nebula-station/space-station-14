@@ -1,0 +1,11 @@
+nebula-ghost-roles-category-antagonist = Антагонисты
+nebula-ghost-roles-category-central-command = Центральное командование
+nebula-ghost-roles-category-free-agent = Свободные агенты
+nebula-ghost-roles-category-silicon = Синтетики
+nebula-ghost-roles-category-familiar = Фамильяры и животные
+nebula-ghost-roles-category-other = Прочие
+nebula-ghost-role-alert-open-roles = Открыть роли призраков
+nebula-ghost-warp-category-locations = Места
+nebula-ghost-warp-empty = Телепортироваться некуда.
+nebula-ghost-warp-ssd = SSD
+nebula-ghost-warp-dead = Мёртв

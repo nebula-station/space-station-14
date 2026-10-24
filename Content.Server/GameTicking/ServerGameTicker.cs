@@ -109,6 +109,7 @@ namespace Content.Server.GameTicking
             base.Update(frameTime);
             UpdateRoundFlow(frameTime);
             UpdateGameRules();
+            FlushLobbyInfo(); // Nebula
         }
 
         public static int GetRoundId(IEntitySystemManager esm)

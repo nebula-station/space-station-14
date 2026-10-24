@@ -22,7 +22,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           sparse-checkout: |
-            Tools/Nebula/prepare_rsi_diff_comment.py
+            Tools/_Nebula/prepare_rsi_diff_comment.py
           sparse-checkout-cone-mode: false
           persist-credentials: false
 
@@ -80,7 +80,7 @@ jobs:
         if: steps.rsi-size.outputs.skip != 'true'
         id: rsi-comment
         run: >
-          python Tools/Nebula/prepare_rsi_diff_comment.py
+          python Tools/_Nebula/prepare_rsi_diff_comment.py
           --input rsi-diff-full.md
           --output rsi-diff-comment.md
           --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

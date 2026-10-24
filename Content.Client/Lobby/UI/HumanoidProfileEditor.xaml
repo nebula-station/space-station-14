@@ -29,20 +29,19 @@
                         <BoxContainer Orientation="Vertical">
                             <Label Text="{Loc 'humanoid-profile-editor-randomize'}" HorizontalAlignment="Center"/>
                             <controls:Separator StyleClasses="LowDivider" Margin="0 10"/>
-                            <GridContainer Columns="2" MinWidth="250" HorizontalExpand="True">
+                            <GridContainer Columns="2" MinWidth="290" HorizontalExpand="True"> <!-- Nebula edit -->
                                 <ui:RandomizeLockButton For="Name" LabelText="{Loc 'humanoid-profile-editor-randomize-name-button'}"/>
-                                <ui:RandomizeLockButton For="Species" LabelText="{Loc 'humanoid-profile-editor-randomize-species-button'}"/>
+                                <ui:RandomizeLockButton For="Species" HorizontalExpand="False" LabelText="{Loc 'humanoid-profile-editor-randomize-species-button'}"/> <!-- Nebula edit -->
                                 <ui:RandomizeLockButton For="Age" LabelText="{Loc 'humanoid-profile-editor-randomize-age-button'}"/>
-                                <ui:RandomizeLockButton For="Sex" LabelText="{Loc 'humanoid-profile-editor-randomize-sex-button'}"/>
+                                <ui:RandomizeLockButton For="Sex" HorizontalExpand="False" LabelText="{Loc 'humanoid-profile-editor-randomize-sex-button'}"/> <!-- Nebula edit -->
                                 <ui:RandomizeLockButton For="Skin" LabelText="{Loc 'humanoid-profile-editor-randomize-skin-button'}"/>
-                                <ui:RandomizeLockButton For="Eyes" LabelText="{Loc 'humanoid-profile-editor-randomize-eye-button'}"/>
+                                <ui:RandomizeLockButton For="Eyes" HorizontalExpand="False" LabelText="{Loc 'humanoid-profile-editor-randomize-eye-button'}"/> <!-- Nebula edit -->
                                 <ui:RandomizeLockButton For="Markings" LabelText="{Loc 'humanoid-profile-editor-randomize-markings-button'}"/>
-                                <ui:RandomizeLockButton For="Barks" LabelText="Bark voice"/> <!-- Trauma -->
+                                <ui:RandomizeLockButton For="Barks" HorizontalExpand="False" LabelText="Bark voice"/> <!-- Trauma --> <!-- Nebula edit -->
                             </GridContainer>
                             <Button
                                 Name="RandomizeUnlockedButton"
-                                MaxWidth="256"
-                                Text="{Loc 'humanoid-profile-editor-randomize-unlocked-button'}"/>
+                                Text="{Loc 'humanoid-profile-editor-randomize-unlocked-button'}"/> <!-- Nebula edit -->
                         </BoxContainer>
                     </ui:HighlightedContainer>
                 </BoxContainer>

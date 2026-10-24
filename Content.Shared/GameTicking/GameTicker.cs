@@ -148,6 +148,14 @@ public sealed class TickerLobbyInfoEvent : EntityEventArgs
 {
     public string TextBlob { get; }
 
+    // Nebula start
+    public string MapName { get; init; } = string.Empty;
+    public string ModeTitle { get; init; } = string.Empty;
+    public int PlayerCount { get; init; }
+    public int ReadyCount { get; init; }
+    public int InGameCount { get; init; }
+    // Nebula end
+
     public TickerLobbyInfoEvent(string textBlob)
     {
         TextBlob = textBlob;

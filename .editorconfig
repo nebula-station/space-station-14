@@ -334,7 +334,7 @@ dotnet_naming_symbols.static_readonly_symbols.applicable_kinds = field
 dotnet_naming_symbols.static_readonly_symbols.required_modifiers = static, readonly
 
 dotnet_naming_symbols.types_and_namespaces_symbols.applicable_accessibilities = *
-dotnet_naming_symbols.types_and_namespaces_symbols.applicable_kinds = namespace, class, struct, enum, delegate
+dotnet_naming_symbols.types_and_namespaces_symbols.applicable_kinds = class, struct, enum, delegate
 
 dotnet_naming_symbols.type_parameters_symbols.applicable_accessibilities = *
 dotnet_naming_symbols.type_parameters_symbols.applicable_kinds = type_parameter

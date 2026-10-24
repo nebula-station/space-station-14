@@ -1,0 +1,53 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:nc="clr-namespace:Content.Client._Nebula.UserInterface.Controls"
+         xmlns:profile="clr-namespace:Content.Client.Lobby.UI.ProfileEditorControls">
+    <BoxContainer Orientation="Vertical">
+        <BoxContainer Name="Loaded"
+                      Orientation="Vertical"
+                      SeparationOverride="8"
+                      Visible="False">
+            <nc:ShapedPanel StyleClasses="NebulaCard" Orientation="Vertical">
+                <profile:ProfilePreviewSpriteView Name="ProfilePreviewSpriteView"
+                                                  Access="Public"
+                                                  OverrideDirection="South"
+                                                  Scale="4 4"
+                                                  MaxSize="112 112"
+                                                  Stretch="Fill"
+                                                  HorizontalAlignment="Center"
+                                                  Margin="0 8" />
+            </nc:ShapedPanel>
+
+            <BoxContainer Orientation="Vertical">
+                <Label Name="NameLabel"
+                       StyleClasses="NebulaTitle"
+                       Align="Center"
+                       ClipText="True" />
+                <Label Name="DetailsLabel"
+                       StyleClasses="NebulaTextMuted"
+                       Align="Center" />
+            </BoxContainer>
+
+            <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+                <nc:ShapedButton Name="CharacterSetup"
+                                 StyleClasses="NebulaButtonTonal"
+                                 HorizontalExpand="True"
+                                 Text="{Loc 'nebula-lobby-character-customize'}" />
+                <nc:ShapedButton Name="Wardrobe"
+                                 StyleClasses="NebulaButtonTonal"
+                                 HorizontalExpand="True"
+                                 Text="{Loc 'nebula-lobby-character-wardrobe'}" />
+            </BoxContainer>
+
+            <nc:ShapedButton Name="PatronPerks"
+                             Access="Public"
+                             StyleClasses="NebulaButtonGhost"
+                             Visible="False"
+                             Text="{Loc 'rmc-ui-patron-perks'}" />
+        </BoxContainer>
+
+        <Label Name="Unloaded"
+               StyleClasses="NebulaTextMuted"
+               Align="Center"
+               Text="{Loc 'lobby-character-preview-panel-unloaded-preferences-label'}" />
+    </BoxContainer>
+</Control>

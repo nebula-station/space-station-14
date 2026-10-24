@@ -165,6 +165,7 @@ namespace Content.Client.Voting
                     _votePopups.Remove(voteId);
                 }
 
+                ActiveVotesChanged?.Invoke(); // Nebula
                 return;
             }
 
@@ -186,6 +187,11 @@ namespace Content.Client.Voting
             {
                 existingVote.Entries[i].Votes = message.Options[i].votes;
             }
+
+            // Nebula start
+            if (@new)
+                ActiveVotesChanged?.Invoke();
+            // Nebula end
 
             if (@new && _popupContainer != null)
             {

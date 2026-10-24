@@ -27,6 +27,18 @@ public sealed partial class SponsorManagerSystem : EntitySystem
         base.Initialize();
     }
 
+    [SubscribeNetworkEvent]
+    private void OnStatusRequest(SponsorStatusRequest msg, EntitySessionEventArgs args)
+    {
+        SendStatus(args.SenderSession);
+    }
+
+    private void SendStatus(ICommonSession session)
+    {
+        var rank = _cachedPlayers.TryGetValue(session.UserId, out var status) ? status.Rank : (int?) null;
+        RaiseNetworkEvent(new SponsorStatusResponse { Rank = rank }, session);
+    }
+
     private async void OnPlayerStatusChanged(object? sender, SessionStatusEventArgs args)
     {
         switch (args.NewStatus)
@@ -47,6 +59,9 @@ public sealed partial class SponsorManagerSystem : EntitySystem
             _cachedPlayers[session.UserId] = status;
         else
             _cachedPlayers.Remove(session.UserId);
+
+        if (session.Status is SessionStatus.Connected or SessionStatus.InGame)
+            SendStatus(session);
     }
 
     public bool IsSponsor(NetUserId userId)

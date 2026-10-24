@@ -1,0 +1,11 @@
+nebula-ghost-roles-category-antagonist = Antagonists
+nebula-ghost-roles-category-central-command = Central Command
+nebula-ghost-roles-category-free-agent = Free agents
+nebula-ghost-roles-category-silicon = Silicons
+nebula-ghost-roles-category-familiar = Familiars and animals
+nebula-ghost-roles-category-other = Other
+nebula-ghost-role-alert-open-roles = Open ghost roles
+nebula-ghost-warp-category-locations = Locations
+nebula-ghost-warp-empty = Nowhere to warp to.
+nebula-ghost-warp-ssd = SSD
+nebula-ghost-warp-dead = Dead

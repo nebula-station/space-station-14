@@ -1,3 +1,4 @@
+using Content.Client._Nebula.Manifest;
 using Content.Client.Eui;
 using Content.Shared.CrewManifest;
 using Content.Shared.Eui;
@@ -8,7 +9,7 @@ namespace Content.Client.CrewManifest;
 [UsedImplicitly]
 public sealed class CrewManifestEui : BaseEui
 {
-    private readonly CrewManifestUi _window;
+    private readonly NebulaCrewManifestWindow _window; // Nebula edit
 
     public CrewManifestEui()
     {

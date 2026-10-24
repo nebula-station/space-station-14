@@ -1,0 +1,40 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:ui="clr-namespace:Content.Client.Options.UI">
+    <BoxContainer Orientation="Vertical">
+        <Label Text="{Loc 'nebula-options-theme-header'}"
+               StyleClasses="LabelKeyText" />
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'nebula-options-theme-accent'}"
+                   MinWidth="400"
+                   VAlign="Center" />
+            <BoxContainer Name="Swatches"
+                          Orientation="Horizontal"
+                          SeparationOverride="6"
+                          HorizontalExpand="True"
+                          VerticalAlignment="Center" />
+            <LineEdit Name="HexEdit"
+                      MinWidth="100"
+                      PlaceHolder="#RRGGBB"
+                      Margin="8 0 4 0" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" Margin="0 4">
+            <Label Text="{Loc 'nebula-options-theme-preview'}"
+                   MinWidth="400"
+                   VAlign="Center" />
+            <BoxContainer Name="Preview"
+                          Orientation="Horizontal"
+                          SeparationOverride="4"
+                          VerticalAlignment="Center" />
+        </BoxContainer>
+        <CheckBox Name="TransparencyCheckBox"
+                  Text="{Loc 'nebula-options-theme-transparency'}" />
+        <ui:OptionSlider Name="TransparencySlider"
+                         Title="{Loc 'nebula-options-theme-transparency-amount'}" />
+        <CheckBox Name="ChatLeftCheckBox"
+                  Text="{Loc 'nebula-options-lobby-chat-left'}" />
+        <CheckBox Name="BackgroundRandomCheckBox"
+                  Text="{Loc 'nebula-options-lobby-background-random'}" />
+        <ui:OptionDropDown Name="BackgroundDropDown"
+                           Title="{Loc 'nebula-options-lobby-background'}" />
+    </BoxContainer>
+</Control>

@@ -1,3 +1,4 @@
+using Content.Client._Nebula.Lobby.UI;
 using Content.Client.Guidebook;
 using Content.Client.Lobby.UI;
 using Content.Client.Players.PlayTimeTracking;
@@ -36,14 +37,14 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
     public static event Action<HumanoidProfileEditor>? OnProfileEditorCreated;
     // </Trauma>
 
-    private CharacterSetupGui? _characterSetup;
+    private NebulaCharacterSetup? _characterSetup; // Nebula edit
     private HumanoidProfileEditor? _profileEditor;
-    private CharacterSetupGuiSavePanel? _savePanel;
+    private NebulaSavePanel? _savePanel; // Nebula edit
 
     /// <summary>
     /// This is the characher preview panel in the chat. This should only update if their character updates.
     /// </summary>
-    private LobbyCharacterPreviewPanel? PreviewPanel => GetLobbyPreview();
+    private NebulaCharacterPanel? PreviewPanel => GetLobbyPreview(); // Nebula edit
 
     /// <summary>
     /// This is the modified profile currently being edited.
@@ -70,7 +71,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         _configurationManager.OnValueChanged(CCVars.GameRoleWhitelist, _ => RefreshProfileEditor());
     }
 
-    private LobbyCharacterPreviewPanel? GetLobbyPreview()
+    private NebulaCharacterPanel? GetLobbyPreview() // Nebula edit
     {
         if (_stateManager.CurrentState is LobbyState lobby)
         {
@@ -176,12 +177,12 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         if (character is not HumanoidCharacterProfile humanoid)
         {
             PreviewPanel.ProfilePreviewSpriteView.ClearPreview();
-            PreviewPanel.SetSummaryText(string.Empty);
+            PreviewPanel.SetProfile(null); // Nebula edit
             return;
         }
 
         PreviewPanel.ProfilePreviewSpriteView.LoadPreview(humanoid);
-        PreviewPanel.SetSummaryText(humanoid.Summary);
+        PreviewPanel.SetProfile(humanoid); // Nebula edit
     }
 
     private void RefreshProfileEditor()
@@ -226,7 +227,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         if (_savePanel is { IsOpen: true })
             return;
 
-        _savePanel = new CharacterSetupGuiSavePanel();
+        _savePanel = new NebulaSavePanel(); // Nebula edit
 
         _savePanel.SaveButton.OnPressed += _ =>
         {
@@ -247,7 +248,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         _savePanel.OpenCentered();
     }
 
-    private (CharacterSetupGui, HumanoidProfileEditor) EnsureGui()
+    private (NebulaCharacterSetup, HumanoidProfileEditor) EnsureGui() // Nebula edit
     {
         if (_characterSetup != null && _profileEditor != null)
         {
@@ -271,7 +272,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         _profileEditor.OnOpenGuidebook += _guide.OpenHelp;
         OnProfileEditorCreated?.Invoke(_profileEditor);
 
-        _characterSetup = new CharacterSetupGui(_profileEditor);
+        _characterSetup = new NebulaCharacterSetup(_profileEditor); // Nebula edit
 
         _characterSetup.CloseButton.OnPressed += _ =>
         {

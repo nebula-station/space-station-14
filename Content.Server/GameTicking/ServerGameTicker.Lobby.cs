@@ -2,6 +2,7 @@
 using Content.Trauma.Common.GameTicking;
 // </Trauma>
 using System.Linq;
+using Content.Server._Nebula.GameTicking;
 using Content.Shared.GameTicking;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -42,6 +43,7 @@ public sealed partial class ServerGameTicker
     {
         RaiseNetworkEvent(GetInfoMsg(), Filter.Empty().AddPlayers(_playerManager.NetworkedSessions));
         RaiseNetworkEvent(new TickerInGameInfoEvent(GetInfoText(true)), Filter.Empty().AddPlayers(_playerManager.NetworkedSessions)); // Trauma
+        RaiseLocalEvent(new LobbyInfoUpdatedEvent()); // Nebula edit
     }
 
     // TODO: You can move this to shared.
@@ -57,7 +59,7 @@ public sealed partial class ServerGameTicker
         }
 
         var playerCount = $"{_playerManager.PlayerCount}";
-        var readyCount = _playerGameStatuses.Values.Count(x => x == PlayerGameStatus.ReadyToPlay);
+        var readyCount = CountLobbyPlayers().Ready; // Nebula edit
 
         var stationNames = new StringBuilder();
         var query =
@@ -120,7 +122,7 @@ public sealed partial class ServerGameTicker
 
     private TickerLobbyInfoEvent GetInfoMsg()
     {
-        return new(GetInfoText());
+        return CreateLobbyInfoMsg(GetInfoText()); // Nebula edit
     }
 
     private void UpdateLateJoinStatus()

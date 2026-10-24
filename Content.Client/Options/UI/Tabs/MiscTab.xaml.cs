@@ -66,6 +66,7 @@ public sealed partial class MiscTab : Control
         Control.AddOptionCheckBox(CCVars.ChatFancyNameBackground, FancyNameBackgroundsCheckBox);
         Control.AddOptionCheckBox(CCVars.StaticStorageUI, StaticStorageUI);
         Control.AddOptionCheckBox(CCVars.InterfaceChatFollowButton, ChatFollowButton);
+        NebulaTheme.AddOptions(Control); // Nebula
 
         Control.Initialize();
     }

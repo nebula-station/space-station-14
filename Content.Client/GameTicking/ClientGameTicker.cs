@@ -162,6 +162,7 @@ public sealed partial class ClientGameTicker : GameTicker
     private void LobbyInfo(TickerLobbyInfoEvent message)
     {
         ServerInfoBlob = message.TextBlob;
+        ApplyNebulaLobbyInfo(message); // Nebula
 
         InfoBlobUpdated?.Invoke();
     }

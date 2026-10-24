@@ -1,0 +1,271 @@
+<Control
+    xmlns="https://spacestation14.io"
+    xmlns:nc="clr-namespace:Content.Client._Nebula.UserInterface.Controls"
+    xmlns:nlobby="clr-namespace:Content.Client._Nebula.Lobby.UI"
+    xmlns:info="clr-namespace:Content.Client.Info"
+    xmlns:widgets="clr-namespace:Content.Client.UserInterface.Systems.Chat.Widgets"
+    HorizontalExpand="True"
+    VerticalExpand="True">
+
+    <PanelContainer StyleClasses="NebulaScreenBase" />
+
+    <nc:ShapedTextureRect Name="Background" Access="Public" />
+
+    <BoxContainer Orientation="Vertical">
+        <Control Name="BarSpacer" />
+
+        <Control VerticalExpand="True" Margin="8">
+            <BoxContainer Name="DefaultState" Orientation="Horizontal" SeparationOverride="8">
+
+                <nc:ShapedPanel Name="LeftPanel"
+                                Access="Public"
+                                StyleClasses="NebulaPanel"
+                                Orientation="Vertical"
+                                SetWidth="420">
+                    <BoxContainer Orientation="Vertical"
+                                  VerticalExpand="True"
+                                  Margin="8"
+                                  SeparationOverride="6">
+
+                        <nc:ShapedPanel StyleClasses="NebulaSection" Orientation="Vertical">
+                            <nlobby:NebulaCharacterPanel Name="CharacterPreview"
+                                                         Access="Public"
+                                                         Margin="10" />
+                        </nc:ShapedPanel>
+
+                        <nc:ShapedPanel StyleClasses="NebulaSection" Orientation="Vertical" VerticalExpand="True">
+                            <info:ServerInfo Name="ServerInfo" Access="Public" Margin="12 10" />
+                        </nc:ShapedPanel>
+
+                        <nc:ShapedPanel StyleClasses="NebulaSection" Orientation="Vertical">
+                            <BoxContainer Orientation="Vertical" Margin="10" SeparationOverride="6">
+                                <RichTextLabel Name="LobbySong" Access="Public" />
+                                <RichTextLabel Name="LobbyBackground" Access="Public" />
+                                <nlobby:NebulaLinkBar Margin="0 4 0 0" />
+                                <nlobby:NebulaSupportButton Margin="0 2 0 0" />
+                            </BoxContainer>
+                        </nc:ShapedPanel>
+                    </BoxContainer>
+                </nc:ShapedPanel>
+
+                <Control HorizontalExpand="True">
+                    <BoxContainer Orientation="Vertical"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Bottom"
+                                  SeparationOverride="4">
+                        <RichTextLabel Name="LobbyMessageLabel" Access="Public" />
+                        <RichTextLabel Name="PlaytimeComment" Access="Public" Visible="False" />
+                    </BoxContainer>
+                </Control>
+
+                <nc:ShapedPanel Name="RightPanel"
+                                Access="Public"
+                                StyleClasses="NebulaPanel"
+                                Orientation="Vertical"
+                                SetWidth="420">
+                    <nc:ShapedPanel StyleClasses="NebulaSection"
+                                    Orientation="Vertical"
+                                    VerticalExpand="True"
+                                    Margin="8">
+                        <widgets:ChatBox Name="Chat"
+                                         Access="Public"
+                                         VerticalExpand="True"
+                                         Margin="6"
+                                         MinWidth="0"
+                                         MinHeight="50" />
+                    </nc:ShapedPanel>
+                </nc:ShapedPanel>
+            </BoxContainer>
+
+            <Control Name="CharacterSetupState" Access="Public" Visible="False" />
+        </Control>
+    </BoxContainer>
+
+    <nc:CutoutFrame Name="ScreenFrame" StyleClasses="NebulaScreenFrame" />
+
+    <Control Name="Bar" VerticalAlignment="Top" Margin="6 0">
+        <BoxContainer Orientation="Horizontal">
+            <Control Name="LeftHalf" HorizontalExpand="True" MouseFilter="Stop">
+                <BoxContainer Orientation="Horizontal"
+                              SeparationOverride="8"
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Center">
+                    <nc:ShapedPanel Name="LeftCorner"
+                                    StyleClasses="NebulaBarCorner"
+                                    SetSize="32 32"
+                                    VerticalAlignment="Center">
+                        <TextureRect TexturePath="/Textures/_Nebula/Interface/Lobby/sparkle.svg.192dpi.png"
+                                     Stretch="KeepAspectCentered"
+                                     SetSize="18 18"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"
+                                     HorizontalExpand="True"
+                                     StyleClasses="NebulaBarLogo" />
+                    </nc:ShapedPanel>
+                    <BoxContainer Orientation="Vertical" VerticalAlignment="Center" Margin="0 0 14 0" SeparationOverride="-3">
+                        <Label Name="ServerCaption"
+                               StyleClasses="NebulaBarCaption" />
+                        <Label Name="PhaseTitle"
+                               StyleClasses="NebulaBarTitle" />
+                        <Label Name="ServerName"
+                               Access="Public"
+                               Visible="False" />
+                    </BoxContainer>
+                </BoxContainer>
+
+                <BoxContainer Orientation="Horizontal"
+                              SeparationOverride="6"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center">
+                    <nc:ShapedPanel Name="RoundInfoGroup"
+                                    StyleClasses="NebulaBarGroup"
+                                    Orientation="Horizontal"
+                                    MinHeight="32">
+                        <Label Name="MapLabel"
+                               StyleClasses="NebulaBarText"
+                               VAlign="Center"
+                               Margin="14 0 4 0" />
+                        <Label Name="RoundInfoSeparator"
+                               StyleClasses="NebulaTextMuted"
+                               VAlign="Center"
+                               Text="•"
+                               Margin="4 0" />
+                        <Label Name="ModeLabel"
+                               StyleClasses="NebulaBarText"
+                               VAlign="Center"
+                               Margin="4 0 14 0" />
+                    </nc:ShapedPanel>
+
+                    <nc:ShapedPanel Name="RoleGroup"
+                                    StyleClasses="NebulaBarGroup"
+                                    Orientation="Horizontal"
+                                    SeparationOverride="8"
+                                    MouseFilter="Stop"
+                                    MinHeight="32">
+                        <TextureRect Name="RoleIcon"
+                                     Stretch="KeepAspectCentered"
+                                     SetSize="16 16"
+                                     Margin="12 0 0 0"
+                                     VerticalAlignment="Center" />
+                        <Label Name="RoleLabel"
+                               StyleClasses="NebulaBarText"
+                               VAlign="Center"
+                               Margin="0 0 14 0" />
+                    </nc:ShapedPanel>
+                </BoxContainer>
+            </Control>
+
+            <Control Name="RightHalf" HorizontalExpand="True" MouseFilter="Stop">
+                <BoxContainer Orientation="Horizontal"
+                              SeparationOverride="6"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center">
+                    <nc:ShapedPanel Name="RoundStatusGroup"
+                                    StyleClasses="NebulaBarGroup"
+                                    Orientation="Horizontal"
+                                    MinHeight="32">
+                        <Label Name="StationTime"
+                               Access="Public"
+                               StyleClasses="NebulaBarText"
+                               VAlign="Center"
+                               Margin="14 0 4 0" />
+                        <Label Name="TimeSeparator"
+                               StyleClasses="NebulaTextMuted"
+                               VAlign="Center"
+                               Text="•"
+                               Margin="4 0" />
+                        <Label Name="StartTime"
+                               Access="Public"
+                               StyleClasses="NebulaBarText"
+                               VAlign="Center"
+                               Margin="4 0 14 0" />
+                    </nc:ShapedPanel>
+
+                    <nc:ShapedPanel Name="PlayersGroup"
+                                    StyleClasses="NebulaBarGroup"
+                                    Orientation="Horizontal"
+                                    SeparationOverride="6"
+                                    MouseFilter="Stop"
+                                    MinHeight="32">
+                        <TextureRect Name="PlayersIcon"
+                                     Stretch="KeepAspectCentered"
+                                     SetSize="16 16"
+                                     Margin="12 0 0 0"
+                                     VerticalAlignment="Center"
+                                     StyleClasses="NebulaBarIcon" />
+                        <Label Name="PlayersLabel"
+                               StyleClasses="NebulaBarText"
+                               VAlign="Center" />
+                        <TextureRect Name="PlayersStatusIcon"
+                                     Stretch="KeepAspectCentered"
+                                     SetSize="16 16"
+                                     Margin="6 0 0 0"
+                                     VerticalAlignment="Center"
+                                     StyleClasses="NebulaBarIcon" />
+                        <Label Name="PlayersStatusLabel"
+                               StyleClasses="NebulaBarText"
+                               VAlign="Center"
+                               Margin="0 0 14 0" />
+                    </nc:ShapedPanel>
+                </BoxContainer>
+
+                <nc:ShapedPanel Name="RightCorner"
+                                StyleClasses="NebulaBarCorner"
+                                Orientation="Horizontal"
+                                SeparationOverride="2"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                MinHeight="32">
+                    <nc:ShapedButton Name="ManifestButton"
+                                     StyleClasses="NebulaButtonBar"
+                                     Margin="2"
+                                     MinWidth="28" />
+                    <nc:ShapedButton Name="ObserveButton"
+                                     Access="Public"
+                                     StyleClasses="NebulaButtonBar"
+                                     Margin="2"
+                                     MinWidth="28"
+                                     ToolTip="{Loc 'ui-lobby-observe-button'}" />
+                    <nc:ShapedButton Name="AHelpButton"
+                                     Access="Public"
+                                     StyleClasses="NebulaButtonBar"
+                                     Margin="2"
+                                     MinWidth="28"
+                                     ToolTip="{Loc 'ui-lobby-ahelp-button'}" />
+                    <nc:ShapedButton Name="OptionsButton"
+                                     Access="Public"
+                                     StyleClasses="NebulaButtonBar"
+                                     Margin="2"
+                                     MinWidth="28"
+                                     ToolTip="{Loc 'ui-lobby-options-button'}" />
+                    <nc:ShapedButton Name="LeaveButton"
+                                     Access="Public"
+                                     StyleClasses="NebulaButtonBar"
+                                     Margin="2"
+                                     MinWidth="28"
+                                     ToolTip="{Loc 'ui-lobby-leave-button'}" />
+                </nc:ShapedPanel>
+            </Control>
+        </BoxContainer>
+
+        <nc:ShapedPanel StyleClasses="NebulaBarGroup"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        MinHeight="32">
+            <nc:ShapedButton Name="ReadyButton"
+                             Access="Public"
+                             StyleClasses="NebulaButtonBarAccent"
+                             Margin="3"
+                             ToggleMode="True"
+                             MinWidth="130"
+                             Text="{Loc 'ui-lobby-ready-up-button'}" />
+        </nc:ShapedPanel>
+    </Control>
+
+    <LayoutContainer>
+        <nlobby:NebulaVoteList Name="Votes" />
+    </LayoutContainer>
+
+    <nc:CutoutFrame StyleClasses="NebulaScreenCorners" />
+</Control>

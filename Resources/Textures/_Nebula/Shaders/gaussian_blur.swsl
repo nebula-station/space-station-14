@@ -1,0 +1,10 @@
+uniform highp vec2 BLUR_STEP;
+
+void fragment() {
+    highp vec4 color = zTexture(UV) * 0.2270270270;
+    color += zTexture(UV + BLUR_STEP * 1.3846153846) * 0.3162162162;
+    color += zTexture(UV - BLUR_STEP * 1.3846153846) * 0.3162162162;
+    color += zTexture(UV + BLUR_STEP * 3.2307692308) * 0.0702702703;
+    color += zTexture(UV - BLUR_STEP * 3.2307692308) * 0.0702702703;
+    COLOR = color;
+}

@@ -1,3 +1,4 @@
+using Content.Client._Nebula.LateJoin;
 using Content.Client.Audio;
 using Content.Client.GameTicking;
 using Content.Client.LateJoin;
@@ -68,6 +69,7 @@ namespace Content.Client.Lobby
 
             UpdateLobbyUi();
             StartupTrauma(); // Trauma
+            StartupNebula(); // Nebula
 
             Lobby.CharacterPreview.CharacterSetupButton.OnPressed += OnSetupPressed;
             Lobby.ReadyButton.OnPressed += OnReadyPressed;
@@ -81,6 +83,7 @@ namespace Content.Client.Lobby
         protected override void Shutdown()
         {
             ShutdownTrauma(); // Trauma
+            ShutdownNebula(); // Nebula
             var chatController = _userInterfaceManager.GetUIController<ChatUIController>();
             chatController.SetMainChat(false);
             _gameTicker.InfoBlobUpdated -= UpdateLobbyUi;
@@ -116,7 +119,7 @@ namespace Content.Client.Lobby
                 return;
             }
 
-            new LateJoinGui().OpenCentered();
+            new NebulaLateJoinWindow().OpenCentered(); // Nebula edit
         }
 
         private void OnReadyToggled(BaseButton.ButtonToggledEventArgs args)
@@ -130,7 +133,7 @@ namespace Content.Client.Lobby
             {
                 Lobby!.StartTime.Text = string.Empty;
                 var roundTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
-                Lobby!.StationTime.Text = Loc.GetString("lobby-state-player-status-round-time", ("hours", roundTime.Hours), ("minutes", roundTime.Minutes));
+                Lobby!.StationTime.Text = Loc.GetString("nebula-lobby-round-time", ("hours", roundTime.Hours), ("minutes", roundTime.Minutes)); // Nebula edit
                 return;
             }
 
@@ -256,7 +259,7 @@ namespace Content.Client.Lobby
 
         private void UpdateLobbyBackground()
         {
-            if (_protoMan.TryIndex(_gameTicker.LobbyBackground, out var proto))
+            if (_protoMan.TryIndex(GetNebulaLobbyBackground(), out var proto)) // Nebula edit
             {
                 Lobby!.Background.Texture = _resourceCache.GetResource<TextureResource>(proto.Background);
 

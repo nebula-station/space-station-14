@@ -712,7 +712,8 @@ public sealed partial class GhostRoleSystem : EntitySystem
                 RolePrototypes = (jobs, antags),
                 Kind = kind,
                 RafflePlayerCount = rafflePlayerCount,
-                RaffleEndTime = raffleEndTime
+                RaffleEndTime = raffleEndTime,
+                RoleTypes = GetRoleTypes((uid, role)), // Nebula
             });
         }
 

@@ -10,16 +10,13 @@ public sealed partial class DiscordLinkingSystem : EntitySystem
 {
     public bool IsVerified { get; private set; }
 
-    public override void Initialize()
-    {
-        base.Initialize();
+    public event Action? VerifiedChanged;
 
-        SubscribeNetworkEvent<VerifyStatusResponse>(OnVerifyStatusResponse);
-    }
-
+    [SubscribeNetworkEvent]
     private void OnVerifyStatusResponse(VerifyStatusResponse msg)
     {
         IsVerified = msg.Verified;
+        VerifiedChanged?.Invoke();
     }
 
     public void RequestVerificationStatus()

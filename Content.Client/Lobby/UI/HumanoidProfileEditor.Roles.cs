@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Client._Nebula.Stylesheets;
 using Content.Client.Lobby.UI.Loadouts;
 using Content.Client.Lobby.UI.Roles;
 using Content.Shared.Clothing;
@@ -165,7 +166,7 @@ public sealed partial class HumanoidProfileEditor
 
                 category.AddChild(new PanelContainer
                 {
-                    PanelOverride = new StyleBoxFlat { BackgroundColor = Color.FromHex("#464966") },
+                    StyleClasses = { NebulaStyleClass.VanillaHeader }, // Nebula edit
                     Children =
                         {
                             new Label

@@ -1,4 +1,5 @@
 using Content.Shared.Eui;
+using Content.Shared.Mind;
 using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -31,6 +32,13 @@ namespace Content.Shared.Ghost.Roles
         /// if <see cref="Kind"/> is <see cref="GhostRoleKind.RaffleInProgress"/>, specifies when raffle finishes.
         /// </summary>
         public TimeSpan RaffleEndTime { get; set; }
+
+        // Nebula start
+        /// <summary>
+        /// Role types of the ghost role's mind roles, the ghost roles window sorts roles into categories by them.
+        /// </summary>
+        public List<ProtoId<RoleTypePrototype>> RoleTypes { get; set; }
+        // Nebula end
 
     }
 

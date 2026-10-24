@@ -1,0 +1,4 @@
+- type: shader
+  id: NebulaGaussianBlur
+  kind: source
+  path: "/Textures/_Nebula/Shaders/gaussian_blur.swsl"

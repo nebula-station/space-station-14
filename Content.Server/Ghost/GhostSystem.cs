@@ -292,7 +292,7 @@ namespace Content.Server.Ghost
                 return;
             }
 
-            var response = new GhostWarpsResponseEvent(GetPlayerWarps(entity).Concat(GetLocationWarps()).ToList());
+            var response = new GhostWarpsResponseEvent(GetPlayerWarps(entity).Concat(GetBodyWarps(entity)).Concat(GetLocationWarps()).ToList()); // Nebula edit
             RaiseNetworkEvent(response, args.SenderSession.Channel);
         }
 
@@ -422,7 +422,7 @@ namespace Content.Server.Ghost
                 var playerInfo = $"{Comp<MetaDataComponent>(attached).EntityName} ({jobName})";
 
                 if (_mobState.IsAlive(attached) || _mobState.IsCritical(attached))
-                    yield return new GhostWarp(GetNetEntity(attached), playerInfo, false);
+                    yield return WithNebulaInfo(new GhostWarp(GetNetEntity(attached), playerInfo, false), attached, mind?.Mind); // Nebula edit
             }
         }
 

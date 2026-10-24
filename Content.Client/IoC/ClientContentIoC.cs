@@ -1,3 +1,4 @@
+using Content.Client._Nebula.Stylesheets;
 using Content.Client.Administration.Managers;
 using Content.Client.Audio.Midi;
 using Content.Client.Changelog;
@@ -70,6 +71,7 @@ namespace Content.Client.IoC
             collection.Register<ISharedFeedbackManager, ClientFeedbackManager>();
             collection.Register<MidiFileCollectionManager>();
             collection.Register<DiscordLinkingManager>(); // Nebula
+            collection.Register<NebulaThemeManager>(); // Nebula
         }
     }
 }
