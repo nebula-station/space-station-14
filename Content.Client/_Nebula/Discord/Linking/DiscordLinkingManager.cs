@@ -7,7 +7,7 @@ using Robust.Shared.Network;
 
 namespace Content.Client._Nebula.Discord.Linking;
 
-public sealed class DiscordLinkingManager : IPostInjectInit
+public sealed partial class DiscordLinkingManager : IPostInjectInit
 {
     [Dependency] private INetManager _net = default!;
 

@@ -13,7 +13,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Client._Nebula.Discord.Linking;
 
-public sealed class DiscordLinkingUIController : UIController
+public sealed partial class DiscordLinkingUIController : UIController
 {
     [Dependency] private IClipboardManager _clipboard = default!;
     [Dependency] private IConfigurationManager _config = default!;
