@@ -1,0 +1,219 @@
+<!--
+SPDX-FileCopyrightText: 2026 C_Quarian
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<nui:NebulaWindow xmlns="https://spacestation14.io"
+                  xmlns:nui="clr-namespace:Content.Client._Nebula.UserInterface"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  x:Class="Content.Client._Nebula.ErpPanel.ErpPanelWindow"
+                  Title="{Loc erp-panel-title}"
+                  Resizable="True"
+                  MinSize="580 620"
+                  SetSize="580 740">
+    <BoxContainer Orientation="Vertical"
+                  Margin="12"
+                  SeparationOverride="10">
+        <PanelContainer StyleClasses="NebulaPanel" HorizontalExpand="True">
+            <BoxContainer Orientation="Vertical"
+                          Margin="12 10"
+                          SeparationOverride="8">
+                <BoxContainer Orientation="Horizontal" SeparationOverride="10">
+                    <TextureRect TexturePath="/Textures/_Nebula/Interface/ErpPanel/heart_icon.png"
+                                 Stretch="KeepAspectCentered"
+                                 SetSize="42 42"
+                                 VerticalAlignment="Center"/>
+                    <BoxContainer Orientation="Vertical"
+                                  HorizontalExpand="True"
+                                  SeparationOverride="2">
+                        <Label Text="{Loc erp-panel-target-label}"
+                               StyleClasses="NebulaMuted"/>
+                        <Label Name="HeaderLabel"
+                               StyleClasses="NebulaHeading"
+                               ClipText="True"
+                               HorizontalExpand="True"/>
+                    </BoxContainer>
+                </BoxContainer>
+
+                <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                    <Label Text="{Loc erp-panel-arousal-level}"
+                           StyleClasses="NebulaText"
+                           VerticalAlignment="Center"/>
+                    <ProgressBar Name="ArousalProgressBar"
+                                 HorizontalExpand="True"
+                                 VerticalAlignment="Center"
+                                 SetHeight="16"
+                                 MinValue="0"
+                                 Value="0"
+                                 MaxValue="1"/>
+                    <PanelContainer Name="ArousalValuePanel" SetWidth="54" VerticalAlignment="Center">
+                        <Label Name="ArousalValueLabel"
+                               HorizontalAlignment="Center"/>
+                    </PanelContainer>
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
+
+        <PanelContainer StyleClasses="NebulaPanel" HorizontalExpand="True">
+            <BoxContainer Orientation="Vertical"
+                          Margin="10 8"
+                          SeparationOverride="6">
+                <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+                    <TextureRect Name="ModifiersIcon"
+                                 TexturePath="/Textures/Interface/VerbIcons/settings.svg.192dpi.png"
+                                 Stretch="KeepAspectCentered"
+                                 SetSize="18 18"
+                                 VerticalAlignment="Center"/>
+                    <Label Text="{Loc erp-panel-settings-title}"
+                           StyleClasses="NebulaTitle"
+                           HorizontalExpand="True"
+                           VerticalAlignment="Center"/>
+                    <Button Name="ModifiersVisibilityButton"
+                            StyleClasses="NebulaButton"
+                            Text="{Loc erp-panel-hide-modifiers}"/>
+                </BoxContainer>
+
+                <!-- equal separations, GridContainer arranges with H/V swapped -->
+                <GridContainer Name="ModifiersContent"
+                               Columns="3"
+                               HSeparationOverride="6"
+                               VSeparationOverride="6">
+                    <CheckBox Name="CustomArousalToggle"
+                              StyleClasses="NebulaCheckBox"
+                              Text="{Loc erp-panel-arousal-multiplier-label}"
+                              ToolTip="{Loc erp-panel-custom-arousal-button-tooltip}"/>
+                    <Slider Name="ArousalSlider"
+                            HorizontalExpand="True"
+                            MinWidth="240"
+                            MinValue="0"
+                            Value="100"
+                            Disabled="True"/>
+                    <Label Name="ArousalLabel"
+                           SetWidth="44"
+                           HorizontalAlignment="Right"/>
+
+                    <CheckBox Name="CustomMoaningToggle"
+                              StyleClasses="NebulaCheckBox"
+                              Text="{Loc erp-panel-moaning-multiplier-label}"
+                              ToolTip="{Loc erp-panel-custom-moaning-button-tooltip}"/>
+                    <Slider Name="MoaningSlider"
+                            HorizontalExpand="True"
+                            MinWidth="240"
+                            MinValue="0"
+                            Value="100"
+                            Disabled="True"/>
+                    <Label Name="MoaningLabel"
+                           SetWidth="44"
+                           HorizontalAlignment="Right"/>
+                </GridContainer>
+                <!-- MinHeight matches the slider rows so all four rows are evenly spaced -->
+                <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+                    <CheckBox Name="PrivateModeToggle"
+                              StyleClasses="NebulaCheckBox"
+                              MinHeight="24"
+                              Text="{Loc erp-panel-private-mode-label}"
+                              ToolTip="{Loc erp-panel-private-mode-tooltip}"/>
+                    <Label Text="{Loc erp-panel-private-mode-hint}"
+                           StyleClasses="NebulaMuted"
+                           ClipText="True"
+                           HorizontalExpand="True"
+                           VerticalAlignment="Center"/>
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+                    <CheckBox Name="LungeToggle"
+                              StyleClasses="NebulaCheckBox"
+                              MinHeight="24"
+                              Text="{Loc erp-panel-lunge-label}"
+                              ToolTip="{Loc erp-panel-lunge-tooltip}"/>
+                    <Label Text="{Loc erp-panel-lunge-hint}"
+                           StyleClasses="NebulaMuted"
+                           ClipText="True"
+                           HorizontalExpand="True"
+                           VerticalAlignment="Center"/>
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
+
+        <PanelContainer StyleClasses="NebulaPanel" HorizontalExpand="True">
+            <BoxContainer Orientation="Horizontal"
+                          Margin="8 6"
+                          SeparationOverride="7">
+                <TextureRect Name="SearchIcon"
+                             TexturePath="/Textures/Interface/VerbIcons/examine.svg.192dpi.png"
+                             Stretch="KeepAspectCentered"
+                             SetSize="22 22"
+                             VerticalAlignment="Center"/>
+                <LineEdit Name="SearchInput"
+                          StyleClasses="NebulaLineEdit"
+                          HorizontalExpand="True"
+                          PlaceHolder="{Loc erp-panel-search-placeholder}"/>
+                <Button Name="ClearSearchButton"
+                        StyleClasses="NebulaButton"
+                        SetSize="30 30"
+                        ToolTip="{Loc erp-panel-search-clear-tooltip}">
+                    <TextureRect TexturePath="/Textures/Interface/VerbIcons/close.svg.192dpi.png"
+                                 Stretch="KeepAspectCentered"
+                                 SetSize="14 14"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 MouseFilter="Ignore"/>
+                </Button>
+            </BoxContainer>
+        </PanelContainer>
+
+        <BoxContainer Orientation="Vertical" SeparationOverride="4">
+            <Label Text="{Loc erp-panel-interactions-title}"
+                   StyleClasses="NebulaTitle"/>
+            <!-- own row with equal widths, so the three buttons always fit -->
+            <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+                <Button Name="CreateEmoteButton"
+                        StyleClasses="NebulaButton"
+                        HorizontalExpand="True"
+                        Text="{Loc erp-panel-custom-create}"/>
+                <Button Name="ExpandAllButton"
+                        StyleClasses="NebulaButton"
+                        HorizontalExpand="True"
+                        Text="{Loc erp-panel-expand-all}"/>
+                <Button Name="CollapseAllButton"
+                        StyleClasses="NebulaButton"
+                        HorizontalExpand="True"
+                        Text="{Loc erp-panel-collapse-all}"/>
+            </BoxContainer>
+            <Label Name="ResultsLabel"
+                   StyleClasses="NebulaMuted"
+                   VerticalAlignment="Center"/>
+        </BoxContainer>
+
+        <PanelContainer StyleClasses="NebulaInset" HorizontalExpand="True" VerticalExpand="True">
+            <BoxContainer Orientation="Vertical" Margin="8">
+                <ScrollContainer Name="InteractionScroll"
+                                 HScrollEnabled="False"
+                                 HorizontalExpand="True"
+                                 VerticalExpand="True">
+                    <BoxContainer Name="ButtonsContainer"
+                                  Orientation="Vertical"
+                                  SeparationOverride="6"/>
+                </ScrollContainer>
+
+                <BoxContainer Name="EmptyStateContainer"
+                              Orientation="Vertical"
+                              Visible="False"
+                              HorizontalExpand="True"
+                              VerticalExpand="True"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              SeparationOverride="8">
+                    <TextureRect Name="EmptyStateIcon"
+                                 TexturePath="/Textures/Interface/VerbIcons/examine.svg.192dpi.png"
+                                 Stretch="KeepAspectCentered"
+                                 SetSize="34 34"
+                                 HorizontalAlignment="Center"/>
+                    <Label Name="EmptyStateLabel"
+                           StyleClasses="NebulaMuted"
+                           HorizontalAlignment="Center"/>
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
+    </BoxContainer>
+</nui:NebulaWindow>

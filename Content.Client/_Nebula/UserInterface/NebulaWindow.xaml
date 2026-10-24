@@ -1,0 +1,30 @@
+<!--
+SPDX-FileCopyrightText: 2026 C_Quarian
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<nui:NebulaWindow xmlns="https://spacestation14.io"
+                  xmlns:nui="clr-namespace:Content.Client._Nebula.UserInterface"
+                  MouseFilter="Stop"
+                  MinWidth="200" MinHeight="150">
+    <PanelContainer StyleClasses="NebulaWindowPanel" />
+
+    <BoxContainer Orientation="Vertical">
+        <BoxContainer Orientation="Horizontal" Margin="14 8 8 6" SeparationOverride="6">
+            <Label Name="WindowTitle"
+                   StyleClasses="NebulaWindowTitle"
+                   HorizontalExpand="True"
+                   VAlign="Center"
+                   ClipText="True" />
+            <TextureButton Name="CloseButton"
+                           StyleClasses="windowCloseButton NebulaCloseButton"
+                           VerticalAlignment="Center" />
+        </BoxContainer>
+        <PanelContainer StyleClasses="NebulaDivider" Margin="12 0" />
+        <Control Name="ContentsContainer"
+                 Access="Public"
+                 RectClipContent="True"
+                 VerticalExpand="True" />
+    </BoxContainer>
+</nui:NebulaWindow>

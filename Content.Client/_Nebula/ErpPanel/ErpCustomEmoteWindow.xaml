@@ -1,0 +1,67 @@
+<!--
+SPDX-FileCopyrightText: 2026 C_Quarian
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<nui:NebulaWindow xmlns="https://spacestation14.io"
+                  xmlns:nui="clr-namespace:Content.Client._Nebula.UserInterface"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  x:Class="Content.Client._Nebula.ErpPanel.ErpCustomEmoteWindow"
+                  Title="{Loc erp-custom-emote-title-new}"
+                  Resizable="False"
+                  SetWidth="460">
+    <BoxContainer Orientation="Vertical" Margin="12" SeparationOverride="8">
+        <BoxContainer Orientation="Horizontal" SeparationOverride="10">
+            <PanelContainer StyleClasses="NebulaInset" SetSize="48 48" VerticalAlignment="Top">
+                <TextureRect Name="IconPreview"
+                             Stretch="KeepAspectCentered"
+                             SetSize="40 40"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"/>
+            </PanelContainer>
+            <GridContainer Columns="2"
+                           HorizontalExpand="True"
+                           HSeparationOverride="6"
+                           VSeparationOverride="6">
+                <Label Text="{Loc erp-custom-emote-name}" StyleClasses="NebulaText" MinWidth="90"/>
+                <LineEdit Name="NameInput" StyleClasses="NebulaLineEdit" HorizontalExpand="True"/>
+                <Label Text="{Loc erp-custom-emote-body-part}" StyleClasses="NebulaText"/>
+                <OptionButton Name="CategorySelector" StyleClasses="NebulaButton" HorizontalExpand="True"/>
+                <Label Text="{Loc erp-custom-emote-kind}" StyleClasses="NebulaText"/>
+                <OptionButton Name="KindSelector"
+                              StyleClasses="NebulaButton"
+                              HorizontalExpand="True"
+                              ToolTip="{Loc erp-custom-emote-kind-tooltip}"/>
+                <Label Text="{Loc erp-custom-emote-sound}" StyleClasses="NebulaText"/>
+                <OptionButton Name="SoundSelector" StyleClasses="NebulaButton" HorizontalExpand="True"/>
+            </GridContainer>
+        </BoxContainer>
+
+        <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+            <Button Name="TargetModeButton"
+                    ToggleMode="True"
+                    HorizontalExpand="True"
+                    StyleClasses="NebulaToggleButton"
+                    Text="{Loc erp-custom-emote-mode-target}"/>
+            <Button Name="SelfModeButton"
+                    ToggleMode="True"
+                    HorizontalExpand="True"
+                    StyleClasses="NebulaToggleButton"
+                    Text="{Loc erp-custom-emote-mode-self}"/>
+        </BoxContainer>
+        <LineEdit Name="MessageInput"
+                  StyleClasses="NebulaLineEdit"
+                  HorizontalExpand="True"/>
+        <Label Name="HintLabel" StyleClasses="NebulaMuted"/>
+
+        <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+            <Button Name="DeleteButton"
+                    StyleClasses="NebulaDangerButton"
+                    Text="{Loc erp-custom-emote-delete}"/>
+            <Control HorizontalExpand="True"/>
+            <Button Name="CancelButton" StyleClasses="NebulaButton" Text="{Loc erp-custom-emote-cancel}"/>
+            <Button Name="SaveButton" StyleClasses="NebulaButton" Text="{Loc erp-custom-emote-save}"/>
+        </BoxContainer>
+    </BoxContainer>
+</nui:NebulaWindow>

@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: ErpContactDamageAriral
+  values:
+    prefix: erp-contact-damage-ariral-
+    count: 5

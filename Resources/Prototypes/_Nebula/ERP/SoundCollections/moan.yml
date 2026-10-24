@@ -1,0 +1,35 @@
+- type: soundCollection
+  id: MoansMale
+  files:
+  - /Audio/_Nebula/ERP/Voice/moan_m1.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_m2.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_m3.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_m4.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_m5.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_m6.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_m7.ogg
+
+- type: soundCollection
+  id: MoansFemale
+  files:
+  - /Audio/_Nebula/ERP/Voice/moan_f1.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_f2.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_f3.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_f4.ogg
+  - /Audio/_Nebula/ERP/Voice/moan_f5.ogg
+
+- type: soundCollection
+  id: OrgasmMale
+  files:
+  - /Audio/_Nebula/ERP/Voice/final_m1.ogg
+  - /Audio/_Nebula/ERP/Voice/final_m2.ogg
+  - /Audio/_Nebula/ERP/Voice/final_m3.ogg
+  - /Audio/_Nebula/ERP/Voice/final_m4.ogg
+  - /Audio/_Nebula/ERP/Voice/final_m5.ogg
+
+- type: soundCollection
+  id: OrgasmFemale
+  files:
+  - /Audio/_Nebula/ERP/Voice/final_f1.ogg
+  - /Audio/_Nebula/ERP/Voice/final_f2.ogg
+  - /Audio/_Nebula/ERP/Voice/final_f3.ogg

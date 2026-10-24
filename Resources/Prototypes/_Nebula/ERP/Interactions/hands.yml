@@ -1,0 +1,53 @@
+- type: panelInteraction
+  id: Handshake
+  category: Hands
+  kind: Soft
+  range: 1.5
+  sound:
+    collection: ErpHandshake
+  messages: ErpHandshakeMessages
+  icon: _Nebula/Interface/ErpPanel/friendly.png
+
+- type: panelInteraction
+  id: HighFive
+  category: Hands
+  kind: Soft
+  range: 1.5
+  sound:
+    collection: ErpBang
+  messages: ErpHighFiveMessages
+  icon: _Nebula/Interface/ErpPanel/high_five.png
+
+- type: panelInteraction
+  id: KissHand
+  category: Hands
+  kind: Soft
+  sound:
+    collection: ErpKiss
+  messages: ErpKissHandMessages
+  icon: _Nebula/Interface/ErpPanel/kiss_hand.png
+
+- type: panelInteraction
+  id: PushUpsFloor
+  category: Hands
+  kind: Soft
+  sound:
+    collection: ErpBang
+  selfMessages: ErpPushUpsFloorSelfMessages
+  icon: _Nebula/Interface/ErpPanel/push_ups.png
+  targetRequirements:
+  - !type:TargetOnFloorRequirement
+
+- type: panelInteraction
+  id: PinToWall
+  category: Hands
+  kind: Soft
+  sound:
+    collection: ErpKiss
+  messages: ErpPinToWallMessages
+  icon: _Nebula/Interface/ErpPanel/kabedon.png
+  targetRequirements:
+  - !type:NearbyStaticEntityRequirement
+    whitelist:
+      components:
+      - Wall
