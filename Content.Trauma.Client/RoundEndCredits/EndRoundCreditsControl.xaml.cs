@@ -50,6 +50,8 @@ public sealed partial class EndRoundCreditsControl : ScrollContainer
         {
             Margin = new Thickness(0, 1000, 0, 500),
             Texture = texture,
+            Stretch = TextureRect.StretchMode.KeepAspectCentered, // Nebula edit
+            SetSize = new Vector2(960, 339), // Nebula edit
         };
 
         var thanksForPlaying = new Label

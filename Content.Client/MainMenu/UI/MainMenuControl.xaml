@@ -26,8 +26,10 @@ SPDX-License-Identifier: MIT
                   HorizontalExpand="True"
                   VerticalExpand="True"
                   SeparationOverride="24">
+        <!-- Nebula edit -->
         <TextureRect Name="Logo"
-                     Stretch="KeepCentered" />
+                     Stretch="KeepAspectCentered"
+                     SetSize="640 226" />
         <PanelContainer StyleClasses="BackgroundPanel">
             <BoxContainer Orientation="Vertical"
                           HorizontalAlignment="Center"

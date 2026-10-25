@@ -12,7 +12,8 @@ SPDX-License-Identifier: MIT
     <pllax:ParallaxControl SpeedX="20"/>
     <LayoutContainer>
         <BoxContainer Name="VBox" Orientation="Vertical" StyleIdentifier="mainMenuVBox">
-            <TextureRect Name="Logo" Stretch="KeepCentered" />
+            <!-- Nebula edit -->
+            <TextureRect Name="Logo" Stretch="KeepAspectCentered" SetSize="640 226" />
             <Label Name="Subtext" Access="Public" Text="{Loc 'replay-menu-subtext'}"/>
             <Button Name="LoadButton"
                     Access="Public"
