@@ -129,6 +129,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  # Nebula start
+  - type: EdgeConnection
+    allowedDirections: None
+  # Nebula end
   - type: PowerState
     workingPowerDraw: 200
   - type: ExtensionCableReceiver

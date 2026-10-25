@@ -39,6 +39,16 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: Appearance
+  # Nebula start
+  - type: EdgeConnection
+    connectionKey: computer-console
+    allowedDirections: East, West
+    sprite: _Orion/Structures/Machines/computers.rsi
+    states:
+      East: computer_l
+      West: computer_r
+      East, West: computer_l_r
+  # Nebula end
   - type: GenericVisualizer
     visuals:
       enum.ComputerVisuals.Powered:

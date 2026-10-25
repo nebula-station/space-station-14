@@ -6,6 +6,10 @@
   name: abductor console
   description: A computer that is used for spying on the station.
   components:
+  # Nebula start
+  - type: EdgeConnection
+    allowedDirections: None
+  # Nebula end
   - type: AbductorConsole
   - type: Sprite
     sprite: _Shitmed/Structures/Machines/abductor_console.rsi
@@ -43,6 +47,10 @@
   name: human observation console
   description: Use this to set teleporter destination or retrieve people marked by scientist tools. Also used for buying replacement gear and linking the agent's vest.
   components:
+  # Nebula start
+  - type: EdgeConnection
+    allowedDirections: None
+  # Nebula end
   - type: Sprite
     sprite: _Shitmed/Structures/Machines/abductor_camera_console.rsi
     layers:

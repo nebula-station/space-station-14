@@ -4,6 +4,10 @@
   name: wooden television
   description: Finally, some decent reception around here...
   components:
+  # Nebula start
+  - type: EdgeConnection
+    allowedDirections: None
+  # Nebula end
   - type: Sprite
     noRot: true
     drawdepth: SmallObjects

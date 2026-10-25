@@ -57,6 +57,10 @@
   name: space villain arcade
   parent: ArcadeBase
   components:
+  # Nebula start
+  - type: EdgeConnection
+    allowedDirections: None
+  # Nebula end
   - type: Sprite
     sprite: Structures/Machines/arcade.rsi
     layers:
@@ -197,6 +201,10 @@
   name: NT block game
   parent: ArcadeBase
   components:
+  # Nebula start
+  - type: EdgeConnection
+    allowedDirections: None
+  # Nebula end
   - type: Sprite
     sprite: Structures/Machines/arcade.rsi
     layers:

@@ -4,6 +4,10 @@
   name: tech disk terminal
   description: A terminal used to print out technology disks.
   components:
+  # Nebula start
+  - type: EdgeConnection
+    allowedDirections: None
+  # Nebula end
   - type: Sprite
     noRot: true
     sprite: Structures/Machines/tech_disk_printer.rsi

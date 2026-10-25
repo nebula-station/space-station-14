@@ -86,7 +86,21 @@
   - type: Sprite
     sprite: Structures/Machines/computers.rsi
     drawdepth: Objects
-    state: broken
+    # Nebula start
+    layers:
+    - map: [ "computerLayerBody" ]
+      state: broken
+  - type: Appearance
+  - type: EdgeConnection
+    connectionKey: computer-console
+    allowedDirections: East, West
+    baseState: broken
+    sprite: _Orion/Structures/Machines/computers.rsi
+    states:
+      East: computer_l-broken
+      West: computer_r-broken
+      East, West: computer_l_r-broken
+  # Nebula end
   - type: Destructible
     thresholds:
     - trigger:
