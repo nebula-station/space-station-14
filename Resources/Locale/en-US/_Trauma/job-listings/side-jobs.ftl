@@ -5,7 +5,7 @@ side-job-steal-description-multiple = Steal all {THE($itemName)}, then scan them
 
 side-job-kill-title = Kill {$targetName}, {CAPITALIZE($job)}
 
-side-job-hack-comms-computer-name = Call in the syndicate battlecruiser
-side-job-hack-comms-computer-description = You have done great work. The station is weak. Hack the communications console and broadcast out to the whole syndicate. They will come.
+side-job-hack-comms-computer-name = Call in a syndicate lone operative
+side-job-hack-comms-computer-description = You have done great work. The station is weak. Hack the communications console and send a signal to the syndicate. A lone operative will answer.
 
 steal-target-groups-comms-computer = Comms Computer
