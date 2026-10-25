@@ -28,7 +28,7 @@
     sprite: Objects/Weapons/Melee/fireaxe.rsi
     state: icon
   - type: MeleeWeapon
-    heavyStaminaCost: 15 # Trauma
+    heavyStaminaCost: 5 # Nebula edit
     wideAnimationRotation: 135
     swingLeft: true
     attackRate: 0.75

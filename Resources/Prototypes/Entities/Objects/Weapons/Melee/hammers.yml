@@ -8,6 +8,7 @@
     sprite: Objects/Weapons/Melee/sledgehammer.rsi
     state: icon
   - type: MeleeWeapon
+    heavyStaminaCost: 3.3 # Nebula edit
     wideAnimationRotation: -135
     damage:
       types:

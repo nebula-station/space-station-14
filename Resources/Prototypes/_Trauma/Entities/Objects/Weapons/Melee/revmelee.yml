@@ -362,7 +362,7 @@
   - type: MeleeWeapon
     attackRate: 0.625
     animationRotation: -45
-    heavyStaminaCost: 25
+    heavyStaminaCost: 8.3 # Nebula edit
     range: 1.70
     damage:
       types:

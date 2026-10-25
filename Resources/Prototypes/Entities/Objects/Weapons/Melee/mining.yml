@@ -16,6 +16,7 @@
     sprite: Objects/Weapons/Melee/pickaxe.rsi
     state: pickaxe
   - type: MeleeWeapon
+    heavyStaminaCost: 3.3 # Nebula edit
     attackRate: 0.7
     animationRotation: -45 # WWDP
     wideAnimationRotation: -135

@@ -273,6 +273,7 @@
     shape:
     - 0,0,1,2
   - type: MeleeWeapon
+    heavyStaminaCost: 3.3 # Nebula edit
     attackRate: 1
     damage:
       types:

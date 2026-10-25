@@ -22,6 +22,7 @@
   - type: DisarmMalus
   - type: Prying
   - type: MeleeWeapon
+    heavyStaminaCost: 3.3 # Nebula edit
     range: 2 # Enough range so if you're skilled enough you can avoid being hit by a slow enemy
     attackRate: 1
     animationRotation: -135
