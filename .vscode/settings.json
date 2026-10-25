@@ -1,0 +1,5 @@
+{
+    "todo-tree.filtering.includeGlobs": [
+        "**/_Nebula/**"
+    ]
+}
