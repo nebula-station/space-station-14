@@ -8,6 +8,7 @@ using Content.Trauma.Common.CollectiveMind;
 using Robust.Shared.Utility;
 // </Trauma>
 using System.Globalization;
+using Content.Server._Orion.ServerProtection.Chat; // Nebula edit
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
@@ -48,6 +49,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private IReplayRecordingManager _replay = default!;
     [Dependency] private IConfigurationManager _configurationManager = default!;
     [Dependency] private IChatManager _chatManager = default!;
+    [Dependency] private ChatProtectionSystem _chatProtection = default!; // Nebula edit
     [Dependency] private IChatSanitizationManager _sanitizer = default!;
     [Dependency] private IAdminManager _adminManager = default!;
     [Dependency] private IPlayerManager _playerManager = default!;
@@ -193,6 +195,11 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (!CanSendInGame(message, shell, player))
             return;
 
+        // Nebula start
+        if (player != null && _chatProtection.CheckIC(player, message))
+            return;
+        // Nebula end
+
         ignoreActionBlocker = CheckIgnoreSpeechBlocker(source, ignoreActionBlocker);
 
         // this method is a disaster
@@ -314,6 +321,11 @@ public sealed partial class ChatSystem : SharedChatSystem
         // in-game IC messages.
         if (player?.AttachedEntity is not { Valid: true } entity || source != entity)
             return;
+
+        // Nebula start
+        if (_chatProtection.CheckOOC(player, message))
+            return;
+        // Nebula end
 
         message = SanitizeInGameOOCMessage(message);
 

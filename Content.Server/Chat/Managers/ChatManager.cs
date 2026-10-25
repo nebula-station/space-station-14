@@ -5,6 +5,7 @@ using Content.Trauma.Common.LinkAccount;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.InteropServices;
+using Content.Server._Orion.ServerProtection.Chat; // Nebula edit
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
@@ -243,6 +244,11 @@ internal sealed partial class ChatManager : IChatManager
     {
         if (HandleRateLimit(player) != RateLimitStatus.Allowed)
             return;
+
+        // Nebula start
+        if (_entityManager.System<ChatProtectionSystem>().CheckOOC(player, message))
+            return;
+        // Nebula end
 
         // Check if message exceeds the character limit
         if (message.Length > MaxMessageLength)
