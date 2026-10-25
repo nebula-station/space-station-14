@@ -24,14 +24,14 @@
   components:
   - type: StationEvent
     earliestStart: 15
-    weight: 6
+    weight: 3 # Nebula edit
     duration: 50
   - type: VentCrittersRule
     entries:
     - id: SpawnMobMouse # Trauma - replaces individual mice
-      prob: 0.05
+      prob: 0.025 # Nebula edit
     - id: MobMouseCancer
-      prob: 0.02
+      prob: 0.01 # Nebula edit
 # Events always spawn a critter regardless of Probability https://github.com/space-wizards/space-station-14/issues/28480 I added the Rat King to their own event with a player cap.
 
 - type: entity
@@ -40,7 +40,7 @@
   components:
   - type: StationEvent
     earliestStart: 15
-    weight: 6
+    weight: 3 # Nebula edit
     duration: 50
     occursDuringRoundEnd: false
     minimumPlayers: 30 # Hopefully this is enough for the Rat King's potential Army (it was not, raised from 15 -> 30)
@@ -48,16 +48,16 @@
     entries:
     # <Trauma>
     - id: MobLootbug
-      prob: 0.008
+      prob: 0.004 # Nebula edit
     # </Trauma>
     - id: MobMouse
-      prob: 0.02
+      prob: 0.01 # Nebula edit
     - id: MobMouse1
-      prob: 0.02
+      prob: 0.01 # Nebula edit
     - id: MobMouse2
-      prob: 0.02
+      prob: 0.01 # Nebula edit
     - id: MobMouseCancer
-      prob: 0.001
+      prob: 0.0005 # Nebula edit
     specialEntries:
     - id: SpawnPointGhostRatKing
       prob: 0.001
@@ -67,34 +67,34 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    weight: 6
+    weight: 3 # Nebula edit
     duration: 50
   - type: VentCrittersRule
     entries:
     - id: MobCockroach
-      prob: 0.03
+      prob: 0.015 # Nebula edit
     - id: MobMothmaggot # Trauma - was MobMothroach
-      prob: 0.008
+      prob: 0.004 # Nebula edit
     - id: MobLootbug # Goobstation
-      prob: 0.006
+      prob: 0.003 # Nebula edit
     - id: MobMoproach
-      prob: 0.004
+      prob: 0.002 # Nebula edit
 
 - type: entity
   id: SnailMigrationLowPop
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    weight: 6
+    weight: 3 # Nebula edit
     duration: 50
   - type: VentCrittersRule
     entries:
     - id: MobSnail
-      prob: 0.02
+      prob: 0.01 # Nebula edit
     - id: MobSnailSpeed
-      prob: 0.002
+      prob: 0.001 # Nebula edit
     - id: MobSnailMoth
-      prob: 0.002
+      prob: 0.001 # Nebula edit
 
 - type: entity
   id: SnailMigration
@@ -102,19 +102,19 @@
   components:
   - type: StationEvent
     earliestStart: 15
-    weight: 6
+    weight: 3 # Nebula edit
     duration: 50
     minimumPlayers: 30
   - type: VentCrittersRule
     entries:
     - id: MobSnail
-      prob: 0.02
+      prob: 0.01 # Nebula edit
     - id: MobSnailSpeed
-      prob: 0.002
+      prob: 0.001 # Nebula edit
     - id: MobSnailMoth
-      prob: 0.002
+      prob: 0.001 # Nebula edit
     - id: MobSnailInstantDeath
-      prob: 0.00004 # Trauma - 4x
+      prob: 0.00002 # Nebula edit; Trauma - 4x
 
 - type: entity
   parent: BaseStationEventShortDelay
@@ -125,13 +125,13 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
-    weight: 6 # Slightly more common than other hordes
+    weight: 3 # Nebula edit; Slightly more common than other hordes
     duration: 5
     maxDuration: 20
     reoccurrenceDelay: 15 # Shorter because this event is basically a nat zero on the round. It only exists to potentially confuse security or the crew
   - type: VentHordeRule
     table: !type:GroupSelector
-      rolls: 3,5
+      rolls: 2,3 # Nebula edit
       children:
       - !type:GroupSelector
         children: # Increased chances for special snails on purpose. Makes it a bit more interesting.

@@ -17,7 +17,7 @@
       Stomach: OrganAnimalStomachFast
       Liver: OrganAnimalLiver
       Kidneys: OrganAnimalKidneys
-      EggSack: OrganMouseEggSack
+      # EggSack: OrganMouseEggSack # Nebula edit
 
 ## Base
 
