@@ -1,6 +1,13 @@
 <Project>
   <PropertyGroup>
-  	<!-- W dogshit language/build system -->
+        <!-- W dogshit language/build system -->
     <DefineConstants Condition="$(ExtraDefineConstants) != ''">$(DefineConstants);$(ExtraDefineConstants)</DefineConstants>
   </PropertyGroup>
+
+<!-- nebula start -->
+  <PropertyGroup>
+    <WarningsNotAsErrors>NU1900;NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
+    <DefineConstants>$(DefineConstants);USE_ROBUST</DefineConstants>
+  </PropertyGroup>
+<!-- nebula end -->
 </Project>

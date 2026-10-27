@@ -451,15 +451,16 @@ public sealed partial class ChatUIController : UIController
 
     private void AddSpeechBubble(ChatMessage msg, SpeechBubble.SpeechType speechType)
     {
-        var ent = EntityManager.GetEntity(msg.SenderEntity);
-
-        if (!EntityManager.EntityExists(ent))
+        // nebula start
+        if (!EntityManager.TryGetEntity(msg.SenderEntity, out var ent)
+            || !EntityManager.TryGetComponent(ent.Value, out TransformComponent? _))
+        // nebula end
         {
             _sawmill.Debug("Got local chat message with invalid sender entity: {0}", msg.SenderEntity);
             return;
         }
 
-        EnqueueSpeechBubble(ent, msg, speechType);
+        EnqueueSpeechBubble(ent.Value, msg, speechType); // nebula 
     }
 
     private void CreateSpeechBubble(EntityUid entity, SpeechBubbleData speechData)
@@ -503,7 +504,10 @@ public sealed partial class ChatUIController : UIController
     private void EnqueueSpeechBubble(EntityUid entity, ChatMessage message, SpeechBubble.SpeechType speechType)
     {
         // Don't enqueue speech bubbles for other maps. TODO: Support multiple viewports/maps?
-        if (EntityManager.GetComponent<TransformComponent>(entity).MapID != _eye.CurrentEye.Position.MapId)
+        // nebula start
+        if (!EntityManager.TryGetComponent(entity, out TransformComponent? xform)
+            || xform.MapID != _eye.CurrentEye.Position.MapId)
+        // nebula end
             return;
 
         if (!_queuedSpeechBubbles.TryGetValue(entity, out var queueData))

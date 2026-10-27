@@ -67,10 +67,12 @@ public sealed partial class CopyrightedAudioSystem : EntitySystem
         var audio = _query.Comp(uid);
         _audio.SetState(uid, state, force: true, component: audio);
 
-        // prevent server state trolling it (jukebox mostly)
-#if !USE_ROBUST
-        EntityManager.SetComponentNetSync(uid, audio, !muted);
-#endif
+        // nebula start
+        //#if !USE_ROBUST
+        //        EntityManager.SetComponentNetSync(uid, audio, !muted);
+        //#endif
+        // nebula end
+        
         audio.NetSyncEnabled = !muted;
     }
 }

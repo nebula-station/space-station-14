@@ -18,7 +18,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" />
-    <PackageReference Include="TraumaStation.ImageSharp" />
   </ItemGroup>
 
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
