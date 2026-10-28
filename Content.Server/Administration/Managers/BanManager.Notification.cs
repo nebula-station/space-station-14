@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using Content.Server.Database; // Nebula edit
 
 namespace Content.Server.Administration.Managers;
 
@@ -46,6 +47,15 @@ public sealed partial class BanManager
             _sawmill.Warning($"Ban in notification ({data.BanId}) didn't exist?");
             return;
         }
+
+        // Nebula edit start
+        var scope = await _db.GetRecordScopeServerId();
+        if (!RecordScope.Matches(ban.ServerId, scope))
+        {
+            _sawmill.Verbose($"Ignoring ban notification {data.BanId} for another server");
+            return;
+        }
+        // Nebula edit end
 
         KickMatchingConnectedPlayers(ban, "ban notification");
     }

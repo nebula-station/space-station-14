@@ -79,7 +79,10 @@ namespace Content.Server.Database
             NetUserId? userId,
             ImmutableArray<byte>? hwId,
             ImmutableArray<ImmutableArray<byte>>? modernHWIds,
-            BanType type)
+            // Nebula edit start
+            BanType type,
+            int? scopeServerId)
+            // Nebula edit end
         {
             if (address == null && userId == null && hwId == null)
             {
@@ -90,7 +93,7 @@ namespace Content.Server.Database
 
             var exempt = await GetBanExemptionCore(db, userId);
             var newPlayer = userId == null || !await PlayerRecordExists(db, userId.Value);
-            var query = MakeBanLookupQuery(address, userId, hwId, modernHWIds, db, includeUnbanned: false, exempt, newPlayer, type)
+            var query = MakeBanLookupQuery(address, userId, hwId, modernHWIds, db, includeUnbanned: false, exempt, newPlayer, type, scopeServerId) // Nebula edit
                 .OrderByDescending(b => b.BanTime);
 
             var ban = await query.FirstOrDefaultAsync();
@@ -103,7 +106,10 @@ namespace Content.Server.Database
             ImmutableArray<byte>? hwId,
             ImmutableArray<ImmutableArray<byte>>? modernHWIds,
             bool includeUnbanned,
-            BanType type)
+            // Nebula edit start
+            BanType type,
+            int? scopeServerId)
+            // Nebula edit end
         {
             if (address == null && userId == null && hwId == null)
             {
@@ -114,7 +120,7 @@ namespace Content.Server.Database
 
             var exempt = type == BanType.Role ? null : await GetBanExemptionCore(db, userId);
             var newPlayer = !await db.PgDbContext.Player.AnyAsync(p => p.UserId == userId);
-            var query = MakeBanLookupQuery(address, userId, hwId, modernHWIds, db, includeUnbanned, exempt, newPlayer, type);
+            var query = MakeBanLookupQuery(address, userId, hwId, modernHWIds, db, includeUnbanned, exempt, newPlayer, type, scopeServerId); // Nebula edit
             var queryBans = await query.ToArrayAsync();
             var bans = new List<BanDef>(queryBans.Length);
 
@@ -141,7 +147,10 @@ namespace Content.Server.Database
             bool includeUnbanned,
             ServerBanExemptFlags? exemptFlags,
             bool newPlayer,
-            BanType type)
+            // Nebula edit start
+            BanType type,
+            int? scopeServerId)
+            // Nebula edit end
         {
             DebugTools.Assert(!(address == null && userId == null && hwId == null));
 
@@ -202,6 +211,7 @@ namespace Content.Server.Database
 
             return banQuery
                 .Where(b => b.Type == type)
+                .InScope(scopeServerId) // Nebula edit
                 .ApplyIncludes(GetBanDefIncludes(type))
                 .AsSplitQuery();
         }
@@ -228,7 +238,7 @@ namespace Content.Server.Database
                 roles = [..ban.Roles!.Select(br => new BanRoleDef(br.RoleType, br.RoleId))];
             }
 
-            return new BanDef(
+            var banDef = new BanDef( // Nebula edit
                 ban.Id,
                 ban.Type,
                 [..ban.Players!.Select(bp => new NetUserId(bp.UserId))],
@@ -244,6 +254,10 @@ namespace Content.Server.Database
                 unbanDef,
                 ban.ExemptFlags,
                 roles);
+            // Nebula edit start
+            banDef.ServerId = ban.ServerId;
+            return banDef;
+            // Nebula edit end
         }
 
         private static UnbanDef? ConvertUnban(Unban? unban)
@@ -283,6 +297,7 @@ namespace Content.Server.Database
                 PlaytimeAtNote = ban.PlaytimeAtNote,
                 Players = [..ban.UserIds.Select(bp => new BanPlayer { UserId = bp.UserId })],
                 ExemptFlags = ban.ExemptFlags,
+                ServerId = ban.ServerId, // Nebula edit
                 Roles = ban.Roles == null
                     ? []
                     : ban.Roles.Value.Select(brd => new BanRole

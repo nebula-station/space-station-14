@@ -369,7 +369,10 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     {
         var ban = await _db.GetBanAsync(banId);
 
-        if (ban == null)
+        // Nebula edit start
+        var scope = await _db.GetRecordScopeServerId();
+        if (ban == null || !RecordScope.Matches(ban.ServerId, scope))
+        // Nebula edit end
         {
             return $"No ban found with id {banId}";
         }

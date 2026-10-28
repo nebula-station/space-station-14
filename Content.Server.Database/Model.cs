@@ -977,7 +977,7 @@ namespace Content.Server.Database
     }
 
     [Index(nameof(PlayerUserId))]
-    public class AdminNote : IAdminRemarksCommon
+    public partial class AdminNote : IAdminRemarksCommon // Nebula edit
     {
         [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int Id { get; set; }
 
@@ -1011,7 +1011,7 @@ namespace Content.Server.Database
     }
 
     [Index(nameof(PlayerUserId))]
-    public class AdminWatchlist : IAdminRemarksCommon
+    public partial class AdminWatchlist : IAdminRemarksCommon // Nebula edit
     {
         [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int Id { get; set; }
 
@@ -1042,7 +1042,7 @@ namespace Content.Server.Database
     }
 
     [Index(nameof(PlayerUserId))]
-    public class AdminMessage : IAdminRemarksCommon
+    public partial class AdminMessage : IAdminRemarksCommon // Nebula edit
     {
         [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int Id { get; set; }
 

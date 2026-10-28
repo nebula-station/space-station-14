@@ -211,7 +211,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Property<bool>("Seen")
                         .HasColumnType("INTEGER")
                         .HasColumnName("seen");
-
+                    // Nebula edit start
+                    b.Property<int?>("ServerId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("server_id");
+                    // Nebula edit end
                     b.HasKey("Id")
                         .HasName("PK_admin_messages");
 
@@ -226,7 +230,10 @@ namespace Content.Server.Database.Migrations.Sqlite
 
                     b.HasIndex("RoundId")
                         .HasDatabaseName("IX_admin_messages_round_id");
-
+                    // Nebula edit start
+                    b.HasIndex("ServerId")
+                        .HasDatabaseName("IX_admin_messages_server_id");
+                    // Nebula edit end
                     b.ToTable("admin_messages", null, t =>
                         {
                             t.HasCheckConstraint("NotDismissedAndSeen", "NOT dismissed OR seen");
@@ -293,7 +300,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Property<bool>("Secret")
                         .HasColumnType("INTEGER")
                         .HasColumnName("secret");
-
+                    // Nebula edit start
+                    b.Property<int?>("ServerId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("server_id");
+                    // Nebula edit end
                     b.Property<int>("Severity")
                         .HasColumnType("INTEGER")
                         .HasColumnName("severity");
@@ -312,6 +323,11 @@ namespace Content.Server.Database.Migrations.Sqlite
 
                     b.HasIndex("RoundId")
                         .HasDatabaseName("IX_admin_notes_round_id");
+
+                    // Nebula edit start
+                    b.HasIndex("ServerId")
+                        .HasDatabaseName("IX_admin_notes_server_id");
+                    // Nebula edit end
 
                     b.ToTable("admin_notes", (string)null);
                 });
@@ -418,6 +434,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("round_id");
 
+                    // Nebula edit start
+                    b.Property<int?>("ServerId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("server_id");
+                    // Nebula edit end
                     b.HasKey("Id")
                         .HasName("PK_admin_watchlists");
 
@@ -432,7 +453,10 @@ namespace Content.Server.Database.Migrations.Sqlite
 
                     b.HasIndex("RoundId")
                         .HasDatabaseName("IX_admin_watchlists_round_id");
-
+                    // Nebula edit start
+                    b.HasIndex("ServerId")
+                        .HasDatabaseName("IX_admin_watchlists_server_id");
+                    // Nebula edit end 
                     b.ToTable("admin_watchlists", (string)null);
                 });
 
@@ -536,7 +560,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("reason");
-
+                    // Nebula edit start
+                    b.Property<int?>("ServerId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("server_id");
+                    // Nebula edit end
                     b.Property<int>("Severity")
                         .HasColumnType("INTEGER")
                         .HasColumnName("severity");
@@ -551,7 +579,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.HasIndex("BanningAdmin");
 
                     b.HasIndex("LastEditedById");
-
+                    // Nebula edit start
+                    b.HasIndex("ServerId")
+                        .HasDatabaseName("IX_ban_server_id");
+                    // Nebula edit end
                     b.ToTable("ban", null, t =>
                         {
                             t.HasCheckConstraint("NoExemptOnRoleBan", "type = 0 OR exempt_flags = 0");
@@ -1905,7 +1936,13 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .WithMany()
                         .HasForeignKey("RoundId")
                         .HasConstraintName("FK_admin_messages_round_round_id");
-
+                    // Nebula edit start
+                    b.HasOne("Content.Server.Database.Server", "Server")
+                        .WithMany()
+                        .HasForeignKey("ServerId")
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .HasConstraintName("FK_admin_messages_server_server_id");
+                    // Nebula edit end
                     b.Navigation("CreatedBy");
 
                     b.Navigation("DeletedBy");
@@ -1915,6 +1952,8 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Player");
 
                     b.Navigation("Round");
+
+                    b.Navigation("Server"); // Nebula edit
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminNote", b =>
@@ -1952,6 +1991,14 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasForeignKey("RoundId")
                         .HasConstraintName("FK_admin_notes_round_round_id");
 
+                    // Nebula edit start
+                    b.HasOne("Content.Server.Database.Server", "Server")
+                        .WithMany()
+                        .HasForeignKey("ServerId")
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .HasConstraintName("FK_admin_notes_server_server_id");
+                    // Nebula edit end
+
                     b.Navigation("CreatedBy");
 
                     b.Navigation("DeletedBy");
@@ -1961,6 +2008,8 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Player");
 
                     b.Navigation("Round");
+
+                    b.Navigation("Server"); // Nebula edit
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminRankFlag", b =>
@@ -2009,7 +2058,13 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .WithMany()
                         .HasForeignKey("RoundId")
                         .HasConstraintName("FK_admin_watchlists_round_round_id");
-
+                    // Nebula edit start
+                    b.HasOne("Content.Server.Database.Server", "Server")
+                        .WithMany()
+                        .HasForeignKey("ServerId")
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .HasConstraintName("FK_admin_watchlists_server_server_id");
+                    // Nebula edit end
                     b.Navigation("CreatedBy");
 
                     b.Navigation("DeletedBy");
@@ -2019,6 +2074,8 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Player");
 
                     b.Navigation("Round");
+
+                    b.Navigation("Server"); // Nebula edit
                 });
 
             modelBuilder.Entity("Content.Server.Database.Antag", b =>
@@ -2049,9 +2106,18 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .OnDelete(DeleteBehavior.SetNull)
                         .HasConstraintName("FK_ban_player_last_edited_by_id");
 
+                    // Nebula edit start
+                    b.HasOne("Content.Server.Database.Server", "Server")
+                        .WithMany()
+                        .HasForeignKey("ServerId")
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .HasConstraintName("FK_ban_server_server_id");
+                    // Nebula edit end
                     b.Navigation("CreatedBy");
 
                     b.Navigation("LastEditedBy");
+
+                    b.Navigation("Server"); // Nebula edit
                 });
 
             modelBuilder.Entity("Content.Server.Database.BanAddress", b =>

@@ -67,6 +67,8 @@ internal static class ModelBan
 
         modelBuilder.Entity<Ban>()
             .ToTable(t => t.HasCheckConstraint("NoExemptOnRoleBan", $"type = {(int)BanType.Server} OR exempt_flags = 0"));
+
+        RecordScopeModel.Configure(modelBuilder); // Nebula edit
     }
 }
 
@@ -88,7 +90,7 @@ internal static class ModelBan
 /// ("unbanned") by an admin, which is stored as an <see cref="Unban"/> entity existing for this ban.
 /// </para>
 /// </remarks>
-public sealed class Ban
+public sealed partial class Ban // Nebula edit
 {
     public int Id { get; set; }
 

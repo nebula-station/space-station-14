@@ -134,6 +134,10 @@ round_end_role = ""
 # Also used in some places to get the server name in a server family.
 server_name = "unknown"
 
+[nebula]
+# per-server bans and notes. off shares them. same value on every process
+isolate_records = false
+
 [database]
 # The database engine to use. Either "sqlite" or "postgres".
 engine = "sqlite"

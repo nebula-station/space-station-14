@@ -31,7 +31,10 @@ namespace Content.Server.Administration.Commands
 
             var ban = await _dbManager.GetBanAsync(banId);
 
-            if (ban == null)
+            // Nebula edit start
+            var scope = await _dbManager.GetRecordScopeServerId();
+            if (ban == null || !RecordScope.Matches(ban.ServerId, scope))
+            // Nebula edit end
             {
                 shell.WriteLine($"No ban found with id {banId}");
                 return;

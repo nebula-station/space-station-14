@@ -92,11 +92,14 @@ namespace Content.Server.Database
             NetUserId? userId,
             ImmutableArray<byte>? hwId,
             ImmutableArray<ImmutableArray<byte>>? modernHWIds,
-            BanType type)
+            // Nebula edit start
+            BanType type,
+            int? scopeServerId)
+            // Nebula edit end
         {
             await using var db = await GetDbImpl();
 
-            return (await GetBanQueryAsync(db, address, userId, hwId, modernHWIds, includeUnbanned: false, type)).FirstOrDefault();
+            return (await GetBanQueryAsync(db, address, userId, hwId, modernHWIds, includeUnbanned: false, type, scopeServerId)).FirstOrDefault(); // Nebula edit
         }
 
         public override async Task<List<BanDef>> GetBansAsync(
@@ -105,11 +108,14 @@ namespace Content.Server.Database
             ImmutableArray<byte>? hwId,
             ImmutableArray<ImmutableArray<byte>>? modernHWIds,
             bool includeUnbanned,
-            BanType type)
+            // Nebula edit start
+            BanType type,
+            int? scopeServerId)
+            // Nebula edit end
         {
             await using var db = await GetDbImpl();
 
-            return (await GetBanQueryAsync(db, address, userId, hwId, modernHWIds, includeUnbanned, type)).ToList();
+            return (await GetBanQueryAsync(db, address, userId, hwId, modernHWIds, includeUnbanned, type, scopeServerId)).ToList(); // Nebula edit
         }
 
         private async Task<IEnumerable<BanDef>> GetBanQueryAsync(
@@ -119,7 +125,10 @@ namespace Content.Server.Database
             ImmutableArray<byte>? hwId,
             ImmutableArray<ImmutableArray<byte>>? modernHWIds,
             bool includeUnbanned,
-            BanType type)
+            // Nebula edit start
+            BanType type,
+            int? scopeServerId)
+            // Nebula edit end
         {
             var exempt = await GetBanExemptionCore(db, userId);
 
@@ -127,7 +136,7 @@ namespace Content.Server.Database
 
             // SQLite can't do the net masking stuff we need to match IP address ranges.
             // So just pull down the whole list into memory.
-            var queryBans = await GetAllBans(db.SqliteDbContext, includeUnbanned, exempt, type);
+            var queryBans = await GetAllBans(db.SqliteDbContext, includeUnbanned, exempt, type, scopeServerId); // Nebula edit
 
             var playerInfo = new BanMatcher.PlayerInfo
             {
@@ -147,9 +156,12 @@ namespace Content.Server.Database
         private static async Task<List<Ban>> GetAllBans(SqliteServerDbContext db,
             bool includeUnbanned,
             ServerBanExemptFlags? exemptFlags,
-            BanType type)
+            // Nebula edit start
+            BanType type,
+            int? scopeServerId)
+            // Nebula edit end
         {
-            var query = db.Ban.Where(b => b.Type == type).ApplyIncludes(GetBanDefIncludes(type));
+            var query = db.Ban.Where(b => b.Type == type).InScope(scopeServerId).ApplyIncludes(GetBanDefIncludes(type)); // Nebula edit
             if (!includeUnbanned)
             {
                 query = query.Where(p =>
@@ -186,6 +198,7 @@ namespace Content.Server.Database
                 PlaytimeAtNote = ban.PlaytimeAtNote,
                 Players = [..ban.UserIds.Select(bp => new BanPlayer { UserId = bp.UserId })],
                 ExemptFlags = ban.ExemptFlags,
+                ServerId = ban.ServerId, // Nebula edit
                 Roles = ban.Roles == null
                     ? []
                     : ban.Roles.Value.Select(brd => new BanRole
@@ -238,7 +251,7 @@ namespace Content.Server.Database
                 roles = [..ban.Roles!.Select(br => new BanRoleDef(br.RoleType, br.RoleId))];
             }
 
-            return new BanDef(
+            var banDef = new BanDef( // Nebula edit
                 ban.Id,
                 ban.Type,
                 [..ban.Players!.Select(bp => new NetUserId(bp.UserId))],
@@ -255,6 +268,10 @@ namespace Content.Server.Database
                 unban,
                 ban.ExemptFlags,
                 roles);
+            // Nebula edit start
+            banDef.ServerId = ban.ServerId;
+            return banDef;
+            // Nebula edit end
         }
 
         private static UnbanDef? ConvertUnban(Unban? unban)
