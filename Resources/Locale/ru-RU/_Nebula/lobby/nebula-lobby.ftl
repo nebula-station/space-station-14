@@ -4,7 +4,7 @@ nebula-lobby-round-time = Время раунда: { $hours }ч. { $minutes }м�
 
 nebula-lobby-button-changelog = Обновления
 nebula-lobby-button-link-account = Привязка
-nebula-lobby-button-discord-linked = Discord привязан
+nebula-lobby-button-discord-linked = Привязан
 
 nebula-lobby-players-popup-title = Игроки
 nebula-lobby-players-online = Онлайн

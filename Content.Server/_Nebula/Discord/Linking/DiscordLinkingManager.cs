@@ -33,7 +33,7 @@ public sealed partial class DiscordLinkingManager : IPostInjectInit
 
         if (_activeCodes.TryGetValue(user, out var active) && active.Expires > now)
         {
-            _net.ServerSendMessage(new DiscordLinkingCodeMsg { Code = active.Code }, channel);
+            _net.ServerSendMessage(new DiscordLinkingCodeMsg { Status = DiscordLinkingCodeStatus.Ok, Code = active.Code }, channel);
             return;
         }
 
@@ -44,16 +44,21 @@ public sealed partial class DiscordLinkingManager : IPostInjectInit
         {
             var code = Guid.NewGuid();
 
-            if (!await _serverApi.RegisterLinkingCode(user.UserId, code))
-            {
-                _activeCodes.Remove(user);
-                return;
-            }
+            var status = await _serverApi.RegisterLinkingCode(user.UserId, code);
 
-            _activeCodes[user] = (code, now + CodeLifetime);
+            if (status == DiscordLinkingCodeStatus.Ok)
+                _activeCodes[user] = (code, now + CodeLifetime);
+            else
+                _activeCodes.Remove(user);
 
             if (channel.IsConnected)
-                _net.ServerSendMessage(new DiscordLinkingCodeMsg { Code = code }, channel);
+            {
+                _net.ServerSendMessage(new DiscordLinkingCodeMsg
+                {
+                    Status = status,
+                    Code = status == DiscordLinkingCodeStatus.Ok ? code : default,
+                }, channel);
+            }
         }
         finally
         {

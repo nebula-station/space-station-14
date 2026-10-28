@@ -4,7 +4,7 @@ nebula-lobby-round-time = Round time: { $hours }h { $minutes }m
 
 nebula-lobby-button-changelog = Changelog
 nebula-lobby-button-link-account = Link account
-nebula-lobby-button-discord-linked = Discord linked
+nebula-lobby-button-discord-linked = Linked
 
 nebula-lobby-players-popup-title = Players
 nebula-lobby-players-online = Online

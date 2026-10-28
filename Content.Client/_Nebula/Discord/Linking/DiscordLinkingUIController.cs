@@ -27,6 +27,7 @@ public sealed partial class DiscordLinkingUIController : UIController, IOnSystem
     private DiscordLinkingWindow? _window;
     private TimeSpan _disableUntil;
     private Guid _code;
+    private DiscordLinkingCodeStatus? _status;
     private TimeSpan _codeExpires;
     private static readonly TimeSpan CodeLifetime = TimeSpan.FromMinutes(3);
 
@@ -56,18 +57,30 @@ public sealed partial class DiscordLinkingUIController : UIController, IOnSystem
         if (LinkingSystem.IsVerified)
             text = $"{Loc.GetString("rmc-ui-link-discord-account-already-linked")}\n\n{text}";
 
+        var error = _status switch
+        {
+            DiscordLinkingCodeStatus.Unavailable => "nebula-discord-linking-unavailable",
+            DiscordLinkingCodeStatus.Error => "nebula-discord-linking-error",
+            _ => null,
+        };
+        if (error != null)
+            text = $"{text}\n\n{Loc.GetString(error)}";
+
         _window.Label.SetMarkupPermissive(text);
+        _window.CopyButton.Visible = !LinkingSystem.IsVerified && _status != DiscordLinkingCodeStatus.AlreadyLinked;
     }
 
-    private void OnCode(Guid code)
+    private void OnCode(DiscordLinkingCodeStatus status, Guid code)
     {
-        _code = code;
+        _status = status;
+        _code = status == DiscordLinkingCodeStatus.Ok ? code : default;
         _codeExpires = _timing.RealTime + CodeLifetime;
 
         if (_window == null)
             return;
 
-        _window.CopyButton.Disabled = false;
+        _window.CopyButton.Disabled = !HasValidCode;
+        UpdateLabel();
     }
 
     public void ToggleWindow()
@@ -76,6 +89,7 @@ public sealed partial class DiscordLinkingUIController : UIController, IOnSystem
         {
             LinkingSystem.RequestVerificationStatus();
 
+            _status = null;
             _window = new DiscordLinkingWindow();
             _window.OnClose += () => _window = null;
             UpdateLabel();

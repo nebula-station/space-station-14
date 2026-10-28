@@ -11,11 +11,11 @@ public sealed partial class DiscordLinkingManager : IPostInjectInit
 {
     [Dependency] private INetManager _net = default!;
 
-    public event Action<Guid>? CodeReceived;
+    public event Action<DiscordLinkingCodeStatus, Guid>? CodeReceived;
 
     private void OnCode(DiscordLinkingCodeMsg message)
     {
-        CodeReceived?.Invoke(message.Code);
+        CodeReceived?.Invoke(message.Status, message.Code);
     }
 
     void IPostInjectInit.PostInject()
