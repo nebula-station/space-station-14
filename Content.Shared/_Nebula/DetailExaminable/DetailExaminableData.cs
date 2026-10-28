@@ -50,7 +50,7 @@ public sealed partial class DetailExaminableData : IEquatable<DetailExaminableDa
     }
     private static string Sanitize(string text, int maxLength)
     {
-        var clean = FormattedMessage.RemoveMarkupOrThrow(text);
+        var clean = FormattedMessage.RemoveMarkupPermissive(text ?? string.Empty);
         return clean.Length > maxLength ? clean[..maxLength] : clean;
     }
 

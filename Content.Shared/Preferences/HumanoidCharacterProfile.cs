@@ -813,11 +813,9 @@ namespace Content.Shared.Preferences
                 width = Math.Clamp(Width, speciesPrototype.MinWidth, speciesPrototype.MaxWidth);
 
             var customSpeciesMaxLength = configManager.GetCVar(NCCVars.MaxCustomSpeciesLength);
-            string customSpecies;
-            if (CustomSpecies.Length > customSpeciesMaxLength)
-                customSpecies = FormattedMessage.RemoveMarkupOrThrow(CustomSpecies)[..customSpeciesMaxLength];
-            else
-                customSpecies = FormattedMessage.RemoveMarkupOrThrow(CustomSpecies);
+            var customSpecies = FormattedMessage.RemoveMarkupPermissive(CustomSpecies ?? string.Empty);
+            if (customSpecies.Length > customSpeciesMaxLength)
+                customSpecies = customSpecies[..customSpeciesMaxLength];
 
             var erpStatus = ERPStatus switch
             {
@@ -880,7 +878,7 @@ namespace Content.Shared.Preferences
             Height = height;
             Width = width;
             CustomSpecies = customSpecies;
-            DetailExaminableData = DetailExaminableData.Sanitized(configManager);
+            DetailExaminableData = (DetailExaminableData ?? new()).Sanitized(configManager);
             ERPStatus = erpStatus;
             // Nebula end
             Sex = sex;

@@ -19,7 +19,7 @@ public sealed partial class NCCVars
     ///     Sets the maximum length for OOC flavor text.
     /// </summary>
     public static readonly CVarDef<int> OOCMaxFlavorTextLength =
-        CVarDef.Create("ic.oocflavor_text_length", 2500, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("ic.oocflavor_text_length", 5000, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     ///     Sets the maximum length for character description text.

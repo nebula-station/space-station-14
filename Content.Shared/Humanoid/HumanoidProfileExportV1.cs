@@ -13,6 +13,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Content.Shared._Nebula.DetailExaminable;
+using Content.Shared._Nebula.ERP;
 
 namespace Content.Shared.Humanoid;
 
@@ -63,9 +64,6 @@ public sealed partial class HumanoidCharacterProfileV1
     [DataField]
     public ProtoId<SpeciesPrototype> Species;
 
-    [DataField] // Nebula
-    public string CustomSpecies;
-
     [DataField]
     public int Age;
 
@@ -76,14 +74,57 @@ public sealed partial class HumanoidCharacterProfileV1
     public Gender Gender;
 
     // Nebula start
-    [DataField]
-    public float Width;
 
     [DataField]
-    public float Height;
+    public string CustomSpecies = string.Empty;
 
     [DataField]
-    public DetailExaminableData DetailExaminableData;
+    public float Width = 1f;
+
+    [DataField]
+    public float Height = 1f;
+
+    [DataField]
+    public DetailExaminableData? DetailExaminableData;
+
+    [DataField("erpPreference")]
+    public string? ERPPreference;
+
+    [DataField]
+    public string FlavorText = string.Empty;
+
+    [DataField("oocFlavorText")]
+    public string OOCFlavorText = string.Empty;
+
+    [DataField]
+    public string CharacterFlavorText = string.Empty;
+
+    [DataField]
+    public string GreenFlavorText = string.Empty;
+
+    [DataField]
+    public string YellowFlavorText = string.Empty;
+
+    [DataField]
+    public string RedFlavorText = string.Empty;
+
+    [DataField]
+    public string TagsFlavorText = string.Empty;
+
+    [DataField]
+    public string LinksFlavorText = string.Empty;
+
+    [DataField("nsfwFlavorText")]
+    public string NSFWFlavorText = string.Empty;
+
+    [DataField("nsfwOOCFlavorText")]
+    public string NSFWOOCFlavorText = string.Empty;
+
+    [DataField("nsfwLinksFlavorText")]
+    public string NSFWLinksFlavorText = string.Empty;
+
+    [DataField("nsfwTagsFlavorText")]
+    public string NSFWTagsFlavorText = string.Empty;
     // Nebula end
 
     [DataField]
@@ -99,11 +140,13 @@ public sealed partial class HumanoidCharacterProfileV1
     /// Trauma - bark voice to use
     /// </summary>
     [DataField]
-    public ProtoId<BarkPrototype> BarkVoice;
+    public ProtoId<BarkPrototype> BarkVoice = HumanoidProfileSystem.DefaultBarkVoice;
 
     public HumanoidCharacterProfile ToV2()
     {
-        return new HumanoidCharacterProfile(Name, Species, Height, Width, string.Empty, DetailExaminableData, _Nebula.ERP.ERPStatus.Ask, Age, Sex, GetDefaultVoice(Species, Sex), Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts,
+        // Nebula edit
+        var erpStatus = Enum.TryParse<ERPStatus>(ERPPreference, out var status) ? status : ERPStatus.Ask;
+        return new HumanoidCharacterProfile(Name, Species, Height, Width, CustomSpecies, DetailExaminableData ?? GetFlatDetailExaminableData(), erpStatus, Age, Sex, GetDefaultVoice(Species, Sex), Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts,
             BarkVoice, new()); // Trauma
     }
 
@@ -112,9 +155,34 @@ public sealed partial class HumanoidCharacterProfileV1
     {
         var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
 
-        var speciesPrototye = prototypeManager.Index(species);
-        return speciesPrototye.GetDefaultSounds(sex); // Nebula edit
+        // Nebula edit start
+        if (!prototypeManager.TryIndex(species, out var speciesPrototye))
+            return HumanoidCharacterProfile.DefaultVoice;
+
+        return speciesPrototye.GetDefaultSounds(sex);
+        // Nebula edit end
     }
+
+    // Nebula start
+    private DetailExaminableData GetFlatDetailExaminableData()
+    {
+        return new DetailExaminableData
+        {
+            FlavorText = FlavorText,
+            OOCFlavorText = OOCFlavorText,
+            CharacterFlavorText = CharacterFlavorText,
+            GreenFlavorText = GreenFlavorText,
+            YellowFlavorText = YellowFlavorText,
+            RedFlavorText = RedFlavorText,
+            TagsFlavorText = TagsFlavorText,
+            LinksFlavorText = LinksFlavorText,
+            NSFWFlavorText = NSFWFlavorText,
+            NSFWOOCFlavorText = NSFWOOCFlavorText,
+            NSFWLinksFlavorText = NSFWLinksFlavorText,
+            NSFWTagsFlavorText = NSFWTagsFlavorText,
+        };
+    }
+    // Nebula end
 }
 
 
