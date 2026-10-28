@@ -60,8 +60,11 @@ public sealed partial class AdminLogsEui : BaseEui
 
         _adminManager.OnPermsChanged += OnPermsChanged;
 
-        var roundId = _filter.Round ?? CurrentRoundId;
-        await LoadFromDb(roundId);
+        // Nebula edit start
+        var roundId = await ResolveRound(_filter.Round ?? CurrentRoundId);
+        if (roundId != null)
+            await LoadFromDb(roundId.Value);
+        // Nebula edit end
     }
 
     private void ClientBatchSizeChanged(int value)
@@ -126,8 +129,14 @@ public sealed partial class AdminLogsEui : BaseEui
                     Limit = _clientBatchSize
                 };
 
-                var roundId = _filter.Round ??= CurrentRoundId;
-                await LoadFromDb(roundId);
+                // Nebula edit start
+                var roundId = await ResolveRound(_filter.Round ?? CurrentRoundId);
+                if (roundId == null)
+                    return;
+
+                _filter.Round = roundId;
+                await LoadFromDb(roundId.Value);
+                // Nebula edit end
 
                 SendLogs(true, _filter);
                 break;

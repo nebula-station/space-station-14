@@ -26,7 +26,7 @@ using MSLogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace Content.Server.Database
 {
-    public interface IServerDbManager
+    public partial interface IServerDbManager // Nebula edit
     {
         // <Trauma>
         #region Patrons
@@ -250,7 +250,7 @@ namespace Content.Server.Database
 
         #region Rounds
 
-        Task<int> AddNewRound(Server server, params Guid[] playerIds);
+        Task<(int Id, int Number)> AddNewRound(Server server, params Guid[] playerIds); // Nebula edit
         Task<Round> GetRound(int id);
         Task AddRoundPlayers(int id, params Guid[] playerIds);
 
@@ -755,7 +755,7 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.AddAdminRankAsync(rank, cancel));
         }
 
-        public Task<int> AddNewRound(Server server, params Guid[] playerIds)
+        public Task<(int Id, int Number)> AddNewRound(Server server, params Guid[] playerIds) // Nebula edit
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.AddNewRound(server, playerIds));

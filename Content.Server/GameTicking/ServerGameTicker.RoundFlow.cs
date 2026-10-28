@@ -384,7 +384,7 @@ public sealed partial class ServerGameTicker
 
         RoundLengthMetric.Set(0);
 
-        var startingEvent = new RoundStartingEvent(RoundId);
+        var startingEvent = new RoundStartingEvent(RoundDatabaseId); // Nebula edit
         RaiseLocalEvent(startingEvent);
 
         var origReadyPlayers = readyPlayers.ToArray();

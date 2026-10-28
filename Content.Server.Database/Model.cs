@@ -179,6 +179,12 @@ namespace Content.Server.Database
             modelBuilder.Entity<Round>()
                 .HasIndex(round => round.StartDate);
 
+            // Nebula edit start
+            modelBuilder.Entity<Round>()
+                .HasIndex(round => new { round.ServerId, round.Number })
+                .IsUnique();
+            // Nebula edit end
+
             modelBuilder.Entity<AdminLogPlayer>()
                 .HasKey(logPlayer => new { logPlayer.RoundId, logPlayer.LogId, logPlayer.PlayerUserId });
 
@@ -731,7 +737,7 @@ namespace Content.Server.Database
         public AdminRank Rank { get; set; } = default!;
     }
 
-    public class Round
+    public partial class Round // Nebula edit
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

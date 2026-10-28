@@ -128,7 +128,10 @@ public sealed partial class AdminNotesManager : IAdminNotesManager, IPostInjectI
         _sawmill.Info(sb.ToString());
 
         _systems.TryGetEntitySystem(out ServerGameTicker? ticker);
-        int? roundId = ticker == null || ticker.RoundId == 0 ? null : ticker.RoundId;
+        // Nebula edit start
+        int? roundId = ticker == null || ticker.RoundDatabaseId == 0 ? null : ticker.RoundDatabaseId;
+        int? roundNumber = ticker == null || ticker.RoundId == 0 ? null : ticker.RoundId;
+        // Nebula edit end
         var serverName = _config.GetCVar(CCVars.AdminLogsServerName); // This could probably be done another way, but this is fine. For displaying only.
         var createdAt = DateTime.UtcNow;
         var playtime = (await _db.GetPlayTimes(player)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall)?.TimeSpent ?? TimeSpan.Zero;
@@ -159,7 +162,7 @@ public sealed partial class AdminNotesManager : IAdminNotesManager, IPostInjectI
         var note = new SharedAdminNote(
             noteId,
             [(NetUserId) player],
-            roundId.HasValue ? [roundId.Value] : [],
+            roundNumber.HasValue ? [roundNumber.Value] : [], // Nebula edit
             serverName,
             playtime,
             type,

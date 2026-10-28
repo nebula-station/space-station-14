@@ -56,7 +56,7 @@ public static class AdminNotesExtensions
         return new SharedAdminNote(
             note.Id,
             [..note.Players.Select(p => p.UserId)],
-            [..note.Rounds.Select(r => r.Id)],
+            [..note.Rounds.Select(r => r.Number)], // Nebula edit
             note.Rounds.SingleOrDefault()?.Server.Name, // TODO: Show all server names?
             note.PlaytimeAtNote,
             type,

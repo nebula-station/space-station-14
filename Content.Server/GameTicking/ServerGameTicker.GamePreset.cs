@@ -238,6 +238,10 @@ public sealed partial class ServerGameTicker
         });
 
         _taskManager.BlockWaitOnTask(task);
-        RoundId = task.GetAwaiter().GetResult();
+        // Nebula edit start
+        var round = task.GetAwaiter().GetResult();
+        RoundDatabaseId = round.Id;
+        RoundId = round.Number;
+        // Nebula edit end
     }
 }

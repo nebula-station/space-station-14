@@ -229,11 +229,10 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Property<bool>("Seen")
                         .HasColumnType("boolean")
                         .HasColumnName("seen");
-                    // Nebula edit start
+
                     b.Property<int?>("ServerId")
                         .HasColumnType("integer")
                         .HasColumnName("server_id");
-                    // Nebula edit end
 
                     b.HasKey("Id")
                         .HasName("PK_admin_messages");
@@ -250,10 +249,8 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("RoundId")
                         .HasDatabaseName("IX_admin_messages_round_id");
 
-                    // Nebula edit start
                     b.HasIndex("ServerId")
                         .HasDatabaseName("IX_admin_messages_server_id");
-                    // Nebula edit end
 
                     b.ToTable("admin_messages", null, t =>
                         {
@@ -323,11 +320,10 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Property<bool>("Secret")
                         .HasColumnType("boolean")
                         .HasColumnName("secret");
-                    // Nebula edit start
+
                     b.Property<int?>("ServerId")
                         .HasColumnType("integer")
                         .HasColumnName("server_id");
-                    // Nebula edit end
 
                     b.Property<int>("Severity")
                         .HasColumnType("integer")
@@ -348,10 +344,8 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("RoundId")
                         .HasDatabaseName("IX_admin_notes_round_id");
 
-                    // Nebula edit start
                     b.HasIndex("ServerId")
                         .HasDatabaseName("IX_admin_notes_server_id");
-                    // Nebula edit end
 
                     b.ToTable("admin_notes", (string)null);
                 });
@@ -463,11 +457,11 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Property<int?>("RoundId")
                         .HasColumnType("integer")
                         .HasColumnName("round_id");
-                    // Nebula edit start
+
                     b.Property<int?>("ServerId")
                         .HasColumnType("integer")
                         .HasColumnName("server_id");
-                    // Nebula edit end
+
                     b.HasKey("Id")
                         .HasName("PK_admin_watchlists");
 
@@ -483,10 +477,8 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("RoundId")
                         .HasDatabaseName("IX_admin_watchlists_round_id");
 
-                    // Nebula edit start
                     b.HasIndex("ServerId")
                         .HasDatabaseName("IX_admin_watchlists_server_id");
-                    // Nebula edit end
 
                     b.ToTable("admin_watchlists", (string)null);
                 });
@@ -597,11 +589,10 @@ namespace Content.Server.Database.Migrations.Postgres
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("reason");
-                    // Nebula edit start
+
                     b.Property<int?>("ServerId")
                         .HasColumnType("integer")
                         .HasColumnName("server_id");
-                    // Nebula edit end
 
                     b.Property<int>("Severity")
                         .HasColumnType("integer")
@@ -618,10 +609,8 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     b.HasIndex("LastEditedById");
 
-                    // Nebula edit start
                     b.HasIndex("ServerId")
                         .HasDatabaseName("IX_ban_server_id");
-                    // Nebula edit end
 
                     b.ToTable("ban", null, t =>
                         {
@@ -1736,6 +1725,10 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("Number")
+                        .HasColumnType("integer")
+                        .HasColumnName("number");
+
                     b.Property<int>("ServerId")
                         .HasColumnType("integer")
                         .HasColumnName("server_id");
@@ -1747,10 +1740,10 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasKey("Id")
                         .HasName("PK_round");
 
-                    b.HasIndex("ServerId")
-                        .HasDatabaseName("IX_round_server_id");
-
                     b.HasIndex("StartDate");
+
+                    b.HasIndex("ServerId", "Number")
+                        .IsUnique();
 
                     b.ToTable("round", (string)null);
                 });
@@ -2038,13 +2031,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasForeignKey("RoundId")
                         .HasConstraintName("FK_admin_messages_round_round_id");
 
-                    // Nebula edit start
                     b.HasOne("Content.Server.Database.Server", "Server")
                         .WithMany()
                         .HasForeignKey("ServerId")
                         .OnDelete(DeleteBehavior.SetNull)
                         .HasConstraintName("FK_admin_messages_server_server_id");
-                    // Nebula edit end
 
                     b.Navigation("CreatedBy");
 
@@ -2056,7 +2047,7 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     b.Navigation("Round");
 
-                    b.Navigation("Server"); // Nebula edit
+                    b.Navigation("Server");
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminNote", b =>
@@ -2094,13 +2085,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasForeignKey("RoundId")
                         .HasConstraintName("FK_admin_notes_round_round_id");
 
-                    // Nebula edit start
                     b.HasOne("Content.Server.Database.Server", "Server")
                         .WithMany()
                         .HasForeignKey("ServerId")
                         .OnDelete(DeleteBehavior.SetNull)
                         .HasConstraintName("FK_admin_notes_server_server_id");
-                    // Nebula edit end
 
                     b.Navigation("CreatedBy");
 
@@ -2112,7 +2101,7 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     b.Navigation("Round");
 
-                    b.Navigation("Server"); // Nebula edit
+                    b.Navigation("Server");
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminRankFlag", b =>
@@ -2162,13 +2151,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasForeignKey("RoundId")
                         .HasConstraintName("FK_admin_watchlists_round_round_id");
 
-                    // Nebula edit start
                     b.HasOne("Content.Server.Database.Server", "Server")
                         .WithMany()
                         .HasForeignKey("ServerId")
                         .OnDelete(DeleteBehavior.SetNull)
                         .HasConstraintName("FK_admin_watchlists_server_server_id");
-                    // Nebula edit end
 
                     b.Navigation("CreatedBy");
 
@@ -2180,7 +2167,7 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     b.Navigation("Round");
 
-                    b.Navigation("Server"); // Nebula edit
+                    b.Navigation("Server");
                 });
 
             modelBuilder.Entity("Content.Server.Database.Antag", b =>
@@ -2211,19 +2198,17 @@ namespace Content.Server.Database.Migrations.Postgres
                         .OnDelete(DeleteBehavior.SetNull)
                         .HasConstraintName("FK_ban_player_last_edited_by_id");
 
-                    // Nebula edit start
                     b.HasOne("Content.Server.Database.Server", "Server")
                         .WithMany()
                         .HasForeignKey("ServerId")
                         .OnDelete(DeleteBehavior.SetNull)
                         .HasConstraintName("FK_ban_server_server_id");
-                    // Nebula edit end
 
                     b.Navigation("CreatedBy");
 
                     b.Navigation("LastEditedBy");
 
-                    b.Navigation("Server"); // Nebula edit
+                    b.Navigation("Server");
                 });
 
             modelBuilder.Entity("Content.Server.Database.BanAddress", b =>

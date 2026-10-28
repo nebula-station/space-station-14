@@ -174,10 +174,12 @@ namespace Content.Server.GameTicking
 
             async void AddPlayerToDb(Guid id)
             {
-                if (RoundId != 0 && RunLevel != GameRunLevel.PreRoundLobby)
+                // Nebula edit start
+                if (RoundDatabaseId != 0 && RunLevel != GameRunLevel.PreRoundLobby)
                 {
-                    await _db.AddRoundPlayers(RoundId, id);
+                    await _db.AddRoundPlayers(RoundDatabaseId, id);
                 }
+                // Nebula edit end
             }
         }
 
@@ -192,7 +194,7 @@ namespace Content.Server.GameTicking
                 _chatManager.DispatchServerMessage(session, Loc.GetString("game-ticker-player-join-game-message"));
 
             _playerGameStatuses[session.UserId] = PlayerGameStatus.JoinedGame;
-            _db.AddRoundPlayers(RoundId, session.UserId);
+            _db.AddRoundPlayers(RoundDatabaseId, session.UserId); // Nebula edit
             _lobbyInfoQueued = true; // Nebula
 
             if (_adminManager.HasAdminFlag(session, AdminFlags.Admin))
@@ -212,7 +214,7 @@ namespace Content.Server.GameTicking
         private void PlayerJoinLobby(ICommonSession session)
         {
             _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
-            _db.AddRoundPlayers(RoundId, session.UserId);
+            _db.AddRoundPlayers(RoundDatabaseId, session.UserId); // Nebula edit
 
             var client = session.Channel;
             RaiseNetworkEvent(new TickerJoinLobbyEvent(), client);

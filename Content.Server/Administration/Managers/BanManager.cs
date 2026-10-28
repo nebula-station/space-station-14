@@ -282,10 +282,12 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
         {
             roundIds = [..banInfo.RoundIds];
         }
-        else if (_systems.TryGetEntitySystem<ServerGameTicker>(out var ticker) && ticker.RoundId != 0)
+        // Nebula edit start
+        else if (_systems.TryGetEntitySystem<ServerGameTicker>(out var ticker) && ticker.RoundDatabaseId != 0)
         {
-            roundIds = [ticker.RoundId];
+            roundIds = [ticker.RoundDatabaseId];
         }
+        // Nebula edit end
         else
         {
             roundIds = [];

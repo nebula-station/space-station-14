@@ -116,7 +116,7 @@ namespace Content.Server.Voting
 
             var voteLogId = await _dbManager.CustomVoteLogAdd(
                 title,
-                ServerGameTicker.GetRoundId(_esm),
+                ServerGameTicker.GetRoundDatabaseId(_esm), // Nebula edit
                 shell.Player?.UserId,
                 [..options.Options.Select(x => x.text)]);
 

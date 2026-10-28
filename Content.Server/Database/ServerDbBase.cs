@@ -753,7 +753,7 @@ namespace Content.Server.Database
             await db.DbContext.SaveChangesAsync(cancel);
         }
 
-        public async Task<int> AddNewRound(Server server, params Guid[] playerIds)
+        public async Task<(int Id, int Number)> AddNewRound(Server server, params Guid[] playerIds) // Nebula edit
         {
             await using var db = await GetDb();
 
@@ -761,18 +761,25 @@ namespace Content.Server.Database
                 .Where(player => playerIds.Contains(player.UserId))
                 .ToListAsync();
 
+            // Nebula edit start
+            var number = await db.DbContext.Round
+                .Where(round => round.ServerId == server.Id)
+                .MaxAsync(round => (int?)round.Number) ?? 0;
+            // Nebula edit end
+
             var round = new Round
             {
                 StartDate = DateTime.UtcNow,
                 Players = players,
-                ServerId = server.Id
+                ServerId = server.Id,
+                Number = number + 1 // Nebula edit
             };
 
             db.DbContext.Round.Add(round);
 
             await db.DbContext.SaveChangesAsync();
 
-            return round.Id;
+            return (round.Id, round.Number); // Nebula edit
         }
 
         public async Task<Round> GetRound(int id)
@@ -814,7 +821,8 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             return new RoundRecord(
                 round.Id,
                 NormalizeDatabaseTime(round.StartDate),
-                MakeServerRecord(round.Server));
+                MakeServerRecord(round.Server),
+                round.Number); // Nebula edit
         }
 
         public async Task UpdateAdminRankAsync(AdminRank rank, CancellationToken cancel)
