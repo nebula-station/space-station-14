@@ -12,7 +12,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Server.Mapping
 {
-    [AdminCommand(AdminFlags.Server | AdminFlags.Mapping)]
+    [AdminCommand(AdminFlags.Mapping)] // Nebula
     public sealed partial class MappingCommand : LocalizedEntityCommands
     {
         [Dependency] private IResourceManager _resourceMgr = default!;
@@ -101,7 +101,7 @@ namespace Content.Server.Mapping
                 {
                     var path = new ResPath(args[1]);
                     toLoad = path.FilenameWithoutExtension;
-                    var opts = new DeserializationOptions {StoreYamlUids = true};
+                    var opts = new DeserializationOptions { StoreYamlUids = true };
 
                     if (isGrid == true)
                     {
