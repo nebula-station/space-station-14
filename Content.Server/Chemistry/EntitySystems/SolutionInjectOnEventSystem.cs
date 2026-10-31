@@ -19,6 +19,7 @@ using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Collections;
 using Robust.Shared.Prototypes;
 using Content.Shared.IdentityManagement;
+using Content.Shared._Nebula.Chemistry;
 
 namespace Content.Server.Chemistry.EntitySystems;
 
@@ -238,6 +239,13 @@ public sealed partial class SolutionInjectOnCollideSystem : EntitySystem
             // Make sure the target has a bloodstream
             if (!TryComp<BloodstreamComponent>(target, out var bloodstream))
                 continue;
+
+            // Nebula start
+            var attempt = new InjectOnEventAttemptEvent(target, user);
+            RaiseLocalEvent(injector, ref attempt);
+            if (attempt.Cancelled)
+                continue;
+            // Nebula end
 
             Solution removedSolution = _solutionContainer.SplitSolution(injectorSolution.Value, injector.Comp.TransferAmount * mult);
             // Adjust solution amount based on transfer efficiency
