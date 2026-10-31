@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ CrateWeaponSecure, BaseSecurityContraband ]
+  id: CrateSecurityTrackingImplant
+  name: security tracking implant
+  description: Contains a security tracking implanter. Alerts the security channel once its owner goes into crit.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: SecurityTrackingImplanter

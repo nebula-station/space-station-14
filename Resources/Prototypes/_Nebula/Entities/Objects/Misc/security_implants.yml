@@ -1,0 +1,16 @@
+- type: entity
+  parent: TrackingImplant
+  id: SecurityTrackingImplant
+  name: security tracking implant
+  description: A tracking implant for security officers. Once the owner goes into crit it alerts the security channel and marks the spot on neural interfaces.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SecurityTrackingImplant
+
+- type: entity
+  parent: BaseImplantOnlyImplanter
+  id: SecurityTrackingImplanter
+  suffix: Security Tracker
+  components:
+  - type: Implanter
+    implant: SecurityTrackingImplant

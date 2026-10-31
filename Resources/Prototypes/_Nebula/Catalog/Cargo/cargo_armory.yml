@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: SecurityTrackingImplant
+  icon:
+    sprite: Objects/Specific/Medical/implanter.rsi
+    state: implanter0
+  product: CrateSecurityTrackingImplant
+  cost: 15000
+  category: cargoproduct-category-name-armory
+  group: market
