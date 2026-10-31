@@ -48,7 +48,6 @@
   id: ClothingBeltSecurity
   components:
   - type: ExplosionResistance
-    damageCoefficient: 0.5
   - type: Storage
     whitelist:
       tags:

@@ -41,6 +41,10 @@
         children:
         - id: VehicleForklift
         - id: VehicleKeyForklift
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   id: CrateRadioStationAds

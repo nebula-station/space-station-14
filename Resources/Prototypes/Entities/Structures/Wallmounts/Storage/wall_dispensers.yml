@@ -89,5 +89,5 @@
         Heat: 20
   - type: PacifismDangerousAttack
   - type: Explosive
-    explosionType: Default
+    explosionType: Transparent # Nebula
     totalIntensity: 50

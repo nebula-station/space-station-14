@@ -2,7 +2,7 @@
   abstract: true
   parent: [ BaseCartridge, BaseSecurityContraband ]
   id: BaseCartridgePistol
-  name: cartridge (.35 auto)
+  name: cartridge (9mm auto) # Orion edit
   components:
   - type: Tag
     tags:
@@ -10,17 +10,18 @@
   - type: CartridgeAmmo
     proto: BulletPistol
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi # Orion edit
     layers:
-      - state: base
+      - state: 35combat # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: Appearance
   - type: SpentAmmoVisuals
+    state: 35combat # Orion edit
 
 - type: entity
   parent: BaseCartridgePistol
   id: CartridgePistol
-  name: cartridge (.35 auto)
+  name: cartridge (9mm auto) # Orion edit
   description: Arguably the most popular caliber on the market, used by all manner of pistols and submachine guns. Standard kinetic ammunition is common and useful in most situations.
   components:
   - type: CartridgeAmmo
@@ -29,61 +30,66 @@
 - type: entity
   parent: BaseCartridgePistol
   id: CartridgePistolPractice
-  name: cartridge (.35 auto practice)
+  name: cartridge (9mm practice) # Orion edit
   description: Arguably the most popular caliber on the market, used by all manner of pistols and submachine guns. Practice ammunition fires a chalk projectile that stings a little, but otherwise causes no lasting damage.
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 35training
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletPistolPractice
-  -  type: Sprite
-     layers:
-       - state: base
-         map: [ "enum.AmmoVisualLayers.Base" ]
-       - state: tip
-         map: [ "enum.AmmoVisualLayers.Tip" ]
-         color: "#dbdbdb"
+  # Orion start
+  - type: Sprite
+    layers:
+      - state: 35training
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  # Orion end
 
 - type: entity
   parent: BaseCartridgePistol
   id: CartridgePistolIncendiary
-  name: cartridge (.35 auto incendiary)
+  name: cartridge (9mm incendiary) # Orion edit
   description: Arguably the most popular caliber on the market, used by all manner of pistols and submachine guns. Incendiary ammunition contains a self-igniting compound that sets targets ablaze.
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 35incendiary
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletPistolIncendiary
   - type: Sprite
     layers:
-      - state: base
+      - state: 35incendiary # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#ff6e52"
 
 - type: entity
   id: CartridgePistolUranium
-  name: cartridge (.35 auto uranium)
+  name: cartridge (9mm uranium) # Orion edit
   description: Arguably the most popular caliber on the market, used by all manner of pistols and submachine guns. Uranium ammunition replaces the lead core of the bullet with fissile material, irradiating targets from the inside.
   parent: BaseCartridgePistol
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 35uranium
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletPistolUranium
   - type: Sprite
     layers:
-      - state: base
+      - state: 35uranium # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#65fe08"
 
 - type: entity
   parent: BaseCartridgePistol
   id: CartridgePistolSpent
-  name: cartridge (.35 auto)
+  name: cartridge (9mm auto) # Orion edit
   suffix: spent
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi # Orion edit
     layers:
-    - state: base-spent
+    - state: 35combat-spent # Orion edit
       map: [ "enum.AmmoVisualLayers.Base" ]
   - type: SpentAmmoVisuals
   - type: CartridgeAmmo

@@ -95,20 +95,17 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.8
-        Ballistic: 0.8
         Heat: 0.8
     activeBlockModifier:
       coefficients:
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.8
-        Ballistic: 0.8
         Heat: 0.8
       flatReductions:
         Blunt: 1
         Slash: 1
         Piercing: 1
-        Ballistic: 1
         Heat: 1
   - type: Destructible
     thresholds:

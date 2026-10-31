@@ -5,13 +5,20 @@
   components:
   - type: MeleeWeapon
     wideAnimationRotation: -120
-    attackRate: 1.5
+    attackRate: 1.4 # Nebula
+    # Nebula start
     damage:
       types:
-        Slash: 17
+        Slash: 16
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: DisarmMalus
   - type: Item # Goob
     shape:
     - 0,0,0,2
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.05
+    spread: 90
+  # Nebula end

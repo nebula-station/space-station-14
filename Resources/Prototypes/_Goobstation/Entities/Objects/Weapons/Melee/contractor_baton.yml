@@ -40,6 +40,6 @@
   - type: MeleeWeapon
     bluntStaminaDamageFactor: 0
   - type: StaminaDamageOnHit
-    damage: 60
+    damage: 85 # Nebula
   - type: StunBorgsOnHit
   - type: TogglePreventStaminaDamage

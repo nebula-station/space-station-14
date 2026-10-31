@@ -10,6 +10,10 @@
     containers:
       entity_storage:
         id: MobGondola
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   id: CrateNPCLootbug
@@ -22,3 +26,7 @@
       entity_storage:
         id: MobLootbug
         amount: 3
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end

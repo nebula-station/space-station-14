@@ -7,6 +7,10 @@
   components:
   - type: Label
     localizedLabel: gas-pipe-sensor-sm-hot-loop
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: GasPipeSensor
@@ -15,3 +19,7 @@
   components:
   - type: Label
     localizedLabel: gas-pipe-sensor-sm-cold-loop
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end

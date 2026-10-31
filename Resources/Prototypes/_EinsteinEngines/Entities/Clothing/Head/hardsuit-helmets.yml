@@ -16,18 +16,17 @@
   - type: PressureProtection
     highPressureMultiplier: 0.50
     lowPressureMultiplier: 1000
-  - type: ExplosionResistance
-    damageCoefficient: 0.50
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.70
-        Ballistic: 0.70
-        Heat: 0.70
-      flatReductions: # This is done so shotguns are worse against armor
-        Ballistic: 3
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Heat: 0.75
+        Radiation: 0.75
+        Caustic: 0.75
+    # Nebula end
 
 - type: entity
   parent: ClothingHeadHelmetHardsuitCombatStandard
@@ -54,18 +53,17 @@
     color: "#00FFFF"
   - type: PressureProtection
     highPressureMultiplier: 0.60
-  - type: ExplosionResistance
-    damageCoefficient: 0.60
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
-        Blunt: 0.85
-        Slash: 0.85
-        Piercing: 0.85
-        Ballistic: 0.85
-        Heat: 0.85
-      flatReductions: # This is done so shotguns are worse against armor
-        Ballistic: 3
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.80
+        Radiation: 0.80
+        Caustic: 0.80
+    # Nebula end
 
 # Riot Combat Hardsuits
 - type: entity
@@ -80,15 +78,14 @@
     sprite: _DV/Clothing/Head/Hardsuits/Combat/riot.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.45
-  - type: ExplosionResistance
-    damageCoefficient: 0.40
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
-        Blunt: 0.65
-        Slash: 0.65
-        Piercing: 0.65
-        Ballistic: 0.65
-        Heat: 0.65
-      flatReductions: # This is done so shotguns are worse against armor
-        Ballistic: 3
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.45
+        Heat: 0.40
+        Radiation: 0.70
+        Caustic: 0.70
+    # Nebula end

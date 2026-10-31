@@ -5,7 +5,6 @@
   components:
   - !Remove type: StunOnCollide # lol
   - type: StaminaDamageOnCollide
-    damage: 22
 
 - type: entity
   id: BulletDisablerSmgStunning

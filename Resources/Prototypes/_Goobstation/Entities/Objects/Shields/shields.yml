@@ -63,13 +63,25 @@
     - type: ItemTogglePointLight
     - type: Blocking
       passiveBlockFraction: 0.65
+      # Nebula start
       passiveBlockModifier:
+        coefficients:
+          Blunt: 3
+          Slash: 3
+          Piercing: 3
+          Heat: 3
+      activeBlockModifier:
+        coefficients:
+          Blunt: 2
+          Slash: 2
+          Piercing: 2
+          Heat: 2
         flatReductions:
-          Heat: 30
-          Blunt: 30
-          Slash: 30
-          Piercing: 30
-          Ballistic: 30
+          Heat: 3
+          Blunt: 3
+          Slash: 3
+          Piercing: 3
+      # Nebula end
     - type: Appearance
     - type: Damageable
     - type: Injurable
@@ -99,15 +111,10 @@
     - type: Parry
       soundOnParry:
         path: /Audio/Weapons/pierce.ogg
-    - type: HeldSpeedModifier
-      walkModifier: 0.9
-      sprintModifier: 0.9
     - type: MeleeWeapon
       damage:
         types:
           Heat: 10
-    - type: StaminaDamageOnHit
-      damage: 30
     - type: FlashSoundSuppression
       protectionRange: 1
     - type: MeleeThrowOnHit

@@ -15,9 +15,11 @@
     angle: 0
     wideAnimationRotation: 180
     attackRate: 3
+    # Nebula start
     damage:
       types:
-        Slash: 4
+        Slash: 13
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: EmbeddableProjectile

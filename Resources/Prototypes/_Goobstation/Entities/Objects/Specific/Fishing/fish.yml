@@ -22,6 +22,24 @@
   - type: Tag
     tags:
     - Fish
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1: Critical
+      5: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -33,6 +51,19 @@
     difficulty: 0.038
   - type: StaticPrice
     price: 750
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFishRare
@@ -47,6 +78,19 @@
     - id: FoodMeatFish
       amount: 2
     - id: AlienFishLootTable
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -56,6 +100,19 @@
   components:
   - type: Sprite
     state: angler
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -65,6 +122,19 @@
   components:
   - type: Sprite
     state: bass
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFishRare
@@ -79,6 +149,19 @@
     - id: FoodMeatBingle
       amount: 2
     - id: BingleFishLootTable
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -88,6 +171,19 @@
   components:
   - type: Sprite
     state: blob
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -97,6 +193,19 @@
   components:
   - type: Sprite
     state: blue_fintuna
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFishRare
@@ -111,6 +220,19 @@
     - id: MobMouseCancer
       amount: 5
     - id: BoyfisherFishLootTable
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -120,6 +242,19 @@
   components:
   - type: Sprite
     state: catfish
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -129,6 +264,19 @@
   components:
   - type: Sprite
     state: clown
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFishRare
@@ -143,6 +291,19 @@
     - id: FoodMeatFish
       amount: 2
     - id: NukeDiskFishLootTable
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFishRare
@@ -157,6 +318,19 @@
     - id: FoodMeatFish
       amount: 2
     - id: GibFishLootTable
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFishRare
@@ -171,6 +345,19 @@
     - id: FoodMeatFish
       amount: 2
     - id: MutantFishLootTable
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFishRare
@@ -185,6 +372,19 @@
     - id: FoodMeatFish
       amount: 2
     - id: NukerFishLootTable
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -194,6 +394,19 @@
   components:
   - type: Sprite
     state: pufferfish
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -203,6 +416,19 @@
   components:
   - type: Sprite
     state: silverfish
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -212,6 +438,19 @@
   components:
   - type: Sprite
     state: sun_tropical
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFishRare
@@ -226,6 +465,19 @@
     - id: FoodMeatFish
       amount: 2
     - id: ToxicFishLootTable
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFish
@@ -235,6 +487,19 @@
   components:
   - type: Sprite
     state: tropical
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: BaseFishRare
@@ -249,3 +514,16 @@
     - id: FoodMeatCorgiFish
       amount: 2
     - id: MaterialHideCorgi
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end

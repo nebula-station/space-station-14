@@ -282,6 +282,12 @@
     layers:
     - state: heavylaser
       shader: unshaded
+  # Nebula start
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 10.5
+  # Nebula end
 
 - type: entity
   id: SMGLaserIon
@@ -297,6 +303,12 @@
     layers:
     - state: lightbolt
       color: "#2684ff"
+  # Nebula start
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Ion: 15
+  # Nebula end
 
 - type: entity
   id: SMGLaserXray
@@ -312,6 +324,14 @@
     layers:
     - state: lightbolt
       color: "#27ff4b"
+  # Nebula start
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 4.5
+        Radiation: 6
+      armorPenetration: -0.2
+  # Nebula end
 
 - type: entity
   id: SMGLaserOvercharge
@@ -415,3 +435,9 @@
     layers:
     - state: heavylaser
       shader: unshaded
+  # Nebula start
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 10
+  # Nebula end

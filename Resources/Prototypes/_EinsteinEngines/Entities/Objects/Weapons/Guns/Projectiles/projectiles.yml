@@ -30,9 +30,11 @@
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: buckshot
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 10
+        Piercing: 10
+    # Nebula end
 
 - type: entity
   id: BulletGrenadeSpread00Buckshot

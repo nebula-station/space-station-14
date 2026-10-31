@@ -30,6 +30,10 @@
   - type: PhysicalComposition #Goobstation - Recycle update
     materialComposition:
       Cloth: 25
+  # Nebula start
+  - type: Armor
+    priceMultiplier: 0
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadHatBeret
@@ -69,6 +73,16 @@
     - CorgiWearable
     - HamsterWearable
     - WhitelistChameleon
+  # Nebula start
+  - type: Armor
+    priceMultiplier: 0
+    traumaDeductions:
+      Dismemberment: 0.4
+      OrganDamage: 0.5
+      BoneDamage: 0.4
+      VeinsDamage: 0.2
+      NerveDamage: 0.2
+  # Nebula end
 
 - type: entity
   parent: [ClothingHeadHatArmoredBeret, ClothingHeadHatBeret, BaseSecurityContraband] # Trauma - contraband marking and armor
@@ -84,6 +98,15 @@
     tags:
     - ClothMade
     - WhitelistChameleon
+  # Nebula start
+  - type: Armor
+    traumaDeductions:
+      Dismemberment: 0.4
+      OrganDamage: 0.5
+      BoneDamage: 0.4
+      VeinsDamage: 0.2
+      NerveDamage: 0.2
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadHatBeret
@@ -179,6 +202,21 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.7
+    traumaDeductions:
+      Dismemberment: 0.3
+      OrganDamage: 0.4
+      BoneDamage: 0.3
+      VeinsDamage: 0.1
+      NerveDamage: 0.1
+  # Nebula end
 
 - type: entity
   parent: [ClothingHeadHatArmoredBeret, ClothingHeadHatBeretRND, BaseSecurityContraband] # Goob / Trauma edit
@@ -195,6 +233,15 @@
     - PetWearable
     - CorgiWearable
     - WhitelistChameleon
+  # Nebula start
+  - type: Armor
+    traumaDeductions:
+      Dismemberment: 0.4
+      OrganDamage: 0.5
+      BoneDamage: 0.4
+      VeinsDamage: 0.2
+      NerveDamage: 0.2
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadHatBeret
@@ -226,6 +273,15 @@
     tags:
     - PetWearable
     - CorgiWearable
+  # Nebula start
+  - type: Armor
+    traumaDeductions:
+      Dismemberment: 0.4
+      OrganDamage: 0.5
+      BoneDamage: 0.4
+      VeinsDamage: 0.2
+      NerveDamage: 0.2
+  # Nebula end
 
 - type: entity
   parent: [ ClothingHeadHatArmoredBeret, ClothingHeadBase] # Trauma
@@ -241,6 +297,13 @@
     tags:
     - PetWearable
     - CorgiWearable
+  # Nebula start
+  - type: Armor
+    coverage:
+      - Other
+      - Torso
+    modifiers: {}
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadBase
@@ -294,6 +357,21 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.7
+    traumaDeductions:
+      Dismemberment: 0.3
+      OrganDamage: 0.4
+      BoneDamage: 0.3
+      VeinsDamage: 0.1
+      NerveDamage: 0.1
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadBase
@@ -325,6 +403,25 @@
     - PetWearable
     - CorgiWearable
     - WhitelistChameleon
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.4
+        Heat: 0.5
+        Radiation: 0.75
+        Caustic: 0.75
+    traumaDeductions:
+      Dismemberment: 0.3
+      OrganDamage: 0.3
+      BoneDamage: 0.3
+      VeinsDamage: 0
+      NerveDamage: 0
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadBase
@@ -377,6 +474,23 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+  # Nebula start
+  - type: Armor
+    coverage:
+    - Head
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.8
+    traumaDeductions:
+      Dismemberment: 0.4
+      OrganDamage: 0.5
+      BoneDamage: 0.4
+      VeinsDamage: 0.2
+      NerveDamage: 0.2
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadHatFedoraBrown
@@ -388,6 +502,23 @@
     sprite: Clothing/Head/Hats/greyfedora.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/greyfedora.rsi
+  # Nebula start
+  - type: Armor
+    coverage:
+    - Head
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.8
+    traumaDeductions:
+      Dismemberment: 0.4
+      OrganDamage: 0.5
+      BoneDamage: 0.4
+      VeinsDamage: 0.2
+      NerveDamage: 0.2
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadHatFedoraBrown
@@ -452,6 +583,21 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.7
+    traumaDeductions:
+      Dismemberment: 0.3
+      OrganDamage: 0.4
+      BoneDamage: 0.3
+      VeinsDamage: 0.1
+      NerveDamage: 0.1
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadBase
@@ -784,6 +930,16 @@
     - PetWearable
     - CorgiWearable
     - WhitelistChameleon
+  # Nebula start
+  - type: Armor
+    priceMultiplier: 0
+    traumaDeductions:
+      Dismemberment: 0.4
+      OrganDamage: 0.5
+      BoneDamage: 0.4
+      VeinsDamage: 0.2
+      NerveDamage: 0.2
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadBase
@@ -1231,6 +1387,22 @@
     flavorKind: station-event-random-sentience-flavor-inanimate
     weight: 0.0002 # 5,000 times less likely than 1 regular animal
   - type: BlockMovement
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.7
+    priceMultiplier: 0
+    traumaDeductions:
+      Dismemberment: 0.3
+      OrganDamage: 0.4
+      BoneDamage: 0.3
+      VeinsDamage: 0.1
+      NerveDamage: 0.1
+  # Nebula end
 
 - type: entity
   parent: [ ClothingHeadHatArmoredBeret, ClothingHeadBase, BaseCentcommContraband ]
@@ -1252,6 +1424,26 @@
     - Recyclable
     - WhitelistChameleon
     - HamsterWearable
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.4
+        Heat: 0.5
+        Radiation: 0.75
+        Caustic: 0.75
+    priceMultiplier: 0
+    traumaDeductions:
+      Dismemberment: 0.3
+      OrganDamage: 0.3
+      BoneDamage: 0.3
+      VeinsDamage: 0
+      NerveDamage: 0
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadBase

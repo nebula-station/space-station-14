@@ -10,11 +10,10 @@
         Blunt: 0.5
         Slash: 0.5
         Piercing: 0.5
-        Ballistic: 0.5
         Heat: 0.5
         Caustic: 0.8
       flatReductions:
-        Ballistic: 2
+        Piercing: 2 # Nebula
     traumaDeductions:
       Dismemberment: 0.2
       OrganDamage: 0.2
@@ -38,6 +37,7 @@
   - type: Clothing
     sprite: _Goobstation/Heretic/Clothing/OuterClothing/eldritch_armor.rsi
   - type: Armor
+    # Nebula start
     coverage:
     - Torso
     - Arm
@@ -45,7 +45,21 @@
     - Leg
     - Foot
     - Tail
-    - Wings
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.5
+        Holy: 1.25
+    traumaDeductions:
+      Dismemberment: 0.5
+      OrganDamage: 0.5
+      BoneDamage: 0.5
+      VeinsDamage: 0.0
+      NerveDamage: 0.0
+    # Nebula end
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHatHoodHeretic
@@ -65,6 +79,10 @@
     containers:
       storagebase: !type:Container
       toggleable-clothing: !type:Container
+  # Nebula start
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -77,11 +95,10 @@
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.7
-        Ballistic: 0.7
         Heat: 0.7
         Caustic: 0.7
       flatReductions:
-        Ballistic: 2
+        Piercing: 2 # Nebula
   - type: ExplosionResistance
     damageCoefficient: 0.50
 
@@ -132,11 +149,10 @@
           Blunt: 0.4
           Slash: 0.4
           Piercing: 0.4
-          Ballistic: 0.4
           Heat: 0.4
           Caustic: 0.4
         flatReductions:
-          Ballistic: 3
+          Piercing: 3 # Nebula
       traumaDeductions:
         Dismemberment: 0.4
         OrganDamage: 0.4
@@ -160,11 +176,10 @@
           Blunt: 0.7
           Slash: 0.7
           Piercing: 0.7
-          Ballistic: 0.7
           Heat: 0.7
           Caustic: 0.7
         flatReductions:
-          Ballistic: 2
+          Piercing: 2 # Nebula
       traumaDeductions:
         Dismemberment: 0.2
         OrganDamage: 0.2
@@ -186,11 +201,10 @@
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.6
-        Ballistic: 0.5
         Heat: 0.6
         Caustic: 0.6
       flatReductions:
-        Ballistic: 2
+        Piercing: 2 # Nebula
     traumaDeductions:
       Dismemberment: 0.3
       OrganDamage: 0.3
@@ -219,6 +233,25 @@
   - type: HollowWeave
   - type: TemperatureProtection
     coefficient: 0.01
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.5
+        Holy: 1.25
+    traumaDeductions:
+      Dismemberment: 0.5
+      OrganDamage: 0.5
+      BoneDamage: 0.5
+      VeinsDamage: 0.0
+      NerveDamage: 0.0
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -231,11 +264,10 @@
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.6
-        Ballistic: 0.5
         Heat: 0.4
         Caustic: 0.8
       flatReductions:
-        Ballistic: 2
+        Piercing: 2 # Nebula
   - type: ExplosionResistance
     damageCoefficient: 0
 
@@ -261,6 +293,25 @@
   - type: TemperatureProtection
     coefficient: 0.01
   - type: ScorchedMantle
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.5
+        Holy: 1.25
+    traumaDeductions:
+      Dismemberment: 0.5
+      OrganDamage: 0.5
+      BoneDamage: 0.5
+      VeinsDamage: 0.0
+      NerveDamage: 0.0
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -273,11 +324,10 @@
         Blunt: 0.3
         Slash: 0.3
         Piercing: 0.3
-        Ballistic: 0.6
         Heat: 0.7
         Caustic: 0
       flatReductions:
-        Ballistic: 2
+        Piercing: 2 # Nebula
 
 - type: entity
   parent: [ ArmorHereticFlesh, ClothingOuterArmorHeretic ]
@@ -313,6 +363,25 @@
     sound:
       collection: OrganInteraction
   - type: SpawnMimicsOnDamage
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.5
+        Holy: 1.25
+    traumaDeductions:
+      Dismemberment: 0.5
+      OrganDamage: 0.5
+      BoneDamage: 0.5
+      VeinsDamage: 0.0
+      NerveDamage: 0.0
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -325,11 +394,10 @@
         Blunt: 0.5
         Slash: 0.5
         Piercing: 0.5
-        Ballistic: 0.5
         Heat: 0.5
         Caustic: 0.5
       flatReductions:
-        Ballistic: 2
+        Piercing: 2 # Nebula
     traumaDeductions:
       Dismemberment: 0.5
       OrganDamage: 0.5
@@ -359,7 +427,25 @@
   - type: ModifyDelayedKnockdown
     cancel: true
   - type: StaminaResistance
-    damageCoefficient: 0.3
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.5
+        Holy: 1.25
+    traumaDeductions:
+      Dismemberment: 0.5
+      OrganDamage: 0.5
+      BoneDamage: 0.5
+      VeinsDamage: 0.0
+      NerveDamage: 0.0
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -372,11 +458,10 @@
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.7
-        Ballistic: 0.6
         Heat: 0.5
         Caustic: 0.8
       flatReductions:
-        Ballistic: 2
+        Piercing: 2 # Nebula
 
 - type: entity
   parent: [ ArmorHereticCosmos, ClothingOuterArmorHeretic ]
@@ -408,6 +493,25 @@
       cooldownMultiplier: 0.3
       userEffect: CosmicDash
       tackleCondition: CosmicFieldNearby
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.5
+        Holy: 1.25
+    traumaDeductions:
+      Dismemberment: 0.5
+      OrganDamage: 0.5
+      BoneDamage: 0.5
+      VeinsDamage: 0.0
+      NerveDamage: 0.0
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -420,11 +524,10 @@
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.6
-        Ballistic: 0.6
         Heat: 0.6
         Caustic: 0.6
       flatReductions:
-        Ballistic: 2
+        Piercing: 2 # Nebula
     traumaDeductions:
       Dismemberment: 0.3
       OrganDamage: 0.3
@@ -468,7 +571,6 @@
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.7
-        Ballistic: 0.7
         Heat: 0.7
         Caustic: 0.7
     traumaDeductions:
@@ -494,6 +596,7 @@
   - type: Clothing
     sprite: _Goobstation/Heretic/Clothing/OuterClothing/void_cloak.rsi
   - type: Armor
+    # Nebula start
     coverage:
     - Torso
     - Arm
@@ -501,7 +604,20 @@
     - Leg
     - Foot
     - Tail
-    - Wings
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.7
+        Caustic: 0.7
+    traumaDeductions:
+      Dismemberment: 0.3
+      OrganDamage: 0.3
+      BoneDamage: 0.3
+      VeinsDamage: 0.0
+      NerveDamage: 0.0
+    # Nebula end
   - type: ToggleableClothing
     stripDelay: null
     clothingPrototypes:
@@ -550,3 +666,7 @@
     containers:
       storagebase: !type:Container
       toggleable-clothing: !type:Container
+  # Nebula start
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  # Nebula end

@@ -2,6 +2,8 @@
 
 - type: damageModifierSet
   id: Hierophant
+  # Nebula start
   coefficients:
-    Ballistic: 0.1 # No bullets
-    Heat: 0.5 # No lasers
+    Piercing: 0.1
+    Heat: 0.5
+  # Nebula end

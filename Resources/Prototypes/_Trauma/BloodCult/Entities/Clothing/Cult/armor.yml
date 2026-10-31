@@ -22,7 +22,6 @@
         Blunt: 0.5
         Slash: 0.6
         Piercing: 0.6
-        Ballistic: 0.5
         Heat: 0.7
         Caustic: 0.2
         Radiation: 0.2
@@ -78,7 +77,6 @@
         Blunt: 1.4
         Slash: 1.4
         Piercing: 1.4
-        Ballistic: 1.4
         Heat: 1.4
   - type: ToggleableClothing
     clothingPrototypes:

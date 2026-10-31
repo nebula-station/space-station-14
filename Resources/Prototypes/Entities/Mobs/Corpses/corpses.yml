@@ -15,6 +15,13 @@
       - ChefGear
       - ChaplainGear
       - PassengerGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: SalvageHumanCorpse
@@ -26,6 +33,13 @@
     - TechnicalAssistantGear
     - AtmosphericTechnicianGear
     - StationEngineerGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: SalvageHumanCorpse
@@ -36,6 +50,13 @@
     prototypes:
     - CargoTechGear
     - SalvageSpecialistGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: SalvageHumanCorpse
@@ -48,6 +69,13 @@
     - PsychologistGear
     - ChemistGear
     - DoctorGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: SalvageHumanCorpse
@@ -58,6 +86,13 @@
     prototypes:
     - ResearchAssistantGear
     - ScientistGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: SalvageHumanCorpse
@@ -70,6 +105,13 @@
     - SecurityOfficerGear
     - DetectiveGear
     - WardenGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: SalvageHumanCorpse
@@ -86,3 +128,10 @@
     - CMOGear
     - ChiefEngineerGear
     - QuartermasterGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end

@@ -6,15 +6,7 @@
   - type: WeaponClass
     class: Bludgeon
   - type: MeleeWeapon
-    damage:
-      types:
-        Structural: 10
-      woundSeverityMultipliers:
-        Blunt: 1.5
   - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Structural: 10
 
 - type: entity
   id: Mjollnir
@@ -42,13 +34,7 @@
       woundSeverityMultipliers:
         Blunt: 2
   - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Structural: 35
   - type: DamageOtherOnHit
-    damage:
-      woundSeverityMultipliers:
-        Blunt: 2
 
 - type: entity
   id: SingularityHammer
@@ -61,11 +47,6 @@
   - !Remove type: UseDelayOnMeleeHit
   - type: MeleeWeapon
     attackRate: 0.75
-    damage:
-      types:
-        Structural: 5
-      woundSeverityMultipliers:
-        Blunt: 2
   - type: IncreaseDamageOnWield
     damage:
       types:

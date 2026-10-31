@@ -70,7 +70,12 @@
   - type: StaticPrice
     price: 10000
   - type: Gun
-    fireRate: 0.67
+    fireRate: 1 # Nebula
+    # Nebula start
+    availableModes:
+      - SemiAuto
+    # Nebula end
+    selectedMode: SemiAuto # Nebula
 
 - type: entity
   parent: [ BaseWeaponLauncher, BaseMajorContraband ]
@@ -107,6 +112,13 @@
       path: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
+  # Nebula start
+  - type: Gun
+    availableModes:
+    - SemiAuto
+    fireRate: 1
+    selectedMode: SemiAuto
+  # Nebula end
 
 - type: entity
   parent: WeaponLauncherHydra
@@ -322,13 +334,13 @@
   - type: GrapplingGun
   - type: Gun
     soundGunshot: /Audio/Weapons/Guns/Gunshots/harpoon.ogg
-    fireRate: 1
+    fireRate: 0.5 # Nebula
     clumsyProof: true
   - type: BasicEntityAmmoProvider
     proto: GrapplingHook
     capacity: 1
   - type: UseDelay
-    delay: 0.5
+    delay: 1.5 # Nebula
   - type: Appearance
   - type: GenericVisualizer
     visuals:

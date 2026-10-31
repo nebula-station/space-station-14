@@ -16,4 +16,3 @@
     materialComposition:
       Steel: 125
   - type: Damageable
-    damageModifierSet: Metallic

@@ -11,9 +11,11 @@
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: buckshot
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 3.333
+        Piercing: 3.333
+    # Nebula end
 
 - type: entity
   id: PelletShotgunSpreadBirdshot
@@ -36,9 +38,11 @@
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: buckshot
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 15
+        Piercing: 15
+    # Nebula end
 
 - type: entity
   id: PelletShotgunSpread00Buckshot
@@ -61,9 +65,11 @@
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: buckshot
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 20
+        Piercing: 20
+    # Nebula end
 
 - type: entity
   id: PelletShotgunSpread0000Buckshot

@@ -60,10 +60,9 @@
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.7
-        Ballistic: 0.3
         Heat: 0.8
       flatReductions: # This is done so shotguns are worse against armor
-        Ballistic: 3
+        Piercing: 3 # Nebula
   - type: ExplosionResistance
     damageCoefficient: 0.5
   - type: ModifyDelayedKnockdown

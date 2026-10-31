@@ -32,6 +32,13 @@
       - CanPilot
       - FootstepSound
       - DoorBumpOpener
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   name: lone abductor
@@ -51,6 +58,13 @@
   - type: Loadout
     prototypes:
       - LoneAbductorGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobAbductorAntag
@@ -70,6 +84,13 @@
   - type: Loadout
     prototypes:
       - AbductorScientistGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobAbductorAntag
@@ -95,6 +116,13 @@
   - type: Loadout
     prototypes:
       - AbductorAgentGear
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 # Gearsets
 

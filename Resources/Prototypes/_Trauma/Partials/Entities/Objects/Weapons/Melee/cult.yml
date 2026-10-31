@@ -35,10 +35,4 @@
   components:
   - type: Sharp
   - type: MeleeWeapon
-    damage:
-      types:
-        Structural: 5
   - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Structural: 5

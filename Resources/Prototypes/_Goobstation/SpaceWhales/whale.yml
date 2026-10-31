@@ -94,9 +94,11 @@
     wilhelm: "/Audio/_Goobstation/Ambience/SpaceWhale/imafuckingworm.ogg"
     wilhelmProbability: 1 # funy
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      1500: Dead
+      4000: Dead
+    # Nebula end
   - type: Destructible
     thresholds:
     - trigger:
@@ -132,8 +134,6 @@
   - type: CombatMode
     toggleMouseRotator: false
   - type: MeleeWeapon
-    range: 3
-    canWideSwing: false
     altDisarm: false
     attackRate: 0.3
     angle: 0

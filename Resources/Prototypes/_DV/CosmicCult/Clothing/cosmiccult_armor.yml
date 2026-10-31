@@ -20,20 +20,21 @@
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.4
+    damageCoefficient: 0.5 # Nebula
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
-        Blunt: 0.6
-        Slash: 0.6
-        Piercing: 0.6 # Trauma, was 0.4
-        Ballistic: 0.5 # Trauma
-        Heat: 0.6
+        Blunt: 0.8
+        Slash: 0.7
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.7
+        Holy: 1.25
+    # Nebula end
   - type: ModifyDelayedKnockdown # You can't have 20 cultists anymore, so this is kinda needed
     delayDelta: 3
     knockdownTimeDelta: -3
-  - type: StaminaResistance
-    damageCoefficient: 0.5
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -117,15 +118,16 @@
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.5
         Slash: 0.5
         Piercing: 0.5
-        Ballistic: 0.5 # Trauma
         Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5
+    # Nebula end
   - type: UnholyItem # Goobstation Shitchap
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation

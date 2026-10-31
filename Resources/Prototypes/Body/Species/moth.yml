@@ -184,7 +184,6 @@
     - Moffic
   # </Trauma>
   - type: Damageable
-    damageModifierSet: Moth
   - type: ZombieAccentOverride
     accent: zombieMoth
   - type: Speech
@@ -235,6 +234,13 @@
       289: 0.9
       275: 0.8
       250: 0.7
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic

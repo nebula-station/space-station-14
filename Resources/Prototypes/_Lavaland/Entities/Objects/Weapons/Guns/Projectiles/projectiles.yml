@@ -7,9 +7,12 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Blunt: 4
+        Blunt: 6.5
+        Structural: 8
+    # Nebula end
   - type: TimedDespawn
     lifetime: 0.22 # roughly 5.5 tiles
 
@@ -19,9 +22,12 @@
   parent: RapidBulletKinetic
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Blunt: 4
+        Blunt: 3
+        Structural: 5
+    # Nebula end
 
 - type: entity
   id: PelletKinetic

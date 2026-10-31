@@ -59,6 +59,10 @@
   - type: Construction
     graph: Windoor
     node: assembly
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseWindoorAssembly

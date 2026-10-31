@@ -16,10 +16,12 @@
     - NonEnergy
   - type: Projectile
     impactEffect: BulletImpactEffectKinetic
+    # Nebula start
     damage:
       types:
-        Blunt: 8 # Trauma - was 15
-        Structural: 11 # Trauma - was 9
+        Blunt: 10
+        Structural: 15
+    # Nebula end
   # Short lifespan
   - type: TimedDespawn
     lifetime: 0.18 # Trauma - 5.5 -> 4 tiles
@@ -38,9 +40,12 @@
       shader: unshaded
   - type: Projectile
     impactEffect: BulletImpactEffectKinetic
+    # Nebula start
     damage:
       types:
-        Blunt: 30
+        Blunt: 40
+        Structural: 35
+    # Nebula end
         #Structural: 35 # Trauma
   - type: Ammo
     muzzleFlash: HitscanEffect

@@ -31,24 +31,28 @@
     autoAttack: true
     angle: 0
     wideAnimationRotation: -135
-    attackRate: 10 # Trauma, was 4
+    attackRate: 4 # Nebula
+    # Nebula start
     damage:
       types:
-        Slash: 1
-        # Blunt: 2
-        # Structural: 4
+        Slash: 2
+        Blunt: 2
+        Structural: 4
       woundSeverityMultipliers:
         Slash: 2
         Blunt: 2
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/chainsaw_rev.ogg
       params:
         volume: -2
   - type: IncreaseDamageOnWield
+    # Nebula start
     damage:
       types:
-        Slash: 1 # Trauma, was 4
-        Structural: 10 # Trauma, was 4
+        Slash: 4
+        Structural: 4
+    # Nebula end
   - type: Item
     size: Large
   # <Trauma>

@@ -11,6 +11,7 @@
     sprite: Structures/Storage/Shelfs/wood.rsi
     state: base
   - type: Damageable
+    damageModifierSet: Wood # Nebula
   - type: Injurable
     damageContainer: StructuralInorganic
   - type: Destructible

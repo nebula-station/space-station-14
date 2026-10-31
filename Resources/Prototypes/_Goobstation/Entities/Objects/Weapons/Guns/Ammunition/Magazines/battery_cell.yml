@@ -32,6 +32,15 @@
   - type: Tag
     tags:
     - MilitaryPowerCell
+  # Nebula start
+  - type: BatteryAmmoProvider
+    fireCost: 50
+    proto: SmallRedLaser
+  - type: Explosive
+    explosionType: Default
+    intensitySlope: 1.5
+    maxIntensity: 200
+  # Nebula end
 
 # SMG
 
@@ -61,7 +70,7 @@
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_pistol_lethal.rsi
   - type: BatteryAmmoProvider
     proto: SMGLaser
-    fireCost: 25
+    fireCost: 50 # Nebula
 
 - type: entity
   name: x-ray SMG power cell
@@ -74,7 +83,7 @@
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_pistol_xray.rsi
   - type: BatteryAmmoProvider
     proto: SMGLaserXray
-    fireCost: 25
+    fireCost: 50 # Nebula
 
 - type: entity
   name: overclocked SMG power cell
@@ -86,8 +95,8 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_pistol_overcharge.rsi
   - type: BatteryAmmoProvider
-    proto: SMGLaserOvercharge
-    fireCost: 25
+    proto: SMGLaserOvercharged # Nebula
+    fireCost: 75 # Nebula
 
 - type: entity
   name: pulse SMG power cell
@@ -99,7 +108,7 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_pistol_pulse.rsi
   - type: BatteryAmmoProvider
-    proto: SmallPulseLaser
+    proto: SMGLaserPulse # Nebula
     fireCost: 50
 
 - type: entity
@@ -113,7 +122,7 @@
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_pistol_ion.rsi
   - type: BatteryAmmoProvider
     proto: SMGLaserIon
-    fireCost: 25
+    fireCost: 50 # Nebula
 
 # Sniper
 
@@ -150,8 +159,8 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_rifle_lethal.rsi
   - type: BatteryAmmoProvider
-    proto: SniperLaser
-    fireCost: 300
+    proto: SniperRedLaser # Nebula
+    fireCost: 100 # Nebula
 
 - type: entity
   name: x-ray sniper power cell
@@ -163,8 +172,8 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_rifle_xray.rsi
   - type: BatteryAmmoProvider
-    proto: SniperLaserXray
-    fireCost: 300
+    proto: SniperXrayLaser # Nebula
+    fireCost: 100 # Nebula
 
 - type: entity
   name: overclocked sniper power cell
@@ -176,8 +185,8 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_rifle_overcharge.rsi
   - type: BatteryAmmoProvider
-    proto: SniperLaserOvercharge
-    fireCost: 300
+    proto: SniperOverchargedLaser # Nebula
+    fireCost: 200 # Nebula
 
 - type: entity
   name: pulse sniper power cell
@@ -189,7 +198,7 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_rifle_pulse.rsi
   - type: BatteryAmmoProvider
-    proto: MediumPulseLaser
+    proto: SniperPulseLaser # Nebula
     fireCost: 100
 
 - type: entity
@@ -202,8 +211,8 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/energy_cell_rifle_ion.rsi
   - type: BatteryAmmoProvider
-    proto: SniperLaserIon
-    fireCost: 300
+    proto: SniperIonLaser # Nebula
+    fireCost: 100 # Nebula
 
 # Revolver
 
@@ -255,8 +264,8 @@
           Neither: { state: lethal_charge, shader: unshaded }
           Empty: { state: lethal, shader: null }
   - type: BatteryAmmoProvider
-    proto: RevolverLaser
-    fireCost: 40
+    proto: RevolverRedLaser # Nebula
+    fireCost: 62.5 # Nebula
 
 - type: entity
   name: x-ray revolver power cell
@@ -278,8 +287,8 @@
           Neither: { state: xray_charge, shader: unshaded }
           Empty: { state: xray, shader: null }
   - type: BatteryAmmoProvider
-    proto: RevolverLaserXray
-    fireCost: 40
+    proto: RevolverXrayLaser # Nebula
+    fireCost: 62.5 # Nebula
 
 - type: entity
   name: overclocked revolver power cell
@@ -301,8 +310,8 @@
           Neither: { state: overcharge_charge, shader: unshaded }
           Empty: { state: overcharge, shader: null }
   - type: BatteryAmmoProvider
-    proto: RevolverLaserOverclocked
-    fireCost: 40
+    proto: RevolverOverchargedLaser # Nebula
+    fireCost: 125 # Nebula
 
 - type: entity
   name: pulse revolver power cell
@@ -347,8 +356,8 @@
           Neither: { state: ion_charge, shader: unshaded }
           Empty: { state: ion, shader: null }
   - type: BatteryAmmoProvider
-    proto: RevolverLaserIon
-    fireCost: 40
+    proto: RevolverIonLaser # Nebula
+    fireCost: 62.5 # Nebula
 
 # LMG
 
@@ -371,7 +380,7 @@
     maxAmount: 500
   - type: BatteryAmmoProvider
     proto: LMGLaser
-    fireCost: 5
+    fireCost: 15 # Nebula
   - type: Tag
     tags:
     - MilitaryPowerCellLMG

@@ -20,6 +20,11 @@
       gloves: ClothingModsuitGauntletsResponsoryEngineering
       outerClothing: ClothingModsuitChestplateResponsoryEngineering
       shoes: ClothingModsuitBootsResponsoryEngineering
+  # Nebula start
+  - type: ClothingSpeedModifier
+    sprintModifier: 1
+    walkModifier: 1
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitGauntletsERT, BaseModsuitPieceERTEngi ]
@@ -42,6 +47,19 @@
     - Biological
     - Inorganic
     - Silicon
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.4
+        Piercing: 0.65
+        Heat: 0.15
+        Cold: 0.10
+        Shock: 0.15
+        Radiation: 0.1
+        Caustic: 0.1
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitChestplateERT, BaseModsuitPieceERTEngi ]
@@ -53,6 +71,24 @@
   - type: ClothingGrantComponent
     component:
     - type: SupermatterImmune
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.3
+        Piercing: 0.6
+        Heat: 0.10
+        Cold: 0.10
+        Shock: 0.15
+        Radiation: 0.1
+        Caustic: 0.1
+  - type: ClothingSpeedModifier
+    sprintModifier: 1
+    walkModifier: 1
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitBootsERT, BaseModsuitPieceERTEngi ]
@@ -60,6 +96,12 @@
   name: Engineering Responsory modsuit boots
   description: A state-of-the-art pair of magboots for the Engineering Responsory modsuit. So long as the suit is powered, these will not slow the wearer down.
   categories: [HideSpawnMenu]
+  components:
+  # Nebula start
+  - type: ClothingSpeedModifier
+    sprintModifier: 1
+    walkModifier: 1
+  # Nebula end
 
 - type: entity
   id: SuitStorageResponsoryEngineering

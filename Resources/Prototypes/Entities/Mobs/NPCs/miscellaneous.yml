@@ -55,6 +55,19 @@
       interactFailureString: petting-failure-generic
       interactSuccessSound:
         path: /Audio/Animals/lizard_happy.ogg
+    # Nebula start
+    - type: BatteryAmmoProvider
+      fireCost: 50
+      proto: RedLightLaser
+    - type: BatterySelfRecharger
+      autoRechargeRate: 50
+    - type: Gun
+      availableModes:
+        - SemiAuto
+      fireRate: 1
+      selectedMode: SemiAuto
+      useKey: false
+    # Nebula end
 
 - type: entity
   id: MobTomatoKiller

@@ -5,9 +5,12 @@
   name: bullet (.45 magnum)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 20 # Trauma, was 35
+        Piercing: 35
+      armorPenetration: 0.1
+    # Nebula end
 
 - type: entity
   parent: BaseBulletPractice
@@ -27,9 +30,12 @@
   name: bullet (.45 magnum incendiary)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 17 # Trauama, was 26
+        Blunt: 7
+        Heat: 15
+    # Nebula end
         # Heat: 9 # Trauma
 
 - type: entity
@@ -39,10 +45,12 @@
   name: bullet (.45 magnum armor-piercing)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 20 # Trauma, was 28
-      armorPenetration: 0.75 # Goobstation
+        Piercing: 28
+      armorPenetration: 0.75
+    # Nebula end
 
 - type: entity
   parent: [BaseBulletUranium, BaseBulletKinetic] # Trauma
@@ -51,8 +59,10 @@
   name: bullet (.45 magnum uranium)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        # Radiation: 15 # Trauma
-        Ballistic: 17 # Trauma, was 20
-      armorPenetration: 0.5 # Trauma
+        Radiation: 6
+        Piercing: 20
+      armorPenetration: 0.25
+    # Nebula end

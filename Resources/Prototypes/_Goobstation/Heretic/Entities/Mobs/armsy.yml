@@ -106,27 +106,27 @@
     - Alive
     - Dead
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      4000: Dead
+      1500: Dead
+    # Nebula end
   - type: StatusEffects
     allowed:
     - RadiationProtection
   - type: MeleeWeapon
-    canWideSwing: false
     altDisarm: false
+    # Nebula start
     damage:
       types:
-       Blunt: 15
-       Slash: 15
-       Piercing: 15
-       Structural: 200
-      woundSeverityMultipliers:
-        Blunt: 1.5
-        Slash: 1.5
-        Piercing: 1.5
+       Blunt: 20
+       Structural: 60
+    # Nebula end
     soundHit: /Audio/Weapons/smash.ogg
     animation: WeaponArcSmash
+    angle: 0 # Nebula
+    attackRate: 3 # Nebula
+    autoAttack: true # Nebula
   - type: Tag
     tags:
     - CannotSuicide
@@ -193,6 +193,15 @@
     toggleAction: null
     useShader: false
     isActive: true
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.7
+    reflects:
+      - Energy
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      0: 1.0
+  # Nebula end
 
 - type: entity
   parent: MobHereticFleshAscendSegmentBase

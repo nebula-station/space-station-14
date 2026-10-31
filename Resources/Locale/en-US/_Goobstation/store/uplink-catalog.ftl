@@ -112,14 +112,14 @@ uplink-frag-grenade-desc = Lower damage, bigger radius. Compatible with the Chin
 uplink-mpapers-grenade-name = MP-APERS Shell (40mm)
 uplink-mpapers-grenade-desc = Fires out 20 small pellets to turn your grenade launcher into a shotgun. Compatible with the China-Lake.
 
-uplink-l6-box-name = Magazine Box (.30 rifle)
+uplink-l6-box-name = Magazine Box (5.45mm rifle)
 uplink-l6-box-desc = Magazine box with 100 catridges. Compatible with the L6 SAW.
 
 uplink-shotgun-magazine-name = Shotgun Drum (12 gauge pellet)
-uplink-shotgun-magazine-desc = Shotgun drum with 8 pellet shells. Compatible with the Bulldog.
+uplink-shotgun-magazine-desc = Shotgun drum with 8 pellet shells. Compatible with the Bulldog and Zauer.
 
 uplink-shotgun-magazine-slug-name = Shotgun Drum (12 gauge slug)
-uplink-shotgun-magazine-slug-desc = Shotgun drum with 8 slug shells. Compatible with the Bulldog.
+uplink-shotgun-magazine-slug-desc = Shotgun drum with 8 slug shells. Compatible with the Bulldog and Zauer.
 
 uplink-high-caliber-magazine-name = Rifle Magazine (.50 anti-materiel)
 uplink-high-caliber-magazine-desc = Heavy rifle magazine with 15 cartridges. Compatible with the Burner.
@@ -130,7 +130,7 @@ uplink-high-caliber-explosive-magazine-desc = Heavy rifle magazine with 15 High 
 uplink-high-caliber-box-name = .50 Ammo box
 uplink-high-caliber-box-desc = A box of 30 .50 caliber anti-materiel rounds.
 
-uplink-highcap-pistol-mag-name = High Capacity Pistol Magazine (.35 auto)
+uplink-highcap-pistol-mag-name = High Capacity Pistol Magazine (9mm auto)
 uplink-highcap-pistol-mag-desc = High capacity pistol magazine holds 4 extra bullets for a total of 16 rounds.
 
 uplink-heavy-shotgun-magazine-name = Heavy Shotgun Drum (2 gauge HE pellet)
@@ -308,3 +308,5 @@ uplink-cddisksyndicate-desc = 102.9 Syndicate radio
 
 uplink-cddisknumber-name = Number Station CD
 uplink-cddisknumber-desc = Call in a threat to distract the station... good luck playing the whole thing.
+uplink-rifle-mag-name = Rifle Magazine (5.56mm)
+uplink-rifle-mag-desc = A 25 round magazine containing 5.56mm rifle bullets. Supports the Lecter and M-90.

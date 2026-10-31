@@ -51,9 +51,11 @@
     soundHit:
       collection: ShadowDemonPunch
     animation: WeaponArcShadowClaw
+    # Nebula start
     damage:
       types:
-        Caustic: 12
+        Caustic: 5
+    # Nebula end
   - type: Damageable
     damageModifierSet: AdvancedSpirit
   - type: Injurable
@@ -88,9 +90,6 @@
   description: You have no idea what this is!
   components:
   - type: MeleeWeapon
-    damage:
-      types:
-        Cold: 12
   - type: SolutionManager
     solutions:
     - SolutionSpookyGhost
@@ -114,9 +113,11 @@
       Dead:
         Base: ghost_dead
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      120: Dead
+      90: Dead
+    # Nebula end
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.55
     baseSprintSpeed : 2.55
@@ -208,7 +209,6 @@
         Blunt: -0.33
         Slash: -0.33
         Piercing: -0.33
-        Ballistic: -0.33
   - type: ToolRefinable
     refineResult:
     - id: MaterialBananium1
@@ -295,7 +295,6 @@
         Blunt: -0.33
         Slash: -0.33
         Piercing: -0.33
-        Ballistic: -0.33
   - type: StaticPrice
     price: 3000
   - type: TileMovement

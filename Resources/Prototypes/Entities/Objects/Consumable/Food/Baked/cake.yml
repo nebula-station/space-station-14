@@ -1106,9 +1106,13 @@
     soundHit:
       path: /Audio/Animals/cat_hiss.ogg
     hidden: true
+    # Nebula start
     damage:
       types:
-        Blunt: 1
+        Blunt: 0.33
+        Slash: 0.33
+        Piercing: 0.33
+    # Nebula end
 
 # Suppermatter
 # I can't figure out where to put this. It kind of acts like a cake I guess?

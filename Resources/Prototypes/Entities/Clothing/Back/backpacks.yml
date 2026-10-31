@@ -305,7 +305,7 @@
   components:
   # <Trauma>
   - type: ExplosionResistance # Goobstation
-    damageCoefficient: 0.5
+    damageCoefficient: 0.1 # Nebula
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Back/Backpacks/ertsec.rsi

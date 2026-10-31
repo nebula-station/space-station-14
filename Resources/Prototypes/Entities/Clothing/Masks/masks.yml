@@ -460,12 +460,14 @@
   - type: Armor
     coverage:
     - Head
+    # Nebula start
     modifiers:
       coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+    # Nebula end
   - type: Tag
     tags:
     - ClownMask

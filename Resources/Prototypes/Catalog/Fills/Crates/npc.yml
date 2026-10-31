@@ -9,6 +9,10 @@
       entity_storage:
         id: MobBee
         amount: 8
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -21,6 +25,10 @@
       entity_storage:
         id: MobButterfly
         amount: 5
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -40,6 +48,10 @@
           weight: 0.25
         - id: MobBingus
           weight: 0.005
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -52,6 +64,10 @@
       entity_storage:
         id: MobChicken
         amount: 4
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -64,6 +80,10 @@
       entity_storage:
         id: MobCrab
         amount: 3
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -79,6 +99,10 @@
         - id: MobDuckBrown
         - id: MobDuckWhite
           amount: 2
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -90,6 +114,10 @@
     containers:
       entity_storage:
         id: MobCorgi
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -101,6 +129,10 @@
     containers:
       entity_storage:
         id: MobCorgiPuppy
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -112,6 +144,10 @@
     containers:
       entity_storage:
         id: MobCow
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -123,6 +159,10 @@
     containers:
       entity_storage:
         id: MobGoat
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -135,6 +175,10 @@
       entity_storage:
         id: MobGoose
         amount: 2
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -146,6 +190,10 @@
     containers:
       entity_storage:
         id: MobGorilla
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateGenericSteel
@@ -180,6 +228,10 @@
       entity_storage:
         id: MobMouse
         amount: 5
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -192,6 +244,10 @@
       entity_storage:
         id: MobParrot
         amount: 3
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -204,6 +260,10 @@
       entity_storage:
         id: MobPenguin
         amount: 2
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -215,6 +275,10 @@
     containers:
       entity_storage:
         id: MobPig
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -227,6 +291,10 @@
       entity_storage:
         id: MobSnake
         amount: 3
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateRodentCage
@@ -237,6 +305,10 @@
     containers:
       entity_storage:
         id: MobHamster
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateRodentCage
@@ -250,6 +322,10 @@
           - id: MobHamsterHamlet
           - id: MobHamsterHamletSlippery
             weight: 0.001
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -261,6 +337,10 @@
     containers:
       entity_storage:
         id: MobLizard
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -272,6 +352,10 @@
     containers:
       entity_storage:
         id: MobKangaroo
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock
@@ -284,6 +368,10 @@
       entity_storage:
         id: MobMothroach
         amount: 4
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateLivestock

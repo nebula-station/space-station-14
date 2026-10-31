@@ -17,7 +17,6 @@
         Blunt: -8
         Slash: -8
         Piercing: -8
-        Ballistic: -8
         Heat: -8
         Shock: -8
         Structural: -8
@@ -26,19 +25,22 @@
       components:
       - Wall # TODO: more types of nails for different structures
   - type: MeleeWeapon
-    canWideSwing: false # How can you swing a nail
+    # Nebula start
     damage:
       types:
-        Piercing: 1
+        Piercing: 12
+    # Nebula end
     animation: WeaponArcThrust
     soundHit:
       path: /Audio/Weapons/pierce.ogg
   - type: Projectile
     onlyCollideWhenShot: true
+    # Nebula start
     damage:
       types:
-        Ballistic: 3
-      armorPenetration: -1.75 # Very shitty against armor. Pro tip: target unarmored body parts
+        Piercing: 3
+      armorPenetration: -1.75
+    # Nebula end
   - type: Fixtures
     fixtures:
       fix1:
@@ -72,6 +74,12 @@
         - EngineeringStaff
   - type: Reflective
     reflective: NonEnergy
+  # Nebula start
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    muzzleFlash: null
+    proto: Nail
+  # Nebula end
 
 - type: entity
   parent: [ Nail, BaseSyndicateContraband ]
@@ -80,10 +88,12 @@
   description: A heavy nail designed to pierce through hard surfaces. Looks just like a regular nail, until it suddenly kills you.
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 3
+        Piercing: 3
       armorPenetration: 0.65
+    # Nebula end
   - type: ProjectileDamageWhitelist
     damage: # Slightly worse for repairs
       types:
@@ -93,6 +103,10 @@
         Heat: -6
         Shock: -6
         Structural: -6
+  # Nebula start
+  - type: CartridgeAmmo
+    proto: NailArmorPiercing
+  # Nebula end
 
 - type: entity
   parent: BaseItem

@@ -8,10 +8,12 @@
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: slug
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 40 # Trauma
-        Structural: 15
+        Piercing: 45
+        Structural: 20
+    # Nebula end
 
 
 - type: entity
@@ -29,7 +31,7 @@
       types:
         Blunt: 10
   - type: StaminaDamageOnCollide
-    damage: 27 # 4 hits to stun
+    damage: 60 # Nebula
 
 - type: entity
   parent: BaseBulletKinetic # Trauma
@@ -38,10 +40,15 @@
   name: pellet (.50)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 3 # Trauma, was 10
-        Structural: 6
+        Piercing: 10
+        Structural: 15
+      armorPenetration: -0.1
+      woundSeverityMultipliers:
+        Piercing: 1.5
+    # Nebula end
 
 - type: entity
   parent: PelletShotgun
@@ -50,8 +57,8 @@
   components:
   - type: ProjectileSpread
     proto: PelletShotgun
-    count: 15 # Trauma, was 6
-    spread: 10 # Trauma, was 15
+    count: 6 # Nebula
+    spread: 15 # Nebula
 
 - type: entity
   parent: [BaseBulletIncendiary, BaseBulletKinetic] # Trauma
@@ -60,9 +67,13 @@
   name: pellet (.50 incendiary)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 2 # Trauma, was 7
+        Blunt: 4
+        Heat: 6
+      armorPenetration: -0.1
+    # Nebula end
         # Heat: 3 # Trauma
   - type: IgnitionSource
     ignited: true
@@ -74,8 +85,8 @@
   components:
   - type: ProjectileSpread
     proto: PelletShotgunIncendiary
-    count: 15 # Trauma, was 4
-    spread: 10 # Trauma, was 15
+    count: 4 # Nebula
+    spread: 15 # Nebula
 
 - type: entity
   parent: BaseBulletPractice
@@ -95,8 +106,8 @@
   components:
   - type: ProjectileSpread
     proto: PelletShotgunPractice
-    count: 15 # Trauma, was 6
-    spread: 10 # Trauma, was 15
+    count: 6 # Nebula
+    spread: 15 # Nebula
 
 - type: entity
   parent: BaseBulletKinetic # Trauma
@@ -110,10 +121,14 @@
     - state: shard
       shader: unshaded
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 1.5
-        Slash: 1.5
+        Piercing: 3
+        Slash: 3
+  - type: StaminaDamageOnCollide
+    damage: 3
+  # Nebula end
 
 - type: entity
   parent: PelletShotgunImprovised
@@ -193,12 +208,12 @@
   name: pellet (.50 uranium)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-      # <Trauma>
-      #  Radiation: 5
-        Ballistic: 4 # was 5
-      armorPenetration: 0.5
+        Radiation: 1.5
+        Piercing: 5
+    # Nebula end
       # </Trauma>
 
 - type: entity
@@ -208,8 +223,8 @@
   components:
   - type: ProjectileSpread
     proto: PelletShotgunUranium
-    count: 10 # Trauma, was 5
-    spread: 10 # Trauma, was 6
+    count: 5 # Nebula
+    spread: 6 # Nebula
 
 - type: entity
   parent: BaseBullet
@@ -224,10 +239,14 @@
     - state: grapeshot
       shader: unshaded
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 25
+        Piercing: 25
         Structural: 5
+      woundSeverityMultipliers:
+        Piercing: 3
+    # Nebula end
 
 - type: entity
   parent: PelletGrapeshot
@@ -254,9 +273,13 @@
     deleteOnRemove: true
   - type: Projectile
     deleteOnCollide: false
+    # Nebula start
     damage:
       types:
         Slash: 25
+      woundSeverityMultipliers:
+        Slash: 3
+    # Nebula end
 
 - type: entity
   parent: PelletGlass

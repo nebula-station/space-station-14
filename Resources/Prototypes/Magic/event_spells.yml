@@ -55,7 +55,7 @@
         orGroup: Guns
       - id: WeaponRifleLecter
         orGroup: Guns
-      - id: WeaponShotgunBulldog
+      - id: WeaponShotgunZauer # Orion edit
         orGroup: Guns
       - id: WeaponShotgunDoubleBarreled
         orGroup: Guns

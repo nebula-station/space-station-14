@@ -19,10 +19,10 @@
     - state: fireball
       shader: unshaded
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 3.5 # Goob edit
-    intensitySlope: 3 # Goob edit
-    totalIntensity: 28 # Gobo edit
+    explosionType: Transparent # Nebula
+    maxIntensity: 40 # Nebula
+    intensitySlope: 6 # Nebula
+    totalIntensity: 200 # Nebula
     maxTileBreak: 0
   - type: IgnitionSource
     temperature: 400
@@ -72,6 +72,13 @@
   # </Trauma>
   - type: TimedDespawn
     lifetime: 5
+  # Nebula start
+  - type: Explosive
+    explosionType: FireBomb
+    intensitySlope: 1
+    maxIntensity: 3
+    totalIntensity: 5
+  # Nebula end
 
 - type: entity
   parent: ProjectileFireball
@@ -123,8 +130,11 @@
   - type: Projectile
     deleteOnCollide: false
     onlyCollideWhenShot: true
+    # Nebula start
     damage:
-      types: {}
+      types:
+        Brute: 0
+    # Nebula end
   - type: Sprite
     noRot: true
     sprite: Structures/Storage/closet.rsi
@@ -304,9 +314,11 @@
     - state: magicm_yellow # Goob edit
       shader: unshaded
   - type: Projectile
+    # Nebula start
     damage:
-      types: {} # Trauma - removed slop -200 every damage, just use rejuvenate instead
-    ignoreResistances: true
+      types:
+        Heat: 0
+    # Nebula end
 
 - type: entity
   parent: BaseBullet
@@ -316,9 +328,11 @@
   description: This looks familiar.
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 300 # Trauma
+        Piercing: 300
+    # Nebula end
     ignoreResistances: true
   - type: Reflective
     reflective: Magic
@@ -351,11 +365,13 @@
   - type: Sprite
     sprite: Structures/Specific/Anomalies/ice_anom.rsi
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 20 # Trauma
+        Piercing: 20
         Cold: 20
         Structural: 50
+    # Nebula end
 
 - type: entity
   parent: ProjectilePolyboltBase

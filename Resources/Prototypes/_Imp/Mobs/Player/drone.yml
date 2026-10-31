@@ -178,9 +178,11 @@
     - Alive
     - Dead
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      60: Dead
+      25: Dead
+    # Nebula end
   - type: NoSlip
   - type: StatusEffects
     allowed:

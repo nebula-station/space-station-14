@@ -132,3 +132,7 @@
     board: EnergyChemDispenserMachineCircuitboard
   - type: StealTarget
     stealGroup: ChemDispenser
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end

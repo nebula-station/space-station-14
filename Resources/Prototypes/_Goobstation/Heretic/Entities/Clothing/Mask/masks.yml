@@ -32,3 +32,11 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # Nebula start
+  - type: Armor
+    coverage:
+    - Head
+    modifiers:
+      coefficients:
+        Holy: 1.25
+  # Nebula end

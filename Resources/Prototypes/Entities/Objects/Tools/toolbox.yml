@@ -145,9 +145,11 @@
   - type: MeleeWeapon
     flipAnimation: false # Horizontally symetrical sprites dont need this. neither does
     heavyStaminaCost: 10 # goob edit
+    # Nebula start
     damage:
       types:
-        Blunt: 16
+        Blunt: 20
+    # Nebula end
 
 - type: entity
   name: golden toolbox

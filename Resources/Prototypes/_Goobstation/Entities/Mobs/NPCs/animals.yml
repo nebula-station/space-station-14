@@ -342,11 +342,12 @@
     animation: WeaponArcBite
     soundHit:
       path: /Audio/Effects/bite.ogg
+    # Nebula start
     damage:
       types:
         Blunt: 10
         Slash: 10
-        Structural: 10
+    # Nebula end
   - type: TypingIndicator
     proto: alien
   - type: Tag
@@ -705,10 +706,6 @@
     rootTask:
       task: RuminantHostileCompound
   - type: MeleeWeapon
-    angle: 0
-    damage:
-      types:
-        Blunt: 10
   - type: MovementSpeedModifier
     baseSprintSpeed: 5.5
     baseWalkSpeed: 4.5 # default walking speed
@@ -811,9 +808,11 @@
     sprite: _Goobstation/Mobs/Animals/clown_goblin.rsi
     state: goblin
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      100: Dead
+      150: Dead
+    # Nebula end
   - type: Physics
   - type: HTN
     rootTask:
@@ -876,7 +875,7 @@
       collection: FootstepClown
   - type: CombatMode
   - type: MeleeWeapon
-    attackRate: 1.5
+    attackRate: 2 # Nebula
     damage:
       types:
         Blunt: 0.5

@@ -115,6 +115,16 @@
         shader: unshaded
   - type: Item
     sprite: Objects/Tools/Lighters/lighters.rsi
+  # Nebula start
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+        types:
+            Heat: 1
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 0
+  # Nebula end
 
 - type: entity
   parent: Lighter
@@ -236,6 +246,16 @@
         shader: unshaded
   - type: PointLight
     radius: 1.5 #slightly stronger than the other lighters
+  # Nebula start
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+        types:
+            Heat: 1
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 0
+  # Nebula end
 
 - type: entity
   parent: BaseBrandedLighter
@@ -269,6 +289,16 @@
       right:
       - state: zippo-inhand-right-flame
         shader: unshaded
+  # Nebula start
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+        types:
+            Heat: 1
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 1
+  # Nebula end
 
 - type: entity
   parent: FlippoLighter

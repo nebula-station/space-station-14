@@ -7,9 +7,11 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 5
+        Piercing: 5
+    # Nebula end
   - type: Solution
     id: ammo
     solution:
@@ -26,9 +28,11 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 5
+        Piercing: 10
+    # Nebula end
   - type: Solution
     id: ammo
     solution:

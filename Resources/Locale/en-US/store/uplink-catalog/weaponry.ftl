@@ -1,7 +1,7 @@
 # Weaponry
 
 uplink-pistol-viper-name = Viper
-uplink-pistol-viper-desc = A small and easily concealable pistol. Retrofitted with a fully automatic receiver. Uses extended pistol magazines (.35 auto).
+uplink-pistol-viper-desc = A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses pistol magazines (9mm auto).
 
 uplink-pistol-cobra-name = Cobra
 # Trauma - 9.5mm larp
@@ -58,7 +58,7 @@ uplink-bulldog-bundle-desc = Lean and mean: Contains the popular Bulldog Shotgun
 
 # Trauma - debundled
 uplink-estoc-bundle-name = Estoc DMR
-uplink-estoc-bundle-desc = A designated marksman rifle, fitted with a mid-range optic for longer-range combat.
+uplink-estoc-bundle-desc = A designated marksman rifle, fitted with a mid-range optic for longer-range combat. Bundled with two rifle magazines (5.56mm rifle).
 
 uplink-grenade-launcher-name = China Lake
 uplink-grenade-launcher-desc = An old China Lake grenade launcher bundled with 5 rounds of anti-personnel ammo.

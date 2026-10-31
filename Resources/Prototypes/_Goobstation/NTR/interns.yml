@@ -30,6 +30,13 @@
   - type: Loadout
     prototypes: [LeadInternGear]
   - type: AntagImmune
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 # Basic Intern Coin
 - type: entity
@@ -77,6 +84,13 @@
   - type: Loadout
     prototypes: [NTInternGear]
   - type: AntagImmune
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 # NT Nerd Intern
 - type: entity
@@ -90,6 +104,13 @@
   - type: Loadout
     prototypes: [NTNerdInternGear]
   - type: AntagImmune
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 # NT Nerd Intern Gear
 - type: startingGear

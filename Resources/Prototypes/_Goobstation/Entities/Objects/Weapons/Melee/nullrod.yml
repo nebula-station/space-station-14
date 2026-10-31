@@ -74,10 +74,14 @@
     animationRotation: -45
     wideAnimationRotation: -135
     attackRate: 0.8
+    # Nebula start
     damage:
       types:
-        Slash: 12
-        Holy: 8 # Land a mark hit for higher holy damage
+        Slash: 13
+        Holy: 10
+      woundSeverityMultipliers:
+        Slash: 2.5
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: Wieldable
@@ -161,7 +165,6 @@
         Blunt: -7.5
         Slash: -7.5
         Piercing: -7.5
-        Ballistic: -7.5
         Heat: -7.5
         Cold: -7.5
         Shock: -7.5
@@ -171,6 +174,11 @@
   - type: Tag
     tags:
     - Rosary
+  # Nebula start
+  - type: HeldSpeedModifier
+    sprintModifier: 1.15
+    walkModifier: 1.15
+  # Nebula end
 
 - type: entity
   parent: BaseNullrod
@@ -190,10 +198,13 @@
   - type: MeleeWeapon
     canWideSwing: false
     attackRate: 0.7
+    # Nebula start
     damage:
       types:
         Heat: 10
-        Holy: 14
+        Slash: 4
+        Holy: 10
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
   - type: HolyIgniteOnMeleeHit
@@ -246,10 +257,12 @@
     animationRotation: -45
     wideAnimationRotation: -135
     attackRate: 1.5
+    # Nebula start
     damage:
       types:
-        Slash: 7
-        Holy: 8
+        Slash: 9
+        Holy: 10
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: ItemRandomizeMovementspeed
@@ -291,10 +304,12 @@
     state: icon
   - type: MeleeWeapon
     attackRate: 3
+    # Nebula start
     damage:
       types:
-        Holy: 4
-        Blunt: 1
+        Holy: 6
+        Blunt: 2.5
+    # Nebula end
     soundHit:
       collection: BoxingHit
   - type: StaminaDamageOnHit
@@ -332,10 +347,12 @@
     UntrainedUseString: nullrod-bulwark-untrained-usage-popup
   - type: MeleeWeapon
     attackRate: 0.5
+    # Nebula start
     damage:
       types:
-        Blunt: 5
+        Slash: 5
         Holy: 10
+    # Nebula end
     soundHit:
       collection: MetalThud
   - type: MeleeThrowOnHit
@@ -358,13 +375,20 @@
   - type: Blocking
     passiveBlockFraction: 0.15
     activeBlockFraction: 1
+    # Nebula start
     passiveBlockModifier:
-      flatReductions:
-        Blunt: 15
-        Slash: 10
-        Piercing: 10
-        Ballistic: 5
-        Heat: 10
+      coefficients:
+        Blunt: 1
+        Slash: 1
+        Piercing: 1
+        Heat: 1
+    activeBlockModifier:
+      coefficients:
+        Blunt: 1
+        Slash: 1
+        Piercing: 1
+        Heat: 1
+    # Nebula end
   - type: Tag
     tags:
     - Bulwark
@@ -382,8 +406,6 @@
     validSpellDenialSlots:
     - BACK
   - type: Reflect
-    slotFlags:
-    - BACK
   - type: Parry
     parryExhaustionCost: 0.25
     parryMinSkill: 0
@@ -409,10 +431,12 @@
     UntrainedUseString: nullrod-honkmother-untrained-usage-popup
   - type: MeleeWeapon
     attackRate: 0.8
+    # Nebula start
     damage:
       types:
         Holy: 10
-        Blunt: 10
+        Blunt: 12
+    # Nebula end
     soundHit:
       collection: RubberHammer
       params:
@@ -490,12 +514,15 @@
   - type: MeleeWeapon
     canWideSwing: false
     attackRate: 0.9
+    # Nebula start
     damage:
       types:
-        Holy: 10
-        Blunt: 9
+        Holy: 14
+        Blunt: 14
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/smash.ogg
+    range: 3 # Nebula
   - type: Unremoveable
   - type: Nullrod
     damageOnUntrainedUse:
@@ -552,12 +579,17 @@
     animationRotation: 90
     wideAnimationRotation: 90
     attackRate: 4
+    # Nebula start
     damage:
       types:
         Blunt: 2
         Slash: 3
         Structural: 20
-        Holy: 3
+        Holy: 6
+      woundSeverityMultipliers:
+        Slash: 2
+        Blunt: 2
+    # Nebula end
     soundHit: *chainsaw_rev_sound
   - type: Item
     size: Ginormous
@@ -668,13 +700,14 @@
     sprite: _Goobstation/Objects/Weapons/Melee/blessing_reaper.rsi
   - type: Unremoveable
   - type: MeleeWeapon
+    # Nebula start
     damage:
       types:
-        Slash: 15
-        Structural: 10
-        Holy: 5
-      woundSeverityMultipliers:
-        Slash: 1
+        Slash: 25
+        Piercing: 15
+        Holy: 10
+    # Nebula end
+    attackRate: 0.75 # Nebula
 
 - type: entity
   parent: [ BaseNullrod, SolutionSpear ]
@@ -709,10 +742,12 @@
     attackRate: 0.8
     animationRotation: -135
     wideAnimationRotation: -135
+    # Nebula start
     damage:
       types:
-        Piercing: 10
-        Holy: 15
+        Piercing: 18
+        Holy: 10
+    # Nebula end
     angle: 0
     animation: WeaponArcThrust
     soundHit:
@@ -721,10 +756,12 @@
     tags:
     - RatvarianSpear
   - type: DamageOtherOnHit
+    # Nebula start
     damage:
       types:
-        Piercing: 15
-        Holy: 20
+        Piercing: 25
+        Holy: 15
+    # Nebula end
   - type: EmbeddableProjectile
     offset: -0.15,0.0
   - type: ThrowingAngle

@@ -29,7 +29,7 @@
     - suitStorage
   - type: AmmoCounter
   - type: Gun
-    projectileSpeed: 27
+    projectileSpeed: 30 # Nebula
     fireRate: 6
     selectedMode: FullAuto
     availableModes:

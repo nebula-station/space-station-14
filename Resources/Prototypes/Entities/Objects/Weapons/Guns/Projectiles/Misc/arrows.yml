@@ -72,9 +72,11 @@
       map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Piercing: 20
+        Piercing: 35
+    # Nebula end
 
 - type: entity
   parent: BaseArrowImprovised # Trauma - Improvised parent
@@ -119,9 +121,11 @@
       map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Piercing: 13 # Trauma, was 25
+        Piercing: 25
+    # Nebula end
   - type: Construction
     graph: ImprovisedArrow
     node: ImprovisedArrow
@@ -170,9 +174,11 @@
       map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Piercing: 13 # Trauma, was 30
+        Piercing: 30
+    # Nebula end
   - type: Construction
     graph: ImprovisedArrowPlasma
     node: ImprovisedArrowPlasma
@@ -221,10 +227,12 @@
       map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Piercing: 7 # Trauma, was 25
+        Piercing: 25
         Radiation: 5
+    # Nebula end
   - type: Construction
     graph: ImprovisedArrowUranium
     node: ImprovisedArrowUranium
@@ -272,9 +280,11 @@
       map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Piercing: 15 # Trauma, was 30
+        Piercing: 30
+    # Nebula end
   - type: Construction
     graph: ImprovisedArrowCarp
     node: ImprovisedArrowCarp

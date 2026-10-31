@@ -12,6 +12,10 @@
       amount: 1
     - id: ProcenylLazideChemistryVial
       amount: 1
+  # Nebula start
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  # Nebula end
 
 - type: entity
   parent: ClothingBeltHolster

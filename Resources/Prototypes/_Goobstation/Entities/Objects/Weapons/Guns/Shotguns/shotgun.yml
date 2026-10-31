@@ -27,13 +27,14 @@
   - type: GunRequiresWield
   - type: Gun
     fireRate: 2
+    cameraRecoilScalar: 3 # Orion edit
     selectedMode: FullAuto
     availableModes:
     - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+      collection: AutoShotgunShot # Orion edit
     soundEmpty:
-      path: /Audio/Weapons/Guns/Empty/empty.ogg
+      path: /Audio/_Orion/Weapons/Guns/Shotguns/v51_empty.ogg # Orion edit
   - type: ItemSlots
     slots:
       gun_magazine:

@@ -176,7 +176,7 @@
   - type: TriggerOnActivateImplant
   - type: EmpOnTrigger
     range: 2.75
-    energyConsumption: 50000
+    energyConsumption: 360 # Nebula
     disableDuration: 10
 
 - type: entity
@@ -265,7 +265,7 @@
     targetUser: true
     deleteItems: true
   - type: Explosive
-    explosionType: MicroBomb
+    explosionType: TransparentMicroBomb # Nebula
     totalIntensity: 120
     intensitySlope: 5
     maxIntensity: 30
@@ -310,9 +310,9 @@
       - timer
     - type: Explosive
       explosionType: Default
-      totalIntensity: 3500
-      intensitySlope: 15
-      maxIntensity: 70
+      totalIntensity: 4000 # Nebula
+      intensitySlope: 5 # Nebula
+      maxIntensity: 50 # Nebula
       canCreateVacuum: true
 
 - type: entity

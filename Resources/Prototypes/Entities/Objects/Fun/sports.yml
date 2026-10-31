@@ -92,6 +92,10 @@
       params:
         volume: -4
   - type: UseDelay
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
   # <Trauma> No.
 #  - type: Clothing
 #    slots: [mask]

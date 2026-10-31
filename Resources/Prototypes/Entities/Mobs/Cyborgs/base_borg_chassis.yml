@@ -79,10 +79,12 @@
     - Critical
     - Dead
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
       100: Critical
-      200: Dead # Trauma - was 300
+      300: Dead
+    # Nebula end
     stateAlertDict:
       Alive: BorgHealth
       Critical: BorgCrit
@@ -91,7 +93,6 @@
     allowRevives: true
   - type: HealthExaminable
     examinableTypes:
-      - Ballistic # Trauma
       - Blunt
       - Slash
       - Piercing
@@ -333,7 +334,7 @@
     - timer
   # explosion does most of its damage in the center and less at the edges
   - type: Explosive
-    explosionType: Minibomb
+    explosionType: TransparentMinibomb # Nebula
     deleteAfterExplosion: false # let damage threshold gib the borg
     totalIntensity: 30
     intensitySlope: 20
@@ -355,7 +356,7 @@
     id: Xenoborg
     useEntityNameAsCameraId: true
   - type: Explosive
-    explosionType: Minibomb
+    explosionType: TransparentMinibomb # Nebula
     deleteAfterExplosion: false # let damage threshold gib the borg
     totalIntensity: 200 # bigger kaboom
     intensitySlope: 20
@@ -525,10 +526,12 @@
   - type: Sprite
     sprite: Mobs/Silicon/chassis.rsi
   - type: MobThresholds
-    thresholds: # slightly tankier than a normal borg
+    # Nebula start
+    thresholds:
       0: Alive
-      125: Critical
-      250: Dead
+      175: Critical
+      400: Dead
+    # Nebula end
   - type: EmagSiliconLaw # should xenoborgs be emagable?
     stunTime: 5
   - type: SiliconLawProvider
@@ -610,6 +613,10 @@
     bypassDelay: 15 # We don't want people to easily be able to remove xenoborg brains.
   - type: EmpResistance
     strengthMultiplier: 0
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Xenoborg
+  # Nebula end
 
 - type: entity
   abstract: true

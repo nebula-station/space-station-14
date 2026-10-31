@@ -22,10 +22,12 @@
   - MagazineBoxMagnumPractice
   - MagazineBoxPistolPractice
   - MagazineBoxRiflePractice
+  - MagazineBoxRifle762Practice # Orion edit
   - WeaponDisablerPractice
   - WeaponLaserCarbinePractice
   - MagazineLightRiflePractice
   - MagazineRiflePractice
+  - MagazineRifle762Practice # Orion edit
   - MagazinePistolPractice
   - SpeedLoaderMagnumPractice
   - MagazinePistolSubMachineGunPractice
@@ -42,6 +44,11 @@
   - MagazineBoxMagnum
   - MagazineBoxPistol
   - MagazineBoxRifle
+  # Orion start
+  - MagazineBoxRifle762
+  - MagazineRifle762
+  - MagazineRifle762Empty
+  # Orion end
   # - MagazineLightRifle # Goobstation - remove light rifle
   # - MagazineLightRifleEmpty # Goobstation - remove light rifle
   - MagazinePistol
@@ -120,6 +127,12 @@
   - MagazineBoxPistolUranium
   - MagazineBoxRifleIncendiary
   - MagazineBoxRifleUranium
+  # Orion start
+  - MagazineBoxRifle762Incendiary
+  - MagazineBoxRifle762Uranium
+  - MagazineRifle762Incendiary
+  - MagazineRifle762Uranium
+  # Orion end
   # - MagazineLightRifleIncendiary # Goobstation - remove light rifle
   # - MagazineLightRifleUranium # Goobstation - remove light rifle
   - MagazinePistolIncendiary

@@ -197,10 +197,12 @@
     storedOffset: 0,7
   - type: MeleeWeapon
     attackRate: 0.75
+    # Nebula start
     damage:
       types:
-        Blunt: 20 # Trauma - Was 30
+        Blunt: 30
         Shock: 5
+    # Nebula end
   - type: DamageOtherOnHit
     damage:
       types:

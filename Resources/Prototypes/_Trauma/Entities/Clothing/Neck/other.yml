@@ -72,10 +72,10 @@
         Blunt: 800
         Slash: 200
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 2.5
-    intensitySlope: 5
-    totalIntensity: 10
+    explosionType: Minibomb # Nebula
+    maxIntensity: 50 # Nebula
+    intensitySlope: 20 # Nebula
+    totalIntensity: 100 # Nebula
     canCreateVacuum: false
   - type: TriggerOnSignal
   - type: DeviceLinkSink

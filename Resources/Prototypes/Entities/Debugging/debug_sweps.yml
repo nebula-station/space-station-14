@@ -15,6 +15,7 @@
     availableModes:
     - SemiAuto
     - FullAuto
+    projectileSpeed: 26 # Nebula
   - type: BatteryAmmoProvider
     proto: DebugLaser
     fireCost: 1
@@ -28,6 +29,10 @@
   components:
   - type: BatteryAmmoProvider
     proto: DebugLaserGib
+  # Nebula start
+  - type: Gun
+    projectileSpeed: 26
+  # Nebula end
 
 - type: entity
   name: bang, ded

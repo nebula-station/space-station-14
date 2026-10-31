@@ -10,12 +10,13 @@
   - type: CartridgeAmmo
     proto: BulletMagnum
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi # Orion edit
     layers:
-    - state: base
+    - state: 45combat # Orion edit
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
+    state: 45combat # Orion edit
 
 - type: entity
   parent: BaseCartridgeMagnum
@@ -32,15 +33,16 @@
   name: cartridge (.45 magnum practice)
   description: Heavy magnum cartridge mostly used by revolvers. Practice ammunition fires a chalk projectile that stings a little, but otherwise causes no lasting damage.
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 45training
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletMagnumPractice
   - type: Sprite
     layers:
-      - state: base
+      - state: 45training # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#dbdbdb"
 
 - type: entity
   parent: BaseCartridgeMagnum
@@ -48,15 +50,16 @@
   name: cartridge (.45 magnum incendiary)
   description: Heavy magnum cartridge mostly used by revolvers. Incendiary ammunition contains a self-igniting compound that sets targets ablaze.
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 45incendiary
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletMagnumIncendiary
   - type: Sprite
     layers:
-      - state: base
+      - state: 45incendiary # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#ff6e52"
 
 - type: entity
   parent: BaseCartridgeMagnum
@@ -64,15 +67,16 @@
   name: cartridge (.45 magnum armor-piercing)
   description: Heavy magnum cartridge mostly used by revolvers. Armor-piercing ammunition is renowned for its ability to cut straight through body armor.
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 45fast
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletMagnumAP
   - type: Sprite
     layers:
-      - state: base
+      - state: 45fast # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#0a0a0a"
 
 - type: entity
   parent: BaseCartridgeMagnum
@@ -80,12 +84,13 @@
   name: cartridge (.45 magnum uranium)
   description: Heavy magnum cartridge mostly used by revolvers. Uranium ammunition replaces the lead core of the bullet with fissile material, irradiating targets from the inside.
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 45uranium
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletMagnumUranium
   - type: Sprite
     layers:
-      - state: base
+      - state: 45uranium # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#65fe08"

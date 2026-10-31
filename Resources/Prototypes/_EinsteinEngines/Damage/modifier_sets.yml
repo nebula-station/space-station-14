@@ -2,14 +2,16 @@
 
 - type: damageModifierSet
   id: IPC
+  # Nebula start
   coefficients:
     Blunt: 0.8
     Slash: 0.8
     Piercing: 0.8
-    Heat: 1.7
+    Heat: 1.4
     Shock: 2
-    Radiation: 0.4
-    Ion: 1.5
+    Radiation: 0.2
+    Ion: 0.8
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet

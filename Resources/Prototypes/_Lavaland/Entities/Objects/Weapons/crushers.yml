@@ -22,7 +22,6 @@
   - type: DisarmMalus
   - type: Prying
   - type: MeleeWeapon
-    heavyStaminaCost: 3.3 # Nebula edit
     range: 2 # Enough range so if you're skilled enough you can avoid being hit by a slow enemy
     attackRate: 1
     animationRotation: -135
@@ -152,15 +151,19 @@
   - type: Clothing
     sprite: _Lavaland/Objects/Weapons/Crushers/crusher.rsi
   - type: MeleeWeapon
+    # Nebula start
     damage:
       types:
-        Slash: 3
-        Blunt: 3
+        Slash: 6
+        Blunt: 5
+    # Nebula end
   - type: IncreaseDamageOnWield
+    # Nebula start
     damage:
       types:
-        Slash: 2
-        Structural: 4
+        Slash: 4
+        Structural: 8
+    # Nebula end
 
 - type: entity
   parent: [ BaseWeaponCrusher, BaseSalvageContraband ]
@@ -188,15 +191,19 @@
     angle: 0
     animationRotation: -135
     wideAnimationRotation: -135
+    # Nebula start
     damage:
       types:
-        Piercing: 2
-        Slash: 2
+        Piercing: 5
+        Slash: 4
+    # Nebula end
   - type: IncreaseDamageOnWield
+    # Nebula start
     damage:
       types:
-        Piercing: 2
-        Structural: 4
+        Piercing: 3
+        Structural: 8
+    # Nebula end
 
 - type: entity
   parent: [ BaseWeaponCrusher, BaseSalvageContraband ]
@@ -209,14 +216,18 @@
     state: icon
   - type: MeleeWeapon # Slower attack speed but higher damage makes it more risky and rewarding to use
     attackRate: 0.6
+    # Nebula start
     damage:
       types:
-        Blunt: 6
+        Blunt: 12
+    # Nebula end
   - type: IncreaseDamageOnWield
+    # Nebula start
     damage:
       types:
-        Blunt: 6
-        Structural: 8
+        Blunt: 13
+        Structural: 15
+    # Nebula end
   - type: Item
     size: Ginormous
     sprite: _Lavaland/Objects/Weapons/Crushers/crusher_hammer-inhands.rsi
@@ -243,18 +254,21 @@
     sprite: _Lavaland/Objects/Weapons/Crushers/crusher_halberd.rsi
   # Basically a crusher but better
   - type: MeleeWeapon
-    attackRate: 0.8
     range: 2.2
+    # Nebula start
     damage:
       types:
-        Slash: 3
-        Blunt: 3
+        Slash: 6
+        Blunt: 5
+    # Nebula end
   - type: IncreaseDamageOnWield
+    # Nebula start
     damage:
       types:
-        Piercing: 2
-        Slash: 1
-        Structural: 7
+        Piercing: 3
+        Slash: 3
+        Structural: 15
+    # Nebula end
 
 # Random upgrades
 - type: entity

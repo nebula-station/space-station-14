@@ -19,6 +19,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+    projectileSpeed: 26 # Nebula
   - type: MagazineAmmoProvider
   - type: ItemSlots
     slots:
@@ -52,6 +53,13 @@
   - type: EmitSoundOnLand
     sound:
       collection: LasersDrop
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+       Blunt: 12
+  # Nebula end
 
 - type: entity
   parent: [BaseWeaponCustomCell, BasePistolWhip]
@@ -71,6 +79,13 @@
     quickEquip: false
     slots:
     - Belt
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+       Blunt: 8
+  # Nebula end
 
 - type: entity
   parent: BaseWeaponBattery
@@ -98,7 +113,7 @@
   - type: MaterialEnergy
     materialWhiteList: [Plasma]
   - type: BatteryAmmoProvider
-    proto: BulletPlasmaCutterStrong
+    proto: BulletPlasmaRifle # Nebula
     fireCost: 100
   - type: WeaponRandomExplode
     explosionChance: 0.05 # 1d20 roll
@@ -195,6 +210,10 @@
   - type: PacifismAllowedGun
   - type: BatterySelfRecharger
     autoRechargeRate: 40
+  # Nebula start
+  - type: Gun
+    projectileSpeed: 26
+  # Nebula end
 
 - type: entity
   name: syndicate disabler
@@ -206,6 +225,7 @@
       fireRate: 3
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+      projectileSpeed: 26 # Nebula
     - type: Item
       size: Small
       shape:
@@ -296,6 +316,7 @@
       path: /Audio/_DV/Weapons/Guns/Gunshots/laser.ogg
     soundEmpty:
       path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
+    projectileSpeed: 26 # Nebula
   - type: Battery
     maxCharge: 1000
     startingCharge: 1000

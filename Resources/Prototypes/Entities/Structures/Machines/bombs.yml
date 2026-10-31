@@ -85,7 +85,7 @@
       radius: 1.1
       softness: 1
     - type: Explosive
-      explosionType: Default
+      explosionType: Transparent # Nebula
       totalIntensity: 5.0
       intensitySlope: 5
       maxIntensity: 4
@@ -126,8 +126,8 @@
     - type: Explosive
       explosionType: HardBomb
       totalIntensity: 4000.0
-      intensitySlope: 10
-      maxIntensity: 75
+      intensitySlope: 3 # Nebula
+      maxIntensity: 400 # Nebula
     - type: StaticPrice
       price: 10000 # Good luck!
 
@@ -137,7 +137,7 @@
   suffix: fake
   components:
     - type: Explosive
-      explosionType: Default
+      explosionType: Transparent # Nebula
       totalIntensity: 5.0
       intensitySlope: 5
       maxIntensity: 4

@@ -47,6 +47,10 @@
     - BorgLArm
   - type: Item
     heldPrefix: borg-arm
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Silicon
+  # Nebula end
 
 - type: entity
   id: RightArmBorg
@@ -62,6 +66,10 @@
     - BorgRArm
   - type: Item
     heldPrefix: borg-arm
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Silicon
+  # Nebula end
 
 - type: entity
   id: LeftLegBorg
@@ -77,6 +85,10 @@
     - BorgLLeg
   - type: Item
     heldPrefix: borg-leg
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Silicon
+  # Nebula end
 
 - type: entity
   id: RightLegBorg
@@ -92,6 +104,10 @@
     - BorgRLeg
   - type: Item
     heldPrefix: borg-leg
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Silicon
+  # Nebula end
 
 - type: entity
   id: LightHeadBorg
@@ -106,6 +122,10 @@
     - BorgHead
   - type: Item
     heldPrefix: borg-head
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Silicon
+  # Nebula end
 
 - type: entity
   id: TorsoBorg
@@ -120,3 +140,7 @@
     - BorgTorso
   - type: Item
     heldPrefix: borg-chest
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Silicon
+  # Nebula end

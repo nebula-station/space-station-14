@@ -17,6 +17,13 @@
         - id: BoxLatexGloves
         - id: BoxSterileMask
         - id: BoxMouthSwab
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedical
@@ -36,6 +43,13 @@
         - id: BoxVial
         - id: Dropper
           amount: 2
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedical
@@ -48,6 +62,13 @@
       entity_storage:
         id: MindShieldImplanter
         amount: 3
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateSurgery
@@ -93,6 +114,13 @@
         - id: ClothingHeadHatSurgcapGreen
         - id: ClothingMaskSterile
           amount: 3
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedical
@@ -104,6 +132,13 @@
     containers:
       entity_storage:
         id: MedkitBurnFilled
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedical
@@ -115,6 +150,13 @@
     containers:
       entity_storage:
         id: MedkitToxinFilled
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedical
@@ -126,6 +168,13 @@
     containers:
       entity_storage:
         id: MedkitOxygenFilled
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedical
@@ -137,6 +186,13 @@
     containers:
       entity_storage:
         id: MedkitBruteFilled
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedical
@@ -148,6 +204,13 @@
     containers:
       entity_storage:
         id: MedkitAdvancedFilled
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedical
@@ -159,6 +222,13 @@
     containers:
       entity_storage:
         id: MedkitRadiationFilled
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedical
@@ -171,6 +241,13 @@
       entity_storage:
         id: BoxBodyBag
         amount: 2
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateMedicalSecure

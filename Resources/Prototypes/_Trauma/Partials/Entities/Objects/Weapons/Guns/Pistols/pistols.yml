@@ -20,13 +20,11 @@
   id: WeaponPistolViper
   components:
   - type: Gun
-    fireRate: 4
 
 - type: entity
   id: WeaponPistolEchis
   components:
   - type: Gun
-    fireRate: 4 # was 6
 
 - type: entity
   id: WeaponPistolCobra
@@ -36,7 +34,6 @@
   id: WeaponPistolMk58
   components:
   - type: Gun
-    fireRate: 3
 
 - type: entity
   id: WeaponPistolN1984
@@ -47,4 +44,4 @@
     angleDecay: 4 # was 9
     fireRate: 3 # was 4
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+      path: /Audio/_Orion/Weapons/Guns/Rifles/som_rifle.ogg # Nebula edit

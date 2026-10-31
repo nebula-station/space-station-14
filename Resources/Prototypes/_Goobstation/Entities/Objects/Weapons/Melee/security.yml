@@ -20,13 +20,15 @@
   - type: MeleeWeapon
     animationRotation: -180
     wideAnimationRotation: -135
+    # Nebula start
     damage:
       types:
-        Blunt: 12
+        Blunt: 8
+    # Nebula end
     soundHit:
       path: /Audio/_Goobstation/Weapons/Baton/woodhit.ogg
   - type: StaminaDamageOnHit
-    damage: 15
+    damage: 20 # Nebula
   - type: MeleeThrowOnHit
     distance: 1
     speed: 5
@@ -117,17 +119,22 @@
       types:
         Piercing: 18
   - type: IncreaseDamageOnWield
+    # Nebula start
     damage:
       types:
-        Piercing: 10
+        Piercing: 6
+    # Nebula end
   - type: MeleeWeapon
     canWideSwing: false
     range: 2.2
     animationRotation: -135
     attackRate: 0.8
+    # Nebula start
     damage:
       types:
-        Piercing: 10
+        Blunt: 5
+        Piercing: 5
+    # Nebula end
     soundHit:
       collection: MetalThud
   - type: Appearance

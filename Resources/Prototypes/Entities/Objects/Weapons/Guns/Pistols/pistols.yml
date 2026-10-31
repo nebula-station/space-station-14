@@ -33,7 +33,11 @@
       - SemiAuto
       - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+    # Nebula start
+      path: /Audio/_Orion/Weapons/Guns/Pistols/colt.ogg
+    soundEmpty:
+      path: /Audio/_Orion/Weapons/Guns/Pistols/beretta_empty.ogg
+    # Nebula end
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/pistol_cock.ogg
@@ -68,6 +72,13 @@
   - type: Appearance
   - type: StaticPrice
     price: 500
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+       Blunt: 8
+  # Nebula end
 
 - type: entity
   name: viper
@@ -76,11 +87,6 @@
   description: A common handgun illegally modified by the Syndicate. The Viper sports a selector switch between semi-auto and ‘rock and roll’. The standard sidearm for any soldier who fights under the three serpents. Feeds from .35 pistol magazines.
   components:
   - type: Gun
-    minAngle: 2
-    maxAngle: 25
-    angleIncrease: 2
-    angleDecay: 20
-    selectedMode: FullAuto # Override of BaseWeaponPistol to default to full-auto
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
   - type: ItemSlots
@@ -116,7 +122,7 @@
   description: A cyborg-mounted weapon system based on the Viper pistol. Creates ammunition on the fly from an internal fabricator, which slowly self-charges.
   components:
   - type: Gun
-    fireRate: 6
+    fireRate: 5 # Nebula
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -163,10 +169,6 @@
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
   - type: Gun
-    minAngle: 2
-    maxAngle: 8
-    angleIncrease: 1
-    angleDecay: 14
     fireRate: 4
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
@@ -174,6 +176,7 @@
         volume: -14
     availableModes:
     - SemiAuto
+    projectileSpeed: 35 # Nebula
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -217,15 +220,11 @@
   - type: Item
     storedOffset: 0,-2
   - type: Gun
-    minAngle: 2
-    maxAngle: 17
-    angleIncrease: 2
-    angleDecay: 14
-    fireRate: 5
+    fireRate: 4.5 # Nebula
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+      path: /Audio/_Orion/Weapons/Guns/Pistols/vp70_shot.ogg # Nebula edit
   - type: StealTarget
     stealGroup: OfficerHandgun
 

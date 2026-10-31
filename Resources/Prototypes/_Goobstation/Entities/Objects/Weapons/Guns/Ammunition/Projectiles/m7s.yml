@@ -6,6 +6,8 @@
   parent: BaseBullet
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 11
+        Piercing: 11
+    # Nebula end

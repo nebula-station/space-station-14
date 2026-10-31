@@ -238,6 +238,10 @@
         acts: [ "Destruction" ]
   - type: Construction
     node: windoor
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Glass
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -272,6 +276,10 @@
       - SecureWindoor
       # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
       - DoorRemoteWhitelist
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: RGlass
+  # Nebula end
       # This tag is used by door remotes to allow or not a door remote to normally be able to interact with a door
 
 

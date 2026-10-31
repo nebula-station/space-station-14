@@ -104,9 +104,11 @@
   - type: Injurable
     damageContainer: Biological
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      25: Dead
+      50: Dead
+    # Nebula end
   - type: TriggerOnMobstateChange
     mobState:
     - Dead
@@ -153,9 +155,11 @@
         Slash: 4
         Blunt: 4
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      45: Dead
+      80: Dead
+    # Nebula end
 
 - type: entity
   id: MobPlagueRatLarge
@@ -196,9 +200,11 @@
         Blunt: 5
         Structural: 50
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      70: Dead
+      100: Dead
+    # Nebula end
 
 - type: entity
   id: MobMadRat

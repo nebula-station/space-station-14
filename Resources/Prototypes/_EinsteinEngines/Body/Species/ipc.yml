@@ -251,7 +251,6 @@
         Blunt: -10
         Piercing: -10
         Slash: -10
-        Ballistic: -10
   - type: DamagedSiliconAccent
     enableChargeCorruption: false
   - type: Uncloneable # it a fucking robot
@@ -317,6 +316,12 @@
     - DoorBumpOpener
     - AnomalyHost
     - IPCDrinkBlacklist # Don't let self antagging IPCs steal power from other ipcs.
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 6
+  # Nebula end
 
 ## Base
 

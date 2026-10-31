@@ -18,9 +18,10 @@
   - type: Clothing
     sprite: _Goobstation/Objects/Weapons/Guns/Rifles/burner.rsi
   - type: Gun
-    fireRate: 1.5
+    fireRate: 2 # Nebula
+    cameraRecoilScalar: 6 # Nebula edit
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+      collection: 50bmgShot # Nebula edit
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -60,7 +61,7 @@
   name: M-90
   parent: [BaseWeaponRifle, BaseSyndicateContraband]
   id: WeaponRifleM90
-  description: A revision of the M-90gl that removes the inbuilt grenade launcher. Uses .20 rifle ammo.
+  description: A revision of the M-90gl that removes the inbuilt grenade launcher. Uses 5.56mm rifle ammo. # Nebula edit
   components:
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Rifles/m90.rsi
@@ -100,23 +101,27 @@
     zeroVisible: true
   - type: Appearance
   - type: Gun
-    fireRate: 6
+    fireRate: 6.5 # Nebula
 
 - type: entity
   name: Annie
   parent: [BaseCentcommContraband, BaseWeaponRifle]
   id: WeaponRifleAnnie
-  description: A beast designed to shoulder the weight of impossible missions. Uses .30 rifle ammo.
+  description: A beast designed to shoulder the weight of impossible missions. Uses 5.45mm rifle ammo. # Nebula edit
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/annie/big.rsi # Nebula edit
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
+  # Nebula start
+  - type: Item
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/annie/tiny.rsi
+  # Nebula end
   - type: Clothing
-    sprite: _Goobstation/Objects/Weapons/Guns/Rifles/annie.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/annie/tiny.rsi # Nebula edit
   - type: Gun
     availableModes:
     - FullAuto
@@ -124,9 +129,14 @@
     burstFireRate: 12
     burstCooldown: 0.8
     shotsPerBurst: 4
-    fireRate: 6.5
+    fireRate: 6 # Nebula
     soundGunshot:
-      path: /Audio/_Goobstation/Weapons/Guns/Gunshots/thock.ogg
+  # Nebula start
+      path: /Audio/_Orion/Weapons/Guns/Rifles/ak47.ogg
+    angleDecay: 20 # Nebula
+    angleIncrease: 3 # Nebula
+    maxAngle: 58 # Nebula
+    minAngle: 15 # Nebula
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -158,3 +168,8 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  # Nebula start
+  - type: GunWieldBonus
+    maxAngle: -44
+    minAngle: -22
+  # Nebula end

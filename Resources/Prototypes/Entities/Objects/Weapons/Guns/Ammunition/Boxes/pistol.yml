@@ -2,7 +2,7 @@
   abstract: true
   parent: BaseItem
   id: BaseMagazineBoxPistol
-  name: ammunition box (.35 auto)
+  name: ammunition box (9mm auto) # Orion edit
   components:
   # Goobstation edit start
   - type: EmitSoundOnPickup
@@ -39,8 +39,10 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistol
-  name: ammunition box (.35 auto)
-  description: A cardboard box of .35 auto rounds. Intended to hold general-purpose kinetic ammunition.
+  # Orion start
+  name: ammunition box (9mm auto)
+  description: A cardboard box of 9mm auto rounds. Intended to hold general-purpose kinetic ammunition.
+  # Orion end
   components:
   - type: BallisticAmmoProvider
     proto: CartridgePistol
@@ -54,8 +56,8 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistolPractice
-  name: ammunition box (.35 auto practice)
-  description: A cardboard box of .35 auto rounds. Intended to hold harmless practice ammunition.
+  name: ammunition box (9mm practice) # Orion edit
+  description: A cardboard box of 9mm auto rounds. Intended to hold harmless practice ammunition. # Orion edit
   components:
   - type: BallisticAmmoProvider
     proto: CartridgePistolPractice
@@ -70,8 +72,10 @@
 - type: entity
   id: MagazineBoxPistolIncendiary
   parent: BaseMagazineBoxPistol
-  name: ammunition box (.35 auto incendiary)
-  description: A cardboard box of .35 auto rounds. Intended to hold self-igniting incendiary ammunition.
+  # Orion start
+  name: ammunition box (9mm incendiary)
+  description: A cardboard box of 9mm auto rounds. Intended to hold self-igniting incendiary ammunition.
+  # Orion end
   components:
   - type: BallisticAmmoProvider
     proto: CartridgePistolIncendiary
@@ -86,8 +90,10 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistolUranium
-  name: ammunition box (.35 auto uranium)
-  description: A cardboard box of .35 auto rounds. Intended to hold exotic uranium-core ammunition.
+  # Orion start
+  name: ammunition box (9mm uranium)
+  description: A cardboard box of 9mm auto rounds. Intended to hold exotic uranium-core ammunition.
+  # Orion end
   components:
   - type: BallisticAmmoProvider
     proto: CartridgePistolUranium

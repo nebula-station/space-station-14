@@ -11,12 +11,14 @@
     layers:
       - state: aprocket
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 65
-        Ion: 100 # fuck borgs
-        Structural: 3000 # Anti structure weapon, overkills substations/gens so they dont explode
-      armorPenetration: 0.5 # Designed to pierce tanks
+        Piercing: 65
+        Ion: 100
+        Structural: 3000
+      armorPenetration: 0.5
+    # Nebula end
   - type: StaminaDamageOnCollide
     damage: 200 # It's a fucking rocket
   - type: ExplodeOnTrigger

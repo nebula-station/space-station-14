@@ -271,11 +271,14 @@
   - type: Armor # Goob
     coverage:
     - Head
+    # Nebula start
     traumaDeductions:
-      Dismemberment: 0.2
-      OrganDamage: 0.2
-      BoneDamage: 0.2
-      VeinsDamage: 0
+      Dismemberment: 0.4
+      OrganDamage: 0.5
+      BoneDamage: 0.4
+      VeinsDamage: 0.2
+      NerveDamage: 0.2
+    # Nebula end
     modifiers:
       coefficients:
         Blunt: 0.7
@@ -287,6 +290,16 @@
   parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatSecsoft]
   id: ClothingHeadHatSecsoftFlipped
   name: security cap
+  components:
+  # Nebula start
+  - type: Armor
+    traumaDeductions:
+      Dismemberment: 0.4
+      OrganDamage: 0.5
+      BoneDamage: 0.4
+      VeinsDamage: 0.2
+      NerveDamage: 0.2
+  # Nebula end
 
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable

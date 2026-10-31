@@ -16,6 +16,13 @@
           amount: 2
         - id: ExtendedEmergencyPlasmaTankFilled
           amount: 4
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   id: CratePlasmamanEnvirosuit
@@ -37,3 +44,10 @@
           amount: 2
         - id: ExtendedEmergencyPlasmaTankFilled
           amount: 2
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end

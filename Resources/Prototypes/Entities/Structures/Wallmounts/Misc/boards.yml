@@ -56,6 +56,10 @@
   - type: Construction
     graph: WallBoard
     node: noticeBoard
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Wood
+  # Nebula end
 
 - type: entity
   parent: [ BaseWallmountBoard, BasePaperLabelableVisualized ]

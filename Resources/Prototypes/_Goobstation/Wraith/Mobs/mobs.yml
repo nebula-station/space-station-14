@@ -40,10 +40,12 @@
     animation: WeaponArcBite
     soundHit:
       path: /Audio/Effects/bone_rattle.ogg
+    # Nebula start
     damage:
       types:
-        Blunt: 13
+        Blunt: 15
         Structural: 30
+    # Nebula end
   - type: MobState
   - type: Fixtures
     fixtures:
@@ -213,9 +215,11 @@
     animation: WeaponArcBite
     soundHit:
       collection: Flesh_Stab
+    # Nebula start
     damage:
       types:
-        Blunt: 5
+        Blunt: 7
+    # Nebula end
   - type: MobState
   - type: Fixtures
     fixtures:
@@ -282,9 +286,11 @@
         Base: crawler_dead
   - type: MobState
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      35: Dead
+      60: Dead
+    # Nebula end
   - type: Damageable
     damageModifierSet: Metallic
   - type: Injurable
@@ -294,9 +300,11 @@
     animation: WeaponArcBite
     soundHit:
       collection: Flesh_Stab
+    # Nebula start
     damage:
       types:
-        Slash: 7
+        Slash: 10
+    # Nebula end
   - type: NoSlip
   - type: Pullable
   - type: InputMover
@@ -419,17 +427,21 @@
   - type: MindExaminable
   - type: MobState
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      30: Dead
+      40: Dead
+    # Nebula end
   - type: MeleeWeapon
     altDisarm: false
     animation: WeaponArcBite
     soundHit:
       collection: Flesh_Stab
+    # Nebula start
     damage:
       types:
-        Slash: 8
+        Slash: 12
+    # Nebula end
   - type: NoSlip
   - type: Pullable
   - type: InputMover
@@ -478,9 +490,11 @@
     animation: WeaponArcClaw
     soundHit:
       collection: Flesh_Stab
+    # Nebula start
     damage:
       types:
-        Piercing: 7
+        Piercing: 10
+    # Nebula end
   - type: MobState
   - type: Fixtures
     fixtures:
@@ -547,9 +561,11 @@
     animation: WeaponArcClaw
     soundHit:
       collection: Flesh_Stab
+    # Nebula start
     damage:
       types:
-        Piercing: 8
+        Piercing: 15
+    # Nebula end
   - type: Destructible
     thresholds:
       - trigger:
@@ -599,9 +615,11 @@
     animation: WeaponArcClaw
     soundHit:
       collection: Flesh_Stab
+    # Nebula start
     damage:
       types:
-        Slash: 7
+        Slash: 13
+    # Nebula end
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepHeavySuit

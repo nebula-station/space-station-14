@@ -204,7 +204,6 @@
     - NewKinPidgin
   # </Trauma>
   - type: Damageable
-    damageModifierSet: Vox
   - type: Speech
     speechVerb: Vox
     speechSounds: Vox
@@ -266,12 +265,18 @@
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw
-    angle: 30
     animation: WeaponArcClaw
     damage:
       types:
         Slash: 5 # Reduce?
   - type: Wagging
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic

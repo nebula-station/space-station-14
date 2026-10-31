@@ -15,6 +15,7 @@
     fireRate: 1
     soundGunshot:
       path: /Audio/_Goobstation/Weapons/Guns/Gunshots/plasma_cutter.ogg
+    projectileSpeed: 26 # Nebula
   - type: Item
     size: Normal
     shape:
@@ -42,3 +43,7 @@
   - type: Battery
     maxCharge: 1500
     startingCharge: 0
+  # Nebula start
+  - type: Gun
+    projectileSpeed: 26
+  # Nebula end

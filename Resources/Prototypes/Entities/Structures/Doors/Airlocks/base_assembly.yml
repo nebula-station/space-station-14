@@ -29,7 +29,7 @@
     anchored: true
     noRot: true
   - type: Damageable
-    damageModifierSet: Metallic # Trauma - Was StructuralMetallicStrong
+    damageModifierSet: StructuralMetallic # Nebula
   - type: Injurable
     damageContainer: StructuralInorganic
   - type: RCDDeconstructable

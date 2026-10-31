@@ -29,7 +29,6 @@
   id: WeaponRevolverMateba
   components:
   - type: Gun
-    fireRate: 4
   - type: RevolverAmmoProvider
     whitelist:
       tags:
@@ -40,12 +39,11 @@
     chambers: [ True, True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null, null ]
     soundEject:
-      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+      path: /Audio/_Orion/Weapons/Guns/Revolvers/revolver_unload.ogg # Nebula edit
     soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+      path: /Audio/_Orion/Weapons/Guns/Revolvers/revolver_load.ogg # Nebula edit
 
 - type: entity
   id: WeaponRevolverPython
   components:
   - type: Gun
-    fireRate: 2

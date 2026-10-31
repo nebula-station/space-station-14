@@ -12,6 +12,13 @@
     factions:
     - NanoTrasen
   - type: PartialAbsorbable # Goobstation - changelings
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   name: salvager
@@ -30,6 +37,13 @@
       rootTask:
         task: SimpleHumanoidHostileCompound
     - type: PartialAbsorbable # Goobstation - changelings
+    # Nebula start
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    # Nebula end
 
 - type: entity
   name: spirate
@@ -49,6 +63,13 @@
     rootTask:
       task: SimpleHumanoidHostileCompound
   - type: PartialAbsorbable # Goobstation - changelings
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   name: syndicate footsoldier
@@ -67,11 +88,26 @@
       rootTask:
         task: SimpleHumanoidHostileCompound
     - type: PartialAbsorbable # Goobstation - changelings
+    # Nebula start
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    # Nebula end
 
 - type: entity
   name: syndicate shuttle pilot
   parent: MobSyndicateFootsoldier
   id: MobSyndicateFootsoldierPilot
+  components:
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -93,6 +129,13 @@
   - type: Inventory
     templateId: corpse
   - type: PartialAbsorbable # Goobstation - changelings
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -103,3 +146,10 @@
   - type: Cluwne
   - type: Speech
     speechVerb: Cluwne
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end

@@ -20,6 +20,11 @@
       gloves: ClothingModsuitGauntletsResponsoryLeader
       outerClothing: ClothingModsuitChestplateResponsoryLeader
       shoes: ClothingModsuitBootsResponsoryLeader
+  # Nebula start
+  - type: ClothingSpeedModifier
+    sprintModifier: 1
+    walkModifier: 1
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitGauntletsERT, BaseModsuitPieceERTLeader ]
@@ -34,6 +39,24 @@
   name: Leader Responsory modsuit helmet
   description: A state-of-the-art helmet designed by NanoTrasen for the Leader Responsory modsuit. It includes a built-in HUD.
   categories: [HideSpawnMenu]
+  components:
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.35
+        Heat: 0.5
+        Radiation: 0.2
+        Caustic: 0.4
+    traumaDeductions:
+      Dismemberment: 0.6
+      OrganDamage: 0.6
+      BoneDamage: 0.6
+      VeinsDamage: 0
+      NerveDamage: 0
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitChestplateERT, BaseModsuitPieceERTLeader ]
@@ -45,6 +68,30 @@
   - type: ClothingGrantComponent
     component:
       - type: SupermatterImmune
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.3
+        Heat: 0.45
+        Radiation: 0.2
+        Caustic: 0.4
+    traumaDeductions:
+      Dismemberment: 0.6
+      OrganDamage: 0.6
+      BoneDamage: 0.6
+      VeinsDamage: 0
+      NerveDamage: 0
+  - type: ClothingSpeedModifier
+    sprintModifier: 1
+    walkModifier: 1
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: StaminaResistance
+    damageCoefficient: 0.35
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitBootsERT, BaseModsuitPieceERTLeader ]
@@ -52,6 +99,12 @@
   name: Leader Responsory modsuit boots
   description: A state-of-the-art pair of magboots for the Leader Responsory modsuit. So long as the suit is powered, these will not slow the wearer down.
   categories: [HideSpawnMenu]
+  components:
+  # Nebula start
+  - type: ClothingSpeedModifier
+    sprintModifier: 1
+    walkModifier: 1
+  # Nebula end
 
 - type: entity
   id: SuitStorageResponsoryLeader

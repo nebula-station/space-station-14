@@ -250,6 +250,10 @@
     - Airlocks
     - WirePanels
     - Networking
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: StrongMetallic
+  # Nebula end
 
 - type: entity
   abstract: true

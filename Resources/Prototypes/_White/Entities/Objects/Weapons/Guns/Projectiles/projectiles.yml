@@ -7,8 +7,10 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: StaminaDamageOnCollide
-    damage: 35
+    damage: 65 # Nebula
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Caustic: 12
+        Caustic: 1
+    # Nebula end

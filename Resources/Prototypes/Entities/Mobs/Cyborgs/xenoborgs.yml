@@ -121,10 +121,12 @@
   - type: FlashImmunity
     showInExamine: false
   - type: MobThresholds # tankier
+    # Nebula start
     thresholds:
       0: Alive
-      300: Critical # Trauma - was 250
-      600: Dead # Trauma - was 500
+      300: Critical
+      750: Dead
+    # Nebula end
     stateAlertDict:
       Alive: BorgHealth
       Critical: BorgCrit

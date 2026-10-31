@@ -34,7 +34,7 @@
   - type: Projectile
     damage:
       types:
-        Ballistic: 16
+        Piercing: 16 # Nebula
   - type: PreventCollide
     whitelist:
       components:

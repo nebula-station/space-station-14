@@ -119,7 +119,6 @@
         map: ["enum.PowerDeviceVisualLayers.Powered"]
         shader: unshaded
   - type: MeleeWeapon
-    canWideSwing: false # Trauma - removed for balance purposes
     damage:
       types:
         Blunt: 8
@@ -133,8 +132,9 @@
       params:
         variation: 0.250
         volume: -10
+    # Nebula start
     activatedDamage:
       types:
         Blunt: 8
-        Shock: 8 # Trauma - was 16, adjusted for balance
-        Heat: 8 # Trauma - was 0, adjusted for balance
+        Shock: 16
+    # Nebula end

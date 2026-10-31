@@ -273,7 +273,7 @@
     explosionType: DemolitionCharge
     totalIntensity: 10
     intensitySlope: 5
-    maxIntensity: 2 # Trauma - was 5, this shit was WAY too strong it 1 shot rwalls
+    maxIntensity: 5 # Nebula
     canCreateVacuum: false
   - type: ExplodeOnTrigger
   - type: Construction

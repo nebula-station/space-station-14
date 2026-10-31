@@ -16,7 +16,7 @@
     sprite: Objects/Weapons/Melee/pickaxe.rsi
     state: pickaxe
   - type: MeleeWeapon
-    heavyStaminaCost: 3.3 # Nebula edit
+    heavyStaminaCost: 0 # Nebula
     attackRate: 0.7
     animationRotation: -45 # WWDP
     wideAnimationRotation: -135
@@ -24,15 +24,23 @@
       path: "/Audio/Weapons/smash.ogg"
       params:
         volume: -3
+    # Nebula start
     damage:
       types:
-        Piercing: 5
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+    # Nebula end
   - type: Wieldable
   - type: IncreaseDamageOnWield
+    # Nebula start
     damage:
       types:
-        Piercing: 10
         Structural: 30
+        Blunt: 3.33
+        Slash: 3.33
+        Piercing: 3.33
+    # Nebula end
   - type: Item
     size: Normal
     shape:
@@ -79,10 +87,14 @@
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
     attackRate: 4
+    # Nebula start
     damage:
       types:
-        Piercing: 3
         Structural: 15
+        Blunt: 1
+        Slash: 1
+        Piercing: 1
+    # Nebula end
 
 - type: entity
   name: diamond tipped mining drill
@@ -101,10 +113,14 @@
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
     attackRate: 4
+    # Nebula start
     damage:
       types:
-        Piercing: 6
-        Structural: 31 # Trauma - was 30
+        Structural: 31
+        Blunt: 2
+        Slash: 2
+        Piercing: 2
+    # Nebula end
   - type: PhysicalComposition #Goobstation - Recycle update
     materialComposition:
       Steel: 150

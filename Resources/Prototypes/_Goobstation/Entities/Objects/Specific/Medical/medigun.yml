@@ -24,14 +24,12 @@
         Slash: -2
         Piercing: -2
         Heat: -2
-        Ballistic: -2
     uberHealing:
       types:
         Blunt: -4
         Slash: -4
         Piercing: -4
         Heat: -4
-        Ballistic: -4
     soundOnTarget:
       path: /Audio/_Goobstation/Weapons/Effects/energy_reload.ogg
       params:
@@ -74,7 +72,8 @@
     dischargedRechargeRate: 1
     rechargePercentage: 1
   - type: BatterySelfRecharger
-    autoRechargeRate: 1
+    autoRechargeRate: 20 # Nebula
+    autoRechargePauseTime: 60 # Nebula
 
 - type: entity
   name: syndicate medical beam gun
@@ -95,14 +94,12 @@
         Slash: -2.5
         Piercing: -2.5
         Heat: -2.5
-        Ballistic: -2.5
     uberHealing:
       types:
         Blunt: -6
         Slash: -6
         Piercing: -6
         Heat: -6
-        Ballistic: -6
 
 - type: entity
   parent: MedicalBeamGunSyndicate
@@ -118,4 +115,5 @@
     dischargedRechargeRate: 1.5
     rechargePercentage: 1
   - type: BatterySelfRecharger
-    autoRechargeRate: 1.5
+    autoRechargeRate: 15 # Nebula
+    autoRechargePauseTime: 90 # Nebula

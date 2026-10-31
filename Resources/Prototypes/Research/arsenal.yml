@@ -34,6 +34,10 @@
   - MagazineBoxPistolIncendiary
   - MagazineBoxMagnumIncendiary
   - MagazineBoxLightRifleIncendiary
+  # Orion start
+  - MagazineBoxRifle762Incendiary
+  - MagazineRifle762Incendiary
+  # Orion end
   - MagazineBoxRifleIncendiary
 
 - type: technology
@@ -82,6 +86,10 @@
   - MagazineBoxPistolUranium
   - MagazineBoxMagnumUranium
   - MagazineBoxLightRifleUranium
+  # Orion start
+  - MagazineBoxRifle762Uranium
+  - MagazineRifle762Uranium
+  # Orion end
   - MagazineBoxRifleUranium
   - BoxShotgunUranium
 

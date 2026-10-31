@@ -247,7 +247,7 @@
     size: Small
     storedRotation: -90
   - type: MeleeWeapon
-    attackRate: 1
+    attackRate: 1.5 # Nebula
     damage:
       types:
         Blunt: 12
@@ -298,9 +298,11 @@
   - type: Sprite
     state: goldenknuckleduster
   - type: MeleeWeapon
+    # Nebula start
     damage:
       types:
-        Blunt: 16
+        Blunt: 12
+    # Nebula end
   - type: PhysicalComposition
     materialComposition:
       Gold: 500

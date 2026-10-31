@@ -11,8 +11,6 @@
   components:
   # <Trauma>
   - type: EyeProtection
-  - type: ExplosionResistance
-    damageCoefficient: 0.5
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/atmospherics.rsi
@@ -67,8 +65,6 @@
   components:
   # <Trauma>
   - type: EyeProtection
-  - type: ExplosionResistance
-    damageCoefficient: 0.5
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/engineering.rsi
@@ -126,13 +122,15 @@
     highPressureMultiplier: 0.72
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
-        Radiation: 0.5 # Trauma - was 0.1
+        Radiation: 0.1
         Caustic: 0.8
+    # Nebula end
   - type: Tag
     tags:
     - CorgiWearable
@@ -146,8 +144,6 @@
   description: A special helmet designed for work in a hazardous, low pressure environment. Has reinforced plating for wildlife encounters and dual floodlights.
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.3
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/salvage.rsi
@@ -181,8 +177,6 @@
   description: A sturdy hardsuit helmet, infused with a goliath's hide and an eerie, unblinking eye cut from its mass. # Goob edit
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.3
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/goliathhelm.rsi
@@ -213,14 +207,16 @@
     highPressureMultiplier: 0.72
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.75
         Slash: 0.75
-        Piercing: 0.75 # Trauma, was .55
-        Heat: 0.75 #Goliath hide gets grilled instead of you
+        Piercing: 0.55
+        Heat: 0.75
         Radiation: 0.1
         Caustic: 0.8
+    # Nebula end
   - type: Tag
     tags:
     - CorgiWearable
@@ -235,8 +231,6 @@
   description: A predication of decay washes over your mind.
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.2
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/maxim.rsi
@@ -246,18 +240,21 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.3
       OrganDamage: 0.3
       BoneDamage: 0.3
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
         Blunt: 0.65
         Slash: 0.65
-        Piercing: 0.65 # Trauma was .75
+        Piercing: 0.55
         Heat: 0.35
         Radiation: 0.01
+    # Nebula end
 
 #Security Hardsuit - Goob deprecated
 - type: entity
@@ -269,8 +266,6 @@
   # <Trauma>
   - type: FlashImmunity
   - type: FlashSoundSuppression
-  - type: ExplosionResistance
-    damageCoefficient: 0.4
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/security.rsi
@@ -282,22 +277,21 @@
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.3
       OrganDamage: 0.3
       BoneDamage: 0.3
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
         Blunt: 0.65
         Slash: 0.65
         Piercing: 0.65
-        Ballistic: 0.65 # Trauma
         Heat: 0.8
         Caustic: 0.7
-      # <Trauma> - This is done so shotguns are worse against armor
-      flatReductions:
-        Ballistic: 2
+    # Nebula end
       # </Trauma>
   - type: Tag
     tags:
@@ -314,8 +308,6 @@
   # <Trauma>
   - type: FlashImmunity
   - type: FlashSoundSuppression
-  - type: ExplosionResistance
-    damageCoefficient: 0.7
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/brigmedic.rsi
@@ -324,18 +316,16 @@
   - type: PointLight
     color: "#00FFFF"
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.9
         Slash: 0.9
-        Piercing: 0.9 #Trauma was 0.75
-        Ballistic: 0.75 # Trauma
+        Piercing: 0.7
         Heat: 0.9
         Radiation: 0.4
         Caustic: 0.4
-      # <Trauma> - This is done so shotguns are worse against armor
-      flatReductions:
-        Ballistic: 2
+    # Nebula end
       # </Trauma>
   - type: PressureProtection
     highPressureMultiplier: 0.6
@@ -349,8 +339,6 @@
   description: A modified riot helmet. Oddly comfortable.
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.4
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/security-warden.rsi
@@ -362,22 +350,21 @@
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.3
       OrganDamage: 0.3
       BoneDamage: 0.3
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
         Blunt: 0.45
         Slash: 0.55
-        Piercing: 0.55 # Trauma, was .65
-        Ballistic: 0.65 # Trauma
+        Piercing: 0.65
         Heat: 0.8
         Caustic: 0.7
-      # <Trauma> - This is done so shotguns are worse against armor
-      flatReductions:
-        Ballistic: 3
+    # Nebula end
       # </Trauma>
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
@@ -392,8 +379,6 @@
   # <Trauma>
   - type: FlashImmunity
   - type: FlashSoundSuppression
-  - type: ExplosionResistance
-    damageCoefficient: 0.65
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/capspace.rsi
@@ -403,20 +388,22 @@
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.3
       OrganDamage: 0.3
       BoneDamage: 0.3
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.9 #Goob - Modsuit Rebalance start
+        Blunt: 0.9
         Slash: 0.9
-        Piercing: 0.9 # Trauma, was .75
-        Ballistic: 0.75 # Trauma
+        Piercing: 0.75
         Heat: 0.65
         Radiation: 0.15
-        Caustic: 0.65 #Goob - Modsuit Rebalance end
+        Caustic: 0.65
+    # Nebula end
   - type: Tag
     tags:
     - CorgiWearable
@@ -430,8 +417,6 @@
   description: Special hardsuit helmet, made for the chief engineer of the station. # Goob edit
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.2
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/engineering-white.rsi
@@ -492,8 +477,6 @@
   description: Lightweight hardsuit helmet that doesn't restrict your head movements. # Goob edit
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.55
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/rd.rsi
@@ -530,8 +513,6 @@
   # <Trauma>
   - type: FlashImmunity
   - type: FlashSoundSuppression
-  - type: ExplosionResistance
-    damageCoefficient: 0.5
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/security-red.rsi
@@ -543,23 +524,22 @@
     highPressureMultiplier: 0.45
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.3
       OrganDamage: 0.3
       BoneDamage: 0.3
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.7
-        Ballistic: 0.7 # Trauma
         Heat: 0.8
         Radiation: 0.5
         Caustic: 0.5
-      # <Trauma> - This is done so shotguns are worse against armor
-      flatReductions:
-        Ballistic: 3
+    # Nebula end
       # </Trauma>
 
 #Luxury Mining Hardsuit
@@ -571,8 +551,6 @@
   categories: [ DoNotMap ]
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.5
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/luxury.rsi
@@ -604,8 +582,6 @@
   # <Trauma>
   - type: FlashImmunity
   - type: FlashSoundSuppression
-  - type: ExplosionResistance
-    damageCoefficient: 0.5
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/syndicate.rsi
@@ -617,22 +593,22 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.5
       OrganDamage: 0.5
       BoneDamage: 0.5
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.3 # Trauma, was 0.5
-        Slash: 0.3 # Trauma, was 0.5
-        Piercing: 0.3 # Trauma, was 0.5
-        Ballistic: 0.3 # Trauma
-        Heat: 0.3 # Trauma, was 0.5
-        Radiation: 0.3 # Trauma, was 0.5
-      # <Trauma> - This is done so shotguns are worse against armor
-      flatReductions:
-        Ballistic: 3
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+    # Nebula end
       # </Trauma>
   - type: Tag
     tags:
@@ -659,8 +635,6 @@
   description: An elite version of the blood-red hardsuit's helmet, with heat-resistant armor and fireproofing. Property of Gorlex Marauders. # Trauma - align desc with resistances
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.2
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/syndieelite.rsi
@@ -674,23 +648,22 @@
   - type: FireProtection
     reduction: 1 # Trauma - was 0.2, 5x for limb coverage
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.5
       OrganDamage: 0.5
       BoneDamage: 0.5
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
-        Blunt: 0.8 # Trauma, was 0.6
-        Slash: 0.8 # Trauma, was 0.6
-        Piercing: 0.8 # Trauma, was 0.6
-        Ballistic: 0.8 # Trauma
-        Heat: 0.3 # Trauma, was 0.6
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.25
         Radiation: 0.01
-        # Caustic: 0.4 # Trauma
-      # <Trauma> - This is done so shotguns are worse against armor
-      flatReductions:
-        Ballistic: 2
+        Caustic: 0.4
+    # Nebula end
       # </Trauma>
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
@@ -709,8 +682,6 @@
   # <Trauma>
   - type: FlashImmunity
   - type: FlashSoundSuppression
-  - type: ExplosionResistance
-    damageCoefficient: 0.5
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/syndiecommander.rsi
@@ -722,23 +693,22 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.6
       OrganDamage: 0.6
       BoneDamage: 0.6
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
         Blunt: 0.4
         Slash: 0.4
-        Piercing: 0.4 # Trauma, was 0.35
-        Ballistic: 0.35 # Trauma
+        Piercing: 0.35
         Heat: 0.5
         Radiation: 0.2
         Caustic: 0.4
-      # <Trauma> - This is done so shotguns are worse against armor
-      flatReductions:
-        Ballistic: 3
+    # Nebula end
       # </Trauma>
   - type: Tag
     tags:
@@ -753,8 +723,6 @@
   description: Made of compressed red matter, this helmet was designed in the Tau chromosphere facility.
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.2
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/cybersun.rsi
@@ -764,23 +732,22 @@
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
   - type: Armor
-    traumaDeductions: # prevents traumas at all (kinda)
+    # Nebula start
+    traumaDeductions:
       Dismemberment: 1
       OrganDamage: 1
       BoneDamage: 1
       VeinsDamage: 1
+      NerveDamage: 1
     modifiers:
       coefficients:
         Blunt: 0.2
         Slash: 0.2
         Piercing: 0.2
-        Ballistic: 0.2 # Trauma
         Heat: 0.2
         Radiation: 0.2
-        # Caustic: 0.2 # Trauma
-      # <Trauma> - This is done so shotguns are worse against armor
-      flatReductions:
-        Ballistic: 3
+        Caustic: 0.2
+    # Nebula end
       # </Trauma>
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
@@ -798,7 +765,6 @@
   components:
   # <Trauma>
   - type: ExplosionResistance
-    damageCoefficient: 0.1
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/wizard.rsi
@@ -812,23 +778,22 @@
     highPressureMultiplier: 0.27
     lowPressureMultiplier: 1000
   - type: Armor # Goob edit
-    traumaDeductions: # prevents traumas at all (kinda)
+    # Nebula start
+    traumaDeductions:
       Dismemberment: 1
       OrganDamage: 1
       BoneDamage: 1
       VeinsDamage: 1
+      NerveDamage: 1
     modifiers:
       coefficients:
         Blunt: 0.4
         Slash: 0.4
         Piercing: 0.4
-        Ballistic: 0.4 # Trauma
         Heat: 0.4
         Radiation: 0.05
         Caustic: 0.1
-      # <Trauma> - This is done so shotguns are worse against armor
-      flatReductions:
-        Ballistic: 3
+    # Nebula end
       # </Trauma>
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
@@ -846,8 +811,6 @@
   description: A spaceworthy biomass of pressure and temperature resistant tissue.
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.2
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/lingspacehelmet.rsi
@@ -870,8 +833,6 @@
   description: A deep space EVA helmet, very heavy but provides good protection.
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.7
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/pirateeva.rsi
@@ -881,14 +842,15 @@
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.9
-        Ballistic: 0.4 # Trauma
         Heat: 0.4
         Caustic: 0.75
+    # Nebula end
 
 #Pirate Captain Hardsuit
 - type: entity
@@ -899,8 +861,6 @@
   description: A special hardsuit helmet, made for the captain of a pirate ship. # Goob edit
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.6
   # </Trauma>
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
@@ -927,14 +887,15 @@
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.75
         Slash: 0.8
         Piercing: 0.85
-        Ballistic: 0.4 # Trauma
         Heat: 0.4
         Caustic: 0.75
+    # Nebula end
 
 #CENTCOMM / ERT HARDSUITS
 #ERT Leader Hardsuit
@@ -1030,8 +991,6 @@
   description: A pressure resistant and fireproof hood worn by special cleanup units.
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.7
   - type: FlashImmunity
   - type: FlashSoundSuppression
   # </Trauma>
@@ -1078,8 +1037,6 @@
   description: A robust helmet for special operations.
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.1
   # </Trauma>
   - type: BreathMask
   - type: Sprite
@@ -1092,22 +1049,24 @@
   - type: FireProtection
     reduction: 1 # Trauma - was 1, 5x for limb coverage
   - type: Armor
-    traumaDeductions: # prevents traumas at all (kinda)
+    # Nebula start
+    traumaDeductions:
       Dismemberment: 1
       OrganDamage: 1
       BoneDamage: 1
       VeinsDamage: 1
+      NerveDamage: 1
     modifiers:
       coefficients:
-        Blunt: 0.15 # Best armor in the game - Yeah no shit.
+        Blunt: 0.15
         Slash: 0.15
         Piercing: 0.15
-        Ballistic: 0.15 # Trauma
         Heat: 0.15
         Cold: 0.1
         Cellular: 0.1
         Radiation: 0.1
         Caustic: 0.1
+    # Nebula end
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
     protectionRange: 0
@@ -1135,8 +1094,6 @@
   description: A clown hardsuit helmet. # Goob edit
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.9
   # </Trauma>
   - type: BreathMask
   - type: Sprite
@@ -1146,11 +1103,14 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Effects/Emotes/parp1.ogg
   - type: Armor
-    traumaDeductions: # why the fuck is it parented from sec helmet
+    # Nebula start
+    traumaDeductions:
       Dismemberment: 0.2
       OrganDamage: 0.2
       BoneDamage: 0.2
       VeinsDamage: 0
+      NerveDamage: 0
+    # Nebula end
     modifiers:
       coefficients:
         Blunt: 0.9
@@ -1171,11 +1131,14 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/mime.rsi
   - type: Armor
-    traumaDeductions: # why the fuck is it parented from sec helmet
+    # Nebula start
+    traumaDeductions:
       Dismemberment: 0.2
       OrganDamage: 0.2
       BoneDamage: 0.2
       VeinsDamage: 0
+      NerveDamage: 0
+    # Nebula end
     modifiers:
       coefficients:
         Blunt: 0.9
@@ -1191,8 +1154,6 @@
   description: A festive-looking hardsuit helmet that provides the jolly gift-giver protection from low-pressure environments. # Goob edit
   components:
   # <Trauma>
-  - type: ExplosionResistance
-    damageCoefficient: 0.85
   # </Trauma>
   - type: BreathMask
   - type: Sprite

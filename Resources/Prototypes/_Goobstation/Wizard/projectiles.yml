@@ -108,9 +108,11 @@
   - type: Reflective
     reflective: Magic
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Heat: 10
+        Heat: 5
+    # Nebula end
   - type: Trail
     color: "#FF0033DD"
     scale: 0.08
@@ -226,9 +228,11 @@
   - type: Reflective
     reflective: Magic
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Heat: 8
+        Heat: 20
+    # Nebula end
   - type: Trail
     color: "#FF0BC255"
     scale: 0.08
@@ -264,9 +268,11 @@
   - type: Reflective
     reflective: Magic
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 20
+        Piercing: 20
+    # Nebula end
   - type: StaminaDamageOnCollide
     damage: 80
 
@@ -537,10 +543,10 @@
       shader: unshaded
   - type: Projectile
     deleteOnCollide: false
-    penetrationThreshold: 200
     damage:
       types:
         Radiation: 20
+    penetrate: true # Nebula
   - type: Reflective
     reflective: Magic
   - type: Ammo
@@ -751,7 +757,6 @@
   - type: TileFrictionModifier
     modifier: 0.9
   - type: Projectile
-    delayToAcknowledgeShooter: 0.5
     deleteOnCollide: false
     soundHit: null
     damage:

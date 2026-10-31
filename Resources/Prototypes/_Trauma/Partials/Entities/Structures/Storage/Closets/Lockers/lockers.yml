@@ -79,7 +79,6 @@
   id: GunSafeBaseSecure
   components:
   - type: Damageable
-    damageModifierSet: StructuralMetallicStrong
   - type: Injurable
     damageContainer: StructuralInorganic
 

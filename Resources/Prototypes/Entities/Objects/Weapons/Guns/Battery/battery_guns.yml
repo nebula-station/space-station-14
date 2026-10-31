@@ -31,6 +31,19 @@
   id: BaseWeaponBattery
   components:
   - type: AmmoCounter
+  # Nebula start
+  - type: Gun
+    availableModes:
+    - SemiAuto
+    fireRate: 2
+    projectileSpeed: 26
+    selectedMode: SemiAuto
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+       Blunt: 12
+  # Nebula end
 
 - type: entity
   parent: [BaseWeaponBattery, BaseGunWieldable]
@@ -105,6 +118,13 @@
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+       Blunt: 12
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -132,6 +152,15 @@
   id: BaseWeaponBatterySmall
   components:
   - type: AmmoCounter
+  # Nebula start
+  - type: Gun
+    projectileSpeed: 26
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+       Blunt: 8
+  # Nebula end
 
 - type: entity
   id: BaseWeaponPowerCellSmall
@@ -151,6 +180,13 @@
     quickEquip: false
     slots:
     - Belt
+  # Nebula start
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+       Blunt: 8
+  # Nebula end
 
 - type: entity
   name: svalinn laser pistol
@@ -187,7 +223,6 @@
   - type: ItemSlots # goob edit - let svalinns use potato batteries
     slots:
       gun_magazine:
-        name: Magazine
         startingItem: PowerCellMedium
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
@@ -214,7 +249,7 @@
   - type: Item
     storedOffset: 0,-5
   - type: BatteryAmmoProvider
-    proto: LaserGunBullet # Trauma
+    proto: RedMediumLaser # Nebula
     fireCost: 62.5 # Trauma, was 25
   - type: MagazineVisuals
     magState: mag
@@ -225,6 +260,10 @@
     tags:
     - Sidearm
     - LaserWeapon
+  # Nebula start
+  - type: Gun
+    projectileSpeed: 26
+  # Nebula end
 
 - type: entity
   name: makeshift laser pistol
@@ -250,7 +289,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/makeshift.rsi
   - type: BatteryAmmoProvider
-    proto: LaserSidearmBullet # Trauma
+    proto: RedLaser # Nebula
     fireCost: 62.5
   - type: Battery
     maxCharge: 500
@@ -259,6 +298,10 @@
     tags:
     - Sidearm
     - LaserWeapon
+  # Nebula start
+  - type: Gun
+    projectileSpeed: 26
+  # Nebula end
 
 - type: entity
   name: tesla gun
@@ -303,12 +346,12 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    fireRate: 2
+    fireRate: 6 # Nebula
     soundGunshot:
       path: /Audio/_Trauma/Weapons/Guns/Gunshots/laser2.ogg # Trauma
   - type: BatteryAmmoProvider
-    proto: LaserGunBullet # Trauma
-    fireCost: 20 # Trauma, was 25, 50 shots
+    proto: RedLaser # Nebula
+    fireCost: 50 # Nebula
   - type: Item
     size: Large
   - type: Sprite
@@ -338,8 +381,13 @@
   - type: StaticPrice
     price: 300
   - type: BatteryAmmoProvider
-    proto: LaserGunBulletPractice # Trauma
+    proto: RedLaserPractice # Nebula
+    fireCost: 62.5 # Nebula
   - type: PacifismAllowedGun
+  # Nebula start
+  - type: Gun
+    fireRate: 2
+  # Nebula end
 
 - type: entity
   name: pulse pistol
@@ -370,8 +418,9 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+    projectileSpeed: 26 # Nebula
   - type: BatteryAmmoProvider
-    proto: PulseGunBulletLight # Trauma - was Pulse
+    proto: LightPulse # Nebula
     fireCost: 200
   - type: Battery
     maxCharge: 2000
@@ -409,12 +458,15 @@
   - type: Gun
     selectedMode: SemiAuto # Trauma
     fireRate: 3
+    # Nebula start
     availableModes:
-    - SemiAuto # Trauma - removed FullAuto
+      - SemiAuto
+      - FullAuto
+    # Nebula end
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: BatteryAmmoProvider
-    proto: PulseGunBullet # Trauma - was Pulse
+    proto: Pulse # Nebula
     fireCost: 200
   - type: Battery
     maxCharge: 5000
@@ -468,7 +520,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: BatteryAmmoProvider
-    proto: PulseGunBulletHeavy # Trauma - was Pulse
+    proto: HeavyPulse # Nebula
     fireCost: 100
   - type: Battery
     maxCharge: 40000
@@ -519,12 +571,12 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
   - type: Gun
-    fireRate: 1.5
+    fireRate: 2 # Nebula
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: BatteryAmmoProvider
-    proto: LaserCannonBullet # Trauma
-    fireCost: 62.5 # Trauma, was 100
+    proto: RedHeavyLaser # Nebula
+    fireCost: 100 # Nebula
   - type: Tag
     tags:
     - TurretCompatibleWeapon
@@ -592,12 +644,11 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/xray.rsi
   - type: Gun
-    fireRate: 2
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: BatteryAmmoProvider
-    proto: XrayCannonBullet # Trauma
-    fireCost: 62.5 # Trauma, Was 100
+    proto: XrayLaser # Nebula
+    fireCost: 100 # Nebula
   - type: MagazineVisuals
     magState: mag
     steps: 5
@@ -644,6 +695,7 @@
     fireRate: 2
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    projectileSpeed: 26 # Nebula
   - type: BatteryAmmoProvider
     proto: BulletDisablerPractice
     fireCost: 62.5
@@ -675,7 +727,7 @@
       - Belt
   - type: BatteryAmmoProvider
     proto: BulletDisabler
-    fireCost: 40
+    fireCost: 62.5 # Nebula
   - type: GuideHelp
     guides:
     - Security
@@ -690,6 +742,10 @@
     - Taser
     - Sidearm
     - WeaponDisabler
+  # Nebula start
+  - type: Gun
+    projectileSpeed: 26
+  # Nebula end
   # Goobstation end
 
 - type: entity
@@ -721,8 +777,9 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    projectileSpeed: 20 # Nebula
   - type: BatteryAmmoProvider
-    proto: BulletDisablerSmgSlowing
+    proto: BulletDisablerSmg # Nebula
     fireCost: 25
   - type: MagazineVisuals
     magState: mag
@@ -761,6 +818,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser.ogg
     projectileSpeed: 25
+    fireRate: 0.5 # Nebula
   - type: BatteryAmmoProvider
     proto: BulletTaser
     fireCost: 200
@@ -807,8 +865,9 @@
   - type: Gun
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    projectileSpeed: 26 # Nebula
   - type: BatteryAmmoProvider
-    proto: LaserSidearmBullet # Trauma
+    proto: RedMediumLaser # Nebula
     fireCost: 100
   - type: BatterySelfRecharger
     autoRechargeRate: 40
@@ -856,8 +915,9 @@
   - type: Gun
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    projectileSpeed: 26 # Nebula
   - type: BatteryAmmoProvider
-    proto: LaserSidearmBullet # Trauma
+    proto: RedMediumLaser # Nebula
     fireCost: 100
   - type: BatterySelfRecharger
     autoRechargeRate: 30
@@ -960,11 +1020,12 @@
     fireRate: 0.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_clown.ogg
+    projectileSpeed: 26 # Nebula
   - type: BatteryAmmoProvider
     proto: RedMediumLaser
     fireCost: 100
   - type: BatterySelfRecharger
-    autoRechargeRate: 10 # Goob - was 40
+    autoRechargeRate: 40 # Nebula
   - type: StaticPrice
     price: 750
   - type: Tag
@@ -994,7 +1055,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
   - type: Gun
-    fireRate: 1.25 # Trauma, was 2
+    fireRate: 2 # Nebula
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: BatteryAmmoProvider
@@ -1065,6 +1126,7 @@
   - type: Gun
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    projectileSpeed: 26 # Nebula
   - type: BatteryAmmoProvider
     proto: BulletLaserMagnum
     fireCost: 150
@@ -1140,7 +1202,6 @@
   name: xenoborg laser gun
   components:
   - type: BatteryAmmoProvider
-    proto: XenoborgLaser
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/xenoborg_laser_gun.rsi
     layers:
@@ -1148,6 +1209,10 @@
       map: [ "enum.GunVisualLayers.Base" ]
     - state: mag-unshaded-4
       map: [ "enum.GunVisualLayers.MagUnshaded" ]
+  # Nebula start
+  - type: Gun
+    projectileSpeed: 26
+  # Nebula end
 
 - type: entity
   parent: [BaseXenoborgContraband, WeaponLaserCannon]
@@ -1155,8 +1220,6 @@
   name: xenoborg laser cannon
   components:
   - type: BatteryAmmoProvider
-    proto: XenoborgHeavyLaser
-    fireCost: 100
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/xenoborg_laser_cannon.rsi
     layers:
@@ -1165,7 +1228,7 @@
     - state: mag-unshaded-4
       map: [ "enum.GunVisualLayers.MagUnshaded" ]
   - type: BatterySelfRecharger
-    autoRechargeRate: 50
+    autoRechargeRate: 30 # Nebula
   # "remove" wield bonus and penalty so borgs can use it
   - type: GunWieldBonus
     minAngle: 0

@@ -33,13 +33,13 @@
     unwieldOnUse: false
   - type: GunWieldBonus
     minAngle: -20
-    maxAngle: -20
+    maxAngle: -25 # Nebula
   - type: Gun
     minAngle: 24
-    maxAngle: 45
-    angleIncrease: 4
+    maxAngle: 50 # Nebula
+    angleIncrease: 2.5 # Nebula
     angleDecay: 16
-    fireRate: 8
+    fireRate: 7.5 # Nebula
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -76,6 +76,7 @@
     price: 500
   - type: UseDelay
     delay: 1
+  - type: UseDelayBlockShoot # Nebula edit
 
 - type: entity
   name: L6 SAW
@@ -97,6 +98,12 @@
   - type: Appearance
   - type: StaticPrice
     price: 10000
+# Nebula start
+  - type: Gun
+    soundGunshot: /Audio/_Orion/Weapons/Guns/Rifles/ak47.ogg
+  - type: UseDelay
+    delay: 0.5
+# Nebula end
 
 - type: entity
   name: L6C ROW
@@ -107,14 +114,14 @@
     - type: Gun
       minAngle: 4
       maxAngle: 25
-      angleIncrease: 4
+      angleIncrease: 2 # Nebula
       angleDecay: 16
-      fireRate: 8
+      fireRate: 7.5 # Nebula
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
+        path: /Audio/_Orion/Weapons/Guns/Rifles/ak47.ogg # Nebula edit
       soundEmpty:
         path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
     - type: Sprite

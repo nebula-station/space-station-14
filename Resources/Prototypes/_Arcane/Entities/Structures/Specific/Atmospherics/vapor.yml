@@ -26,6 +26,11 @@
 - type: entity
   parent: [AirSensorVaporBase, GasVentPump]
   id: GasVentPumpVapor
+  components:
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: [AirSensorVaporBase, GasVentScrubber]
@@ -44,6 +49,10 @@
     - Healium
     - Nitrium
     - Pluoxium
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: AirAlarm

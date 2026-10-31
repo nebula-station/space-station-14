@@ -115,9 +115,11 @@
         - Opaque
   - type: Projectile
     impactEffect: BulletImpactEffectRedDisabler
+    # Nebula start
     damage:
       types:
-        Heat: 16
+        Heat: 25
+    # Nebula end
     soundHit:
       collection: MeatLaserImpact
   - type: IgniteOnCollide

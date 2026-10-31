@@ -27,6 +27,10 @@
   - type: Tag
     tags:
     - Trash
+  # Nebula start
+  - type: StaminaDamageOnCollide
+    damage: 10
+  # Nebula end
 
 - type: entity
   id: boomerangIncomplete

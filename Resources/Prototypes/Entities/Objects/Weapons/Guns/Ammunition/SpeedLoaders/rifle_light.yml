@@ -1,17 +1,18 @@
 - type: entity
   parent: [ BaseItem, BaseSecurityContraband ]
   id: SpeedLoaderLightRifle
-  name: "speed loader (.30 rifle)"
+  name: "speed loader (7.62mm rifle)" # Orion edit
   description: 5-round 'stripper clip' for quickly reloading the Kardashev-Mosin. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: SpeedLoader
   - type: BallisticAmmoProvider
+    fillDelay: 0.1 # Orion edit
     mayTransfer: true
     whitelist:
       tags:
-      - CartridgeLightRifle
-    capacity: 5
-    proto: CartridgeLightRifle
+      - CartridgeRifle762 # Orion edit
+    capacity: 10 # Nebula
+    proto: CartridgeRifle762 # Nebula
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/LightRifle/light_rifle_speed_loader.rsi
     layers:

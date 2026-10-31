@@ -66,10 +66,12 @@
     angle: 0
     attackRate: 0.40
     animation: WeaponArcPunch
+    # Nebula start
     damage:
       types:
-        Blunt: 35
+        Blunt: 10
         Slash: 15
+    # Nebula end
   - type: NpcFactionMember
     factions:
     - Lavafauna

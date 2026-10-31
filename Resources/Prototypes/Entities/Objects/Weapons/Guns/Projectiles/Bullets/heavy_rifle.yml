@@ -5,9 +5,11 @@
   name: bullet (.10 rifle)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 19
+        Piercing: 19
+    # Nebula end
 
 - type: entity
   parent: BulletHeavyRifle
@@ -16,6 +18,8 @@
   name: minigun bullet (.10 rifle)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 5
+        Piercing: 6
+    # Nebula end

@@ -18,8 +18,6 @@
     angle: 0 # no more wideswing
   - type: StaminaDamageOnHit
     damage: 15 # now 55 total over time
-    overtime: 5
-    lightAttackOvertimeDamageMultiplier: 4
     lightAttackDamageMultiplier: 4
   - !Remove type: StaminaDamageOnCollide
   - !Remove type: LandAtCursor

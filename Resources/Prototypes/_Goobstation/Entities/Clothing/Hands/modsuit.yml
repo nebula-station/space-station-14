@@ -86,12 +86,13 @@
   - type: Sprite
     sprite: _Goobstation/Clothing/Hands/Modsuits/paramedic.rsi
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
-        Ballistic: 0.9
+    # Nebula end
 
 - type: entity
   parent: [ ClothingHandModsuitBase, BaseModsuitPieceHOS ]
@@ -104,13 +105,14 @@
     sprite: _Goobstation/Clothing/Hands/Modsuits/headofsecurity.rsi
   - type: Insulated
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
-        Ballistic: 0.9
         Shock: 0.75
+    # Nebula end
 
 - type: entity
   parent: [ ClothingHandModsuitBase, BaseModsuitPieceEngineer ]
@@ -178,10 +180,11 @@
     sprite: _Goobstation/Clothing/Hands/Modsuits/captain.rsi
   - type: Insulated
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.95
         Slash: 0.95
         Piercing: 0.95
-        Ballistic: 0.95
         Shock: 0.75
+    # Nebula end

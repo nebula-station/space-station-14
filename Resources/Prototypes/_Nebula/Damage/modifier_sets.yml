@@ -1,0 +1,30 @@
+- type: damageModifierSet
+  id: Xenoborg
+  coefficients:
+    Ion: 0.75
+    Heat: 0.9
+    Blunt: 0.9
+    Slash: 0.9
+    Piercing: 0.9
+    Shock: 4 # my shaft miners shall validhunt with the LL syndie defib
+
+- type: damageModifierSet
+  id: Dragon
+  coefficients:
+    Blunt: 0.9
+    Slash: 0.85
+    Piercing: 0.8
+    Shock: 1.2 # I guess snakes better conduct electricity????????
+    Heat: 0.7
+  ignoreArmorPierceFlags: All
+
+- type: damageModifierSet
+  id: Ashwood
+  coefficients:
+    Blunt: 0.5
+    Slash: 2.0
+    Piercing: 1.0
+    Heat: 0.5 # Heat resistant
+    Structural: 0.5
+  flatReductions:
+    Blunt: 6 # Just a bit more tough

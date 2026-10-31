@@ -45,6 +45,8 @@
     - state: capbullet
   - type: Projectile
     deleteOnCollide: true
+    # Nebula start
     damage:
       types:
-        Ballistic: 0 # Trauma - was Piercing
+        Piercing: 0
+    # Nebula end

@@ -40,7 +40,7 @@
     - Security
     - Antagonists
   - type: UseDelay
-    delay: 3
+    delay: 30 # Nebula
 
 - type: entity
   name: makeshift handcuffs
@@ -80,6 +80,10 @@
     sprite: Objects/Misc/cablecuffs.rsi
     state: cuff
     color: forestgreen
+  # Nebula start
+  - type: UseDelay
+    delay: 15
+  # Nebula end
 
 - type: entity
   name: zipties
@@ -109,6 +113,10 @@
   - type: Sprite
     sprite: Objects/Misc/zipties.rsi
     state: cuff
+  # Nebula start
+  - type: UseDelay
+    delay: 15
+  # Nebula end
 
 - type: entity
   id: BaseHandcuffsBroken

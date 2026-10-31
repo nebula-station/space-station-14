@@ -188,6 +188,21 @@
     toggleAction: null
     useShader: false
     isActive: true
+  # Nebula start
+  - type: EmpOnTrigger
+    disableDuration: 20
+    energyConsumption: 50000
+    range: 5
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 15
+        Piercing: 10
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: [BaseMobGhoulLock, MobGhoulStalkerBase]
@@ -262,6 +277,12 @@
     drawFov: false
   - type: Viewcone
     baseConeAngle: 360
+  # Nebula start
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: [BaseMobGhoulLock, MobGhoulProphetBase]
@@ -347,7 +368,6 @@
         Blunt: -1
         Slash: -1
         Piercing: -1
-        Ballistic: -1
         Heat: -1
         Cold: -1
         Shock: -1
@@ -464,6 +484,22 @@
     description: ghostrole-fire-shark-desc
     mindRoles:
     - MindRoleGhoul
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: FireShark
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    damage:
+      types:
+        Heat: 6
+        Slash: 6
+        Piercing: 6
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  # Nebula end
 
 - type: entity
   parent: [BaseMobGhoulLock, MobGhoulFireSharkBase]
@@ -673,7 +709,6 @@
     - Blunt
     - Slash
     - Piercing
-    - Ballistic
     - Heat
     - Shock
     locPrefix: silicon
@@ -736,6 +771,20 @@
     actions:
     - ActionHereticAggressiveSpread
     - ActionHereticRustWave
+  # Nebula start
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    damage:
+      types:
+        Blunt: 20
+        Ion: 20
+        Structural: 80
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  # Nebula end
 
 - type: entity
   parent: [BaseMobGhoulLock, MobGhoulRustWalkerBase]

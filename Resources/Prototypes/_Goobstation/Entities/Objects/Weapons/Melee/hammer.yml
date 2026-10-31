@@ -15,9 +15,11 @@
     animationRotation: -90
     wideAnimationRotation: -135
     attackRate: 1
+    # Nebula start
     damage:
       types:
-        Blunt: 10
+        Blunt: 12
+    # Nebula end
     heavyStaminaCost: 6
     soundHit:
       path: /Audio/_Trauma/Weapons/Melee/forging/tink.ogg

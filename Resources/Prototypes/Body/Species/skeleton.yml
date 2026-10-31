@@ -115,9 +115,12 @@
   #    Burn:
   #      sprite: _Shitmed/Mobs/Effects/burn_damage.rsi
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      100: Dead
+      100: Critical
+      150: Dead
+    # Nebula end
   - type: TransferMindOnGib
   # Trauma - removed Destructible
   - type: SlowOnDamage

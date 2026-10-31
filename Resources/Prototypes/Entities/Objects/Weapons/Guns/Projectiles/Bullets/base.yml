@@ -39,9 +39,11 @@
         hard: false
   - type: Projectile
     impactEffect: BulletImpactEffect
+    # Nebula start
     damage:
       types:
-        Ballistic: 14 # Trauma - was Piercing
+        Piercing: 14
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
   - type: TimedDespawn
@@ -93,10 +95,12 @@
   name: base bullet incendiary
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 10 # Trauma - was Piercing
+        Blunt: 10
         Heat: 4
+    # Nebula end
   - type: PointLight
     enabled: true
     color: "#ff4300"
@@ -116,10 +120,12 @@
     layers:
     - state: piercing
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 11 # Trauma - was Piercing
-    increaseOnly: true # Trauma - apply modifiers, but ignore decreases
+        Piercing: 11
+    # Nebula end
+    ignoreResistances: true # Nebula
 
 - type: entity
   parent: BaseBullet

@@ -2,7 +2,7 @@
   abstract: true
   parent: [ BaseCartridge, BaseSecurityContraband ]
   id: BaseCartridgeRifle
-  name: cartridge (.20 rifle)
+  name: cartridge (5.56mm rifle) # Orion edit
   components:
   - type: Tag
     tags:
@@ -10,17 +10,21 @@
   - type: CartridgeAmmo
     proto: BulletRifle
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    # Orion start
+    sprite: _Orion/Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    scale: 0.8, 0.8
+    # Orion end
     layers:
-    - state: base
+    - state: 20combat # Orion edit
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
+    state: 20combat # Orion edit
 
 - type: entity
   parent: BaseCartridgeRifle
   id: CartridgeRifle
-  name: cartridge (.20 rifle)
+  name: cartridge (5.56mm rifle) # Orion edit
   description: A modern intermediate cartridge for combat rifles. Standard kinetic ammunition is common and useful in most situations.
   components:
   - type: CartridgeAmmo
@@ -29,47 +33,50 @@
 - type: entity
   parent: BaseCartridgeRifle
   id: CartridgeRiflePractice
-  name: cartridge (.20 rifle practice)
+  name: cartridge (5.56mm practice) # Orion edit
   description: A modern intermediate cartridge for combat rifles. Practice ammunition fires a chalk projectile that stings a little, but otherwise causes no lasting damage.
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 20training
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletRiflePractice
   - type: Sprite
     layers:
-      - state: base
+      - state: 20training # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#dbdbdb"
 
 - type: entity
   parent: BaseCartridgeRifle
   id: CartridgeRifleIncendiary
-  name: cartridge (.20 rifle incendiary)
+  name: cartridge (5.56mm incendiary) # Orion edit
   description: A modern intermediate cartridge for combat rifles. Incendiary ammunition contains a self-igniting compound that sets targets ablaze.
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 20incendiary
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletRifleIncendiary
   - type: Sprite
     layers:
-      - state: base
+      - state: 20incendiary # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#ff6e52"
 
 - type: entity
   parent: BaseCartridgeRifle
   id: CartridgeRifleUranium
-  name: cartridge (.20 rifle uranium)
+  name: cartridge (5.56mm uranium) # Orion edit
   description: A modern intermediate cartridge for combat rifles. Uranium ammunition replaces the lead core of the bullet with fissile material, irradiating targets from the inside.
   components:
+  # Orion start
+  - type: SpentAmmoVisuals
+    state: 20uranium
+  # Orion end
   - type: CartridgeAmmo
     proto: BulletRifleUranium
   - type: Sprite
     layers:
-      - state: base
+      - state: 20uranium # Orion edit
         map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#65fe08"

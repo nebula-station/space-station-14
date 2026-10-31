@@ -201,8 +201,8 @@
   - type: HitscanBasicDamage
     damage:
       types:
-        Heat: 10
-        Radiation: 10
+        Heat: 12 # Nebula
+        Radiation: 6 # Nebula
         Ion: 15 # Goob
   - type: HitscanBasicVisuals
     muzzleFlash:

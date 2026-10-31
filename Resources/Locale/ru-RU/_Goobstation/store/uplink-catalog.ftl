@@ -112,14 +112,14 @@ uplink-frag-grenade-desc = Меньший урон, больший радиус.
 uplink-mpapers-grenade-name = Снаряд MP-APERS (40 мм)
 uplink-mpapers-grenade-desc = Выпускает 20 мелких дробинок, превращая ваш гранатомёт в дробовик. Совместим с China-Lake.
 
-uplink-l6-box-name = Коробка магазинов (.30 винтовочный)
-uplink-l6-box-desc = Коробка с 100 патронами. Совместима с пулемётом L6 SAW.
+uplink-l6-box-name = Коробка ружейных патронов (5.45мм винтовочный)
+uplink-l6-box-desc = 100 патронов для пулемёта L6 SAW.
 
 uplink-shotgun-magazine-name = Барабан для дробовика (12 калибр, дробь)
-uplink-shotgun-magazine-desc = Барабанный магазин с 8 патронами с дробью. Совместим с Бульдогом.
+uplink-shotgun-magazine-desc = Барабанный магазин с 8 патронами с дробью внутри. Совместим с Бульдогом и Зауэром.
 
 uplink-shotgun-magazine-slug-name = Барабан для дробовика (12 калибр, пуля)
-uplink-shotgun-magazine-slug-desc = Барабанный магазин с 8 патронами с пулями. Совместим с Бульдогом.
+uplink-shotgun-magazine-slug-desc = Барабанный магазин с 8 патронами с пулями внутри. Совместим с Бульдогом и Зауэром.
 
 uplink-high-caliber-magazine-name = Винтовочный магазин (.50 крупнокалиберный)
 uplink-high-caliber-magazine-desc = Тяжёлый винтовочный магазин с 15 патронами. Совместим с Горелкой.
@@ -130,7 +130,7 @@ uplink-high-caliber-explosive-magazine-desc = Тяжёлый винтовочн�
 uplink-high-caliber-box-name = Коробка патронов .50
 uplink-high-caliber-box-desc = Коробка с 30 крупнокалиберными патронами .50.
 
-uplink-highcap-pistol-mag-name = Пистолетный магазин повышенной ёмкости (.35 авто)
+uplink-highcap-pistol-mag-name = Магазин для пистолета повышенной ёмкости (9мм авто)
 uplink-highcap-pistol-mag-desc = Пистолетный магазин повышенной ёмкости вмещает на 4 патрона больше, всего 16 патронов.
 
 uplink-heavy-shotgun-magazine-name = Тяжёлый барабан для дробовика (2 калибр, осколочно-зажигательная дробь)
@@ -308,3 +308,9 @@ uplink-cddisksyndicate-desc = 102.9 Радио Синдиката
 
 uplink-cddisknumber-name = CD "Номерная станция"
 uplink-cddisknumber-desc = Вызовите угрозу, чтобы отвлечь внимание станции... удачи дослушать её целиком.
+uplink-rifle-mag-name = Магазин (5.56мм винтовочные)
+uplink-rifle-mag-desc = 25 патронов калибра 5.56мм. Для Лектера и M-90.
+uplink-rifle-caseless-mag-name = Магазин (9.5мм безгильзовый)
+uplink-rifle-caseless-mag-desc = 30 патронов 9.5мм без гильз, экспансивные пули. Для WSPR.
+uplink-pistol-magazine-caseless-saphe-name = Пистолетный магазин (9.5мм бронебойные разрывные)
+uplink-pistol-magazine-caseless-saphe-desc = 10 патронов 9.5мм без гильз, с чуть большим бронепробитием и эффектом взрыва. Для пистолета Кобра.

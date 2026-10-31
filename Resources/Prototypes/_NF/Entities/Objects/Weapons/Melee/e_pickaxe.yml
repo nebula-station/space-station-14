@@ -12,11 +12,15 @@
     - 0,0,2,0
     - 1,1,1,2
   - type: ItemToggleMeleeWeapon
+    # Nebula start
     activatedDamage:
       types:
-        Piercing: 15
-        Heat: 15
-        Structural: 45
+        Heat: 18
+        Structural: 40
+        Blunt: 6
+        Slash: 6
+        Piercing: 6
+    # Nebula end
   - type: Sprite
     sprite: _NF/Objects/Weapons/Melee/energy_pickaxe.rsi
     layers:
@@ -61,8 +65,12 @@
       path: "/Audio/Weapons/smash.ogg"
       params:
         volume: -3
+    # Nebula start
     damage:
       types:
-        Blunt: 3
+        Blunt: 1
+        Slash: 1
+        Piercing: 1
+    # Nebula end
     heavyStaminaCost: 5
     clickPartDamageMultiplier: 1

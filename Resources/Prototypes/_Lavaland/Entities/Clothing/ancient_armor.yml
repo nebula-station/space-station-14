@@ -19,19 +19,21 @@
     - Tail
     - Hand
     - Foot
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.25
       OrganDamage: 0.25
       BoneDamage: 0.25
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
         Blunt: 0.3
         Slash: 0.3
-        Piercing: 0.3
-        Ballistic: 0.5
+        Piercing: 0.5
         Heat: 0.3
         Caustic: 0.3
+    # Nebula end
   - type: ExplosionResistance
     damageCoefficient: 0.3
   - type: FireProtection
@@ -65,20 +67,24 @@
     - HeadTop
     - HeadSide
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.25
       OrganDamage: 0.25
       BoneDamage: 0.25
       VeinsDamage: 0
+      NerveDamage: 0
+    # Nebula end
     coverage:
     - Head
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.65
         Slash: 0.65
-        Piercing: 0.65
-        Ballistic: 0.7
+        Piercing: 0.7
         Heat: 0.65
         Caustic: 0.65
+    # Nebula end
   - type: PressureArmorChange
   - type: PressureEfficiency

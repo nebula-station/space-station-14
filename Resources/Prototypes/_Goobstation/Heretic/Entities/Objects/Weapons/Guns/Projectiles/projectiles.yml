@@ -50,7 +50,6 @@
   - type: Reflective
     reflective: None
   - type: Projectile
-    penetrate: true
     impactEffect: EffectCosmicExplosion
     damage:
       types:
@@ -81,7 +80,7 @@
   - type: Projectile
     damage:
       types:
-        Ballistic: 30
+        Piercing: 30 # Nebula
       armorPenetration: 0.5
   - type: StaminaDamageOnCollide
     damage: 30

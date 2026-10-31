@@ -18,7 +18,7 @@
     pricePerJoule: 0.15
   - type: PowerCell
   - type: Explosive
-    explosionType: Default
+    explosionType: Transparent # Nebula
     maxIntensity: 200
     intensitySlope: 1.5
   - type: Sprite
@@ -99,6 +99,11 @@
   - type: Construction
     graph: PowerCellPotato
     node: potatobattery
+  # Nebula start
+  - type: BatteryAmmoProvider
+    fireCost: 70
+    proto: MediumOverchargedLaser
+  # Nebula end
 
 - type: entity
   name: small-capacity power cell
@@ -128,6 +133,11 @@
   - type: Tag
     tags:
       - PowerCellSmall
+  # Nebula start
+  - type: BatteryAmmoProvider
+    fireCost: 45
+    proto: RedLightLaser
+  # Nebula end
 
 - type: entity
   id: PowerCellSmallPrinted
@@ -193,6 +203,11 @@
       reagents:
       - ReagentId: Lithium
         Quantity: 5
+  # Nebula start
+  - type: BatteryAmmoProvider
+    fireCost: 90
+    proto: MediumRedLaser
+  # Nebula end
 
 - type: entity
   id: PowerCellMediumPrinted
@@ -243,6 +258,11 @@
       reagents:
       - ReagentId: Lithium
         Quantity: 5
+  # Nebula start
+  - type: BatteryAmmoProvider
+    fireCost: 135
+    proto: RedLaser
+  # Nebula end
 
 - type: entity
   id: PowerCellHighPrinted
@@ -283,6 +303,11 @@
       reagents:
       - ReagentId: Lithium
         Quantity: 5
+  # Nebula start
+  - type: BatteryAmmoProvider
+    fireCost: 225
+    proto: HeavyRedLaser
+  # Nebula end
 
 - type: entity
   id: PowerCellHyperPrinted
@@ -336,6 +361,11 @@
       reagents:
       - ReagentId: Uranium
         Quantity: 5
+  # Nebula start
+  - type: BatteryAmmoProvider
+    fireCost: 90
+    proto: MediumRedLaser
+  # Nebula end
 
 - type: entity
   parent: PowerCellMicroreactor
@@ -376,6 +406,11 @@
         reagents:
         - ReagentId: Uranium
           Quantity: 5
+    # Nebula start
+    - type: BatteryAmmoProvider
+      fireCost: 75
+      proto: RedLaser
+    # Nebula end
 
 # Power cage (big heavy power cell for big devices)
 

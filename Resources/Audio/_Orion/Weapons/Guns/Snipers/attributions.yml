@@ -1,0 +1,4 @@
+- files: ["50bmg1.ogg", "50bmg2.ogg", "50bmg3.ogg", "sniper_empty.ogg", "svd.ogg", "svd_cocked.ogg", "svd_reload.ogg", "svd_unload.ogg", "tl-127_bolt.ogg", "tl127.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from Orion-Station-14"
+  source: "https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14/pull/213"

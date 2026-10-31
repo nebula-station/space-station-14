@@ -177,9 +177,11 @@
     - Wraith
   - type: MobState
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      60: Dead
+      100: Dead
+    # Nebula end
   - type: Grammar
     attributes:
       gender: male
@@ -230,10 +232,12 @@
   - type: MeleeWeapon
     altDisarm: false
     animation: WeaponArcBite
+    # Nebula start
     damage:
       types:
-        Piercing: 5
+        Piercing: 8
         Slash: 5
+    # Nebula end
   - type: Rushdown
   - type: Cloak
   - type: ActionGrant
@@ -250,9 +254,11 @@
     - Wraith
   - type: MobState
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      50: Dead
+      100: Dead
+    # Nebula end
   - type: Grammar
     attributes:
       gender: male

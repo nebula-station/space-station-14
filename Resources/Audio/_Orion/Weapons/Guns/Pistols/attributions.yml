@@ -1,0 +1,4 @@
+- files: ["beretta_empty.ogg", "beretta_reload.ogg", "beretta_shot.ogg", "beretta_unload.ogg", "colt.ogg", "colt_reload.ogg", "colt_unload.ogg", "deagle.ogg", "deagle_empty.ogg", "deagle_reload.ogg", "deagle_unload.ogg", "divet_magin.ogg", "divet_magout.ogg", "vp70_empty.ogg", "vp70_reload.ogg", "vp70_shot.ogg", "vp70_unload.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from Orion-Station-14"
+  source: "https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14/pull/213"

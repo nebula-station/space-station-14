@@ -163,6 +163,15 @@
     displacement: Dwarfism
   - type: InnerBodyAnomalyVisuals
     displacement: Dwarfism
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      90: Critical
+      180: Dead
+  - type: Stamina
+    baseCritThreshold: 85
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic

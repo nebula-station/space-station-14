@@ -5,5 +5,3 @@
   components:
   # it shouldn't insta nugget
   - type: Explosive
-    intensitySlope: 6
-    totalIntensity: 4

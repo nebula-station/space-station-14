@@ -134,7 +134,6 @@
         Blunt: -10 # Trauma - was -5, should really just change how healing wounds works...
         Piercing: -10 # Trauma - was -5
         Slash: -10 # Trauma - was -5
-        Ballistic: -10 # Trauma
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -183,7 +182,6 @@
         Blunt: -15 # Trauma - was -10
         Piercing: -15 # Trauma - was -10
         Slash: -15 # Trauma - was -10
-        Ballistic: -15 # Trauma
     bloodlossModifier: -10 # a suture should stop ongoing bleeding
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
@@ -331,7 +329,6 @@
       types:
         Slash: -10 # Was 5
         Piercing: -15 # Was 10, Buffed due to limb damage changes (Goobstation)
-        Ballistic: -5 # Trauma
     bloodlossModifier: -10
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
@@ -393,7 +390,6 @@
       types: # these are all split across multiple types
         Blunt: -50
         Piercing: -50
-        Ballistic: -50 # Trauma
         Slash: -50
         Heat: -50
         Cold: -50

@@ -8,9 +8,6 @@
   - type: VentCrawler
   - type: Fauna
   - type: MobThresholds
-    thresholds: !Clear
-      0: Alive
-      25: Dead # 40 > 25 - 3 shots from phaser
   - type: MovementSpeedModifier
     baseSprintSpeed: 4.5 # was 3.5, Can catch up to people
   - !Remove type: ReplacementAccent
@@ -25,13 +22,11 @@
   id: MobCarpMagic
   components:
   - type: Damageable
-    damageModifierSet: MagicCarp
 
 - type: entity
   id: MobCarpHolo
   components:
   - type: Damageable
-    damageModifierSet: HoloCarp
 
 - type: entity
   id: MobCarpSalvage

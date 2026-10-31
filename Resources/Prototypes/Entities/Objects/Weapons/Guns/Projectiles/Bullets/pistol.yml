@@ -2,18 +2,20 @@
   parent: BaseBulletKinetic # Trauma
   id: BulletPistol
   categories: [ HideSpawnMenu ]
-  name: bullet (.35 auto)
+  name: bullet (9mm auto) # Nebula edit
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 11 # Trauma, was 16
+        Piercing: 16
+    # Nebula end
 
 - type: entity
   parent: BaseBulletPractice
   id: BulletPistolPractice
   categories: [ HideSpawnMenu ]
-  name: bullet (.35 auto practice)
+  name: bullet (9mm practice) # Nebula edit
   components:
   - type: Projectile
     damage:
@@ -24,23 +26,27 @@
   parent: [BaseBulletIncendiary, BaseBulletKinetic] # Trauma
   id: BulletPistolIncendiary
   categories: [ HideSpawnMenu ]
-  name: bullet (.35 auto incendiary)
+  name: bullet (9mm incendiary) # Nebula edit
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 9 # Trauma, was 12
+        Blunt: 2
+        Heat: 4
+    # Nebula end
         # Heat: 4 # Trauma
 
 - type: entity
   parent: [BaseBulletUranium, BaseBulletKinetic] # Trauma
   id: BulletPistolUranium
   categories: [ HideSpawnMenu ]
-  name: bullet (.35 auto uranium)
+  name: bullet (9mm uranium) # Nebula edit
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        # Radiation: 6
-        Ballistic: 9 # Trauma, was 10
-      armorPenetration: 0.5 # Trauma
+        Radiation: 3
+        Piercing: 8
+    # Nebula end

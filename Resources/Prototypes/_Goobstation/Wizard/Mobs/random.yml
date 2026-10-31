@@ -12,6 +12,17 @@
     - NamesArachnidFirst
     - NamesArachnidLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobIPC
@@ -23,6 +34,14 @@
   - type: RandomMetadata
     nameSegments:
     - IpcFirst
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: IPC
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 6
+  # Nebula end
 
 - type: entity
   parent: MobCluwne
@@ -35,3 +54,10 @@
     - NamesFirst
     - NamesLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end

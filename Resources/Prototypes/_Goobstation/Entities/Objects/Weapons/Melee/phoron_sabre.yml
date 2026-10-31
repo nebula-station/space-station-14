@@ -64,3 +64,9 @@
         volume: -2
   - type: Execution # Off with his head!
     doAfterDuration: 4.0
+  # Nebula start
+  - type: Reflect
+    reflectProb: 1
+    reflects:
+      - Energy
+  # Nebula end

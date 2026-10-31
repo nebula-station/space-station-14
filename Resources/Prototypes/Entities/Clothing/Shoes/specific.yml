@@ -139,7 +139,7 @@
   - type: ClothingSpeedModifier
     # ninja are masters of sneaking around relatively quickly, won't break cloak
     walkModifier: 1.3 # Goob Edit
-    sprintModifier: 1.3 # Trauma edit
+    sprintModifier: 1.15 # Nebula
   - type: FootstepModifier
     footstepSoundCollection: null
 

@@ -44,11 +44,13 @@
   - type: MeleeWeapon
     wideAnimationRotation: -135
     attackRate: 1.5
+    # Nebula start
     damage:
       types:
-        Slash: 12
+        Slash: 15
       woundSeverityMultipliers:
         Slash: 2
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
     angle: 60

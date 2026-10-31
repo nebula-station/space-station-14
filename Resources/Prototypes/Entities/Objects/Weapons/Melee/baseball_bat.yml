@@ -58,6 +58,10 @@
     tags:
     - Trash # Truama
     - BaseballBat
+  # Nebula start
+  - type: StaminaDamageOnHit
+    damage: 12
+  # Nebula end
 
 - type: entity
   name: incomplete baseball bat

@@ -1,0 +1,4 @@
+- files: ["m41.ogg", "m60.ogg", "m60_reload.ogg", "m60_unload.ogg", "minigunSG.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from Orion-Station-14"
+  source: "https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14/pull/213"

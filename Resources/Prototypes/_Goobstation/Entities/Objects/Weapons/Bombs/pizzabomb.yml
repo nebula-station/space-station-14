@@ -17,7 +17,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive # Weak explosion in a very small radius. Doesn't break underplating.
     explosionType: Default
-    totalIntensity: 65
+    totalIntensity: 160 # Nebula
     intensitySlope: 10
-    maxIntensity: 5
+    maxIntensity: 20 # Nebula
     canCreateVacuum: false

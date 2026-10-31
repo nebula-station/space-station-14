@@ -76,6 +76,17 @@
     defaultChannel: Shadowmind
     channels:
     - Shadowmind
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Heat: 10
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 ## Base
 

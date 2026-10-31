@@ -26,6 +26,13 @@
   - type: SpeechFontOverride
     font: LDFComicSans
   - type: Clown
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -36,6 +43,13 @@
     randomizeName: true
   - type: Loadout
     prototypes: [ SingulothKnightsAntagGear ]
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -51,6 +65,13 @@
   - type: Loadout
     prototypes: [ DarkLordAntagGear ]
   - type: DarkLordMarker
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -65,6 +86,13 @@
     randomizeName: true
   - type: Loadout
     prototypes: [ ChosenOneProtagGear ]
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -76,6 +104,13 @@
     randomizeName: true
   - type: Loadout
     prototypes: [ MimeAssassinGear ]
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -86,6 +121,13 @@
     randomizeName: true
   - type: Loadout
     prototypes: [ DarkPriestAntagGear ]
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobVox
@@ -96,3 +138,14 @@
     randomizeName: true
   - type: Loadout
     prototypes: [ VoxRaiderAntagGear ]
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end

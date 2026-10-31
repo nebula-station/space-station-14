@@ -132,7 +132,6 @@
     emoteSounds: MaleFelinid
     wilhelm: /Audio/Nyanotrasen/Voice/Felinid/cat_wilhelm.ogg
   - type: Damageable
-    damageModifierSet: Felinid
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.6
     baseSprintSpeed: 4.7
@@ -180,6 +179,13 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic

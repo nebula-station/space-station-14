@@ -23,6 +23,12 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Consumable/Drinks/milkmini.rsi
     state: icon
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 1
+  # Nebula end
 
 - type: entity
   parent: [DrinkBaseMaterialPlastic, DrinkCartonBaseFull]
@@ -38,3 +44,9 @@
   - type: Sprite
     sprite: _Goobstation/Objects/Consumable/Drinks/milkminichoco.rsi
     state: icon
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 1
+  # Nebula end

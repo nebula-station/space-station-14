@@ -31,3 +31,10 @@
         - id: BoxBodyBag
           amount: 10
         - id: CrateCoffin
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end

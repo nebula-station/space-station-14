@@ -77,6 +77,13 @@
           - MobLayer
   - type: TypingIndicator
     proto: gingerbread
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic
@@ -157,3 +164,12 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Gingerbread
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end

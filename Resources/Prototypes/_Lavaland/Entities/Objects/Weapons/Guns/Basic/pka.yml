@@ -86,7 +86,7 @@
     sprite: _Lavaland/Objects/Weapons/Guns/Basic/kinetic_repeater.rsi
   - type: Gun
     selectedMode: Burst
-    burstFireRate: 3
+    burstFireRate: 5 # Nebula
     burstCooldown: 1.5
     availableModes:
     - Burst

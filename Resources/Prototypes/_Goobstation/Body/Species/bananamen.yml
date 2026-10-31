@@ -51,6 +51,13 @@
       amount: 5
     - id: MaterialBones1
       amount: 3
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 ## Base
 
