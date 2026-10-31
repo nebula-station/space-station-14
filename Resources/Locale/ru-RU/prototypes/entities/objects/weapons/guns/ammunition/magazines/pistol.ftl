@@ -37,5 +37,3 @@ ent-MagazinePistolSubMachineGunUranium = магазин ПП (9мм уранов
     .desc = { ent-BaseMagazinePistolSubMachineGun.desc }
 ent-MagazinePistolUranium = пистолетный магазин (9мм урановые)
     .desc = { ent-BaseMagazinePistol.desc }
-ent-MagazinePistolHighCapacityRubber = автопистолетный магазин (9мм резиновые)
-    .desc = { ent-BaseMagazinePistolHighCapacity.desc }

@@ -310,7 +310,3 @@ uplink-cddisknumber-name = CD "Номерная станция"
 uplink-cddisknumber-desc = Вызовите угрозу, чтобы отвлечь внимание станции... удачи дослушать её целиком.
 uplink-rifle-mag-name = Магазин (5.56мм винтовочные)
 uplink-rifle-mag-desc = 25 патронов калибра 5.56мм. Для Лектера и M-90.
-uplink-rifle-caseless-mag-name = Магазин (9.5мм безгильзовый)
-uplink-rifle-caseless-mag-desc = 30 патронов 9.5мм без гильз, экспансивные пули. Для WSPR.
-uplink-pistol-magazine-caseless-saphe-name = Пистолетный магазин (9.5мм бронебойные разрывные)
-uplink-pistol-magazine-caseless-saphe-desc = 10 патронов 9.5мм без гильз, с чуть большим бронепробитием и эффектом взрыва. Для пистолета Кобра.
