@@ -39,6 +39,13 @@
                        StyleClasses="LabelKeyText"/>
                 <CheckBox Name="AutoFocusSearchOnBuildMenuCheckBox" Text="{Loc 'ui-options-auto-focus-search-on-build-menu'}" />
                 <!-- Goobstation Edit End -->
+                <!-- Nebula start -->
+                <Label Text="{Loc 'ui-options-general-erp'}"
+                       StyleClasses="LabelKeyText"/>
+                <CheckBox Name="ErpPanelCheckBox"
+                          Text="{Loc 'ui-options-erp-panel'}"
+                          ToolTip="{Loc 'ui-options-erp-panel-tooltip'}" />
+                <!-- Nebula end -->
                 <!-- <CheckBox Name="ToggleWalk" Text="{Loc 'ui-options-hotkey-toggle-walk'}" /> -->
             </BoxContainer>
         </ScrollContainer>

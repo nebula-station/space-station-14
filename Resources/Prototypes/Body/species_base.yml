@@ -200,6 +200,7 @@
     - DoorBumpOpener
     - AnomalyHost
   - type: ERPManager # Nebula
+  - type: ErpPanelOwner # Nebula
 
 - type: entity
   abstract: true
