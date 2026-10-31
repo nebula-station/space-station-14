@@ -353,6 +353,10 @@
     - id: DrinkHosFlask
     - id: PlushieLizardJobHeadofsecurity
       prob: 0.02
+    # Nebula start
+    - id: ArmorKitHoS
+    - id: ArmorKitHoSHelmet
+    # Nebula end
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable

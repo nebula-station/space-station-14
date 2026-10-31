@@ -2,6 +2,7 @@ using System.Linq;
 using System.Numerics;
 using System.Threading;
 using Content.Client.Verbs;
+using Content.Shared._Nebula.Examine;
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Input;
@@ -239,6 +240,11 @@ namespace Content.Client.Examine
             if (knowTarget)
             {
                 var itemName = FormattedMessage.EscapeText(Identity.Name(target, EntityManager, player));
+                // Nebula start
+                var titleEv = new ExamineTitleEvent(player, itemName);
+                RaiseLocalEvent(target, ref titleEv);
+                itemName = titleEv.Markup;
+                // Nebula end
                 var labelMessage = FormattedMessage.FromMarkupPermissive($"[bold]{itemName}[/bold]");
                 var label = new RichTextLabel();
                 label.SetMessage(labelMessage);
