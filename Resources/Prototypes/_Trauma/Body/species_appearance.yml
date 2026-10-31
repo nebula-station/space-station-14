@@ -9,6 +9,7 @@
   - type: NeedsTongue # almost all humanoids need to have a tongue to speak
   - type: EatingNeedsOrgan # need a mouth/head to eat
   - type: Sprinter # Nebula
+    staminaDrainRate: 16.2
 
 - type: entity
   abstract: true

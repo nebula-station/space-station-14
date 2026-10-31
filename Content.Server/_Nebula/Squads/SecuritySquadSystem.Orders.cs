@@ -12,7 +12,7 @@ namespace Content.Server._Nebula.Squads;
 
 public sealed partial class SecuritySquadSystem
 {
-    private static readonly TimeSpan OrderLifetime = TimeSpan.FromMinutes(5);
+    private static readonly TimeSpan OrderLifetime = TimeSpan.FromSeconds(40);
     private static readonly TimeSpan ExpiryCheckInterval = TimeSpan.FromSeconds(1);
 
     private TimeSpan _nextExpiryCheck;
@@ -21,12 +21,15 @@ public sealed partial class SecuritySquadSystem
     private void OnRoundRestartCleanup(RoundRestartCleanupEvent ev)
     {
         _nextExpiryCheck = TimeSpan.Zero;
+        _nextTabletRefresh = TimeSpan.Zero;
         _wanted.Clear();
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+
+        RefreshOpenTablets();
 
         if (_timing.CurTime < _nextExpiryCheck)
             return;

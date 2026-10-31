@@ -145,7 +145,7 @@ public sealed class SquadTabletState(
     public List<SquadTabletTimer> Timers { get; } = timers;
 
     /// <summary>
-    /// The tablet rebuilds the state on every sensor broadcast, comparing by value keeps an unchanged one from being sent.
+    /// The tablet rebuilds the state on every refresh, comparing by value keeps an unchanged one from being sent.
     /// </summary>
     public override bool Equals(object? obj)
     {

@@ -7,9 +7,7 @@ using Content.Server.Medical.CrewMonitoring;
 using Content.Shared._Nebula.Hud;
 using Content.Shared._Nebula.Squads;
 using Content.Shared.Database;
-using Content.Shared.DeviceNetwork.Events;
 using Content.Shared.FixedPoint;
-using Content.Shared.Medical.CrewMonitoring;
 using Content.Shared.Medical.SuitSensors;
 using Content.Shared.StationRecords;
 using Robust.Shared.Prototypes;
@@ -22,22 +20,15 @@ public sealed partial class SecuritySquadSystem
     private static readonly TimeSpan CombatTime = TimeSpan.FromSeconds(5);
     private static readonly TimeSpan CombatWindow = TimeSpan.FromSeconds(2);
     private static readonly FixedPoint2 CombatDamage = 20;
+    private static readonly TimeSpan TabletRefreshInterval = TimeSpan.FromSeconds(0.5);
     private const int MaxNewMembers = 32;
+
+    private TimeSpan _nextTabletRefresh;
 
     #region Component events
 
     [SubscribeLocalEvent]
     private void OnTabletOpened(Entity<SquadTabletComponent> ent, ref BoundUIOpenedEvent args)
-    {
-        UpdateTablet(ent);
-    }
-
-    /// <summary>
-    /// Runs after the crew monitoring console stored the new sensor data on the tablet.
-    /// </summary>
-    [SubscribeLocalEvent(after: [typeof(CrewMonitoringConsoleSystem)])]
-    private void OnSensorBroadcast(Entity<SquadTabletComponent> ent,
-        ref DeviceNetworkPacketEvent<BroadcastSuitSensorStatePayload> args)
     {
         UpdateTablet(ent);
     }
@@ -210,6 +201,23 @@ public sealed partial class SecuritySquadSystem
         return ent.Comp.Station;
     }
 
+    /// <summary>
+    /// Sensor broadcasts come every few seconds, so open tablets are refreshed on their own
+    /// to keep member positions live.
+    /// </summary>
+    private void RefreshOpenTablets()
+    {
+        if (_timing.CurTime < _nextTabletRefresh)
+            return;
+
+        _nextTabletRefresh = _timing.CurTime + TabletRefreshInterval;
+        var query = EntityQueryEnumerator<SquadTabletComponent>();
+        while (query.MoveNext(out var uid, out var tablet))
+        {
+            UpdateTablet((uid, tablet));
+        }
+    }
+
     private void UpdateTablets(EntityUid station)
     {
         var query = EntityQueryEnumerator<SquadTabletComponent>();
@@ -235,12 +243,12 @@ public sealed partial class SecuritySquadSystem
             }
         }
 
-        Dictionary<uint, (NetEntity Entity, bool InCombat)> mobs = [];
+        Dictionary<uint, (EntityUid Uid, bool InCombat)> mobs = [];
         var query = EntityQueryEnumerator<SecurityNeuroComponent>();
         while (query.MoveNext(out var uid, out var neuro))
         {
             if (neuro.Record is { } key && key.OriginStation == station)
-                mobs[key.Id] = (GetNetEntity(uid), neuro.LastHurt + CombatTime > _timing.CurTime);
+                mobs[key.Id] = (uid, neuro.LastHurt + CombatTime > _timing.CurTime);
         }
 
         List<SquadTabletSquad> squadStates = [];
@@ -320,22 +328,25 @@ public sealed partial class SecuritySquadSystem
         return timers;
     }
 
-    private static SquadTabletMember BuildMember(uint id,
+    private SquadTabletMember BuildMember(uint id,
         GeneralStationRecord record,
-        Dictionary<uint, (NetEntity Entity, bool InCombat)> mobs,
+        Dictionary<uint, (EntityUid Uid, bool InCombat)> mobs,
         Dictionary<NetEntity, SuitSensorStatus> sensors)
     {
         var member = new SquadTabletMember { Record = id, Name = record.Name, Job = record.JobTitle };
         if (!mobs.TryGetValue(id, out var mob))
             return member;
 
-        member.Entity = mob.Entity;
+        var entity = GetNetEntity(mob.Uid);
+        member.Entity = entity;
         member.InCombat = mob.InCombat;
-        if (!sensors.TryGetValue(mob.Entity, out var sensor))
+        if (!sensors.TryGetValue(entity, out var sensor))
             return member;
 
         member.Signal = sensor.IsAlive ? SquadMemberSignal.Alive : SquadMemberSignal.Dead;
-        member.Coordinates = sensor.Coordinates;
+
+        if (sensor.Coordinates != null)
+            member.Coordinates = GetNetCoordinates(_transform.GetMoverCoordinates(mob.Uid));
         return member;
     }
 

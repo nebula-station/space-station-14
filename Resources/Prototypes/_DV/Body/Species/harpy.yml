@@ -179,7 +179,7 @@
     weightlessAcceleration: 2.5
     weightlessModifier: 1.12
   - type: Sprinter
-    staminaDrainRate: 13
+    staminaDrainRate: 23.4 # Nebula edit
   - type: StepTriggerImmune
     whitelist:
       types:

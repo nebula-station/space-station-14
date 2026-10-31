@@ -85,12 +85,39 @@ public sealed partial class SquadMonitorTab : BoxContainer
 
     public void UpdateState(SquadTabletState state)
     {
+        var same = SameCards(_state, state);
         _state = state;
         if (_selected is { } selected && !SquadUi.TryGetSquad(state, selected, out _))
             _selected = null;
 
         UpdateMap();
-        Rebuild();
+        if (!same)
+            Rebuild();
+    }
+
+    /// <summary>
+    /// Positions change on every refresh while anyone walks, the cards are rebuilt only when what they show changes,
+    /// otherwise a button pressed between two refreshes would be replaced and lose the click.
+    /// </summary>
+    private static bool SameCards(SquadTabletState? old, SquadTabletState state)
+    {
+        if (old == null || !SquadUi.SameLayout(old, state))
+            return false;
+
+        for (var i = 0; i < state.Squads.Count; i++)
+        {
+            var oldMembers = old.Squads[i].Members;
+            var members = state.Squads[i].Members;
+            for (var j = 0; j < members.Count; j++)
+            {
+                if (oldMembers[j].Signal != members[j].Signal
+                    || oldMembers[j].InCombat != members[j].InCombat
+                    || oldMembers[j].Coordinates.HasValue != members[j].Coordinates.HasValue)
+                    return false;
+            }
+        }
+
+        return true;
     }
 
     private void SetHint()
@@ -219,12 +246,32 @@ public sealed partial class SquadMonitorTab : BoxContainer
         row.Label.FontOverride = CyberDraw.Font(11);
         row.Content.AddChild(SquadUi.Status(member));
 
-        if (member.Coordinates is { } coordinates)
-            row.OnPressed += _ => Map.CenterToCoordinates(_entMan.GetCoordinates(coordinates));
+        var record = member.Record;
+        if (member.Coordinates != null)
+            row.OnPressed += _ => CenterOnMember(record);
         else
             row.Disabled = true;
 
         return row;
+    }
+
+    /// <summary>
+    /// Looks the position up on press, the row outlives the state it was built from.
+    /// </summary>
+    private void CenterOnMember(uint record)
+    {
+        if (_state == null)
+            return;
+
+        foreach (var squad in _state.Squads)
+        {
+            var index = squad.Members.FindIndex(m => m.Record == record);
+            if (index >= 0 && squad.Members[index].Coordinates is { } coordinates)
+            {
+                Map.CenterToCoordinates(_entMan.GetCoordinates(coordinates));
+                return;
+            }
+        }
     }
 
     private void OnMapRightClicked(EntityCoordinates coordinates)

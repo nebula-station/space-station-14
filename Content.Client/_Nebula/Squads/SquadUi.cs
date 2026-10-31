@@ -28,7 +28,7 @@ public static class SquadUi
     }
 
     /// <summary>
-    /// Same squads, members, free candidates and tasks. The sensor data that changes every broadcast is left out,
+    /// Same squads, members, free candidates and tasks. The sensor data that changes every refresh is left out,
     /// the roster and the task tabs show none of it, so they rebuild only when this says false.
     /// </summary>
     public static bool SameLayout(SquadTabletState? old, SquadTabletState state)

@@ -116,7 +116,7 @@
   - type: HumanoidProfile
     species: Human
   - type: Sprinter # Nebula change
-    staminaDrainRate: 8
+    staminaDrainRate: 14.4
 
 - type: entity
   parent:

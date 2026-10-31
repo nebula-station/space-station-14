@@ -130,16 +130,16 @@
   description: A cybernetic leg that allows its wearer to run faster.
   components:
   - type: Leg
-    walkSpeed: 3.125
-    sprintSpeed: 5.175
+    walkSpeed: 2.8125 # Nebula edit
+    sprintSpeed: 4.6575 # Nebula edit
 
 - type: entity
-  parent: [ OrganCyberneticLegLeft, OrganCyberneticSpeed ]
+  parent: [ OrganCyberneticSpeed, OrganCyberneticLegLeft ] # Nebula edit
   id: OrganSpeedLegLeft
   name: S.P.E.E.D left leg
 
 - type: entity
-  parent: [ OrganCyberneticLegRight, OrganCyberneticSpeed ]
+  parent: [ OrganCyberneticSpeed, OrganCyberneticLegRight ] # Nebula edit
   id: OrganSpeedLegRight
   name: S.P.E.E.D right leg
 
