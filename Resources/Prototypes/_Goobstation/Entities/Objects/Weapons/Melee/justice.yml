@@ -90,7 +90,7 @@
           attackRate: 1.5
           damage:
             types:
-              Slash: 12
+              Slash: 15 # Nebula edit
             woundSeverityMultipliers:
               Slash: 2
           soundHit:
