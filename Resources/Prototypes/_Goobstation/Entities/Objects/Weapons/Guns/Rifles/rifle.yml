@@ -129,14 +129,15 @@
     burstFireRate: 12
     burstCooldown: 0.8
     shotsPerBurst: 4
-    fireRate: 6 # Nebula
+    fireRate: 6 # Nebula edit
     soundGunshot:
-  # Nebula start
-      path: /Audio/_Orion/Weapons/Guns/Rifles/ak47.ogg
-    angleDecay: 20 # Nebula
-    angleIncrease: 3 # Nebula
-    maxAngle: 58 # Nebula
-    minAngle: 15 # Nebula
+      path: /Audio/_Orion/Weapons/Guns/Rifles/ak47.ogg # Nebula edit
+    # Nebula start
+    angleDecay: 20
+    angleIncrease: 3
+    maxAngle: 58
+    minAngle: 15
+    # Nebula end
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg

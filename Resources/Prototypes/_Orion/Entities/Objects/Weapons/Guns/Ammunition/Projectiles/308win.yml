@@ -8,7 +8,7 @@
     damage:
       types:
         Piercing: 38
-      armorPenetration: 0.3 # Nebula edit - was 0.45
+      armorPenetration: 0.3 # Nebula edit
 
 - type: entity
   parent: BaseBullet
@@ -32,8 +32,8 @@
     damage:
       types:
         Piercing: 18
-        Radiation: 7 # Nebula edit - was 12
-      armorPenetration: 0.35 # Nebula edit - was 0.55
+        Radiation: 7 # Nebula edit
+      armorPenetration: 0.35 # Nebula edit
 
 - type: entity
   parent: BaseBulletPractice

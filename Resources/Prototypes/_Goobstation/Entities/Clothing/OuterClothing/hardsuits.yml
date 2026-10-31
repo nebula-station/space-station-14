@@ -156,7 +156,6 @@
         Caustic: 0.4
       ignoreArmorPierceFlags: All
     # Nebula end
-    # Nebula end
   - type: ClothingSpeedModifier
     walkModifier: 0.7
     sprintModifier: 0.5
