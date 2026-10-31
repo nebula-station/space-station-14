@@ -41,6 +41,7 @@
       Plastic: 50
   # Nebula start
   - type: Armor
+    priceMultiplier: 0
     coverage:
     - Head
     modifiers:
