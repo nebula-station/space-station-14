@@ -231,6 +231,7 @@
   name: chest rig
   description: A set of tactical webbing worn by Syndicate boarding parties.
   components:
+  - type: GearRustle # Nebula edit
   - type: Sprite
     sprite: Clothing/Belt/militarywebbing.rsi
   - type: Clothing

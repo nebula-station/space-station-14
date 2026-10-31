@@ -5,6 +5,7 @@
   suffix: Empty
   description: A set of tactical webbing worn by Central Command support units.
   components:
+  - type: GearRustle # Nebula edit
   - type: Sprite
     sprite: Clothing/Belt/militarywebbing.rsi
   - type: Clothing

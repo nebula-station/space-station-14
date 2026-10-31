@@ -1,0 +1,8 @@
+- type: soundCollection
+  id: SecGearRustle
+  files:
+  - /Audio/_Nebula/Clothing/sec_gear_rustle1.ogg
+  - /Audio/_Nebula/Clothing/sec_gear_rustle2.ogg
+  - /Audio/_Nebula/Clothing/sec_gear_rustle3.ogg
+  - /Audio/_Nebula/Clothing/sec_gear_rustle4.ogg
+  - /Audio/_Nebula/Clothing/sec_gear_rustle5.ogg
