@@ -1,0 +1,13 @@
+- type: alertLevel
+  id: Amber
+  name: alert-level-amber
+  announcement: alert-level-amber-announcement
+  instructions: alert-level-amber-instructions
+  sound:
+    path: /Audio/_Nebula/Announcements/Alerts/amber_code_new_style.ogg
+    params:
+      volume: 4
+  color: Orange
+  emergencyLightColor: Orange
+  forceEnableEmergencyLights: true
+  shuttleTime: 600
