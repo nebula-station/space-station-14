@@ -1,0 +1,39 @@
+- type: entity
+  parent: [ ClothingEyesNightVisionGoggles, ShowSecurityIcons ]
+  id: ClothingEyesNightVisionSecurityGoggles
+  name: night vision security goggles
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Eyes/Goggles/security_nightvision.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Eyes/Goggles/security_nightvision.rsi
+  - type: NightVision
+    overlayColor: "#E4717A"
+    lightingColor: "#E4717A33"
+  - type: SkewedHud
+
+- type: entity
+  parent: [ ClothingEyesNightVisionGoggles, ClothingEyesHudMedical ]
+  id: ClothingEyesNightVisionMedicalGoggles
+  name: night vision medical goggles
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Eyes/Goggles/medical_nightvision.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Eyes/Goggles/medical_nightvision.rsi
+  - type: NightVision
+    overlayColor: "#ACE5EE"
+    lightingColor: "#ACE5EE33"
+
+- type: entity
+  parent: [ ClothingEyesNightVisionGoggles, ClothingEyesHudDiagnostic ]
+  id: ClothingEyesNightVisionDiagnosticGoggles
+  name: night vision diagnostic goggles
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Eyes/Goggles/diagnostic_nightvision.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Eyes/Goggles/diagnostic_nightvision.rsi
+  - type: NightVision
+    overlayColor: "#FCE883"
+    lightingColor: "#FCE88333"
