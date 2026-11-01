@@ -209,6 +209,7 @@
   name: mercenary webbing
   description: Ideal for storing everything from ammo to weapons and combat essentials.
   components:
+  - type: GearRustle # Nebula edit
   - type: Sprite
     sprite: Clothing/Belt/mercwebbing.rsi
   - type: Clothing

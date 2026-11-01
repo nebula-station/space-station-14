@@ -83,7 +83,7 @@
   components:
   # Nebula start
   - type: GearRustle
-    collection: null
+    sound: null
   # Nebula end
   - type: Sprite
     sprite: _Goobstation/Clothing/Belt/judobelt.rsi

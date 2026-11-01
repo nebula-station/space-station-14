@@ -3,25 +3,18 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Robust.Shared.Audio;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Nebula.Clothing.GearRustle;
 
 /// <summary>
-/// Belt that rustles while its wearer sprints, one collection part per footstep in order.
+/// Belt that rustles on each footstep while its wearer sprints.
 /// </summary>
 [RegisterComponent]
 public sealed partial class GearRustleComponent : Component
 {
     /// <summary>
-    /// Parts of the rustle sound, played in order. Null disables the rustle for an inheriting prototype.
+    /// Null disables the rustle for an inheriting prototype.
     /// </summary>
     [DataField(readOnly: true)]
-    public ProtoId<SoundCollectionPrototype>? Collection = "SecGearRustle";
-
-    [DataField(readOnly: true)]
-    public AudioParams Params = AudioParams.Default.WithVolume(-2f);
-
-    [ViewVariables]
-    public int NextIndex;
+    public SoundSpecifier? Sound = new SoundCollectionSpecifier("SecGearRustle", AudioParams.Default.WithVolume(-15f));
 }
