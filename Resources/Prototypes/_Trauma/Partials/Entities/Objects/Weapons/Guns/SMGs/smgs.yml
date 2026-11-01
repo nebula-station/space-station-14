@@ -2,7 +2,7 @@
 
 - type: entity
   abstract: true
-  parent: BaseStockHit
+  parent: [ BaseStockHit, BaseItem ] # Nebula (physics fix)
   id: BaseWeaponSubMachineGun
   components:
   - type: WeaponClass

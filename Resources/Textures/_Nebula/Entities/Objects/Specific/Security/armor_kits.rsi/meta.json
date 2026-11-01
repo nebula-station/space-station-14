@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from S.P.L.U.R.T-Station-13 at https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/blob/24c0a1314f8a102a63eb6843105a410c67fc63d3/modular_splurt/icons/obj/clothing/reinforcekits.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "blueshield_armor_kit"
+    },
+    {
+      "name": "blueshield_helmet_kit"
+    },
+    {
+      "name": "sec_armor_kit"
+    },
+    {
+      "name": "sec_helmet_kit"
+    }
+  ]
+}
