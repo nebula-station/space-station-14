@@ -45,7 +45,7 @@
   id: SpecOpsGoogles
   recipes:
     - ClothingEyesNightVisionGoggles
-    - ClothingEyesThermalVisionGoggles
+    # - ClothingEyesThermalVisionGoggles # Nebula edit
 
 - type: latheRecipePack
   id: Pinpointers

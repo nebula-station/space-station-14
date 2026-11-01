@@ -20,17 +20,19 @@
   technologyPrerequisites:
   - ModsuitsTech
 
-- type: technology
-  id: ThermalVisionTech
-  name: research-technology-thermal-vision
-  icon:
-    sprite: _White/Clothing/Eyes/Goggles/thermal.rsi
-    state: icon
-  discipline: Experimental
-  tier: 2
-  cost: 10000
-  position: -8,-7
-  recipeUnlocks:
-  - ClothingEyesThermalVisionGoggles
-  technologyPrerequisites:
-  - NightVisionTech
+# Nebula start
+# - type: technology
+#   id: ThermalVisionTech
+#   name: research-technology-thermal-vision
+#   icon:
+#     sprite: _White/Clothing/Eyes/Goggles/thermal.rsi
+#     state: icon
+#   discipline: Experimental
+#   tier: 2
+#   cost: 10000
+#   position: -8,-7
+#   recipeUnlocks:
+#   - ClothingEyesThermalVisionGoggles
+#   technologyPrerequisites:
+#   - NightVisionTech
+# Nebula end
