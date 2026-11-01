@@ -314,7 +314,7 @@
   - type: Produce
     plantId: DeathNettlePlants
   - type: MeleeChemicalInjector
-    transferAmount: 5
+    transferAmount: 2 # Nebula edit
     solution: food
     pierceArmor: true
   - type: Extractable
