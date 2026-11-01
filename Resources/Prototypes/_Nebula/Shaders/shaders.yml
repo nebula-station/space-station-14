@@ -7,3 +7,8 @@
   id: NebulaDeath
   kind: source
   path: "/Textures/_Nebula/Shaders/death.swsl"
+
+- type: shader
+  id: NebulaAllyOutline
+  kind: source
+  path: "/Textures/_Nebula/Shaders/ally_outline.swsl"

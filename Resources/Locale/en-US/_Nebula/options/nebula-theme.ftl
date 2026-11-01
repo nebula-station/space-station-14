@@ -10,3 +10,4 @@ nebula-options-lobby-background-item = { $title } — { $artist }
 
 nebula-options-hud-header = Neural interface
 nebula-options-hud-hide-on-death = Hide the interface on death (the chat and the top menu return after a moment)
+nebula-options-hud-ally-outline = Outline squad members in the color of their health (with security night vision on)

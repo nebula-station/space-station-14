@@ -11,6 +11,7 @@
     overlayColor: "#E4717A"
     lightingColor: "#E4717A33"
   - type: SkewedHud
+  - type: AllyOutlineVision
 
 - type: entity
   parent: [ ClothingEyesNightVisionGoggles, ClothingEyesHudMedical ]

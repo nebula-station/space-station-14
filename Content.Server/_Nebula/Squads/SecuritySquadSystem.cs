@@ -361,6 +361,19 @@ public sealed partial class SecuritySquadSystem : EntitySystem
                 DirtyField(mob, mob.Comp, nameof(SecurityNeuroComponent.Squad));
             }
 
+            // The commander outlines every squad, RefreshSummary sets that list.
+            if (!mob.Comp.Commander)
+            {
+                List<NetEntity> allies = [];
+                foreach (var other in squad.Members)
+                {
+                    if (!other.Equals(key) && mobs.TryGetValue(other, out var body))
+                        allies.Add(GetNetEntity(body));
+                }
+
+                SetAllies(mob, allies);
+            }
+
             if (!marks.SequenceEqual(mob.Comp.Marks))
             {
                 mob.Comp.Marks = [.. marks];
@@ -433,6 +446,9 @@ public sealed partial class SecuritySquadSystem : EntitySystem
                 neuro.Marks.Clear();
                 DirtyField(uid, neuro, nameof(SecurityNeuroComponent.Marks));
             }
+
+            if (!neuro.Commander)
+                SetAllies((uid, neuro), []);
 
             RefreshTasks((uid, neuro));
         }
