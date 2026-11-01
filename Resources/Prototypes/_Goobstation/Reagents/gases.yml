@@ -195,18 +195,18 @@
           reagent: Healium
           max: 24
         damage:
-          Burn: -2
-          Toxin: -5
-          Brute: -2
+          Burn: -1 # Nebula edit
+          Toxin: -1 # Nebula edit
+          Brute: -1 # Nebula edit
       - !type:EvenHealthChange
         conditions:
         - !type:ReagentCondition
           reagent: Healium
           min: 24
         damage:
-          Burn: -20
-          Toxin: -50
-          Brute: -20
+          Burn: -1 # Nebula edit
+          Toxin: -1 # Nebula edit
+          Brute: -1 # Nebula edit
       - !type:PopupMessage
         conditions:
         - !type:ReagentCondition
@@ -244,18 +244,18 @@
           reagent: Healium
           max: 24
         damage:
-          Burn: -2
-          Toxin: -5
-          Brute: -2
+          Burn: -1 # Nebula edit
+          Toxin: -1 # Nebula edit
+          Brute: -1 # Nebula edit
       - !type:EvenHealthChange
         conditions:
         - !type:ReagentCondition
           reagent: Healium
           min: 24
         damage:
-          Burn: -20
-          Toxin: -50
-          Brute: -20
+          Burn: -1 # Nebula edit
+          Toxin: -1 # Nebula edit
+          Brute: -1 # Nebula edit
       - !type:PopupMessage
         conditions:
         - !type:ReagentCondition
