@@ -39,15 +39,15 @@ public sealed partial class SecurityTrackingImplantSystem : EntitySystem
         var mob = args.ImplantedEntity;
         ent.Comp.NextAlert = _timing.CurTime + ent.Comp.Cooldown;
 
+        var position = FormattedMessage.RemoveMarkupOrThrow(_navMap.GetNearestBeaconString(mob));
+        var message = Loc.GetString(ent.Comp.Message, ("user", mob), ("position", position));
+        var listeners = _radioSound.SendRadioMessage(ent.Owner, message, ent.Comp.Channel, ent.Owner, ent.Comp.AlertSound, mob);
+
         _audio.PlayEntity(ent.Comp.FlatlineSound,
-            Filter.PvsExcept(mob),
+            Filter.PvsExcept(mob).RemovePlayers(listeners.Recipients),
             mob,
             true,
             AudioParams.Default.WithMaxDistance(ent.Comp.FlatlineRange));
-
-        var position = FormattedMessage.RemoveMarkupOrThrow(_navMap.GetNearestBeaconString(mob));
-        var message = Loc.GetString(ent.Comp.Message, ("user", mob), ("position", position));
-        _radioSound.SendRadioMessage(ent.Owner, message, ent.Comp.Channel, ent.Owner, ent.Comp.AlertSound, mob);
 
         var location = FormattedMessage.RemoveMarkupOrThrow(_navMap.GetNearestBeaconString(mob, onlyName: true));
         var mark = new SecurityImplantCritMarkEvent(GetNetCoordinates(_transform.GetMoverCoordinates(mob)),

@@ -33,7 +33,8 @@ public sealed partial class RadioSoundSystem : EntitySystem
     /// <summary>
     /// Sends the message like <see cref="RadioSystem.SendRadioMessage"/> and plays the sound to everyone who got it, except <paramref name="exclude"/>.
     /// </summary>
-    public void SendRadioMessage(EntityUid speaker,
+    /// <returns>Wearers of headsets that received the message.</returns>
+    public Filter SendRadioMessage(EntityUid speaker,
         string message,
         ProtoId<RadioChannelPrototype> channel,
         EntityUid radioSource,
@@ -51,6 +52,7 @@ public sealed partial class RadioSoundSystem : EntitySystem
             listeners.RemovePlayerByAttachedEntity(excluded);
 
         _audio.PlayGlobal(sound, listeners, true);
+        return listeners;
     }
 
     [SubscribeLocalEvent]
