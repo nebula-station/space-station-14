@@ -83,6 +83,10 @@
   components:
   - type: Sprite
     sprite: _Trauma/Clothing/Hands/Gloves/guerrilla.rsi
+  # Nebula start
+  - type: StartingGrabStage
+    stage: Hard
+  # Nebula end
   - type: TackleModifier
     modifiers:
     - priority: 20
