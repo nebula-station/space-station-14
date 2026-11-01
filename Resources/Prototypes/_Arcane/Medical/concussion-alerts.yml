@@ -1,0 +1,11 @@
+- type: alert
+  id: Concussion
+  category: Concussion
+  icons:
+  - sprite: /Textures/_Arcane/Interface/Concussion/alerts.rsi
+    state: conc
+  name: alerts-conc-name
+  description: alerts-conc-desc
+
+- type: alertCategory
+  id: Concussion

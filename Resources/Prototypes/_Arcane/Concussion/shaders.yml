@@ -1,0 +1,4 @@
+- type: shader
+  id: ArcaneFlashedEffect
+  kind: source
+  path: /Textures/_Arcane/Shaders/flashed_afterimage.swsl

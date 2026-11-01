@@ -29,6 +29,10 @@
   id: ClothingHeadHelmetArmoredBase
   abstract: true
   components:
+  # Nebula start
+  - type: ConcussionResistance
+    resistance: 0.2
+  # Nebula end
   # <Trauma>
   - type: ArmorPointBlank # for most helmets the face is completely open
   # </Trauma>
@@ -98,6 +102,10 @@
   name: SWAT helmet
   description: An extremely robust helmet, commonly used by paramilitary forces. This one has the Nanotrasen logo emblazoned on the top.
   components:
+  # Nebula start
+  - type: ConcussionResistance
+    resistance: 0.2
+  # Nebula end
   # <Trauma>
   - type: FlashSoundSuppression
   - type: ArmorPointBlank
