@@ -25,7 +25,7 @@ public sealed partial class SecurityAllyOutlineOverlay : Overlay
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
 
     /// <summary>
-    /// Bodies to outline, each with the single-pass shader list of its health step.
+    /// Bodies to outline, each with the single-pass shader list of its mob state.
     /// </summary>
     public readonly Dictionary<EntityUid, SpriteComponent.PostShaderEntry[]> Allies = [];
 
@@ -36,7 +36,7 @@ public sealed partial class SecurityAllyOutlineOverlay : Overlay
         _transform = _entMan.System<SharedTransformSystem>();
         _container = _entMan.System<SharedContainerSystem>();
 
-        // Above the night vision shader, which would otherwise tint the health colors.
+        // Above the night vision shader, which would otherwise tint the state colors.
         ZIndex = 1;
     }
 

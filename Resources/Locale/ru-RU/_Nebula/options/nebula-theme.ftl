@@ -10,4 +10,4 @@ nebula-options-lobby-background-item = { $title } — { $artist }
 
 nebula-options-hud-header = Нейроинтерфейс
 nebula-options-hud-hide-on-death = Скрывать интерфейс при смерти (чат и верхнее меню вернутся через пару секунд)
-nebula-options-hud-ally-outline = Обводить бойцов отряда цветом их здоровья (при включённом ПНВ СБ)
+nebula-options-hud-ally-outline = Обводить бойцов отряда цветом их состояния (при включённом ПНВ СБ)
