@@ -57,6 +57,7 @@
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
   - SMESAdvancedMachineCircuitboard
+  - InducerScientific # Nebula edit
   # Goobstation R&D Console rework start
   position: 1,-3
   technologyPrerequisites:
@@ -221,6 +222,7 @@
     - PowerDrill
     - JawsOfLife
     - BorgModuleAdvancedTool
+    - InducerEngineering # Nebula edit
   # Goobstation R&D Console rework start
   position: 2,-2
   technologyPrerequisites:

@@ -1,0 +1,9 @@
+- type: latheRecipe
+  id: InducerEngineering
+  result: InducerEngineering
+  categories:
+  - Engineering
+  completetime: 4
+  materials:
+    Steel: 500
+    Glass: 300
