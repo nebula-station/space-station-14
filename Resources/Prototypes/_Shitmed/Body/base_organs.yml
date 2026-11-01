@@ -116,6 +116,10 @@
   - type: BodyPart
     partType: Leg
   - type: Leg
+    # Nebula start
+    walkSpeed: 2.25
+    sprintSpeed: 4.05
+    # Nebula end
 
 - type: entity
   abstract: true

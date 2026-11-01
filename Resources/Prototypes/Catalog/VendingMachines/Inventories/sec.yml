@@ -42,6 +42,10 @@
     CartridgeBicaridine: 2
     CartridgeDermaline: 2
     # </Trauma>
+    # Nebula start
+    ArmorKitSecurity: 6
+    ArmorKitSecurityHelmet: 6
+    # Nebula end
   # security officers need to follow a diet regimen!
   contrabandInventory:
     WeaponMeleeNeedle: 2

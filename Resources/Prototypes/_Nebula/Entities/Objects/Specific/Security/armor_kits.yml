@@ -1,0 +1,93 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseArmorKit
+  components:
+  - type: Sprite
+    sprite: _Nebula/Entities/Objects/Specific/Security/armor_kits.rsi
+  - type: Item
+    size: Small
+
+# Security
+
+- type: entity
+  parent: [ BaseArmorKit, BaseSecurityContraband ]
+  id: ArmorKitSecurity
+  name: rampart armor kit
+  description: A set of flexible armored plates that will sit completely unnoticed under that hoodie you just couldn't part with, hikikomori.
+  components:
+  - type: Sprite
+    state: sec_armor_kit
+  - type: ArmorKit
+    source: ClothingOuterArmorBasic
+    slots: OUTERCLOTHING
+    prefix: armor-kit-prefix-reinforced
+
+- type: entity
+  parent: [ BaseArmorKit, BaseSecurityContraband ]
+  id: ArmorKitSecurityHelmet
+  name: rampart headgear kit
+  description: A set of flexible armored plates that will sit completely unnoticed under that cap you just couldn't part with, hikikomori.
+  components:
+  - type: Sprite
+    state: sec_helmet_kit
+  - type: ArmorKit
+    source: ClothingHeadHelmetBasic
+    slots: HEAD
+    prefix: armor-kit-prefix-reinforced
+
+# Head of Security
+
+- type: entity
+  parent: [ BaseArmorKit, BaseSecurityCommandContraband ]
+  id: ArmorKitHoS
+  name: commander's armor kit
+  description: Armored inserts made to the standard of the head of security's trenchcoat, for reinforcing outerwear.
+  components:
+  - type: Sprite
+    state: sec_armor_kit
+  - type: ArmorKit
+    source: ClothingOuterCoatHoSTrench
+    slots: OUTERCLOTHING
+    prefix: armor-kit-prefix-armored
+
+- type: entity
+  parent: [ BaseArmorKit, BaseSecurityCommandContraband ]
+  id: ArmorKitHoSHelmet
+  name: commander's headgear kit
+  description: Armored inserts made to the standard of the head of security's beret, for reinforcing hats and other headgear.
+  components:
+  - type: Sprite
+    state: sec_helmet_kit
+  - type: ArmorKit
+    source: ClothingHeadHatBeretHoS
+    slots: HEAD
+    prefix: armor-kit-prefix-armored
+
+# Blueshield
+
+- type: entity
+  parent: [ BaseArmorKit, BaseCentcommContraband ]
+  id: ArmorKitBlueshield
+  name: aegis armor kit
+  description: A NanoTrasen armoring kit with armored plates and some nanoglue, for reinforcing outerwear.
+  components:
+  - type: Sprite
+    state: blueshield_armor_kit
+  - type: ArmorKit
+    source: ClothingBlueshieldArmourVest
+    slots: OUTERCLOTHING
+    prefix: armor-kit-prefix-armored
+
+- type: entity
+  parent: [ BaseArmorKit, BaseCentcommContraband ]
+  id: ArmorKitBlueshieldHelmet
+  name: aegis headgear kit
+  description: A NanoTrasen armoring kit with armored plates and some nanoglue, for reinforcing hats and other headgear.
+  components:
+  - type: Sprite
+    state: blueshield_helmet_kit
+  - type: ArmorKit
+    source: ClothingHeadHatBeretBlueshield
+    slots: HEAD
+    prefix: armor-kit-prefix-armored
