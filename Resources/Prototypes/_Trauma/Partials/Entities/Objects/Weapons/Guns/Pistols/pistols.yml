@@ -2,7 +2,7 @@
 
 - type: entity
   abstract: true
-  parent: BasePistolWhip
+  parent: [ BasePistolWhip, BaseItem ] # Nebula (physics fix)
   id: BaseWeaponPistol
   components:
   - type: WeaponClass
