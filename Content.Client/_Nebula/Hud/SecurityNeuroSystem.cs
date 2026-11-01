@@ -34,7 +34,7 @@ public sealed partial class SecurityNeuroSystem : EntitySystem
     [Dependency] private EntityQuery<SecurityNeuroComponent> _neuroQuery = default!;
 
     private static readonly TimeSpan AlertTime = TimeSpan.FromSeconds(10);
-    private static readonly SoundSpecifier NewOrderSound = new SoundPathSpecifier("/Audio/Machines/twobeep.ogg");
+    private static readonly SoundSpecifier NewOrderSound = new SoundPathSpecifier("/Audio/_Nebula/Effects/tablet_order.ogg");
 
     /// <summary>
     /// Short lived alert lines of the commander: losses and brig timers that ran out.

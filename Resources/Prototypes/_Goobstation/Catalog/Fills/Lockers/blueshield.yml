@@ -14,6 +14,10 @@
     - id: BlueshieldUndeterminedWeapon
     - id: BlueshieldUndeterminedHardsuit
     - id: FlashlightSeclite
+    # Nebula start
+    - id: ArmorKitBlueshield
+    - id: ArmorKitBlueshieldHelmet
+    # Nebula end
 
 - type: entity
   id: DresserBlueshieldOfficerFilled
