@@ -1,0 +1,33 @@
+<BoxContainer xmlns="https://spacestation14.io"
+              Orientation="Vertical"
+              HorizontalExpand="True"
+              SeparationOverride="4">
+    <CheckBox Name="EnabledCheck" Text="{Loc 'marking-gradient-enabled'}" />
+    <BoxContainer Name="Settings" Orientation="Vertical" SeparationOverride="4" Visible="False">
+        <BoxContainer Orientation="Horizontal" SeparationOverride="4">
+            <OptionButton Name="StyleOption" HorizontalExpand="True" />
+            <Button Name="SwapButton" Text="{Loc 'marking-gradient-swap'}" />
+        </BoxContainer>
+        <Label Name="ColorLabel" />
+        <ColorSelectorSliders Name="ColorSelector" SelectorType="Hsv" />
+        <BoxContainer Orientation="Horizontal" SeparationOverride="4">
+            <Button Name="LighterButton"
+                    Text="{Loc 'marking-gradient-suggest-lighter'}"
+                    ToolTip="{Loc 'marking-gradient-suggest-lighter-tooltip'}"
+                    HorizontalExpand="True" />
+            <Button Name="AnalogousButton"
+                    Text="{Loc 'marking-gradient-suggest-analogous'}"
+                    ToolTip="{Loc 'marking-gradient-suggest-analogous-tooltip'}"
+                    HorizontalExpand="True" />
+            <Button Name="ContrastButton"
+                    Text="{Loc 'marking-gradient-suggest-contrast'}"
+                    ToolTip="{Loc 'marking-gradient-suggest-contrast-tooltip'}"
+                    HorizontalExpand="True" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" SeparationOverride="4">
+            <Label Name="AmountLabel" HorizontalExpand="True" />
+            <Button Name="ResetButton" Text="{Loc 'marking-gradient-reset'}" />
+        </BoxContainer>
+        <Slider Name="AmountSlider" MinValue="0" MaxValue="1" HorizontalExpand="True" />
+    </BoxContainer>
+</BoxContainer>

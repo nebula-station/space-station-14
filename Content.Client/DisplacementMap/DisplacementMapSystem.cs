@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using Content.Client._Nebula.Humanoid;
 using Content.Shared.DisplacementMap;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -51,6 +52,9 @@ public sealed partial class DisplacementMapSystem : EntitySystem
             //proper support for multiple shaders on a given layer (or an ubershader to handle stacking all of the effects well)
             //should be replaced by an engine-level solution, but this is an adequate temporary solution.
             //what's that phrase about temporary solutions?
+            // Nebula start
+            if (sprite.Comp[index] is not SpriteComponent.Layer gradientLayer || !MarkingGradientSystem.TrySetDisplaced(gradientLayer))
+            // Nebula end
             sprite.Comp.LayerSetShader(index,
                 (sprite.Comp[index] is SpriteComponent.Layer layer && layer.ShaderPrototype == UnshadedID)
                     ? data.ShaderOverrideUnshaded
@@ -128,6 +132,12 @@ public sealed partial class DisplacementMapSystem : EntitySystem
     {
         if (sprite.Comp[index] is not SpriteComponent.Layer { Shader: { } shader } layer)
             return;
+
+        if (MarkingGradientSystem.IsGradientLayer(layer))
+        {
+            shader.SetParameter("displacementScale", scale);
+            return;
+        }
 
         if (layer.ShaderPrototype != data.ShaderOverride && layer.ShaderPrototype != data.ShaderOverrideUnshaded)
             return;

@@ -42,7 +42,7 @@ public static class DataNodeJsonExtensions
             JsonValueKind.String => new ValueDataNode(element.GetString()),
             JsonValueKind.True => new ValueDataNode("true"),
             JsonValueKind.False => new ValueDataNode("false"),
-            JsonValueKind.Null => new ValueDataNode("null"),
+            JsonValueKind.Null => ValueDataNode.Null(), // Nebula edit
             _ => throw new ArgumentOutOfRangeException(nameof(element)),
         };
     }
