@@ -70,6 +70,10 @@
           path: /Audio/Effects/break_stone.ogg
           params:
             volume: -6
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Rock
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -115,9 +119,9 @@
     - timer
   - type: Explosive
     explosionType: DemolitionCharge
-    totalIntensity: 1000 # was 450
+    totalIntensity: 450 # Nebula
     intensitySlope: 2.5
-    maxIntensity: 30 # was 10
+    maxIntensity: 10 # Nebula
     canCreateVacuum: false
   - type: Destructible
     thresholds:
@@ -490,6 +494,10 @@
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Rock
+  # Nebula end
 
 - type: entity
   id: AsteroidRockMining
@@ -797,6 +805,10 @@
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Rock
+  # Nebula end
 
 - type: entity
   id: IronRockDiamond

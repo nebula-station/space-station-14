@@ -173,6 +173,7 @@ public sealed partial class MarkingsViewModel
             _organData = value;
             _previousColors.Clear();
             _previousLayerColors.Clear(); // Trauma
+            _previousLayerGradients.Clear(); // Nebula edit
             OrganDataChanged?.Invoke();
         }
     }
@@ -280,7 +281,7 @@ public sealed partial class MarkingsViewModel
         var colors = _previousColors.GetValueOrDefault(markingId) ??
                      GetPreviousColors(layer, markingProto) ?? // Trauma
                      MarkingColoring.GetMarkingLayerColors(markingProto, profileData.SkinColor, profileData.EyeColor, layerMarkings);
-        var newMarking = new Marking(markingId, colors) { Forced = AnyEnforcementsLifted };
+        var newMarking = new Marking(markingId, colors) { Forced = AnyEnforcementsLifted, Gradient = markingProto.ForcedColoring ? null : _previousLayerGradients.GetValueOrDefault(layer) }; // Nebula edit
 
         var limits = groupPrototype.Limits.GetValueOrDefault(layer);
         if (limits is null || !EnforceLimits)
@@ -358,6 +359,7 @@ public sealed partial class MarkingsViewModel
         {
             _previousColors[removingMarking.MarkingId] = removingMarking.MarkingColors.ToList();
             _previousLayerColors[layer] = removingMarking.MarkingColors.ToList(); // Trauma - also store a copy for the layer
+            _previousLayerGradients[layer] = removingMarking.Gradient; // Nebula edit
         }
         layerMarkings.RemoveAll(marking => marking.MarkingId == markingId);
         MarkingsChanged?.Invoke(organ, layer);

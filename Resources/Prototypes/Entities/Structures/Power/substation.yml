@@ -117,7 +117,7 @@
             CarbonDioxide: 340.5701689 # carbon dioxide
           temperature: 373.15
   - type: Explosive
-    explosionType: Default
+    explosionType: Transparent # Nebula
     maxIntensity: 100
     intensitySlope: 2
     totalIntensity: 200

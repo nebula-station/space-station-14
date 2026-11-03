@@ -1,0 +1,144 @@
+// Blends a marking between two Oklab colors, keeping the sprite's own shading.
+uniform highp vec3 rootsLab;
+uniform highp vec3 accentLab;
+uniform lowp int gradientStyle;
+uniform highp float amount;
+// Bottom and top of the area the styles are fitted to, as UV2.y.
+uniform highp vec2 region;
+uniform highp vec2 frameSize;
+// Atlas rectangles of the side and back frames. Any other frame counts as the front.
+uniform highp vec4 frameNorth;
+uniform highp vec4 frameEast;
+uniform highp vec4 frameWest;
+
+// A layer holds a single shader, so this one also does the work of displacement.swsl for dwarves.
+uniform bool displaced;
+uniform sampler2D displacementMap;
+uniform highp float displacementSize;
+uniform highp vec4 displacementUV;
+uniform highp float displacementScale;
+
+varying highp vec2 displacementCoord;
+
+void vertex() {
+    displacementCoord = (tCoord2 - vec2(0.5)) * displacementScale + vec2(0.5);
+}
+
+// Ottosson's Oklab, https://bottosson.github.io/posts/oklab/
+highp vec3 oklabToLinear(highp vec3 lab) {
+    highp float l = lab.x + 0.3963377774 * lab.y + 0.2158037573 * lab.z;
+    highp float m = lab.x - 0.1055613458 * lab.y - 0.0638541728 * lab.z;
+    highp float s = lab.x - 0.0894841775 * lab.y - 1.2914855480 * lab.z;
+    l = l * l * l;
+    m = m * m * m;
+    s = s * s * s;
+    return vec3(
+        4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s,
+        -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s,
+        -0.0041960863 * l - 0.7034186147 * m + 1.7076147010 * s);
+}
+
+bool inFrame(highp vec4 frame) {
+    return UV.x >= frame.x && UV.y >= frame.y && UV.x <= frame.z && UV.y <= frame.w;
+}
+
+highp float ombre(highp float depth, highp float strand) {
+    highp float edge = mix(0.85, 0.15, amount);
+    return smoothstep(edge - 0.3, edge + 0.3, depth + (strand - 0.5) * 0.1);
+}
+
+highp float dipDye(highp float depth, highp float strand) {
+    highp float edge = mix(0.9, 0.3, amount);
+    return smoothstep(edge - 0.02, edge + 0.02, depth + (strand - 0.5) * 0.06);
+}
+
+// The first color goes to the character's right: the left of the front view and the whole east view.
+highp float split(highp float pixel) {
+    if (inFrame(frameEast))
+        return 0.0;
+    if (inFrame(frameWest))
+        return 1.0;
+
+    highp float across = inFrame(frameNorth) ? 1.0 - UV2.x : UV2.x;
+    highp float edge = mix(0.35, 0.65, amount);
+    return smoothstep(edge - pixel, edge + pixel, across);
+}
+
+// Dyes what is both low and in shadow, which is where the inner layer of hair shows.
+highp float underdye(highp float depth, highp float shade, highp float strand) {
+    highp float score = depth * 0.5 + (1.0 - shade) * 0.5 + (strand - 0.5) * 0.2;
+    highp float edge = mix(0.75, 0.25, amount);
+    return smoothstep(edge - 0.03, edge + 0.03, score);
+}
+
+highp float streaks(highp float depth, highp float strand) {
+    highp float painted = step(1.0 - mix(0.15, 0.6, amount), strand);
+    return painted * smoothstep(0.0, 0.3, depth + (strand - 0.5) * 0.3);
+}
+
+// Bands that frame the face, so the back view has none.
+highp float frontStrands(highp float pixel) {
+    if (inFrame(frameNorth))
+        return 0.0;
+
+    highp float away = abs(abs(UV2.x - 0.5) - 0.16);
+    if (inFrame(frameEast))
+        away = abs(UV2.x - 0.66);
+    else if (inFrame(frameWest))
+        away = abs(UV2.x - 0.34);
+
+    highp float width = mix(0.02, 0.08, amount);
+    return 1.0 - smoothstep(width, width + pixel, away);
+}
+
+void fragment() {
+    highp vec2 sampleUV = UV;
+    highp float mapAlpha = 1.0;
+
+    if (displaced
+        && displacementCoord.x >= 0.0 && displacementCoord.x <= 1.0
+        && displacementCoord.y >= 0.0 && displacementCoord.y <= 1.0) {
+        highp vec4 map = texture2D(displacementMap, mix(displacementUV.xy, displacementUV.zw, displacementCoord));
+        highp vec2 shift = (map.xy - vec2(128.0 / 255.0)) / (1.0 - 128.0 / 255.0);
+        sampleUV += shift * TEXTURE_PIXEL_SIZE * displacementSize * vec2(1.0, -1.0);
+        mapAlpha = map.a;
+    }
+
+    highp vec4 sprite = zTexture(sampleUV);
+    sprite.a *= mapAlpha;
+    if (sprite.a == 0.0)
+        discard;
+
+    highp float shade = zGrayscale(sprite.rgb);
+    // 0 at the top of the region and 1 at the bottom.
+    highp float depth = 1.0 - clamp((UV2.y - region.x) / (region.y - region.x), 0.0, 1.0);
+    // Golden ratio steps give every pixel column a well spread value, so strands stay readable at 32x32.
+    highp float strand = fract(floor(UV2.x * frameSize.x) * 0.6180339887);
+    highp float pixel = 1.0 / frameSize.x;
+
+    highp float accent = 0.0;
+    bool lifted = false;
+    if (gradientStyle == 1) {
+        accent = split(pixel);
+    } else if (gradientStyle == 2) {
+        accent = underdye(depth, shade, strand);
+        lifted = true;
+    } else if (gradientStyle == 3) {
+        accent = streaks(depth, strand);
+        lifted = true;
+    } else if (gradientStyle == 4) {
+        accent = dipDye(depth, strand);
+    } else if (gradientStyle == 5) {
+        accent = frontStrands(pixel);
+        lifted = true;
+    } else {
+        accent = ombre(depth, strand);
+    }
+
+    // Accents placed by shadow or thin strands would otherwise read darker than the picked color.
+    if (lifted)
+        shade = mix(shade, 0.55 + 0.45 * shade, accent);
+
+    highp vec3 color = clamp(oklabToLinear(mix(rootsLab, accentLab, accent)), 0.0, 1.0);
+    COLOR = vec4(color * shade, sprite.a);
+}

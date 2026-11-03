@@ -93,6 +93,10 @@
     guides:
     - Botany
     - Chemicals
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: hydroponicsTray
@@ -102,3 +106,7 @@
   - type: PlantTray
     waterLevel: 0
     nutritionLevel: 0
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end

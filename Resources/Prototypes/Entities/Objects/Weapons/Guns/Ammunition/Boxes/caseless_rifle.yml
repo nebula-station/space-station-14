@@ -42,7 +42,7 @@
   name: ammunition box (9.5mm HP) # Goob edit
   components:
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 60 # Nebula
     proto: CartridgeCaselessRifle
   - type: Sprite
     layers:

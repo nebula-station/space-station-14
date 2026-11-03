@@ -710,6 +710,12 @@
         Quantity: 20
       - ReagentId: Butter
         Quantity: 2.5
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 0
+  # Nebula end
 
 - type: entity
   parent: FoodBakedCroissant

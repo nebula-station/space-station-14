@@ -27,14 +27,16 @@
   - type: StaticPrice
     price: 220
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.8
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
         Heat: 0.6
+    # Nebula end
   - type: ExplosionResistance
-    damageCoefficient: 0.9
+    damageCoefficient: 0.65 # Nebula
 
 - type: entity
   parent: ClothingOuterWinterSecArmored

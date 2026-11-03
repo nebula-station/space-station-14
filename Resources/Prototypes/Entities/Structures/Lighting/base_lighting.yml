@@ -105,6 +105,10 @@
           SheetSteel1:
             min: 2
             max: 2
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: AlwaysPoweredWallLight

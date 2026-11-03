@@ -1,0 +1,4 @@
+- files: ["556_unload.ogg", "556rifle.ogg", "762_reload.ogg", "762_unload.ogg", "T64.ogg", "ak47.ogg", "ak47_reload.ogg", "ak47_unload.ogg", "g36.ogg", "m28_empty.ogg", "m28_unload.ogg", "rifle_empty.ogg", "som_rifle.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from Orion-Station-14"
+  source: "https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14/pull/213"

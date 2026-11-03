@@ -11,6 +11,13 @@
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
+  # Nebula start
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Piercing: 6
+  # Nebula end
 
 - type: entity
   parent: RCD

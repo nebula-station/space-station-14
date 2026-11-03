@@ -163,13 +163,14 @@
     sprite: Clothing/Uniforms/Jumpsuit/lawyerblack.rsi
   - type: CrematoriumImmune
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.75
         Slash: 0.75
-        Piercing: 0.75
-        Ballistic: 0.7
+        Piercing: 0.70
         Heat: 0.75
+    # Nebula end
 
 - type: entity
   parent: ClothingUniformBase

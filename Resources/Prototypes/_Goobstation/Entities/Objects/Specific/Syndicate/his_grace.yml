@@ -15,7 +15,6 @@
         Blunt: -6
         Slash: -6
         Piercing: -6
-        Ballistic: -6
         Heat: -4
         Cold: -4
         Shock: -4
@@ -33,9 +32,11 @@
   - type: MeleeWeapon
     canWideSwing: false # Git Gud
     heavyStaminaCost: 10
+    # Nebula start
     damage:
       types:
-        Blunt: 12
+        Blunt: 15
+    # Nebula end
     soundHit:
       path: "/Audio/Weapons/smash.ogg"
   - type: Appearance

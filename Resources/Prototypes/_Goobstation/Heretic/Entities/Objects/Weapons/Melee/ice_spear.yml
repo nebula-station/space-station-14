@@ -46,12 +46,12 @@
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: DamageOtherOnHit
-    ignoreResistances: true
-    increaseOnly: true
+    # Nebula start
     damage:
       types:
-        Piercing: 5
-        Cold: 25
+        Piercing: 25
+        Cold: 5
+    # Nebula end
   - type: Item
     storedRotation: -45
     size: Large

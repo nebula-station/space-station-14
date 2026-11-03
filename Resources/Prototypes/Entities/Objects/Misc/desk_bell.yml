@@ -90,6 +90,12 @@
     sound: *BellSound
   - type: EmitSoundOnTrigger
     sound: *BellSound
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 4
+  # Nebula end
 
 - type: entity
   parent: BaseDeskBell

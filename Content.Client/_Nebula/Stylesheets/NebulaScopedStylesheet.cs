@@ -21,6 +21,12 @@ public static class NebulaScopedStylesheet
 {
     private const string OptionTriangle = OptionButton.StyleClassOptionTriangle;
 
+    /// <summary>
+    /// The paddings here leave about 24px for text in a spin box's 40px field, and its buttons already take about 60px.
+    /// Spin boxes that aren't stretched stay at this width, and the field gets all of it past the buttons.
+    /// </summary>
+    private const float SpinBoxMinWidth = 120f;
+
     private static readonly string[] ButtonPseudos =
     [
         ContainerButton.StylePseudoClassNormal,
@@ -139,6 +145,7 @@ public static class NebulaScopedStylesheet
             .Prop(LineEdit.StylePropertyCursorColor, p.Primary)
             .Prop(LineEdit.StylePropertySelectionColor, p.Primary.WithAlpha(0.35f))
             .FontColor(p.OnSurface));
+        rules.Add(E<SpinBox>().MinWidth(SpinBoxMinWidth));
         rules.Add(E<LineEdit>().Class(LineEdit.StyleClassLineEditNotEditable).FontColor(p.OnSurfaceVariant));
         rules.Add(E<LineEdit>().Pseudo(LineEdit.StylePseudoClassPlaceholder).FontColor(p.Outline));
         rules.Add(E<TextEdit>().Pseudo(TextEdit.StylePseudoClassPlaceholder).FontColor(p.Outline));

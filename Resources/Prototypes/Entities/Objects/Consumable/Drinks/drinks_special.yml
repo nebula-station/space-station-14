@@ -69,6 +69,14 @@
     sprite: Objects/Consumable/Drinks/teapot.rsi
   - type: FitsInDispenser
     solution: drink
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 # Probably shouldn't be here
 # Also probably shouldn't let you put the cola back in, and should spawn deadly plastic rings after removing the last one

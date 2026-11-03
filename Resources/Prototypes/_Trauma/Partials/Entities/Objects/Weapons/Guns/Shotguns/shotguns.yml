@@ -11,4 +11,3 @@
   - type: WeaponClass
     class: Shotgun
   - type: Gun
-    fireRate: 1.5

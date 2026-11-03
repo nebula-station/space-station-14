@@ -108,9 +108,14 @@
         messages: [ "slime-hurt-by-water-popup" ]
         probability: 0.25
   - type: MeleeWeapon
+    # Nebula start
     damage:
       types:
-        Heat: 5
+        Heat: 1.25
+        Shock: 1.25
+        Cold: 1.25
+        Caustic: 1.25
+    # Nebula end
     animation: WeaponArcPunch
     soundHit: /Audio/Weapons/punch3.ogg
   - type: InteractionPopup

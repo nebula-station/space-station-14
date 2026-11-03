@@ -107,6 +107,18 @@
   abstract: true
   parent: [ BaseWeaponBallisticTurretIndestructible, BaseTurretDestructible ]
   id: BaseWeaponBallisticTurret
+  components:
+  # Nebula start
+  - type: BallisticAmmoProvider
+    capacity: 500
+    proto: CartridgeCaselessRifle
+  - type: Gun
+    availableModes:
+    - FullAuto
+    fireRate: 6
+    projectileSpeed: 30
+    selectedMode: FullAuto
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -158,3 +170,12 @@
   abstract: true
   parent: [ BaseWeaponEnergyTurretIndestructible, BaseTurretDestructible ]
   id: BaseWeaponEnergyTurret
+  components:
+  # Nebula start
+  - type: BatteryAmmoProvider
+    fireCost: 100
+    proto: BulletEnergyTurretLaser
+  - type: Gun
+    fireRate: 1.5
+    projectileSpeed: 15
+  # Nebula end

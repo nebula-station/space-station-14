@@ -278,6 +278,14 @@
     tags:
     - CannotSuicide
     - VimPilot
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  # Nebula end
 
 - type: entity
   parent: [ BaseUniquePet, SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable , BaseMobDestructible ]
@@ -350,11 +358,7 @@
   - type: MeleeWeapon
     soundHit:
         path: /Audio/Effects/bite.ogg
-    angle: 0
     animation: WeaponArcBite
-    damage:
-      types:
-        Slash: 10
   # </Trauma>
   - type: Sprite
     drawdepth: Mobs
@@ -469,6 +473,14 @@
     understands:
     - Hissing
     - TauCetiBasic
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  # Nebula end
 
 - type: entity
   parent: [ BaseUniquePet, SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable , BaseMobDestructible ]
@@ -566,6 +578,14 @@
     understands:
     - Hissing
     - TauCetiBasic
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  # Nebula end
 
 - type: entity
   parent: MobPossumMorty
@@ -585,6 +605,14 @@
         Base: possum_old
       Dead:
         Base: possum_dead_old
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  # Nebula end
 
 - type: entity
   parent: MobPossumMorty
@@ -608,6 +636,14 @@
         Base: poppy
       Dead:
         Base: poppy_dead
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  # Nebula end
 
 - type: entity
   parent: [ BaseUniquePet, MobRaccoon ]
@@ -636,6 +672,14 @@
     understands:
     - Hissing
     - TauCetiBasic
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+  # Nebula end
 
 - type: entity
   parent: [ BaseUniquePet, MobPig ]
@@ -996,11 +1040,12 @@
     heatDamageThreshold: 800
     coldDamageThreshold: 0
   - type: MeleeWeapon
+    # Nebula start
     damage:
-    # <Trauma>
       types:
-        # Blunt: 1
-        Caustic: 5 # - was 1
+        Blunt: 1
+        Caustic: 1
+    # Nebula end
     soundHit:
       path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
     # </Trauma>

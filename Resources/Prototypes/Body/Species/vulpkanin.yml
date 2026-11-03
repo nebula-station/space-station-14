@@ -193,15 +193,16 @@
   - type: Vocal
     emoteSounds: MaleVulpkanin
   - type: Damageable
-    damageModifierSet: Vulpkanin
   - type: MeleeWeapon
     soundHit:
       path: /Audio/Weapons/pierce.ogg
     animation: WeaponArcClaw
+    # Nebula start
     damage:
       types:
-        Piercing: 2
+        Blunt: 2
         Slash: 3
+    # Nebula end
   - type: TemperatureDamage
     heatDamageThreshold: 320
     coldDamageThreshold: 230
@@ -232,6 +233,15 @@
     sprite:
       sprite: Effects/creampie.rsi
       state: creampie_vulpkanin
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  - type: Stamina
+    baseCritThreshold: 110
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic

@@ -128,13 +128,13 @@
   - type: TypingIndicator
     proto: oni
   - type: Damageable
-    damageModifierSet: Oni
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      155: SoftCrit
       165: Critical
       170: Dead
+    # Nebula end
   - type: BonusMeleeDamage
     damageModifierSet:
       coefficients:

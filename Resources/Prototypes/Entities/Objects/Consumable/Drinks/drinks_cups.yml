@@ -35,6 +35,14 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 3
     inHandsFillBaseName: null
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 ## Misc Cups
 
@@ -62,6 +70,14 @@
     sprite: Objects/Consumable/Drinks/teacup.rsi
   - type: SolutionContainerVisuals
     maxFillLevels: 4
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: [ DrinkBaseMaterialGlass, DrinkBaseCup, DrinkVisualsFillOverlay ]
@@ -123,6 +139,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -132,6 +156,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_black.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -141,6 +173,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_blue.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -150,6 +190,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_green.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -159,6 +207,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_dog.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -168,6 +224,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_heart.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: [DrinkBaseMaterialMetal, DrinkBaseMug]
@@ -192,6 +256,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_moebius.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -201,6 +273,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_one.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -210,6 +290,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_rainbow.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -219,6 +307,14 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_red.rsi
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 ## Filled
 
@@ -244,6 +340,14 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: TrashOnSolutionEmpty
     solution: drink
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -267,6 +371,14 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: TrashOnSolutionEmpty
     solution: drink
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkBaseMug
@@ -294,6 +406,14 @@
     changeColor: false
   - type: TrashOnSolutionEmpty
     solution: drink
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkTeacupEmpty
@@ -310,6 +430,14 @@
     state: icon-vend-tea
   - type: TrashOnSolutionEmpty
     solution: drink
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 - type: entity
   parent: DrinkTeacupEmpty
@@ -326,6 +454,14 @@
     state: icon-vend-green-tea
   - type: TrashOnSolutionEmpty
     solution: drink
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Damageable
+    damageModifierSet: FlimsyGlass
+  # Nebula end
 
 # TODO this needs fill levels
 - type: entity

@@ -3,7 +3,7 @@
 - type: entity
   parent: MagazineLightRifleBox
   id: MagazineLightRifleBoxEmpty
-  name: "L6 SAW magazine box (.30 rifle any)"
+  name: "L6 SAW magazine box (5.45mm rifle any)" # Orion edit
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -11,23 +11,25 @@
 - type: entity
   parent: BaseMagazineLightRifle
   id: MagazineLightRifleMaxim
-  name: "pan magazine (.30 rifle)"
+  name: "pan magazine (5.45mm rifle)" # Orion edit
   components:
   - type: BallisticAmmoProvider
     capacity: 96
+    proto: CartridgeLightRifle # Nebula
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/maxim.rsi
 
 - type: entity
   parent: BaseMagazineLightRifle
   id: MagazineLightRiflePkBox
-  name: "PK munitions box (.30 rifle)"
+  name: "PK munitions box (5.45mm rifle)" # Orion edit
   components:
   - type: Tag
     tags:
     - MagazineLightRifleBox
   - type: BallisticAmmoProvider
     capacity: 80
+    proto: CartridgeLightRifle # Nebula
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/pk_box.rsi
   - type: MagazineVisuals

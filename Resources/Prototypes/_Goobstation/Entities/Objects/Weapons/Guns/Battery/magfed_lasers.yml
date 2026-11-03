@@ -68,18 +68,19 @@
     size: Huge
     shape:
     - 0,0,6,1
-  - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
-  - type: HeldSpeedModifier
   - type: Gun
-    projectileSpeed: 60
-    fireRate: 0.5
-    selectedMode: FullAuto
+    fireRate: 1.5 # Nebula
+    selectedMode: Burst # Nebula
+    # Nebula start
     availableModes:
-    - FullAuto
+    - Burst
+    # Nebula end
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
+    burstCooldown: 1 # Nebula
+    burstFireRate: 6 # Nebula
+    lockOnTargetBurst: true # Nebula
+    shotsPerBurst: 3 # Nebula
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -142,7 +143,7 @@
     - Sidearm
   - type: Gun
     selectedMode: SemiAuto
-    fireRate: 2
+    fireRate: 1.5 # Nebula
     availableModes:
     - SemiAuto
     soundGunshot:
@@ -221,13 +222,13 @@
     - 0,0,4,3
   - type: Wieldable
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -20
+    minAngle: -15 # Nebula
+    maxAngle: -15 # Nebula
   - type: Gun
-    minAngle: 24
-    maxAngle: 45
-    angleIncrease: 4
-    angleDecay: 16
+    minAngle: 50 # Nebula
+    maxAngle: 20 # Nebula
+    angleIncrease: -2 # Nebula
+    angleDecay: -80 # Nebula
     fireRate: 10
     selectedMode: FullAuto
     availableModes:

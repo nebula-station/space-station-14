@@ -1,32 +1,33 @@
 - type: damageModifierSet
   id: Metallic
+  # Nebula start
   coefficients:
     Blunt: 0.7
     Slash: 0.5
-    Piercing: 0.5 # Trauma, was 0.7
-    Ballistic: 0.5 # Trauma
+    Piercing: 0.7
     Shock: 1.2
     Structural: 0.5
+  # Nebula end
   flatReductions:
     Blunt: 5
     Heat: 5
 
 - type: damageModifierSet
   id: StructuralMetallicStrong
+  # Nebula start
   coefficients:
     Blunt: 0.5
     Slash: 0.5
     Piercing: 0.5
-    Ballistic: 0.5 # Trauma
     Shock: 1.2
     Structural: 0.25
   flatReductions:
     Blunt: 10
     Slash: 10
     Piercing: 10
-    Ballistic: 10 # Trauma
     Heat: 10
     Structural: 10
+  # Nebula end
 
 - type: damageModifierSet
   id: StructuralMetallic
@@ -34,13 +35,14 @@
     Shock: 1.2
     Heat: 1.2
     Structural: 0.5
+  # Nebula start
   flatReductions:
     Blunt: 10
     Slash: 10
     Piercing: 10
-    Ballistic: 10 # Trauma
     Heat: 10
     Structural: 10
+  # Nebula end
 
 - type: damageModifierSet
   id: Rock
@@ -76,11 +78,13 @@
 # Like metallic, but without flat reduction so it can be damaged with fists.
 - type: damageModifierSet
   id: FlimsyMetallic
+  # Nebula start
   coefficients:
     Blunt: 0.7
-    Slash: 0.7  # Trauma - upped it by 0.2 to be in line with the others.
+    Slash: 0.5
     Piercing: 0.7
     Shock: 1.2
+  # Nebula end
 
 # Like metallic but very strong to resist most all basic tools and weapons.
 - type: damageModifierSet
@@ -176,13 +180,15 @@
 
 - type: damageModifierSet
   id: Slime
+  # Nebula start
   coefficients:
     Blunt: 0.6
-    Slash: 1.15 # Goob edit
-    Piercing: 1.15 # Goob edit
+    Slash: 1.3
+    Bloodloss: 1.1
+    Heat: 1.3
     Cold: 1.5
     Poison: 0.8
-    Cellular: 0.2 # Trauma
+  # Nebula end
   ignoreArmorPierceFlags: All # Goobstation
 
 - type: damageModifierSet
@@ -200,34 +206,47 @@
 
 - type: damageModifierSet
   id: Scale # Skin tougher, bones weaker, strong stomachs, cold-blooded (kindof)
+  # Nebula start
   coefficients:
+    Slash: 0.8
+    Piercing: 1.1
+    Heat: 0.7
     Cold: 1.3
+  # Nebula end
   ignoreArmorPierceFlags: All # Goobstation
 
 - type: damageModifierSet
   id: Diona
+  # Nebula start
   coefficients:
     Blunt: 0.7
     Slash: 0.8
     Heat: 1.5
-    Shock: 1.2
+    Shock: 1.4
+  # Nebula end
   ignoreArmorPierceFlags: All # Goobstation
 
 - type: damageModifierSet
   id: Moth # Slightly worse at everything but cold
+  # Nebula start
   coefficients:
+    Blunt: 0.8
     Cold: 0.7
     Heat: 1.2
-  # Goobstation
-    Blunt: 1.065
-    Slash: 1.065
-    Piercing: 1.065
+    Piercing: 1.1
+  # Nebula end
   ignoreArmorPierceFlags: All # Goob
 
 - type: damageModifierSet
   id: Vox
-  coefficients: # To be decided
+  # Nebula start
+  coefficients:
+    Slash: 1.1
+    Piercing: 1.1
+    Heat: 0.75
+    Caustic: 0.6
     Poison: 1
+  # Nebula end
   ignoreArmorPierceFlags: All # Goobstation
 
 - type: damageModifierSet
@@ -249,8 +268,8 @@
   # <Trauma>
   ignoreArmorPierceFlags: All
   # </Trauma>
+  # Nebula start
   coefficients:
-    Blunt: 1.5 # Oof ouch my bones
     Cold: 0.0
     Poison: 0.0
     Radiation: 0.0
@@ -258,6 +277,9 @@
     Bloodloss: 0.0
     Cellular: 0.0
     Holy: 0.5
+  flatReductions:
+    Blunt: 5
+  # Nebula end
 
 # hurt a lot by blunt, immune to a good amount of other stuff because they're a cookie
 - type: damageModifierSet
@@ -276,15 +298,15 @@
 # Make sure to add any new damage type here.
 - type: damageModifierSet
   id: BloodlossHuman
+  # Nebula start
   coefficients:
-    Ion: 0 # Trauma
     Asphyxiation: 0.0
-    Bloodloss: 0.0 # no double dipping
+    Bloodloss: 0.0
     Blunt: 0.08
     Caustic: 0.0
     Cellular: 0.0
     Cold: 0.0
-    Heat: -0.5 # heat damage cauterizes wounds, but will still hurt obviously.
+    Heat: -0.5
     Holy: 0
     Piercing: 0.2
     Poison: 0.0
@@ -292,6 +314,7 @@
     Shock: 0.0
     Slash: 0.25
     Structural: 0.0
+  # Nebula end
 
 - type: damageModifierSet
   id: SlimePet # Very survivable slimes
@@ -318,15 +341,17 @@
 
 - type: damageModifierSet
   id: Cockroach
+  # Nebula start
   coefficients:
     Blunt: 1.0
     Slash: 1.0
     Piercing: 1.0
     Cold: 1.0
-    Poison: 0.0 # Trauma - Roaches survive miasma
+    Poison: 1.0
     Cellular: 1.0
-    Radiation: 0.0 # hehe funny cockroach immune to rads
+    Radiation: 0.0
     Caustic: 1.0
+  # Nebula end
   ignoreArmorPierceFlags: All # Goobstation
 
 # Massive heat damage, presumably to kill with lasers
@@ -353,7 +378,10 @@
 # Vulps get more heat damage because fur
 - type: damageModifierSet
   id: Vulpkanin
+  # Nebula start
   coefficients:
-    Heat: 1.15
-    Cold: 0.85
+    Slash: 0.9
+    Heat: 1.3
+    Cold: 0.8
+  # Nebula end
   ignoreArmorPierceFlags: All # Trauma

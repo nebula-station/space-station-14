@@ -14,6 +14,12 @@
     state: icon
   - type: Clothing
     sprite: _Goobstation/Heretic/amber_focus.rsi
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Holy: 1.25
+  # Nebula end
 
 - type: entity
   parent: ClothingNeckAmberFocus

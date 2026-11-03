@@ -69,14 +69,16 @@
       path: /Audio/Weapons/eblademiss.ogg
       params:
         variation: 0.125
+    # Nebula start
     activatedDamage:
       types:
-        Slash: 10 # Trauma, was 15
+        Slash: 15
         Heat: 15
         Structural: 20
-      woundSeverityMultipliers: # Goobstation
+      woundSeverityMultipliers:
         Slash: 2
         Heat: 2
+    # Nebula end
   - type: MeleeWeapon
     animationRotation: -45 # WWDP
     heavyStaminaCost: 2.5 # goob edit
@@ -112,6 +114,12 @@
     reflectSpread: 60
   - type: IgnitionSource
     temperature: 700
+  # Nebula start
+  - type: Reflect
+    reflectProb: .5
+    reflects:
+      - Energy
+  # Nebula end
 
 - type: entity
   name: energy sword
@@ -175,10 +183,14 @@
       params:
         volume: -3
         variation: 0.250
+    # Nebula start
     activatedDamage:
         types:
             Slash: 10
             Heat: 10
+        woundSeverityMultipliers:
+          Slash: 1
+    # Nebula end
     deactivatedSecret: true
   - type: ItemToggleActiveSound
     activeSound:
@@ -228,6 +240,10 @@
     energy: 2.7
     color: white
     netsync: false
+  # Nebula start
+  - type: Reflect
+    reflectProb: .25
+  # Nebula end
 
 - type: entity
   name: pen
@@ -260,10 +276,14 @@
       params:
         volume: -12
         variation: 0.250
+    # Nebula start
     activatedDamage:
       types:
-        Slash: 10
-        Heat: 10
+        Slash: 11
+        Heat: 11
+      woundSeverityMultipliers:
+        Slash: 1
+    # Nebula end
     deactivatedSecret: true
   - type: ComponentToggler
     components:
@@ -323,6 +343,13 @@
   - type: Tag
     tags:
     - Write
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.25
+    reflects:
+      - Energy
+    spread: 30
+  # Nebula end
 
 - type: entity
   parent: [BaseItem, BaseSyndicateContraband]
@@ -418,14 +445,16 @@
       params:
         volume: 3
         variation: 0.250
+    # Nebula start
     activatedDamage:
         types:
-          Slash: 15   #Goob Station rebalance, was originally 12
-          Heat: 15    #Goob Station rebalance, was originally 12
-          Structural: 40 # Goob edit
-        woundSeverityMultipliers: #Goob, Should be at least some reason to use this over eshield/base esword
-          Slash: 4
-          Heat: 4
+          Slash: 15
+          Heat: 15
+          Structural: 40
+        woundSeverityMultipliers:
+          Slash: 7
+          Heat: 7
+    # Nebula end
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Weapons/ebladehum.ogg
@@ -444,11 +473,10 @@
     wieldSound: null # esword light sound instead
   - type: MeleeWeapon
     # <Trauma>
-    clickDamageModifier: 1.1
     heavyStaminaCost: 0
     # </Trauma>
     wideAnimationRotation: -135
-    attackRate: 1 #Goob Station rebalance, was originally 1.5
+    attackRate: 1.5 # Nebula
     angle: 100
     damage:
       types:
@@ -465,6 +493,11 @@
   - type: Item
     size: Small
     sprite: Objects/Weapons/Melee/e_sword_double-inhands.rsi
+  # Nebula start
+  - type: Reflect
+    reflectProb: .8
+    spread: 75
+  # Nebula end
 
 - type: entity # Goobstation
   parent: EnergySwordDoubleBase

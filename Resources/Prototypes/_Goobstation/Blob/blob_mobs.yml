@@ -70,9 +70,11 @@
       path: /Audio/Effects/bite.ogg
     angle: 0
     animation: WeaponArcSmash
+    # Nebula start
     damage:
       types:
-        Blunt: 8
+        Blunt: 5
+    # Nebula end
   - type: DamageStateVisuals
     states:
       Alive:
@@ -96,9 +98,11 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      20: Dead
+      15: Dead
+    # Nebula end
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
     baseSprintSpeed: 4

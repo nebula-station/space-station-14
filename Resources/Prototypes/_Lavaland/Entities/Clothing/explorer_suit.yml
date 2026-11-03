@@ -18,18 +18,21 @@
     - Arm
     - Leg
     - Tail
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.25
       OrganDamage: 0.25
       BoneDamage: 0.25
       VeinsDamage: 0
+      NerveDamage: 0
     modifiers:
       coefficients:
         Blunt: 0.6
         Slash: 0.6
-        Piercing: 0.6
+        Piercing: 0.65
         Heat: 0.6
         Caustic: 0.6
+    # Nebula end
   - type: ExplosionResistance
     damageCoefficient: 0.6
   - type: ContainerContainer
@@ -70,20 +73,25 @@
     - HeadTop
     - HeadSide
   - type: Armor
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0.25
       OrganDamage: 0.25
       BoneDamage: 0.25
       VeinsDamage: 0
+      NerveDamage: 0
+    # Nebula end
     coverage:
     - Head
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.65
         Slash: 0.65
-        Piercing: 0.65
+        Piercing: 0.7
         Heat: 0.65
         Caustic: 0.65
+    # Nebula end
   - type: PressureArmorChange
   - type: PressureEfficiency
 
@@ -95,13 +103,15 @@
   description: An armoured suit for exploring harsh environments. Lightly reinforced with goliath plates.
   components:
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.5
         Slash: 0.5
-        Piercing: 0.5
+        Piercing: 0.6
         Heat: 0.5
         Caustic: 0.5
+    # Nebula end
   - type: ExplosionResistance
     damageCoefficient: 0.5
   - type: FireProtection
@@ -133,13 +143,15 @@
     sprite: _Lavaland/Equipment/explorer_suit.rsi
     equippedState: reinforced1-equipped-HELMET
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.55
         Slash: 0.55
-        Piercing: 0.55
+        Piercing: 0.65
         Heat: 0.55
         Caustic: 0.55
+    # Nebula end
 
 - type: entity
   parent: LavalandEquipmentExplorerSuit
@@ -155,13 +167,15 @@
     sprite: _Lavaland/Equipment/explorer_suit.rsi
     equippedState: reinforced2-equipped-OUTERCLOTHING
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.4
         Slash: 0.4
-        Piercing: 0.4
+        Piercing: 0.55
         Heat: 0.4
         Caustic: 0.4
+    # Nebula end
   - type: ExplosionResistance
     damageCoefficient: 0.4
   - type: FireProtection
@@ -187,13 +201,15 @@
     sprite: _Lavaland/Equipment/explorer_suit.rsi
     equippedState: reinforced2-equipped-HELMET
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.45
         Slash: 0.45
-        Piercing: 0.45
+        Piercing: 0.6
         Heat: 0.45
         Caustic: 0.45
+    # Nebula end
 
 - type: entity
   parent: LavalandEquipmentExplorerSuit
@@ -209,13 +225,15 @@
     sprite: _Lavaland/Equipment/explorer_suit.rsi
     equippedState: reinforced3-equipped-OUTERCLOTHING
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.3
         Slash: 0.3
-        Piercing: 0.3
+        Piercing: 0.5
         Heat: 0.3
         Caustic: 0.3
+    # Nebula end
   - type: ExplosionResistance
     damageCoefficient: 0.3
   - type: FireProtection
@@ -241,10 +259,12 @@
     sprite: _Lavaland/Equipment/explorer_suit.rsi
     equippedState: reinforced3-equipped-HELMET
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.35
         Slash: 0.35
-        Piercing: 0.35
+        Piercing: 0.55
         Heat: 0.35
         Caustic: 0.35
+    # Nebula end

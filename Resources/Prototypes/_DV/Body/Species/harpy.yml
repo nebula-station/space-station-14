@@ -161,7 +161,6 @@
         type: InstrumentBoundUserInterface
         requireInputValidation: false
   - type: Damageable
-    damageModifierSet: Harpy
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw
@@ -197,6 +196,13 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic

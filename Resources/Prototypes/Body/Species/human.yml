@@ -148,6 +148,13 @@
       amount: 5
     - id: MaterialBones1 # Trauma - Bones on butchering humanoids
       amount: 3
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic

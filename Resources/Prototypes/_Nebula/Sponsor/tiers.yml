@@ -1,0 +1,33 @@
+# Text of the Boosty levels in the support window.
+
+- type: sponsorTier
+  id: SponsorTier1
+  rank: 1
+  name: nebula-support-tier-1
+  perks:
+  - nebula-support-tier-1-queue
+  - nebula-support-tier-1-discord
+  - nebula-support-tier-1-ooc
+  - nebula-support-tier-1-wardrobe
+
+- type: sponsorTier
+  id: SponsorTier2
+  rank: 2
+  name: nebula-support-tier-2
+  perks:
+  - nebula-support-tier-2-tokens
+  - nebula-support-tier-2-previous
+  - nebula-support-tier-2-ooc
+  - nebula-support-tier-2-roles
+  - nebula-support-tier-2-exclusive
+
+- type: sponsorTier
+  id: SponsorTier3
+  rank: 3
+  name: nebula-support-tier-3
+  perks:
+  - nebula-support-tier-3-tokens
+  - nebula-support-tier-3-previous
+  - nebula-support-tier-3-ooc
+  - nebula-support-tier-3-custom
+  - nebula-support-tier-3-wardrobe

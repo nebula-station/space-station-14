@@ -22,3 +22,11 @@
         friction: 0.2
   - type: ThrowingAngle
     angularVelocity: true # spins
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 5
+        Piercing: 10
+    ignoreResistances: true
+  # Nebula end

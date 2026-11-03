@@ -8,13 +8,14 @@
   suffix: Chameleon, Armor
   components:
   - type: Armor
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.8
         Slash: 0.8
-        Piercing: 0.8
-        Ballistic: 0.65
+        Piercing: 0.65
         Heat: 0.65
+    # Nebula end
     showArmorOnExamine: true
   - type: StaminaResistance
     damageCoefficient: 0.5

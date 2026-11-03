@@ -5,12 +5,6 @@
   description: This kills the wire.
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 1
-        Piercing: 1
-        Slash: 1
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/_Goobstation/Items/handling/wirecutter_pickup.ogg
@@ -171,10 +165,6 @@
   description: 'A common tool for assembly and disassembly. Remember: lefty latchy, righty removey.'
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 5 # ow
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/_Goobstation/Items/handling/wrench_pickup.ogg
@@ -231,10 +221,6 @@
   description: An advanced tool to copy, store, and send electrical pulses and signals through wires and machines.
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 2 # ow
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/_Goobstation/Items/handling/multitool_pickup.ogg
@@ -298,10 +284,6 @@
   description: A tool for linking devices together. Has two modes, a list mode for mass linking devices and a linking mode for advanced device linking.
   components:
     # <Trauma>
-    - type: DamageOtherOnHit
-      damage:
-        types:
-          Blunt: 1 # ow
     - type: PhysicalComposition
       materialComposition:
         Steel: 25
@@ -367,11 +349,6 @@
     speed: 1
   - type: SurgeryTool
     startSound: /Audio/Items/drill_use.ogg
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 2.5
-        Piercing: 2.5
   # </Trauma>
   - type: Tag
     tags:
@@ -444,10 +421,6 @@
   description: The rapid construction device can be used to quickly place and remove various station structures and fixtures. Requires compressed matter to function.
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 5 # ow
   - type: Tag
     tags:
     - DroneUsable
@@ -627,10 +600,6 @@
   description: A large tool for digging and moving dirt.
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 10 # ow
   # </Trauma>
   - type: Sprite
     sprite: Objects/Tools/shovel.rsi
@@ -661,10 +630,6 @@
   description: A tool used to shape and flatten dough.
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 5 # ow
   # </Trauma>
   - type: Sprite
     sprite: Objects/Tools/rolling_pin.rsi

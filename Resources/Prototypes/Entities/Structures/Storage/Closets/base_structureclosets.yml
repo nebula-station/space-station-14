@@ -75,6 +75,10 @@
     stateDoorClosed: generic_door
   - type: StaticPrice
     price: 75
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: StructuralMetallic
+  # Nebula end
 
 # steel closet base (that can be constructed/deconstructed)
 - type: entity
@@ -89,7 +93,6 @@
   - type: Paintable
     group: Closet
   - type: Damageable
-    damageModifierSet: StructuralMetallic
   - type: Injurable
     damageContainer: StructuralInorganic
   - type: Destructible

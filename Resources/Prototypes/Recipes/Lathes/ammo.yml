@@ -123,7 +123,7 @@
   id: MagazineLightRifle
   result: MagazineLightRifle
   materials:
-    Steel: 565
+    Steel: 500 # Orion edit
     Gunpowder: 250 # Trauma
 
 - type: latheRecipe
@@ -132,7 +132,7 @@
   result: MagazineLightRifleIncendiary
   materials:
     Steel: 25
-    Plastic: 540
+    Plastic: 475 # Orion edit
     Gunpowder: 250 # Trauma
 
 - type: latheRecipe
@@ -140,7 +140,7 @@
   id: MagazineLightRiflePractice
   result: MagazineLightRiflePractice
   materials:
-    Steel: 205
+    Steel: 175 # Orion edit
     Gunpowder: 150 # Trauma
 
 - type: latheRecipe
@@ -149,8 +149,10 @@
   result: MagazineLightRifleUranium
   materials:
     Steel: 25
-    Plastic: 360
-    Uranium: 360
+    # Orion start
+    Plastic: 325
+    Uranium: 325
+    # Orion end
     Gunpowder: 250 # Trauma
 
 - type: latheRecipe
@@ -158,7 +160,7 @@
   id: MagazineBoxLightRifle
   result: MagazineBoxLightRifle
   materials:
-    Steel: 900
+    Steel: 775 # Orion edit
     Gunpowder: 500 # Trauma
 
 - type: latheRecipe
@@ -166,7 +168,7 @@
   id: MagazineBoxLightRifleIncendiary
   result: MagazineBoxLightRifleIncendiary
   materials:
-    Plastic: 900
+    Plastic: 775 # Orion edit
     Gunpowder: 500 # Trauma
 
 - type: latheRecipe
@@ -174,7 +176,7 @@
   id: MagazineBoxLightRiflePractice
   result: MagazineBoxLightRiflePractice
   materials:
-    Steel: 300
+    Steel: 200 # Orion edit
     Gunpowder: 250 # Trauma
 
 - type: latheRecipe
@@ -182,8 +184,10 @@
   id: MagazineBoxLightRifleUranium
   result: MagazineBoxLightRifleUranium
   materials:
-    Plastic: 600
-    Uranium: 600
+    # Orion start
+    Plastic: 550
+    Uranium: 550
+    # Orion end
     Gunpowder: 500 # Trauma
 
 # .35 Auto

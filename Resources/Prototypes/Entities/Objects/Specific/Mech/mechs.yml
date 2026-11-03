@@ -105,10 +105,12 @@
     canWideSwing: false # Trauma - disabled until it doesnt look shit
     hidden: true
     attackRate: 0.75
+    # Nebula start
     damage:
       types:
-        Blunt: 25 #thwack
-        Structural: 9
+        Blunt: 25
+        Structural: 20
+    # Nebula end
     soundHit:
       collection: MetalThud
   - type: Puller
@@ -209,7 +211,7 @@
         - HumanoidProfile
   - type: MeleeWeapon
     hidden: true
-    attackRate: 0.5 # Trauma - was 1, its not designed for combat
+    attackRate: 1 # Nebula
     damage:
       types:
         Blunt: 25 # Goobstation - Make ripley punch hard

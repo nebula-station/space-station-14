@@ -9,17 +9,16 @@
   - type: Armor
     coverage:
     - Head
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.35
         Slash: 0.35
         Piercing: 0.35
-        Ballistic: 0.35
         Heat: 0.35
         Radiation: 0.5
         Caustic: 0.5
-      flatReductions: # This is done so shotguns are worse against armor
-        Ballistic: 3.5
+    # Nebula end
   - type: ExplosionResistance
     damageCoefficient: 0.75
   - type: Sprite

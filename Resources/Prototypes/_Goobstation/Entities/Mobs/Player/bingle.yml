@@ -62,14 +62,15 @@
         Structural: 14 # breaks down the walls and airlocks in 10 hits
         Ion: 5
     bluntStaminaDamageFactor: 2.0
+    altDisarm: false # Nebula
   - type: MovementSpeedModifier
     baseWalkSpeed : 2 # same as slime
     baseSprintSpeed : 4
   - type: Stamina
     baseCritThreshold: 120
   - type: StaminaDamageOnHit # from stunbaton
-    damage: 15
-    overtime: 40
+    damage: 25 # Nebula
+    overtime: 15 # Nebula
     sound: /Audio/Weapons/egloves.ogg
   - type: Damageable
     damageModifierSet: Bingle
@@ -104,7 +105,6 @@
         Blunt: -0.16
         Slash: -0.16
         Piercing: -0.16
-        Ballistic: -0.16
         Radiation: -0.16
         Heat: -0.13
         Cold: -0.13

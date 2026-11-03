@@ -21,6 +21,13 @@
         type: StorageBoundUserInterface
       enum.ToggleClothingUiKey.Key:
         type: ToggleableClothingBoundUserInterface
+  # Nebula start
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.95
+    walkModifier: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  # Nebula end
 
 - type: entity
   abstract: true

@@ -11,6 +11,10 @@
     sprite: Clothing/Under/Socks/bee.rsi
   - type: Clothing
     sprite: Clothing/Under/Socks/bee.rsi
+  # Nebula start
+  - type: Armor
+    modifiers: {}
+  # Nebula end
 
 - type: entity
   parent: ClothingShoesBase
@@ -22,3 +26,7 @@
     sprite: Clothing/Under/Socks/coder.rsi
   - type: Clothing
     sprite: Clothing/Under/Socks/coder.rsi
+  # Nebula start
+  - type: Armor
+    modifiers: {}
+  # Nebula end

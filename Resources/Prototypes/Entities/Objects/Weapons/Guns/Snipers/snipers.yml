@@ -57,7 +57,7 @@
   name: Kardashev-Mosin
   parent: [BaseWeaponSniper, BaseGunWieldable, SolutionDart, BaseMajorContraband]
   id: WeaponSniperMosin
-  description: A true relic, the Kardashev-Mosin has served in nearly every armed conflict since its creation 670 years ago. The bolt-action design of the rifle remains virtually identical to its original design, whether used for hunting, sniping, or endless trench warfare. Loads 10 rounds of .30 rifle.
+  description: A true relic, the Kardashev-Mosin has served in nearly every armed conflict since its creation 670 years ago. The bolt-action design of the rifle remains virtually identical to its original design, whether used for hunting, sniping, or endless trench warfare. Loads 10 rounds of 7.62mm rifle. # Nebula edit
   components:
   # <Trauma>
   - type: Item  # Goob edit
@@ -84,9 +84,12 @@
   - type: MeleeWeapon
     wideAnimationRotation: -135
     animationRotation: -135 # WWDP
+    # Nebula start
     damage:
       types:
-        Piercing: 12
+        Piercing: 15
+        Slash: 4
+    # Nebula end
     angle: 0
     animation: WeaponArcThrust
     soundHit:
@@ -108,6 +111,17 @@
   - type: GunRequiresWield
   - type: StaticPrice
     price: 500
+  # Nebula start
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeRifle762
+    proto: CartridgeRifle762 # Nebula
+  # Nebula start
+  - type: Gun
+    fireRate: 1.3
+  # Nebula end
+  # Nebula end
 
 - type: entity
   name: Hristov
@@ -125,7 +139,6 @@
     sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
   - type: GunRequiresWield
   - type: Gun
-    fireRate: 0.5
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto

@@ -116,7 +116,7 @@ selectable-set-syndicate-builder-description =
 selectable-set-ert-ballistic-name = баллистический набор
 selectable-set-ert-ballistic-description =
     Надежный, эффективный и компактный. Энни прикроет вас.
-    Содержит: .30 калиберную винтовку Энни,
+    Содержит: винтовку Энни калибра 5.45мм,
     запасные магазины и N1984.
 selectable-set-ert-pulse-name = импульсный набор
 selectable-set-ert-pulse-description =

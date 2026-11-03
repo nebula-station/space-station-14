@@ -56,10 +56,13 @@
   name: bullet (.50 anti-materiel)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 35
+        Piercing: 45
+        Structural: 40
       armorPenetration: 0.5
+    # Nebula end
     penetrationThreshold: 50
 
 - type: entity
@@ -69,18 +72,20 @@
   name: bullet (.50 high-explosive incendiary)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Heat: 1
+        Heat: 5
         Blunt: 2
-        Piercing: 3
-        Structural: 10
+        Piercing: 7
+        Structural: 20
+    # Nebula end
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: FireBombWeak # 1.3 firestacks
-    totalIntensity: 10.8 # 3x3 explosion
+    totalIntensity: 15.8 # Nebula
     intensitySlope: 1.4 # 14 damage at the center tile
-    maxIntensity: 2.4 # 8 damage at the edges
+    maxIntensity: 6.4 # Nebula
     maxTileBreak: 0 # 4 damage at the corners
   - type: PointLight
     radius: 3.5
@@ -421,10 +426,12 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 3
+        Piercing: 5
         Holy: 4
+    # Nebula end
 
 - type: entity
   id: ProjectileMonkeyDart
@@ -433,9 +440,11 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 1
+        Piercing: 1
+    # Nebula end
     angle: 315
   - type: Sprite
     sprite: Objects/Fun/Darts/dart_red.rsi
@@ -451,9 +460,11 @@
   name: bullet (silent)
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 20
+        Piercing: 40
+    # Nebula end
   - type: EntityEffectOnTrigger
     targetUser: true # user is actually hit entity in this case
     effects:
@@ -474,7 +485,6 @@
   - type: SinguloFood
     energy: -500
   - type: Explosive
-    explosionType: Electrical
     maxIntensity: 10
     intensitySlope: 3
     totalIntensity: 150

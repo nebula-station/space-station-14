@@ -92,7 +92,7 @@ public sealed partial class ModifyMarkingsStatusEffectSystem : EntitySystem
                 if (apply)
                     status.Comp.CachedMarkings[newMarkingId] = currentMarkingId;
 
-                layerMarkings[i] = new Marking(newMarkingId, layerMarkings[i].MarkingColors);
+                layerMarkings[i] = new Marking(newMarkingId, layerMarkings[i].MarkingColors) { Gradient = layerMarkings[i].Gradient }; // Nebula edit
             }
         }
 

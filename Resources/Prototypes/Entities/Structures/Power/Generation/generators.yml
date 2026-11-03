@@ -60,7 +60,7 @@
           collection: MetalBreak
       - !type:ExplodeBehavior
   - type: Explosive
-    explosionType: Default
+    explosionType: Transparent # Nebula
     # Same as AME, but numbers still picked from a hat.
     maxIntensity: 100
     intensitySlope: 2
@@ -289,6 +289,15 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Explosive
+    explosionType: Transparent
+    intensitySlope: 2
+    maxIntensity: 100
+    totalIntensity: 200
+  # Nebula end
 
 # TODO: need radioactive fallout when destroyed
 
@@ -326,3 +335,12 @@
             max: 5
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Explosive
+    explosionType: Transparent
+    intensitySlope: 2
+    maxIntensity: 100
+    totalIntensity: 200
+  # Nebula end

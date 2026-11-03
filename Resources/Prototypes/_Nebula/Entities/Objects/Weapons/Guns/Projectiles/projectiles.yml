@@ -1,0 +1,71 @@
+- type: entity
+  name : disabler bolt smg
+  id: BulletDisablerSmg
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Opaque
+        # Arcane-Edit-Start
+#        - Impassable
+#        - BulletImpassable
+        # Arcane-Edit-End
+      fly-by:
+        shape: !type:PhysShapeCircle
+          radius: 1.5
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+        hard: False
+  - type: Ammo
+  - type: StaminaDamageOnCollide
+    damage: 15 # Goob edit # Orion-Edit: 12 > 15
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 0
+        Ion: 4 # DeltaV
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+
+- type: entity
+  id: BulletPlasmaRifle
+  parent: BulletPlasmaCutter
+  components:
+  - type: GatheringProjectile
+  - type: Projectile
+    damage:
+      types:
+        Heat: 18
+        Structural: 100
+  - type: TimedDespawn
+    lifetime: 0.4
+  - type: PointLight
+    radius: 4
+    color: purple
+    energy: 2

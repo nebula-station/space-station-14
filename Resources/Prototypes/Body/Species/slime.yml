@@ -167,7 +167,6 @@
   - type: Vocal
     emoteSounds: MaleSlime
   - type: Damageable
-    damageModifierSet: Slime
   - type: PassiveDamage # Around 8 damage a minute healed
     intervalHaltOnDamageTaken: 5s
     allowedStates:
@@ -228,6 +227,13 @@
       types:
         Asphyxiation: -1.0
     maxSaturation: 15
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic

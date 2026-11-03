@@ -16,6 +16,18 @@
     containers:
       ballistic-ammo: !type:Container
         ents: []
+  # Nebula start
+  - type: Gun
+    availableModes:
+    - SemiAuto
+    fireRate: 0.75
+    selectedMode: SemiAuto
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+       Blunt: 12
+  # Nebula end
 
 - type: entity
   abstract: true
@@ -55,3 +67,10 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  # Nebula start
+  - type: Gun
+    availableModes:
+    - SemiAuto
+    fireRate: 0.75
+    selectedMode: SemiAuto
+  # Nebula end

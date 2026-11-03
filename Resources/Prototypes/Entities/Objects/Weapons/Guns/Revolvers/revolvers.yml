@@ -102,18 +102,19 @@
   name: Mateba
   parent: [BaseWeaponRevolver, BaseCentcommContraband]
   id: WeaponRevolverMateba
-  description: A modern revolver used by Nanotrasen’s elite, near mythical ‘Death Squad’ task force. Its unique trigger action and barrel placement enable a high fire rate with minimal muzzle flip. Many have looked down this barrel, but few have lived to tell of it. Loads 6 rounds of .45 magnum.
+  description: A modern revolver used by Nanotrasen’s elite, near mythical ‘Death Squad’ task force. Its unique trigger action and barrel placement enable a high fire rate with minimal muzzle flip. Many have looked down this barrel, but few have lived to tell of it. Loads 7 rounds of .45 magnum. # Orion edit
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Revolver/mateba/big.rsi # Orion edit
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Revolver/mateba/tiny.rsi # Orion edit
   - type: Item
+    sprite: _Orion/Objects/Weapons/Guns/Revolver/mateba/tiny.rsi # Orion edit
     storedOffset: 0,-3
   - type: Gun
-    fireRate: 3
+    fireRate: 3 # Nebula
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+      path: /Audio/_Orion/Weapons/Guns/Revolvers/mateba.ogg # Orion edit
 
 - type: entity
   parent: WeaponRevolverMateba
@@ -137,7 +138,7 @@
     storedOffset: 0,-2
   - type: Gun
     selectedMode: SemiAuto
-    fireRate: 3
+    fireRate: 2.5 # Nebula
     availableModes:
     - SemiAuto
     soundGunshot:

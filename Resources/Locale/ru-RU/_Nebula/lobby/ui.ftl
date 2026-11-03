@@ -52,3 +52,5 @@ green-flavor-text-placeholder = Что вы как игрок хотите ви�
 yellow-flavor-text-placeholder = Темы, которые необходимо обсудить с вами в LOOC перед отыгровкой.
 red-flavor-text-placeholder = Красные флаги: то, что вы как игрок не желаете видеть в чужой отыгровке.
 nsfw-flavor-text-placeholder = NSFW-описание...
+
+humanoid-profile-editor-copy-skin-color-button = Скопировать цвет на все черты
