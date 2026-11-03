@@ -36,22 +36,26 @@
   suffix: Wizard Clothes
   components:
   - type: Armor
-    traumaDeductions: # prevents traumas at all (kinda)
+    # Nebula start
+    traumaDeductions:
       Dismemberment: 1
       OrganDamage: 1
       BoneDamage: 1
       VeinsDamage: 1
+      NerveDamage: 1
+    # Nebula end
     coverage:
     - Head
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.6
-        Ballistic: 0.6
         Heat: 0.6
         Caustic: 0.1
         Radiation: 0.1
+    # Nebula end
   - type: ExplosionResistance
     damageCoefficient: 0.8
   - type: GroupExamine
@@ -62,28 +66,30 @@
   suffix: Wizard Clothes
   components:
   - type: Armor
-    coverage: # full coverage, idk, magic
+    # Nebula start
+    coverage:
     - Torso
     - Arm
     - Hand
     - Leg
     - Foot
     - Tail
-    - Wings
-    traumaDeductions: # prevents traumas at all (kinda)
+    - Other
+    traumaDeductions:
       Dismemberment: 1
       OrganDamage: 1
       BoneDamage: 1
       VeinsDamage: 1
+      NerveDamage: 1
     modifiers:
       coefficients:
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.6
-        Ballistic: 0.6
         Heat: 0.6
         Radiation: 0.1
         Caustic: 0.1
+    # Nebula end
   - type: ExplosionResistance
     damageCoefficient: 0.25
   - type: GroupExamine
@@ -316,15 +322,16 @@
     - Hand
     - Leg
     - Foot
+    # Nebula start
     modifiers:
       coefficients:
         Blunt: 0.45
         Slash: 0.45
         Piercing: 0.45
-        Ballistic: 0.45
         Heat: 0.45
         Radiation: 0
         Caustic: 0.1
+    # Nebula end
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingHeadHatOblivionEnforcer

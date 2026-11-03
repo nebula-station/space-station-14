@@ -249,6 +249,11 @@
     - state: icon
     - state: icon-unlit
       shader: unshaded
+  # Nebula start
+  - type: ClothingSpeedModifier
+    sprintModifier: 1
+    walkModifier: 1
+  # Nebula end
 
 - type: entity
   parent: [ ClothingBackpackDuffel, BaseCentcommContraband ]
@@ -260,7 +265,7 @@
   - type: Sprite
     sprite: _Goobstation/Clothing/Back/Duffels/cburn.rsi
   - type: ExplosionResistance
-    damageCoefficient: 0.5
+    damageCoefficient: 0.1 # Nebula
   # </Trauma>
   - type: Storage
     maxItemSize: Huge

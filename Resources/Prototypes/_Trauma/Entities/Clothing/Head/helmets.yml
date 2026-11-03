@@ -28,9 +28,8 @@
         Slash: 0.3
         Piercing: 0.3
         Heat: 0.3
-        Ballistic: 0.3
       flatReductions:
-        Ballistic: 3.5
+        Piercing: 3.5 # Nebula
   - type: ExplosionResistance
     damageCoefficient: 0.75
 

@@ -40,7 +40,6 @@
         Blunt: 0.1 # Best armor in the game - Yeah no shit.
         Slash: 0.1
         Piercing: 0.1
-        Ballistic: 0.1
         Heat: 0.1
         Cold: 0.1
         Cellular: 0.1
@@ -76,6 +75,25 @@
     - Biological
   - type: PointLight
     color: "#FFDF00"
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.1
+        Slash: 0.1
+        Piercing: 0.1
+        Heat: 0.1
+        Cold: 0.1
+        Cellular: 0.1
+        Radiation: 0.1
+        Caustic: 0.1
+    traumaDeductions:
+      Dismemberment: 1
+      OrganDamage: 1
+      BoneDamage: 1
+      VeinsDamage: 1
+      NerveDamage: 1
+  # Nebula end
 
 - type: entity
   parent: [ ClothingModsuitChestplateStandard, BaseModsuitPieceDeathsquad ]
@@ -94,6 +112,27 @@
     lowPressureMultiplier: 1000
   - type: FireProtection
     reduction: 1
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.1
+        Slash: 0.1
+        Piercing: 0.1
+        Heat: 0.1
+        Cold: 0.1
+        Cellular: 0.1
+        Radiation: 0.1
+        Caustic: 0.1
+    traumaDeductions:
+      Dismemberment: 1
+      OrganDamage: 1
+      BoneDamage: 1
+      VeinsDamage: 1
+      NerveDamage: 1
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  # Nebula end
 
 - type: entity
   parent: [ ClothingModsuitBootsStandard, BaseModsuitPieceDeathsquad ]

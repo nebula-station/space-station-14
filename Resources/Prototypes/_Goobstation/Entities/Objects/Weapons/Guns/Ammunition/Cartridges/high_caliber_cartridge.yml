@@ -12,32 +12,28 @@
   - type: CartridgeAmmo
     proto: BulletHighCaliber
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Ammunition/Casings/50BMG_casing.rsi # Orion edit
     layers:
-    - state: base
+    - state: base # Orion edit
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
+    state: base # Orion edit
   - type: StaticPrice
     price: 20
 
 - type: entity
-  parent: [ BaseCartridge, BaseMajorContraband ]
+  parent: CartridgeHighCaliber # Orion edit
   id: CartridgeHighCaliberExplosive
   name: cartridge (.50 high-explosive incendiary)
   components:
-  - type: Tag
-    tags:
-    - Cartridge
-    - CartridgeHighCaliber
   - type: CartridgeAmmo
     proto: BulletHighCaliberExplosive
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
     layers:
-    - state: base
+    - state: incendiary # Orion edit
       map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
   - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 20
+  # Orion start
+    state: incendiary
+  # Orion end

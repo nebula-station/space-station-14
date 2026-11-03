@@ -2,45 +2,57 @@
   parent: BaseBulletKinetic # Trauma
   id: BulletLightRifle
   categories: [ HideSpawnMenu ]
-  name: bullet (.30 rifle)
+  name: bullet (5.45mm rifle) # Nebula edit
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 15 # Trauma, was 19
+        Piercing: 19
+      armorPenetration: 0.1
+    # Nebula end
 
 - type: entity
   parent: BaseBulletPractice
   id: BulletLightRiflePractice
   categories: [ HideSpawnMenu ]
-  name: bullet (.30 rifle practice)
+  name: bullet (5.45mm practice) # Nebula edit
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Blunt: 2
+        Blunt: 5
+      armorPenetration: -0.5
+    # Nebula end
 
 - type: entity
   parent: [BaseBulletIncendiary, BaseBulletKinetic] # Trauma
   id: BulletLightRifleIncendiary
   categories: [ HideSpawnMenu ]
-  name: bullet (.30 rifle incendiary)
+  name: bullet (5.45mm incendiary) # Nebula edit
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 11 # Trauma, was 14
+        Blunt: 4
+        Heat: 7
+      armorPenetration: 0.10
+    # Nebula end
         # Heat: 5 # Trauma
 
 - type: entity
   parent: [BaseBulletUranium, BaseBulletKinetic] # Trauma
   id: BulletLightRifleUranium
   categories: [ HideSpawnMenu ]
-  name: bullet (.30 rifle uranium)
+  name: bullet (5.45mm uranium) # Nebula edit
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        # Radiation: 10 # Trauma
-        Ballistic: 11
-      armorPenetration: 0.5 # Trauma
+        Radiation: 3
+        Piercing: 11
+      armorPenetration: 0.1
+    # Nebula end

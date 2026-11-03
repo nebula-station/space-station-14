@@ -1,0 +1,4 @@
+- files: ["mp5_reload.ogg", "mp5_unload.ogg", "mp7.ogg", "p90.ogg", "vector_fire.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from Orion-Station-14"
+  source: "https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14/pull/213"

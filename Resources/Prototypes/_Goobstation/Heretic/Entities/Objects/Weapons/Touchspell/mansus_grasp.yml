@@ -28,13 +28,11 @@
     clickAttackWhitelist:
       components:
       - MobState
-    resetOnHandSelected: false
-    altClickAttack: true
-    canMiss: false
-    canBeParried: false
+    # Nebula start
     damage:
       types:
-        Heat: 0
+        Piercing: 1
+    # Nebula end
   - type: Sprite
     sprite: _Goobstation/Heretic/mansus_grasp.rsi
     state: icon
@@ -73,6 +71,12 @@
     speed: 0.75
   - type: Stitches
     speed: 0.75
+  # Nebula start
+  - type: UseDelay
+    delays:
+      rust:
+        length: 3
+  # Nebula end
   # Saw and scalpel surgery qualities are on heretic blades
 
 - type: entity
@@ -136,9 +140,6 @@
   components:
   - type: RustGrasp # Used for tile rusting
   - type: UseDelay
-    delays:
-      rust:
-        length: 3
   - type: MansusGrasp
     effects:
     - !type:KillAi

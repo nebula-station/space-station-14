@@ -24,11 +24,12 @@
 
 - type: explosion
   id: Methsplosion
-  damagePerIntensity: # yeah I want it less damaging than the default explosion, considering it's high intensity slope
+  # Nebula start
+  damagePerIntensity:
     types:
       Heat: 3
       Blunt: 5
-    woundTypeOverrides: *woundoverrides
+  # Nebula end
   tileBreakChance: [0, 0.5, 1]
   tileBreakIntensity: [0, 10, 30]
   tileBreakRerollReduction: 20
@@ -67,12 +68,13 @@
   # Used by BulletHighCaliberExplosive, identical to FireBomb but less firestacks
 - type: explosion
   id: FireBombWeak
+  # Nebula start
   damagePerIntensity:
     types:
       Heat: 1
       Blunt: 2
-      Piercing: 3
-    woundTypeOverrides: *woundoverrides
+      Slash: 3
+  # Nebula end
   lightColor: Orange
   texturePath: /Textures/Effects/fire.rsi
   fireStates: 6
@@ -108,13 +110,13 @@
   # Used by RPO-A shmel
 - type: explosion
   id: Thermobaric
+  # Nebula start
   damagePerIntensity:
     types:
       Heat: 3
       Blunt: 2
-      Piercing: 2
       Slash: 2
-    woundTypeOverrides: *woundoverrides
+  # Nebula end
   lightColor: Orange
   texturePath: /Textures/Effects/fire.rsi
   fireStates: 8

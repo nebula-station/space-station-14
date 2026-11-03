@@ -80,9 +80,13 @@
         path: /Audio/Effects/bite.ogg
     angle: 0
     animation: WeaponArcBite
+    # Nebula start
     damage:
       types:
-        Piercing: 2
+        Blunt: 0.67
+        Slash: 0.67
+        Piercing: 0.67
+    # Nebula end
   - type: SolutionManager
     solutions:
     - SolutionVenomTick

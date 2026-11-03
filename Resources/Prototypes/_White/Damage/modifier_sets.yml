@@ -2,13 +2,15 @@
 
 - type: damageModifierSet
   id: Xenomorph
+  # Nebula start
   coefficients:
-    Blunt: 0.5
-    Slash: 1.5
+    Blunt: 0.80
+    Slash: 0.80
     Piercing: 0.80
     Cold: 0
-    Heat: 2.0
+    Heat: 1.2
     Poison: 0
+  # Nebula end
 
 - type: damageModifierSet
   id: XenomorphDungeon

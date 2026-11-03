@@ -16,11 +16,13 @@
 
 - type: explosion
   id: Blob
+  # Nebula start
   damagePerIntensity:
     types:
-      Blunt: 3.34
+      Blunt: 3.33
       Slash: 3.33
       Piercing: 3.33
+  # Nebula end
   tileBreakChance: [0]
   tileBreakIntensity: [0]
   lightColor: Red

@@ -14,6 +14,13 @@
     - WizardFirst
     - WizardLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHumanWizardDebug
@@ -23,6 +30,13 @@
   components:
   - type: Loadout
     prototypes: [ WizardHardsuitGearDebug ]
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -38,6 +52,13 @@
     - NamesFirst
     - NamesLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -53,6 +74,13 @@
     - NamesFirst
     - NamesLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: [ MobHuman, MobHumanCaptainHardsuit ]
@@ -63,6 +91,13 @@
   - type: Loadout
     prototypes: [ CaptainModsuit ]
     roleLoadout: [ RoleSurvivalExtended ]
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: [ MobHuman, MobHumanCaptainHardsuit ]
@@ -73,3 +108,10 @@
   - type: Loadout
     prototypes: [ VisitorCaptain ]
     roleLoadout: [ RoleSurvivalExtended ]
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end

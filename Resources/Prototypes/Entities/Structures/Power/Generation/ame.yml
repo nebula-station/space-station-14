@@ -59,7 +59,7 @@
       lockedFailPopup: ame-controller-component-fuel-slot-fail-locked
       insertSuccessPopup: ame-controller-component-fuel-slot-success-insert
   - type: Explosive
-    explosionType: Default
+    explosionType: Transparent # Nebula
     intensitySlope: 5
     maxIntensity: 60
   - type: ActivatableUI

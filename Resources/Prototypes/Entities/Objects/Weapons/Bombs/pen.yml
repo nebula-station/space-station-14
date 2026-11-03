@@ -8,9 +8,9 @@
     examinable: false
   - type: Explosive
     explosionType: Default
-    maxIntensity: 8
-    intensitySlope: 5
-    totalIntensity: 20
+    maxIntensity: 12 # Nebula
+    intensitySlope: 15 # Nebula
+    totalIntensity: 20 # Nebula
     canCreateVacuum: false
   - type: ActivateOnPaperOpened
   - type: ExplodeOnTrigger

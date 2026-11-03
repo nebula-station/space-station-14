@@ -5,10 +5,12 @@
   name: bullet (9.5mm HP) # Goobstation edit
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 14 # Trauma, was 25
-      armorPenetration: -0.39 # Trauma
+        Piercing: 25
+      armorPenetration: -0.3
+    # Nebula end
 
 - type: entity
   parent: BaseBulletPractice

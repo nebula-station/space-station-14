@@ -81,10 +81,10 @@
     tags:
     - FootstepSound
   - type: MobThresholds
-    thresholds:
-      0: Alive
-      15: Critical
-      30: Dead
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: NukieSpider
+  # Nebula end
 
 - type: entity
   parent: [ BaseNukieAnimalSpaceproof, MobGiantSpiderAngry ]
@@ -156,6 +156,10 @@
     tags:
     - FootstepSound
     - DoorBumpOpener
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: NukieSpider
+  # Nebula end
 
 - type: entity
   parent: [ SolutionWeapon, SolutionTiny ]
@@ -214,10 +218,6 @@
   - type: Damageable
     damageModifierSet: NukieSpider
   - type: MobThresholds
-    thresholds:
-      0: Alive
-      25: Critical
-      50: Dead
 
 - type: entity
   parent: [ SolutionWeapon, SolutionTiny ]
@@ -266,8 +266,12 @@
     activateSound: null
     deactivateSound: null
   - type: BatteryAmmoProvider
-    proto: XrayCannonBullet
+    proto: XrayLaser # Nebula
     fireCost: 62.5
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: NukieSpider
+  # Nebula end
 
 - type: entity
   parent: [ BaseMobAsteroid, FlyingMobBase ]

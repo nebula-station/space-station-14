@@ -71,11 +71,12 @@
       - HumanoidProfile
   - type: MeleeWeapon
     hidden: true
-    attackRate: 0.5
+    attackRate: 1 # Nebula
+    # Nebula start
     damage:
       types:
-        Blunt: 25
-        Structural: 30
+        Blunt: 20
+    # Nebula end
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.75
     baseSprintSpeed: 3.6

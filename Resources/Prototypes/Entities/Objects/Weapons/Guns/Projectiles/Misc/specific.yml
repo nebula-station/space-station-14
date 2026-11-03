@@ -61,9 +61,11 @@
   name: hivebot bullet
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 10 # Trauma - was Piercing
+        Piercing: 10
+    # Nebula end
 
 - type: entity
   id: GrapplingHook

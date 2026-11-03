@@ -463,6 +463,7 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRechargeRate: 12000
+    autoRechargePauseTime: 300 # Nebula
   - type: SpaceArtillery
     powerChargeRate: 800
     powerUsePassive: 1500
@@ -524,6 +525,7 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRechargeRate: 12000
+    autoRechargePauseTime: 300 # Nebula
   - type: SpaceArtillery
     powerChargeRate: 700
     powerUsePassive: 1500

@@ -43,11 +43,14 @@
         Blunt: 0.95
         Slash: 0.95
         Piercing: 0.95
+    # Nebula start
     traumaDeductions:
       Dismemberment: 0
       OrganDamage: 0.05
       BoneDamage: 0.05
       VeinsDamage: 0
+      NerveDamage: 0
+    # Nebula end
 
 - type: entity
   abstract: true

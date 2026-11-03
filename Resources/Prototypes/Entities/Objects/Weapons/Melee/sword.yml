@@ -120,6 +120,11 @@
     # not putting a BlockMovement component here cause that's funny.
   - type: StealTarget
     stealGroup: CaptainSword
+  # Nebula start
+  - type: Reflect
+    reflectProb: .3
+    spread: 90
+  # Nebula end
 
 - type: entity
   name: katana
@@ -167,12 +172,13 @@
     sprite: Objects/Weapons/Melee/energykatana.rsi
   - type: MeleeWeapon
     wideAnimationRotation: -60
+    # Nebula start
     damage:
       types:
-        # <Trauma>
-        Slash: 20 # was 30
+        Slash: 30
       woundSeverityMultipliers:
         Slash: 2
+    # Nebula end
         # </Trauma>
   - type: Item
     storedSprite:
@@ -190,6 +196,11 @@
     slots:
     - Back
     - Belt
+  # Nebula start
+  - type: Reflect
+    slotFlags:
+    - NONE
+  # Nebula end
 
 #Greatswords
 - type: entity

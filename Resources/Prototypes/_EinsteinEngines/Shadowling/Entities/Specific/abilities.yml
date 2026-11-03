@@ -68,6 +68,7 @@
   - type: LightEaterUser
   - type: ShadowlingPlaneShift
   - type: Reflect
+    examinable: false # Nebula
 
 - type: entity
   id: LesserShadowlingAbilities

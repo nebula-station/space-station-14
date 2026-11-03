@@ -17,12 +17,15 @@
     angle: 90
     animation: WeaponArcCosmic
     attackRate: 1
+    # Nebula start
     damage:
       types:
-        Slash: 8
-        Asphyxiation: 12
+        Slash: 10
+        Cold: 2.5
+        Asphyxiation: 2.5
         Structural: 15
-        Ion: 15
+        Ion: 25
+    # Nebula end
     soundHit:
       path: /Audio/_DV/CosmicCult/cosmicsword_hit.ogg
       params:
@@ -38,6 +41,8 @@
       params:
         variation: 0.2
         volume: -1
+    clickDamageModifier: 1.1 # Nebula
+    resistanceBypass: true # Nebula
   - type: DisarmMalus
   - type: Item
     size: Large
@@ -59,6 +64,23 @@
       params:
         variation: 0.2
         volume: -1
+  # Nebula start
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Slash: 5
+        Cold: 2.5
+        Asphyxiation: 2.5
+        Structural: 5
+  - type: Reflect
+    reflectProb: .21
+    soundOnReflect:
+      path: /Audio/_DV/CosmicCult/cosmicsword_glance.ogg
+      params:
+        variation: 0.2
+        volume: -6
+    spread: 120
+  # Nebula end
 
 - type: entity
   name: vacuous lance
@@ -76,13 +98,17 @@
       - state: icon-overlay
         shader: unshaded
   - type: MeleeWeapon
-    range: 1.8 # Default is 1.5
     angle: 0
     animation: WeaponArcCosmic
-    attackRate: 0.6
+    attackRate: 0.62 # Nebula
+    # Nebula start
     damage:
       types:
-        Piercing: 12
+        Piercing: 15
+        Cold: 5
+        Asphyxiation: 5
+        Ion: 25
+    # Nebula end
     animationRotation: 225
     wideAnimationRotation: 225
     soundHit:
@@ -100,12 +126,16 @@
       params:
         variation: 0.2
         volume: -1
+    resistanceBypass: true # Nebula
   - type: DamageOtherOnHit
+    # Nebula start
     damage:
-      types: # Not a whole lot, you can throw them pretty damn quick if you set your keybinds right
-        Piercing: 20
-        Asphyxiation: 15
-        Ion: 20
+      types:
+        Piercing: 5
+        Cold: 5
+        Asphyxiation: 5
+        Ion: 17.5
+    # Nebula end
   - type: EmbeddableProjectile
     removalTime: 2
     sound: /Audio/_DV/CosmicCult/cosmiclance_impact.ogg
@@ -121,10 +151,13 @@
         variation: 0.2
         volume: 0
   - type: IncreaseDamageOnWield
+    # Nebula start
     damage:
       types:
-        Asphyxiation: 10
-        Ion: 15
+        Piercing: 10
+        Cold: 2.5
+        Asphyxiation: 2.5
+    # Nebula end
   - type: Item
     size: Large
     shape:
@@ -175,24 +208,21 @@
         shader: unshaded
   - type: UseDelayOnShoot
   - type: UseDelay
-    delay: 1 # Visual, doesn't do shit
+    delay: 2 # Nebula
   - type: LeechOnMarker
     leech:
       types:
         Blunt: -20
         Slash: -20
         Piercing: -20
-        Ballistic: -20
         Heat: -20
         Cold: -20
         Shock: -20
         Caustic: -20
   - type: Gun
-    projectileSpeed: 15
+    projectileSpeed: 10 # Nebula
     soundGunshot: /Audio/_DV/CosmicCult/projectile_razor.ogg
-    fireRate: 1
-    useKey: true
-    unaffectedBySkill: true # Cultists don't get shooting skill
+    fireRate: 1.5 # Nebula
   - type: AltFireMelee
     attackType: Heavy
   - type: RechargeBasicEntityAmmo
@@ -206,11 +236,16 @@
   - type: MeleeWeapon
     wideAnimationRotation: -135
     animation: WeaponArcCosmic
-    attackRate: 1
-    heavyStaminaCost: 0 # This thing is challenging enough to use already, and you can't lightswing anyway
+    attackRate: 1.5 # Nebula
+    # Nebula start
     damage:
       types:
-        Slash: 12
+        Slash: 6
+        Cold: 2
+        Asphyxiation: 2
+        Ion: 6
+        Structural: 15
+    # Nebula end
     soundHit:
       path: /Audio/_DV/CosmicCult/cosmicsword_hit.ogg
       params:
@@ -226,6 +261,8 @@
       params:
         variation: 0.2
         volume: -11
+    clickDamageModifier: 1.1 # Nebula
+    resistanceBypass: true # Nebula
   - type: Wieldable
     wieldSound:
       path: /Audio/_DV/CosmicCult/cosmic_wield.ogg
@@ -267,3 +304,9 @@
       params:
         variation: 0.2
         volume: -1
+  # Nebula start
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Structural: 5
+  # Nebula end

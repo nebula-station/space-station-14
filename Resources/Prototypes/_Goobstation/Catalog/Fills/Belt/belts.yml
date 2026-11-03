@@ -148,6 +148,10 @@
     reflectProb: 1
     reflects:
     - Magic
+    # Nebula start
+    slotFlags:
+    - BELT
+    # Nebula end
   - type: Tag
     tags:
     - ChaplainsHolster

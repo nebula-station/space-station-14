@@ -6,14 +6,15 @@
   components:
   - type: Projectile
     # <Trauma>
+    # Nebula start
     damage:
       types:
-        Ballistic: 75 # was Ballistic
-        #Structural: 100
-      armorPenetration: 0.5
+        Piercing: 75
+      armorPenetration: 0.8
+    # Nebula end
     penetrationThreshold: 100 # was 601
     #penetrationDamageTypeRequirement:
     #- Structural
     # </Trauma>
   - type: StaminaDamageOnCollide
-    damage: 50 # Trauma - was 60
+    damage: 115 # Nebula

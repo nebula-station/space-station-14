@@ -23,6 +23,13 @@
     - NamesFirst
     - NamesLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobDiona
@@ -35,6 +42,13 @@
     - NamesDionaFirst
     - NamesDionaLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobGingerbread
@@ -47,6 +61,15 @@
     - NamesFirst
     - NamesLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Gingerbread
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobMoth
@@ -59,6 +82,13 @@
     - NamesMothFirstFemale
     - NamesMothLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobDwarf
@@ -71,6 +101,15 @@
     - NamesFirst
     - NamesLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      90: Critical
+      180: Dead
+  - type: Stamina
+    baseCritThreshold: 85
+  # Nebula end
 
 - type: entity
   parent: MobReptilian
@@ -81,6 +120,17 @@
   - type: RandomMetadata
     nameSegments:
     - NamesReptilianMale
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobSlimePerson
@@ -93,6 +143,15 @@
     - NamesFirst
     - NamesLast
     nameFormat: name-format-standard
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  - type: UseDelay
+    delay: 0.5
+  # Nebula end
 
 - type: entity
   parent: MobVox
@@ -103,6 +162,17 @@
   - type: RandomMetadata
     nameSegments:
     - NamesVox
+  # Nebula start
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 ### No hour requirement ERT roles.
 
