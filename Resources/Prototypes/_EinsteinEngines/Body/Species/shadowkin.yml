@@ -3,16 +3,16 @@
   id: Shadowkin
   limits:
     enum.HumanoidVisualLayers.Hair:
-      limit: 0
+      limit: 1
       required: false
     enum.HumanoidVisualLayers.FacialHair:
-      limit: 0
+      limit: 1
       required: false
     enum.HumanoidVisualLayers.Head:
       limit: 6
       required: false
     enum.HumanoidVisualLayers.HeadTop:
-      limit: 1
+      limit: 6
       required: true
       default: [ EarsShadowkin ]
     enum.HumanoidVisualLayers.HeadSide:
@@ -31,20 +31,20 @@
       limit: 6
       required: false
     enum.HumanoidVisualLayers.Chest:
-      limit: 8
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 1
+      limit: 6
       required: true
       default: [ TailShadowkin ]
     enum.HumanoidVisualLayers.TailOverlay:
       limit: 6
       required: false
     enum.HumanoidVisualLayers.LArm:
-      limit: 8
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.RArm:
-      limit: 8
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.LHand:
       limit: 6
@@ -53,10 +53,10 @@
       limit: 6
       required: false
     enum.HumanoidVisualLayers.LLeg:
-      limit: 8
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.RLeg:
-      limit: 8
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.LFoot:
       limit: 6
@@ -68,7 +68,7 @@
       limit: 6
       required: false
     enum.HumanoidVisualLayers.WingsBehind:
-      limit: 6
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.Overlay:
       limit: 6
@@ -187,9 +187,6 @@
     emoteSounds: MaleShadowkin
   - type: TypingIndicator
     proto: alien
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 2.7
-    baseSprintSpeed: 4.5
   - type: Speech
     allowedEmotes: [ 'Mars', 'Wurble' ]
   - type: CollectiveMind
@@ -279,10 +276,18 @@
 - type: entity
   parent: [ OrganBaseLegLeft, OrganShadowkinExternal ]
   id: OrganShadowkinLegLeft
+  components:
+  - type: Leg
+    walkSpeed: 2.43
+    sprintSpeed: 4.05
 
 - type: entity
   parent: [ OrganBaseLegRight, OrganShadowkinExternal ]
   id: OrganShadowkinLegRight
+  components:
+  - type: Leg
+    walkSpeed: 2.43
+    sprintSpeed: 4.05
 
 - type: entity
   parent: [ OrganBaseFootLeft, OrganShadowkinExternal ]
@@ -298,7 +303,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: brain
+    layers:
+    - state: brain
 
 - type: entity
   parent: [ OrganBaseTongue, OrganHumanInternal ]
@@ -306,7 +312,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: tongue
+    layers:
+    - state: tongue
 
 - type: entity
   parent: [ OrganBaseAppendix, OrganHumanInternal ]
@@ -314,7 +321,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: appendix
+    layers:
+    - state: appendix
 
 - type: entity
   parent: [ OrganBaseEars, OrganHumanInternal ]
@@ -322,7 +330,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: ears
+    layers:
+    - state: ears
 
 - type: entity
   parent: [ OrganBaseLungs, OrganHumanInternal ]
@@ -330,7 +339,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: core
+    layers:
+    - state: core
   - type: Metabolizer
     metabolizerTypes: [ Human, Shadowkin ]
 
@@ -340,7 +350,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: heart
+    layers:
+    - state: heart
   - type: Metabolizer
     metabolizerTypes: [ Shadowkin ]
 
@@ -350,7 +361,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: stomach
+    layers:
+    - state: stomach
   - type: Metabolizer
     metabolizerTypes: [ Shadowkin ]
 
@@ -360,7 +372,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: liver
+    layers:
+    - state: liver
   - type: Metabolizer
     metabolizerTypes: [ Shadowkin ]
 
@@ -370,7 +383,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: kidneys
+    layers:
+    - state: kidneys
   - type: Metabolizer
     metabolizerTypes: [ Shadowkin ]
 
@@ -380,7 +394,8 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    state: eyes
+    layers:
+    - state: eyes
   - type: VisualOrgan
     data:
       sprite: _EinsteinEngines/Mobs/Species/Shadowkin/parts.rsi

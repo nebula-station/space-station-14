@@ -12,14 +12,14 @@
       limit: 6
       required: false
     enum.HumanoidVisualLayers.HeadTop:
-      limit: 1
+      limit: 6
       required: true
       default: [ TajaranEarsBasic ]
     enum.HumanoidVisualLayers.HeadSide:
-      limit: 8
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.Snout:
-      limit: 1
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.SnoutCover:
       limit: 6
@@ -31,44 +31,44 @@
       limit: 6
       required: false
     enum.HumanoidVisualLayers.Chest:
-      limit: 10
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 1
+      limit: 6
       required: true
       default: [ TajaranTailRetro ]
     enum.HumanoidVisualLayers.TailOverlay:
       limit: 6
       required: false
     enum.HumanoidVisualLayers.LArm:
-      limit: 2
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.RArm:
-      limit: 2
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.LHand:
-      limit: 3
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.RHand:
-      limit: 3
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.LLeg:
-      limit: 2
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.RLeg:
-      limit: 2
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.LFoot:
-      limit: 2
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.RFoot:
-      limit: 2
+      limit: 6
       required: false
     enum.HumanoidVisualLayers.Wings:
       limit: 6
       required: false
     enum.HumanoidVisualLayers.WingsBehind:
-      limit: 6
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.Overlay:
       limit: 6
@@ -224,9 +224,6 @@
     prioritized: false
     relayOverlay: false
     lightingColor: '#FFFFFF15'
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 2.6
-    baseSprintSpeed: 4.6
   - type: PseudoItem
     storedOffset: 0,17
     shape:
@@ -302,10 +299,18 @@
 - type: entity
   parent: [ OrganBaseLegLeft, OrganTajaranExternal ]
   id: OrganTajaranLegLeft
+  components:
+  - type: Leg
+    walkSpeed: 2.34
+    sprintSpeed: 4.14
 
 - type: entity
   parent: [ OrganBaseLegRight, OrganTajaranExternal ]
   id: OrganTajaranLegRight
+  components:
+  - type: Leg
+    walkSpeed: 2.34
+    sprintSpeed: 4.14
 
 - type: entity
   parent: [ OrganBaseFootLeft, OrganTajaranExternal ]

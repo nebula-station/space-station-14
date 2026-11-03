@@ -2,7 +2,6 @@
 - type: marking
   id: FeroxiEars
   bodyPart: HeadTop
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/ear_markings.rsi
     state: feroxi-ears
@@ -12,7 +11,6 @@
 - type: marking
   id: FeroxiTailAndDorsal
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -22,7 +20,6 @@
 - type: marking
   id: FeroxiSnout
   bodyPart: Snout
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -31,7 +28,6 @@
 - type: marking
   id: FeroxiEarsTips
   bodyPart: HeadTop
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/ear_markings.rsi
     state: feroxi-ears
@@ -44,7 +40,6 @@
 - type: marking
   id: FeroxiSnoutStripe
   bodyPart: Snout
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -54,7 +49,6 @@
 - type: marking
   id: FeroxiSnoutCountershading
   bodyPart: Snout
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -64,7 +58,6 @@
 - type: marking
   id: FeroxiSnoutCountershadingStripe
   bodyPart: Snout
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -76,7 +69,6 @@
 - type: marking
   id: FeroxiSnoutNurse
   bodyPart: Snout
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -86,7 +78,6 @@
 - type: marking
   id: FeroxiSnoutNurseCountershading
   bodyPart: Snout
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -99,7 +90,6 @@
 - type: marking
   id: FeroxiTail
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -107,7 +97,6 @@
 - type: marking
   id: FeroxiStripedTail
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -117,7 +106,6 @@
 - type: marking
   id: FeroxiStripedTailAndDorsal
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -131,7 +119,6 @@
 - type: marking
   id: FeroxiTipTail
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -145,7 +132,6 @@
 - type: marking
   id: FeroxiTipTailAndDorsal
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -163,7 +149,6 @@
 - type: marking
   id: FeroxiTailBlitz
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -183,7 +168,6 @@
 - type: marking
   id: FeroxiTailBlitzNoDorsal
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -199,7 +183,6 @@
 - type: marking
   id: FeroxiTwoToneTail
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -209,7 +192,6 @@
 - type: marking
   id: FeroxiTwoToneTailAndDorsal
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -221,7 +203,6 @@
 - type: marking
   id: FeroxiStripeTwoToneTail
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -233,7 +214,6 @@
 - type: marking
   id: FeroxiStripeTwoToneTailAndDorsal
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -249,7 +229,6 @@
 - type: marking
   id: FeroxiTipTwoToneTail
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -265,7 +244,6 @@
 - type: marking
   id: FeroxiTipTwoToneTailAndDorsal
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -286,7 +264,6 @@
 - type: marking
   id: FeroxiHeadStripesTiger
   bodyPart: Head
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-head-stripes-tiger
@@ -294,7 +271,6 @@
 - type: marking
   id: FeroxiTorsoStripesBlitz
   bodyPart: Chest
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-torso-stripes-blitz
@@ -302,7 +278,6 @@
 - type: marking
   id: FeroxiTorsoCountershadingF
   bodyPart: Chest
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-torso-countershading-f
@@ -310,7 +285,6 @@
 - type: marking
   id: FeroxiTorsoCountershadingM
   bodyPart: Chest
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-torso-countershading-m
@@ -318,7 +292,6 @@
 - type: marking
   id: FeroxiTorsoStripesTiger
   bodyPart: Chest
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-torso-stripes-tiger
@@ -327,7 +300,6 @@
 - type: marking
   id: FeroxiLLegStripesBlitz
   bodyPart: LLeg
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Lleg-stripes-blitz
@@ -335,7 +307,6 @@
 - type: marking
   id: FeroxiRLegStripesBlitz
   bodyPart: RLeg
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Rleg-stripes-blitz
@@ -343,7 +314,6 @@
 - type: marking
   id: FeroxiLLegStripesTiger
   bodyPart: LLeg
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Lleg-stripes-tiger
@@ -351,7 +321,6 @@
 - type: marking
   id: FeroxiRLegStripesTiger
   bodyPart: RLeg
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Rleg-stripes-tiger
@@ -360,7 +329,6 @@
 - type: marking
   id: FeroxiLArmStripesBlitz
   bodyPart: LArm
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Larm-stripes-blitz
@@ -368,7 +336,6 @@
 - type: marking
   id: FeroxiRArmStripesBlitz
   bodyPart: RArm
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Rarm-stripes-blitz
@@ -376,7 +343,6 @@
 - type: marking
   id: FeroxiLArmStripesTiger
   bodyPart: LArm
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Larm-stripes-tiger
@@ -384,7 +350,6 @@
 - type: marking
   id: FeroxiRArmStripesTiger
   bodyPart: RArm
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Rarm-stripes-tiger
@@ -394,7 +359,6 @@
 - type: marking
   id: FeroxiEarsTiger
   bodyPart: HeadTop
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/ear_markings.rsi
     state: feroxi-ears
@@ -406,7 +370,6 @@
 - type: marking
   id: FeroxiEarsPierced
   bodyPart: HeadTop
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/ear_markings.rsi
     state: feroxi-ears-pierced
@@ -414,7 +377,6 @@
 - type: marking
   id: FeroxiEarsPiercedTiger
   bodyPart: HeadTop
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/ear_markings.rsi
     state: feroxi-ears-pierced
@@ -424,7 +386,6 @@
 - type: marking
   id: FeroxiEarsAlt
   bodyPart: HeadTop
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/ear_markings.rsi
     state: feroxi-ears-alt
@@ -434,7 +395,6 @@
 - type: marking
   id: FeroxiEarsAltTips
   bodyPart: HeadTop
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/ear_markings.rsi
     state: feroxi-ears-alt
@@ -446,7 +406,6 @@
 - type: marking
   id: FeroxiEarsAltTiger
   bodyPart: HeadTop
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/ear_markings.rsi
     state: feroxi-ears-alt
@@ -460,7 +419,6 @@
 - type: marking
   id: FeroxiFullTipTail
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -472,7 +430,6 @@
 - type: marking
   id: FeroxiFullTipTailAndDorsal
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -488,7 +445,6 @@
 - type: marking
   id: FeroxiTailBlitzFullTip
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -506,7 +462,6 @@
 - type: marking
   id: FeroxiTailBlitzNoDorsalFullTip
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -520,7 +475,6 @@
 - type: marking
   id: FeroxiFullTipTwoToneTail
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -534,7 +488,6 @@
 - type: marking
   id: FeroxiFullTipTwoToneTailAndDorsal
   bodyPart: Tail
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -553,7 +506,6 @@
 - type: marking
   id: FeroxiHeadStripesTigerAlt
   bodyPart: Head
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-head-stripes-tiger-alt
@@ -561,7 +513,6 @@
 - type: marking
   id: FeroxiTorsoStripesTigerAlt
   bodyPart: Chest
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-torso-stripes-tiger-alt
@@ -571,7 +522,6 @@
 - type: marking
   id: FeroxiLHandTip
   bodyPart: LHand
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Lhand-tip
@@ -579,7 +529,6 @@
 - type: marking
   id: FeroxiRHandTip
   bodyPart: RHand
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Rhand-tip
@@ -588,7 +537,6 @@
 - type: marking
   id: FeroxiLHandStripesTiger
   bodyPart: LHand
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Lhand-stripes-tiger
@@ -596,7 +544,6 @@
 - type: marking
   id: FeroxiRHandStripesTiger
   bodyPart: RHand
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Rhand-stripes-tiger
@@ -605,7 +552,6 @@
 - type: marking
   id: FeroxiLFootTip
   bodyPart: LFoot
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Lfoot-tip
@@ -613,7 +559,6 @@
 - type: marking
   id: FeroxiRFootTip
   bodyPart: RFoot
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Rfoot-tip
@@ -621,7 +566,6 @@
 - type: marking
   id: FeroxiLFootStripesTiger
   bodyPart: LFoot
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Lfoot-stripes-tiger
@@ -629,7 +573,6 @@
 - type: marking
   id: FeroxiRFootStripesTiger
   bodyPart: RFoot
-  groupWhitelist: [ Feroxi ]
   sprites:
   - sprite: _Goobstation/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-Rfoot-stripes-tiger
