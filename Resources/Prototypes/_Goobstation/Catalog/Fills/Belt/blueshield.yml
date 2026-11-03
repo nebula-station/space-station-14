@@ -6,6 +6,8 @@
   components:
   - type: StorageFill
     contents:
+    - id: CombatInjector # Nebula add
+      amount: 1
     - id: TirimolChemistryVial
       amount: 1
     - id: OmnizineChemistryVial

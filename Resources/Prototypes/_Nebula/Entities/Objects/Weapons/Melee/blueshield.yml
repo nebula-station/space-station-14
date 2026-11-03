@@ -1,0 +1,51 @@
+
+
+- type: entity
+  name: combat injector
+  parent: [SolutionInjector, BaseItem, BaseCentcommContraband]
+  id: CombatInjector
+  description: Injects stored chemicals on hit, has a low capacity due to its sturdy design.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Melee/blueshield_knife.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: Solution
+    solution:
+      maxVol: 5
+  - type: Injector
+    activeModeProtoId: CombatInjectorDynamicMode
+    allowedModes:
+    - CombatInjectorDynamicMode
+    - CombatInjectorInjectMode
+  - type: MeleeChemicalInjector
+    transferAmount: 5
+    solution: injector
+    pierceArmor: true
+  - type: RequireHypoport
+  - type: MeleeWeapon
+    angle: 0
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 1
+    animation: WeaponArcThrust
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+
+- type: injectorMode
+  abstract: true
+  id: BaseCombatInjectorMode
+  mobTime: 1
+  transferAmounts:
+  - 3
+  - 5
+
+- type: injectorMode
+  parent: [BaseCombatInjectorMode, BaseDynamicMode]
+  id: CombatInjectorDynamicMode
+
+- type: injectorMode
+  parent: [BaseCombatInjectorMode, BaseInjectMode]
+  id: CombatInjectorInjectMode
