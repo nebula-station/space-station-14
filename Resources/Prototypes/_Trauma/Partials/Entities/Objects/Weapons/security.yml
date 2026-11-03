@@ -11,6 +11,7 @@
   - type: UseDelayBlockMelee
     delays:
     - stunbaton
+  - type: StunDelayGroup # Nebula edit
   - type: KnowledgeGrantOnWear
     blocked:
       MartialArtCorporateJudo: true
@@ -24,7 +25,7 @@
   - type: UseDelay
     delays:
       stunbaton:
-        length: 2.5
+        length: 4.5 # Nebula edit
   - type: Item
     shape: !Clear
     - 0,0,2,0

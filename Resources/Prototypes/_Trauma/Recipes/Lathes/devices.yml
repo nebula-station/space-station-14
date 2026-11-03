@@ -47,8 +47,12 @@
     Steel: 200
     Plastic: 200
     Glass: 100
-    Gold: 50
+    Gold: 150 # Nebula edit
     Plasma: 100
+    # Nebula start
+    Uranium: 100
+    Plasteel: 100
+    # Nebula end
 
 - type: latheRecipe
   id: EMPPayload

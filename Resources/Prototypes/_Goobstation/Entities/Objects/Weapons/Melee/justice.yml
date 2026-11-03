@@ -125,13 +125,14 @@
         - type: UseDelayBlockMelee
           delays:
           - stunbaton
+        - type: StunDelayGroup # Nebula edit
         - type: KnowledgeGrantOnWear
           blocked:
             MartialArtCorporateJudo: true
         - type: UseDelay
           delays:
             stunbaton:
-              length: 2.5
+              length: 4.5 # Nebula edit
         soundStateActivate:
           collection: sparks
           params:
