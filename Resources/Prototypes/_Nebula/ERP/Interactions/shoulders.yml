@@ -1,0 +1,28 @@
+- type: panelInteraction
+  id: PatShoulder
+  category: Shoulders
+  kind: Soft
+  sound:
+    collection: ErpPat
+  messages: ErpPatShoulderMessages
+  icon: _Nebula/Interface/ErpPanel/pat_shoulder.png
+
+- type: panelInteraction
+  id: ShoulderMassage
+  category: Shoulders
+  kind: Soft
+  sound:
+    collection: ErpFriction
+  messages: ErpShoulderMassageMessages
+  selfMessages: ErpShoulderMassageSelfMessages
+  icon: _Nebula/Interface/ErpPanel/shoulder_massage.png
+
+- type: panelInteraction
+  id: HugShoulders
+  category: Shoulders
+  kind: Soft
+  sound:
+    collection: ErpPat
+  messages: ErpHugShouldersMessages
+  icon: _Nebula/Interface/ErpPanel/pat_shoulders.png
+  

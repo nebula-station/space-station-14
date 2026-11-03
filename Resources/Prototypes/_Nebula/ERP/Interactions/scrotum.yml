@@ -1,0 +1,84 @@
+- type: panelInteraction
+  id: FondleScrotum
+  category: Scrotum
+  kind: Erotic
+  userArouse: 10
+  targetArouse: 10
+  sound:
+    collection: ErpBang
+  selfMessages: ErpFondleScrotumSelfMessages
+  icon: _Nebula/Interface/ErpPanel/touch_balls.png
+  userRequirements:
+  - !type:SexRequirement
+    sexes:
+    - Male
+  - !type:ExposedBodyPartRequirement
+    part: Groin
+
+- type: panelInteraction
+  id: MassageScrotum
+  category: Scrotum
+  kind: Erotic
+  userArouse: 5
+  targetArouse: 10
+  sound:
+    collection: ErpBang
+  messages: ErpMassageScrotumMessages
+  icon: _Nebula/Interface/ErpPanel/grab_balls.png
+  targetRequirements:
+  - !type:SexRequirement
+    sexes:
+      - Male
+  - !type:ExposedBodyPartRequirement
+    part: Groin   
+
+- type: panelInteraction
+  id: SuckScrotum
+  category: Scrotum
+  kind: Erotic
+  userArouse: 5
+  targetArouse: 15
+  sound:
+    collection: ErpBang
+  messages: ErpSuckScrotumMessages
+  icon: _Nebula/Interface/ErpPanel/lick_balls.png
+  targetRequirements:
+  - !type:SexRequirement
+    sexes:
+    - Male
+  - !type:ExposedBodyPartRequirement
+    part: Groin
+
+- type: panelInteraction
+  id: RubbingFaceScrotum
+  category: Scrotum
+  kind: Erotic
+  userArouse: 5
+  targetArouse: 10
+  sound:
+    collection: ErpBang
+  messages: ErpRubbingFaceScrotumMessages
+  icon: _Nebula/Interface/ErpPanel/head-balls.png
+  targetRequirements:
+  - !type:SexRequirement
+    sexes:
+    - Male
+  - !type:ExposedBodyPartRequirement
+    part: Groin
+
+- type: panelInteraction
+  id: KissScrotum
+  category: Scrotum
+  kind: Erotic
+  userArouse: 5
+  targetArouse: 10
+  sound:
+    collection: ErpKiss
+  messages: ErpKissScrotumMessages
+  icon: _Nebula/Interface/ErpPanel/kiss_balls.png
+  targetRequirements:
+  - !type:SexRequirement
+    sexes:
+    - Male
+  - !type:ExposedBodyPartRequirement
+    part: Groin

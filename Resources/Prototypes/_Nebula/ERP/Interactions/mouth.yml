@@ -1,0 +1,37 @@
+- type: panelInteraction
+  id: HairFaceFuck
+  category: Mouth
+  kind: Erotic
+  userArouse: 15
+  targetArouse: 10
+  range: 1.5
+  sound:
+    collection: ErpBlowjob
+  messages: ErpHairFaceFuckMessages
+  icon: _Nebula/Interface/ErpPanel/hair_face_fuck.png
+  userRequirements:
+  - !type:SexRequirement
+    sexes:
+    - Male
+  - !type:ExposedBodyPartRequirement
+    part: Groin
+
+- type: panelInteraction
+  id: LickTheirLips
+  category: Mouth
+  kind: Soft
+  range: 1.5
+  sound:
+    collection: ErpKiss
+  messages: ErpLickTheirLipsMessages
+  icon: _Nebula/Interface/ErpPanel/lick_lips.png
+
+- type: panelInteraction
+  id: LickLips
+  category: Mouth
+  kind: Soft
+  range: 1.5
+  sound:
+    collection: ErpKiss
+  messages: ErpLickLipsMessages
+  icon: _Nebula/Interface/ErpPanel/lick_their_lips.png

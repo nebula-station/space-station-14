@@ -1,0 +1,18 @@
+- type: panelInteraction
+  id: FingerTap
+  category: Back
+  kind: Soft
+  range: 1.5
+  sound:
+    collection: ErpPat
+  messages: ErpFingerTapMessages
+  icon: _Nebula/Interface/ErpPanel/friendly_finger_tap.png
+
+- type: panelInteraction
+  id: StretchBody
+  category: Back
+  kind: Soft
+  sound:
+    collection: ErpStretchBody
+  selfMessages: ErpStretchBodySelfMessages
+  icon: _Nebula/Interface/ErpPanel/stretch_full_body.png

@@ -1,0 +1,50 @@
+# sounds a player can pick for their custom emote
+- type: panelCustomSound
+  id: Kiss
+  sound:
+    collection: ErpKiss
+
+- type: panelCustomSound
+  id: Pat
+  sound:
+    collection: ErpPat
+
+- type: panelCustomSound
+  id: Slap
+  sound:
+    collection: ErpAsscrap
+
+- type: panelCustomSound
+  id: Friction
+  sound:
+    collection: ErpFriction
+
+- type: panelCustomSound
+  id: Handshake
+  sound:
+    collection: ErpHandshake
+
+- type: panelCustomSound
+  id: Crunch
+  sound:
+    collection: ErpStretchBody
+
+- type: panelCustomSound
+  id: NeckCrunch
+  sound:
+    collection: ErpStretchNeck
+
+- type: panelCustomSound
+  id: Click
+  sound:
+    collection: ErpClick
+
+- type: panelCustomSound
+  id: Oral
+  sound:
+    collection: ErpOral
+
+- type: panelCustomSound
+  id: Bang
+  sound:
+    collection: ErpBang

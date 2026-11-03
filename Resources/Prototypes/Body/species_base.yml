@@ -201,6 +201,7 @@
     - AnomalyHost
   # Nebula start
   - type: ERPManager
+  - type: ErpPanelOwner
   - type: ConcussionThreshold
     thresholds:
       0: Sane
