@@ -43,7 +43,6 @@
 
   <Box>
     <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="grab"/>
-    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="grab"/>
     <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="disarm"/>
   </Box>
 

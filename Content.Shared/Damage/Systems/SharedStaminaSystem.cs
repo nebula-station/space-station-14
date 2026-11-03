@@ -180,7 +180,8 @@ public abstract partial class SharedStaminaSystem : EntitySystem
             return;
         }
 
-        var ev = new StaminaDamageOnHitAttemptEvent(args.Direction == null, false); // Trauma - added both bools
+        // Trauma - added both bools & Nebula add user
+        var ev = new StaminaDamageOnHitAttemptEvent(args.Direction == null, false, args.User);
         RaiseLocalEvent(uid, ref ev);
         if (ev.Cancelled)
             return;

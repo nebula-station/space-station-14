@@ -25,7 +25,7 @@
     <GuideEntityEmbed Entity="ActionLegSweep" Caption=""/>
   </Box>
 
-  Sweeps the legs out from under an opponent to knock them down.
+  Sweeps the legs out from under an opponent to knock them down, making them drop what they hold.
 
   ### Neck Chop
 

@@ -71,6 +71,7 @@
     targetPart: Legs
   - !type:ModifyKnockdown
     time: 4
+    drop: true # Nebula edit
     type: Update
 
 - type: combo
