@@ -59,6 +59,7 @@
   parent: MedicalCybernetics
   recipes:
   - SecurityCyberneticEyes
+  - ClothingEyesNightVisionSecurityGoggles # Nebula edit
 
 - type: latheRecipePack
   id: RestraintTechnology

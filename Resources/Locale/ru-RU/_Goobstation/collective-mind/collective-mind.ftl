@@ -15,3 +15,4 @@ collective-mind-dronemind = Разум Дронов
 collective-mind-bingle = Связь Бинглов
 collective-mind-shadow-mind = Разум Теней
 collective-mind-xeno = Разум Улья
+collective-mind-empathy = Сочувствующий

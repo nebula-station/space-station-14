@@ -20,10 +20,8 @@
   - type: StationAiVision
     needsPower: true
   - type: Damageable
-    damageModifierSet: FlimsyMetallic # cameras were way too tanky
 
 - type: entity
   id: SurveillanceCameraAssembly
   components:
   - type: Damageable
-    damageModifierSet: FlimsyMetallic

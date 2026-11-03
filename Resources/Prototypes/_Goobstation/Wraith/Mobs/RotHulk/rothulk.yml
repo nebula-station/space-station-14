@@ -70,10 +70,14 @@
     animation: WeaponArcFist
     soundHit:
       collection: Flesh_Tear
+    # Nebula start
     damage:
       types:
-        Blunt: 10
         Structural: 50
+        Blunt: 3.33
+        Slash: 3.33
+        Piercing: 3.33
+    # Nebula end
   - type: InputMover
   - type: MobMover
   - type: HTN

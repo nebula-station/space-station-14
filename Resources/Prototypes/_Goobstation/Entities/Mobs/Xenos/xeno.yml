@@ -84,9 +84,13 @@
     soundHit:
      collection: AlienClaw
     animation: WeaponArcBite
+    # Nebula start
     damage:
       types:
-        Blunt: 5
+        Blunt: 1.67
+        Slash: 1.67
+        Piercing: 1.67
+    # Nebula end
   - type: DamageStateVisuals
     states:
       Alive:

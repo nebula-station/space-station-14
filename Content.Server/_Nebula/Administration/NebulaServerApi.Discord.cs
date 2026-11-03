@@ -14,10 +14,7 @@ public sealed partial class NebulaServerApi
 {
     public async Task<DiscordLinkingCodeStatus> RegisterLinkingCode(Guid user, Guid code)
     {
-        if (!_isActive)
-            await RefreshState();
-
-        if (!_isActive)
+        if (!await EnsureActive())
             return DiscordLinkingCodeStatus.Unavailable;
 
         try
@@ -48,7 +45,7 @@ public sealed partial class NebulaServerApi
 
     public async Task<LinkStatus?> GetLinkedUserDataOrNull(Guid user)
     {
-        if (!_isActive)
+        if (!await EnsureActive())
             return null;
 
         try

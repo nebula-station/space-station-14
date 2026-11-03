@@ -1,12 +1,14 @@
 - type: explosion
   id: Default
+  # Nebula start
   damagePerIntensity:
     types:
       Heat: 5
       Blunt: 5
-      Piercing: 5
+      Slash: 5
+  # Nebula end
   tileBreakChance: [ 0, 0.5, 1 ]
-  tileBreakIntensity: [ 0, 50, 75 ]
+  tileBreakIntensity: [0, 10, 30] # Nebula
   tileBreakRerollReduction: 25
   lightColor: Orange
   texturePath: /Textures/Effects/fire.rsi
@@ -32,14 +34,16 @@
 
 - type: explosion
   id: DemolitionCharge
+  # Nebula start
   damagePerIntensity:
     types:
-      Heat: 5
-      Blunt: 5
-      Piercing: 5
+      Heat: 3
+      Blunt: 3
+      Slash: 3
       Structural: 50
+  # Nebula end
   tileBreakChance: [ 0, 0.5, 1 ]
-  tileBreakIntensity: [ 0, 50, 75 ]
+  tileBreakIntensity: [ 0, 10, 30 ] # Nebula
   tileBreakRerollReduction: 25
   lightColor: Orange
   texturePath: /Textures/Effects/fire.rsi
@@ -48,12 +52,14 @@
 
 - type: explosion
   id: MicroBomb
+  # Nebula start
   damagePerIntensity:
     types:
       Heat: 6
       Blunt: 6
-      Piercing: 6
+      Slash: 6
       Structural: 20
+  # Nebula end
   tileBreakChance: [ 0, 0.5, 1 ]
   tileBreakIntensity: [ 1, 10, 15 ]
   tileBreakRerollReduction: 30
@@ -65,12 +71,14 @@
 
 - type: explosion
   id: Radioactive
+  # Nebula start
   damagePerIntensity:
     types:
       Radiation: 5
       Heat: 4
       Blunt: 3
-      Piercing: 3
+      Slash: 3
+  # Nebula end
   lightColor: Green
   fireColor: Green
   texturePath: /Textures/Effects/fire_greyscale.rsi
@@ -78,11 +86,13 @@
 
 - type: explosion
   id: Cryo # I'm assuming this is some kind of endothermic implosion explosive? Sci-Fi stuff so the values can be totally made up
+  # Nebula start
   damagePerIntensity:
     types:
       Cold: 5
-      Blunt: 5
-      Structural: 50
+      Blunt: 2
+      Structural: 20
+  # Nebula end
   tileBreakChance: [0]
   tileBreakIntensity: [0]
   lightColor: Blue
@@ -92,14 +102,15 @@
 
 - type: explosion
   id: Minibomb
+  # Nebula start
   damagePerIntensity:
     types:
-      Heat: 4
-      Blunt: 7
-      Piercing: 4
-      Structural: 10
+      Heat: 8
+      Blunt: 14
+      Slash: 8
+  # Nebula end
   tileBreakChance: [0, 0.5, 1]
-  tileBreakIntensity: [0, 50, 75]
+  tileBreakIntensity: [0, 10, 30] # Nebula
   tileBreakRerollReduction: 20
   lightColor: Orange
   texturePath: /Textures/Effects/fire.rsi
@@ -125,12 +136,14 @@
 
 - type: explosion
   id: HardBomb
+  # Nebula start
   damagePerIntensity:
     types:
-      Heat: 15
-      Blunt: 15
-      Piercing: 6
+      Heat: 30
+      Blunt: 30
+      Slash: 12
       Structural: 40
+  # Nebula end
   tileBreakChance: [ 0, 0.5, 1 ]
   tileBreakIntensity: [ 0, 10, 30 ]
   tileBreakRerollReduction: 10

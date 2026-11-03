@@ -318,6 +318,13 @@
         - id: DrinkTeaJug
         - id: DrinkTonicWaterBottleFull
         - id: DrinkWaterMelonJuiceJug
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateFreezer
@@ -341,6 +348,13 @@
         - id: DrinkVodkaBottleFull
         - id: DrinkWhiskeyBottleFull
         - id: DrinkWineBottleFull
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CratePlastic

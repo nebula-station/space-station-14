@@ -15,8 +15,11 @@
     flavors:
     - fiber
   - type: Armor # Shitmed
+    # Nebula start
     coverage:
-    - Torso
+      - Other
+      - Torso
+    # Nebula end
     modifiers: {}
 
 - type: entity
@@ -65,7 +68,10 @@
   # to show explosion resistance examine
   - type: GroupExamine
   - type: Armor
-    coverage: []
+    # Nebula start
+    coverage:
+    - Other
+    # Nebula end
     modifiers: {}
 
 # for clothing that can be toggled, like magboots

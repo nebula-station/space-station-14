@@ -19,7 +19,6 @@
         Blunt: -1.33
         Slash: -1.33
         Piercing: -1.33
-        Ballistic: -1.33
         Heat: -1
         Cold: -1
         Shock: -1
@@ -75,15 +74,18 @@
       Critical: XenomorphCrit
       Dead: XenomorphDead
   - type: SlowOnDamage
+    # Nebula start
     speedModifierThresholds:
-      125: 0.9
-      150: 0.8
+      105: 0.9
+      125: 0.7
+      150: 0.6
+    # Nebula end
   - type: Damageable
     damageModifierSet: Xenomorph
   - type: Injurable
     damageContainer: Biological
   - type: Stamina
-    baseCritThreshold: 200
+    baseCritThreshold: 500 # Nebula
   - type: Fixtures
     fixtures:
       fix1:
@@ -113,11 +115,13 @@
     soundHit:
       collection: AlienClaw
     animation: WeaponArcClaw
+    # Nebula start
     damage:
       types:
-        Blunt: 5
-        Slash: 10
-        Piercing: 10
+        Blunt: 8.33
+        Slash: 8.33
+        Piercing: 8.33
+    # Nebula end
   - type: TypingIndicator
     proto: alien
   - type: AtmosExposed

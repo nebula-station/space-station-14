@@ -76,9 +76,11 @@
             volume: -5
   - type: MeleeWeapon
     wideAnimationRotation: 90
+    # Nebula start
     damage:
       types:
-        Blunt: 12 # Trauma, was 10
+        Blunt: 10
+    # Nebula end
     soundHit:
       collection: MetalThud
 
@@ -139,9 +141,11 @@
           params:
             volume: -5
   - type: MeleeWeapon
+    # Nebula start
     damage:
       types:
-        Blunt: 12 # Trauma - was 14
+        Blunt: 14
+    # Nebula end
   - type: StaticPrice
     price: 1000
 

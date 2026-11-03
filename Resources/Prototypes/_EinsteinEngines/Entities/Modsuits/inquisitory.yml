@@ -20,6 +20,11 @@
       gloves: ClothingModsuitGauntletsInquisitory
       outerClothing: ClothingModsuitChestplateInquisitory
       shoes: ClothingModsuitBootsInquisitory
+  # Nebula start
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.95
+    walkModifier: 0.95
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitGauntletsERT, BaseModsuitPieceERTChaplain ]
@@ -37,6 +42,23 @@
   components:
   - type: PointLight
     color: "#FFDF00"
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.2
+        Slash: 0.2
+        Piercing: 0.2
+        Heat: 0.2
+        Radiation: 0.2
+        Caustic: 0.2
+    traumaDeductions:
+      Dismemberment: 1
+      OrganDamage: 1
+      BoneDamage: 1
+      VeinsDamage: 1
+      NerveDamage: 1
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitChestplateERT, BaseModsuitPieceERTChaplain ]
@@ -50,6 +72,25 @@
     sprintModifier: 0.75
   - type: FireProtection
     reduction: 1
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.2
+        Slash: 0.2
+        Piercing: 0.2
+        Heat: 0.2
+        Radiation: 0.2
+        Caustic: 0.2
+    traumaDeductions:
+      Dismemberment: 1
+      OrganDamage: 1
+      BoneDamage: 1
+      VeinsDamage: 1
+      NerveDamage: 1
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitBootsERT, BaseModsuitPieceERTChaplain ]

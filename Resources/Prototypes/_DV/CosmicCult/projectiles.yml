@@ -21,10 +21,6 @@
       params:
         variation: 0.1
         volume: +14
-    damage: # Direct hit damage
-      types:
-        Asphyxiation: 20
-        Ion: 20
   - type: CosmicAstralNova
     areaDamage: # AOE damage. Stacks with direct hit damage
       types:
@@ -72,10 +68,13 @@
         shader: unshaded
   - type: Projectile
     impactEffect: BulletImpactEffectCosmic
+    # Nebula start
     damage:
       types:
-        Asphyxiation: 12
-        Ion: 12
+        Cold: 10
+        Asphyxiation: 5
+        Ion: 15
+    # Nebula end
     soundHit:
       path: /Audio/_DV/CosmicCult/projectile_razor_hit.ogg
       params:
@@ -121,10 +120,13 @@
         Ion: 21
   - type: Projectile
     impactEffect: BulletImpactEffectCosmic
+    # Nebula start
     damage:
       types:
-        Asphyxiation: 3
-        Ion: 5
+        Cold: 10
+        Asphyxiation: 5
+        Ion: 8
+    # Nebula end
 
 - type: entity
   id: BulletImpactEffectCosmic

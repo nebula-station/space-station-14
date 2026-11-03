@@ -42,7 +42,7 @@
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: BatteryAmmoProvider
     proto: RedHeavyLaser
-    fireCost: 30
+    fireCost: 20 # Nebula
   - type: Appearance
   - type: AmmoCounter
 
@@ -65,7 +65,7 @@
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
   - type: BatteryAmmoProvider
     proto: RedMediumLaser
-    fireCost: 30
+    fireCost: 25 # Nebula
   - type: Appearance
   - type: AmmoCounter
 
@@ -137,7 +137,7 @@
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: BatteryAmmoProvider
     proto: BulletDisabler
-    fireCost: 10
+    fireCost: 5 # Nebula
   - type: Appearance
   - type: AmmoCounter
 
@@ -160,7 +160,7 @@
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: BatteryAmmoProvider
     proto: BulletTaser
-    fireCost: 19
+    fireCost: 79 # Nebula
   - type: Appearance
   - type: AmmoCounter
 
@@ -183,7 +183,7 @@
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
   - type: BatteryAmmoProvider
     proto: ShellShotgun
-    fireCost: 30
+    fireCost: 20 # Nebula
   - type: Appearance
   - type: AmmoCounter
 
@@ -206,7 +206,7 @@
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
   - type: BatteryAmmoProvider
     proto: ShellShotgunIncendiary
-    fireCost: 40
+    fireCost: 30 # Nebula
   - type: Appearance
   - type: AmmoCounter
 
@@ -274,8 +274,8 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
   - type: BatteryAmmoProvider
-    proto: GrenadeBlast
-    fireCost: 300
+    proto: BulletGrenadeFrag # Nebula
+    fireCost: 150 # Nebula
   - type: Battery
     maxCharge: 300 # Battery is charged by mech
     startingCharge: 300

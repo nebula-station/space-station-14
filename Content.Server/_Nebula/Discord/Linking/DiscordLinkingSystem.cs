@@ -33,6 +33,13 @@ public sealed partial class DiscordLinkingSystem : EntitySystem
         base.Initialize();
     }
 
+    public override void Shutdown()
+    {
+        base.Shutdown();
+
+        _playerManager.PlayerStatusChanged -= OnPlayerStatusChanged;
+    }
+
     private async void OnVerifyStatusRequest(VerifyStatusRequest msg, EntitySessionEventArgs args)
     {
         var session = args.SenderSession;
@@ -48,14 +55,22 @@ public sealed partial class DiscordLinkingSystem : EntitySystem
             }
         }
 
-        RaiseNetworkEvent(new VerifyStatusResponse { Verified = status?.Linked ?? false }, session);
+        if (IsConnected(session))
+            RaiseNetworkEvent(new VerifyStatusResponse { Verified = status?.Linked ?? false }, session);
     }
 
     private async Task RefreshPlayer(ICommonSession session)
     {
         var status = await _nebulaServerApi.GetLinkedUserDataOrNull(session.UserId);
-        if (status != null)
+
+        // The player may have left while the bot was answering, Disconnected has already cleared the cache.
+        if (status != null && IsConnected(session))
             _cachedPlayers[session.UserId] = status;
+    }
+
+    private static bool IsConnected(ICommonSession session)
+    {
+        return session.Status is SessionStatus.Connected or SessionStatus.InGame;
     }
 
     private async void OnPlayerStatusChanged(object? sender, SessionStatusEventArgs args)

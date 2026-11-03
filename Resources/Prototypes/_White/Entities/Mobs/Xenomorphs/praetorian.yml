@@ -8,7 +8,6 @@
   abstract: true
   components:
   - type: Stamina
-    baseCritThreshold: 500
   - type: Sprite
     sprite: _White/Mobs/Aliens/Xenomorphs/praetorian.rsi
     layers:
@@ -49,11 +48,13 @@
       270: 0.7
       315: 0.6
   - type: MeleeWeapon
+    # Nebula start
     damage:
       types:
-        Blunt: 8
-        Slash: 12
+        Blunt: 10
+        Slash: 10
         Piercing: 10
+    # Nebula end
   # - type: GuideHelp
   #   guides:
   #   - XenomorphPraetorian

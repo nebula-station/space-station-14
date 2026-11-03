@@ -146,7 +146,6 @@
       - !type:HealthChange
         damage:
           types:
-            Ballistic: -2 # Trauma
             Poison: -2
             Blunt: -3
             Slash: -3

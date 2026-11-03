@@ -119,13 +119,16 @@
     - Unimplantable
     - StunImmune
   - type: Damageable
-    damageModifierSet: CosmicColossus
+    damageModifierSet: EntropicColossus # Nebula
   - type: Injurable
     damageContainer: InorganicMetaphysical
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      400: Dead
+      100: Critical
+      200: Dead
+    # Nebula end
   - type: MobState
     allowedStates:
     - Alive
@@ -138,7 +141,6 @@
         Blunt: -0.5
         Slash: -0.5
         Piercing: -0.5
-        Ballistic: -0.5
         Heat: -0.5
         Cold: -0.5
         Shock: -0.5
@@ -181,15 +183,16 @@
   - type: MeleeWeapon
     altDisarm: false
     animation: WeaponArcCosmic
-    attackRate: 0.5
-    canBeParried: false # Parry this you filthy casual
+    attackRate: 0.425 # Nebula
     range: 2
+    # Nebula start
     damage:
       types:
-        Blunt: 50
-        Cold: 2.5
-        Ion: 2.5
-        Structural: 80
+        Blunt: 35
+        Asphyxiation: 10
+        Cold: 10
+        Structural: 60
+    # Nebula end
     soundHit:
       path: /Audio/_DV/CosmicCult/cosmicsword_glance.ogg
       params:
@@ -230,6 +233,11 @@
   - type: NpcFactionMember
     factions:
     - SimpleHostile
+  # Nebula start
+  - type: StaminaResistance
+    damageCoefficient: 0
+    worn: false
+  # Nebula end
 
 - type: entity
   parent: [ MobCosmicColossusBase ]
@@ -245,6 +253,12 @@
     nameFormat: name-format-colossus
   - type: CosmicColossus
     timed: true
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      450: Dead
+  # Nebula end
 
 - type: entity
   parent: [ MobCosmicColossusBase ]
@@ -255,6 +269,12 @@
     - ColossusNames
     - ColossusTitlesBase
     nameFormat: name-format-colossus
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Dead
+  # Nebula end
 
 - type: speechSounds
   id: ColossusSpeech

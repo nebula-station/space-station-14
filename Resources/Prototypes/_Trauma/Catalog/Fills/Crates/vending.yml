@@ -10,3 +10,7 @@
     containers:
       entity_storage:
         id: VendingMachineRestockPTech
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end

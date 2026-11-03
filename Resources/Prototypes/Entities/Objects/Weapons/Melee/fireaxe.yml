@@ -28,19 +28,21 @@
     sprite: Objects/Weapons/Melee/fireaxe.rsi
     state: icon
   - type: MeleeWeapon
-    heavyStaminaCost: 5 # Nebula edit
+    heavyStaminaCost: 15 # Nebula
     wideAnimationRotation: 135
     swingLeft: true
     attackRate: 0.75
+    # Nebula start
     damage:
       types:
-        # axes are kinda like sharp hammers, you know?
         Blunt: 5
         Slash: 10
-        Structural: 3
-      woundSeverityMultipliers: # Trauma
+        Structural: 10
+      armorPenetration: 0.4
+      woundSeverityMultipliers:
         Blunt: 2
         Slash: 2.5
+    # Nebula end
     soundHit:
       collection: MetalThud
   - type: Wieldable
@@ -87,22 +89,26 @@
   components:
   - type: MeleeWeapon
     wideAnimationRotation: 135
-    swingLeft: true
   # <Trauma>
+    # Nebula start
     damage:
       types:
-        Blunt: 5 # Trauma, was heat
+        Heat: 5
         Slash: 10
         Structural: 20
+      armorPenetration: 0.4
       woundSeverityMultipliers:
         Slash: 2.5
-        Blunt: 2 # Trauma, was heat
+        Heat: 2
+    # Nebula end
   - type: IncreaseDamageOnWield
+    # Nebula start
     damage:
       types:
-        # Heat: 10
+        Heat: 10
         Slash: 10
-        Structural: 40 # Trauma, was 80
+        Structural: 80
+    # Nebula end
   # </Trauma>
   - type: Item
     shape:

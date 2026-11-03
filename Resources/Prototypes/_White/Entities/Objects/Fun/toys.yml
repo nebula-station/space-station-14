@@ -35,7 +35,6 @@
     sleepChem: null # fucking no
   - type: MeleeWeapon
     hidden: true
-    canWideSwing: false
     angle: 0
     damage:
       types:

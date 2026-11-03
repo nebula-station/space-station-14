@@ -29,6 +29,14 @@
       - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+    # Nebula start
+    soundEmpty:
+      path: /Audio/_Orion/Weapons/Guns/Rifles/rifle_empty.ogg
+    angleDecay: 20 # Nebula
+    angleIncrease: 6 # Nebula
+    maxAngle: 40 # Nebula
+    minAngle: 24 # Nebula
+    # Nebula end
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
@@ -66,31 +74,44 @@
   - type: EmitSoundOnLand
     sound:
       collection: RiflesDrop
+  # Nebula start
+  - type: GunWieldBonus
+    angleIncrease: -4
+    maxAngle: -31
+    minAngle: -22
+  - type: MeleeWeapon
+    angle: 0
+    damage:
+      types:
+       Blunt: 12
+  # Nebula end
   # Goobstation edit end
 
 - type: entity
   name: AKM
   parent: [BaseWeaponRifle, BaseSecurityContraband]
   id: WeaponRifleAk
-  description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from .30 rifle magazines.
+  description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from 5.45mm rifle magazines. # Nebula edit
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/akms/big.rsi # Nebula edit
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  # Nebula start
+    scale: 0.9, 0.9
+  - type: Clothing
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/akms/tiny.rsi
+  - type: Item
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/akms/tiny.rsi
+  # Nebula end
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -16
   - type: Gun
-    angleIncrease: 1.5
-    angleDecay: 9.5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+      path: /Audio/_Orion/Weapons/Guns/Rifles/ak47.ogg # Nebula edit
   - type: ChamberMagazineAmmoProvider
-    boltClosed: null # Goobstation
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
   - type: ItemSlots
@@ -125,32 +146,34 @@
   name: Lecter
   parent: [BaseWeaponRifle, BaseSecurityContraband]
   id: WeaponRifleLecter
-  description: "Popular gas-operated combat rifle used heavily by Nanotrasen and SolGov. Operating in semi or fully automatic, its accuracy, stopping power, and reliability make it excel in all manner of environments.\nFeeds from .20 rifle magazines."
+  description: "Popular gas-operated combat rifle used heavily by Nanotrasen and SolGov. Operating in semi or fully automatic, its accuracy, stopping power, and reliability make it excel in all manner of environments.\nFeeds from 5.56mm rifle magazines." # Nebula edit
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/lecter/big.rsi # Nebula edit
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  # Nebula start
+    scale: 0.9, 0.9
+  - type: Item
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/lecter/tiny.rsi
+  # Nebula end
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/lecter/tiny.rsi # Nebula edit
   - type: GunWieldBonus
-    minAngle: -20
-    maxAngle: -18
   - type: Gun
-    angleIncrease: 1
-    angleDecay: 9.5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+      path: /Audio/_Orion/Weapons/Guns/Rifles/556rifle.ogg # Nebula edit
+    fireRate: 5 # Nebula
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazineRifle
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        ejectSound: /Audio/_Orion/Weapons/Guns/Rifles/556_unload.ogg # Nebula edit
         priority: 2
         whitelist:
           tags:
@@ -203,7 +226,7 @@
   name: Estoc # Goob
   parent: [BaseWeaponRifle, BaseSyndicateContraband]
   id: WeaponRifleEstoc
-  description: A designated assault rifle with a scope, favored for medium-to-long range engagements. Uses .20 rifle ammo. # Goob - holy yap
+  description: A designated assault rifle with a scope, favored for medium-to-long range engagements. Uses 5.45mm rifle ammo. # Nebula edit
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/estoc.rsi
@@ -218,34 +241,35 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Rifles/estoc.rsi
   - type: Gun
-    minAngle: 21
-    maxAngle: 32
+    minAngle: 30 # Nebula
+    maxAngle: 45 # Nebula
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/estocshot.ogg
     shotsPerBurst: 3
     selectedMode: Burst
+    # Nebula start
     availableModes:
     - Burst
-    - SemiAuto
-    burstFireRate: 14
+    # Nebula end
+    burstFireRate: 15 # Nebula
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineRifle
+        startingItem: MagazineLightRifle # Nebula edit
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - MagazineRifle
+          - MagazineLightRifle # Nebula edit
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         priority: 1
         whitelist:
           tags:
-          - CartridgeRifle
+          - CartridgeLightRifle # Nebula edit
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 2
@@ -262,3 +286,8 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  # Nebula start
+  - type: GunWieldBonus
+    maxAngle: -40
+    minAngle: -30
+  # Nebula end

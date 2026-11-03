@@ -2,6 +2,7 @@
 using Content.Medical.Common.Body;
 // </Trauma>
 using System.Linq;
+using Content.Client._Nebula.Humanoid;
 using Content.Client.DisplacementMap;
 using Content.Shared.Body;
 using Content.Shared.CCVar;
@@ -21,6 +22,7 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
 {
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private DisplacementMapSystem _displacement = default!;
+    [Dependency] private MarkingGradientSystem _gradient = default!; // Nebula edit
     [Dependency] private MarkingManager _marking = default!;
     [Dependency] private SpriteSystem _sprite = default!;
 
@@ -244,6 +246,8 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
                 else
                     _sprite.LayerSetColor(target, spriteLayer, Color.White);
 
+                _gradient.Apply((target, target.Comp), spriteLayer, proto, marking, i, rsi); // Nebula edit
+
                 if (displacement != null && proto.CanBeDisplaced)
                 {
                     _displacement.TryAddDisplacement(
@@ -304,6 +308,11 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
                     continue;
 
                 var layerId = $"{proto.ID}-{rsi.RsiState}";
+
+                // Nebula start
+                if (_sprite.LayerMapTryGet(target, layerId, out var gradientIndex, false))
+                    _gradient.Remove((target, target.Comp), gradientIndex);
+                // Nebula end
 
                 // If this marking is one that can be displaced, we need to remove the displacement as well; otherwise
                 // altering a marking at runtime can lead to the renderer falling over.

@@ -1,0 +1,4 @@
+- files: ["mateba.ogg", "revolver_load.ogg", "revolver_spin.ogg", "revolver_unload.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from Orion-Station-14"
+  source: "https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14/pull/213"

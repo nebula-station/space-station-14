@@ -22,7 +22,6 @@
     startingGrabStage: Hard
   - type: XenomorphQueen
   - type: Stamina
-    baseCritThreshold: 500
   - type: TailLash
     tailDamage:
       types:
@@ -43,22 +42,30 @@
         layer:
         - MobLayer
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      400: Critical
-      425: Dead
+      735: Critical
+      750: Dead
+    # Nebula end
   - type: SlowOnDamage
+    # Nebula start
     speedModifierThresholds:
-      375: 0.9
+      600: 0.9
+      645: 0.7
+      690: 0.6
+    # Nebula end
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
     baseSprintSpeed: 3
   - type: MeleeWeapon
+    # Nebula start
     damage:
       types:
-        Blunt: 10
-        Slash: 20
-        Piercing: 20
+        Blunt: 16.67
+        Slash: 16.67
+        Piercing: 16.67
+    # Nebula end
   - type: Deathgasp
     prototype: XenomorphQueenDeathgasp
   - type: Speech
@@ -95,5 +102,9 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 3.8
   - type: SlowOnDamage
+    # Nebula start
     speedModifierThresholds:
-      375: 0.9
+      600: 0.7
+      645: 0.6
+      690: 0.5
+    # Nebula end

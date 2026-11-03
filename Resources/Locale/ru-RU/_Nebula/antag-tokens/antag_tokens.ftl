@@ -1,0 +1,15 @@
+antag-tokens-balance = Токенов: { $balance }
+antag-tokens-description = Купленный антагонист выдаётся на 5–15 минуте динамического раунда. Если выдать его не удалось, токен вернётся.
+antag-tokens-loading = Загрузка...
+antag-tokens-unavailable = Покупка сейчас недоступна. Попробуйте позже.
+antag-tokens-not-linked = Привяжите аккаунт Discord, чтобы покупать антагонистов.
+antag-tokens-lobby-only = Покупать и отменять можно только в лобби до начала раунда.
+antag-tokens-active = Куплено: { $name }
+antag-tokens-active-elsewhere = Куплено на другом сервере: { $name }
+antag-tokens-buy = Купить
+antag-tokens-cancel = Отменить покупку
+antag-tokens-not-enough-players = Мало игроков: { $online } из { $required }
+antag-tokens-error-insufficient = Недостаточно токенов.
+antag-tokens-error-active = У вас уже есть активная покупка.
+antag-tokens-error-players = Для этой роли мало игроков.
+antag-tokens-error-busy = Предыдущий запрос ещё обрабатывается.

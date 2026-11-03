@@ -109,10 +109,12 @@
       autoAttack: true
       soundHit:
         collection: Punch
+      # Nebula start
       damage:
         types:
           Blunt: 20
-          Structural: 9 # Activate Star Platinum's signature move: Digging a hole
+          Structural: 20
+      # Nebula end
     - type: MeleeSpeech
     - type: UserInterface
       interfaces:

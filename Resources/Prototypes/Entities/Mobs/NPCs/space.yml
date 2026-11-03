@@ -344,9 +344,11 @@
       footstepSoundCollection:
         collection: FootstepSnake
     - type: MobThresholds
+      # Nebula start
       thresholds:
         0: Alive
-        45: Dead
+        70: Dead
+      # Nebula end
     - type: Stamina
       baseCritThreshold: 150
     - type: DamageStateVisuals

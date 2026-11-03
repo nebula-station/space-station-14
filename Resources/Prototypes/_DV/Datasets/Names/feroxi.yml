@@ -1,0 +1,17 @@
+- type: localizedDataset
+  id: NamesFeroxiFirstMale
+  values:
+    prefix: names-feroxi-first-male-dataset-
+    count: 41
+
+- type: localizedDataset
+  id: NamesFeroxiFirstFemale
+  values:
+    prefix: names-feroxi-first-female-dataset-
+    count: 41
+
+- type: localizedDataset
+  id: NamesFeroxiLast
+  values:
+    prefix: names-feroxi-last-dataset-
+    count: 87

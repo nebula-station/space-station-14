@@ -127,6 +127,16 @@
   components:
   - type: Sprite
     sprite: Objects/Tools/welder.rsi
+  # Nebula start
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+        types:
+            Heat: 8
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 5
+  # Nebula end
 
 - type: entity
   parent: [SolutionWelder, SolutionSmall]

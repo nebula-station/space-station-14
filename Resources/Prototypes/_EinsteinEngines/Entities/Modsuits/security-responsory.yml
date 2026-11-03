@@ -20,6 +20,11 @@
       gloves: ClothingModsuitGauntletsResponsorySecurity
       outerClothing: ClothingModsuitChestplateResponsorySecurity
       shoes: ClothingModsuitBootsResponsorySecurity
+  # Nebula start
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.95
+    walkModifier: 0.95
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitGauntletsERT, BaseModsuitPieceERTSecurity ]
@@ -34,6 +39,24 @@
   name: Security Responsory modsuit helmet
   description: A state-of-the-art helmet designed by NanoTrasen for the Security Responsory modsuit. It includes a built-in HUD.
   categories: [HideSpawnMenu]
+  components:
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.45
+        Caustic: 0.45
+    traumaDeductions:
+      Dismemberment: 0.5
+      OrganDamage: 0.5
+      BoneDamage: 0.5
+      VeinsDamage: 0
+      NerveDamage: 0
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitChestplateERT, BaseModsuitPieceERTSecurity ]
@@ -44,6 +67,28 @@
   components:
   - type: StaminaResistance
     damageCoefficient: 0.45
+  # Nebula start
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.45
+        Slash: 0.45
+        Piercing: 0.45
+        Heat: 0.45
+        Radiation: 0.45
+        Caustic: 0.45
+    traumaDeductions:
+      Dismemberment: 0.5
+      OrganDamage: 0.5
+      BoneDamage: 0.5
+      VeinsDamage: 0
+      NerveDamage: 0
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.95
+    walkModifier: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.45
+  # Nebula end
 
 - type: entity
   parent: [ BaseModsuitBootsERT, BaseModsuitPieceERTSecurity ]

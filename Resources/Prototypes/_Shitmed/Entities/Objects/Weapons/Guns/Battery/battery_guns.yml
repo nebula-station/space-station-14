@@ -28,6 +28,10 @@
     magState: mag
     steps: 5
     zeroVisible: true
+  # Nebula start
+  - type: Gun
+    projectileSpeed: 26
+  # Nebula end
 
 - type: entity
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseMajorContraband]

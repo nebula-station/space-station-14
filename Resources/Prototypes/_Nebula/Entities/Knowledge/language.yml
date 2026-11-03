@@ -32,3 +32,24 @@
   components:
   - type: LanguageKnowledge
     languageId: Ariral
+
+- type: entity
+  parent: BaseLanguageKnowledge
+  id: LanguageSiikMaas
+  components:
+  - type: LanguageKnowledge
+    languageId: SiikMaas
+
+- type: entity
+  parent: BaseLanguageKnowledge
+  id: LanguageMarish
+  components:
+  - type: LanguageKnowledge
+    languageId: Marish
+
+- type: entity
+  parent: BaseLanguageKnowledge
+  id: LanguageNehina
+  components:
+  - type: LanguageKnowledge
+    languageId: Nehina

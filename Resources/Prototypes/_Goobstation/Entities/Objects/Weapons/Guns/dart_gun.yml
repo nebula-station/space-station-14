@@ -56,9 +56,11 @@
     layers:
     - state: icon
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 1
+        Piercing: 1
+    # Nebula end
     angle: -45
   - type: Ammo
     muzzleFlash: null

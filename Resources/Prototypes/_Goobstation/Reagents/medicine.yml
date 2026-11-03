@@ -365,7 +365,6 @@
             Slash: -6
             Blunt: -6
             Piercing: -6
-            Ballistic: -6
       - !type:AdjustReagent
         reagent: Bozaide
         amount: 4
@@ -684,7 +683,6 @@
           types:
             Blunt: -0.5
             Piercing: -0.25
-            Ballistic: -0.25
             Slash: -0.5
             Heat: -0.38
             Cold: -0.38

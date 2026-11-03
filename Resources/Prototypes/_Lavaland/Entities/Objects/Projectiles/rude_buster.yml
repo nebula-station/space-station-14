@@ -17,12 +17,14 @@
   - type: Reflective
     reflective: Magic
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Blunt: 15
-        Heat: 15
+        Piercing: 40
+        Heat: 40
         Structural: 80
-    penetrationThreshold: 400 # Good for breaking rocks (and hordes of fauna)
+    # Nebula end
+    penetrationThreshold: 500 # Nebula
   - type: StaminaDamageOnCollide
     damage: 60
   - type: Trail

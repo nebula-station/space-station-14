@@ -11,10 +11,12 @@
     - state: piercing
       shader: unshaded
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 30
+        Piercing: 30
         Structural: 1000
+    # Nebula end
     ignoreResistances: true
     penetrationThreshold: 1337
   - type: StaminaDamageOnCollide

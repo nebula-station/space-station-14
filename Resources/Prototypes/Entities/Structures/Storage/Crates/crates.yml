@@ -64,6 +64,13 @@
     - entity_storage
   - type: Paintable
     group: null
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CratePlastic
@@ -74,6 +81,13 @@
     sprite: Structures/Storage/Crates/hydroponics.rsi
   - type: Sprite
     sprite: Structures/Storage/Crates/hydroponics.rsi
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CratePlastic
@@ -84,6 +98,13 @@
     sprite: Structures/Storage/Crates/medical.rsi
   - type: Sprite
     sprite: Structures/Storage/Crates/medical.rsi
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateGenericSteel
@@ -105,6 +126,13 @@
     sprite: Structures/Storage/Crates/o2.rsi
   - type: Sprite
     sprite: Structures/Storage/Crates/o2.rsi
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateGenericSteel
@@ -372,6 +400,7 @@
     sprite: Structures/Storage/Crates/livestock.rsi
     state: base
   - type: Damageable
+    damageModifierSet: Metallic # Nebula
   - type: Injurable
     damageContainer: StructuralInorganic
   - type: Destructible
@@ -432,6 +461,7 @@
     sprite: Structures/Storage/Crates/cage.rsi
     state: icon
   - type: Damageable
+    damageModifierSet: Metallic # Nebula
   - type: Injurable
     damageContainer: StructuralInorganic
   - type: Destructible
@@ -728,6 +758,7 @@
     sprite: Structures/Storage/Crates/coffin.rsi
     state: base
   - type: Damageable
+    damageModifierSet: Metallic # Nebula
   - type: Injurable
     damageContainer: StructuralInorganic
   - type: Destructible
@@ -773,6 +804,7 @@
     sprite: Structures/Storage/Crates/wooden_grave.rsi
     state: base
   - type: Damageable
+    damageModifierSet: Metallic # Nebula
   - type: Injurable
     damageContainer: StructuralInorganic
   - type: Destructible
@@ -823,6 +855,10 @@
   - type: Icon
     sprite: Structures/Storage/Crates/stone_grave.rsi
     state: base
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: CrateGenericSteel

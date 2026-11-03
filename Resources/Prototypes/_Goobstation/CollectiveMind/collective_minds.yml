@@ -73,3 +73,9 @@
   name: collective-mind-xeno
   keycode: 'п' # RU-Localization
   color: "#8c3986"
+
+- type: collectiveMind
+  id: Empathy
+  name: collective-mind-empathy
+  keycode: 'э' # Orion-Edit
+  color: "#7f32a8"

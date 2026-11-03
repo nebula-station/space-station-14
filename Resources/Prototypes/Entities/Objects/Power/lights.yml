@@ -79,6 +79,12 @@
           ShardGlass:
             min: 1
             max: 1
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  # Nebula end
 
 - type: entity
   abstract: true

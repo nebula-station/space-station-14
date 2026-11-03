@@ -47,7 +47,7 @@
   id: JudoThrow
   attacks:
   - Grab
-  - Grab
+  # - Grab # Nebula edit
   - Disarm
   userEffects:
   - !type:PopupMessage
@@ -63,6 +63,11 @@
   - !type:StopPull
   userConditions:
   - !type:StandingCondition
+  # downed targets are left for wheel throw, which starts with the same attacks
+  # Nebula start
+  conditions:
+  - !type:StandingCondition
+  # Nebula end
 
 - type: combo
   id: JudoArmbar

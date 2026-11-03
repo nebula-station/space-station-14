@@ -33,6 +33,10 @@
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Rock
+  # Nebula end
 
 - type: entity
   parent: [ BaseRockGibtonite ] # Trauma, small refractor
@@ -59,6 +63,10 @@
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Rock
+  # Nebula end
 
 - type: entity
   id: WallRockSnowGibtonite
@@ -85,6 +93,10 @@
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Rock
+  # Nebula end
 
 - type: entity
   id: WallRockSandGibtonite
@@ -111,6 +123,10 @@
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Rock
+  # Nebula end
 
 - type: entity
   id: WallRockChromiteGibtonite
@@ -137,6 +153,10 @@
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Rock
+  # Nebula end
 
 - type: entity
   id: WallRockAndesiteGibtonite
@@ -163,3 +183,7 @@
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Rock
+  # Nebula end

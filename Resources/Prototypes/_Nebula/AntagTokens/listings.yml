@@ -1,0 +1,86 @@
+# Antagonists that can be bought with antag tokens.
+# The player count requirement comes from the GameRule component of the rule.
+
+- type: antagTokenListing
+  id: Vampire
+  antag: Vampire
+  rule: Vampire
+  ruleComp: VampireRule
+
+- type: antagTokenListing
+  id: Thief
+  antag: Thief
+  rule: AntagTokenThiefRule
+  ruleComp: ThiefRule
+
+- type: antagTokenListing
+  id: Changeling
+  antag: Changeling
+  rule: ChangelingRule
+  ruleComp: ChangelingRule
+
+- type: antagTokenListing
+  id: Devil
+  antag: Devil
+  rule: Devil
+  ruleComp: DevilRule
+
+- type: antagTokenListing
+  id: Heretic
+  antag: Heretic
+  rule: HereticRule
+  ruleComp: HereticRule
+
+- type: antagTokenListing
+  id: InitialInfected
+  antag: InitialInfected
+  rule: AntagTokenInitialInfectedRule
+  ruleComp: ZombieRule
+
+- type: antagTokenListing
+  id: Traitor
+  antag: Traitor
+  rule: AntagTokenTraitorRule
+  ruleComp: TraitorRule
+
+- type: antagTokenListing
+  id: Spy
+  antag: Spy
+  rule: SpyRule
+  ruleComp: SpyRule
+
+# Single player versions of rules that would otherwise pick more players.
+
+- type: entity
+  parent: Thief
+  id: AntagTokenThiefRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AntagSelection
+    lateJoinAdditional: false
+    antags:
+    - !type:FixedAntagCount
+      proto: Thief
+
+- type: entity
+  parent: Traitor
+  id: AntagTokenTraitorRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AntagSelection
+    lateJoinAdditional: false
+    antags:
+    - !type:FixedAntagCount
+      proto: Traitor
+
+- type: entity
+  parent: Zombie
+  id: AntagTokenInitialInfectedRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: GameRule
+    delay: null
+  - type: AntagSelection
+    antags:
+    - !type:FixedAntagCount
+      proto: InitialInfected

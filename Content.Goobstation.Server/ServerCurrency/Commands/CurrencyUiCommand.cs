@@ -4,9 +4,11 @@ using Content.Goobstation.Server.ServerCurrency.UI;
 using Content.Server.EUI;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
+using Robust.Shared.Reflection;
 
 namespace Content.Goobstation.Server.ServerCurrency.Commands
 {
+    [Reflect(false)] // Nebula edit
     [AnyCommand]
     public sealed class CurrencyUiCommand : IConsoleCommand
     {

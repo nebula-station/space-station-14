@@ -81,6 +81,10 @@
     lockedAlertLevels:
     - Green
     - Yellow
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: StructuralMetallic
+  # Nebula end
 
 - type: entity
   parent: BaseTraumaGunSafe

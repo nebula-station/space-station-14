@@ -1,0 +1,30 @@
+- type: species
+  id: Tajaran
+  name: species-name-tajaran
+  roundStart: true
+  prototype: MobTajaran
+  dollPrototype: AppearanceTajaran
+  skinColoration: AnimalFur
+  maleFirstNames: NamesTajaranFirst
+  femaleFirstNames: NamesTajaranFirst
+  lastNames: NamesTajaranLast
+  defaultSoundsBySex:
+  - MaleFelinid
+  - FemaleFelinid
+  - MaleFelinid
+  voices:
+  - MaleFelinid
+  - FemaleFelinid
+  minHeight: 0.85
+  defaultHeight: 0.90
+  maxHeight: 1.15
+  minWidth: 0.85
+  defaultWidth: 0.90
+  maxWidth: 1.10
+
+- type: skinColoration
+  id: AnimalFur
+  strategy: !type:ClampedHsvColoration
+    hue: [ 0.056, 0.125 ]
+    saturation: [ 0, 1.0 ]
+    value: [ 0, 1 ]

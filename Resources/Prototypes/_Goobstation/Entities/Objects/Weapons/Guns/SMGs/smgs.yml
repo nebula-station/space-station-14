@@ -19,12 +19,12 @@
     shape:
     - 0,0,2,1
   - type: Gun
-    fireRate: 12.5 # Reduced fireRate and increased projectileSpeed
-    projectileSpeed: 27
+    fireRate: 13.5 # Nebula
+    projectileSpeed: 30 # Nebula
     minAngle: 15 # More controlled than before
     maxAngle: 55
     angleDecay: -8 # Intentionally negative, loses accuracy while not shooting
-    angleIncrease: -1.15 # Intentionally negative, gains accuracy while shooting
+    angleIncrease: -1.65 # Nebula
     availableModes:
     - FullAuto
     soundGunshot:

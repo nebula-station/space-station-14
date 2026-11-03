@@ -41,10 +41,6 @@
   abstract: true
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 2.5 # ow minimum
   # </Trauma>
   - type: Sprite
     state: produce
@@ -301,9 +297,12 @@
     sprite: Objects/Specific/Hydroponics/death_nettle.rsi
     heldPrefix: produce
   - type: MeleeWeapon
+    # Nebula start
     damage:
       types:
-        Caustic: 1 # Trauma - was 8 Heat 8 Caustic
+        Heat: 8
+        Caustic: 8
+    # Nebula end
   - type: Solution
     solution:
       reagents:
@@ -378,7 +377,6 @@
         Blunt: -50
         Slash: -50
         Piercing: -50
-        Ballistic: -50
         Heat: -10
         Shock: -10
     healingBeginSound:
@@ -641,10 +639,6 @@
   description: Ewwwwwwwwww. Cabbage.
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 5 # ow
   # </Trauma>
   - type: FlavorProfile
     flavors:
@@ -898,11 +892,6 @@
   description: Mmm, tropical.
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 2.5 # ow
-        Slash: 2.5 # but bleeding!
   # </Trauma>
   - type: FlavorProfile
     flavors:
@@ -1146,10 +1135,6 @@
   description: It's a little piece of Eden.
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 5 # ow
   # </Trauma>
   - type: FlavorProfile
     flavors:
@@ -1190,11 +1175,6 @@
   description: It should be shaped like a cube, shouldn't it?
   components:
   # <Trauma>
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 5 # ow
-        Holy: 5 # lol
   # </Trauma>
   - type: FlavorProfile
     flavors:
@@ -2159,9 +2139,6 @@
   components:
   # <Trauma>
   - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 15 # PvZ parity
   # </Trauma>
   - type: Item
     size: Normal
@@ -2271,10 +2248,6 @@
   components:
   # <Trauma>
   - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 15 # PVZ Parity
-        Holy: 10 # really good against devils and... *checks notes* ...devils
   # </Trauma>
   - type: Item
     size: Normal

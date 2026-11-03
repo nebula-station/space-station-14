@@ -34,6 +34,7 @@
     availableModes:
     - FullAuto
     soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    projectileSpeed: 30 # Nebula
   - type: BallisticAmmoProvider
     proto: CartridgePistol
     capacity: 50
@@ -103,6 +104,7 @@
     fireRate: 1
     selectedMode: FullAuto
     soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+    projectileSpeed: 30 # Nebula
   - type: HTN
     rootTask:
       task: TurretCompound

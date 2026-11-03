@@ -118,10 +118,12 @@
       - ActionCritSuccumb
       - ActionCritLastWords
   - type: MobThresholds
+    # Nebula start
     thresholds:
       0: Alive
-      375: Critical # Trauma - Was 450
-      400: Dead # Trauma - Was 500
+      450: Critical
+      500: Dead
+    # Nebula end
   - type: Destructible
     thresholds:
     - trigger: !type:DamageTypeTrigger
@@ -130,9 +132,11 @@
       behaviors:
       - !type:GibBehavior
   - type: SlowOnDamage
+    # Nebula start
     speedModifierThresholds:
-      205: 0.7 # Trauma - Was 250
-      315: 0.5 # Trauma - Was 400
+      250: 0.7
+      400: 0.5
+    # Nebula end
   # disable taking damage from fire, since its a fire breathing dragon
   - type: Flammable
     damage:
@@ -164,10 +168,12 @@
     altDisarm: false
     soundHit:
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    # Nebula start
     damage:
       types:
-        Piercing: 13 # Trauma - Was 15
-        Slash: 12 # Trauma - Was 15
+        Piercing: 15
+        Slash: 15
+    # Nebula end
   - type: Devourer
     foodPreferenceWhitelist:
       components:
@@ -207,6 +213,10 @@
     speedModifier: 2.5 # fast because dragon strong
     useSound:
       path: /Audio/Items/crowbar.ogg
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Dragon
+  # Nebula end
 
 - type: entity
   parent: BaseMobDragon
@@ -220,7 +230,6 @@
         Blunt: -1.33
         Slash: -1.33
         Piercing: -1.33
-        Ballistic: -1.33
         Heat: -1
         Cold: -1
         Shock: -1
@@ -260,9 +269,13 @@
     refineResult:
     - id: FoodMeatDragon
   - type: MeleeWeapon
+    # Nebula start
     damage:
       types:
-        Piercing: 12
+        Blunt: 4
+        Slash: 4
+        Piercing: 4
+    # Nebula end
 
 - type: entity
   parent: BaseAction

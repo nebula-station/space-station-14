@@ -48,9 +48,11 @@
   - type: Ammo
   - type: Projectile
     impactEffect: BulletImpactEffectOrangeDisabler
+    # Nebula start
     damage:
       types:
-        Heat: 9 # Trauma - was 13
+        Heat: 13
+    # Nebula end
 
 - type: entity
   parent: BulletLaser

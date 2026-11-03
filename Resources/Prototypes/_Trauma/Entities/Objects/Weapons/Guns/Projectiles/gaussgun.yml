@@ -147,7 +147,8 @@
   - type: Projectile
     damage:
       types:
-        Ballistic: 20
+        Piercing: 20 # Nebula
+      armorPenetration: 0.2 # Nebula
   - type: Sprite
     state: bullet
 
@@ -170,7 +171,7 @@
   - type: Projectile
     damage:
       types:
-        Ballistic: 4
+        Piercing: 4 # Nebula
       armorPenetration: -10
   - type: Sprite
     state: shard
@@ -184,7 +185,7 @@
   - type: Projectile
     damage:
       types:
-        Ballistic: 10
+        Piercing: 10 # Nebula
         Slash: 5
       armorPenetration: 0.1
   - type: Sprite

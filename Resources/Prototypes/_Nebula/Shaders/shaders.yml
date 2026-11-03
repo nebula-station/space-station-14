@@ -7,3 +7,16 @@
   id: NebulaDeath
   kind: source
   path: "/Textures/_Nebula/Shaders/death.swsl"
+
+- type: shader
+  id: NebulaAllyOutline
+  kind: source
+  path: "/Textures/_Nebula/Shaders/ally_outline.swsl"
+
+- type: shader
+  id: NebulaMarkingGradient
+  kind: source
+  path: "/Textures/_Nebula/Shaders/marking_gradient.swsl"
+  params:
+    displacementSize: 127
+    displacementScale: 1

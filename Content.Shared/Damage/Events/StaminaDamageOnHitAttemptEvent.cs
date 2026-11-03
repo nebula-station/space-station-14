@@ -3,5 +3,5 @@ namespace Content.Shared.Damage.Events;
 /// <summary>
 /// Attempting to apply stamina damage on entity.
 /// </summary>
-[ByRefEvent]
-public record struct StaminaDamageOnHitAttemptEvent(bool LightAttack, bool Cancelled); // Goob - added LightAttack
+[ByRefEvent] // Nebula add user
+public record struct StaminaDamageOnHitAttemptEvent(bool LightAttack, bool Cancelled, EntityUid? User = null); // Goob - added LightAttack

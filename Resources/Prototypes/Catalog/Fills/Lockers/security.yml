@@ -334,8 +334,12 @@
   table: !type:AllSelector
     children:
     - id: WeaponLaserCarbine
-      amount: 3
+# Orion start
+#      amount: 3
+    - id: WeaponEarthGovLaserSniper
+    - id: WeaponEarthGovLaserCarbine
+    - id: WeaponEarthGovXRay
+# Orion end
     - id: WeaponTemperatureGun # Goobstation
       amount: 2
     - id: WeaponEnergyIonRifle # Goobstation
-      amount: 2

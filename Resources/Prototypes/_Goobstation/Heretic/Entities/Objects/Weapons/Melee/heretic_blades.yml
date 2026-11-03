@@ -225,9 +225,6 @@
   suffix: Flesh ghoul
   components:
   - type: MeleeWeapon
-    damage:
-      types:
-        Slash: 15
 
 - type: entity
   parent: [HereticBladeFleshBase, BaseRandomTeleportBlade]

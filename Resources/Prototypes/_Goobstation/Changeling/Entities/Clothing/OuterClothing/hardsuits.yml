@@ -19,6 +19,7 @@
   - type: ExplosionResistance
     damageCoefficient: 0.2
   - type: Armor
+    # Nebula start
     coverage:
     - Torso
     - Arm
@@ -26,7 +27,8 @@
     - Leg
     - Foot
     - Tail
-    - Wings
+    - Other
+    # Nebula end
     modifiers:
       coefficients:
         Blunt: 0.85
