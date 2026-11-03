@@ -66,6 +66,7 @@
       Violet: fire_1
       Yellow: fire_1
       DeltaNuke: fire_3
+      Amber: fire_2 # Nebula edit
       # TODO: add missing alarm states
   - type: UserInterface
     interfaces:
