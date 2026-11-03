@@ -2,3 +2,8 @@
   license: "CC-BY-SA-3.0"
   copyright: "Taken from BlueMoon-Labs/BlueMoon-Station"
   source: "https://github.com/BlueMoon-Labs/BlueMoon-Station/blob/76aa5564d0414055cf018e4ee4342a73f46b8da8/sound/voice/dispatch_hailer.ogg"
+
+- files: ["sec_implant_alert.ogg", "sec_implant_flatline.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Made by emilanik (discord) for Nebula"
+  source: "https://github.com/nebula-station/space-station-14"
