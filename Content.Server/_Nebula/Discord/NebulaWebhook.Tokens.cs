@@ -33,6 +33,48 @@ public sealed partial class NebulaWebhooks
         SendTokenBought(user, token);
     }
 
+    /// <summary>
+    /// Reports a purchase, grant or refund of an antagonist bought with an antag token.
+    /// </summary>
+    public void SendAntagTokenMessage(NetUserId user, LocId title, string antagName)
+    {
+        if (_webhookIdentifierTokens == null)
+            return;
+
+        _playerManager.TryGetPlayerData(user, out var data);
+
+        var payload = new WebhookPayload
+        {
+            Username = Loc.GetString("nebula-webhook-server-name"),
+            Embeds =
+            [
+                new WebhookEmbed
+                {
+                    Title = Loc.GetString(title),
+                    Color = WebhookEmbedColors[WebhookType.TokenBuy],
+                    Fields =
+                    [
+                        new()
+                        {
+                            Name = Loc.GetString("playtime-webhook-target"),
+                            Value = CodeBlockedSmall(data?.UserName ?? Loc.GetString("nebula-webhook-unknown")),
+                            Inline = true
+                        },
+                        EmbedSpacer,
+                        new()
+                        {
+                            Name = Loc.GetString("tokens-webhook-token-value"),
+                            Value = CodeBlockedSmall(antagName),
+                            Inline = true
+                        },
+                    ]
+                }
+            ]
+        };
+
+        SendMessage(_webhookIdentifierTokens.Value, payload);
+    }
+
     private async void SendTokenChanged(NetUserId adminId, NetUserId targetId, int value, bool isSet = false)
     {
         var embed = CreateBaseEmbedWithNames(adminId, targetId);

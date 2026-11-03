@@ -13,4 +13,10 @@ public sealed partial class NCCVars
 
     public static readonly CVarDef<string> ApiUrl =
         CVarDef.Create("napi.url", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /// <summary>
+    /// Seconds between attempts to reconnect to the API while it is inactive.
+    /// </summary>
+    public static readonly CVarDef<float> ApiHealthCheckInterval =
+        CVarDef.Create("napi.health_check_interval", 30f, CVar.SERVERONLY);
 }

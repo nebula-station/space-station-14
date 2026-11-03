@@ -13,7 +13,7 @@ public sealed partial class NebulaServerApi
 {
     public async Task<SponsorStatus?> GetSponsorUserDataOrNull(Guid user)
     {
-        if (!_isActive)
+        if (!await EnsureActive())
             return null;
 
         try

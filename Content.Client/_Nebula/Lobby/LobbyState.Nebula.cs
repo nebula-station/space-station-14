@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Client.Lobby.UI;
 using Content.Client._Nebula.Lobby;
 using Content.Shared._Nebula.CCVar;
 using Content.Shared.GameTicking.Prototypes;
@@ -41,6 +42,16 @@ public sealed partial class LobbyState
     private void OnWardrobePressed(BaseButton.ButtonEventArgs args)
     {
         OnSetupPressed(args);
+        _userInterfaceManager.GetUIController<LobbyUIController>().SelectWardrobeTab();
+    }
+
+    /// <summary>
+    /// Opens the wardrobe tab of the character setup, same as the wardrobe button of the character panel.
+    /// </summary>
+    public void OpenWardrobe()
+    {
+        SetReady(false);
+        Lobby?.SwitchState(LobbyGui.LobbyGuiState.CharacterSetup);
         _userInterfaceManager.GetUIController<LobbyUIController>().SelectWardrobeTab();
     }
 }
