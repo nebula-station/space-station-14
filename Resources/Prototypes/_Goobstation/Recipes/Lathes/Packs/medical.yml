@@ -51,6 +51,7 @@
   id: MedicalCybernetics
   recipes:
   - MedicalCyberneticEyes
+  - ClothingEyesNightVisionMedicalGoggles # Nebula edit
 
 - type: latheRecipePack
   id: MedicalMisc

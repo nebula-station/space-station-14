@@ -43,6 +43,7 @@
   - PowerCellMicroreactor
   - PowerCellHigh
   - PowerCellHyper
+  - InducerScientific # Nebula edit
 
 - type: latheRecipePack
   id: ScienceWeapons

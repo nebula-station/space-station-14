@@ -118,6 +118,7 @@ public sealed partial class NebulaThemeOptions : Control
         row.AddOptionCheckBox(NCCVars.LobbyBackgroundRandom, BackgroundRandomCheckBox);
 
         row.AddOptionCheckBox(NCCVars.HideInterfaceOnDeath, HideOnDeathCheckBox);
+        row.AddOptionCheckBox(NCCVars.AllyOutline, AllyOutlineCheckBox);
 
         var backgrounds = NebulaLobbyBackgrounds.GetAvailable(_prototypes);
         BackgroundDropDown.Visible = backgrounds.Count > 0;

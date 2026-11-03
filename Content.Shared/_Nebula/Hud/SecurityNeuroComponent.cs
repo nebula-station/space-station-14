@@ -59,6 +59,12 @@ public sealed partial class SecurityNeuroComponent : Component
     public List<SecurityNeuroSquadSummary> Summary = [];
 
     /// <summary>
+    /// Bodies the owner's security night vision outlines by health: the squad, or every squad member for the commander.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    public List<NetEntity> Allies = [];
+
+    /// <summary>
     /// Tasks written by the owner. Server only, sent through <see cref="Tasks"/>.
     /// </summary>
     [ViewVariables(VVAccess.ReadOnly)]

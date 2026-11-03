@@ -1,0 +1,23 @@
+// Draws only the rim of the sprite, so an ally behind a wall shows as a silhouette and the wall stays visible through it.
+light_mode unshaded;
+
+uniform highp float outline_width;
+uniform highp vec4 outline_color;
+
+void fragment() {
+    highp vec2 d = outline_width * TEXTURE_PIXEL_SIZE;
+    highp float inner = texture2D(TEXTURE, UV).a;
+    highp float outer = 0.0;
+
+    outer = max(outer, texture2D(TEXTURE, UV + vec2(0.0, -d.y)).a);
+    outer = max(outer, texture2D(TEXTURE, UV + vec2(0.0, d.y)).a);
+    outer = max(outer, texture2D(TEXTURE, UV + vec2(-d.x, 0.0)).a);
+    outer = max(outer, texture2D(TEXTURE, UV + vec2(d.x, 0.0)).a);
+    outer = max(outer, texture2D(TEXTURE, UV + vec2(-d.x, -d.y)).a);
+    outer = max(outer, texture2D(TEXTURE, UV + vec2(d.x, -d.y)).a);
+    outer = max(outer, texture2D(TEXTURE, UV + vec2(-d.x, d.y)).a);
+    outer = max(outer, texture2D(TEXTURE, UV + vec2(d.x, d.y)).a);
+
+    highp float alpha = outline_color.a * outer * (1.0 - step(0.01, inner));
+    COLOR = vec4(outline_color.rgb * alpha, alpha);
+}
