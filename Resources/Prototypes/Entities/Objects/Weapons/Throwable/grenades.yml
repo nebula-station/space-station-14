@@ -8,7 +8,7 @@
     keysIn:
     - timer
   - type: Explosive
-    explosionType: Default
+    explosionType: Transparent # Nebula
     maxIntensity: 10
     intensitySlope: 3
     totalIntensity: 120 # about a ~4 tile radius
@@ -101,10 +101,10 @@
     keysIn:
     - timer
   - type: Explosive
-    explosionType: Minibomb
-    totalIntensity: 150
-    intensitySlope: 75 #Will destroy the tile under it reliably, space 1-2 more to rods. Only does any significant damage in a 5-tile cross.
-    maxIntensity: 100
+    explosionType: TransparentMinibomb # Nebula
+    totalIntensity: 200 # Nebula
+    intensitySlope: 30 # Nebula
+    maxIntensity: 60 # Nebula
   - type: Appearance
   - type: TimerTriggerVisuals
     primingSound:
@@ -129,7 +129,7 @@
     keysIn:
     - timer
   - type: Explosive
-    explosionType: Minibomb
+    explosionType: TransparentMinibomb # Nebula
     totalIntensity: 400
     intensitySlope: 30
     maxIntensity: 125
@@ -185,11 +185,6 @@
       path: /Audio/Effects/Grenades/Supermatter/smbeep.ogg
       params:
         volume: -5
-  - type: Explosive # Trauma - reverted gimped supermatter grenade
-    explosionType: Default
-    totalIntensity: 200
-    intensitySlope: 30
-    maxIntensity: 120
   - type: EmitSoundOnTrigger
     keysIn:
     - timer
@@ -392,7 +387,7 @@
   - type: EmpOnTrigger
     keysIn:
     - trigger
-    range: 2.5 # Trauma, was 5.5
+    range: 5.5 # Nebula
     energyConsumption: 50000
   - type: DeleteOnTrigger
     keysIn:

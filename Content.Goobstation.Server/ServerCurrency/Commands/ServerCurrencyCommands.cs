@@ -8,9 +8,11 @@ using Content.Shared.Administration;
 using Content.Shared.Chat;
 using Robust.Server.Player;
 using Robust.Shared.Console;
+using Robust.Shared.Reflection;
 
 namespace Content.Goobstation.Server.ServerCurrency.Commands;
 
+[Reflect(false)] // Nebula edit
 [AnyCommand]
 public sealed partial class BalanceServerCurrencyCommand : IConsoleCommand
 {
@@ -42,6 +44,7 @@ public sealed partial class BalanceServerCurrencyCommand : IConsoleCommand
     }
 }
 
+[Reflect(false)] // Nebula edit
 [AnyCommand]
 public sealed partial class GiftServerCurrencyCommand : IConsoleCommand
 {
@@ -118,6 +121,7 @@ public sealed partial class GiftServerCurrencyCommand : IConsoleCommand
     }
 }
 
+[Reflect(false)] // Nebula edit
 [AdminCommand(AdminFlags.Host)]
 public sealed partial class AddServerCurrencyCommand : IConsoleCommand
 {
@@ -167,6 +171,7 @@ public sealed partial class AddServerCurrencyCommand : IConsoleCommand
     }
 }
 
+[Reflect(false)] // Nebula edit
 [AdminCommand(AdminFlags.Host)]
 public sealed partial class RemoveServerCurrencyCommand : IConsoleCommand
 {
@@ -216,6 +221,7 @@ public sealed partial class RemoveServerCurrencyCommand : IConsoleCommand
     }
 }
 
+[Reflect(false)] // Nebula edit
 [AdminCommand(AdminFlags.Host)]
 public sealed partial class SetServerCurrencyCommand : IConsoleCommand
 {
@@ -266,6 +272,7 @@ public sealed partial class SetServerCurrencyCommand : IConsoleCommand
     }
 }
 
+[Reflect(false)] // Nebula edit
 [AdminCommand(AdminFlags.Host)]
 public sealed partial class GetServerCurrencyCommand : IConsoleCommand
 {
@@ -304,6 +311,7 @@ public sealed partial class GetServerCurrencyCommand : IConsoleCommand
     }
 }
 
+[Reflect(false)] // Nebula edit
 [AdminCommand(AdminFlags.Host)]
 public sealed partial class WipeServerCurrencyCommand : IConsoleCommand
 {

@@ -13,7 +13,7 @@
     - state: frag
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: Transparent # Nebula
     maxIntensity: 40
     intensitySlope: 6
     totalIntensity: 200
@@ -38,7 +38,7 @@
     - state: frag
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: Transparent # Nebula
     maxIntensity: 2 # max 30 per tile
     intensitySlope: 1
     totalIntensity: 4 # 60 total damage to distribute over tiles
@@ -68,7 +68,8 @@
     soundHit:
       path: /Audio/Effects/gen_hit.ogg
   - type: StaminaDamageOnCollide
-    damage: 50 # Trauma - was 80
+    damage: 80 # Nebula
+    overtime: 50 # Nebula
 
 - type: entity
   parent: BaseBulletTrigger
@@ -85,10 +86,10 @@
     - state: grenade
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Clake
+    explosionType: Transparent # Nebula
     totalIntensity: 150 # a ~3 tile radius
-    intensitySlope: 5
-    maxIntensity: 20
+    intensitySlope: 10 # Nebula
+    maxIntensity: 10 # Nebula
     canCreateVacuum: false
 
 - type: entity
@@ -128,9 +129,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 120
-    intensitySlope: 5
-    maxIntensity: 9
+    totalIntensity: 25 # Nebula
+    intensitySlope: 1 # Nebula
+    maxIntensity: 3 # Nebula
     canCreateVacuum: false
   - type: ContainerContainer
     containers:
@@ -138,7 +139,7 @@
   - type: ProjectileGrenade
     triggerKey: trigger
     fillPrototype: PelletClusterLessLethal
-    capacity: 30
+    capacity: 50 # Nebula
 
 - type: entity
   parent: BaseBulletTrigger
@@ -166,7 +167,7 @@
     positional: true
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: Transparent # Nebula
     totalIntensity: 0.01 # a little pop
     intensitySlope: 1
     maxIntensity: 0.01

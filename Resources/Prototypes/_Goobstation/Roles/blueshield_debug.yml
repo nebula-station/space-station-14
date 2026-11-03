@@ -32,6 +32,13 @@
   - type: AutoImplant
     implants:
     - MindShieldImplant
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobHumanBSOBase
@@ -41,6 +48,13 @@
   - type: Loadout
     prototypes: [ BlueShieldOfficerGearSuit ]
     roleLoadout: [ RoleSurvivalSecurity ]
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   name: Blueshield Officer Base Spawner

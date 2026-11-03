@@ -45,7 +45,7 @@ public sealed class BloodCultTest : InteractionTest
         var specifier = SProtoMan.Index(CultistSpecifier);
 
         var dummies = await Server.AddDummySessions(2);
-        await Server.WaitPost(() =>
+        await Server.WaitAssertion(() => // Nebula edit
         {
             var helper = SpawnWithMind(dummies[0], coords);
 

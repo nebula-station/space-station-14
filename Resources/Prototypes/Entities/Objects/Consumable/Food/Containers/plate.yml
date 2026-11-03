@@ -78,6 +78,12 @@
   - type: PhysicalComposition
     materialComposition:
       Glass: 50
+  # Nebula start
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  # Nebula end
 
 - type: entity
   parent: BaseItem

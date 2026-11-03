@@ -2,6 +2,7 @@
 
 using System.Numerics;
 using Content.Goobstation.Common.Hands;
+using Content.Shared._Nebula.Movement.Pulling;
 using Content.Shared.CombatMode;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Cuffs;
@@ -247,6 +248,12 @@ public sealed partial class PullingSystem
         {
             newStage = puller.Comp.StartingGrabStage;
         }
+
+        // Nebula start
+        var startingStageEv = new GetStartingGrabStageEvent(newStage);
+        RaiseLocalEvent(puller, ref startingStageEv);
+        newStage = startingStageEv.Stage;
+        // Nebula end
 
         if (grabStageOverride != null)
         {

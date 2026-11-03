@@ -39,16 +39,42 @@ public sealed partial class SecuritySquadSystem
             });
         }
 
+        List<NetEntity> allies = [];
+        foreach (var squad in squads.Comp.Squads)
+        {
+            foreach (var key in squad.Members)
+            {
+                if (mobs.TryGetValue(key, out var body))
+                    allies.Add(GetNetEntity(body));
+            }
+        }
+
         foreach (var mob in mobs.Values)
         {
             if (!mob.Comp.Commander
-                || HasComp<NeuroSignalLostComponent>(mob)
-                || summary.SequenceEqual(mob.Comp.Summary))
+                || HasComp<NeuroSignalLostComponent>(mob))
+                continue;
+
+            var self = GetNetEntity(mob);
+            SetAllies(mob, allies.FindAll(ally => ally != self));
+            if (summary.SequenceEqual(mob.Comp.Summary))
                 continue;
 
             mob.Comp.Summary = [.. summary];
             DirtyField(mob, mob.Comp, nameof(SecurityNeuroComponent.Summary));
         }
+    }
+
+    /// <summary>
+    /// Replaces the outlined bodies of the member, when they changed.
+    /// </summary>
+    private void SetAllies(Entity<SecurityNeuroComponent> mob, List<NetEntity> allies)
+    {
+        if (allies.SequenceEqual(mob.Comp.Allies))
+            return;
+
+        mob.Comp.Allies = [.. allies];
+        DirtyField(mob, mob.Comp, nameof(SecurityNeuroComponent.Allies));
     }
 
     private void AlertCommanders(Entity<StationSquadsComponent> squads, SecuritySquad squad, StationRecordKey member, MobState state)

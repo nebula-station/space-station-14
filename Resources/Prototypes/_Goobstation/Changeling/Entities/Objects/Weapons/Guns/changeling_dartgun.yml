@@ -61,9 +61,11 @@
   - type: Ammo
     muzzleFlash: null
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 3
+        Piercing: 3
+    # Nebula end
 
 - type: entity
   id: ChangelingDartMute

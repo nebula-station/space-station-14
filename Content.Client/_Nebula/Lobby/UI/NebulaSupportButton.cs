@@ -6,28 +6,26 @@ using Content.Client._Nebula.Sponsor;
 using Content.Client._Nebula.Stylesheets;
 using Content.Client._Nebula.UserInterface.Controls;
 using Content.Client._Nebula.UserInterface;
-using Content.Shared._Nebula.CCVar;
 using Robust.Client.UserInterface;
-using Robust.Shared.Configuration;
 
 namespace Content.Client._Nebula.Lobby.UI;
 
 /// <summary>
-/// Boosty button for the lobby side panel, shows the level for subscribers.
-/// Opens the page from <see cref="NCCVars.InfoLinksBoosty"/>.
+/// Button of the lobby side panel that opens <see cref="NebulaSupportWindow"/>, shows the level for subscribers.
 /// </summary>
 public sealed partial class NebulaSupportButton : Control
 {
-    [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private IEntitySystemManager _systems = default!;
-    [Dependency] private IUriOpener _uriOpener = default!;
 
     private readonly ShapedButton _button;
 
     /// <summary>
-    /// Kept from <see cref="EnteredTree"/>: on disconnect entity systems shut down before the lobby screen is removed.
+    /// Kept from <see cref="EnteredTree"/>: on disconnect entity systems shut down before the lobby screen is
+    /// removed.
     /// </summary>
     private SponsorSystem? _sponsors;
+
+    private NebulaSupportWindow? _window;
 
     public NebulaSupportButton()
     {
@@ -35,15 +33,13 @@ public sealed partial class NebulaSupportButton : Control
 
         _button = new ShapedButton { HorizontalExpand = true };
         _button.AddStyleClass(NebulaStyleClass.ButtonSupport);
-        _button.OnPressed += _ => _uriOpener.OpenUri(_cfg.GetCVar(NCCVars.InfoLinksBoosty));
+        _button.OnPressed += _ => OpenWindow();
         AddChild(_button);
     }
 
     protected override void EnteredTree()
     {
         base.EnteredTree();
-
-        Visible = _cfg.GetCVar(NCCVars.InfoLinksBoosty) != string.Empty;
 
         if (!_systems.TryGetEntitySystem(out _sponsors))
             return;
@@ -60,6 +56,21 @@ public sealed partial class NebulaSupportButton : Control
         _sponsors?.StatusChanged -= Refresh;
 
         _sponsors = null;
+
+        _window?.Close();
+    }
+
+    private void OpenWindow()
+    {
+        if (_window != null)
+        {
+            _window.MoveToFront();
+            return;
+        }
+
+        _window = new NebulaSupportWindow();
+        _window.OnClose += () => _window = null;
+        _window.OpenCentered();
     }
 
     private void Refresh()

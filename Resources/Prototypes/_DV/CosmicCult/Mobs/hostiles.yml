@@ -154,6 +154,13 @@
       params:
         variation: 0.125
         volume: -4
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: MobCosmicBase
@@ -210,3 +217,10 @@
     proto: ProjectileCosmic
     capacity: 1
     count: 1
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end

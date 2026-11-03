@@ -1,0 +1,20 @@
+light_mode unshaded;
+
+uniform highp float elapsed;
+uniform highp float duration;
+uniform bool reducedMotion;
+
+void fragment() {
+    // Hold the frozen view for three seconds on a full flash, then reveal the live view smoothly.
+    highp float strongPhase = min(3.0, duration * 0.75);
+    highp float opacity = 1.0 - smoothstep(strongPhase, duration, elapsed);
+    // Start with an overexposed afterimage, retaining the visible scene throughout the effect.
+    highp float white = 0.75 * opacity;
+    highp vec3 frame = zTexture(UV).rgb;
+    if (!reducedMotion) {
+        highp vec2 displacement = vec2(sin(TIME * 2.0), cos(TIME * 2.0)) * 0.002 * opacity;
+        highp vec3 ghost = zTexture(clamp(UV + displacement, vec2(0.0), vec2(1.0))).rgb;
+        frame = mix(frame, ghost, 0.5);
+    }
+    COLOR = vec4(mix(frame, vec3(1.0), white), opacity);
+}

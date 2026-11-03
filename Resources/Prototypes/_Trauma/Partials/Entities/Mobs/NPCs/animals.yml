@@ -4,6 +4,3 @@
   id: MobGiantSpiderAngry
   components:
   - type: MobThresholds
-    thresholds: !Clear
-      0: Alive
-      30: Dead

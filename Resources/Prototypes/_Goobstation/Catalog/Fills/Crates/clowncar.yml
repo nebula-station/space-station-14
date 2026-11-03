@@ -41,6 +41,10 @@
         children:
         - id: VehicleClowncarTrainee
         - id: BikeHorn
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   id: CrateFunClownCarTesting
@@ -56,3 +60,7 @@
         - id: VehicleClowncarAntag
         - id: BikeHorn
         - id: DrinkIrishCarBomb
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end

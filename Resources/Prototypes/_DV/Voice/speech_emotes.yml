@@ -118,6 +118,10 @@
   whitelist:
     components:
     - HarpySinger
+    # Nebula start
+    tags:
+    - ShadowkinEmotes
+    # Nebula end
   blacklist:
     tags:
     - SiliconEmotes
@@ -229,6 +233,10 @@
   whitelist:
     components:
     - HarpySinger
+    # Nebula start
+    tags:
+    - ShadowkinEmotes
+    # Nebula end
   blacklist:
     tags:
     - SiliconEmotes

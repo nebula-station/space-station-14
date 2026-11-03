@@ -16,9 +16,11 @@
     animationRotation: -45 # WWDP
     wideAnimationRotation: -135
     attackRate: 1.5
+    # Nebula start
     damage:
       types:
-        Slash: 8
+        Slash: 12
+    # Nebula end
   - type: PressureDamageChange
     appliedModifier: 1.875
   - type: PressureEfficiency
@@ -76,9 +78,11 @@
   - type: MeleeWeapon
     attackRate: 2.5 # "We have northstars at home"
     wideAnimationRotation: -135
+    # Nebula start
     damage:
       types:
-        Slash: 5
+        Slash: 7
+    # Nebula end
     soundHit:
       collection: AlienClaw
     angle: 30
@@ -126,9 +130,11 @@
   - type: Prying
   - type: MeleeWeapon
     attackRate: 1.0
+    # Nebula start
     damage:
       types:
-        Slash: 10
+        Slash: 15
+    # Nebula end
     soundHit:
       collection: MetalThud
     angle: 0

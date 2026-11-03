@@ -322,15 +322,30 @@
   - !type:HasOrgan
     organCategory: Head
   - !type:PulledByUser
+  # Nebula start
+  - !type:GrabStageCondition
+    stage: Suffocate
   - !type:StaminaCritical
+  - !type:MobStateCondition
+    mobstate: Dead
+    inverted: true
+  # Nebula end
 
 - type: combo
-  abstract: true # TODO: enable if finished
+  # abstract: true # Nebula edit
   parent: BaseCQCHeadCombo
   id: CQCNeckSnap
   attacks:
   - Harm
-  # TODO: break neck, damage head until dead
-  levelRequired: 60
+  # Nebula start
+  # levelRequired: 60
+  userEffects:
+  - !type:PopupMessage
+    messages:
+    - cqc-neck-snap
+  opponentEffects:
+  - !type:StopPull
+  - !type:SnapNeck
+  # Nebula end
 
 # TODO: choke out

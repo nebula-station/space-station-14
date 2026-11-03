@@ -15,6 +15,13 @@
           0.5
         Count: !type:Single
           0
+    # Nebula start
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -33,6 +40,13 @@
           1
         Count: !type:Single
           0
+    # Nebula start
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    # Nebula end
 
 - type: entity
   parent: MobHuman
@@ -51,3 +65,10 @@
           1
         Count: !type:Single
           0
+    # Nebula start
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    # Nebula end

@@ -50,6 +50,13 @@
           amount: 2
         - id: DrinkFourteenLokoCan
           amount: 2
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateFreezer
@@ -75,6 +82,13 @@
           amount: 2
         - id: FoodFrozenSundae
           amount: 2
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateFreezer
@@ -98,6 +112,13 @@
           amount: 2
         - id: FoodFrozenSnowconeMime
           amount: 2
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CratePlastic

@@ -1,0 +1,15 @@
+antag-tokens-balance = Tokens: { $balance }
+antag-tokens-description = A purchased antagonist is granted at minute 5-15 of a dynamic round. If it cannot be granted, the token is returned.
+antag-tokens-loading = Loading...
+antag-tokens-unavailable = Purchases are unavailable right now. Try again later.
+antag-tokens-not-linked = Link your Discord account to buy antagonists.
+antag-tokens-lobby-only = You can buy and cancel only in the lobby before the round.
+antag-tokens-active = Purchased: { $name }
+antag-tokens-active-elsewhere = Purchased on another server: { $name }
+antag-tokens-buy = Buy
+antag-tokens-cancel = Cancel purchase
+antag-tokens-not-enough-players = Not enough players: { $online } of { $required }
+antag-tokens-error-insufficient = Not enough tokens.
+antag-tokens-error-active = You already have an active purchase.
+antag-tokens-error-players = Not enough players for this role.
+antag-tokens-error-busy = The previous request is still being processed.

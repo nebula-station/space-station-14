@@ -15,3 +15,4 @@ collective-mind-dronemind = Dronemind
 collective-mind-bingle = Binglemind
 collective-mind-shadow-mind = Shadowmind
 collective-mind-xeno = Hivemind
+collective-mind-empathy = Empathy

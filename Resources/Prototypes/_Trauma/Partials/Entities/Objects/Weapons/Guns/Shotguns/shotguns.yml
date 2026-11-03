@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: BaseStockHit
+  parent: [ BaseStockHit, BaseItem ] # Nebula (physics fix)
   id: BaseWeaponShotgun
   abstract: true
 
@@ -11,4 +11,3 @@
   - type: WeaponClass
     class: Shotgun
   - type: Gun
-    fireRate: 1.5

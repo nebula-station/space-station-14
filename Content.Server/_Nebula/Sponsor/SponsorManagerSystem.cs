@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using System.Threading.Tasks;
 using Content.Server._Nebula.Administration;
 using Content.Shared._Nebula.Sponsor;
@@ -10,6 +11,7 @@ using Robust.Server.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Nebula.Sponsor;
 
@@ -17,6 +19,7 @@ public sealed partial class SponsorManagerSystem : EntitySystem
 {
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private NebulaServerApi _nebulaServerApi = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
 
     private readonly Dictionary<NetUserId, SponsorStatus> _cachedPlayers = [];
 
@@ -25,6 +28,13 @@ public sealed partial class SponsorManagerSystem : EntitySystem
         _playerManager.PlayerStatusChanged += OnPlayerStatusChanged;
 
         base.Initialize();
+    }
+
+    public override void Shutdown()
+    {
+        base.Shutdown();
+
+        _playerManager.PlayerStatusChanged -= OnPlayerStatusChanged;
     }
 
     [SubscribeNetworkEvent]
@@ -55,13 +65,40 @@ public sealed partial class SponsorManagerSystem : EntitySystem
     private async Task RefreshCachedPlayerStatus(ICommonSession session)
     {
         var status = await _nebulaServerApi.GetSponsorUserDataOrNull(session.UserId);
+
+        // The player may have left while the bot was answering, Disconnected has already cleared the cache.
+        if (session.Status is not (SessionStatus.Connected or SessionStatus.InGame))
+            return;
+
         if (status != null)
             _cachedPlayers[session.UserId] = status;
         else
             _cachedPlayers.Remove(session.UserId);
 
-        if (session.Status is SessionStatus.Connected or SessionStatus.InGame)
-            SendStatus(session);
+        SendStatus(session);
+    }
+
+    /// <summary>
+    /// Pretends the player has this subscription rank until they leave. Weekly tokens are counted by the bot and stay
+    /// as they are.
+    /// </summary>
+    /// <returns>False if no <see cref="SponsorTierPrototype"/> has this rank.</returns>
+    public bool TrySetFakeRank(ICommonSession session, int rank)
+    {
+        if (!_proto.EnumeratePrototypes<SponsorTierPrototype>().Any(tier => tier.Rank == rank))
+            return false;
+
+        _cachedPlayers[session.UserId] = new SponsorStatus { Rank = rank, StartedAt = DateTimeOffset.UtcNow };
+        SendStatus(session);
+        return true;
+    }
+
+    /// <summary>
+    /// Replaces a rank from <see cref="TrySetFakeRank"/> with the real status from the bot.
+    /// </summary>
+    public Task ClearFakeRank(ICommonSession session)
+    {
+        return RefreshCachedPlayerStatus(session);
     }
 
     public bool IsSponsor(NetUserId userId)

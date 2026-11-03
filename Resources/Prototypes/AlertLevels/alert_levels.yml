@@ -3,6 +3,7 @@
   name: alert-level-green
   announcement: alert-level-green-announcement
   instructions: alert-level-green-instructions
+  sound: /Audio/Announcements/announce.ogg # Nebula edit
   color: Green
   emergencyLightColor: LawnGreen
   shuttleTime: 600
@@ -12,7 +13,12 @@
   name: alert-level-blue
   announcement: alert-level-blue-announcement
   instructions: alert-level-blue-instructions
-  sound: /Audio/Misc/bluealert.ogg
+  # Nebula start
+  sound:
+    path: /Audio/_Nebula/Announcements/Alerts/blue_code_new_style.ogg
+    params:
+      volume: -2
+  # Nebula end
   color: DodgerBlue
   emergencyLightColor: DodgerBlue
   forceEnableEmergencyLights: true
@@ -23,7 +29,7 @@
   name: alert-level-yellow
   announcement: alert-level-yellow-announcement
   instructions: alert-level-yellow-instructions
-  sound: /Audio/Misc/notice1.ogg
+  sound: /Audio/_Nebula/Announcements/Alerts/yellow_code_new_style.ogg # Nebula edit
   color: Yellow
   emergencyLightColor: Goldenrod
   forceEnableEmergencyLights: true
@@ -34,7 +40,12 @@
   name: alert-level-red
   announcement: alert-level-red-announcement
   instructions: alert-level-red-instructions
-  sound: /Audio/Misc/redalert.ogg
+  # Nebula start
+  sound:
+    path: /Audio/_Nebula/Announcements/Alerts/red_code_new_style.ogg
+    params:
+      volume: -2
+  # Nebula end
   color: Red
   emergencyLightColor: Red
   forceEnableEmergencyLights: true
@@ -69,9 +80,9 @@
   id: DeltaNuke
   announcement: alert-level-delta-nuke-announcement
   sound:
-    path: /Audio/Misc/delta.ogg
+    path: /Audio/_Nebula/Announcements/Alerts/delta_code_new_style.ogg # Nebula edit
     params:
-      volume: -3
+      volume: -4 # Nebula edit
   color: DarkRed
   emergencyLightColor: Orange
 
@@ -82,7 +93,7 @@
   instructions: alert-level-epsilon-instructions
   selectable: false
   sound:
-    path: /Audio/Misc/epsilon.ogg
+    path: /Audio/_Nebula/Announcements/Alerts/epsilon_code_new_style.ogg # Nebula edit
     params:
       volume: -2
   disableSelection: true

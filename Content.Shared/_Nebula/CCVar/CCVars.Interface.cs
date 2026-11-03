@@ -73,4 +73,10 @@ public sealed partial class NCCVars
     /// </summary>
     public static readonly CVarDef<bool> HideInterfaceOnDeath =
         CVarDef.Create("nebula.hud.hide_on_death", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    ///     Whether security night vision outlines squad members in the color of their mob state, through walls.
+    /// </summary>
+    public static readonly CVarDef<bool> AllyOutline =
+        CVarDef.Create("nebula.hud.ally_outline", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 }

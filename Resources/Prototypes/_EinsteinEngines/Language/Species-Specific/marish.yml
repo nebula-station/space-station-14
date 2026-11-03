@@ -1,0 +1,36 @@
+- type: language
+  id: Marish
+  speech:
+    color: "#be3cc5"
+    # fontId: Lymphatic #* FONTS NOT ALREADY HERE ARE NOT BEING ADDED
+    speechVerbOverrides:
+    - chat-speech-verb-marish
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 2
+    maxSyllables: 5
+    replacement:
+    # Arcane-Edit-Start
+    - мар
+    - мррр
+    - маар
+    - аррр
+    - врурл
+    - ммар
+    - мвар
+    - млар
+    - млвар
+    - мваар
+    - маар
+    - лмвар
+    - влурл
+    - влмвар
+    - аррмав
+    - мвалвар
+    - врлурл
+    - вларрул
+    - вламур
+    - алвурм
+    - мрррав
+    - вурлмур
+    - урлмр

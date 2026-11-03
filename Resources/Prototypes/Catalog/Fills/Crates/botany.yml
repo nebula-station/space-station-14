@@ -69,6 +69,13 @@
         - id: PlantAnalyzer # Trauma
         - id: ChemistryBottleEZNutrient
           amount: 2
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateHydroponics
@@ -104,6 +111,13 @@
         - id: PeaSeeds
         - id: CherrySeeds
         - id: CottonSeeds
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end
 
 - type: entity
   parent: CrateHydroponics
@@ -115,3 +129,10 @@
     containers:
       entity_storage:
         id: HydroponicsTrayFlatpack
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.2
+    reflects:
+    - Energy
+    spread: 90
+  # Nebula end

@@ -3,3 +3,7 @@
 - type: metabolizerType
   id: Plasmaman
   name: metabolizer-type-plasmaman
+
+- type: metabolizerType
+  id: Shadowkin
+  name: metabolizer-type-shadowkin

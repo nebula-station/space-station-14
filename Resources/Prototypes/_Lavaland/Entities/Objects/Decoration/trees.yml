@@ -53,3 +53,7 @@
           Log:
             min: 2
             max: 5
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Ashwood
+  # Nebula end

@@ -33,7 +33,7 @@
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+      collection: AutoShotgunShot # Nebula edit
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
   - type: ItemSlots
@@ -82,7 +82,8 @@
     sprite: _Goobstation/Objects/Weapons/Guns/Lever/combatshotgun.rsi
   - type: GunRequiresWield # remove when inaccuracy on spreads is fixed
   - type: Gun
-    fireRate: 1
+    fireRate: 2 # Nebula
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/batrifle.ogg # Nebula edit
   - type: Tag
     tags:
     - WeaponShotgunKammerer
@@ -95,6 +96,10 @@
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
     autoCycle: false
+  # Nebula start
+  - type: GunSpreadModifier
+    spread: 0.7
+  # Nebula end
 
 - type: entity
   name: NZ CSG-242

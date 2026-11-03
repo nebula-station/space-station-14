@@ -2,23 +2,23 @@
 
 - type: damageModifierSet
   id: Silicon
+  # Nebula start
   coefficients:
     Heat: 0.8
     Blunt: 0.9
     Slash: 0.9
     Piercing: 0.9
-    Ballistic: 0.9
-    Shock: 1.5
-    Ion: 1.5
+  # Nebula end
 
 - type: damageModifierSet
   id: SiliconProtected
+  # Nebula start
   coefficients:
     Blunt: 0.6
     Slash: 0.6
     Piercing: 0.6
-    Ballistic: 0.6
     Heat: 0.5
+  # Nebula end
   flatReductions:
     Blunt: 5
     Slash: 5
@@ -27,84 +27,90 @@
 # Mech armor
 - type: damageModifierSet
   id: ThinArmor
+  # Nebula start
   coefficients:
     Blunt: 0.8
     Slash: 0.8
-    Piercing: 0.8
-    Ballistic: 0.9
+    Piercing: 0.9
     Shock: 1.2
     Heat: 0.8
     Ion: 1.0
+  # Nebula end
   flatReductions:
     Blunt: 3
     Heat: 2
 
 - type: damageModifierSet
   id: LightArmor
+  # Nebula start
   coefficients:
     Blunt: 0.75
     Slash: 0.75
-    Piercing: 0.75
-    Ballistic: 0.7
+    Piercing: 0.7
     Shock: 1.2
     Heat: 0.7
     Ion: 1.0
+  # Nebula end
   flatReductions:
     Blunt: 5
     Heat: 5
 
 - type: damageModifierSet
   id: MediumArmorNT
+  # Nebula start
   coefficients:
     Blunt: 0.6
     Slash: 0.6
-    Piercing: 0.6
-    Ballistic: 0.65
+    Piercing: 0.65
     Shock: 1.4
     Heat: 0.7
     Ion: 1.0
+  # Nebula end
   flatReductions:
     Blunt: 8
     Heat: 10
 
 - type: damageModifierSet
   id: HeavyArmorNT
+  # Nebula start
   coefficients:
     Blunt: 0.5
     Slash: 0.5
-    Piercing: 0.5
-    Ballistic: 0.5
+    Piercing: 0.35
     Shock: 1.8
     Heat: 0.6
     Ion: 1.0
+  # Nebula end
   flatReductions:
     Blunt: 15
     Heat: 15
 
 - type: damageModifierSet
   id: MediumArmorSyndi
+  # Nebula start
   coefficients:
     Blunt: 0.6
     Slash: 0.6
     Piercing: 0.6
-    Ballistic: 0.6
     Shock: 1.4
     Heat: 0.75
     Ion: 1.0
+  # Nebula end
   flatReductions:
     Blunt: 8
     Heat: 5
 
 - type: damageModifierSet
   id: HeavyArmorSyndi
+  # Nebula start
   coefficients:
     Blunt: 0.5
     Slash: 0.5
-    Piercing: 0.5
-    Ballistic: 0.4
+    Piercing: 0.4
     Shock: 1.8
     Heat: 0.7
     Ion: 1.0
+  # Nebula end
   flatReductions:
     Blunt: 10
     Heat: 7
@@ -112,128 +118,139 @@
 #Blob
 - type: damageModifierSet
   id: BaseBlob # ReactiveSpines
+  # Nebula start
   coefficients:
-    Blunt: 0.25
-    Slash: 0.25
-    Piercing: 0.25
-    Ballistic: 0.25
+    Blunt: 0.35
+    Slash: 0.35
+    Piercing: 0.35
     Heat: 2.00
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: ElectromagneticWebBlob # Explosive Lattice
+  # Nebula start
   coefficients:
-    Blunt: 0.50
-    Slash: 0.50
-    Piercing: 0.50
-    Ballistic: 0.50
+    Blunt: 0.40
+    Slash: 0.40
+    Piercing: 0.40
     Heat: 2.50
     Shock: 0.50
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: ExplosiveLatticeBlob # Explosive Lattice
+  # Nebula start
   coefficients:
-    Blunt: 0.75
-    Slash: 0.75
-    Piercing: 0.75
-    Ballistic: 0.75
+    Blunt: 0.25
+    Slash: 0.25
+    Piercing: 0.25
     Heat: 3.00
     Shock: 1.50
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: BlobMob # Blob mobs
+  # Nebula start
   coefficients:
     Blunt: 1
     Slash: 1
     Piercing: 1
-    Ballistic: 1
     Heat: 1.5
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: BlobBlobbernaut
+  # Nebula start
   coefficients:
     Blunt: 0.5
     Slash: 0.5
     Piercing: 0.5
-    Ballistic: 0.5
     Heat: 1.5
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: BlobReflective # If it reflects lasers, then it must be fragile?
+  # Nebula start
   coefficients:
-    Blunt: 7
-    Slash: 7
-    Piercing: 7
-    Ballistic: 7
-    Heat: 7
+    Blunt: 0.9
+    Slash: 0.9
+    Piercing: 0.9
+    Heat: 1.5
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: Bingle
+  # Nebula start
   coefficients:
-    Blunt: 0.9  # 10% reduction to all
+    Blunt: 0.9
     Slash: 0.9
     Piercing: 0.9
-    Ballistic: 0.9
     Shock: 0.9
     Heat: 0.9
-    Ion: 2.0 # double damage from ion
+    Ion: 2.0
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: BingleUpgraded
+  # Nebula start
   coefficients:
-    Blunt: 0.8  # 20% reduction to all
+    Blunt: 0.8
     Slash: 0.8
     Piercing: 0.8
-    Ballistic: 0.8
     Shock: 0.8
     Heat: 0.8
-    Ion: 2.0 # double damage from ion
+    Ion: 2.0
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: HisGraceAscended
+  # Nebula start
   coefficients:
     Blunt: 0.5
     Slash: 0.5
     Piercing: 0.5
-    Ballistic: 0.5
     Cold: 0.5
     Heat: 0.5
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: DevilDealPositive
+  # Nebula start
   coefficients:
     Blunt: 0.50
     Slash: 0.50
     Piercing: 0.50
-    Ballistic: 0.50
     Cold: 0.50
     Heat: 0.50
     Bloodloss: 0.50
     Poison: 0.50
     Radiation: 0.50
     Holy: 1.50
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
   id: DevilDealNegative
+  # Nebula start
   coefficients:
     Blunt: 2
     Slash: 2
     Piercing: 2
-    Ballistic: 2
     Cold: 2
     Bloodloss: 2
     Poison: 2
     Radiation: 2
     Holy: 2
+  # Nebula end
   ignoreArmorPierceFlags: All
 
 - type: damageModifierSet
@@ -243,12 +260,13 @@
 
 - type: damageModifierSet
   id: StrongCrates
+  # Nebula start
   coefficients:
     Blunt: 0.5
     Slash: 0.5
     Piercing: 0.5
-    Ballistic: 0.5
     Heat: 0.5
+  # Nebula end
   flatReductions:
     Blunt: 20
     Slash: 20
@@ -264,12 +282,10 @@
     Blunt: 0.9
     Slash: 0.9
     Piercing: 0.9
-    Ballistic: 0.9
   flatReductions:
     Blunt: 5
     Slash: 5
     Piercing: 5
-    Ballistic: 5
     Heat: 5
     Structural: 5
 
@@ -279,7 +295,6 @@
     Blunt: 5
     Slash: 5
     Piercing: 5
-    Ballistic: 5
     Heat: 3
 
 - type: damageModifierSet
@@ -290,12 +305,10 @@
     Piercing: 0.7
     Structural: 0.75
     Heat: 0.5
-    Ballistic: 0.5
   flatReductions:
     Blunt: 5
     Slash: 5
     Piercing: 5
-    Ballistic: 5
     Heat: 3
     Structural: 5
 
@@ -307,22 +320,20 @@
     Piercing: 0.8
     Structural: 0.85
     Heat: 0.5
-    Ballistic: 0.5
   flatReductions:
     Blunt: 5
     Slash: 5
     Piercing: 5
-    Ballistic: 5
     Heat: 3
     Structural: 3
 
 - type: damageModifierSet
   id: AdvancedSpirit
+  # Nebula start
   coefficients:
     Blunt: 0.0
     Slash: 0.0
     Piercing: 0.0
-    Ballistic: 0.0
     Shock: 0.0
     Cold: 0.0
     Poison: 0.0
@@ -331,3 +342,4 @@
     Heat: 0.0
     Caustic: 0.0
     Holy: 2.0
+  # Nebula end

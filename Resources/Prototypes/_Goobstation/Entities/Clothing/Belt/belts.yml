@@ -81,6 +81,10 @@
   name: Corporate Judo Belt
   description: Teaches the wearer NT Corporate Judo.
   components:
+  # Nebula start
+  - type: GearRustle
+    sound: null
+  # Nebula end
   - type: Sprite
     sprite: _Goobstation/Clothing/Belt/judobelt.rsi
   - type: Clothing
@@ -91,6 +95,8 @@
     experience:
       MartialArtCorporateJudo: 2
   - type: Storage
+    grid: # Nebula edit
+    - 0,0,3,1
     whitelist:
       tags:
       - CigPack
@@ -189,6 +195,7 @@
   name: grenadier belt
   description: A specialised belt rig to hold so many grenades that your arm gets tired from throwing them all. Can also store a sidearm and magazines for it.
   components:
+  - type: GearRustle # Nebula edit
   - type: Sprite
     sprite: _Goobstation/Clothing/Belt/grenaderig.rsi
   - type: Clothing
@@ -269,6 +276,7 @@
   name: contractor's chest rig
   description: "A chest rig with deep pockets, often used by contractors and bounty hunters."
   components:
+  - type: GearRustle # Nebula edit
   - type: Sprite
     sprite: Clothing/Belt/securitywebbing.rsi
   - type: Clothing

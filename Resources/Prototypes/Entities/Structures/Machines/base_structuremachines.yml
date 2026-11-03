@@ -29,6 +29,10 @@
         - MachineMask
         layer:
         - MachineLayer
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: StructuralMetallic
+  # Nebula end
 
 - type: entity
   abstract: true

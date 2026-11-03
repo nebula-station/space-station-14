@@ -44,6 +44,11 @@
       right:
       - state: inhand-right-mag
       - state: inhand-right-stripe
+  # Nebula start
+  - type: BallisticAmmoProvider
+    capacity: 10
+    proto: CartridgeCaselessRifle
+  # Nebula end
 
 - type: entity
   parent: BaseMagazinePistolCaselessRifle
@@ -53,6 +58,7 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRiflePractice
+    capacity: 10 # Nebula
   - type: Sprite
     layers:
     - state: base

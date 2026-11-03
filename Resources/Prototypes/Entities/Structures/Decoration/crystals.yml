@@ -69,6 +69,15 @@
           ShardCrystalGreen: &Min1Max2
             min: 1
             max: 2
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Glass
+  - type: Reflect
+    reflectProb: 0.5
+    reflects:
+    - Energy
+    spread: 75
+  # Nebula end
 
 - type: entity
   parent: BaseCrystalStalagmite

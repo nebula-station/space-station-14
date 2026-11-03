@@ -202,6 +202,22 @@
       raffle:
         settings: default
     - type: GhostTakeoverAvailable
+    # Nebula start
+    - type: MeleeWeapon
+      angle: 30
+      damage:
+        types:
+          Piercing: 10
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        60: Critical
+        125: Dead
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        60: 0.7
+        80: 0.5
+    # Nebula end
 
 # Spawnable ESS have a ghost role, equipment, a random name and a random colour.
 

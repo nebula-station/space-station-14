@@ -126,14 +126,17 @@
     sprintSpeedModifier: 0.75
   - type: Projectile
     impactEffect: BulletImpactEffectDisabler
+    # Nebula start
     damage:
       types:
         Heat: 0
+        Ion: 10
+    # Nebula end
     soundHit:
       collection: WeakHit
     forceSound: true
   - type: StaminaDamageOnCollide
-    damage: 8
+    damage: 33 # Nebula
 
 - type: entity
   parent: BaseBullet
@@ -171,9 +174,12 @@
     damage: 1
   - type: Projectile
     impactEffect: BulletImpactEffectDisabler
+    # Nebula start
     damage:
       types:
         Heat: 0
+        Ion: 5
+    # Nebula end
     soundHit:
       collection: WeakHit
     forceSound: true
@@ -249,9 +255,18 @@
   name: disabling laser barrage
   components:
   - type: ProjectileSpread
-    proto: BulletDisablerSmgStunning
+    proto: BulletDisablerSmg # Nebula
     count: 3 #bit stronger than a disabler if you hit your shots you goober, still not a 2 hit stun though
     spread: 9
+  # Nebula start
+  - type: Projectile
+    damage:
+      types:
+        Heat: 0
+        Ion: 4
+  - type: StaminaDamageOnCollide
+    damage: 15
+  # Nebula end
 
 # Energy crossbow
 - type: entity
@@ -272,9 +287,13 @@
     - state: crossbowbolt
       shader: unshaded
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Radiation: 1
+        Piercing: 2
+        Shock: 5
+        Ion: 10
+    # Nebula end
   - type: Solution
     solution:
       reagents:
@@ -283,3 +302,7 @@
   - type: SolutionInjectOnProjectileHit
     transferAmount: 7.5
     solution: ammo
+  # Nebula start
+  - type: StaminaDamageOnCollide
+    damage: 45
+  # Nebula end

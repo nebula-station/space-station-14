@@ -7,9 +7,11 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    # Nebula start
     damage:
       types:
-        Ballistic: 10
+        Piercing: 10
+    # Nebula end
   - type: Sprite
     sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/smartgun.rsi
     layers:

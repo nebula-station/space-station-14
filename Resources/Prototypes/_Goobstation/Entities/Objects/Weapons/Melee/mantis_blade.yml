@@ -19,13 +19,15 @@
     swingLeft: true
     wideAnimationRotation: 135
     attackRate: 1.5
+    # Nebula start
     damage:
       types:
-        Slash: 10
+        Slash: 12
         Piercing: 4
         Structural: 15
       woundSeverityMultipliers:
         Slash: 2.5
+    # Nebula end
     soundHit: &sound
       path: /Audio/Weapons/bladeslice.ogg
   - type: Tag

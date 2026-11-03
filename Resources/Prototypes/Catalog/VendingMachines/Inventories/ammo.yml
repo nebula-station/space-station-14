@@ -16,6 +16,9 @@
     MagazineBoxRifle: 6
     MagazineBoxRiflePractice: 3
 
+    MagazineBoxRifle762: 6
+    MagazineBoxRifle762Practice: 3
+    # Orion end
     BoxLethalshot: 6
     BoxShotgunPractice: 3
   # <Trauma>

@@ -132,7 +132,6 @@
       Thirst:
         prototype: DionaThirst
   - type: Damageable
-    damageModifierSet: Diona
   # <Trauma>
   #- type: DamageVisuals
   #  damageOverlayGroups:
@@ -219,6 +218,13 @@
   - type: Rootable
   - type: Sprinter # Nebula change
     canSprint: false
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic
@@ -423,3 +429,10 @@
   components:
   - type: IsDeadIC
   - type: RandomHumanoidAppearance
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end

@@ -24,6 +24,8 @@ skewed-hud-mark = { $order } · { $location }
 skewed-hud-marker-distance = { $meters } м
 skewed-hud-task-timer = ТАЙМЕР
 skewed-hud-timer-done = { $name } — истёк
+skewed-hud-task-implant = ТРЕКЕР
+skewed-hud-implant-crit = { $name } КРИТ · { $location }
 
 skewed-hud-signal-lost = СВЯЗЬ С СЕРВЕРАМИ ПОТЕРЯНА
 skewed-hud-signal-lost-sub = { $tag } // NO CARRIER

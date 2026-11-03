@@ -70,4 +70,12 @@
 
   Can only be performed while prone. Knocks the opponent down and forces the user back on their feet, even if they are manually crawling.
 
+  ### Neck Snap
+
+  <Box>
+    <TextureEmbed Sprite="_Goobstation/Interface/Misc/intents.rsi" State="harm"/>
+  </Box>
+
+  Aim at the head of an opponent you hold in a choke grab while they are in stamina crit. Breaks their neck and kills them.
+
 </Document>

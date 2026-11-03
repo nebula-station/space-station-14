@@ -53,7 +53,7 @@
   abstract: true
   components:
   - type: Damageable
-    damageModifierSet: Metallic # Trauma - Was StructuralMetallic
+    damageModifierSet: StructuralMetallic # Nebula
   - type: Injurable
     damageContainer: StructuralInorganic
 

@@ -203,11 +203,9 @@
   - type: BodyEmotes
     soundsId: ReptilianBodyEmotes
   - type: Damageable
-    damageModifierSet: Scale
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw
-    angle: 30
     animation: WeaponArcClaw
     damage:
       types:
@@ -226,6 +224,13 @@
       301: 0.9
       295: 0.8
       285: 0.7
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
   #- type: Wagging # Trauma - moved to tail onAdd
 
 - type: entity

@@ -12,3 +12,8 @@
   license: "CC0-1.0"
   copyright: "Generated with ffmpeg by Lytheriia"
   source: "https://github.com/Lytheriia/nebulla"
+
+- files: ["tablet_order.ogg"]
+  license: "CC0-1.0"
+  copyright: "Made by Lytheriia"
+  source: "https://github.com/Lytheriia/nebulla"

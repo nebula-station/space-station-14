@@ -86,3 +86,15 @@
     dropItems: true
   - type: MeleeWeapon
     bluntStaminaDamageFactor: 1.5
+    angle: 0 # Nebula
+    # Nebula start
+    damage:
+      types:
+        Blunt: 1
+  - type: UseDelay
+    delays:
+      default:
+        length: 1
+      telebaton:
+        length: 4
+  # Nebula end

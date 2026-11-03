@@ -41,5 +41,7 @@
                Margin="0 8 0 0" />
         <CheckBox Name="HideOnDeathCheckBox"
                   Text="{Loc 'nebula-options-hud-hide-on-death'}" />
+        <CheckBox Name="AllyOutlineCheckBox"
+                  Text="{Loc 'nebula-options-hud-ally-outline'}" />
     </BoxContainer>
 </Control>

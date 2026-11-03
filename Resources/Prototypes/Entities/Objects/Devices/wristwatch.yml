@@ -36,6 +36,12 @@
   - type: PhysicalComposition
     materialComposition:
       Steel: 300
+  # Nebula start
+  - type: Armor
+    coverage:
+    - Hand
+    modifiers: {}
+  # Nebula end
 
 - type: entity
   id: WristwatchGold
@@ -58,3 +64,9 @@
   - type: PhysicalComposition
     materialComposition:
       Gold: 500
+  # Nebula start
+  - type: Armor
+    coverage:
+    - Hand
+    modifiers: {}
+  # Nebula end

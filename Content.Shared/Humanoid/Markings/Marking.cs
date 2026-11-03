@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._Nebula.Humanoid.Markings;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
@@ -35,6 +36,14 @@ public partial record struct Marking
     /// </summary>
     public bool Forced;
 
+    // Nebula start
+    /// <summary>
+    /// Optional blend into a second color, null when the marking is a single color per sprite.
+    /// </summary>
+    [DataField]
+    public MarkingGradient? Gradient;
+    // Nebula end
+
     public Marking()
     {
         _markingColors = new();
@@ -55,12 +64,13 @@ public partial record struct Marking
     {
         return MarkingId.Equals(other.MarkingId)
             && MarkingColors.SequenceEqual(other.MarkingColors)
-            && Forced.Equals(other.Forced);
+            && Forced.Equals(other.Forced)
+            && Gradient.Equals(other.Gradient); // Nebula edit
     }
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(MarkingId, MarkingColors, Forced);
+        return HashCode.Combine(MarkingId, MarkingColors, Forced, Gradient); // Nebula edit
     }
 
     public Marking WithColor(Color color) =>

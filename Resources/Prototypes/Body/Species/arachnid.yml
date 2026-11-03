@@ -189,6 +189,13 @@
     sprite:
       sprite: Effects/creampie.rsi
       state: creampie_arachnid
+  # Nebula start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  # Nebula end
 
 - type: entity
   parent: OrganBaseOrganic

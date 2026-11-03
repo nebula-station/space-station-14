@@ -165,7 +165,12 @@
                             </BoxContainer>
                             <!-- Skin -->
                             <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Vertical">
-                                <Label Text="{Loc 'humanoid-profile-editor-skin-color-label'}" />
+                                <!-- Nebula start -->
+                                <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                                    <Label Text="{Loc 'humanoid-profile-editor-skin-color-label'}" HorizontalExpand="True" />
+                                    <Button Name="CopySkinColorButton" Text="{Loc 'humanoid-profile-editor-copy-skin-color-button'}" />
+                                </BoxContainer>
+                                <!-- Nebula end -->
                                 <Slider HorizontalExpand="True" Name="Skin" MinValue="0" MaxValue="100" Value="20" />
                                 <BoxContainer Name="RgbSkinColorContainer" Visible="False" Orientation="Vertical" HorizontalExpand="True"></BoxContainer>
                             </BoxContainer>

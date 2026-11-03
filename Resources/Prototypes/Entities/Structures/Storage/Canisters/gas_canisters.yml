@@ -126,10 +126,6 @@
       whitelist:
         components:
           - GasTank
-  - type: Explosive
-    explosionType: Minibomb # Mostly a pressure wave explosive so primarily blunt damage
-    maxIntensity: 100
-    tileBreakScale: 0.2 # Keeps the can from spacing all the hot gas it has now vented :). If this proves to be too much it can be removed.
   - type: StaticPrice
     price: 200
   - type: AccessReader

@@ -40,6 +40,10 @@
     solution: tank
   - type: StaticPrice
     price: 500
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChem
@@ -53,6 +57,10 @@
   - type: RadiationSource
     intensity: 1.0
     slope: 0.25
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entityTable
   id: RandomChemicalBarrel
@@ -81,6 +89,11 @@
   parent: BaseBarrelChem
   id: BarrelChemEmpty
   suffix: Empty
+  components:
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChem
@@ -92,6 +105,10 @@
       reagents:
       - ReagentId: Iodine
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChem
@@ -103,6 +120,10 @@
       reagents:
       - ReagentId: Fluorine
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChem
@@ -114,6 +135,10 @@
       reagents:
       - ReagentId: Chlorine
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChem
@@ -125,6 +150,10 @@
       reagents:
       - ReagentId: Ethanol
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChem
@@ -136,6 +165,10 @@
       reagents:
       - ReagentId: Phosphorus
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChem
@@ -147,6 +180,10 @@
       reagents:
       - ReagentId: Mercury
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChem
@@ -160,6 +197,10 @@
       reagents:
       - ReagentId: Silicon
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChem
@@ -174,11 +215,20 @@
       reagents:
       - ReagentId: SpaceLube
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChemRadioactive
   id: BaseBarrelChemRadioactiveEmpty
   suffix: Empty
+  components:
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChemRadioactive
@@ -190,6 +240,10 @@
       reagents:
       - ReagentId: Radium
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end
 
 - type: entity
   parent: BaseBarrelChemRadioactive
@@ -201,3 +255,7 @@
       reagents:
       - ReagentId: Uranium
         Quantity: 960
+  # Nebula start
+  - type: Damageable
+    damageModifierSet: Metallic
+  # Nebula end

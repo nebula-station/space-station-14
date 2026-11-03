@@ -1,0 +1,4 @@
+- files: ["sh39.ogg", "shotgun_cmb.ogg", "shotgun_cmb_insert.ogg", "shotgun_cmb_pump.ogg", "t35.ogg", "v51_1.ogg", "v51_2.ogg", "v51_3.ogg", "v51_4.ogg", "v51_empty.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from Orion-Station-14"
+  source: "https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14/pull/213"

@@ -11,6 +11,7 @@
   - type: UseDelayBlockMelee
     delays:
     - stunbaton
+  - type: StunDelayGroup # Nebula edit
   - type: KnowledgeGrantOnWear
     blocked:
       MartialArtCorporateJudo: true
@@ -18,15 +19,13 @@
     angle: 0 # no more wideswing
   - type: StaminaDamageOnHit
     damage: 15 # now 55 total over time
-    overtime: 5
-    lightAttackOvertimeDamageMultiplier: 4
     lightAttackDamageMultiplier: 4
   - !Remove type: StaminaDamageOnCollide
   - !Remove type: LandAtCursor
   - type: UseDelay
     delays:
       stunbaton:
-        length: 2.5
+        length: 4.5 # Nebula edit
   - type: Item
     shape: !Clear
     - 0,0,2,0

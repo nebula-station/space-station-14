@@ -38,7 +38,6 @@
   - type: MeleeWeapon
     animationRotation: -135 # WWDP
     wideAnimationRotation: -135
-    heavyPartDamageMultiplier: 0.75 # Trauma
     damage:
       types:
         Slash: 10
@@ -295,9 +294,11 @@
   - type: MeleeWeapon
     wideAnimationRotation: 90
     attackRate: 1.2
+    # Nebula start
     damage:
       types:
-        Slash: 5
+        Slash: 6
+    # Nebula end
   - type: DamageOtherOnHit
     damage:
       types:
@@ -347,10 +348,12 @@
     sprite: Objects/Weapons/Melee/shiv.rsi
     state: icon
   - type: MeleeWeapon
-    attackRate: 2 # Trauma - was 1.5
+    attackRate: 1.5 # Nebula
+    # Nebula start
     damage:
       types:
-        Slash: 7 # Trauma - was 5.5
+        Slash: 6
+    # Nebula end
   - type: Item
     sprite: Objects/Weapons/Melee/shiv.rsi
   - type: DisarmMalus
@@ -373,10 +376,12 @@
     graph: ReinforcedShiv
     node: icon
   - type: MeleeWeapon
-    attackRate: 2 # Trauma - was 1.5
+    attackRate: 1.5 # Nebula
+    # Nebula start
     damage:
       types:
-        Slash: 7 # Trauma - was 8
+        Slash: 8
+    # Nebula end
   - type: Item
     sprite: Objects/Weapons/Melee/reinforced_shiv.rsi
   - type: Sprite
@@ -399,10 +404,12 @@
     graph: PlasmaShiv
     node: icon
   - type: MeleeWeapon
-    attackRate: 2 # Trauma - was 1.5
+    attackRate: 1.5 # Nebula
+    # Nebula start
     damage:
       types:
-        Slash: 7 # Trauma - was 10
+        Slash: 10
+    # Nebula end
   - type: Item
     sprite: Objects/Weapons/Melee/plasma_shiv.rsi
   - type: Sprite
@@ -425,11 +432,13 @@
     graph: UraniumShiv
     node: icon
   - type: MeleeWeapon
-    attackRate: 2 # Trauma - Was 1.5
+    attackRate: 1.5 # Nebula
+    # Nebula start
     damage:
       types:
-        Slash: 3 # Trauma - was 7
+        Slash: 6
         Radiation: 4
+    # Nebula end
   - type: Item
     sprite: Objects/Weapons/Melee/uranium_shiv.rsi
   - type: Sprite
@@ -458,14 +467,14 @@
   - type: EmbeddableProjectile
     sound: /Audio/Weapons/star_hit.ogg
     offset: -0.15,0.0
-    removalTime: 0.5 # Trauma, was 1.5
+    removalTime: 1.5 # Nebula
   - type: LandAtCursor
   - type: DamageOtherOnHit
-    increaseOnly: true # Trauma - apply modifiers, but ignore decreases
     damage:
       types:
         Slash: 10
         Piercing: 15
+    ignoreResistances: true # Nebula
   - type: Item
     sprite: Objects/Weapons/Melee/throwing_knife.rsi
   - type: ThrowingAngle

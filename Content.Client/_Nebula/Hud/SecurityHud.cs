@@ -11,6 +11,7 @@ namespace Content.Client._Nebula.Hud;
 /// </summary>
 public enum SecurityHudTaskKind : byte
 {
+    Implant,
     Loss,
     Timer,
     Mark,
@@ -35,6 +36,11 @@ public static class SecurityHud
     /// Losses and timers come and go on their own, apart from the tasks sent by the server.
     /// </summary>
     public const string AlertSource = "security-alerts";
+
+    /// <summary>
+    /// Crits reported by security tracking implants, with their markers.
+    /// </summary>
+    public const string ImplantSource = "security-implant";
 
     public static SkewedHudLine Member(string name, MobState state)
     {
@@ -63,9 +69,15 @@ public static class SecurityHud
     {
         return new SkewedHudTask
         {
-            Source = kind is SecurityHudTaskKind.Loss or SecurityHudTaskKind.Timer ? AlertSource : Source,
+            Source = kind switch
+            {
+                SecurityHudTaskKind.Implant => ImplantSource,
+                SecurityHudTaskKind.Loss or SecurityHudTaskKind.Timer => AlertSource,
+                _ => Source,
+            },
             Label = Loc.GetString(kind switch
             {
+                SecurityHudTaskKind.Implant => "skewed-hud-task-implant",
                 SecurityHudTaskKind.Loss => "skewed-hud-task-loss",
                 SecurityHudTaskKind.Timer => "skewed-hud-task-timer",
                 SecurityHudTaskKind.Mark => "skewed-hud-task-mark",
@@ -75,7 +87,10 @@ public static class SecurityHud
             }),
             Text = text,
             Order = (int) kind,
-            Urgent = kind is SecurityHudTaskKind.Loss or SecurityHudTaskKind.Timer or SecurityHudTaskKind.Mark,
+            Urgent = kind is SecurityHudTaskKind.Implant
+                or SecurityHudTaskKind.Loss
+                or SecurityHudTaskKind.Timer
+                or SecurityHudTaskKind.Mark,
         };
     }
 }
