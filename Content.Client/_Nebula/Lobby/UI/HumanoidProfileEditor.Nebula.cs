@@ -20,10 +20,18 @@ public sealed partial class HumanoidProfileEditor
         if (Profile == null)
             return;
 
-        var markings = HumanoidCharacterAppearance.DefaultWithSpecies(Profile.Species, Profile.Sex).Markings;
-        Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithMarkings(markings));
+        var cleared = Profile.Appearance.WithMarkings([]);
+        Profile = Profile.WithCharacterAppearance(HumanoidCharacterAppearance.EnsureValid(cleared, Profile.Species, Profile.Sex));
         UpdateMarkings();
         ReloadPreview();
+    }
+
+    private void CopySkinColorToMarkings()
+    {
+        if (Profile == null)
+            return;
+
+        _markingsModel.SetAllMarkingColors(Profile.Appearance.SkinColor);
     }
 
     /// <summary>

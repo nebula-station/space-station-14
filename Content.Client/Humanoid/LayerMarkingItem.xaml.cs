@@ -118,6 +118,8 @@ public sealed partial class LayerMarkingItem : BoxContainer, ISearchableControl
             {
                 sliders[i].Color = marking.MarkingColors[i];
             }
+
+            _gradientControl?.SetGradient(marking.Gradient, GradientRoots(marking)); // Nebula edit
         }
     }
 
@@ -197,6 +199,8 @@ public sealed partial class LayerMarkingItem : BoxContainer, ISearchableControl
                 _markingsModel.TrySetMarkingColor(_organ, _layer, _markingPrototype.ID, colorIndex, selector.Color);
             };
         }
+
+        AddGradientControl(marking); // Nebula edit
     }
 
     public bool CheckMatchesSearch(string query)

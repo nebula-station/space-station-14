@@ -20,6 +20,7 @@ public abstract partial class SharedVisualBodySystem
             {
                 Forced = true,
                 IsChildMarking = true,
+                Gradient = marking.Gradient, // Nebula edit
             };
 
             forcedColors.Add((childMarking, childProto));
