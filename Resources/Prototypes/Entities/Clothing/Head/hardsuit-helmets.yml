@@ -416,6 +416,10 @@
   name: chief engineer's hardsuit helmet # Goob edit
   description: Special hardsuit helmet, made for the chief engineer of the station. # Goob edit
   components:
+  # Nebula start
+  - type: ConcussionResistance
+    resistance: 0.5
+  # Nebula end
   # <Trauma>
   # </Trauma>
   - type: Sprite
@@ -579,6 +583,10 @@
   name: blood-red hardsuit helmet # Goob edit
   description: A heavily armored helmet designed for work in special operations. Property of Gorlex Marauders.
   components:
+  # Nebula start
+  - type: ConcussionResistance
+    resistance: 0.2
+  # Nebula end
   # <Trauma>
   - type: FlashImmunity
   - type: FlashSoundSuppression
@@ -634,6 +642,10 @@
   name: syndicate elite hardsuit helmet # Goob edit
   description: An elite version of the blood-red hardsuit's helmet, with heat-resistant armor and fireproofing. Property of Gorlex Marauders. # Trauma - align desc with resistances
   components:
+  # Nebula start
+  - type: ConcussionResistance
+    resistance: 0.35
+  # Nebula end
   # <Trauma>
   # </Trauma>
   - type: Sprite
@@ -679,6 +691,10 @@
   name: syndicate hardsuit helmet # Goob edit
   description: A bulked up version of the blood-red hardsuit's helmet, purpose-built for the commander of a syndicate operative squad. Has significantly improved armor for those deadly front-lines firefights. # Goob edit
   components:
+  # Nebula start
+  - type: ConcussionResistance
+    resistance: 0.35
+  # Nebula end
   # <Trauma>
   - type: FlashImmunity
   - type: FlashSoundSuppression
@@ -722,6 +738,10 @@
   name: cybersun juggernaut helmet
   description: Made of compressed red matter, this helmet was designed in the Tau chromosphere facility.
   components:
+  # Nebula start
+  - type: ConcussionResistance
+    resistance: 0.8
+  # Nebula end
   # <Trauma>
   # </Trauma>
   - type: Sprite
@@ -763,6 +783,10 @@
   name: wizard hardsuit helmet
   description: A bizarre gem-encrusted helmet that radiates magical energies.
   components:
+  # Nebula start
+  - type: ConcussionResistance
+    resistance: 0.9
+  # Nebula end
   # <Trauma>
   - type: ExplosionResistance
   # </Trauma>

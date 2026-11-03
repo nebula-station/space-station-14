@@ -1,3 +1,4 @@
+using Content.Client._Arcane.Flash;
 using Content.Shared.Flash;
 using Content.Shared.Flash.Components;
 using Content.Shared.StatusEffectNew;
@@ -13,7 +14,7 @@ public sealed partial class FlashSystem : SharedFlashSystem
     [Dependency] private IOverlayManager _overlayMan = default!;
     [Dependency] private StatusEffectsSystem _statusEffects = default!;
 
-    private FlashOverlay _overlay = default!;
+    private FlashAfterimageOverlay _overlay = default!; // Nebula edit
 
     public override void Initialize()
     {
@@ -26,7 +27,7 @@ public sealed partial class FlashSystem : SharedFlashSystem
     {
         if (_player.LocalEntity == args.Target)
         {
-            _overlay.RequestScreenTexture = true;
+            _overlay.Start(); // Nebula edit
             _overlayMan.AddOverlay(_overlay);
         }
     }
@@ -39,8 +40,7 @@ public sealed partial class FlashSystem : SharedFlashSystem
 
         if (!_statusEffects.HasEffectComp<FlashedStatusEffectComponent>(args.Target))
         {
-            _overlay.ScreenshotTexture = null;
-            _overlay.RequestScreenTexture = false;
+            _overlay.Reset(); // Nebula edit
             _overlayMan.RemoveOverlay(_overlay);
         }
     }
@@ -48,18 +48,26 @@ public sealed partial class FlashSystem : SharedFlashSystem
     [SubscribeLocalEvent]
     private void OnPlayerAttached(Entity<FlashedStatusEffectComponent> ent, ref StatusEffectRelayedEvent<LocalPlayerAttachedEvent> args)
     {
-        _overlay.RequestScreenTexture = true;
+        _overlay.Start(captureFrame: false); // Nebula edit
         _overlayMan.AddOverlay(_overlay);
     }
 
     [SubscribeLocalEvent]
     private void OnPlayerDetached(Entity<FlashedStatusEffectComponent> ent, ref StatusEffectRelayedEvent<LocalPlayerDetachedEvent> args)
     {
-        if (_player.LocalEntity is null || _statusEffects.HasEffectComp<FlashedStatusEffectComponent>(_player.LocalEntity.Value))
+        if (_player.LocalEntity is { } player && player != args.AppliedTo && _statusEffects.HasEffectComp<FlashedStatusEffectComponent>(player)) // Nebula edit
             return;
 
-        _overlay.ScreenshotTexture = null;
-        _overlay.RequestScreenTexture = false;
+        _overlay.Reset(); // Nebula edit
         _overlayMan.RemoveOverlay(_overlay);
     }
+
+    // Nebula start
+    public override void Shutdown()
+    {
+        _overlayMan.RemoveOverlay(_overlay);
+        _overlay.Dispose();
+        base.Shutdown();
+    }
+    // Nebula end
 }

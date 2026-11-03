@@ -17,6 +17,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Player;
+using Content.Client.Audio;
 
 namespace Content.Trauma.Client.AudioMuffle;
 
@@ -36,6 +37,7 @@ public sealed partial class AudioMuffleSystem : SharedAudioMuffleSystem
     [Dependency] private EntityQuery<RelayInputMoverComponent> _relayedQuery = default!;
     [Dependency] private EntityQuery<AiEyeComponent> _aiEyeQuery = default!;
     [Dependency] private EntityQuery<SoundBlockerComponent> _blockerQuery = default!;
+    [Dependency] private ContentAudioSystem _contentAudio = default!; // Nebula edit
 
     // Tile indices -> blocker entities
     [ViewVariables]
@@ -502,7 +504,17 @@ public sealed partial class AudioMuffleSystem : SharedAudioMuffleSystem
         return blocker.CachedBlockerCost.Value;
     }
 
+    // Nebula start
     private float OnOcclusion(MapCoordinates listener, Vector2 delta, float distance, EntityUid? ignoredEnt)
+    {
+        var hearing = _contentAudio.ListenerOcclusion;
+        return float.IsPositiveInfinity(hearing)
+            ? hearing
+            : hearing + GetEnvironmentOcclusion(listener, delta, distance, ignoredEnt);
+    }
+
+    private float GetEnvironmentOcclusion(MapCoordinates listener, Vector2 delta, float distance, EntityUid? ignoredEnt)
+    // Nebula end
     {
         if (distance < 0.1f || ResolvePlayer() is not { } player)
             return 0f;

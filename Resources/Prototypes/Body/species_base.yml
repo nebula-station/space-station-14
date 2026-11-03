@@ -199,7 +199,18 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
-  - type: ERPManager # Nebula
+  # Nebula start
+  - type: ERPManager
+  - type: ConcussionThreshold
+    thresholds:
+      0: Sane
+      5: Minor
+      50: Hard
+      100: Overwhelmed
+    healRate: 4
+    speedModifierThresholds:
+      Hard: 0.7
+  # Nebula end
 
 - type: entity
   abstract: true

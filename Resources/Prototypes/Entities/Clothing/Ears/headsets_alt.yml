@@ -5,6 +5,10 @@
   name: headset
   description: An updated, modular intercom that fits over the head. Takes encryption keys.
   components:
+  # Nebula start
+  - type: ConcussionResistance
+    resistance: 0.4
+  # Nebula end
   - type: Sprite
     state: icon_alt
   - type: Clothing
