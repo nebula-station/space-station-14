@@ -399,7 +399,7 @@
         factor: 8
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Cybernetic ]
+          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Cybernetic, Feroxi, Shadowkin ] # Nebula edit
       # Convert Pluox into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -434,7 +434,7 @@
         factor: 8
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Cybernetic ]
+          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Cybernetic, Feroxi, Shadowkin ] # Nebula edit
       # Convert Pluox into CO2.
       - !type:ModifyLungGas
         conditions:

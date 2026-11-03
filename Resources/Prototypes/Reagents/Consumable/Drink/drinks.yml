@@ -514,6 +514,25 @@
           Ammonia: 1.0
           WaterVapor: -1.0
       # </Imp>
+      # Nebula start
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Feroxi, FeroxiDehydrated ]
+      - !type:Satiate
+        satiationType: Thirst
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Feroxi, FeroxiDehydrated ]
+        factor: 2
+      - !type:ModifyLungGas
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Feroxi, FeroxiDehydrated ]
+        ratios:
+          CarbonDioxide: 0.5
+          WaterVapor: -1.0
+      # Nebula end
 
 - type: reagent
   id: Ice

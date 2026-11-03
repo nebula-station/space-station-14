@@ -50,6 +50,11 @@ public sealed partial class PassiveDamageSystem : EntitySystem
             if (comp.NextDamage > curTime)
                 continue;
 
+            // Nebula start
+            if (comp.DamageCap != 0 && _damageable.GetTotalDamage((uid, damage)) >= comp.DamageCap)
+                continue;
+            // Nebula end
+
             // Set the next time they can take damage
             comp.NextDamage = curTime + TimeSpan.FromSeconds(1f);
             Dirty(uid, comp);

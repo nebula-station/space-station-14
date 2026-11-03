@@ -1,0 +1,309 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Feroxi
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 6
+      required: true
+      default: [ FeroxiEars ]
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 6
+      required: true
+      default: [ FeroxiSnout ]
+    enum.HumanoidVisualLayers.SnoutCover:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Face:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Eyes:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 6
+      required: true
+      default: [ FeroxiTailAndDorsal ]
+    enum.HumanoidVisualLayers.TailOverlay:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Wings:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.WingsBehind:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Overlay:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Special:
+      limit: 6
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceFeroxi
+  categories: [ HideSpawnMenu ]
+  name: feroxi appearance
+  components:
+  - type: Inventory
+    speciesId: feroxi
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/displacement.rsi
+            state: jumpsuit-female
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/displacement.rsi
+            state: shoes
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/displacement.rsi
+            state: jumpsuit
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/displacement.rsi
+            state: shoes
+  - type: InitialBody
+    organs:
+      Torso: OrganFeroxiTorso
+      Head: OrganFeroxiHead
+      Tail: OrganFeroxiTail
+      ArmLeft: OrganFeroxiArmLeft
+      ArmRight: OrganFeroxiArmRight
+      HandRight: OrganFeroxiHandRight
+      HandLeft: OrganFeroxiHandLeft
+      LegLeft: OrganFeroxiLegLeft
+      LegRight: OrganFeroxiLegRight
+      FootLeft: OrganFeroxiFootLeft
+      FootRight: OrganFeroxiFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganFeroxiLungs
+      Heart: OrganAnimalHeart
+      Stomach: OrganFeroxiStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Feroxi
+
+- type: entity
+  parent:
+  - AppearanceFeroxi
+  - BaseSpeciesMobOrganic
+  id: MobFeroxi
+  name: Urist McFin
+  components:
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: NormalSatiationHunger
+      Thirst:
+        prototype: FeroxiThirst
+  - type: Speech
+    speechSounds: Tenor
+    speechVerb: Feroxi
+    allowedEmotes: [ 'Gnash', 'Thump' ]
+  - type: Vocal
+    emoteSounds: MaleFeroxi
+  - type: BodyEmotes
+    soundsId: FeroxiBodyEmotes
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 30
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 7
+  - type: TypingIndicator
+    proto: feroxi
+  - type: FeroxiDehydrate
+    hydratedMetabolizer: Feroxi
+    dehydratedMetabolizer: FeroxiDehydrated
+    dehydrationThreshold: 150
+  - type: LanguageSpeaker
+    speaks:
+    - TauCetiBasic
+    - Nehina
+    understands:
+    - TauCetiBasic
+    - Nehina
+  - type: CreamPied
+    sprite:
+      sprite: _DV/Effects/creampie.rsi
+      state: creampie_feroxi
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - AnomalyHost
+    - Feroxi
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganHumanInternal ]
+  id: OrganFeroxiLungs
+  name: feroxian lungs and gills
+  description: A pair of amphibious lungs along with gills, filtering oxygen out of the air and water alike.
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Feroxi ]
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganAnimalInternal ]
+  id: OrganFeroxiStomach
+  name: feroxian stomach
+  components:
+  - type: Stomach
+    specialDigestible:
+      components:
+      - BodyPart
+      tags:
+      - ReptilianFood
+      - Meat
+      - Pill
+      - Crayon
+      - Paper
+  - type: Metabolizer
+    metabolizerTypes: [ Feroxi, Animal ]
+
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganFeroxi
+  abstract: true
+  suffix: feroxi
+
+- type: entity
+  parent: OrganFeroxi
+  id: OrganFeroxiExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Mobs/Species/Feroxi/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Goobstation/Mobs/Species/Feroxi/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Feroxi
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorsoTailed, OrganFeroxiExternal ]
+  id: OrganFeroxiTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFeroxiExternal ]
+  id: OrganFeroxiHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.HeadSide
+    - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.FacialHair
+
+- type: entity
+  parent: [ OrganBaseTail, OrganFeroxiExternal ]
+  id: OrganFeroxiTail
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail
+  - type: VisualOrgan
+    data:
+      sprite: _Trauma/empty.rsi
+      state: empty
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganFeroxiExternal ]
+  id: OrganFeroxiArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganFeroxiExternal ]
+  id: OrganFeroxiArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganFeroxiExternal ]
+  id: OrganFeroxiHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganFeroxiExternal ]
+  id: OrganFeroxiHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganFeroxiExternal ]
+  id: OrganFeroxiLegLeft
+  components:
+  - type: Leg
+    walkSpeed: 2.34
+    sprintSpeed: 4.14
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganFeroxiExternal ]
+  id: OrganFeroxiLegRight
+  components:
+  - type: Leg
+    walkSpeed: 2.34
+    sprintSpeed: 4.14
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganFeroxiExternal ]
+  id: OrganFeroxiFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganFeroxiExternal ]
+  id: OrganFeroxiFootRight
