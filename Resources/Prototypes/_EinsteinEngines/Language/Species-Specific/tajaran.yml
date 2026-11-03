@@ -1,0 +1,74 @@
+- type: language
+  id: SiikMaas
+  speech:
+    color: "#d6a36eee" # Goob Edit - Make more unique from Vulpkanin
+    # fontId: Noganas # Rugged, like the people and the land #* FONTS NOT ALREADY HERE ARE NOT BEING ADDED
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 2 # this is mostly based on the name generator, 2-4 is there so it goes here too
+    maxSyllables: 4
+    # Orion-Edit-Start: Localization
+    replacement:
+    - мрр
+    - рр
+    - таджр
+    - кир
+    - радж
+    - кии
+    - мир
+    - кра
+    - акх
+    - нал
+    - вах
+    - хаз
+    - джри
+    - ран
+    - дарр
+    - ми
+    - джри
+    - динх
+    - манк
+    - ре
+    - зар
+    - рраз
+    - кал
+    - чур
+    - ич
+    - таа
+    - дра
+    - джурл
+    - мах
+    - сану
+    - дра
+    - ии'р
+    - ка
+    - ааси
+    - фар
+    - ва
+    - бак
+    - ара
+    - кара
+    - зир
+    - сам
+    - мак
+    - ррар
+    - ня
+    - рир
+    - хан
+    - джун
+    - дар
+    - рик
+    - ках
+    - хал
+    - кет
+    - джурл
+    - мах
+    - тул
+    - креш
+    - азу
+    - рагх
+    - мро
+    - мра
+    - мрро
+    - мрра
+    - мррра

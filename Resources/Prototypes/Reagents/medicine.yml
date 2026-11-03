@@ -760,6 +760,18 @@
         - !type:Satiate
           satiationType: Thirst
           factor: 6
+          # Nebula start
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Feroxi ]
+            inverted: true
+        - !type:Satiate
+          satiationType: Thirst
+          factor: 2
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Feroxi ]
+          # Nebula end
         - !type:ModifyBloodLevel
           amount: 12 # Goobstation - buffed by two times due to shitmed changes
 

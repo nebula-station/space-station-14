@@ -132,3 +132,8 @@ language-NewKinPidgin-description = A debased dialect cobbled together by lower-
     While a primitive and clumsy attempt resulting in a dull, simplified mockery of their true language,
     higher-caste Vox can still discern meaning within the crude approximations.
     It sounds like chaotic shrieking to everyone else.
+language-Marish-name = Marish
+language-Marish-description =  A language spoken only by Shadowkin, one that is unable to be replicated by normal tongues.
+language-SiikMaas-name = Siik'maas
+language-SiikMaas-description =
+    The ancient religious tongue of the Tajara, now the most widely spoken and taught language on Adhomai.
