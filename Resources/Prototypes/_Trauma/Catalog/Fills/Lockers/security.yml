@@ -57,7 +57,7 @@
     - id: SecurityMegaphone
     - id: WeaponEnergyShotgun
     - id: GunpowderBottlePartFull
-    - id: ReinforcementCallerHos
+    # - id: ReinforcementCallerHos # Nebula edit
 
 - type: entityTable
   id: FillLockerSecurityTrauma
