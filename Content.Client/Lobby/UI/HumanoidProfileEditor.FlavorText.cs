@@ -1,3 +1,4 @@
+using Content.Shared._Nebula.ERP; // Nebula edit
 using Content.Client.FlavorText;
 using Content.Shared._Nebula.DetailExaminable;
 using Robust.Client.UserInterface.Controls;
@@ -25,6 +26,7 @@ public sealed partial class HumanoidProfileEditor
             TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
 
             _flavorText.OnTextChanged += OnFlavorFieldChanged; // Nebula edit
+            _flavorText.OnConsentChanged += OnConsentChanged; // Nebula edit
         }
         else
         {
@@ -33,6 +35,7 @@ public sealed partial class HumanoidProfileEditor
 
             // Nebula start
             _flavorText.OnTextChanged -= OnFlavorFieldChanged;
+            _flavorText.OnConsentChanged -= OnConsentChanged; // Nebula edit
 
             TabContainer.RemoveChild(_flavorText);
             _flavorText.Dispose();
@@ -50,6 +53,20 @@ public sealed partial class HumanoidProfileEditor
         Profile = Profile.WithDetailExaminableData(Profile.DetailExaminableData.CopyWithChangedField(field, text));
         SetDirty(); ;
     }
+
+    // Nebula edit start
+    private void OnConsentChanged(string tag, ErpConsent consent)
+    {
+        if (Profile == null)
+            return;
+
+        var data = Profile.DetailExaminableData.CopyWithConsent(tag, consent);
+        data.ValidateConsentTags(_prototypeManager);
+        Profile = Profile.WithDetailExaminableData(data);
+        _flavorText?.SetConsentData(data);
+        SetDirty();
+    }
+    // Nebula edit end
 
     private void UpdateFlavorTextEdit()
     {
