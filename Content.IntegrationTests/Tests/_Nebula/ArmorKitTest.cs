@@ -12,7 +12,7 @@ using Content.Shared.Storage;
 namespace Content.IntegrationTests.Tests._Nebula;
 
 /// <summary>
-/// Checks that every armor kit points to real armor and that applying one copies its protection exactly once.
+/// Checks that every armor kit points to real armor, applies only to clothing without resistances and copies its protection exactly once.
 /// </summary>
 [TestFixture]
 [TestOf(typeof(ArmorKitSystem))]
@@ -83,6 +83,7 @@ public sealed class ArmorKitTest : InteractionTest
             ProtoMan.Index(SourceVest).TryComp<ArmorComponent>(out var source, Factory);
             var armor = SEntMan.GetComponent<ArmorComponent>(target);
             Assert.That(armor.Modifiers.Coefficients, Is.EquivalentTo(source.Modifiers.Coefficients));
+            Assert.That(SEntMan.HasComponent<AllowSuitStorageComponent>(target), "Reinforced outerwear has no suit storage.");
         });
 
         await InteractUsing("ArmorKitHoS");
@@ -92,6 +93,19 @@ public sealed class ArmorKitTest : InteractionTest
             Assert.That(SEntMan.EntityQuery<ArmorKitComponent>().Any(), "Second kit was used up.");
             Assert.That(SEntMan.GetComponent<ArmorKitAppliedComponent>(STarget.Value).Prefix.Id,
                 Is.EqualTo("armor-kit-prefix-reinforced"));
+        });
+    }
+
+    [Test]
+    public async Task KitSkipsArmoredClothing()
+    {
+        await SpawnTarget("ClothingOuterArmorReflective");
+        await InteractUsing("ArmorKitSecurity");
+
+        await Server.WaitAssertion(() =>
+        {
+            Assert.That(SEntMan.HasComponent<ArmorKitAppliedComponent>(STarget.Value), Is.False,
+                "Kit reinforced clothing that already has resistances.");
         });
     }
 

@@ -95,7 +95,7 @@
         Piercing: 0.7
         Heat: 0.2
   - type: Reflect
-    reflectProb: 0.6
+    reflectProb: 0.4 # Nebula edit
     reflects:
     - Energy
     reflectingInHands: false

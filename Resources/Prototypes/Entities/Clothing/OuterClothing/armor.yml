@@ -135,7 +135,7 @@
         Heat: 0.25
     # Nebula end
   - type: Reflect
-    reflectProb: 0.8 # Trauma - was 1
+    reflectProb: 0.4 # Nebula edit
     reflects:
       - Energy
     reflectingInHands: false

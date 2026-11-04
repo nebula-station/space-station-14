@@ -4,6 +4,7 @@ armor-kit-name = {$prefix} {$baseName}
 
 armor-kit-popup-wrong-slot = Этот набор сюда не подходит.
 armor-kit-popup-already-applied = Это уже укреплено.
+armor-kit-popup-has-armor = Это уже защищает от урона.
 armor-kit-popup-success = Вы укрепили {$target}.
 
 ent-ArmorKitSecurity = броненабор «Бастион»

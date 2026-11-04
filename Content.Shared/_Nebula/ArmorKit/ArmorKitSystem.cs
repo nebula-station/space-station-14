@@ -5,10 +5,12 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared._Nebula.Examine;
 using Content.Shared.Administration.Logs;
+using Content.Shared.Armor;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
+using Content.Shared.Inventory;
 using Content.Shared.NameModifier.EntitySystems;
 using Content.Shared.Popups;
 using Robust.Shared.Network;
@@ -107,6 +109,8 @@ public sealed partial class ArmorKitSystem : EntitySystem
             reason = "armor-kit-popup-wrong-slot";
         else if (HasComp<ArmorKitAppliedComponent>(target))
             reason = "armor-kit-popup-already-applied";
+        else if (TryComp<ArmorComponent>(target, out var armor) && HasResistances(armor))
+            reason = "armor-kit-popup-has-armor";
 
         return reason == null;
     }
@@ -125,12 +129,32 @@ public sealed partial class ArmorKitSystem : EntitySystem
 
         EntityManager.AddComponents(target, registry);
 
+        if ((ent.Comp.Slots & SlotFlags.OUTERCLOTHING) != 0)
+            EnsureComp<AllowSuitStorageComponent>(target);
+
         var applied = EnsureComp<ArmorKitAppliedComponent>(target);
         applied.Prefix = ent.Comp.Prefix;
         applied.PrefixColor = ent.Comp.PrefixColor;
         Dirty(target, applied);
 
         _nameModifier.RefreshNameModifiers(target);
+    }
+
+    private static bool HasResistances(ArmorComponent armor)
+    {
+        foreach (var coefficient in armor.Modifiers.Coefficients.Values)
+        {
+            if (coefficient < 1f)
+                return true;
+        }
+
+        foreach (var reduction in armor.Modifiers.FlatReductions.Values)
+        {
+            if (reduction > 0f)
+                return true;
+        }
+
+        return false;
     }
 
     #endregion
