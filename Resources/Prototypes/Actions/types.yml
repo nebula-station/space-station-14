@@ -169,8 +169,12 @@
   name: Break Free
   description: Activating your freedom implant will free you from any hand restraints
   components:
+  # Nebula start
+  - type: LimitedCharges
+    maxCharges: 10
+  # Nebula end
   - type: Action
-    useDelay: 10 # Goob - useful freedom
+    useDelay: 1.5 # Nebula edit
     checkCanInteract: false
     itemIconStyle: BigAction
     priority: -20
@@ -203,7 +207,7 @@
   description: Triggers a small EMP pulse around you
   components:
   - type: LimitedCharges
-    maxCharges: 3
+    maxCharges: 5 # Nebula edit
   - type: Action
     checkCanInteract: false
     useDelay: 5  # Trauma, was 30

@@ -7,7 +7,7 @@ uplink-freedom-implanter-name = Имплантер свободы
 # Trauma - reworked it
 uplink-freedom-implanter-desc = Избавьтесь от мерзких офицеров СБ с этим имплантом! Он позволяет легко освободиться от наручников и бол, а также парализовать любого, кто осмелится вас схватить.
 
-uplink-scram-implanter-name = Имплантер рывка
+uplink-scram-implanter-name = Имплант побега
 # Trauma - unlimited uses
 uplink-scram-implanter-desc = Имплант, телепортирующий вас в большом радиусе. Пытается переместить вас на свободную плитку. Иногда может потерпеть неудачу. Страховка жизни не включена.
 

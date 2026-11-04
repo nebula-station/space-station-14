@@ -1,0 +1,37 @@
+- type: entity
+  parent: BriefcaseWeapon
+  id: BriefcaseWeaponTritonFilled
+  name: secure Triton Mark 3 case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponPulseSMGTritonM3
+        - id: MagazinePulseSubMachinePistol
+          amount: 5
+
+- type: entity
+  parent: BriefcaseWeapon
+  id: BriefcaseWeaponM7SFilled
+  name: secure M7S case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponSubMachineGunM7S
+        - id: MagazineLowCaliberM7S
+          amount: 3
+
+- type: entity
+  parent: BriefcaseWeapon
+  id: BriefcaseWeaponM41Filled
+  name: secure M-41 case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponRifleM41
+        - id: MagazineHeavyRifleM41

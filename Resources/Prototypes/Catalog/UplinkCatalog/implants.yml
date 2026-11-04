@@ -119,11 +119,21 @@
   description: uplink-death-acidifier-implant-desc
   icon: { sprite: /Textures/Objects/Magic/magicactions.rsi, state: gib }
   productEntity: DeathAcidifierImplanter
+  discountCategory: null # Nebula edit
   cost:
-    Telecrystal: 15 # Trauma - was 4, 5x and cheaper its soy
+    Telecrystal: 0 # Nebula edit
   categories:
     - UplinkImplants
   # Trauma - removed conditions, traitor jihad
+  # Nebula start
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  # Nebula end
 
 - type: listing
   id: UplinkUplinkImplanter # uplink uplink real
