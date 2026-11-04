@@ -196,6 +196,7 @@
   - type: Tag # Goobstation
     tags: # Goobstation
     - HudMedicalSecurity # Goobstation
+  - type: SkewedHud # Nebula edit
 
 - type: entity
   parent: [ClothingEyesHudBase, ShowSecurityIcons, ShowMedicalIcons]
