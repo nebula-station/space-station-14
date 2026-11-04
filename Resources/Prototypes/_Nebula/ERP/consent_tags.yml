@@ -1,0 +1,71 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+- type: erpConsentTag
+  id: Erp
+  name: erp-consent-tag-erp-name
+  description: erp-consent-tag-erp-desc
+  default: Ask
+  order: 0
+
+- type: erpConsentTag
+  id: Rape
+  name: erp-consent-tag-rape-name
+  description: erp-consent-tag-rape-desc
+  order: 1
+
+- type: erpConsentTag
+  id: Vore
+  name: erp-consent-tag-vore-name
+  description: erp-consent-tag-vore-desc
+  default: Ask
+  order: 2
+
+- type: erpConsentTag
+  id: MobSex
+  name: erp-consent-tag-mob-sex-name
+  description: erp-consent-tag-mob-sex-desc
+  allowAsk: false
+  order: 3
+
+- type: erpConsentTag
+  id: HornyAntagVictim
+  name: erp-consent-tag-horny-antag-name
+  description: erp-consent-tag-horny-antag-desc
+  order: 4
+
+- type: erpConsentTag
+  id: DirtySex
+  name: erp-consent-tag-dirty-sex-name
+  description: erp-consent-tag-dirty-sex-desc
+  order: 5
+
+- type: erpConsentTag
+  id: VeryDirtySex
+  name: erp-consent-tag-very-dirty-sex-name
+  description: erp-consent-tag-very-dirty-sex-desc
+  order: 6
+
+- type: erpConsentTag
+  id: BrutalSex
+  name: erp-consent-tag-brutal-sex-name
+  description: erp-consent-tag-brutal-sex-desc
+  order: 7
+
+- type: erpConsentTag
+  id: VeryBrutalSex
+  name: erp-consent-tag-very-brutal-sex-name
+  description: erp-consent-tag-very-brutal-sex-desc
+  allowAsk: false
+  requires: BrutalSex
+  order: 8
+
+- type: erpConsentTag
+  id: Tattoo
+  name: erp-consent-tag-tattoo-name
+  description: erp-consent-tag-tattoo-desc
+  default: Ask
+  order: 9
