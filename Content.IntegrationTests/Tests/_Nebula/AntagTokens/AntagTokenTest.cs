@@ -14,6 +14,7 @@ using Content.Shared.Antag.Components;
 using Content.Shared.GameTicking.Prototypes;
 using Content.Shared.GameTicking;
 using Content.Shared.GameTicking.Components;
+using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using Robust.Shared.Configuration;
@@ -30,6 +31,7 @@ public sealed class AntagTokenTest
 {
     private const string Preset = "Greenshift";
     private static readonly ProtoId<JobPrototype> Passenger = "Passenger";
+    private static readonly ProtoId<SpeciesPrototype> Human = "Human";
 
     private static readonly string[] Listings =
     [
@@ -195,8 +197,9 @@ public sealed class AntagTokenTest
         var user = player.UserId.ToString();
         bot.Balances[user] = 1;
 
-        // Some antagonists forbid certain jobs, and that is a refund by design. The job must not be random here.
+        // Some antagonists forbid certain jobs and species, and that is a refund by design. Neither must be random here.
         await pair.SetJobPriority(Passenger, JobPriority.High);
+        await pair.SetSpecies(Human);
 
         var dummies = await pair.Server.AddDummySessions(Math.Max(RequiredPlayers(pair, listing), 2));
         await pair.RunTicksSync(5);
@@ -375,7 +378,9 @@ public sealed class AntagTokenTest
             }
         });
 
-        await WaitFor(pair, () => client.State != null, "the state");
+        await WaitFor(pair, () => bot.StatusRequestsAnswered > 0, "the status request");
+
+        await Task.Delay(200);
         await pair.RunTicksSync(10);
 
         Assert.That(bot.StatusRequestsAnswered, Is.EqualTo(1));
