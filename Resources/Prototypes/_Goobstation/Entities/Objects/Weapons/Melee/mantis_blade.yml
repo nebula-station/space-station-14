@@ -30,6 +30,10 @@
     # Nebula end
     soundHit: &sound
       path: /Audio/Weapons/bladeslice.ogg
+  # Nebula start
+  - type: Reflect
+    reflectProb: 0.15
+  # Nebula end
   - type: Tag
     tags:
     - MantisBlade

@@ -1,0 +1,11 @@
+ent-EnergyDomeBase = энергетический барьер
+    .desc = Энергетический барьер защищающий от входящих и исходящих пуль, круто!
+ent-EnergyDomeSmallRed = { ent-EnergyDomeBase }
+    .desc = { ent-EnergyDomeBase.desc }
+ent-EnergyDomeGeneratorPersonalSyndie = кроваво-красный генератор барьера
+    .desc = Генератор щита, защищающий владельца от лазеров и пуль, но не позволяющий самому использовать оружие дальнего боя. Использует батареи.
+ent-EnergyDomeGeneratorPersonalSyndieAgent = { ent-EnergyDomeGeneratorPersonalSyndie }
+    .desc = { ent-EnergyDomeGeneratorPersonalSyndie.desc }
+    .suffix = Агент
+ent-ActionToggleEnergyDome = Переключить энергетический барьер
+    .desc = Включает и выключает энергетический барьер.

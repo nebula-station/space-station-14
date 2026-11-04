@@ -733,7 +733,7 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
         var distance = Math.Min(component.Range, direction.Length());
 
         var damage = GetDamage(meleeUid, user, component);
-        var resistanceBypass = GetResistanceBypass(meleeUid, user, component);
+        var resistanceBypass = !component.ResistanceBypassLightOnly && GetResistanceBypass(meleeUid, user, component); // Nebula edit
         var entities = GetEntityList(ev.Entities);
 
         if (entities.Count == 0)

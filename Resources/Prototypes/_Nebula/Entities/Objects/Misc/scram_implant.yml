@@ -1,0 +1,22 @@
+- type: entity
+  parent: ActionActivateScramImplant
+  id: ActionActivateScramImplantOnce
+  components:
+  - type: LimitedCharges
+    maxCharges: 1
+
+- type: entity
+  parent: ScramImplant
+  id: ScramImplantOnce
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionActivateScramImplantOnce
+
+- type: entity
+  parent: ScramImplanter
+  id: ScramImplanterOnce
+  suffix: Scram, Single use
+  components:
+  - type: Implanter
+    implant: ScramImplantOnce

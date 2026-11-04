@@ -1,0 +1,15 @@
+ent-BriefcaseWeaponTritonFilled = защищённый кейс Triton Mark 3
+    .desc = Защищённый кейс Синдиката с оружием и боеприпасами.
+ent-BriefcaseWeaponM7SFilled = защищённый кейс M7S
+    .desc = Защищённый кейс Синдиката с оружием и боеприпасами.
+ent-BriefcaseWeaponM41Filled = защищённый кейс M-41
+    .desc = Защищённый кейс Синдиката с оружием и боеприпасами.
+ent-NebulaSyndicateRapier = рапира Синдиката
+    .desc = Узкий колющий клинок, проходящий сквозь бронепластины и отражающий выстрелы.
+ent-ActionActivateScramImplantOnce = { ent-ActionActivateScramImplant }
+    .desc = { ent-ActionActivateScramImplant.desc }
+ent-ScramImplantOnce = { ent-ScramImplant }
+    .desc = Одноразовый имплант, телепортирующий пользователя в большом радиусе.
+ent-ScramImplanterOnce = { ent-ScramImplanter }
+    .desc = { ent-ScramImplanter.desc }
+    .suffix = Побег, одноразовый

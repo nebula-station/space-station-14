@@ -39,4 +39,4 @@
   - type: Projectile
     damage:
       types:
-        Heat: 12
+        Heat: 15 # Nebula edit

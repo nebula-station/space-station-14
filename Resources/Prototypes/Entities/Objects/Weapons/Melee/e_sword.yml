@@ -127,6 +127,17 @@
   id: EnergySword
   description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Cuts through unarmored targets like butter.
   components:
+  # Nebula start
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Heat: 30
+        Structural: 20
+      woundSeverityMultipliers:
+        Heat: 2
+  - type: Reflect
+    reflectProb: 0.1
+  # Nebula end
   # <Trauma>
   - type: Construction
     deconstructionTarget: null
@@ -448,11 +459,9 @@
     # Nebula start
     activatedDamage:
         types:
-          Slash: 15
-          Heat: 15
+          Heat: 30
           Structural: 40
         woundSeverityMultipliers:
-          Slash: 7
           Heat: 7
     # Nebula end
   - type: ItemToggleActiveSound
@@ -495,7 +504,7 @@
     sprite: Objects/Weapons/Melee/e_sword_double-inhands.rsi
   # Nebula start
   - type: Reflect
-    reflectProb: .8
+    reflectProb: .4
     spread: 75
   # Nebula end
 

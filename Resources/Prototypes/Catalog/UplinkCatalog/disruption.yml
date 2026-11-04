@@ -33,9 +33,16 @@
   description: uplink-emag-desc
   productEntity: Emag
   cost:
-    Telecrystal: 20 # Trauma - was 5, 5x and cheaper
+    Telecrystal: 15 # Nebula edit
   categories:
   - UplinkDisruption
+  # Nebula start
+  conditions:
+  - !type:StoreBlacklistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  # Nebula end
 
 - type: listing
   id: UplinkRadioJammer

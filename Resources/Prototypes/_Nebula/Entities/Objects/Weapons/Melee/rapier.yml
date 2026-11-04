@@ -1,0 +1,22 @@
+- type: entity
+  parent: [ BaseSword, BaseSyndicateContraband ]
+  id: NebulaSyndicateRapier
+  name: syndicate rapier
+  description: A narrow thrusting blade that slips past armor plating and deflects incoming shots.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Weapons/Melee/syndicate_rapier.rsi
+    state: icon
+  - type: Item
+    sprite: _Nebula/Objects/Weapons/Melee/syndicate_rapier.rsi
+  - type: MeleeWeapon
+    attackRate: 1.25
+    damage:
+      types:
+        Piercing: 15
+    resistanceBypass: true
+    resistanceBypassLightOnly: true
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect
+    reflectProb: 0.35
