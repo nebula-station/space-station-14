@@ -1,4 +1,3 @@
-using Content.Shared._Nebula.ERP; // Nebula edit
 using Content.Client.FlavorText;
 using Content.Shared._Nebula.DetailExaminable;
 using Robust.Client.UserInterface.Controls;
@@ -53,20 +52,6 @@ public sealed partial class HumanoidProfileEditor
         Profile = Profile.WithDetailExaminableData(Profile.DetailExaminableData.CopyWithChangedField(field, text));
         SetDirty(); ;
     }
-
-    // Nebula edit start
-    private void OnConsentChanged(string tag, ErpConsent consent)
-    {
-        if (Profile == null)
-            return;
-
-        var data = Profile.DetailExaminableData.CopyWithConsent(tag, consent);
-        data.ValidateConsentTags(_prototypeManager);
-        Profile = Profile.WithDetailExaminableData(data);
-        _flavorText?.SetConsentData(data);
-        SetDirty();
-    }
-    // Nebula edit end
 
     private void UpdateFlavorTextEdit()
     {
