@@ -160,6 +160,15 @@ public sealed partial class SquadMonitorTab : BoxContainer
 
             Map.Orders.Add(new SquadMapOrder(order.Id, coordinates.Position, _sprite.Frame0(proto.Icon), squad.Color));
         }
+
+        foreach (var enemy in _state.Enemies)
+        {
+            Map.TrackedEntities[enemy.Entity] = new NavMapBlip(_entMan.GetCoordinates(enemy.Coordinates),
+                blip,
+                CyberPalette.Red,
+                false,
+                selectable: false);
+        }
     }
 
     private void Rebuild()

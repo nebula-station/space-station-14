@@ -118,7 +118,8 @@ public sealed partial class SecuritySquadSystem : EntitySystem
     }
 
     /// <summary>
-    /// The member counts as in combat once the damage within <see cref="CombatWindow"/> goes over <see cref="CombatDamage"/>.
+    /// The member counts as in combat once the damage within <see cref="CombatWindow"/> goes over <see cref="CombatDamage"/>,
+    /// the one who dealt it gets marked on the tablet map.
     /// </summary>
     [SubscribeLocalEvent]
     private void OnDamageDealt(Entity<SecurityNeuroComponent> ent, ref DamageDealtEvent args)
@@ -150,8 +151,18 @@ public sealed partial class SecuritySquadSystem : EntitySystem
             total += amount;
         }
 
-        if (total > CombatDamage)
-            ent.Comp.LastHurt = now;
+        if (total <= CombatDamage)
+            return;
+
+        ent.Comp.LastHurt = now;
+        if (args.Origin is { } attacker
+            && attacker != ent.Owner
+            && _mobStateQuery.HasComp(attacker)
+            && !HasComp<SecurityNeuroComponent>(attacker))
+        {
+            ent.Comp.LastAttacker = attacker;
+            ent.Comp.LastAttackerAt = now;
+        }
     }
 
     /// <summary>
