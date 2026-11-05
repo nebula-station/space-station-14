@@ -51,4 +51,12 @@ public sealed partial class StationAiCustomizationPrototype : IPrototype, IInher
     [NeverPushInheritance]
     [AbstractDataField]
     public bool Abstract { get; private set; }
+
+    // Nebula start
+    /// <summary>
+    /// Shows the player's selected character. <see cref="LayerData"/> stays as the fallback.
+    /// </summary>
+    [DataField(readOnly: true)]
+    public bool UseCharacterProfile;
+    // Nebula end
 }

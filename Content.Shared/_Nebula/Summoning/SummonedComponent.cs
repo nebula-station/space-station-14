@@ -20,7 +20,4 @@ public sealed partial class SummonedComponent : Component
 
     [ViewVariables]
     public EntityUid? ReturnStation;
-
-    [ViewVariables]
-    public TimeSpan NextLeashCheck;
 }

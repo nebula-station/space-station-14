@@ -461,6 +461,7 @@
     protoIds:
       StationAiCoreIconography: StationAiIconAi
       StationAiHolograms: StationAiHologramFemale
+  - type: AiHologramProfile # Nebula edit
   - type: HolographicAvatar
     layerData:
     - sprite: Mobs/Silicon/holograms.rsi
