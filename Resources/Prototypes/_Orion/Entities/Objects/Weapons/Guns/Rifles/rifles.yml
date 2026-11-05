@@ -69,7 +69,7 @@
     angleDecay: 20
     minAngle: 24
     maxAngle: 38
-    fireRate: 5.5
+    fireRate: 5 # Nebula
     soundGunshot:
       path: /Audio/_Orion/Weapons/Guns/Rifles/556rifle.ogg
   - type: ItemSlots
@@ -240,7 +240,7 @@
     cameraRecoilScalar: 5
     minAngle: 30
     maxAngle: 70
-    fireRate: 4.5
+    fireRate: 4 # Nebula
     soundGunshot:
       path: /Audio/_Orion/Weapons/Guns/Snipers/svd.ogg
   - type: ItemSlots

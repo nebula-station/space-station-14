@@ -80,6 +80,13 @@ public abstract partial class SharedGunSystem : EntitySystem
     /// </summary>
     public const float ProjectileSpeed = 40f;
 
+    // Nebula start
+    /// <summary>
+    /// Multiplier for the speed of every projectile shot from a gun.
+    /// </summary>
+    public const float ProjectileSpeedMultiplier = 1.5f;
+    // Nebula end
+
     /// <summary>
     ///     Name of the container slot used as the gun's chamber
     /// </summary>

@@ -166,7 +166,7 @@
   - type: Gun
     soundGunshot:
       path: /Audio/_Orion/Weapons/Guns/Rifles/556rifle.ogg # Nebula edit
-    fireRate: 5 # Nebula
+    fireRate: 4.5 # Nebula
   - type: ItemSlots
     slots:
       gun_magazine:
