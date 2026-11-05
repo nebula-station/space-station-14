@@ -15,9 +15,9 @@
     impactEffect: BulletPulseEffect
     damage:
       types:
-        Heat: 8
+        Heat: 9 # Nebula
         # Shock: 7 # Nebula edit
-        Piercing: 4
+        Piercing: 9 # Nebula
     soundHit:
       path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
   - type: Tag

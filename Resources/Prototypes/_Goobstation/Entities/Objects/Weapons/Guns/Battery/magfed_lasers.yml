@@ -15,7 +15,7 @@
   - type: Gun
     minAngle: 21
     maxAngle: 32
-    fireRate: 6
+    fireRate: 5 # Nebula
     selectedMode: FullAuto
     availableModes:
     - FullAuto

@@ -35,7 +35,7 @@
     projectileSpeed: 15
     minAngle: 42
     maxAngle: 64
-    fireRate: 10
+    fireRate: 4.5 # Nebula
     burstFireRate: 40
     shotsPerBurst: 5
     burstCooldown: 0.5
