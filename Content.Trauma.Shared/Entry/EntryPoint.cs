@@ -16,5 +16,6 @@ public sealed partial class EntryPoint : GameShared
     public override void Init()
     {
         _proto.PartialDirectory(new("/Prototypes/_Trauma/Partials"), 1);
+        _proto.PartialDirectory(new("/Prototypes/_Nebula/Partials"), 2); // Nebula edit
     }
 }

@@ -1,0 +1,48 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Abilities the ERP changeling can't buy, the combat category is left out of its store entirely.
+
+- type: listing
+  id: EvolutionMenuUtilityBiodegrade
+  conditions:
+  - &noErpChangeling
+    !type:BuyerAntagCondition
+    blacklist:
+    - ErpChangeling
+
+- type: listing
+  id: EvolutionMenuUtilityOverdose
+  conditions:
+  - *noErpChangeling
+
+- type: listing
+  id: EvolutionMenuUtilityFleshmend
+  conditions:
+  - *noErpChangeling
+
+- type: listing
+  id: EvolutionMenuUtilityLastResort
+  conditions:
+  - *noErpChangeling
+
+- type: listing
+  id: EvolutionMenuUtilityLesserForm
+  conditions:
+  - *noErpChangeling
+
+- type: listing
+  id: EvolutionMenuStingFakeArmblade # fake combat
+  conditions:
+  - *noErpChangeling
+
+- type: listing
+  id: EvolutionMenuUtilityInstinct # biomass, makes the changeling digest itself when it runs out
+  conditions:
+  - *noErpChangeling
+
+- type: listing
+  id: EvolutionMenuUtilityAbsorbBiomatter # only feeds biomass
+  conditions:
+  - *noErpChangeling

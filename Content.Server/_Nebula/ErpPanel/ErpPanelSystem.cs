@@ -7,6 +7,7 @@ using System.Numerics;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
+using Content.Server._Nebula.ERP;
 using Content.Shared._Nebula.CCVar;
 using Content.Shared._Nebula.ERP;
 using Content.Shared._Nebula.ErpPanel;
@@ -275,6 +276,9 @@ public sealed partial class ErpPanelSystem : EntitySystem
             if (targetDelta > 0)
                 Spawn(HeartsProto, _transform.GetMapCoordinates(target));
 
+            if (targetDelta > 0 && user != target)
+                SetRecentPartner(target, user);
+
             _arousal.AddArousal(target, targetDelta, privateFilter: privateFilter);
             ProcessMoan(target, GetMultiplier(target, NCCVars.ErpMoanMultiplier), privateFilter);
         }
@@ -302,9 +306,19 @@ public sealed partial class ErpPanelSystem : EntitySystem
             if (userDelta < 0 && Math.Abs(userDelta) > currentUserArousal)
                 userDelta = -currentUserArousal;
 
+            if (userDelta > 0)
+                SetRecentPartner(user, target);
+
             _arousal.AddArousal(user, userDelta, privateFilter: privateFilter);
             ProcessMoan(user, GetMultiplier(user, NCCVars.ErpMoanMultiplier), privateFilter);
         }
+    }
+
+    private void SetRecentPartner(EntityUid uid, EntityUid partner)
+    {
+        var comp = EnsureComp<ErpRecentPartnerComponent>(uid);
+        comp.Partner = partner;
+        comp.Time = _timing.CurTime;
     }
 
     private void ProcessContactDamage(EntityUid source, EntityUid victim)
@@ -476,7 +490,9 @@ public sealed partial class ErpPanelSystem : EntitySystem
         if (interaction.IsErotic && !CanUseErp(user, target))
             return false;
 
-        return true;
+        var attempt = new ErpPanelInteractionAttemptEvent(target, interaction.IsErotic);
+        RaiseLocalEvent(user, ref attempt);
+        return !attempt.Cancelled;
     }
 
     /// <summary>

@@ -1,0 +1,66 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+- type: storeCategory
+  id: ChangelingAbilityErp
+  name: store-ling-category-erp
+  priority: 3
+
+- type: listing
+  id: EvolutionMenuErpStingCrocin
+  name: evolutionmenu-erp-sting-crocin-name
+  description: evolutionmenu-erp-sting-crocin-desc
+  icon: { sprite: _Nebula/Changeling/erp_abilities.rsi, state: sting_crocin }
+  productAction: ActionStingCrocin
+  cost:
+    EvolutionPoint: 2
+  categories:
+  - ChangelingAbilityErp
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: EvolutionMenuErpStingHexacrocin
+  name: evolutionmenu-erp-sting-hexacrocin-name
+  description: evolutionmenu-erp-sting-hexacrocin-desc
+  icon: { sprite: _Nebula/Changeling/erp_abilities.rsi, state: sting_hexacrocin }
+  productAction: ActionStingHexacrocin
+  cost:
+    EvolutionPoint: 2
+  categories:
+  - ChangelingAbilityErp
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: EvolutionMenuErpStingPantyDropper
+  name: evolutionmenu-erp-sting-panty-dropper-name
+  description: evolutionmenu-erp-sting-panty-dropper-desc
+  icon: { sprite: _Nebula/Changeling/erp_abilities.rsi, state: sting_panty_dropper }
+  productAction: ActionStingPantyDropper
+  cost:
+    EvolutionPoint: 2
+  categories:
+  - ChangelingAbilityErp
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: EvolutionMenuErpArmTentacle
+  name: evolutionmenu-erp-arm-tentacle-name
+  description: evolutionmenu-erp-arm-tentacle-desc
+  icon: { sprite: _Nebula/Changeling/erp_abilities.rsi, state: arm_tentacle }
+  productAction: ActionToggleArmTentacle
+  cost:
+    EvolutionPoint: 2
+  categories:
+  - ChangelingAbilityErp
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

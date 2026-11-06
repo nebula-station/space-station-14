@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from BlueMoon Station at https://github.com/BlueMoon-Labs/BlueMoon-Station/blob/cfe4b7000c623a97725729ce8b620ae7fdda81c1/icons/mob/actions/actions_changeling.dmi",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "sting_crocin"
+        },
+        {
+            "name": "sting_hexacrocin"
+        },
+        {
+            "name": "sting_panty_dropper"
+        },
+        {
+            "name": "arm_tentacle"
+        }
+    ]
+}

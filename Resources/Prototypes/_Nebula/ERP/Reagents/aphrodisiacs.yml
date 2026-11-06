@@ -1,0 +1,87 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+# Nobody is affected unless their "Erotic roleplay" consent tag allows it.
+
+- type: reagent
+  id: Crocin
+  name: reagent-name-crocin
+  group: Narcotics
+  desc: reagent-desc-crocin
+  physicalDesc: reagent-physical-desc-syrupy
+  flavor: sweet
+  color: "#FFADFF"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:AdjustArousal
+        conditions:
+        - &erpConsent
+          !type:ErpConsentCondition
+          tag: Erp
+        amount: 2
+        maxFraction: 0.3 # makes you horny, can't finish you off by itself
+      - !type:PopupMessage
+        conditions:
+        - *erpConsent
+        type: Local
+        visualType: Medium
+        messages:
+        - reagent-effect-crocin-1
+        - reagent-effect-crocin-2
+        - reagent-effect-crocin-3
+        probability: 0.1
+
+- type: reagent
+  id: Hexacrocin
+  name: reagent-name-hexacrocin
+  group: Narcotics
+  desc: reagent-desc-hexacrocin
+  physicalDesc: reagent-physical-desc-shiny
+  flavor: sweet
+  color: "#FF2BFF"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:AdjustArousal
+        conditions:
+        - *erpConsent
+        amount: 4
+        maxFraction: 0.95
+      - !type:PopupMessage
+        conditions:
+        - *erpConsent
+        type: Local
+        visualType: Medium
+        messages:
+        - reagent-effect-hexacrocin-1
+        - reagent-effect-hexacrocin-2
+        - reagent-effect-hexacrocin-3
+        probability: 0.1
+
+- type: reagent
+  id: PantyDropper
+  name: reagent-name-panty-dropper
+  group: Narcotics
+  desc: reagent-desc-panty-dropper
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: sweet
+  color: "#CE3B01"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:AdjustArousal
+        conditions:
+        - *erpConsent
+        amount: 2
+        maxFraction: 0.5
+      - !type:StripClothing
+        conditions:
+        - *erpConsent
+        slots:
+        - outerClothing
+        - jumpsuit
+        - underweart
+        - underwearb
