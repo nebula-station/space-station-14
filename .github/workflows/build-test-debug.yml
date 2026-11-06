@@ -9,6 +9,10 @@ on:
     types: [opened, reopened, synchronize, ready_for_review]
     branches: [master, staging, stable]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 env:
   DOTNET_VERSION: 10.0.x
   DOTNET_NOLOGO: true
@@ -99,7 +103,7 @@ jobs:
       matrix: ${{ fromJson(needs.plan-integration-shards.outputs.matrix) }}
     name: Integration Tests (${{ matrix.name }})
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 25
 
     steps:
       - name: Checkout Master
@@ -156,7 +160,7 @@ jobs:
             --logger "console;verbosity=normal" `
             --logger "trx;LogFileName=$env:TEST_RESULTS_NAME" `
             --results-directory TestResults `
-            -- NUnit.ConsoleOut=1 NUnit.MapWarningTo=Failed
+            -- NUnit.ConsoleOut=1 NUnit.MapWarningTo=Failed NUnit.AssemblySelectLimit=100000
 
       - name: Print integration test failures
         if: always()
