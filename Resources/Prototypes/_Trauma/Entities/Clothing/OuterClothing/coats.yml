@@ -20,10 +20,10 @@
       coefficients:
         Blunt: 0.75
         Slash: 0.75
-        Piercing: 0.75
+        Piercing: 0.6 # Nebula edit
         Heat: 0.25
   - type: Reflect
-    reflectProb: 0.8
+    reflectProb: 0.6 # Nebula edit
     reflects:
     - Energy
     reflectingInHands: false

@@ -9,6 +9,10 @@ on:
     types: [opened, reopened, synchronize, ready_for_review]
     branches: [master, staging, stable]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 env:
   DOTNET_VERSION: 10.0.x
   DOTNET_NOLOGO: true
@@ -26,11 +30,11 @@ jobs:
       - name: Generate integration shard matrix
         id: plan
         shell: bash
-        run: echo "matrix=$(python3 Tools/integration_test_shards.py --shards 10)" >> "$GITHUB_OUTPUT"
+        run: echo "matrix=$(python3 Tools/_Nebula/integration_test_shards.py --shards 8)" >> "$GITHUB_OUTPUT"
 
       - name: Print integration shards
         shell: bash
-        run: python3 Tools/integration_test_shards.py --shards 10 --pretty
+        run: python3 Tools/_Nebula/integration_test_shards.py --shards 8 --pretty
 
   content-tests:
     if: github.actor != vars.CHANGELOG_BOT && (github.event_name != 'pull_request' || github.event.pull_request.draft == false)
@@ -99,7 +103,7 @@ jobs:
       matrix: ${{ fromJson(needs.plan-integration-shards.outputs.matrix) }}
     name: Integration Tests (${{ matrix.name }})
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 25
 
     steps:
       - name: Checkout Master
@@ -137,7 +141,7 @@ jobs:
         shell: bash
         run: |
           echo "Shard: ${{ matrix.id }}"
-          echo "Estimated markers: ${{ matrix.tests }}"
+          echo "Estimated: ~${{ matrix.seconds }} s, ${{ matrix.cases }} cases"
           echo "Units: ${{ matrix.units }}"
           echo "Filter: ${{ matrix.filter }}"
 
@@ -156,7 +160,7 @@ jobs:
             --logger "console;verbosity=normal" `
             --logger "trx;LogFileName=$env:TEST_RESULTS_NAME" `
             --results-directory TestResults `
-            -- NUnit.ConsoleOut=1 NUnit.MapWarningTo=Failed
+            -- NUnit.ConsoleOut=1 NUnit.MapWarningTo=Failed NUnit.AssemblySelectLimit=100000
 
       - name: Print integration test failures
         if: always()
@@ -173,7 +177,7 @@ jobs:
 
   ci-success:
     name: Build & Test Debug
-    if: ${{ always() && needs.plan-integration-shards.result != 'skipped' }}
+    if: ${{ !cancelled() && needs.plan-integration-shards.result != 'skipped' }}
     needs:
       - plan-integration-shards
       - content-tests

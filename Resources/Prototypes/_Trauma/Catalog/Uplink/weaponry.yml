@@ -40,9 +40,16 @@
   icon: { sprite: _Trauma/Objects/Weapons/Guns/Rifles/fn_fal.rsi, state: icon }
   productEntity: BriefcaseWeaponSaiveFilled
   cost:
-    Telecrystal: 50
+    Telecrystal: 35 # Nebula edit
   categories:
   - UplinkWeaponry
+  # Nebula start
+  conditions:
+  - !type:StoreBlacklistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  # Nebula end
 
 - type: listing
   id: UplinkRifleM90

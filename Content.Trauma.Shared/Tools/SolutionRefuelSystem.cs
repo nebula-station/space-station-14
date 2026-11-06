@@ -50,7 +50,7 @@ public sealed partial class SolutionRefuelSystemSystem : EntitySystem
     }
 
     [SubscribeLocalEvent]
-    private void OnSolutionRefuelAfterInteract(Entity<SolutionRefuelComponent> ent, ref AfterInteractEvent args)
+    public void OnSolutionRefuelAfterInteract(Entity<SolutionRefuelComponent> ent, ref AfterInteractEvent args) // Nebula edit
     {
         // Wowza that's a lot of conditions
         if (args.Target is not { } target ||

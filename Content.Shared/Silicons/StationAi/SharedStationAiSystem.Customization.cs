@@ -1,3 +1,4 @@
+using Content.Shared._Nebula.Silicons.StationAi;
 using Content.Shared.Holopad;
 using Content.Shared.Mobs;
 using Robust.Shared.Player;
@@ -102,6 +103,11 @@ public abstract partial class SharedStationAiSystem
 
         avatar.LayerData = [layerData];
         Dirty(entity, avatar);
+
+        // Nebula start
+        var customizationChanged = new AiHologramCustomizationChangedEvent();
+        RaiseLocalEvent(entity, ref customizationChanged);
+        // Nebula end
     }
 
     private void CustomizeAppearance(Entity<StationAiCoreComponent> entity, StationAiState state)

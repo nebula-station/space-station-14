@@ -9,6 +9,7 @@ using Content.Shared._Nebula.Squads;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
 using Content.Shared.Medical.SuitSensors;
+using Content.Shared.Mobs;
 using Content.Shared.StationRecords;
 using Robust.Shared.Prototypes;
 
@@ -18,6 +19,7 @@ public sealed partial class SecuritySquadSystem
 {
     private static readonly EntProtoId BrigTimer = "BrigTimer";
     private static readonly TimeSpan CombatTime = TimeSpan.FromSeconds(5);
+    private static readonly TimeSpan EnemyMarkTime = TimeSpan.FromSeconds(3);
     private static readonly TimeSpan CombatWindow = TimeSpan.FromSeconds(2);
     private static readonly FixedPoint2 CombatDamage = 20;
     private static readonly TimeSpan TabletRefreshInterval = TimeSpan.FromSeconds(0.5);
@@ -244,11 +246,28 @@ public sealed partial class SecuritySquadSystem
         }
 
         Dictionary<uint, (EntityUid Uid, bool InCombat)> mobs = [];
+        List<SquadTabletEnemy> enemies = [];
+        HashSet<EntityUid> marked = [];
         var query = EntityQueryEnumerator<SecurityNeuroComponent>();
         while (query.MoveNext(out var uid, out var neuro))
         {
-            if (neuro.Record is { } key && key.OriginStation == station)
-                mobs[key.Id] = (uid, neuro.LastHurt + CombatTime > _timing.CurTime);
+            if (neuro.Record is not { } key || key.OriginStation != station)
+                continue;
+
+            mobs[key.Id] = (uid, neuro.LastHurt + CombatTime > _timing.CurTime);
+            if (neuro.LastAttacker is { } attacker
+                && neuro.LastAttackerAt + EnemyMarkTime > _timing.CurTime
+                && marked.Add(attacker)
+                && _mobStateQuery.TryComp(attacker, out var state)
+                && state.CurrentState != MobState.Dead
+                && _station.GetOwningStation(attacker) == station)
+            {
+                enemies.Add(new SquadTabletEnemy
+                {
+                    Entity = GetNetEntity(attacker),
+                    Coordinates = GetNetCoordinates(_transform.GetMoverCoordinates(attacker)),
+                });
+            }
         }
 
         List<SquadTabletSquad> squadStates = [];
@@ -303,7 +322,7 @@ public sealed partial class SecuritySquadSystem
 
         _ui.SetUiState(ent.Owner,
             SquadTabletUiKey.Key,
-            new SquadTabletState(squadStates, free, orderStates, taskStates, GetTimers(station)));
+            new SquadTabletState(squadStates, free, orderStates, taskStates, GetTimers(station), enemies));
     }
 
     /// <summary>

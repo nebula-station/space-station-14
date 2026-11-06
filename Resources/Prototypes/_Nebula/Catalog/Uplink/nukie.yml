@@ -1,0 +1,231 @@
+- type: listing
+  id: UplinkEmagNukies
+  name: uplink-emag-name
+  description: uplink-emag-desc
+  productEntity: Emag
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkGuerrillaGlovesNukies
+  name: uplink-guerrilla-name
+  description: uplink-guerrilla-desc
+  productEntity: ClothingHandsGlovesGuerrilla
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkChameleonArmorNukies
+  name: uplink-chameleon-armor-name
+  description: uplink-chameleon-armor-desc
+  productEntity: ClothingOuterChameleonArmor
+  cost:
+    Telecrystal: 25
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkChameleonNukies
+  name: uplink-chameleon-name
+  description: uplink-chameleon-desc
+  icon: { sprite: /Textures/Clothing/Uniforms/Jumpsuit/rainbow.rsi, state: icon }
+  productEntity: ClothingBackpackChameleonFillAgent
+  cost:
+    Telecrystal: 25
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkHardsuitSyndieEliteNukies
+  name: uplink-hardsuit-syndieelite-name
+  description: uplink-hardsuit-traumaelite-desc
+  icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndieelite.rsi, state: icon }
+  productEntity: ClothingBackpackDuffelSyndicateEliteHardsuitBundle
+  cost:
+    Telecrystal: 80
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkRifleFALNukies
+  name: uplink-rifle-FAL-name
+  description: uplink-rifle-FAL-description
+  icon: { sprite: _Trauma/Objects/Weapons/Guns/Rifles/fn_fal.rsi, state: icon }
+  productEntity: BriefcaseWeaponSaiveFilled
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkCQCManualNukies
+  name: uplink-cqc-name
+  description: uplink-cqc-desc
+  productEntity: CQCManual
+  cost:
+    Telecrystal: 60
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkDeathAcidifierImplanterNukies
+  name: uplink-death-acidifier-implant-name
+  description: uplink-death-acidifier-implant-desc
+  icon: { sprite: /Textures/Objects/Magic/magicactions.rsi, state: gib }
+  productEntity: DeathAcidifierImplanter
+  cost:
+    Telecrystal: 15
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkEnergyDomeNukies
+  name: uplink-energy-dome-name
+  description: uplink-energy-dome-desc
+  productEntity: EnergyDomeGeneratorPersonalSyndie
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkTritonMark3
+  name: uplink-triton-name
+  description: uplink-triton-desc
+  icon: { sprite: _Orion/Objects/Weapons/Guns/Battery/Pulse/smpg/big.rsi, state: base }
+  productEntity: BriefcaseWeaponTritonFilled
+  cost:
+    Telecrystal: 85
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkM7S
+  name: uplink-m7s-bundle-name
+  description: uplink-m7s-bundle-desc
+  icon: { sprite: _Goobstation/Objects/Weapons/Guns/SMGs/M7S.rsi, state: base }
+  productEntity: BriefcaseWeaponM7SFilled
+  cost:
+    Telecrystal: 80
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkM41
+  name: uplink-m41-name
+  description: uplink-m41-desc
+  icon: { sprite: _Orion/Objects/Weapons/Guns/LMGs/t42/big.rsi, state: base }
+  productEntity: BriefcaseWeaponM41Filled
+  cost:
+    Telecrystal: 70
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkMagazineTriton
+  name: uplink-magazine-triton-name
+  description: uplink-magazine-triton-desc
+  productEntity: MagazinePulseSubMachinePistol
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkMagazineM7S
+  name: uplink-magazine-m7s-name
+  description: uplink-magazine-m7s-desc
+  productEntity: MagazineLowCaliberM7S
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkMagazineM41
+  name: uplink-magazine-m41-name
+  description: uplink-magazine-m41-desc
+  productEntity: MagazineHeavyRifleM41
+  cost:
+    Telecrystal: 15
+  categories:
+  - UplinkAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink

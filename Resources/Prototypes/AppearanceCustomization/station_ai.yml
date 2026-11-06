@@ -40,6 +40,7 @@
   name: station-ai-customization-hologram
   category: Hologram
   protoIds:
+  - StationAiHologramCharacter # Nebula edit
   - StationAiHologramFemale
   - StationAiHologramMale
   - StationAiHologramFace

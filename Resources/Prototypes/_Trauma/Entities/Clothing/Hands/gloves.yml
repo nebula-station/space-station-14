@@ -35,6 +35,7 @@
         Slash: 0.90
         Piercing: 0.95
         Heat: 0.90
+  - type: TackleWieldedDrop # Nebula edit
 
 - type: entity
   parent: ClothingHandsGlovesSecurity
@@ -72,6 +73,10 @@
       staminaCostMultiplier: 1.2
       knockdownTimeMultiplier: 1.25
       skillMod: 3
+  # Nebula start
+  - type: TackleWieldedDrop
+    enabled: false
+  # Nebula end
   - type: StealTarget
     stealGroup: GorillaGloves
 
@@ -86,6 +91,7 @@
   # Nebula start
   - type: StartingGrabStage
     stage: Hard
+    cooldown: 2
   # Nebula end
   - type: TackleModifier
     modifiers:

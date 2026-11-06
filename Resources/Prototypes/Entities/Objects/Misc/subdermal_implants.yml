@@ -122,7 +122,7 @@
   parent: BaseSubdermalImplant
   id: FreedomImplant
   name: freedom implant
-  description: This implant lets the user break out of hand restraints up to three times before ceasing to function anymore.
+  description: This implant lets the user break out of hand restraints up to ten times before ceasing to function anymore. # Nebula edit
   categories: [ HideSpawnMenu ]
   components:
   - type: SubdermalImplant
@@ -175,8 +175,8 @@
     implantAction: ActionActivateEmpImplant
   - type: TriggerOnActivateImplant
   - type: EmpOnTrigger
-    range: 2.75
-    energyConsumption: 360 # Nebula
+    range: 5 # Nebula edit
+    energyConsumption: 1800 # Nebula edit
     disableDuration: 10
 
 - type: entity

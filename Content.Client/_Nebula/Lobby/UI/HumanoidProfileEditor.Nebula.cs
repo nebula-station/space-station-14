@@ -1,9 +1,11 @@
 // SPDX-FileCopyrightText: 2026 Lytheriia
+// SPDX-FileCopyrightText: 2026 DefinitelyNotMori
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Client._Nebula.Lobby.UI;
 using Content.Client.Lobby.UI.Roles;
+using Content.Shared._Nebula.ERP;
 using Content.Shared._Nebula.Roles;
 using Content.Shared.Humanoid;
 using Content.Shared.Roles;
@@ -78,5 +80,17 @@ public sealed partial class HumanoidProfileEditor
         {
             selector.AltTitlePicker?.SetGender(gender);
         }
+    }
+
+    private void OnConsentChanged(string tag, ErpConsent consent)
+    {
+        if (Profile == null)
+            return;
+
+        var data = Profile.DetailExaminableData.CopyWithConsent(tag, consent);
+        data.ValidateConsentTags(_prototypeManager);
+        Profile = Profile.WithDetailExaminableData(data);
+        _flavorText?.SetConsentData(data);
+        SetDirty();
     }
 }

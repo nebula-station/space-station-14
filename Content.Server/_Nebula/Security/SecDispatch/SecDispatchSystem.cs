@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Server.Administration.Logs;
+using Content.Server.Chat.Systems;
 using Content.Server._Nebula.Radio;
 using Content.Server.Pinpointer;
 using Content.Server.Radio.EntitySystems;
@@ -10,6 +11,7 @@ using Content.Shared._Nebula.Security.SecDispatch;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
+using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Popups;
 using Robust.Shared.Prototypes;
@@ -20,6 +22,7 @@ public sealed partial class SecDispatchSystem : SharedSecDispatchSystem
 {
     [Dependency] private ActionBlockerSystem _actionBlocker = default!;
     [Dependency] private IAdminLogManager _adminLog = default!;
+    [Dependency] private ChatSystem _chat = default!;
     [Dependency] private SharedActionsSystem _actions = default!;
     [Dependency] private NavMapSystem _navMap = default!;
     [Dependency] private IPrototypeManager _proto = default!;
@@ -62,6 +65,8 @@ public sealed partial class SecDispatchSystem : SharedSecDispatchSystem
             _radioSound.SendRadioMessage(user, message, ent.Comp.Channel, ent.Owner, sound);
         else
             _radio.SendRadioMessage(user, message, _proto.Index(ent.Comp.Channel), ent.Owner);
+
+        _chat.TrySendInGameICMessage(user, message, InGameICChatType.Speak, false, checkRadioPrefix: false);
 
         _actions.SetCooldown(ent.Comp.ActionEntity, ent.Comp.Cooldown);
     }

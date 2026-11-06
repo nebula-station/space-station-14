@@ -4,6 +4,7 @@
 
 using Content.Server.StationEvents.Components;
 using Content.Shared._Nebula.Hud;
+using Content.Shared.Emp;
 using Content.Shared.GameTicking;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Radio.Components;
@@ -18,8 +19,8 @@ namespace Content.Server._Nebula.Hud;
 
 /// <summary>
 /// Gives the jobs of every <see cref="NeuroProfilePrototype"/> their neural interface and cuts the interfaces off
-/// their servers under a radio jammer on their channel, during a solar flare, or away from the station maps for the
-/// profiles with <see cref="NeuroProfilePrototype.StationOnly"/>.
+/// their servers under a radio jammer on their channel, during a solar flare, for a while after an EMP, or away from
+/// the station maps for the profiles with <see cref="NeuroProfilePrototype.StationOnly"/>.
 /// </summary>
 public sealed partial class NeuroLinkSystem : EntitySystem
 {
@@ -29,9 +30,11 @@ public sealed partial class NeuroLinkSystem : EntitySystem
 
     private static readonly TimeSpan SignalCheckInterval = TimeSpan.FromSeconds(0.5);
     private static readonly TimeSpan SignalLossDelay = TimeSpan.FromSeconds(1);
+    private static readonly TimeSpan EmpSignalLoss = TimeSpan.FromSeconds(15);
 
     private TimeSpan _nextSignalCheck;
     private readonly Dictionary<EntityUid, TimeSpan> _jammedSince = [];
+    private readonly Dictionary<EntityUid, TimeSpan> _empedUntil = [];
     private readonly HashSet<EntityUid> _jammed = [];
     private readonly HashSet<Entity<NeuroLinkComponent>> _inRange = [];
     private readonly HashSet<MapId> _stationMaps = [];
@@ -56,6 +59,20 @@ public sealed partial class NeuroLinkSystem : EntitySystem
     {
         _nextSignalCheck = TimeSpan.Zero;
         _jammedSince.Clear();
+        _empedUntil.Clear();
+    }
+
+    [SubscribeLocalEvent]
+    private void OnEmpPulse(Entity<NeuroLinkComponent> ent, ref EmpPulseEvent args)
+    {
+        var now = _timing.CurTime;
+        var until = now + EmpSignalLoss;
+        if (!_empedUntil.TryGetValue(ent, out var current) || current < until)
+            _empedUntil[ent] = until;
+
+        _jammedSince.TryAdd(ent, now);
+        EnsureComp<NeuroSignalLostComponent>(ent);
+        args.Affected = true;
     }
 
     #endregion
@@ -69,6 +86,7 @@ public sealed partial class NeuroLinkSystem : EntitySystem
 
         _nextSignalCheck = _timing.CurTime + SignalCheckInterval;
         CollectJammed();
+        CollectEmped();
         if (_jammed.Count == 0 && _jammedSince.Count == 0)
             return;
 
@@ -118,6 +136,26 @@ public sealed partial class NeuroLinkSystem : EntitySystem
 
         profile = default;
         return false;
+    }
+
+    private void CollectEmped()
+    {
+        if (_empedUntil.Count == 0)
+            return;
+
+        List<EntityUid> expired = [];
+        foreach (var (uid, until) in _empedUntil)
+        {
+            if (_timing.CurTime >= until || TerminatingOrDeleted(uid))
+                expired.Add(uid);
+            else
+                _jammed.Add(uid);
+        }
+
+        foreach (var uid in expired)
+        {
+            _empedUntil.Remove(uid);
+        }
     }
 
     private void CollectJammed()

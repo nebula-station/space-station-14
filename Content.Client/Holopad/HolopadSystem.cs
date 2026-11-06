@@ -1,3 +1,4 @@
+using Content.Client._Nebula.Silicons.StationAi;
 using Content.Client.Graphics;
 using Content.Shared.Chat.TypingIndicator;
 using Content.Shared.Holopad;
@@ -14,6 +15,7 @@ public sealed partial class HolopadSystem : SharedHolopadSystem
 {
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private SpriteSystem _sprite = default!;
+    [Dependency] private AiHologramVisualsSystem _aiHologramVisuals = default!; // Nebula edit
 
     public override void Initialize()
     {
@@ -33,6 +35,16 @@ public sealed partial class HolopadSystem : SharedHolopadSystem
     {
         if (ev.Id != ContentPostShaderIds.Holopad)
             return;
+
+        // Nebula start
+        if (!_aiHologramVisuals.NeedsSpriteRebuild(entity))
+        {
+            if (TryComp<SpriteComponent>(entity, out var sprite) && sprite.AllLayers.Any())
+                UpdateHologramShader(entity, sprite, entity.Comp, ev.Shader);
+
+            return;
+        }
+        // Nebula end
 
         UpdateHologramSprite(entity, entity.Comp.LinkedEntity, ev.Shader);
     }
@@ -57,6 +69,8 @@ public sealed partial class HolopadSystem : SharedHolopadSystem
         if (!TryComp<SpriteComponent>(hologram, out var hologramSprite) ||
             !TryComp<HolopadHologramComponent>(hologram, out var holopadhologram))
             return;
+
+        target = _aiHologramVisuals.GetAppearanceSource(target); // Nebula edit
 
         // Remove all sprite layers
         for (var i = hologramSprite.AllLayers.Count() - 1; i >= 0; i--)
@@ -105,7 +119,8 @@ public sealed partial class HolopadSystem : SharedHolopadSystem
         hologramSprite.EnableDirectionOverride = true;
 
         // Remove shading from all layers (except displacement maps)
-        for (var i = 0; i < hologramSprite.AllLayers.Count(); i++)
+        var layerCount = hologramSprite.AllLayers.Count(); // Nebula edit
+        for (var i = 0; i < layerCount; i++) // Nebula edit
         {
             if (_sprite.TryGetLayer((hologram, hologramSprite), i, out var layer, false) && layer.ShaderPrototype != "DisplacedDraw")
                 hologramSprite.LayerSetShader(i, "unshaded");
@@ -120,6 +135,8 @@ public sealed partial class HolopadSystem : SharedHolopadSystem
         HolopadHologramComponent holopadHologram,
         ShaderInstance? shader = null)
     {
+        sprite.EnableDirectionOverride = !_aiHologramVisuals.IsWalking(uid); // Nebula edit
+
         // Find the texture height of the largest layer
         float texHeight = sprite.AllLayers.Max(x => x.PixelSize.Y);
 
@@ -130,6 +147,7 @@ public sealed partial class HolopadSystem : SharedHolopadSystem
         instance.SetParameter("intensity", holopadHologram.Intensity);
         instance.SetParameter("texHeight", texHeight);
         instance.SetParameter("t", (float)_timing.CurTime.TotalSeconds * holopadHologram.ScrollRate);
+        instance.SetParameter("interference", _aiHologramVisuals.GetInterference(uid)); // Nebula edit
 
         _sprite.SetPostShader((uid, sprite), new SpriteComponent.PostShaderArgs(ContentPostShaderIds.Holopad, instance)
         {

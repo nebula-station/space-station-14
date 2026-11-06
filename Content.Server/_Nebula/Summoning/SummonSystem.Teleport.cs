@@ -4,6 +4,7 @@
 
 using System.Linq;
 using Content.Shared._Nebula.InfinityDorms.Components;
+using Content.Shared._Nebula.PointTether;
 using Content.Shared._Nebula.Summoning;
 using Content.Shared.Chat;
 using Content.Shared.Database;
@@ -41,6 +42,12 @@ public sealed partial class SummonSystem
         QueueDel(ent.Comp.Rune);
     }
 
+    [SubscribeLocalEvent]
+    private void OnSummonedTetherExceeded(Entity<SummonedComponent> ent, ref PointTetherExceededEvent args)
+    {
+        Teleport(ent.Owner, Transform(ent.Comp.Rune).Coordinates);
+    }
+
     #endregion
 
     #region Summon and return
@@ -52,7 +59,7 @@ public sealed partial class SummonSystem
         summoned.Rune = rune.Owner;
         summoned.ReturnCoordinates = xform.Coordinates;
         summoned.ReturnStation = _station.GetOwningStation(target, xform);
-        summoned.NextLeashCheck = _timing.CurTime + LeashCheckInterval;
+        _tether.SetTether(target, rune.Owner, rune.Comp.LeashRange, LeashCheckInterval);
         rune.Comp.Summoned = target;
 
         foreach (var slot in DroppedSlots)
@@ -109,6 +116,7 @@ public sealed partial class SummonSystem
             Teleport(target, coords);
 
         RemComp<SummonedComponent>(target);
+        RemComp<PointTetherComponent>(target);
 
         _adminLog.Add(LogType.Teleport, LogImpact.Low, $"{ToPrettyString(target):target} returned from summoning");
 
@@ -118,28 +126,6 @@ public sealed partial class SummonSystem
 
         if (runeGrid != null && HasComp<InfinityDormComponent>(runeGrid))
             _dorm.QueueDeletionCheck(runeGrid.Value);
-    }
-
-    private void UpdateLeash(TimeSpan now)
-    {
-        var query = EntityQueryEnumerator<SummonedComponent, TransformComponent>();
-        while (query.MoveNext(out var uid, out var summoned, out var xform))
-        {
-            if (now < summoned.NextLeashCheck)
-                continue;
-
-            summoned.NextLeashCheck = now + LeashCheckInterval;
-
-            if (!TryComp<SummonRuneComponent>(summoned.Rune, out var rune))
-                continue;
-
-            var runeCoords = _transform.GetMapCoordinates(summoned.Rune);
-            var coords = _transform.GetMapCoordinates(uid, xform);
-            if (coords.MapId == runeCoords.MapId && coords.InRange(runeCoords, rune.LeashRange))
-                continue;
-
-            Teleport(uid, Transform(summoned.Rune).Coordinates);
-        }
     }
 
     private void Teleport(EntityUid uid, EntityCoordinates coords)

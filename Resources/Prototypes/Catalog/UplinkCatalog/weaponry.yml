@@ -103,22 +103,6 @@
 # </Trauma>
 
 - type: listing
-  id: UplinkEshield
-  name: uplink-eshield-name
-  description: uplink-eshield-desc
-  icon: { sprite: /Textures/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
-  productEntity: BriefcaseWeaponEnergyShieldFilled # Trauma - briefcases
-  cost:
-    Telecrystal: 30 # Trauma - was 8, 5x and less expensive
-  categories:
-  - UplinkWeaponry
-  conditions:
-  - !type:StoreWhitelistCondition
-    blacklist: # Trauma - invert it, nukies have a more expensive version
-      tags:
-      - NukeOpsUplink
-
-- type: listing
   id: uplinkRiggedBoxingGloves
   name: uplink-rigged-boxing-gloves-name
   description: uplink-rigged-boxing-gloves-desc
