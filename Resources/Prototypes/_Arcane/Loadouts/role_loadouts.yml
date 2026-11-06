@@ -8,6 +8,9 @@
   - Trinkets
   - GroupSpeciesBreathTool
   - Survival
+  - Undershirt
+  - Underwear
+  - Socks
 
 - type: roleLoadout
   id: JobCommandMaid
@@ -24,6 +27,9 @@
   - Trinkets
   - GroupSpeciesBreathTool
   - Survival
+  - Undershirt
+  - Underwear
+  - Socks
 
 - type: roleLoadout
   id: JobIAA
@@ -33,3 +39,6 @@
   - Trinkets
   - GroupSpeciesBreathTool
   - Survival
+  - Undershirt
+  - Underwear
+  - Socks
