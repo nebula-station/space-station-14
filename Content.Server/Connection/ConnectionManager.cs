@@ -153,6 +153,7 @@ namespace Content.Server.Connection
                 var properties = new Dictionary<string, object>();
                 if (reason == ConnectionDenyReason.Full)
                     properties["delay"] = _cfg.GetCVar(CCVars.GameServerFullReconnectDelay);
+                AddNebulaDenyProperties(reason, userId, properties); // Nebula
 
                 e.Deny(new NetDenyReason(msg, properties));
             }
@@ -337,6 +338,11 @@ namespace Content.Server.Connection
                     break;
                 }
             }
+
+            // Nebula edit start
+            if (await ShouldDenyDiscordLink(e, adminData != null) is { } discordDeny)
+                return discordDeny;
+            // Nebula edit end
 
             // ALWAYS keep this at the end, to preserve the API limit.
             if (_cfg.GetCVar(CCVars.GameIPIntelEnabled) && adminData == null)

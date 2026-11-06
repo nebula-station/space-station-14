@@ -50,6 +50,7 @@ namespace Content.Client.Launcher
             CopyButton.OnPressed += CopyButtonPressed;
             CopyButtonDisconnected.OnPressed += CopyButtonDisconnectedPressed;
             ExitButton.OnPressed += _ => _state.Exit();
+            NebulaInitialize(); // Nebula
 
             var addr = state.Address;
             if (addr != null)
@@ -113,6 +114,7 @@ namespace Content.Client.Launcher
 
         private void HandleDisconnectReason(INetStructuredReason? reason)
         {
+            NebulaHandleDisconnectReason(reason); // Nebula
             if (reason == null)
             {
                 _waitTime = 0;
@@ -160,6 +162,7 @@ namespace Content.Client.Launcher
         protected override void FrameUpdate(FrameEventArgs args)
         {
             base.FrameUpdate(args);
+            NebulaFrameUpdate(args.DeltaSeconds); // Nebula
 
             var button = _state.CurrentPage == LauncherConnecting.Page.ConnectFailed
                 ? RetryButton
