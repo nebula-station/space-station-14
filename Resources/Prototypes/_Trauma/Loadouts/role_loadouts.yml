@@ -20,6 +20,11 @@
   - ScientistEnvirosuit
   - ScientistEnvirogloves
   - ExclusiveItems
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobRancher
@@ -33,6 +38,11 @@
   - BotanistEnvirosuit
   - BotanistEnvirogloves
   - ExclusiveItems
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobDClass
@@ -52,3 +62,8 @@
   - DClassEnvirosuit
   - DClassEnvirogloves
   - ExclusiveItems
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end

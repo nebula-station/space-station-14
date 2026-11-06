@@ -20,6 +20,11 @@
   - CaptainEnvirogloves
   - CaptainGloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobHeadOfPersonnel
@@ -43,6 +48,11 @@
   - HoPEnvirogloves
   - HoPGloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # Silicons
 - type: roleLoadout
@@ -63,6 +73,11 @@
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
  # <Trauma> No longer unlockable
  #- PassengerGloves
  #- PassengerFace
@@ -102,6 +117,11 @@
   - BartenderEnvirogloves
   - BartenderWeapon # Trauma
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobServiceWorker
@@ -120,6 +140,11 @@
   - ServiceWorkerEnvirosuit
   - ServiceWorkerEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobChef
@@ -141,6 +166,11 @@
   - ChefEnvirosuit
   - ChefEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobLibrarian
@@ -159,6 +189,11 @@
   - LibrarianEnvirosuit
   - LibrarianEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobLawyer
@@ -178,6 +213,11 @@
   - LawyerEnvirosuit
   - LawyerEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobChaplain
@@ -202,6 +242,11 @@
   - ChaplainEnvirosuit
   - ChaplainEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobJanitor
@@ -223,6 +268,11 @@
   - JanitorEnvirosuit
   - JanitorEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobBotanist
@@ -243,6 +293,11 @@
   - BotanistEnvirosuit
   - BotanistEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobClown
@@ -264,6 +319,11 @@
   - ClownEnvirosuit
   - ClownEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobMime
@@ -287,6 +347,11 @@
   - MimeEnvirogloves
   - MimeGloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobMusician
@@ -308,6 +373,11 @@
   - MusicianEnvirosuit
   - MusicianEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # Cargo
 - type: roleLoadout
@@ -331,6 +401,11 @@
   - QuartermasterEnvirosuit
   - QuartermasterEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobCargoTechnician
@@ -353,6 +428,11 @@
   - CargoTechnicianEnvirosuit
   - CargoTechnicianEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobSalvageSpecialist
@@ -373,6 +453,11 @@
   - SalvageEnvirosuit
   - SalvageEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # Engineering
 - type: roleLoadout
@@ -395,6 +480,11 @@
   - ChiefEngineerEnvirosuit
   - ChiefEngineerEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobTechnicalAssistant
@@ -412,6 +502,11 @@
   - TechnicalAssistantEnvirosuit
   - TechnicalAssistantEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobStationEngineer
@@ -433,6 +528,11 @@
   - StationEngineerEnvirosuit
   - StationEngineerEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobAtmosphericTechnician
@@ -453,6 +553,11 @@
   - AtmosEnvirosuit
   - AtmosEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # Science
 - type: roleLoadout
@@ -477,6 +582,11 @@
   - ResearchDirectorEnvirohelm
   - ResearchDirectorEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobScientist
@@ -501,6 +611,11 @@
   - ScientistEnvirosuit
   - ScientistEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobResearchAssistant
@@ -519,6 +634,11 @@
   - ResearchAssistantEnvirosuit
   - ResearchAssistantEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # Security
 - type: roleLoadout
@@ -542,6 +662,11 @@
   - HeadofSecurityEnvirosuit
   - HeadofSecurityEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobWarden
@@ -564,6 +689,11 @@
   - WardenEnvirosuit
   - WardenEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobSecurityOfficer
@@ -587,6 +717,11 @@
   - SecurityOfficerEnvirosuit
   - SecurityOfficerEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobDetective
@@ -608,6 +743,11 @@
   - DetectiveEnvirogloves
   - DetectiveGloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobSecurityCadet
@@ -627,6 +767,11 @@
   - SecurityCadetEnvirosuit
   - SecurityCadetEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # Wildcards
 - type: roleLoadout
@@ -648,6 +793,11 @@
   - ReporterEnvirosuit
   - ReporterEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobPsychologist
@@ -666,6 +816,11 @@
   - PsychologistEnvirosuit
   - PsychologistEnvirogloves
   - ExclusiveItems # Trauma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobTramDriver
@@ -681,6 +836,11 @@
   - Trinkets
   #- TramDriverJobTrinkets
   - GroupSpeciesBreathTool
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
 # They will be used without player configuration, thus they will only ever apply what is forced by MinLimit
@@ -692,6 +852,11 @@
   groups:
   - GroupSpeciesBreathTool
   - GroupTankHarness
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # gives vox a nitrogen breathing tank
 # other species get nothing
@@ -699,6 +864,11 @@
   id: RoleSurvivalVoxTank
   groups:
   - GroupEVATankVox
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalStandard
@@ -706,12 +876,22 @@
   - Survival
   - GroupSpeciesBreathTool
   - GroupTankHarness
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalClown
   groups:
   - SurvivalClown
   - GroupTankHarness
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalExtended
@@ -719,6 +899,11 @@
   - SurvivalExtended
   - GroupSpeciesBreathTool
   - GroupTankHarness
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalExtendedAntag # Used by antagonists that spawn off-station (e.g wizards)
@@ -726,6 +911,11 @@
   - SurvivalExtendedAntag
   - GroupSpeciesBreathTool
   - GroupTankHarness
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalMedical
@@ -733,6 +923,11 @@
   - SurvivalMedical
   - GroupSpeciesBreathToolMedical
   - GroupTankHarness
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalSecurity
@@ -740,6 +935,11 @@
   - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
   - GroupTankHarness
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalSyndicate
@@ -747,11 +947,21 @@
   - SurvivalSyndicate
   - GroupSpeciesBreathTool
   - GroupTankHarness
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalMilitaryDouble
   groups:
   - SurvivalMilitaryDouble
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalNukie
@@ -759,20 +969,40 @@
   - SurvivalSyndicate
   - GroupSpeciesBreathTool
   - GroupPocketTankDouble
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalEVA
   groups:
   - GroupEVATank
   - SurvivalExtended
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalEVAAntag # Used by antagonists that spawn off-station AND in space (e.g ninjas)
   groups:
   - GroupEVATank
   - SurvivalExtendedAntag
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalSpaceNinja
   groups:
   - GroupEVATank
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end

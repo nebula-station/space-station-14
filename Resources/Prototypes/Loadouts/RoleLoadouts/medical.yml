@@ -15,6 +15,11 @@
   - AssistiveItems
   - SurvivalMedical
   - Trinkets
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 #  - ChiefMedicalOfficerJobTrinkets
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
@@ -38,6 +43,11 @@
   - AssistiveItems
   - SurvivalMedical
   - Trinkets
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 #  - MedicalDoctorJobTrinkets
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
@@ -56,6 +66,11 @@
   - AssistiveItems
   - SurvivalMedical
   - Trinkets
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 #  - MedicalInternJobTrinkets
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
@@ -77,6 +92,11 @@
   - AssistiveItems
   - SurvivalMedical
   - Trinkets
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 #  - ChemistJobTrinkets
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
@@ -99,6 +119,11 @@
   - AssistiveItems
   - SurvivalMedical
   - Trinkets
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 #  - ParamedicJobTrinkets
   - GroupSpeciesBreathToolMedical
   # Goobstation - EE Plasmeme Change.
