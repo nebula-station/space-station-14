@@ -22,6 +22,16 @@
                     </BoxContainer>
                     <BoxContainer Orientation="Vertical" Name="ConnectFail" Visible="False" SeparationOverride="10">
                         <RichTextLabel Name="ConnectFailReason" VerticalAlignment="Stretch"/>
+                        <!-- Nebula edit start -->
+                        <BoxContainer Name="NebulaDiscordLink" Orientation="Horizontal" Align="Center" Visible="False">
+                            <Button Name="NebulaDiscordCopyButton"
+                                    Text="{Loc 'nebula-discord-link-copy-key'}"
+                                    StyleClasses="OpenRight"/>
+                            <Button Name="NebulaDiscordOpenButton"
+                                    Text="{Loc 'nebula-discord-link-open'}"
+                                    StyleClasses="OpenLeft"/>
+                        </BoxContainer>
+                        <!-- Nebula edit end -->
                         <BoxContainer Orientation="Horizontal" Align="Center">
                             <Button Name="RetryButton"
                                     Text="{Loc 'connecting-retry'}"
