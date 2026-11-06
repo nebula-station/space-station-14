@@ -8,3 +8,17 @@
     sprite: _Arcane/Clothing/Uniforms/Jumpskirts/command_maid.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/Uniforms/Jumpskirts/command_maid.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtAdjutant
+  name: adjutant jumpskirt
+  description: Sewn to perfection with breathable fabric that will keep you on your feet for your entire shift.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Jumpskirts/adjutant.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Jumpskirts/adjutant.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon

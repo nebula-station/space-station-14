@@ -1,0 +1,1 @@
+job-name-adjutant = адъютант

@@ -1,0 +1,37 @@
+- type: entity
+  parent: BasePDA
+  id: AdjutantPDA
+  name: adjutant PDA
+  description: It really lacks the camera monitor function.
+  components:
+  - type: Sprite
+    sprite: _Orion/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: pda_base
+      color: "#23577e"
+    - state: pda_buttons
+    - state: pda_stripe_thick
+      color: "#ffffff"
+    - state: pda_screen_borders
+    - state: light_overlay
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: unshaded
+      visible: false
+    - state: id_overlay
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: unshaded
+      visible: false
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda_base
+  - type: Icon
+    sprite: _Orion/Objects/Devices/pda.rsi
+    state: icon
+  - type: Pda
+    id: AdjutantIDCard
+  - type: PdaBorderColor
+    borderColor: "#23577e"
+    accentVColor: "#ffffff"

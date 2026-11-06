@@ -1,0 +1,75 @@
+- type: job
+  id: Adjutant
+  name: job-name-adjutant
+  description: job-description-adjutant
+  playTimeTracker: JobAdjutant
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 10800 # 3 hrs
+  - !type:DepartmentTimeRequirement
+    department: Engineering
+    time: 10800 # 3 hrs
+  - !type:DepartmentTimeRequirement
+    department: Medical
+    time: 10800 # 3 hrs
+  - !type:DepartmentTimeRequirement
+    department: Command
+    time: 10800 # 3 hrs
+  startingGear: AdjutantGear
+  icon: JobIconAdjutant
+  supervisors: job-supervisors-command
+  setPreference: true
+  access:
+    - Command
+    - Bar
+    - Service
+    - Maintenance
+    - Janitor
+    - Theatre
+    - Kitchen
+    - Chapel
+    - Hydroponics
+    - Engineering
+    - Research
+    - Brig
+    - Cargo
+    - Medical
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+      - type: Condemned
+        soulOwnedNotDevil: true
+
+- type: chameleonOutfit
+  id: AdjutantChameleonOutfit
+  job: Adjutant
+  equipment:
+    head: ClothingHeadHatBeretAdjutant
+    eyes: ClothingEyesGlassesSunglasses
+    neck: ClothingNeckMantleAdjutant
+
+- type: jobAlternateTitle
+  id: AdjutantCommandSecretary
+  job: Adjutant
+  name: job-name-alt-adjutant-1
+
+- type: jobAlternateTitle
+  id: AdjutantCommandAssistant
+  job: Adjutant
+  name: job-name-alt-adjutant-2
+
+- type: startingGear
+  id: AdjutantGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesSunglasses
+    id: AdjutantPDA
+    ears: ClothingHeadsetAdjutant
+    neck: ClothingNeckMantleAdjutant
+  storage:
+    back:
+    - Flash
+    - RubberStampAdj
+    - TelescopicBaton

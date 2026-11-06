@@ -1,0 +1,10 @@
+- type: roleLoadout
+  id: JobAdjutant
+  groups:
+  - AdjutantHead
+  - AdjutantJumpsuit
+  - AdjutantOuterClothing
+  - AdjutantBackpack
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - Survival

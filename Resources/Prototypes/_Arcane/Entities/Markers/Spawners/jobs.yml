@@ -1,0 +1,12 @@
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointAdjutant
+  name: adjutant
+  components:
+  - type: SpawnPoint
+    job_id: Adjutant
+  - type: Sprite
+    sprite: _Arcane/Markers/jobs.rsi
+    layers:
+    - state: green
+    - state: adjutant
