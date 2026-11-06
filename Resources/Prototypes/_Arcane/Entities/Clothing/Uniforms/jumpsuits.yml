@@ -22,3 +22,17 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlackSuit
+  name: black formal suit
+  description: A tailored jacket and trousers ensemble made of high-quality wool or its synthetic equivalents. Its simple cut and deep color symbolize professional status, authority, and a willingness to handle any administrative decision.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Uniforms/Jumpsuits/Legal/black_suit.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Uniforms/Jumpsuits/Legal/black_suit.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon

@@ -24,3 +24,12 @@
   - Trinkets
   - GroupSpeciesBreathTool
   - Survival
+
+- type: roleLoadout
+  id: JobIAA
+  groups:
+  - IAAJumpsuit
+  - CommonBackpack
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - Survival

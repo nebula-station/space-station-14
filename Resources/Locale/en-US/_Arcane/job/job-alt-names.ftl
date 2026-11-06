@@ -3,3 +3,7 @@ job-name-alt-adjutant-2 = Command Assistant
 job-name-alt-commandmaid-1 = Command Butler
 job-name-alt-commandmaid-2 = Command Janitor
 job-name-alt-commandmaid-3 = Corporate Maid
+job-name-alt-iaa-1 = Central Command Inspector
+job-name-alt-iaa-2 = Central Command Auditor
+job-name-alt-iaa-3 = Internal Affairs Representative
+job-name-alt-iaa-4 = Internal Affairs Inspector

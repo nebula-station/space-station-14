@@ -11,3 +11,17 @@
   - type: Sprite
     sprite: _Arcane/Objects/Misc/stamps.rsi
     state: stamp-adjutant
+
+- type: entity
+  name: internal affairs agent's rubber stamp
+  parent: RubberStampBase
+  id: RubberStampIAA
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-iaa
+    stampedColor: "#1f1f1f"
+    stampState: "paper_stamp-lawyer"
+  - type: Sprite
+    sprite: _Arcane/Objects/Misc/stamps.rsi
+    state: stamp-iaa

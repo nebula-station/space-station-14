@@ -3,3 +3,7 @@ job-name-alt-adjutant-2 = помощник командования
 job-name-alt-commandmaid-1 = дворецкий командования
 job-name-alt-commandmaid-2 = уборщик командования
 job-name-alt-commandmaid-3 = корпоративная горничная
+job-name-alt-iaa-1 = инспектор ЦК
+job-name-alt-iaa-2 = ревизор ЦК
+job-name-alt-iaa-3 = представитель внутренних дел
+job-name-alt-iaa-4 = инспектор внутренних дел

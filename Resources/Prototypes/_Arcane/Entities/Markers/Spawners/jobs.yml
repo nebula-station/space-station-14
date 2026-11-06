@@ -22,3 +22,15 @@
     sprite: _Arcane/Markers/jobs.rsi
     layers:
     - state: green
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointIAA
+  name: IAA
+  components:
+  - type: SpawnPoint
+    job_id: IAA
+  - type: Sprite
+    sprite: _Arcane/Markers/jobs.rsi
+    layers:
+    - state: green

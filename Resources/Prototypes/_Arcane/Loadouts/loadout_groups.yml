@@ -104,3 +104,9 @@
   minLimit: 0
   loadouts:
   - CommandMaidSocksWhiteRigged
+
+- type: loadoutGroup
+  id: IAAJumpsuit
+  name: loadout-group-iaa-jumpsuit
+  loadouts:
+  - IAAJumpsuit
