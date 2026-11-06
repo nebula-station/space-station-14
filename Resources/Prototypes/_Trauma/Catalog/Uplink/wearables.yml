@@ -16,9 +16,16 @@
   description: uplink-guerrilla-desc
   productEntity: ClothingHandsGlovesGuerrilla
   cost:
-    Telecrystal: 20
+    Telecrystal: 40 # Nebula edit
   categories:
   - UplinkWearables
+  # Nebula start
+  conditions:
+  - !type:StoreBlacklistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  # Nebula end
 
 - type: listing
   id: UplinkSlayerCoat
@@ -52,9 +59,16 @@
   description: uplink-chameleon-armor-desc
   productEntity: ClothingOuterChameleonArmor
   cost:
-    Telecrystal: 25
+    Telecrystal: 15 # Nebula edit
   categories:
   - UplinkWearables
+  # Nebula start
+  conditions:
+  - !type:StoreBlacklistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  # Nebula end
 
 - type: listing
   id: UplinkMonarchCoat

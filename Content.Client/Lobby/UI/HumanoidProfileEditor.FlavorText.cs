@@ -25,6 +25,7 @@ public sealed partial class HumanoidProfileEditor
             TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
 
             _flavorText.OnTextChanged += OnFlavorFieldChanged; // Nebula edit
+            _flavorText.OnConsentChanged += OnConsentChanged; // Nebula edit
         }
         else
         {
@@ -33,6 +34,7 @@ public sealed partial class HumanoidProfileEditor
 
             // Nebula start
             _flavorText.OnTextChanged -= OnFlavorFieldChanged;
+            _flavorText.OnConsentChanged -= OnConsentChanged; // Nebula edit
 
             TabContainer.RemoveChild(_flavorText);
             _flavorText.Dispose();

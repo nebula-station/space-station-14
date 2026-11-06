@@ -81,6 +81,19 @@ public sealed partial class SecurityNeuroComponent : Component
     public TimeSpan LastHurt;
 
     /// <summary>
+    /// Who dealt the damage that last set <see cref="LastHurt"/>, the squad tablet marks them on the map.
+    /// Server only.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadOnly)]
+    public EntityUid? LastAttacker;
+
+    /// <summary>
+    /// When <see cref="LastAttacker"/> was set. Server only.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadOnly)]
+    public TimeSpan LastAttackerAt;
+
+    /// <summary>
     /// Damage taken within the combat window, oldest first. Server only.
     /// </summary>
     [ViewVariables(VVAccess.ReadOnly)]

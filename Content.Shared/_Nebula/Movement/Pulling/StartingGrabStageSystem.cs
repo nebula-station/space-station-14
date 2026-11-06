@@ -4,16 +4,24 @@
 
 using Content.Shared.Inventory;
 using Content.Trauma.Common.MartialArts;
+using Robust.Shared.Timing;
 
 namespace Content.Shared._Nebula.Movement.Pulling;
 
 public sealed partial class StartingGrabStageSystem : EntitySystem
 {
+    [Dependency] private IGameTiming _timing = default!;
+
     [SubscribeLocalEvent]
     private void OnGetStartingGrabStage(Entity<StartingGrabStageComponent> ent, ref InventoryRelayedEvent<GetStartingGrabStageEvent> args)
     {
-        if (args.Args.Stage == GrabStage.Soft)
-            args.Args.Stage = ent.Comp.Stage;
+        if (args.Args.Stage != GrabStage.Soft
+            || _timing.CurTime < ent.Comp.NextBoostedGrab)
+            return;
+
+        args.Args.Stage = ent.Comp.Stage;
+        ent.Comp.NextBoostedGrab = _timing.CurTime + ent.Comp.Cooldown;
+        Dirty(ent);
     }
 }
 

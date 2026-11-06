@@ -1,11 +1,12 @@
 using Content.Shared.Whitelist;
+using Robust.Shared.GameStates;
 
 namespace Content.Shared.Armor;
 
 /// <summary>
 ///     Used on outerclothing to allow use of suit storage
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent] // Nebula edit
 public sealed partial class AllowSuitStorageComponent : Component
 {
     /// <summary>

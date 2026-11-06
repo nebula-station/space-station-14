@@ -74,7 +74,7 @@ public abstract partial class SharedGunSystem
             return;
         }
 
-        ShootProjectile(uid, mapDirection, gunVelocity, gun, user, gun.Comp.ProjectileSpeedModified,
+        ShootProjectile(uid, mapDirection, gunVelocity, gun, user, gun.Comp.ProjectileSpeedModified * ProjectileSpeedMultiplier, // Nebula
             targetCoordinates);
     }
 

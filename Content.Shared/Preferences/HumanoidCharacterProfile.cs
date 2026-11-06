@@ -879,6 +879,7 @@ namespace Content.Shared.Preferences
             Width = width;
             CustomSpecies = customSpecies;
             DetailExaminableData = (DetailExaminableData ?? new()).Sanitized(configManager);
+            DetailExaminableData.ValidateConsentTags(prototypeManager);
             ERPStatus = erpStatus;
             // Nebula end
             Sex = sex;

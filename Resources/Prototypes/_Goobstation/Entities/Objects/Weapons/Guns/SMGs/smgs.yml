@@ -19,7 +19,7 @@
     shape:
     - 0,0,2,1
   - type: Gun
-    fireRate: 13.5 # Nebula
+    fireRate: 10 # Nebula
     projectileSpeed: 30 # Nebula
     minAngle: 15 # More controlled than before
     maxAngle: 55

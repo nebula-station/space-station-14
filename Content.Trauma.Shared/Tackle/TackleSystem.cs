@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
+using Content.Shared._Nebula.Tackle;
 using Content.Medical.Common.Targeting;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Buckle;
@@ -50,6 +51,7 @@ public sealed partial class TackleSystem : EntitySystem
     [Dependency] private ActionBlockerSystem _blocker = default!;
     [Dependency] private SharedEntityEffectsSystem _effects = default!;
     [Dependency] private SharedEntityConditionsSystem _conditions = default!;
+    [Dependency] private TackleWieldedDropSystem _wieldedDrop = default!; // Nebula edit
 
     public override void Initialize()
     {
@@ -205,7 +207,8 @@ public sealed partial class TackleSystem : EntitySystem
 
         var targetKnockdown = TimeSpan.FromSeconds(user.Comp2.BaseTargetKnockdownTime * mod.TargetKnockdownTimeMultiplier * result);
         if (targetKnockdown > TimeSpan.Zero)
-            _stun.TryKnockdown(target, targetKnockdown, drop: result > mod.DisarmThreshold * 1.5f, stunOnFail: false);
+            _stun.TryKnockdown(target, targetKnockdown, drop:
+                _wieldedDrop.ShouldDrop(user, target, result > mod.DisarmThreshold * 1.5f), stunOnFail: false); // Nebula edit
 
         if (resultAdj <= 0f)
             return true;

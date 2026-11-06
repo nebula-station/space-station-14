@@ -130,12 +130,20 @@ public struct SquadTabletTimer
 }
 
 [Serializable, NetSerializable]
+public struct SquadTabletEnemy
+{
+    public required NetEntity Entity;
+    public required NetCoordinates Coordinates;
+}
+
+[Serializable, NetSerializable]
 public sealed class SquadTabletState(
     List<SquadTabletSquad> squads,
     List<SquadTabletMember> free,
     List<SquadTabletOrder> orders,
     List<SquadTabletTask> tasks,
-    List<SquadTabletTimer> timers)
+    List<SquadTabletTimer> timers,
+    List<SquadTabletEnemy> enemies)
     : BoundUserInterfaceState
 {
     public List<SquadTabletSquad> Squads { get; } = squads;
@@ -143,6 +151,11 @@ public sealed class SquadTabletState(
     public List<SquadTabletOrder> Orders { get; } = orders;
     public List<SquadTabletTask> Tasks { get; } = tasks;
     public List<SquadTabletTimer> Timers { get; } = timers;
+
+    /// <summary>
+    /// Where the attackers of the squads' members are, each one is marked for a few seconds after a hit.
+    /// </summary>
+    public List<SquadTabletEnemy> Enemies { get; } = enemies;
 
     /// <summary>
     /// The tablet rebuilds the state on every refresh, comparing by value keeps an unchanged one from being sent.
@@ -154,7 +167,8 @@ public sealed class SquadTabletState(
             || !Free.SequenceEqual(other.Free)
             || !Orders.SequenceEqual(other.Orders)
             || !Tasks.SequenceEqual(other.Tasks)
-            || !Timers.SequenceEqual(other.Timers))
+            || !Timers.SequenceEqual(other.Timers)
+            || !Enemies.SequenceEqual(other.Enemies))
             return false;
 
         for (var i = 0; i < Squads.Count; i++)
@@ -173,7 +187,7 @@ public sealed class SquadTabletState(
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(Squads.Count, Free.Count, Orders.Count, Tasks.Count, Timers.Count);
+        return HashCode.Combine(Squads.Count, Free.Count, Orders.Count, Tasks.Count, Timers.Count, Enemies.Count);
     }
 }
 

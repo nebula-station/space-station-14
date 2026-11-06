@@ -1,0 +1,17 @@
+uplink-scram-once-desc = Одноразовый имплант побега: один раз телепортирует вас в большом радиусе. Выдаётся бесплатно только тем, кто уже вколол себе имплант смерти.
+uplink-syndicate-rapier-name = Рапира Синдиката
+uplink-syndicate-rapier-desc = Лёгкий колющий клинок: укол проходит сквозь броню, а гибкое лезвие отражает часть пуль и лазерных лучей.
+uplink-energy-dome-name = Энергетический барьер
+uplink-energy-dome-desc = Поясной генератор щита, защищающий владельца от лазеров и пуль, но не позволяющий самому стрелять. Работает от батареи.
+uplink-triton-name = Triton Mark 3
+uplink-triton-desc = Защищённый кейс с импульсным пистолетом-пулемётом Triton Mark 3 и пятью магазинами энергоболтов.
+uplink-m7s-bundle-name = M7S
+uplink-m7s-bundle-desc = Защищённый кейс с пистолетом-пулемётом M7S и тремя магазинами 5x23 мм.
+uplink-m41-name = M-41
+uplink-m41-desc = Защищённый кейс с пулемётом M-41 и магазином 5x56 мм.
+uplink-magazine-triton-name = Магазин Triton (энергоболт)
+uplink-magazine-triton-desc = Запасной магазин энергоболтов для Triton Mark 3.
+uplink-magazine-m7s-name = Магазин M7S (5x23 мм)
+uplink-magazine-m7s-desc = Запасной магазин для M7S.
+uplink-magazine-m41-name = Магазин M-41 (5x56 мм винтовочный)
+uplink-magazine-m41-desc = Запасной магазин для M-41.

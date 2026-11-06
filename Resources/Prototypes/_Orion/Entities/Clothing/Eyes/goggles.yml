@@ -8,9 +8,10 @@
   - type: Clothing
     sprite: _Orion/Clothing/Eyes/Goggles/security_nightvision.rsi
   - type: NightVision
-    overlayColor: "#E4717A"
-    lightingColor: "#E4717A33"
+    overlayColor: "#F4A9AF" # Nebula edit
+    lightingColor: "#FFA0A880" # Nebula edit
   - type: SkewedHud
+  - type: FlashImmunity # Nebula edit
   - type: AllyOutlineVision
 
 - type: entity

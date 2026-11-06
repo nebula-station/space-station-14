@@ -369,14 +369,14 @@
   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndiecommander.rsi, state: icon }
   productEntity: ClothingOuterHardsuitSyndieCommander
   cost:
-    Telecrystal: 100 # novelty item for the larp, doesnt come with bundle though because bulky fuck
+    Telecrystal: 50 # Nebula edit
   categories:
   - UplinkWearables
   conditions:
   - !type:StoreWhitelistCondition
     whitelist:
       tags:
-      - NukeOpsCommanderUplink
+      - NukeOpsUplink # Nebula edit
   - !type:ListingLimitedStockCondition
     stock: 1
 
@@ -1029,6 +1029,16 @@
     Telecrystal: 60
   categories:
   - UplinkWeaponry
+  # Nebula start
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+  - !type:BuyerJobCondition
+    whitelist:
+    - Chef
+  # Nebula end
 
 - type: listing
   id: UplinkCapoeiraManual

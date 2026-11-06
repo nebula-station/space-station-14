@@ -2,8 +2,11 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Linq;
 using Content.Shared._Nebula.CCVar;
+using Content.Shared._Nebula.ERP;
 using Robust.Shared.Configuration;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
@@ -25,6 +28,12 @@ public sealed partial class DetailExaminableData : IEquatable<DetailExaminableDa
     [DataField] public string NSFWOOCFlavorText { get; set; } = string.Empty;
     [DataField] public string NSFWLinksFlavorText { get; set; } = string.Empty;
     [DataField] public string NSFWTagsFlavorText { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Consent picked for each <see cref="ErpConsentTagPrototype"/>, tags without an entry use their default.
+    /// </summary>
+    [DataField] public Dictionary<string, ErpConsent> ConsentTags { get; set; } = new();
+
     public DetailExaminableData Sanitized(IConfigurationManager cfg)
     {
         var oocMax = cfg.GetCVar(NCCVars.OOCMaxFlavorTextLength);
@@ -46,6 +55,7 @@ public sealed partial class DetailExaminableData : IEquatable<DetailExaminableDa
             NSFWOOCFlavorText = Sanitize(NSFWOOCFlavorText, oocMax),
             NSFWLinksFlavorText = Sanitize(NSFWLinksFlavorText, linksMax),
             NSFWTagsFlavorText = FormatTags(Sanitize(NSFWTagsFlavorText, tagsMax)),
+            ConsentTags = new(ConsentTags ?? new()),
         };
     }
     private static string Sanitize(string text, int maxLength)
@@ -96,7 +106,8 @@ public sealed partial class DetailExaminableData : IEquatable<DetailExaminableDa
                && NSFWFlavorText == other.NSFWFlavorText
                && NSFWOOCFlavorText == other.NSFWOOCFlavorText
                && NSFWLinksFlavorText == other.NSFWLinksFlavorText
-               && NSFWTagsFlavorText == other.NSFWTagsFlavorText;
+               && NSFWTagsFlavorText == other.NSFWTagsFlavorText
+               && ConsentTagsEqual(other);
     }
 
     public DetailExaminableData CopyWithChangedField(FlavorTextField field, string text)
@@ -122,6 +133,67 @@ public sealed partial class DetailExaminableData : IEquatable<DetailExaminableDa
         }
 
         return copy;
+    }
+
+    private bool ConsentTagsEqual(DetailExaminableData other)
+    {
+        if (ConsentTags.Count != other.ConsentTags.Count)
+            return false;
+
+        foreach (var (tag, consent) in ConsentTags)
+        {
+            if (!other.ConsentTags.TryGetValue(tag, out var otherConsent) || otherConsent != consent)
+                return false;
+        }
+
+        return true;
+    }
+
+    public ErpConsent GetConsent(ErpConsentTagPrototype tag)
+    {
+        return ConsentTags.GetValueOrDefault(tag.ID, tag.Default);
+    }
+
+    public DetailExaminableData CopyWithConsent(string tag, ErpConsent consent)
+    {
+        var copy = (DetailExaminableData) MemberwiseClone();
+        copy.ConsentTags = new(ConsentTags) { [tag] = consent };
+        return copy;
+    }
+
+    /// <summary>
+    /// Drops unknown tags and fixes values the tag doesn't allow.
+    /// </summary>
+    public void ValidateConsentTags(IPrototypeManager prototypes)
+    {
+        var valid = new Dictionary<string, ErpConsent>();
+        foreach (var (id, consent) in ConsentTags)
+        {
+            if (!prototypes.TryIndex<ErpConsentTagPrototype>(id, out var tag))
+                continue;
+
+            var value = consent switch
+            {
+                ErpConsent.Yes => ErpConsent.Yes,
+                ErpConsent.Ask when tag.AllowAsk => ErpConsent.Ask,
+                _ => ErpConsent.No,
+            };
+            valid[id] = value;
+        }
+
+        // after the first loop so it doesn't depend on dictionary order
+        foreach (var id in valid.Keys.ToList())
+        {
+            var tag = prototypes.Index<ErpConsentTagPrototype>(id);
+            if (tag.Requires is { } required
+                && prototypes.TryIndex(required, out var requiredTag)
+                && valid.GetValueOrDefault(required, requiredTag.Default) != ErpConsent.Yes)
+            {
+                valid[id] = ErpConsent.No;
+            }
+        }
+
+        ConsentTags = valid;
     }
 
     public override bool Equals(object? obj) => obj is DetailExaminableData d && Equals(d);

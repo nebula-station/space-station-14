@@ -137,6 +137,11 @@ function getChanges(body) {
 }
 
 function getHighestCLNumber() {
+    // Nebula edit: the changelog file may not exist yet.
+    if (!fs.existsSync(ChangelogFilePath)) {
+        return 0;
+    }
+
     const file = fs.readFileSync(ChangelogFilePath, "utf8");
 
     const data = yaml.load(file);

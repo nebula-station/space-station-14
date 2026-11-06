@@ -58,7 +58,6 @@
       visible: false
     # </Trauma>
     - map: [ "eyes" ]
-    - map: [ "belt" ]
     - map: [ "id" ]
     # Lua start
     - map: [ "finger" ]
@@ -67,6 +66,7 @@
     - map: [ "necklace" ]
     # Lua end
     - map: [ "outerClothing" ]
+    - map: [ "belt" ] # Nebula edit
     - map: [ "back" ]
     - map: [ "neck" ]
     - map: [ "suitstorage" ]

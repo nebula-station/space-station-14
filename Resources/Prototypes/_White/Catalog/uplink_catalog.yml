@@ -8,7 +8,7 @@
   description: uplink-experimental-syndicate-teleporter-desc
   productEntity: ExperimentalSyndicateTeleporter
   cost:
-    Telecrystal: 20 # Trauma
+    Telecrystal: 40 # Nebula edit
   categories:
     - UplinkDisruption
   conditions:

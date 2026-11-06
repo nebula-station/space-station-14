@@ -68,9 +68,10 @@
       state: tears
       visible: false
     - map: [ "eyes" ]
-    - map: [ "belt" ]
+    # - map: [ "belt" ] # Nebula edit
     - map: [ "id" ]
     - map: [ "outerClothing" ]
+    - map: [ "belt" ] # Nebula edit
     - map: [ "back" ]
     - map: [ "neck" ]
     - map: [ "suitstorage" ]

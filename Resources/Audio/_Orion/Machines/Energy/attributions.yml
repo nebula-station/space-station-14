@@ -1,0 +1,4 @@
+- files: ["energyshield_ambient.ogg", "energyshield_down.ogg", "energyshield_parry.ogg"]
+  license: "Custom"
+  copyright: "Unknown. Taken from Arcane, the source repository has no attribution for these files"
+  source: "https://github.com/ArcaneSS14/arcane/tree/81cd66873de20e597282565f27b686331e65f677/Resources/Audio/_Orion/Machines/Energy"

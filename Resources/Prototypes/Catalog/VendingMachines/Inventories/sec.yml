@@ -23,19 +23,19 @@
     # <Trauma>
     BolaEnergy: 5 # was SecurityBola: 6
     PepperSpray: 3
-    SkillChipShield: 2
-    SkillChipBludgeon: 2
-    SkillChipShortBlade: 2
-    SkillChipPolearm: 2
-    SkillChipNonLethal: 2
-    SkillChipPistol: 2
-    SkillChipRifle: 2
-    SkillChipShotgun: 2
-    SkillChipLaser: 2
-    SkillChipMarksmanship: 2
-    SkillChipLongBlade: 2
-    SkillChipUnarmed: 2
-    SkillChipThrowing: 2
+    # SkillChipShield: 2 # Nebula edit
+    # SkillChipBludgeon: 2 # Nebula edit
+    # SkillChipShortBlade: 2 # Nebula edit
+    # SkillChipPolearm: 2 # Nebula edit
+    # SkillChipNonLethal: 2 # Nebula edit
+    # SkillChipPistol: 2 # Nebula edit
+    # SkillChipRifle: 2 # Nebula edit
+    # SkillChipShotgun: 2 # Nebula edit
+    # SkillChipLaser: 2 # Nebula edit
+    # SkillChipMarksmanship: 2 # Nebula edit
+    # SkillChipLongBlade: 2 # Nebula edit
+    # SkillChipUnarmed: 2 # Nebula edit
+    # SkillChipThrowing: 2 # Nebula edit
     SecHypo: 2
     CartridgeEpinephrine: 2
     CartridgeSaline: 2
@@ -56,6 +56,6 @@
   emaggedInventory:
     SarinGasGrenade: 2
     EmpGrenade: 2
-    SkillChipHeavy: 1
-    SkillChipSniper: 1
+    # SkillChipHeavy: 1 # Nebula edit
+    # SkillChipSniper: 1 # Nebula edit
   # </Trauma>
