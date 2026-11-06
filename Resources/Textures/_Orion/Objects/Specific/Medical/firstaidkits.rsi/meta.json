@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprited by MTandi and taken from TG at https://github.com/tgstation/tgstation/commit/e3933ba938a75942766033558c1df261d33c3377.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "surgerykit"
+    },
+    {
+      "name": "surgerykit-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "surgerykit-inhand-left",
+      "directions": 4
+    }
+  ]
+}

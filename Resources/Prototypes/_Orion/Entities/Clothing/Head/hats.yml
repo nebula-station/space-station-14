@@ -1,0 +1,84 @@
+- type: entity
+  abstract: true
+  parent: [ClothingHeadBase]
+  id: ClothingHeadHatArmoredPlus
+  components:
+  - type: Armor
+    coverage:
+    - Head
+    traumaDeductions:
+      Dismemberment: 0.3
+      OrganDamage: 0.4
+      BoneDamage: 0.3
+      VeinsDamage: 0.1
+      NerveDamage: 0.1
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.7
+
+- type: entity
+  parent: [ ClothingHeadHatArmoredPlus, BaseCommandContraband ]
+  # Arcane-Edit-Start
+  id: ClothingHeadHatBeretCaptainWhiteBlue
+  name: captain metamorphic beret
+  description:  A high-tech beret capable of instantly changing its color, a true icon of style.
+# Arcane-Edit-End
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Head/Hats/white_blue_beret.rsi # Arcane-Edit
+  - type: Clothing
+    sprite: _Orion/Clothing/Head/Hats/white_blue_beret.rsi # Arcane-Edit
+    # Arcane-Start
+    equippedPrefix: blue
+  - type: Item
+    heldPrefix: blue
+  - type: ItemSwitch
+    state: blue
+    onUse: false
+    states:
+      blue: !type:ItemSwitchState
+        verb: blue
+        sprite:
+          sprite: _Orion/Clothing/Head/Hats/white_blue_beret.rsi
+          state: blue-icon
+      white: !type:ItemSwitchState
+        verb: white
+        sprite:
+          sprite: _Orion/Clothing/Head/Hats/white_blue_beret.rsi
+          state: white-icon
+
+- type: entity
+  parent: [ ClothingHeadHatArmoredPlus, BaseCommandContraband ] # Arcane-Edit
+  id: ClothingHeadHatBeretSheriff
+  name: sheriff beret
+  description: Beret, a favorite among local sheriffs.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Head/Hats/sheriff_beret.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Head/Hats/sheriff_beret.rsi
+
+- type: entity
+  parent: ClothingHeadHatCapcap
+  id: ClothingHeadHatCapcapSheriff
+  name: sheriff cap
+  description: Stylish sheriff cap.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Head/Hats/sheriff_capcap.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Head/Hats/sheriff_capcap.rsi
+
+- type: entity
+  parent: ClothingHeadHatCapcap
+  id: ClothingHeadHatCapcapWhite
+  name: white cap cap
+  description: Stylish white cap cap.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Head/Hats/white_capcap.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Head/Hats/white_capcap.rsi
