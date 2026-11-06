@@ -1,0 +1,9 @@
+- type: stationAiCustomization
+  id: StationAiHologramCharacter
+  name: station-ai-hologram-character
+  previewKey: Hologram
+  useCharacterProfile: true
+  layerData:
+    Hologram:
+      sprite: Mobs/Silicon/holograms.rsi
+      state: ai_female

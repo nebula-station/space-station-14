@@ -20,3 +20,8 @@
   params:
     displacementSize: 127
     displacementScale: 1
+
+- type: shader
+  id: NebulaHologramInterference
+  kind: source
+  path: "/Textures/_Nebula/Shaders/hologram_interference.swsl"

@@ -24,6 +24,7 @@ using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using System.Linq;
 using Content.Shared.Power.EntitySystems;
+using Content.Server._Nebula.Silicons.StationAi;
 
 namespace Content.Server.Holopad;
 
@@ -43,6 +44,7 @@ public sealed partial class HolopadSystem : SharedHolopadSystem
     [Dependency] private PvsOverrideSystem _pvs = default!;
     [Dependency] private SharedPowerStateSystem _powerState = default!;
     [Dependency] private MetaDataSystem _meta = default!;
+    [Dependency] private AiHologramWalkSystem _aiHologramWalk = default!; // Nebula edit
 
     public override void Initialize()
     {
@@ -724,7 +726,7 @@ public sealed partial class HolopadSystem : SharedHolopadSystem
 
         // Switch the AI's perspective from free roaming to the target holopad
         _xformSystem.SetCoordinates(stationAiCore.Comp.RemoteEntity.Value, Transform(entity).Coordinates);
-        _stationAiSystem.SwitchRemoteEntityMode(stationAiCore, false);
+        _aiHologramWalk.BeginWalk(stationAiCore, entity); // Nebula edit
 
         // Open the holopad UI if it hasn't been opened yet
         if (TryComp<UserInterfaceComponent>(entity, out var entityUserInterfaceComponent))

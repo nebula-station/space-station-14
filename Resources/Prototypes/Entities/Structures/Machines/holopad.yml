@@ -162,7 +162,7 @@
   - type: HolopadHologram
     rsiPath: Structures/Machines/holopad.rsi
     rsiState: icon_in_call
-    shaderName: Hologram
+    shaderName: NebulaHologramInterference # Nebula edit
     color1: "#65b8e2"
     color2: "#3a6981"
     alpha: 0.9

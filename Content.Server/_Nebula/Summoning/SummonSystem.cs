@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Server._Nebula.PointTether;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
 using Content.Server.EUI;
@@ -44,6 +45,7 @@ namespace Content.Server._Nebula.Summoning;
 public sealed partial class SummonSystem : EntitySystem
 {
     [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private PointTetherSystem _tether = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private IPrototypeManager _proto = default!;
     [Dependency] private IChatManager _chatManager = default!;
@@ -109,8 +111,6 @@ public sealed partial class SummonSystem : EntitySystem
         }
 
         _expiredInvites.Clear();
-
-        UpdateLeash(now);
     }
 
     [SubscribeLocalEvent]

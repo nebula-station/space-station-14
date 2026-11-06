@@ -1,0 +1,25 @@
+- type: entity
+  parent: StationAiHoloLocal
+  id: StationAiHoloWalking
+  categories: [ HideSpawnMenu, DoNotMap ]
+  components:
+  - type: Transform
+    anchored: false
+  - type: Physics
+    bodyType: KinematicController
+    bodyStatus: InAir
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 15
+        mask:
+        - InteractImpassable
+  - type: InputMover
+  - type: MobMover
+  - type: MovementSpeedModifier
+  - type: GravityAffected
+  - type: MovementIgnoreGravity
+  - type: CanMoveInAir
