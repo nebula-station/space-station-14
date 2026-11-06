@@ -20,5 +20,6 @@
   - type: InputMover
   - type: MobMover
   - type: MovementSpeedModifier
+  - type: GravityAffected
   - type: MovementIgnoreGravity
   - type: CanMoveInAir
