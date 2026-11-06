@@ -26,3 +26,81 @@
   name: loadout-group-adj-outerClothing
   loadouts:
   - AdjutantCoat
+
+- type: loadoutGroup
+  id: CommandMaidJumpsuit
+  name: loadout-group-command-maid-jumpsuit
+  loadouts:
+  - CommandMaidJumpskirt
+  - CommandMaidJumpskirtAlt
+  - CommandMaidJumpskirtMaidLong
+  - CommandMaidJumpskirtJanimaidmini
+  - CommandMaidJumpskirtMaidStrict
+  - CommandMaidJumpskirtElegantMaid
+  - CommandMaidJumpskirtJanimaid
+  - CommandMaidJumpskirtMaidPink
+  - CommandMaidJumpskirtMaidBlue
+  - CommandMaidJumpsuit
+  - CommandMaidJumpsuitButler
+
+- type: loadoutGroup
+  id: CommandMaidBackpack
+  name: loadout-group-command-maid-backpack
+  loadouts:
+  - CommandMaidBackpack
+  - CommandMaidSatchel
+
+- type: loadoutGroup
+  id: CommandMaidGloves
+  minLimit: 0
+  name: loadout-group-command-maid-gloves
+  loadouts:
+  - CommandMaidGloves
+
+- type: loadoutGroup
+  id: CommandMaidShoes
+  name: loadout-group-command-maid-shoes
+  loadouts:
+  - CommandMaidShoes
+  - CommandMaidShoesLaceup
+
+- type: loadoutGroup
+  id: CommandMaidHead
+  name: loadout-group-command-maid-head
+  minLimit: 0
+  loadouts:
+  - CommandMaidCap
+  - CommandMaidBowsCap
+  - CommandMaidBlackCap
+  - CommandMaidMaidFura
+
+- type: loadoutGroup
+  id: CommandMaidneck
+  name: loadout-group-command-maid-neck
+  minLimit: 0
+  loadouts:
+  - CommandMaidNeckBowTie
+  - CommandMaidNeckShortTie
+  - CommandMaidNeckMediumTie
+
+- type: loadoutGroup
+  id: CommandMaidBelt
+  name: loadout-group-command-maid-belt
+  minLimit: 0
+  loadouts:
+  - CommandMaidBeltJanitorBow
+  - CommandMaidBeltPouch
+
+- type: loadoutGroup
+  id: CommandMaidMask
+  name: loadout-group-command-maid-mask
+  minLimit: 0
+  loadouts:
+  - CommandMaidGasMask
+
+- type: loadoutGroup
+  id: CommandMaidSocks
+  name: loadout-group-command-maid-socks
+  minLimit: 0
+  loadouts:
+  - CommandMaidSocksWhiteRigged

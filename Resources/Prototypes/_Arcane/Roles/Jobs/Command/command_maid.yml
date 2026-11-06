@@ -1,0 +1,69 @@
+- type: job
+  id: CommandMaid
+  name: job-name-command-maid
+  description: job-description-command-maid
+  playTimeTracker: JobCommandMaid
+  requirements:
+  - !type:RoleTimeRequirement
+    role: JobJanitor
+    time: 18000 # 5 Hours
+  - !type:RoleTimeRequirement
+    role: JobChef
+    time: 7200 # 2 Hours
+  - !type:RoleTimeRequirement
+    role: JobBartender
+    time: 7200 # 2 Hours
+  - !type:OverallPlaytimeRequirement
+    time: 108000 # 30 Hours
+  startingGear: CommandMaidGear
+  icon: "JobIconCommandMaid"
+  supervisors: job-supervisors-command
+  setPreference: true
+  access:
+  - Command
+  - Service
+  - Maintenance
+  - Bar
+  - Kitchen
+  - Janitor
+  - Theatre
+  - Hydroponics
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+      - type: Condemned
+        soulOwnedNotDevil: true
+
+- type: startingGear
+  id: CommandMaidGear
+  equipment:
+    id: CommandMaidPDA
+    ears: ClothingHeadsetCommandMaid
+    belt: ClothingBeltJanitorFilled
+  storage:
+    back:
+    - Flash
+
+- type: chameleonOutfit
+  id: CommandMaidChameleonOutfit
+  job: CommandMaid
+  equipment:
+    head: ClothingHeadHatCommandMaid
+    neck: ClothingNeckTieBowCommandMaid
+    gloves: ClothingHandsGlovesCommandMaid
+
+- type: jobAlternateTitle
+  id: CommandMaidButler
+  job: CommandMaid
+  name: job-name-alt-commandmaid-1
+
+- type: jobAlternateTitle
+  id: CommandMaidCommandJanitor
+  job: CommandMaid
+  name: job-name-alt-commandmaid-2
+
+- type: jobAlternateTitle
+  id: CommandMaidCorporateMaid
+  job: CommandMaid
+  name: job-name-alt-commandmaid-3

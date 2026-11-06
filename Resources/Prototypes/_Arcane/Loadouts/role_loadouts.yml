@@ -8,3 +8,19 @@
   - Trinkets
   - GroupSpeciesBreathTool
   - Survival
+
+- type: roleLoadout
+  id: JobCommandMaid
+  groups:
+  - CommandMaidHead
+  - CommandMaidJumpsuit
+  - CommandMaidneck
+  - CommandMaidBackpack
+  - CommandMaidGloves
+  - CommandMaidShoes
+  - CommandMaidBelt
+  - CommandMaidMask
+  - CommandMaidSocks
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - Survival

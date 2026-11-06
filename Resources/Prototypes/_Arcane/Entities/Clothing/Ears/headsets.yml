@@ -16,3 +16,23 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingHeadset, BaseCommandContraband]
+  id: ClothingHeadsetCommandMaid
+  name: command maid headset
+  description: A headset for command maid.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyCommand
+      - EncryptionKeyService
+  - type: Sprite
+    sprite: _Arcane/Clothing/Ears/Headsets/command_maid.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Ears/Headsets/command_maid.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon

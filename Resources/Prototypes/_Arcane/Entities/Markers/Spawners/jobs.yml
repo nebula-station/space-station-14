@@ -10,3 +10,15 @@
     layers:
     - state: green
     - state: adjutant
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointCommandMaid
+  name: command maid
+  components:
+  - type: SpawnPoint
+    job_id: CommandMaid
+  - type: Sprite
+    sprite: _Arcane/Markers/jobs.rsi
+    layers:
+    - state: green
