@@ -39,6 +39,7 @@ public sealed class ErpChangelingTest : GameTest
     private static readonly ProtoId<ErpConsentTagPrototype> Erp = "Erp";
     private static readonly ProtoId<ErpConsentTagPrototype> Rape = "Rape";
     private static readonly ProtoId<ErpConsentTagPrototype> HornyAntagVictim = "HornyAntagVictim";
+    private static readonly ProtoId<GamePresetPrototype> Extended = "Extended";
 
     private static readonly string[] BlockedListings =
     [
@@ -67,7 +68,7 @@ public sealed class ErpChangelingTest : GameTest
     {
         await Server.WaitAssertion(() =>
         {
-            var extended = SProtoMan.Index<GamePresetPrototype>("Extended");
+            var extended = SProtoMan.Index(Extended);
             Assert.That(extended.Rules, Does.Contain(new EntProtoId("ErpChangelingSpawn")),
                 "The ERP changeling rule isn't in the Extended preset, is the Nebula partials directory registered?");
 
