@@ -177,7 +177,7 @@ jobs:
 
   ci-success:
     name: Build & Test Debug
-    if: ${{ always() && needs.plan-integration-shards.result != 'skipped' }}
+    if: ${{ !cancelled() && needs.plan-integration-shards.result != 'skipped' }}
     needs:
       - plan-integration-shards
       - content-tests
