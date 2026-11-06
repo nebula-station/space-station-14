@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+- type: changelingStartingEvolution
+  id: ErpChangeling
+  components:
+  - type: ChangelingIdentity
+    baseChangelingActions: # no Absorb DNA, it kills
+    - ActionEvolutionMenu
+    - ActionStingExtractDNA
+    - ActionChangelingTransformCycle
+    - ActionChangelingTransform
+    - ActionEnterStasis
+    - ActionExitStasis
+  - type: ErpChangeling

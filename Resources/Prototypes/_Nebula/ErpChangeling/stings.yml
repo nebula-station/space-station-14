@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+- type: reagentStingConfiguration
+  id: StingCrocin
+  reagents:
+    Crocin: 10
+
+- type: reagentStingConfiguration
+  id: StingHexacrocin
+  reagents:
+    Hexacrocin: 10
+
+- type: reagentStingConfiguration
+  id: StingPantyDropper
+  reagents:
+    PantyDropper: 5

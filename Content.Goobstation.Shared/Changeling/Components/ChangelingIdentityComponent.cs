@@ -32,7 +32,7 @@ public sealed partial class ChangelingIdentityComponent : Component
     [DataField("armorStrip")]
     public SoundSpecifier ArmourStripSound = new SoundPathSpecifier("/Audio/_Goobstation/Changeling/Effects/armour_strip.ogg");
 
-    public readonly List<EntProtoId> BaseChangelingActions = new()
+    [DataField] public List<EntProtoId> BaseChangelingActions = new() // Nebula edit
     {
         "ActionEvolutionMenu",
         "ActionAbsorbDNA",
