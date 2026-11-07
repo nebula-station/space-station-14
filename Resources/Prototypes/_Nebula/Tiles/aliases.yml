@@ -1,0 +1,32 @@
+# Arcane map tiles we don't have yet
+- type: tileAlias
+  id: FloorDarkHerringboneAlt
+  target: FloorDarkHerringbone
+
+- type: tileAlias
+  id: FloorDarkPavementAlt
+  target: FloorDarkPavement
+
+- type: tileAlias
+  id: FloorDarkPavementVerticalAlt
+  target: FloorDarkPavementVertical
+
+- type: tileAlias
+  id: FloorSteelHerringboneAlt
+  target: FloorSteelHerringbone
+
+- type: tileAlias
+  id: FloorSteelPavementAlt
+  target: FloorSteelPavement
+
+- type: tileAlias
+  id: FloorSteelPavementVerticalAlt
+  target: FloorSteelPavementVertical
+
+- type: tileAlias
+  id: FloorWhiteHerringboneAlt
+  target: FloorWhiteHerringbone
+
+- type: tileAlias
+  id: FloorCanvas
+  target: FloorWhite

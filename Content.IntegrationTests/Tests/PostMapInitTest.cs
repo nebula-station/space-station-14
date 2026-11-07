@@ -72,7 +72,7 @@ namespace Content.IntegrationTests.Tests
             {"/Maps/_Trauma/bagel.yml", ["RubberStampMime"]},
             {"/Maps/_Trauma/kettle.yml", ["RubberStampSyndicate"]}, // exterior rocks loot
             // Nebula start
-            {"/Maps/_Nebula/Current/WonderBox.yml", ["ClothingHeadHatCatEars", "RubberStampChaplain", "RubberStampClown", "RubberStampMime"]},
+            {"/Maps/_Nebula/Current/WonderBox.yml", ["ClothingHeadHatCatEars", "DimensionPot"]},
             {"/Maps/_Nebula/Current/avrite.yml", ["ClothingOuterHardsuitLuxury"]},
             {"/Maps/_Nebula/Current/bagel.yml", ["RubberStampMime"]},
             {"/Maps/_Nebula/Current/barratry.yml", ["RubberStampClown", "RubberStampMime"]},
