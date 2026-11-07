@@ -1,0 +1,392 @@
+- type: entity
+  parent: [ BaseStorageItem, ContentsExplosionResistanceBase ]
+  id: BaseCase
+  abstract: true
+  name: case
+  description: I wonder what's in it?
+  components:
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,5,4
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 220
+      behaviors:
+      - !type:EmptyAllContainersBehaviour
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity # For pistols and little items
+  parent: BaseCase
+  id: BaseCaseMini
+  abstract: true
+  name: case
+  description: I wonder what's in it?
+  components:
+  - type: Item
+    size: Huge
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,2
+
+- type: entity
+  parent: [BaseCase, BaseSecurityContraband]
+  id: CaseSecurity
+  name: security case
+  suffix: Security, Empty
+  description: Red and black case with a sec logo, I wonder what's in there?
+  components:
+  - type: Sprite
+    sprite: _Orion/Objects/Storage/security_case.rsi
+    state: icon
+
+- type: entity
+  parent: [BaseCaseMini, BaseSecurityContraband]
+  id: CaseSecurityMini
+  name: security mini case
+  suffix: Security, Empty
+  description: Little red and black case with a sec logo, I wonder what's in there?
+  components:
+  - type: Sprite
+    sprite: _Orion/Objects/Storage/security_case_mini.rsi
+    state: icon
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityAKM
+  name: security case AKM
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,4,2
+    - 6,0,9,1
+  - type: StorageFill
+    contents:
+      - id: WeaponRifleAk
+      - id: MagazineLightRifle
+        amount: 2
+      - id: MagazineBoxLightRifle
+        amount: 2
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityAntelope
+  name: security case Antelope
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,1
+    - 5,0,6,1
+  - type: StorageFill
+    contents:
+      - id: WeaponShotgunAntelope
+      - id: MagazineShotgun
+        amount: 2
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityBR64
+  name: security case BR-64
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,4,2
+    - 6,0,7,1
+  - type: StorageFill
+    contents:
+      - id: WeaponRifleBR64
+      - id: MagazineHeavyRifleBR64
+        amount: 2
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityCellSniper
+  name: security case ES-7
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,6,1
+    - 8,0,12,1
+  - type: StorageFill
+    contents:
+      - id: WeaponLaserCellSniper
+      - id: PowerCellIRSniper
+        amount: 3
+      - id: PowerCellXraySniper
+      - id: PowerCellIonSniper
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityDoubleShotguns
+  name: security case double-barreled shotguns
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,4,0
+    - 0,1,2,1
+    - 3,1,5,1
+    - 0,3,1,4
+    - 2,3,3,4
+  - type: StorageFill
+    contents:
+      - id: WeaponShotgunDoubleBarreled
+      - id: WeaponShotgunSawn
+        amount: 2
+      - id: BoxLethalshot
+        amount: 2
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityDragunov
+  name: security case Dragunov
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,4,2
+    - 6,0,8,1
+  - type: StorageFill
+    contents:
+      - id: WeaponRifleDragunov
+      - id: MagazineRifle762Sniper
+        amount: 3
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityEnergyRifle
+  name: security case CR-2
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,1
+    - 5,0,8,1
+  - type: StorageFill
+    contents:
+      - id: WeaponEnergyRifle
+      - id: EnergyMagRifleDisabler
+      - id: EnergyMagRifleLethal
+        amount: 2
+      - id: EnergyMagRifleIon
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityLaserCellSMG
+  name: security case ER-5
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,1
+    - 5,0,10,1
+  - type: StorageFill
+    contents:
+      - id: WeaponLaserCellSMG
+      - id: PowerCellIRSMG
+        amount: 2
+      - id: PowerCellXraySMG
+        amount: 2
+      - id: PowerCellOverchargedSMG # Arcane-Edit
+        amount: 2
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityM28
+  name: security case M-28
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,4,2
+    - 6,0,7,1
+  - type: StorageFill
+    contents:
+      - id: WeaponRifleM28
+      - id: MagazineRifle762
+        amount: 2
+
+- type: entity
+  parent: CaseSecurityMini
+  id: CaseSecurityMiniCellRevolver
+  name: security mini case EG-1
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,0
+    - 0,1,0,1
+    - 3,0,6,1
+  - type: StorageFill
+    contents:
+      - id: WeaponLaserCellRevolver
+      - id: PowerCellIRRevolver
+        amount: 4
+      - id: PowerCellOverchargedRevolver
+        amount: 3
+      - id: PowerCellXrayRevolver
+
+- type: entity
+  parent: CaseSecurityMini
+  id: CaseSecurityMiniDeckard
+  name: security mini case Deckard
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,0
+    - 0,1,0,1
+    - 3,0,4,1
+  - type: StorageFill
+    contents:
+      - id: WeaponRevolverDeckard
+      - id: SpeedLoaderMagnum
+        amount: 2
+
+- type: entity
+  parent: CaseSecurityMini
+  id: CaseSecurityMiniDesertEagle
+  name: security mini case Desert Eagle
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,0
+    - 0,1,0,1
+    - 3,0,4,1
+  - type: StorageFill
+    contents:
+      - id: WeaponPistolDesertEagle
+      - id: MagazineMagnum
+        amount: 2
+
+- type: entity
+  parent: CaseSecurityMini
+  id: CaseSecurityMiniFlareGun
+  name: security mini case shell gun
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,1
+    - 3,0,5,1
+  - type: StorageFill
+    contents:
+      - id: WeaponFlareGunSecurity
+        amount: 2
+      - id: BoxLethalshot
+
+- type: entity
+  parent: CaseSecurityMini
+  id: CaseSecurityMiniInspector
+  name: security mini case Inspector
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,0
+    - 0,1,0,1
+    - 3,0,4,1
+  - type: StorageFill
+    contents:
+      - id: WeaponRevolverInspector
+      - id: SpeedLoaderMagnum
+        amount: 2
+
+- type: entity
+  parent: CaseSecurityMini
+  id: CaseSecurityMiniVP78
+  name: security mini case VP-78
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,0
+    - 0,1,0,1
+    - 3,0,4,1
+  - type: StorageFill
+    contents:
+      - id: WeaponPistolVP78
+      - id: MagazinePistol20
+        amount: 2
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityMosins
+  name: security case Mosins
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,3
+    - 5,0,8,3
+  - type: StorageFill
+    contents:
+      - id: WeaponSniperMosin
+        amount: 2
+      - id: SpeedLoaderLightRifle
+        amount: 8
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityP90
+  name: security case P90
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,1
+    - 5,0,6,1
+  - type: StorageFill
+    contents:
+      - id: WeaponSubMachineGunP90
+      - id: MagazineSMGP90
+        amount: 2
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityRemington
+  name: security case Remington 700
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,3
+    - 5,0,6,3
+  - type: StorageFill
+    contents:
+      - id: WeaponSniperRemington700
+      - id: MagazineBox308win
+        amount: 3
+      - id: MagazineBox308winUranium
+
+- type: entity
+  parent: CaseSecurity
+  id: CaseSecurityVector
+  name: security case Vector
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,1
+    - 5,0,7,1
+  - type: StorageFill
+    contents:
+      - id: WeaponSubMachineGunVector
+      - id: MagazineSMGVector
+        amount: 3

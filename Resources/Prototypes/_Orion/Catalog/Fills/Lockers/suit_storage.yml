@@ -1,0 +1,19 @@
+- type: entity
+  parent: SuitStorageBase
+  id: SuitStorageExplorerSuit
+  suffix: Explorer suit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillShaftMinerExplorerSuit
+
+# Nebula start
+- type: entityTable
+  id: FillShaftMinerExplorerSuit
+  table: !type:AllSelector
+    children:
+    - id: OxygenTankFilled
+    - id: LavalandEquipmentExplorerSuit
+    - id: ClothingMaskGasExplorer
+# Nebula end
