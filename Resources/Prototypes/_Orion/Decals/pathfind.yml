@@ -1,0 +1,11 @@
+- type: decal
+  id: PathfindBlockWChevronFillS
+  sprite:
+    sprite: _Orion/Decals/pathfind.rsi
+    state: blockwchevfills
+
+- type: decal
+  id: PathfindBlockWChevronFillW
+  sprite:
+    sprite: _Orion/Decals/pathfind.rsi
+    state: blockwchevfillw
