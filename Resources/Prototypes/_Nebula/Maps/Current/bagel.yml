@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneBagel
+  id: NebulaBagel
   mapName: 'Bagel Station'
   mapPath: /Maps/_Nebula/Current/bagel.yml # Goobstation - custom bagel
   minPlayers: 25 # Arcane-Edit 35 > 25
@@ -19,12 +19,11 @@
           availableJobs: # 63 jobs total w/o latejoins & interns, 80 jobs total w/ latejoins & interns
             #command (7)
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
             Adjutant: [ 1, 1 ]
             CommandMaid: [ 1, 1 ]
+            DClass: [ -1, -1 ]
             #service
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 1, 2 ]

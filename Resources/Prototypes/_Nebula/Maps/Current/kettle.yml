@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneKettle
+  id: NebulaKettle
   mapName: 'Kettle'
   mapPath: /Maps/_Nebula/Current/kettle.yml
   minPlayers: 35
@@ -23,8 +23,6 @@
             Adjutant: [ 1, 1 ]
             CommandMaid: [ 1, 1 ]
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 1, 2 ]
             Botanist: [ 3, 4 ]

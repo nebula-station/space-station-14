@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneCluster
+  id: NebulaCluster
   mapName: 'Cluster'
   mapPath: /Maps/_Nebula/Current/cluster.yml
   minPlayers: 5
@@ -21,8 +21,6 @@
             #service
             StationAi: [ 1, 1 ]
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
             Adjutant: [ 1, 1 ]

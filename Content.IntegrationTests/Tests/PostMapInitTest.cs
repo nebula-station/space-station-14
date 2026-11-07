@@ -71,6 +71,21 @@ namespace Content.IntegrationTests.Tests
             {"/Maps/_Lavaland/Lavaland/ruin_toyshop.yml", ["GoldenBikeHorn", "ClothingHeadHatCatEars"]},
             {"/Maps/_Trauma/bagel.yml", ["RubberStampMime"]},
             {"/Maps/_Trauma/kettle.yml", ["RubberStampSyndicate"]}, // exterior rocks loot
+            // Nebula start
+            {"/Maps/_Nebula/Current/WonderBox.yml", ["ClothingHeadHatCatEars", "RubberStampChaplain", "RubberStampClown", "RubberStampMime"]},
+            {"/Maps/_Nebula/Current/avrite.yml", ["ClothingOuterHardsuitLuxury"]},
+            {"/Maps/_Nebula/Current/bagel.yml", ["RubberStampMime"]},
+            {"/Maps/_Nebula/Current/barratry.yml", ["RubberStampClown", "RubberStampMime"]},
+            {"/Maps/_Nebula/Current/chloris.yml", ["ClosetJanitorBomb"]},
+            {"/Maps/_Nebula/Current/cluster.yml", ["RubberStampMime"]},
+            {"/Maps/_Nebula/Current/kettle.yml", ["RubberStampClown", "RubberStampHop", "RubberStampSyndicate"]},
+            {"/Maps/_Nebula/Current/leonid.yml", ["ClothingOuterHardsuitLuxury"]},
+            {"/Maps/_Nebula/Current/loop.yml", ["ClothingOuterHardsuitLuxury", "WehMedipen"]},
+            {"/Maps/_Nebula/Current/meta.yml", ["ClosetJanitorBombFilled"]},
+            {"/Maps/_Nebula/Current/origin.yml", ["ClothingHeadHatCatEars"]},
+            {"/Maps/_Nebula/Current/serpentcrest.yml", ["WehMedipen"]},
+            {"/Maps/_Nebula/Current/silly.yml", ["RubberStampSyndicate"]},
+            // Nebula end
             // </Trauma>
             {"/Maps/Shuttles/ShuttleEvent/honki.yml", ["GoldenBikeHorn", "RubberStampClown"]},
             {"/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", ["RubberStampSyndicate"]},
@@ -88,7 +103,6 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] DoNotMapWhitelist =
         {
             // <Trauma>
-            "/Maps/_Nebula/Current/**", // Nebula edit
             "/Maps/_Goobstation/Shuttles/consul.yml",
             "/Maps/_Trauma/centcomm.yml",
             // </Trauma>

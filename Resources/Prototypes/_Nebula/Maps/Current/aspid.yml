@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneAspid
+  id: NebulaAspid
   mapName: 'NCS Aspid'
   mapPath: /Maps/_Nebula/Current/aspid.yml
   minPlayers: 20
@@ -20,8 +20,6 @@
             DClass: [ -1, -1 ]
             #service
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
             Adjutant: [ 1, 1 ]
