@@ -1,0 +1,314 @@
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentReportStationRecipe
+  result: PrintedDocumentReportStation
+
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentReportOnEliminationOfViolationsRecipe
+  result: PrintedDocumentReportOnEliminationOfViolations
+
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentReportDepartmentRecipe
+  result: PrintedDocumentReportDepartment
+
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentReportEmployeePerformanceRecipe
+  result: PrintedDocumentReportEmployeePerformance
+
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentReportOnTheChaptersMeetingRecipe
+  result: PrintedDocumentReportOnTheChaptersMeeting
+
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentInternalAffairsAgentsReportRecipe
+  result: PrintedDocumentInternalAffairsAgentsReport
+
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentConditionReportRecipe
+  result: PrintedDocumentConditionReport
+
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentReportStudyObjectRecipe
+  result: PrintedDocumentReportStudyObject
+
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentExperimentReportRecipe
+  result: PrintedDocumentExperimentReport
+
+- type: latheRecipe
+  parent: BasePrintedDocumentReportRecipe
+  id: PrintedDocumentDisposalReportRecipe
+  result: PrintedDocumentDisposalReport
+
+- type: latheRecipe
+  parent: BasePrintedDocumentStatementRecipe
+  id: PrintedDocumentApplicationAppointmentInterimRecipe
+  result: PrintedDocumentApplicationAppointmentInterim
+
+- type: latheRecipe
+  parent: BasePrintedDocumentStatementRecipe
+  id: PrintedDocumentApplicationEmploymentRecipe
+  result: PrintedDocumentApplicationEmployment
+
+- type: latheRecipe
+  parent: BasePrintedDocumentStatementRecipe
+  id: PrintedDocumentLetterResignationRecipe
+  result: PrintedDocumentLetterResignation
+
+- type: latheRecipe
+  parent: BasePrintedDocumentStatementRecipe
+  id: PrintedDocumentApplicationAccessRecipe
+  result: PrintedDocumentApplicationAccess
+
+- type: latheRecipe
+  parent: BasePrintedDocumentStatementRecipe
+  id: PrintedDocumentApplicationEquipmentRecipe
+  result: PrintedDocumentApplicationEquipment
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentAppealRecipe
+  result: PrintedDocumentAppeal
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentEvacuationShuttleRequestRecipe
+  result: PrintedDocumentEvacuationShuttleRequest
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentShuttleRegistrationRequestRecipe
+  result: PrintedDocumentShuttleRegistrationRequest
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
+  result: PrintedDocumentRequestCallMembersCentralCommitteeDSO
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentRequestRequestToEstablishThreatLevelRecipe
+  result: PrintedDocumentRequestRequestToEstablishThreatLevel
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentRequestChangeSalaryRecipe
+  result: PrintedDocumentRequestChangeSalary
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentRequestForNonlistedEmploymentRecipe
+  result: PrintedDocumentRequestForNonlistedEmployment
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentRequestForPromotionRecipe
+  result: PrintedDocumentRequestForPromotion
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentRequestDocumentsRecipe
+  result: PrintedDocumentRequestDocuments
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentRequestEuthanasiaRecipe
+  result: PrintedDocumentRequestEuthanasia
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentRequestConstructionWorkRecipe
+  result: PrintedDocumentRequestConstructionWork
+
+- type: latheRecipe
+  parent: BasePrintedDocumentInquiryAndAppealRecipe
+  id: PrintedDocumentRequestModernizationRecipe
+  result: PrintedDocumentRequestModernization
+
+- type: latheRecipe
+  parent: BasePrintedDocumentComplaintRecipe
+  id: PrintedDocumentComplaintViolationLaborRulesRecipe
+  result: PrintedDocumentComplaintViolationLaborRules
+
+- type: latheRecipe
+  parent: BasePrintedDocumentComplaintRecipe
+  id: PrintedDocumentComplaintOffenseRecipe
+  result: PrintedDocumentComplaintOffense
+
+- type: latheRecipe
+  parent: BasePrintedDocumentPermissionRecipe
+  id: PrintedDocumentPermissionEquipmentRecipe
+  result: PrintedDocumentPermissionEquipment
+
+- type: latheRecipe
+  parent: BasePrintedDocumentPermissionRecipe
+  id: PrintedDocumentPermissionToTravelInCaseOfThreatRecipe
+  result: PrintedDocumentPermissionToTravelInCaseOfThreat
+
+- type: latheRecipe
+  parent: BasePrintedDocumentPermissionRecipe
+  id: PrintedDocumentSearchPermissionRecipe
+  result: PrintedDocumentSearchPermission
+
+- type: latheRecipe
+  parent: BasePrintedDocumentPermissionRecipe
+  id: PrintedDocumentPermissionToCarryWeaponsRecipe
+  result: PrintedDocumentPermissionToCarryWeapons
+
+- type: latheRecipe
+  parent: BasePrintedDocumentPermissionRecipe
+  id: PrintedDocumentPrescriptionDrugAuthorizationRecipe
+  result: PrintedDocumentPrescriptionDrugAuthorization
+
+- type: latheRecipe
+  parent: BasePrintedDocumentPermissionRecipe
+  id: PrintedDocumentPermissionDisposeBodyRecipe
+  result: PrintedDocumentPermissionDisposeBody
+
+- type: latheRecipe
+  parent: BasePrintedDocumentPermissionRecipe
+  id: PrintedDocumentConstructionPermitRecipe
+  result: PrintedDocumentConstructionPermit
+
+- type: latheRecipe
+  parent: BasePrintedDocumentPermissionRecipe
+  id: PrintedDocumentPermissionToExtendMarriageRecipe
+  result: PrintedDocumentPermissionToExtendMarriage
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderAndInstructionRecipe
+  id: PrintedDocumentOrderDismissalRecipe
+  result: PrintedDocumentOrderDismissal
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderAndInstructionRecipe
+  id: PrintedDocumentOrderDeprivationAccessRecipe
+  result: PrintedDocumentOrderDeprivationAccess
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderAndInstructionRecipe
+  id: PrintedDocumentOrderEncouragementRecipe
+  result: PrintedDocumentOrderEncouragement
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderAndInstructionRecipe
+  id: PrintedDocumentOrderParolePrisonerRecipe
+  result: PrintedDocumentOrderParolePrisoner
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderAndInstructionRecipe
+  id: PrintedDocumentOrderRecognizingSentienceCreatureRecipe
+  result: PrintedDocumentOrderRecognizingSentienceCreature
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderAndInstructionRecipe
+  id: PrintedDocumentOrderMedicalInterventionRecipe
+  result: PrintedDocumentOrderMedicalIntervention
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderRecipe
+  id: PrintedDocumentProductManufacturingOrderRecipe
+  result: PrintedDocumentProductManufacturingOrder
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderRecipe
+  id: PrintedDocumentOrderPurchaseResourcesEquipmentRecipe
+  result: PrintedDocumentOrderPurchaseResourcesEquipment
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderRecipe
+  id: PrintedDocumentOrderingSpecialEquipmentRecipe
+  result: PrintedDocumentOrderingSpecialEquipment
+
+- type: latheRecipe
+  parent: BasePrintedDocumentOrderRecipe
+  id: PrintedDocumentOrderPurchaseWeaponsRecipe
+  result: PrintedDocumentOrderPurchaseWeapons
+
+- type: latheRecipe
+  parent: BasePrintedDocumentEvidenceRecipe
+  id: PrintedDocumentCertificateRecipe
+  result: PrintedDocumentCertificate
+
+- type: latheRecipe
+  parent: BasePrintedDocumentEvidenceRecipe
+  id: PrintedDocumentCertificateAdvancedTrainingRecipe
+  result: PrintedDocumentCertificateAdvancedTraining
+
+- type: latheRecipe
+  parent: BasePrintedDocumentEvidenceRecipe
+  id: PrintedDocumentCertificateOffenseRecipe
+  result: PrintedDocumentCertificateOffense
+
+- type: latheRecipe
+  parent: BasePrintedDocumentEvidenceRecipe
+  id: PrintedDocumentDeathCertificateRecipe
+  result: PrintedDocumentDeathCertificate
+
+- type: latheRecipe
+  parent: BasePrintedDocumentEvidenceRecipe
+  id: PrintedDocumentMarriageCertificateRecipe
+  result: PrintedDocumentMarriageCertificate
+
+- type: latheRecipe
+  parent: BasePrintedDocumentEvidenceRecipe
+  id: PrintedDocumentDivorceCertificateRecipe
+  result: PrintedDocumentDivorceCertificate
+
+- type: latheRecipe
+  parent: BasePrintedDocumentConclusionAndDecisionRecipe
+  id: PrintedDocumentClosingIndictmentRecipe
+  result: PrintedDocumentClosingIndictment
+
+- type: latheRecipe
+  parent: BasePrintedDocumentConclusionAndDecisionRecipe
+  id: PrintedDocumentSentenceRecipe
+  result: PrintedDocumentSentence
+
+- type: latheRecipe
+  parent: BasePrintedDocumentConclusionAndDecisionRecipe
+  id: PrintedDocumentJudgmentRecipe
+  result: PrintedDocumentJudgment
+
+- type: latheRecipe
+  parent: BasePrintedDocumentConclusionAndDecisionRecipe
+  id: PrintedDocumentStatementHealthRecipe
+  result: PrintedDocumentStatementHealth
+
+- type: latheRecipe
+  parent: BasePrintedDocumentConclusionAndDecisionRecipe
+  id: PrintedDocumentDecisionToStartTrialRecipe
+  result: PrintedDocumentDecisionToStartTrial
+
+- type: latheRecipe
+  parent: BasePrintedDocumentErrorRecipe
+  id: PrintedDocumentErrorLoadingFormHeaderRecipe
+  result: PrintedDocumentErrorLoadingFormHeader
+
+- type: latheRecipe
+  parent: BasePrintedDocumentErrorRecipe
+  id: PrintedDocumentNoticeOfLiquidationRecipe
+  result: PrintedDocumentNoticeOfLiquidation
+
+- type: latheRecipe
+  parent: BasePrintedDocumentErrorRecipe
+  id: PrintedDocumentBusinessDealRecipe
+  result: PrintedDocumentBusinessDeal
+
+- type: latheRecipe
+  parent: BasePrintedDocumentErrorRecipe
+  id: PrintedDocumentNoteBeginningMilitaryActionsRecipe
+  result: PrintedDocumentNoteBeginningMilitaryActions
+
+- type: latheRecipe
+  parent: BasePrintedDocumentErrorRecipe
+  id: PrintedDocumentReportAccomplishmentGoalsRecipe
+  result: PrintedDocumentReportAccomplishmentGoals

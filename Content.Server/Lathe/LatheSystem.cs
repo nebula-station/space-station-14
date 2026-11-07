@@ -11,6 +11,7 @@ using Content.Server.Materials;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Stack;
+using Content.Shared._Nebula.Lathe;
 using Content.Shared.Atmos;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -203,6 +204,10 @@ namespace Content.Server.Lathe
 
             var batch = component.Queue.First();
             batch.ItemsPrinted++;
+            // Nebula start
+            var startedEv = new LatheBatchItemStartedEvent(batch);
+            RaiseLocalEvent(uid, ref startedEv);
+            // Nebula end
             if (batch.ItemsPrinted >= batch.ItemsRequested || batch.ItemsPrinted < 0) // Rollover sanity check
                 component.Queue.RemoveFirst();
             var recipe = ProtoMan.Index(batch.Recipe);
@@ -248,6 +253,10 @@ namespace Content.Server.Lathe
                     var ev = new ProducedByLatheEvent();
                     RaiseLocalEvent(result, ref ev);
                     // </Trauma>
+                    // Nebula start
+                    var producedEv = new LatheProducedEntityEvent(result, currentRecipe.ID);
+                    RaiseLocalEvent(uid, ref producedEv);
+                    // Nebula end
                 }
 
                 if (currentRecipe.ResultReagents is { } resultReagents &&
@@ -448,6 +457,10 @@ namespace Content.Server.Lathe
                     {
                         var newBatch = new LatheRecipeBatch(component.CurrentRecipe.Value, 0, 1);
                         component.Queue.AddFirst(newBatch);
+                        // Nebula start
+                        var requeuedEv = new LatheItemRequeuedEvent(newBatch);
+                        RaiseLocalEvent(uid, ref requeuedEv);
+                        // Nebula end
                     }
                     else if (batch.ItemsPrinted > 0)
                     {
@@ -475,6 +488,10 @@ namespace Content.Server.Lathe
             {
                 if (TryAddToQueue(uid, recipe, args.Quantity, component))
                 {
+                    // Nebula start
+                    var queuedEv = new LatheRecipeQueuedEvent(args.Actor, component.Queue.Last!.Value, int.Min(args.Quantity, MaxItemsPerRequest));
+                    RaiseLocalEvent(uid, ref queuedEv);
+                    // Nebula end
                     _adminLogger.Add(LogType.Action,
                         LogImpact.Low,
                         $"{ToPrettyString(args.Actor):player} queued {args.Quantity} {GetRecipeName(recipe)} at {ToPrettyString(uid):lathe}");
