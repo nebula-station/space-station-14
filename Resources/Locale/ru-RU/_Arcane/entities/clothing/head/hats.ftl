@@ -16,3 +16,5 @@ ent-ClothingHeadHatGarrisonCapAdjutant = пилотка адъютанта
     .desc = Небольшая хлопчатобумажная пилотка, так и норовит слететь с головы.
 ent-ClothingHeadHatCapAdjutant = фуражка адъютанта
     .desc = Синяя с белым, подозрительно напоминает капитанскую.
+ent-ClothingHatBeretBlueShield = берет офицера "Синий Щит"
+    .desc = Берет, разработанный специально для сотрудников «Синий Щит».

@@ -199,3 +199,10 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: ArcaneSocksNoSpecies
+
+- type: loadoutGroup
+  id: ChiefMedicalOfficerEyes
+  name: loadout-group-chief-medical-officer-eyes
+  minLimit: 0
+  loadouts:
+  - ChiefMedicalOfficerEyesVisor

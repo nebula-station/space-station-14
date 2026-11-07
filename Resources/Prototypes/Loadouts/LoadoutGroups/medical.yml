@@ -200,6 +200,7 @@
   minLimit: 0
   loadouts:
   - ParamedicHead
+  - ParamedicHeadBeret # Nebula edit
   - SeniorPhysicianBeret # Goob
 
 - type: loadoutGroup

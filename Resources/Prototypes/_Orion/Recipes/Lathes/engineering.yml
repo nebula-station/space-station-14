@@ -7,3 +7,13 @@
   materials:
     Steel: 500
     Glass: 300
+
+- type: latheRecipe
+  id: ClothingEyesWelding
+  result: ClothingEyesWelding
+  categories:
+  - Clothing
+  completetime: 4
+  materials:
+    Cloth: 300
+    Steel: 100

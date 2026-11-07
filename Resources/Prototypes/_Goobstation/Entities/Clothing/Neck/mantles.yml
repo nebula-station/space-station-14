@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ClothingNeckBase, BaseCommandContraband]
+  id: ClothingNeckMantleWhiteCE
+  name: chief engineer's white mantle
+  description: High visibility, check. RIG system, check. High capacity cell, check. Everything a chief engineer could need in a stylish mantle.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Neck/Mantle/ChiefEngineer/whitecemantle.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Neck/Mantle/ChiefEngineer/whitecemantle.rsi

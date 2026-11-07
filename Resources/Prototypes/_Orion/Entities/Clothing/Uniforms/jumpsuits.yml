@@ -41,3 +41,36 @@
     sprite: _Orion/Clothing/Uniforms/Jumpsuit/capwhite.rsi
   - type: Clothing
     sprite: _Orion/Clothing/Uniforms/Jumpsuit/capwhite.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitJacket
+  name: Florida suit
+  description: Looks like a relic from the past; there's a letter B on the chest, and the tag says "Florida".
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Uniforms/Jumpsuit/jacket.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Uniforms/Jumpsuit/jacket.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitUEGSpecial
+  name: special force uniform
+  description: Uniform with useless camouflage. It is better not to contact its owners.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Uniforms/Jumpsuit/ueg_special.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Uniforms/Jumpsuit/ueg_special.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCamouflage
+  name: camouflage uniform
+  description: Everything necessary is hidden.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Uniforms/Jumpsuit/camouflage.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Uniforms/Jumpsuit/camouflage.rsi

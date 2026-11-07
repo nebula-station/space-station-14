@@ -1,0 +1,4 @@
+- type: loadout
+  id: ParamedicHeadBeret
+  equipment:
+    head: ClothingHeadHatsParamedicBeret

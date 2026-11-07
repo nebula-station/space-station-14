@@ -16,3 +16,7 @@ ent-ClothingHeadMailCarrier = шапка почтальона
     .desc = Пахнет хорошей пенсией.
 ent-ClothingHeadSanabi = фуражка генерала бригадира
     .desc = Пахнет сталью.
+ent-ClothingHeadHatBeretNavyOfficer = берет офицера ЦК
+    .desc = Чёрный берет с серебряным щитом сил безопасности НаноТрейзен.
+ent-ClothingHeadHatBeretNavyCaptain = берет капитана военно-космического флота
+    .desc = Белый как крахмальная рубашка.

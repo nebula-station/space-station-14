@@ -55,6 +55,7 @@
   name: loadout-group-bso-shoes
   loadouts:
   - JackBoots
+  - JackBootsToeless # Nebula edit
   - BlackCowboyBoots
   - SnowjacksBso
 

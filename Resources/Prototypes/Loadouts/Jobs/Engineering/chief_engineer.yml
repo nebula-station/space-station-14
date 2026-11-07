@@ -48,7 +48,11 @@
 
 - type: loadout
   id: ChiefEngineerBeret
-  startingGear: EngineeringBeret
+  # Nebula start
+  equipment:
+    head: ClothingHeadHatBeretCEngineer
+  # Nebula end
+  # startingGear: EngineeringBeret # Nebula edit
 
 
 # Neck

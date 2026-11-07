@@ -918,6 +918,7 @@
   loadouts:
   - ChiefEngineerCloak
   - ChiefEngineerMantle
+  - ClothingNeckMantleWhiteCE # Nebula edit
 
 - type: loadoutGroup
   id: ChiefEngineerOuterClothing
@@ -1340,6 +1341,9 @@
   name: loadout-group-security-shoes
   loadouts:
   - JackBoots
+  - JackBootsToeless # Nebula edit
+  - JackBootsTall # Nebula edit
+  - JackBootsTallHeels # Nebula edit
   - CombatBoots # Goobstation
   - SecurityWinterBoots
 

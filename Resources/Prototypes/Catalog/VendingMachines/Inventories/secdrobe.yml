@@ -7,6 +7,9 @@
     ClothingBackpackMessengerSecurity: 3 # Frontier
     ClothingUniformJumpsuitSec: 3
     ClothingShoesBootsJack: 3
+    ClothingShoesBootsJackToeless: 3 # Nebula edit
+    ClothingShoesBootsJackTall: 3 # Nebula edit
+    ClothingShoesBootsJackTallHeels: 3 # Nebula edit
     ClothingHeadHatBeretSecurity: 3
     ClothingHeadHatSecsoft: 3
     ClothingHeadBandRed: 3

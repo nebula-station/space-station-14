@@ -1,0 +1,41 @@
+- type: entity
+  parent: ClothingEyesGlassesMed
+  id: ClothingEyesAdvancedMedVisor
+  name: advanced medical visor
+  description: Medical visor with integrated flash protection.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Eyes/Glasses/medglasses.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Eyes/Glasses/medglasses.rsi
+    equippedPrefix: visor
+  - type: Item
+    heldPrefix: visor
+  - type: ItemSwitch
+    state: visor
+    onUse: false
+    states:
+      glasses: !type:ItemSwitchState
+        verb: item-switch-medglasses-glasses
+        sprite:
+          sprite: _Orion/Clothing/Eyes/Glasses/medglasses.rsi
+          state: glasses-icon
+      visor: !type:ItemSwitchState
+        verb: item-switch-medglasses-visor
+        sprite:
+          sprite: _Orion/Clothing/Eyes/Glasses/medglasses.rsi
+          state: visor-icon
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesWelding
+  name: welding glasses
+  description: Round dark specs sporting some seriously outdated eye protection tech. Bonus - a free train ride ticket, courtesy of the manufacturer.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Eyes/Glasses/welding.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Eyes/Glasses/welding.rsi
+  - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES

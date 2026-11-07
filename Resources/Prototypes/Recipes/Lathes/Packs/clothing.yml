@@ -46,6 +46,7 @@
   id: ClothingEngineering
   recipes:
   - ClothingHeadHatBeretEngineering
+  - ClothingHeadHatBeretCEngineer # Nebula edit
   - ClothingUniformJumpsuitChiefEngineer
   - ClothingUniformJumpskirtChiefEngineer
   - ClothingUniformJumpsuitChiefEngineerTurtle
@@ -72,6 +73,7 @@
   - ClothingUniformJumpskirtSeniorPhysician
   - ClothingUniformJumpsuitParamedic
   - ClothingUniformJumpskirtParamedic
+  - ClothingHeadHatsParamedicBeret # Nebula edit
   - ClothingHeadHatParamedicsoft
 
 - type: latheRecipePack

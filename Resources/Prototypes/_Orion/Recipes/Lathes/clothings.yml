@@ -2,3 +2,13 @@
   parent: BaseCommandHatRecipe
   id: ClothingHeadHatBeretSecurityMedic
   result: ClothingHeadHatBeretSecurityMedic
+
+- type: latheRecipe
+  parent: BaseCommandHatRecipe
+  id: ClothingHeadHatBeretCEngineer
+  result: ClothingHeadHatBeretCEngineer
+
+- type: latheRecipe
+  parent: BaseHatRecipe
+  id: ClothingHeadHatsParamedicBeret
+  result: ClothingHeadHatsParamedicBeret
