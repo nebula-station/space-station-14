@@ -1,0 +1,12 @@
+ent-RMCPropVehicleMonoSupronOrange = Mono-Supron
+    .desc = «Mono-Supron», массовый гражданский автомобиль для колониальных рынков, внутри и вне Организации Объединённых Наций. Производится компанией «Mizutani», маркой автомобилей и связанным с ней подразделением Weston-Yamada Corporation.
+    .suffix = Оранжевый
+ent-RMCPropVehicleMonoSupronShellFlipped = { ent-RMCPropVehicleMonoSupronOrange }
+    .suffix = Корпус, перевернутый
+    .desc = { ent-RMCPropVehicleMonoSupronOrange.desc }
+ent-RMCPropVehicleMonoSupronOrangeDestroyed = { ent-RMCPropVehicleMonoSupronOrange }
+    .suffix = Оранжевый, разрушенный
+    .desc = { ent-RMCPropVehicleMonoSupronOrange.desc }
+ent-RMCPropVehicleMonoSupronBrownDestroyed = { ent-RMCPropVehicleMonoSupronOrangeDestroyed }
+    .suffix = Коричневый, разрушенный
+    .desc = { ent-RMCPropVehicleMonoSupronOrangeDestroyed.desc }

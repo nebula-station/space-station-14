@@ -127,3 +127,33 @@
   - type: Sprite
     sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
     state: poster13
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandInteQJulie
+  name: Hot Lizards
+  description: Most beautiful lizards in the whole universe, join us!
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/inteq_posters.rsi
+    state: inteq_poster7
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandInteQNoSex
+  name: No Sex in InteQ
+  description: NO SEX!!!
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/inteq_posters.rsi
+    state: inteq_poster5
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandLustyXenomorph
+  name: Lusty Xenomorph
+  description: Heretical poster depicting the titular star of an equally heretical book.
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/general.rsi
+    state: xenomorph_poster1

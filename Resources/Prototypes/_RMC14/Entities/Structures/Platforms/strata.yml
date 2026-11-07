@@ -1,0 +1,37 @@
+- type: entity
+  parent: RMCPlatformStrata
+  id: RMCPlatformStrataStair
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/platforms.rsi
+    state: strata_metalplatform_stair
+
+- type: entity
+  parent: CMPlatform
+  id: RMCPlatformStrataTwo
+  name: raised metal edge
+  description: A raised level of metal, often used to elevate areas above others. You could probably climb it.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/platforms.rsi
+    state: strata_metalplatform2
+
+- type: entity
+  parent: RMCPlatformCornerSmall
+  id: RMCPlatformStrataTwoCornerSmall
+  name: raised metal corner
+  description: A raised level of metal, often used to elevate areas above others. This is the corner.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/platforms.rsi
+    state: strata_metalplatform_deco2
+
+- type: entity
+  parent: CMPlatform
+  id: RMCPlatformStrata
+  name: raised metal edge
+  description: A raised level of metal, often used to elevate areas above others. You could probably climb it.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/platforms.rsi
+    state: strata_metalplatform

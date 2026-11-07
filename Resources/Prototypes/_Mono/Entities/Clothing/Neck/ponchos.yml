@@ -36,3 +36,14 @@
     sprite: _Mono/Clothing/Neck/Ponchos/syndicate.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Neck/Ponchos/syndicate.rsi
+
+- type: entity
+  parent: ClothingNeckPonchoBlack
+  id: ClothingNeckPonchoSmallRed
+  name: small red cold weather poncho
+  description: The Cold Weather Poncho, advertised as a masterpiece of elemental protection. This stylish rendition comes in a smaller size with a cuter design. This one is red and black.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Neck/Ponchos/redsmall.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Neck/Ponchos/redsmall.rsi

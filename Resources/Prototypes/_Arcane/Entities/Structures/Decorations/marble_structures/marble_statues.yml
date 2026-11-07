@@ -1,0 +1,132 @@
+- type: entity
+  parent: ADTmarblelady
+  id: ADTEyeMarble
+  name: marble eye
+  description: marble eye
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Decoration/marble_structures/marble_eye.rsi
+    state: marble_eye
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/break_stone.ogg
+              params:
+                volume: -2
+
+- type: entity
+  parent: ADTmarblelady
+  id: ADTHeroMarble
+  name: marble hero
+  description: marble hero
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Decoration/marble_structures/marble_hero.rsi
+    state: marble_hero
+
+- type: entity
+  parent: ADTmarblelady
+  id: ADTmarbleLadyFlower
+  name: marble lady in flowers
+  description: She's so pretty
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Decoration/marble_structures/marblelady_flower.rsi
+    state: marlady_flowers
+
+- type: entity
+  parent: ADTmarblelady
+  id: ADTmarbleStand
+  name: marble stand
+  description: stand for someone
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Decoration/marble_structures/marble_stand.rsi
+    offset: "0.0,0.0"
+    state: marstand
+    drawdepth: SmallObjects
+  - type: PlaceableSurface
+    isPlaceable: True
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/break_stone.ogg
+              params:
+                volume: -2
+
+- type: entity
+  parent: ADTmarblelady
+  id: ADTScientistMarble
+  name: marble scientist
+  description: marble scientist
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Decoration/marble_structures/marble_scientist.rsi
+    state: marble_scientist
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/break_stone.ogg
+              params:
+                volume: -2
+
+- type: entity
+  parent: BaseStructure
+  id: ADTmarblelady
+  name: beutiful marble lady
+  description: She's so pretty
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _ADT/Structures/Decoration/marble_structures/marble_lady.rsi
+    state: marlady
+    offset: "0.0,0.5"
+    drawdepth: Mobs
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 150
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/break_stone.ogg
+              params:
+                volume: -2

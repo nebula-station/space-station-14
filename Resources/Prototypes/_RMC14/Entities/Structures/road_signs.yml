@@ -1,0 +1,131 @@
+- type: entity
+  id: RMCOverheadRoadsign
+  name: road sign
+  description: A road sign.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: SpriteFade
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _RMC14/Structures/roadsigns.rsi
+    state: roadsign_1
+    drawdepth: Effects # Goes over OverDoors, IDFK if theres a better solution
+    offset: 0.5,1
+  - type: Icon
+    sprite: _RMC14/Structures/roadsigns.rsi
+    state: roadsign_1
+  - type: Anchorable
+  - type: Clickable
+
+- type: entity
+  parent: RMCOverheadBillboardBigger1
+  id: RMCOverheadBillboard4F
+  components:
+  - type: Sprite
+    state: billboard4_f
+  - type: Icon
+    state: billboard4_f
+
+- type: entity
+  parent: RMCOverheadBillboardWallmount1
+  id: RMCOverheadBillboardWallmount10
+  components:
+  - type: Sprite
+    state: billboard1_g
+  - type: Icon
+    state: billboard1_g
+
+- type: entity
+  parent: RMCOverheadBillboardWallmount1
+  id: RMCOverheadBillboardWallmount22
+  components:
+  - type: Sprite
+    state: billboard_bigger_3
+  - type: Icon
+    state: billboard_bigger_3
+
+- type: entity
+  parent: RMCOverheadBillboardWallmount1
+  id: RMCOverheadBillboardWallmount23
+  components:
+  - type: Sprite
+    state: billboard1_b
+  - type: Icon
+    state: billboard1_b
+
+- type: entity
+  parent: RMCOverheadBillboardWallmount1
+  id: RMCOverheadBillboardWallmount27
+  components:
+  - type: Sprite
+    state: billboard_bigger_2
+  - type: Icon
+    state: billboard_bigger_2
+
+- type: entity
+  parent: RMCOverheadBillboardWallmount1
+  id: RMCOverheadBillboardWallmount28
+  components:
+  - type: Sprite
+    state: billboard2_d
+  - type: Icon
+    state: billboard2_d
+
+- type: entity
+  parent: RMCOverheadBillboardWallmount1
+  id: RMCOverheadBillboardWallmount3
+  components:
+  - type: Sprite
+    state: billboard2_c
+  - type: Icon
+    state: billboard2_c
+
+- type: entity
+  parent: RMCOverheadBillboardWallmount1
+  id: RMCOverheadBillboardWallmount4
+  components:
+  - type: Sprite
+    state: billboard5_h
+  - type: Icon
+    state: billboard5_h
+
+- type: entity
+  parent: RMCOverheadBillboardWallmount1
+  id: RMCOverheadBillboardWallmount5
+  components:
+  - type: Sprite
+    state: billboard3_a
+  - type: Icon
+    state: billboard3_a
+
+- type: entity
+  parent: RMCOverheadRoadsign
+  id: RMCOverheadBillboardBigger1
+  name: billboard
+  description: An advertisement billboard.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/billboards.rsi
+    state: billboard_bigger_1
+    offset: 0.5,0.5
+  - type: Icon
+    sprite: _RMC14/Structures/billboards.rsi
+    state: billboard_bigger_1
+
+- type: entity
+  parent: RMCOverheadRoadsign
+  id: RMCOverheadBillboardWallmount1
+  name: billboard
+  description: An advertisement billboard.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/billboards.rsi
+    state: billboard4_d
+    offset: 0.5,0
+  - type: Icon
+    sprite: _RMC14/Structures/billboards.rsi
+    state: billboard4_d

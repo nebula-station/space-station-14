@@ -63,3 +63,6 @@
 
 - type: Tag
   id: ShellShotgunPulse
+
+- type: Tag
+  id: PokerChip

@@ -24,3 +24,7 @@ ent-ClothingShoesBlackWithDenseHeel = чёрные туфли с плотным 
     .desc = Чёрные туфли для танцев.
 ent-ClothingShoesBDSMBoots = БДСМ сапоги
     .desc = У кого-то будет весёлая ночка...
+ent-ClothingShoesBeer = пивные тапочки
+    .desc = Пивные тапочки.
+ent-ClothingShoesOldFashionedMedical = старомодные туфли врача
+    .desc = Классические туфли эпохи возрождения.

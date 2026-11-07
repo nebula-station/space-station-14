@@ -18,3 +18,5 @@ ent-ClothingHeadHatCapAdjutant = фуражка адъютанта
     .desc = Синяя с белым, подозрительно напоминает капитанскую.
 ent-ClothingHatBeretBlueShield = берет офицера "Синий Щит"
     .desc = Берет, разработанный специально для сотрудников «Синий Щит».
+ent-ClothingHatClownPink = розовая шапка клоуна
+    .desc = Розовый - значит забавный!

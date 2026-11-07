@@ -1,0 +1,10 @@
+ent-RMCOverheadSign = знак
+    .desc = { "" }
+ent-RMCOverheadSignNeon = неоновый знак
+    .desc = { ent-RMCOverheadSign.desc }
+ent-RMCOverheadSignNeonCasino = неоновый знак "казино"
+    .desc = { ent-RMCOverheadSignNeon.desc }
+ent-RMCOverheadSignNeonOpen2 = неоновый знак "открыто"
+    .desc = { ent-RMCOverheadSignNeon.desc }
+ent-RMCOverheadSignNeonPharmacy = неоновый знак "аптека"
+    .desc = { ent-RMCOverheadSignNeon.desc }

@@ -2,3 +2,5 @@ ent-ClothingUniformJumpsuitUEGSpecial = форма сил спецназначе
     .desc = Тактическая форма спецподразделений ОПЗ.
 ent-ClothingUniformJumpsuitJacket = флоридский костюм
     .desc = Выглядит как пережиток прошлого, на груди имеется буква B, а на бирке написано Флорида.
+ent-ClothingUniformJumpsuitClownis = костюм клоуна
+    .desc = Костюм клоуна, кажется фаната омэрики.

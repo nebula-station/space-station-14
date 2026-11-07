@@ -1,0 +1,17 @@
+- type: entity
+  name: sunflower
+  description: A bright sunflower that always faces the light.
+  id: FlowerSunflower
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Specific/Hydroponics/sunflower.rsi
+  - type: Item
+  - type: Clothing
+    slots:
+    - HEAD
+    quickEquip: false
+  - type: Tag
+    tags:
+    - Flower
+    - FlowerSunflower

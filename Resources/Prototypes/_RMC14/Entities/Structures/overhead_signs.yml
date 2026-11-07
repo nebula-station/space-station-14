@@ -1,0 +1,80 @@
+- type: entity
+  parent: RMCOverheadSignNeon
+  id: RMCOverheadSignNeonCasino
+  components:
+  - type: Sprite
+    layers:
+      - state: casinolights_on # Temporary until power works.
+      - state: casinolights_off
+        visible: false
+        map: [ "light" ]
+  - type: PointLight
+    color: "#00AAFF"
+
+- type: entity
+  parent: RMCOverheadSignNeon
+  id: RMCOverheadSignNeonOpen2
+  components:
+  - type: Sprite
+    offset: -0.25,0.5
+    layers:
+      - state: open_on2 # Temporary until power works.
+      - state: open2
+        visible: false
+        map: [ "light" ]
+  - type: PointLight
+    color: "#00AAFF"
+
+- type: entity
+  parent: RMCOverheadSignNeon
+  id: RMCOverheadSignNeonPharmacy
+  components:
+  - type: Sprite
+    layers:
+      - state: pharmacy_on # Temporary until power works.
+      - state: pharmacy_off
+        visible: false
+        map: [ "light" ]
+  - type: PointLight
+    color: "#00AAFF"
+
+- type: entity
+  parent: RMCOverheadSign
+  id: RMCOverheadSignNeon
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/overhead_neon_signs.rsi
+    layers:
+      - state: open_on # Temporary until power works.
+      - state: open
+        visible: false
+        map: [ "light" ]
+  - type: PointLight
+    enabled: true
+    radius: 4
+    netsync: true
+    energy: 5
+    offset: "0,0"
+    color: "#ECFFFF"
+    lightMask: ConeQuad
+
+- type: entity
+  id: RMCOverheadSign
+  abstract: true
+  name: sign
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: SpriteFade
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    noRot: true
+    sprite: _RMC14/Structures/overhead_signs.rsi
+    offset: 0.25,0.5
+    drawdepth: Overdoors
+  - type: Anchorable
+  - type: Clickable

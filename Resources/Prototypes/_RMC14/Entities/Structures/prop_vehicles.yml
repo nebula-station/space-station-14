@@ -31,3 +31,46 @@
         acts: [ "Destruction" ]
   - type: Clickable
   - type: InteractionOutline
+
+- type: entity
+  parent: RMCPropVehicleMonoSupronOrangeDestroyed
+  id: RMCPropVehicleMonoSupronBrownDestroyed
+  suffix: Brown, Destroyed
+  components:
+  - type: Sprite
+    state: mizutani_brown_damage
+
+- type: entity
+  parent: RMCPropVehicleMonoSupronOrange
+  id: RMCPropVehicleMonoSupronShellFlipped
+  suffix: Shell, Flipped
+  components:
+  - type: Sprite
+    state: mizutani_shell_f
+
+- type: entity
+  parent: RMCPropVehicleMonoSupronOrange
+  id: RMCPropVehicleMonoSupronOrangeDestroyed
+  suffix: Orange, Destroyed
+  components:
+  - type: Sprite
+    state: mizutani_orange_damage
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1750
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: RMCPropVehicleBase
+  id: RMCPropVehicleMonoSupronOrange
+  suffix: Orange
+  name: Mono-Supron
+  description: The 'Mono-Supron', a mass-produced civilian vehicle for the colonial markets, in and outside of the United Nations. Produced by 'Mizutani' a car marque and associated operating division of the Weston-Yamada Corporation.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/Vehicles/vehicles.rsi
+    state: mizutani_orange

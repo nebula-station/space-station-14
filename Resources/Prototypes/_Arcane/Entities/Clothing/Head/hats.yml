@@ -126,3 +126,15 @@
     sprite: _Arcane/Clothing/Head/Hats/blueshieldhatberet.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/Head/Hats/blueshieldhatberet.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatClownPink
+  categories: [ HideSpawnMenu ]
+  name: pink clown hat
+  description: Pink clown hat.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/clown.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/clown.rsi

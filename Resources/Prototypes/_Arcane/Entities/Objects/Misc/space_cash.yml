@@ -1,0 +1,126 @@
+- type: entity
+  parent: BaseItem
+  id: HiddenFakeSpaceCash
+  name: spesos
+  description: You need to have money, but not like that.
+  suffix: Fake # Arcane
+  components:
+# - type: Cash
+  - type: Item
+    shape:
+    - 0,0,1,0
+    storedOffset: 0,-2
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      HiddenFakeCredit: 1
+  - type: StaticPrice
+    price: 0
+  - type: Stack
+    stackType: HiddenFakeCredit
+    count: 1
+    baseLayer: base
+    layerStates:
+    - cash
+    - cash_10
+    - cash_100
+    - cash_500
+    - cash_1000
+    - cash_5000
+    - cash_10000
+    - cash_25000
+    - cash_50000
+    - cash_100000
+    - cash_1000000
+    layerFunction: Threshold
+  - type: StackLayerThreshold
+    thresholds: [10, 100, 500, 1000, 5000, 10000, 25000, 50000, 100000, 1000000]
+  - type: Sprite
+    sprite: Objects/Economy/cash.rsi
+    state: cash
+    layers:
+    - state: cash
+      map: ["base"]
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        density: 30
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.2,0.25,0.1"
+        mask:
+        - ItemMask
+  - type: Appearance
+  # <Goobstation>
+  - type: Flammable # it's about sending a message
+    fireSpread: true
+    alwaysCombustible: true
+    firestackFade: 0 # keeps burning since high hp
+    damage:
+      types:
+        Heat: 0.5 # burns long
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: fire
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      # doesn't spawn anything for probably obvious reasons
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Edible
+    solution: food
+    delay: 1
+    forceFeedDelay: 1
+  - type: FlavorProfile
+    flavors:
+    - paper
+  - type: BadFood
+  # Nebula start
+  - type: Solution
+    id: food
+    solution:
+      maxVol: 1
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 1
+  # Nebula end
+  - type: Tag       # Goob Balloon Edit
+    tags:           # Just so it can be picked up by ore bag
+    - Ore
+    - Paper         # Moth food
+  # </Goobstation>
+
+# Arcane-Start
+
+- type: entity
+  parent: HiddenFakeSpaceCash
+  id: HiddenFakeSpaceCash60000
+  suffix: Fake 60000
+  components:
+  - type: Icon
+    sprite: Objects/Economy/cash.rsi
+    state: cash_50000
+  - type: Stack
+    count: 60000
+
+- type: material
+  id: HiddenFakeCredit
+  name: stack-credit # Nebula edit
+  unit: materials-unit-bill
+  stackEntity: HiddenFakeSpaceCash
+  icon: { sprite: /Textures/Objects/Economy/cash.rsi, state: cash }
+  price: 1
+
+- type: stack
+  id: HiddenFakeCredit
+  name: stack-credit
+  icon: { sprite: /Textures/Objects/Economy/cash.rsi, state: cash }
+  spawn: HiddenFakeSpaceCash

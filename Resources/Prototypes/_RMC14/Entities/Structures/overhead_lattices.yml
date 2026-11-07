@@ -1,0 +1,50 @@
+- type: entity
+  id: RMCOverheadLattice
+  abstract: true
+  name: lattice
+  description: A support lattice.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: SpriteFade
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _RMC14/Structures/overhead_lattice.rsi
+    state: lattice1
+    drawdepth: Overdoors
+    offset: 0,0.5
+  - type: Icon
+    sprite: _RMC14/Structures/overhead_lattice.rsi
+    state: lattice1
+  - type: Anchorable
+  - type: Clickable
+
+# Vertical
+
+- type: entity
+  parent: RMCOverheadLatticeVertical1
+  id: RMCOverheadLatticeVertical3
+  suffix: Vertical
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/overhead_lattice.rsi
+    state: lattice3
+  - type: Icon
+    sprite: _RMC14/Structures/overhead_lattice.rsi
+    state: lattice3
+
+- type: entity
+  parent: RMCOverheadLattice
+  id: RMCOverheadLatticeVertical1
+  suffix: Vertical
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/overhead_lattice.rsi
+    state: lattice1
+    offset: 0.25,0.5
+  - type: Icon
+    sprite: _RMC14/Structures/overhead_lattice.rsi
+    state: lattice1
