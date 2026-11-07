@@ -1,0 +1,49 @@
+- type: entity
+  parent: CrateFreezer
+  id: CrateFreezerDonk
+  name: Donk Co. fridge
+  description: A Donk Co. brand fridge, keeps your donkpockets and foam ammunition fresh!
+  components:
+  - type: Icon
+    sprite: _Orion/Structures/Storage/Crates/donk.rsi
+  - type: Sprite
+    sprite: _Orion/Structures/Storage/Crates/donk.rsi
+
+- type: entity
+  parent: CrateFreezer
+  id: CrateFreezerKitchen
+  name: food icebox
+  components:
+  - type: Icon
+    sprite: _Orion/Structures/Storage/Crates/kitchen.rsi
+  - type: Sprite
+    sprite: _Orion/Structures/Storage/Crates/kitchen.rsi
+
+- type: entity
+  parent: [ CrateBaseSecure, CrateFreezerDonk ]
+  id: CrateFreezerDonkSecure
+  components:
+  - type: Icon
+    sprite: _Orion/Structures/Storage/Crates/donk_secure.rsi
+  - type: Sprite
+    sprite: _Orion/Structures/Storage/Crates/donk_secure.rsi
+
+- type: entity
+  parent: [ CrateBaseSecure, CrateFreezer ]
+  id: CrateFreezerInterdyneSecure
+  name: Interdyne freezer
+  description: This is an Interdyne Pharmaceuticals branded freezer. May or may not contain fresh organs.
+  components:
+  - type: Icon
+    sprite: _Orion/Structures/Storage/Crates/interdyne-freezer_secure.rsi
+  - type: Sprite
+    sprite: _Orion/Structures/Storage/Crates/interdyne-freezer_secure.rsi
+
+- type: entity
+  parent: [ CrateBaseSecure, CrateFreezerKitchen ]
+  id: CrateFreezerKitchenSecure
+  components:
+  - type: Icon
+    sprite: _Orion/Structures/Storage/Crates/kitchen_secure.rsi
+  - type: Sprite
+    sprite: _Orion/Structures/Storage/Crates/kitchen_secure.rsi
