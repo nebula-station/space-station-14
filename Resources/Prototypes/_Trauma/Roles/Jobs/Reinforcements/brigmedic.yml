@@ -5,14 +5,17 @@
   name: job-name-brigmedic
   description: job-description-brigmedic
   playTimeTracker: JobBrigmedic
-  setPreference: false
+  # Nebula start
+  # setPreference: false
+  # Nebula end
   requirements:
   - !type:DepartmentTimeRequirement
     department: Medical
-    time: 1h
+    time: 5h # Nebula edit
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 1h
+    time: 5h # Nebula edit
+  startingGear: BrigmedicGear # Nebula edit
   icon: "JobIconBrigmedic"
   supervisors: job-supervisors-hos
   guides:
@@ -21,6 +24,7 @@
   access:
   - Security
   - Brig
+  - Medical # Nebula edit
   - Maintenance
   - Service
   - External
@@ -36,6 +40,12 @@
   - !type:AddComponentSpecial
     components:
     - type: SecurityStaff
+  # Nebula start
+  - !type:AddComponentSpecial
+    components:
+    - type: SurgerySpeedModifier
+      speedModifier: 1.5
+  # Nebula end
 
 - type: chameleonOutfit
   id: BrigmedicChameleonOutfit

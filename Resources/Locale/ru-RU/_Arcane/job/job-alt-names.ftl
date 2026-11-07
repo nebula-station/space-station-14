@@ -7,3 +7,7 @@ job-name-alt-iaa-1 = инспектор ЦК
 job-name-alt-iaa-2 = ревизор ЦК
 job-name-alt-iaa-3 = представитель внутренних дел
 job-name-alt-iaa-4 = инспектор внутренних дел
+job-name-alt-brigmedic-1 = фельдшер СБ
+job-name-alt-brigmedic-2 = дежурный врач СБ
+job-name-alt-brigmedic-3 = тюремный врач
+job-name-alt-brigmedic-4 = медик брига

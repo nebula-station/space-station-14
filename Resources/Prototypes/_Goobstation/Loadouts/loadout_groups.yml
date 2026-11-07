@@ -1241,6 +1241,7 @@
   minLimit: 0
   loadouts:
   - BrigmedicBeret
+  - BrigmedicBeretDark # Nebula edit
   - CMOMedicalHeadMirror
   - SecurityBeret
   - SecurityHat
