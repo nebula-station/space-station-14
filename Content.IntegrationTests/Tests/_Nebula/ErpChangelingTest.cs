@@ -67,9 +67,12 @@ public sealed class ErpChangelingTest : GameTest
     {
         await Server.WaitAssertion(() =>
         {
-            var extended = SProtoMan.Index<GamePresetPrototype>("Extended");
-            Assert.That(extended.Rules, Does.Contain(new EntProtoId("ErpChangelingSpawn")),
-                "The ERP changeling rule isn't in the Extended preset, is the Nebula partials directory registered?");
+            foreach (var presetId in new[] { "Extended", "Greenshift" })
+            {
+                var preset = SProtoMan.Index<GamePresetPrototype>(presetId);
+                Assert.That(preset.Rules, Does.Contain(new EntProtoId("ErpChangelingSpawn")),
+                    $"The ERP changeling rule isn't in the {presetId} preset, is the Nebula partials directory registered?");
+            }
 
             foreach (var id in BlockedListings)
             {

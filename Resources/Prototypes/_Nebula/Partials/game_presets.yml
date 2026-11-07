@@ -6,3 +6,8 @@
   id: Extended
   rules:
   - ErpChangelingSpawn
+
+- type: gamePreset
+  id: Greenshift
+  rules:
+  - ErpChangelingSpawn
