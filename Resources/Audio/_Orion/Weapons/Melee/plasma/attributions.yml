@@ -1,0 +1,4 @@
+- files: ["plasma_on.ogg", "plasma_off.ogg", "plasma_hit.ogg", "plasma_swing.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from ArcaneSS14 (Bitrunning port)"
+  source: "https://github.com/ArcaneSS14/arcane/commit/6e25dda14b0f64b0d357811b55b94e1aacf58866"

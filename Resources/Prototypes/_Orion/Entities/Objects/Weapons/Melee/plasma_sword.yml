@@ -40,11 +40,11 @@
           Quantity: 250
         maxVol: 250
   - type: SolutionRegeneration
-    solution: plasma
     generated:
       reagents:
       - ReagentId: Plasma
-        Quantity: 0.005
+        Quantity: 0.01
+    duration: 2
   - type: ComponentToggler
     components:
     - type: Cautery # Shitmed
