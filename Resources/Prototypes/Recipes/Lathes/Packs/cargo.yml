@@ -14,6 +14,12 @@
   recipes:
   - OreProcessorMachineCircuitboard
   - SalvageMagnetMachineCircuitboard
+  # Nebula start
+  - QuantumConsoleCircuitboard
+  - QuantumServerMachineCircuitboard
+  - NetpodMachineCircuitboard
+  - ByteforgeMachineCircuitboard
+  # Nebula end
 
 ## Dynamic
 

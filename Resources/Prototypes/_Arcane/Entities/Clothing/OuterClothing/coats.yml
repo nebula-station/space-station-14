@@ -8,3 +8,14 @@
     sprite: _Arcane/Clothing/OuterClothing/Coats/adjutantcoat.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/OuterClothing/Coats/adjutantcoat.rsi
+
+- type: entity
+  parent: [ClothingOuterWinterSecArmored, BaseCargoContraband]
+  id: ClothingOuterCoatBitrunner
+  name: bitrunner coat
+  description: A dark coat with a blood-red lining for those who like to look menacing even while wandering the station corridors.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/OuterClothing/Coats/bitrunner_coat.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/OuterClothing/Coats/bitrunner_coat.rsi
