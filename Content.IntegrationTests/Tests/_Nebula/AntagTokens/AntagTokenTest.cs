@@ -29,7 +29,19 @@ namespace Content.IntegrationTests.Tests._Nebula.AntagTokens;
 [TestOf(typeof(AntagTokenSystem))]
 public sealed class AntagTokenTest
 {
-    private const string Preset = "Greenshift";
+    // Greenshift without antags
+    private const string Preset = "AntagTokenTestPreset";
+
+    [TestPrototypes]
+    private const string Prototypes = @"
+- type: gamePreset
+  id: AntagTokenTestPreset
+  name: greenshift-title
+  description: greenshift-description
+  showInVote: false
+  rules:
+  - BasicRoundstartVariation
+";
     private static readonly ProtoId<JobPrototype> Passenger = "Passenger";
     private static readonly ProtoId<SpeciesPrototype> Human = "Human";
 
