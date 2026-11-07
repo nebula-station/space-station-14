@@ -1,0 +1,34 @@
+- type: entity
+  parent: BaseItem
+  id: BouquetPinkTulip
+  name: pink tulip bouquet
+  description: A gentle bouquet of pink tulips.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Flowers/pink_tulip.rsi
+    state: bouquet
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: BaseItem
+  id: BouquetRedRose
+  name: red rose bouquet
+  description: A passionate bouquet of red roses.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Flowers/red_rose.rsi
+    state: bouquet
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: ClothingHeadBase
+  id: WreathWhiteLily
+  name: white lily wreath
+  description: An elegant wreath of pure white lilies.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Flowers/white_lily.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Flowers/white_lily.rsi

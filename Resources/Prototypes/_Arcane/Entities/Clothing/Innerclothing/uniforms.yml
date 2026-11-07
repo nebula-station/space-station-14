@@ -20,3 +20,26 @@
     sprite: _Arcane/Clothing/Innerclothing/bitrunner_jumpsuit.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/Innerclothing/bitrunner_jumpsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformPinkClown
+  categories: [ HideSpawnMenu ]
+  name: pink clown dress
+  description: Even more fun, tricks and style!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/clown.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/clown.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformUSSPInvestigator
+  name: investigator uniform
+  description: Observe uniform regulations while on duty.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/USSP/investigator.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/USSP/investigator.rsi

@@ -1408,3 +1408,18 @@
     FabricationKnowledge: 0
   useQuality: false
   # </Trauma>
+
+- type: construction
+  name: construction-name-torsher
+  parent: BaseFurniture # Nebula edit
+  id: TorsherRecipe
+  graph: TorsherGraph
+  startNode: start
+  targetNode: torsher
+  category: construction-category-furniture
+  description: construction-desc-torsher
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

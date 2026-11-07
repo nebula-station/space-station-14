@@ -41943,34 +41943,46 @@ entities:
     - type: Transform
       parent: 2
       pos: 7.5,29.5
+    - type: Fixtures
+      fixtures: {}
   - uid: 162
     components:
     - type: Transform
       parent: 2
       pos: 6.5,29.5
+    - type: Fixtures
+      fixtures: {}
   - uid: 163
     components:
     - type: Transform
       parent: 2
       pos: 5.5,29.5
+    - type: Fixtures
+      fixtures: {}
   - uid: 164
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 21.5,17.5
+    - type: Fixtures
+      fixtures: {}
   - uid: 165
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 19.5,17.5
+    - type: Fixtures
+      fixtures: {}
   - uid: 166
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 20.5,17.5
+    - type: Fixtures
+      fixtures: {}
 - proto: ADTScientistMarble
   entities:
   - uid: 167
@@ -99895,9 +99907,27 @@ entities:
     mapInit: true
     paused: true
     components:
+    - type: MetaData
+      name: бутылочка (reagent-name-spacedrugs)
     - type: Transform
       parent: 2
       pos: 52.282116,-31.274155
+    - type: SolutionContainerManager
+      solutions: null
+      containers:
+      - drink
+    - type: NameModifier
+      baseName: бутылочка
+    - type: ContainerContainer
+      containers:
+        solution@drink: !type:ContainerSlot
+          ent: 4
+    - type: Forensics
+      scents: []
+      residues: []
+      fingerprints: []
+      fibers: []
+      dNAs: []
 - proto: ChemistryBottleUnstableMutagen
   entities:
   - uid: 10891
@@ -103460,6 +103490,11 @@ entities:
     components:
     - type: Transform
       parent: 11339
+    - type: Clothing
+      inSlotFlag: OUTERCLOTHING
+      inSlot: outerClothing
+    - type: Physics
+      canCollide: False
 - proto: ClothingOuterVestHazard
   entities:
   - uid: 11439
@@ -104119,6 +104154,13 @@ entities:
     components:
     - type: Transform
       parent: 11339
+    - type: Clothing
+      inSlotFlag: INNERCLOTHING
+      inSlot: jumpsuit
+    - type: SuitSensor
+      user: 11339
+    - type: Physics
+      canCollide: False
 - proto: ClownMegaphone
   entities:
   - uid: 11493
@@ -104142,6 +104184,8 @@ entities:
       parent: 2
       rot: 3.141592653589793 rad
       pos: 25.5,63.5
+    - type: Fixtures
+      fixtures: {}
 - proto: Coal1
   entities:
   - uid: 11496
@@ -164015,6 +164059,8 @@ entities:
     - type: Transform
       parent: 2
       pos: -1.6313431,-8.140913
+    - type: Stack
+      count: 120000
 - proto: HighSecCaptainLocked
   entities:
   - uid: 20343
@@ -172830,6 +172876,8 @@ entities:
     - type: Transform
       parent: 2
       pos: -3.5,-3.5
+    - type: Fixtures
+      fixtures: {}
 - proto: PosterContrabandInteQNoSex
   entities:
   - uid: 21690
@@ -172838,6 +172886,8 @@ entities:
       parent: 2
       rot: -1.5707963267948966 rad
       pos: -14.5,29.5
+    - type: Fixtures
+      fixtures: {}
 - proto: PosterContrabandKosmicheskayaStantsiya
   entities:
   - uid: 21691
@@ -172870,6 +172920,8 @@ entities:
     - type: Transform
       parent: 2
       pos: 3.5,25.5
+    - type: Fixtures
+      fixtures: {}
 - proto: PosterContrabandMissingGloves
   entities:
   - uid: 21695
@@ -187881,6 +187933,8 @@ entities:
       parent: 2
       rot: -1.5707963267948966 rad
       pos: -19.5,13.5
+    - type: PointLight
+      energy: 2
 - proto: RMCOverheadSignNeonPharmacy
   entities:
   - uid: 24274

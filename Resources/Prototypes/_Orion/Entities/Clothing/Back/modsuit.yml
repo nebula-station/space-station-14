@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingModsuitStandard
+  id: ClothingModsuitSuspicious
+  name: suspicious modsuit control unit
+  description: A special modular suit contol unit containing all necessary modular hardsuit parts.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Back/Modsuits/suspicious.rsi
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingModsuitHelmetSuspicious
+      gloves: ClothingModsuitGauntletsSuspicious
+      outerClothing: ClothingModsuitChestplateSuspicious
+      shoes: ClothingModsuitBootsSuspicious

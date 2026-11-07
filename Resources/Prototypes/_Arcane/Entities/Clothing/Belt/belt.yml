@@ -21,3 +21,15 @@
         whitelist:
           tags:
           - Spray
+
+- type: entity
+  parent: ClothingBeltSuspendersBlack
+  id: ClothingBeltServiceApron
+  categories: [ HideSpawnMenu ]
+  name: service apron
+  description: Little black apron.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Belt/Sponsor/service_apron.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Belt/Sponsor/service_apron.rsi

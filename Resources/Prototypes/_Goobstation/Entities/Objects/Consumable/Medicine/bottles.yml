@@ -95,3 +95,18 @@
     - id: ChemistryBottleEthylredoxrazine
     - id: ChemistryBottleCryptobiolin
     - id: ChemistryBottleDoxarubixadone
+
+- type: entity
+  id: ChemistryBottleSpaceDrugs
+  suffix: spacedrugs
+  parent: BaseChemistryBottleFilled
+  components:
+  # Nebula start
+  - type: Label
+    localizedLabel: reagent-name-space-drugs
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: SpaceDrugs
+        Quantity: 30
+  # Nebula end

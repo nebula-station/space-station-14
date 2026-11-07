@@ -6,3 +6,6 @@ ent-RandomChemistryBottleMedicalTier2Spawner = случайная бутылоч
     .desc = { ent-MarkerBase.desc }
 ent-RandomChemistryBottleMedicalTier3Spawner = случайная бутылочка с химикатом (уровень 3)
     .desc = { ent-MarkerBase.desc }
+ent-ChemistryBottleSpaceDrugs = { ent-BaseChemistryBottleFilled }
+    .suffix = Космические наркотики
+    .desc = { ent-BaseChemistryBottleFilled.desc }

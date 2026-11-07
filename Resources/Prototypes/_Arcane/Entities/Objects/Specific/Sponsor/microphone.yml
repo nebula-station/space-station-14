@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseItem
+  id: RadioHostMicrophone
+  categories: [ HideSpawnMenu ]
+  name: microphone
+  description: To sing and dance!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Sponsor/microphone.rsi
+    state: icon
+  - type: Item
+    size: Large
+    sprite: _Arcane/Objects/Sponsor/microphone.rsi

@@ -1,0 +1,17 @@
+- type: entity
+  parent: ChemDispenser
+  id: MiniChemDispenser
+  suffix: Filled
+  name: mini chemical dispenser
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Dispensers/mini_dispensers.rsi
+    state: industrial-off
+  - type: ItemMapper
+    sprite: _Orion/Structures/Dispensers/mini_dispensers.rsi
+    containerWhitelist: [beakerSlot]
+    mapLayers:
+      industrial_loaded:
+        whitelist:
+          components:
+          - FitsInDispenser

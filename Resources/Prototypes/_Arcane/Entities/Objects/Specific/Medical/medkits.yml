@@ -1,0 +1,17 @@
+- type: entity
+  parent: Medkit
+  id: MedkitEmergency
+  name: emergency medical kit
+  description: For emergencies. Not for fighting.
+  components:
+  - type: Sprite
+    sprite: _Orion/Objects/Specific/Medical/firstaidkits.rsi
+    state: emergencykit
+  - type: Item
+    sprite: _Orion/Objects/Specific/Medical/firstaidkits.rsi
+    heldPrefix: emergencykit
+    shape:
+    - 0,0,2,1
+  - type: Storage
+    grid:
+    - 0,0,2,1

@@ -74,3 +74,14 @@
     sprite: _Orion/Clothing/Uniforms/Jumpsuit/camouflage.rsi
   - type: Clothing
     sprite: _Orion/Clothing/Uniforms/Jumpsuit/camouflage.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitClownis
+  name: clown suit
+  description: A clown suit, seemingly inspired by an American fan.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Uniforms/Jumpsuit/clown.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Uniforms/Jumpsuit/clown.rsi

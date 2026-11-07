@@ -1,0 +1,19 @@
+- type: entity
+  name: pill
+  suffix: Herignis 10u
+  parent: Pill
+  id: PillHerignis
+  components:
+  - type: Pill
+    pillType: 14
+  - type: Sprite
+    state: pill14
+  # Nebula start
+  - type: Label
+    localizedLabel: medical-label-herignis-10u
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Herignis
+        Quantity: 10
+  # Nebula end

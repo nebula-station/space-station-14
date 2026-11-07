@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ADTGoldCross
+  name: gold cross
+  description: A cross made of gold. For the most elite priests of the NT
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Neck/Misc/gold_cross.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Neck/Misc/gold_cross.rsi

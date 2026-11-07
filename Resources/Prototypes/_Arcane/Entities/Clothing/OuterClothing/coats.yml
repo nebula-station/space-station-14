@@ -23,3 +23,35 @@
   - type: Armor
     modifiers: {}
   # Nebula end
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatLabEnlightenment
+  categories: [ HideSpawnMenu ]
+  name: enlightenment lab coat
+  description: Word "bacchus" and word "death" means same for you.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/livsey.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/livsey.rsi
+  - type: Armor
+    coverage:
+    - Torso
+    - Tail
+    - Arm
+    - Leg
+    modifiers:
+      coefficients:
+        Caustic: 0.65
+
+- type: entity
+  parent: [ClothingOuterArmorHoS, ClothingOuterStorageBase]
+  id: ClothingOuterUSSPTrenchCoat
+  name: trench coat
+  description: A warm coat will protect against the harsh cold.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/OuterClothing/USSP/trench_coat.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/OuterClothing/USSP/trench_coat.rsi
