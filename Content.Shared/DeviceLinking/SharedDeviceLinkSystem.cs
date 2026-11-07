@@ -415,8 +415,8 @@ public abstract partial class SharedDeviceLinkSystem : EntitySystem
         {
             foreach (var (sourcePort, sinkPort) in ports)
             {
-                RaiseLocalEvent(sourceUid, new PortDisconnectedEvent(sourcePort));
-                RaiseLocalEvent(sinkUid, new PortDisconnectedEvent(sinkPort));
+                RaiseLocalEvent(sourceUid, new PortDisconnectedEvent(sourcePort, sinkUid)); // Nebula edit
+                RaiseLocalEvent(sinkUid, new PortDisconnectedEvent(sinkPort, sourceUid)); // Nebula edit
             }
         }
 
@@ -454,8 +454,8 @@ public abstract partial class SharedDeviceLinkSystem : EntitySystem
             else
                 _adminLogger.Add(LogType.DeviceLinking, LogImpact.Low, $"unlinked {ToPrettyString(sourceUid):source} {source} and {ToPrettyString(sinkUid):sink} {sink}");
 
-            RaiseLocalEvent(sourceUid, new PortDisconnectedEvent(source));
-            RaiseLocalEvent(sinkUid, new PortDisconnectedEvent(sink));
+            RaiseLocalEvent(sourceUid, new PortDisconnectedEvent(source, sinkUid)); // Nebula edit
+            RaiseLocalEvent(sinkUid, new PortDisconnectedEvent(sink, sourceUid)); // Nebula edit
 
             outputs.Remove(sinkUid);
             linkedPorts.Remove((source, sink));

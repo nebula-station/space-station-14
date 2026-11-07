@@ -579,7 +579,7 @@ public sealed partial class SurveillanceCameraMonitorSystem : EntitySystem
         }
 
         var state = new SurveillanceCameraMonitorUiState(
-            GetNetEntity(monitor.ActiveCamera),
+            GetNetEntity(ResolveUiCamera(monitor.ActiveCamera)), // Nebula edit
             // <Trauma> - replaced the rest of the fields
             monitor.ActiveCameraAddress,
             monitor.KnownCameras,
