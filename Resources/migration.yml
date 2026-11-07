@@ -1293,3 +1293,46 @@ AsimovCircuitBoard: CrewsimovCircuitBoard
 # 2026-09-24
 ClothingShoesTourist: ClothingShoesSandalsBlack
 ClothingShoesWizard: ClothingShoesSandalsBrown
+
+# Nebula start
+AegisOfChampions: null
+AirlockHatchInteQVanguardLocked: AirlockHatchSyndicateLocked
+AugmentPaperworkPanel: null
+BaseChestHuman: null
+BodyBagNanoTrasenFolded: BodyBagFolded
+BodyBagRadiationFolded: BodyBagFolded
+BoneWeak: null
+BoxSurvivalSlotsSyndicateWaterVapor: BoxSurvivalSlotsSyndicate
+CentralCommandTeleporter: CryogenicSleepUnit
+
+ClothingHeadHelmetUEGBallistic: null
+ComputerResearchServerControl: null
+ComputerSupermatter: null
+ConfettiGrenade: null
+DrinkVisualizerTestCut: null
+EnergyMiniChemDispenser: EnergyChemDispenser
+ExperiScanner: null
+GambamovCircuitBoard: null
+HeadIPC: null
+ItemFlagMiniInteQ: SyndieHandyFlag
+LockerShaftMinerFilled: LockerSalvageSpecialistFilled
+MicroServoStockPart: MicroManipulatorStockPart
+OperatingTableFilled: OperatingTable
+OrganSpaceAnimalHeart: OrganAnimalHeart
+PlushieLeguia: null
+PlushieLizardJobBlueshieldOfficer: null
+PlushieLizardJobBrigmedic: null
+PlushieLizardJobCentCommOfficial: null
+PlushieLizardJobNanotrasenRepresentative: null
+PlushieLizardJobShaftMiner: null
+PlushieLizardJobVirologist: null
+PollBooth: null
+PowerCellBluespaceReactor: PowerCellMicroreactor
+ResearchDestructiveAnalyzer: null
+ResearchExperimentalDestructiveScanner: null
+SpawnPointNanotrasenCareerTrainer: null
+SpawnPointShaftMiner: SpawnPointSalvageSpecialist
+TaskVial: null
+VendingMachineInteQDrobeNerf: VendingMachineSyndieDrobe
+WeaponWaterPistolFilledFire: null
+# Nebula end
