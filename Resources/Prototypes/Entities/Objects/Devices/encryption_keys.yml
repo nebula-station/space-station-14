@@ -78,6 +78,7 @@
     - Security
     - Service
     - Supply
+    - Legal # Nebula edit
     defaultChannel: Command
   - type: Sprite
     layers:

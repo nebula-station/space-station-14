@@ -21,7 +21,7 @@
   equipment:
     shoes: ClothingShoesBootsLaceup
     id: LawyerPDA
-    ears: ClothingHeadsetSecurity
+    ears: ClothingHeadsetLawyer # Nebula edit
   inhand:
     - BriefcaseBrownFilled
   storage:

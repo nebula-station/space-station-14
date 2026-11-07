@@ -1,0 +1,9 @@
+- type: department
+  id: Legal
+  name: department-Legal
+  description: department-Legal-description
+  color: "#c22b51"
+  weight: -4
+  roles:
+  - IAA
+  - Lawyer
