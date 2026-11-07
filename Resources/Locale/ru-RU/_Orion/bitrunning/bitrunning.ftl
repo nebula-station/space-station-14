@@ -128,3 +128,13 @@ bitrunning-ui-domain-cost = § { $cost }
 bitrunning-ui-domain-cost-tooltip = Необходимое количество очков сервера для запуска домена.
 
 bitrunning-avatar-disconnect-blocked = Нейросвязь нестабильна после недавнего урона. Отключение будет доступно через { $seconds }с.
+
+job-name-bitrunner = Битраннер
+job-description-bitrunner = Запускайте виртуальные домены, добывайте очки и поддерживайте стабильность битран-сети.
+job-name-bitrun-avatar = Аватар битрана
+job-description-bitrun-avatar = Проецируемое тело оператора, используемое битраннером внутри виртуальных доменов.
+ghost-role-information-skeleton-bartender-name = Скелет-бармен
+ghost-role-information-skeleton-bartender-description = Поддерживайте работу пляжного бара, подавайте напитки и следите, чтобы гостям было весело.
+ghost-role-information-skeleton-pirate-bitrunning-name = Скелет пират
+ghost-role-information-skeleton-pirate-bitrunning-description = Вы пират, враждебный к битраннерам. Грабьте их и не давайте им спокойно завершить рейд.
+id-card-access-level-bitrun = Битраннинг

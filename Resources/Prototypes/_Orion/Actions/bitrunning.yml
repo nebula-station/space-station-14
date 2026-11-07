@@ -5,8 +5,9 @@
   description: Return to your body and end the current avatar session.
   components:
   - type: Action
-    icon:
-      sprite: _Orion/Structures/Machines/netpod.rsi
+  - type: Sprite
+    layers:
+    - sprite: _Orion/Structures/Machines/netpod.rsi
       state: netpod_closed_active
   - type: InstantAction
     event: !type:BitrunningDisconnectAvatarActionEvent
@@ -20,8 +21,9 @@
   - type: Action
     useDelay: 30
     itemIconStyle: BigAction
-    icon:
-      sprite: Objects/Consumable/Food/ingredients.rsi
+  - type: Sprite
+    layers:
+    - sprite: Objects/Consumable/Food/ingredients.rsi
       state: cheesewheel
   - type: InstantAction
     event: !type:BitrunningSpawnCheeseActionEvent
@@ -35,8 +37,9 @@
   - type: Action
     useDelay: 20
     itemIconStyle: BigAction
-    icon:
-      sprite: Interface/Actions/actions_borg.rsi
+  - type: Sprite
+    layers:
+    - sprite: Interface/Actions/actions_borg.rsi
       state: treatment-module
   - type: InstantAction
     event: !type:BitrunningLesserHealActionEvent
@@ -50,8 +53,9 @@
   - type: Action
     useDelay: 8
     itemIconStyle: BigAction
-    icon:
-      sprite: Mobs/Aliens/Carps/space.rsi
+  - type: Sprite
+    layers:
+    - sprite: Mobs/Aliens/Carps/space.rsi
       state: icon
   - type: InstantAction
     event: !type:PolymorphSpellEvent
@@ -67,8 +71,9 @@
   - type: Action
     useDelay: 8
     itemIconStyle: BigAction
-    icon:
-      sprite: Mobs/Animals/bear.rsi
+  - type: Sprite
+    layers:
+    - sprite: Mobs/Animals/bear.rsi
       state: bear
   - type: InstantAction
     event: !type:PolymorphSpellEvent
