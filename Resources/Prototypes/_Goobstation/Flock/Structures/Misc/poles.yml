@@ -1,0 +1,34 @@
+- type: entity
+  id: BaseFlockPole
+  parent: BaseStructure
+  name: fibrous pole
+  description: Huh. Weird.
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _Goobstation/Flock/Structures/Misc/pole.rsi
+    layers:
+      - state: pole
+  - type: InteractionOutline
+  - type: Damageable
+    damageModifierSet: RGlass
+  - type: Injurable
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: FlockPoleEnd
+  parent: BaseFlockPole
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _Goobstation/Flock/Structures/Misc/pole.rsi
+    layers:
+      - state: poleend
