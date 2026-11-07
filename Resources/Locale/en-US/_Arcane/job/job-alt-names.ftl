@@ -7,3 +7,7 @@ job-name-alt-iaa-1 = Central Command Inspector
 job-name-alt-iaa-2 = Central Command Auditor
 job-name-alt-iaa-3 = Internal Affairs Representative
 job-name-alt-iaa-4 = Internal Affairs Inspector
+job-name-alt-brigmedic-1 = Security Paramedic
+job-name-alt-brigmedic-2 = Security Duty Physician
+job-name-alt-brigmedic-3 = Prison Doctor
+job-name-alt-brigmedic-4 = Brig Medic

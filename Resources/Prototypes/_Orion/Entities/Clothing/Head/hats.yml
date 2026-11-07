@@ -82,3 +82,26 @@
     sprite: _Orion/Clothing/Head/Hats/white_capcap.rsi
   - type: Clothing
     sprite: _Orion/Clothing/Head/Hats/white_capcap.rsi
+
+- type: entity
+  parent: ClothingHeadHatSecurityTrooper
+  id: ClothingHeadHatBeretSecurityMedic
+  name: security medic beret
+  description: A robust beret with the medical insignia emblazoned on it. Uses reinforced fabric to offer sufficient protection.
+  components:
+  # Arcane-Start
+  - type: Armor
+    priceMultiplier: 0
+  # Arcane-End
+  - type: Sprite
+    sprite: _Orion/Clothing/Head/Hats/beret_security_medic.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Head/Hats/beret_security_medic.rsi
+  # Arcane-Start
+  - type: StaticPrice
+    price: 5
+  # Arcane-End
+  - type: Tag
+    tags:
+      - HamsterWearable
+      - WhitelistChameleon
