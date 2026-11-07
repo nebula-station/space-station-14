@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasCommaid
+  name: housekeeping gas mask
+  description: A specialized gas mask designed for heavy cleaning duties.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Mask/gascommaid.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Mask/gascommaid.rsi

@@ -73,3 +73,45 @@
     state: icon
   - type: Clothing
     sprite: _Arcane/Clothing/Head/Hats/maid_fura.rsi
+
+- type: entity
+  parent: ClothingHeadHatArmored
+  id: ClothingHeadHatCapAdjutant
+  name: adjutant cap
+  description: Blue and white, suspiciously reminiscent of the captain's.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Hats/adjcap.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Hats/adjcap.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadHatArmored
+  id: ClothingHeadHatGarrisonCapAdjutant
+  name: adjutant garrisoncap
+  description: A little cotton cap that's just about to fall off his head.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Hats/garrisoncap_adj.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Hats/garrisoncap_adj.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadHatArmored
+  id: ClothingHeadHatBeretAdjutant
+  name: adjutant beret
+  description: Awarded by passing difficult qualification tests and is a matter of extreme pride.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Hats/adjutant_beret.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Hats/adjutant_beret.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon

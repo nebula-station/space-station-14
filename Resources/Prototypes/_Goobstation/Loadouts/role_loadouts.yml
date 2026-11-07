@@ -100,12 +100,14 @@
   - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
 
-- type: roleLoadout
-  id: JobCommandMaid
-  groups:
-  - CommonBackpack
-  - Survival
-  - GroupSpeciesBreathTool
+# Nebula start
+# - type: roleLoadout
+#   id: JobCommandMaid
+#   groups:
+#   - CommonBackpack
+#   - Survival
+#   - GroupSpeciesBreathTool
+# Nebula end
 
 - type: roleLoadout
   id: JobPartyMaker

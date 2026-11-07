@@ -1,0 +1,24 @@
+- type: entity
+  parent: IDCardStandard
+  id: AdjutantIDCard
+  name: adjutant ID card
+  description: Adjutant ID card.
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idheadofpersonnel
+  - type: PresetIdCard
+    job: Adjutant
+
+- type: entity
+  parent: IDCardStandard
+  id: IAAIDCard
+  name: internal affairs agent ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idlawyer
+  - type: PresetIdCard
+    job: IAA

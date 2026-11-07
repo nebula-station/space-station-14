@@ -1,0 +1,8 @@
+ent-ClothingUniformJumpsuitWhiteCaptainTurtleneck = белая водолазка капитана
+    .desc = Настоящая белая водолазка капитана.
+ent-ClothingUniformJumpsuitCommandCaptain = командный костюм капитана
+    .desc = Чёрный костюм, на нём видны золотые погоны на плечах.
+ent-ClothingUniformJumpsuitWhiteCaptain = белый комбинезон капитана
+    .desc = Белый комбинезон капитана символизирующий, что ваша зарплата явно превышает нормы.
+ent-ClothingUniformJumpsuitSheriff = комбинезон шерифа
+    .desc = Комбинезон показывающий вашу статусность, как ужасн... великого правителя.

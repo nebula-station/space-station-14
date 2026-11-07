@@ -1,0 +1,35 @@
+- type: roleLoadout
+  id: JobAdjutant
+  groups:
+  - AdjutantHead
+  - AdjutantJumpsuit
+  - AdjutantOuterClothing
+  - AdjutantBackpack
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - Survival
+
+- type: roleLoadout
+  id: JobCommandMaid
+  groups:
+  - CommandMaidHead
+  - CommandMaidJumpsuit
+  - CommandMaidneck
+  - CommandMaidBackpack
+  - CommandMaidGloves
+  - CommandMaidShoes
+  - CommandMaidBelt
+  - CommandMaidMask
+  - CommandMaidSocks
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - Survival
+
+- type: roleLoadout
+  id: JobIAA
+  groups:
+  - IAAJumpsuit
+  - CommonBackpack
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - Survival
