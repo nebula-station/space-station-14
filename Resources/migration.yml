@@ -135,7 +135,7 @@ DisposalBlocker: DisposalPipe
 AiRemoteBrain: null
 
 # 2026-04-12 kill brigmedic
-SpawnPointBrigmedic: null
+# SpawnPointBrigmedic: null # Nebula edit
 
 # 2026-04-13 kill chud signaller
 PanicButton: null

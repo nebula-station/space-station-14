@@ -495,6 +495,10 @@
   parent: SpawnPointJobBase
   name: brigmedic
   components:
+  # Nebula start
+  - type: SpawnPoint
+    job_id: Brigmedic
+  # Nebula end
   - type: Sprite
     layers:
       - state: green
