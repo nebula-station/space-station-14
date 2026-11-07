@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneCog
+  id: NebulaCog
   mapName: 'Cog'
   mapPath: /Maps/_Nebula/Current/cog.yml
   minPlayers: 40
@@ -19,8 +19,6 @@
             DClass: [ -1, -1 ]
             #service
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             HeadOfPersonnel: [ 1, 1 ]
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]

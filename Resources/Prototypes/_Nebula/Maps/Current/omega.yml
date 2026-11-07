@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneOmega
+  id: NebulaOmega
   mapName: 'Omega'
   mapPath: /Maps/_Nebula/Current/omega.yml # Arcane
   minPlayers: 7
@@ -20,8 +20,6 @@
             DClass: [ -1, -1 ]
             #service
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             NanotrasenRepresentative: [ 1, 1 ] # Goobstation
             BlueshieldOfficer: [ 1, 1 ] # Goobstation
             HeadOfPersonnel: [ 1, 1 ]

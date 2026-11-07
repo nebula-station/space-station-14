@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneLeonid
+  id: NebulaLeonid
   mapName: 'Leonid Station'
   mapPath: /Maps/_Nebula/Current/leonid.yml
   minPlayers: 50
@@ -22,8 +22,6 @@
             DClass: [ -1, -1 ]
             #service
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
             Adjutant: [ 1, 1 ]

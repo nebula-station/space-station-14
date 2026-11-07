@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneAmber
+  id: NebulaAmber
   mapName: 'Amber'
   mapPath: /Maps/_Nebula/Current/amber.yml
   minPlayers: 7

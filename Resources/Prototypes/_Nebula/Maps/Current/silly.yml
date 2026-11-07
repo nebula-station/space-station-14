@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneSilly
+  id: NebulaSilly
   mapName: 'Silly'
   mapPath: /Maps/_Nebula/Current/silly.yml
   minPlayers: 0

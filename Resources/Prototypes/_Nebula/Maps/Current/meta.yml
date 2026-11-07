@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneMeta
+  id: NebulaMeta
   mapName: 'Meta Station'
   mapPath: /Maps/_Nebula/Current/meta.yml # Arcane
   minPlayers: 30 # Goobstation return minPlayers requirement for maps
@@ -21,8 +21,6 @@
             DClass: [ -1, -1 ]
             #service
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
             Adjutant: [ 1, 1 ]

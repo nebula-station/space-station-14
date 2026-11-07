@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneAvrite
+  id: NebulaAvrite
   mapName: 'Avrite'
   mapPath: /Maps/_Nebula/Current/avrite.yml
   minPlayers: 50

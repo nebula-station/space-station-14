@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneOrigin
+  id: NebulaOrigin
   mapName: 'Origin'
   mapPath: /Maps/_Nebula/Current/origin.yml
   minPlayers: 50
@@ -26,8 +26,6 @@
             Adjutant: [ 1, 1 ]
             CommandMaid: [ 1, 1 ]
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 2, 2 ]
             Botanist: [ 3, 3 ]

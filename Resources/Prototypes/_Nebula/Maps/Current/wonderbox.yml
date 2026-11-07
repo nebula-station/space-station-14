@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneWonderBox
+  id: NebulaWonderBox
   mapName: 'WonderBox Station'
   mapPath: /Maps/_Nebula/Current/WonderBox.yml
   minPlayers: 0

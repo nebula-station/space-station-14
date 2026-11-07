@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneLoop
+  id: NebulaLoop
   mapName: 'Loop Station'
   mapPath: /Maps/_Nebula/Current/loop.yml
   minPlayers: 35
@@ -20,8 +20,6 @@
             DClass: [ -1, -1 ]
             #command
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
             Adjutant: [ 1, 1 ]

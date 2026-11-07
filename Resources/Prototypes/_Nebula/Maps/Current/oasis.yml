@@ -1,5 +1,5 @@
 - type: gameMap
-  id: ArcaneOasis
+  id: NebulaOasis
   mapName: 'Oasis'
   mapPath: /Maps/_Nebula/Current/oasis.yml # Goobstation - SM
   minPlayers: 30 # Goobstation return minPlayers requirement for maps
@@ -22,8 +22,6 @@
             #service
             StationAi: [ 1, 1 ]
             Captain: [ 1, 1 ]
-            # Arcane-start
-            # Arcane-end
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
             Adjutant: [ 1, 1 ]
