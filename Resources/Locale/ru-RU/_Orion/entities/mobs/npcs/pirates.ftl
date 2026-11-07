@@ -1,0 +1,12 @@
+ent-MobPirateCutlass = пират
+    .suffix = ИИ, Энергетическая сабля
+    .desc = { ent-MobHuman.desc }
+ent-MobPirateEvaCutlass = пират
+    .suffix = ИИ, ЕВА, Энергетическая сабля
+    .desc = { ent-MobHuman.desc }
+ent-MobPirateEvaLaserCarbine = пират
+    .suffix = ИИ, ЕВА, Лазерный карабин
+    .desc = { ent-MobHuman.desc }
+ent-MobPirateFlintlock = пират
+    .suffix = ИИ, Кремнёвый пистолет
+    .desc = { ent-MobHuman.desc }
