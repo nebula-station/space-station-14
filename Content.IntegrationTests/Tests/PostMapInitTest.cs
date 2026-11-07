@@ -84,7 +84,7 @@ namespace Content.IntegrationTests.Tests
             {"/Maps/_Nebula/Current/meta.yml", ["ClosetJanitorBombFilled"]},
             {"/Maps/_Nebula/Current/origin.yml", ["ClothingHeadHatCatEars"]},
             {"/Maps/_Nebula/Current/serpentcrest.yml", ["WehMedipen"]},
-            {"/Maps/_Nebula/Current/silly.yml", ["RubberStampSyndicate"]},
+            {"/Maps/_Nebula/Current/silly.yml", ["BoxFolderCentCom", "RubberStampSyndicate"]},
             // Nebula end
             // </Trauma>
             {"/Maps/Shuttles/ShuttleEvent/honki.yml", ["GoldenBikeHorn", "RubberStampClown"]},

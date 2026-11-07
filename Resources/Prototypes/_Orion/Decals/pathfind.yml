@@ -9,3 +9,27 @@
   sprite:
     sprite: _Orion/Decals/pathfind.rsi
     state: blockwchevfillw
+
+- type: decal
+  id: PathfindBlockCChevronFillW
+  sprite:
+    sprite: _Orion/Decals/pathfind.rsi
+    state: blockcchevfillw
+
+- type: decal
+  id: PathfindBlockEChevronFillE
+  sprite:
+    sprite: _Orion/Decals/pathfind.rsi
+    state: blockechevfille
+
+- type: decal
+  id: PathfindBlockNEChevronFillS
+  sprite:
+    sprite: _Orion/Decals/pathfind.rsi
+    state: blocknechevfills
+
+- type: decal
+  id: PathfindBlockNWChevronFillS
+  sprite:
+    sprite: _Orion/Decals/pathfind.rsi
+    state: blocknwchevfills
