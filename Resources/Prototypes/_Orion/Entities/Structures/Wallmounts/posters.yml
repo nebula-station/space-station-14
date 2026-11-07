@@ -1,0 +1,129 @@
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment1
+  name: United Earth Government
+  description: Join the UEG Marine Corps!
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster1
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment2
+  name: United Earth Government
+  description: Poster of the united government of the Earth. The poster depicts the coat of arms of the UEG.
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster2
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment3
+  name: Future Belongs To Us
+  description: In all ages, Earth has been the center of progress!
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster3
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment4
+  name: Earth Needs You
+  description: Agitation poster calling for joining the federal structures of the UEG.
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster4
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment5
+  name: Earth Is Our Home
+  description: Propaganda poster, reminding where civilization came from across the galaxy.
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster5
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment6
+  name: Join!
+  description: Join the reserve of the Army Special Forces UEG! Become the hero the whole galaxy knows about!
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster6
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment7
+  name: Say NO LGBT!
+  description: Say no to the LGBT movement, this movement has a detrimental effect on children and the elderly!
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster7
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment8
+  name: United Earth Government
+  description: Join the officer training schools, you will become the commander of entire armies! "We only accept people with higher education, the type of education is not important"
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster8
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment9
+  name: Red Alert!
+  description: Attention citizens, be careful, the enemies of the state are still actively engaged in terrorism, report any possible suspicions in connection with the USSP.
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster9
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment10
+  name: Virgin Of Justice
+  description: Government of Earth has always been the most just state. Glory to the Earth!
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster10
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment11
+  name: UEG Agitation
+  description: The poster says, "UEG was founded on earth by our great founding fathers, then humanity became one and was able to subjugate the entire galaxy!"
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster11
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment12
+  name: Benefits To Young Mothers
+  description: The Government of the Earth recommends starting families at a young age, thereby developing the future of the Earth and receiving benefits and maternity capital!
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster12
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitUnitedEarthGovernment13
+  name: UEG Recommendation
+  description: USSP began to frequently infiltrate space stations, and it is recommended that, if a communist is detected, immediately report to the local branch of the government agencies of the UEG.
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/Posters/UEG.rsi
+    state: poster13
