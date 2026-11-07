@@ -23,6 +23,8 @@
             StationAi: [ 1, 1 ]
             NanotrasenRepresentative: [ 1, 1 ]
             BlueshieldOfficer: [ 1, 1 ]
+            Adjutant: [ 1, 1 ]
+            CommandMaid: [ 1, 1 ]
             Captain: [ 1, 1 ]
             # Arcane-start
             # Arcane-end
@@ -34,6 +36,7 @@
             Chaplain: [ 1, 1 ]
             Librarian: [ 2, 2 ]
             Lawyer: [ 2, 2 ]
+            IAA: [ 1, 1 ]
             ServiceWorker: [ 3, 4 ]
             #engineering
             ChiefEngineer: [ 1, 1 ]
@@ -57,6 +60,7 @@
             #security
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]
+            Brigmedic: [ 1, 1 ]
             Detective: [ 1, 1 ]
             SecurityOfficer: [ 7, 7 ]
             SecurityCadet: [ 2, 4 ]
