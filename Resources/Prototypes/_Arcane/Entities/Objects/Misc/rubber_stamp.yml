@@ -11,6 +11,20 @@
   - type: Sprite
     sprite: _Arcane/Objects/Misc/stamps.rsi
     state: stamp-adjutant
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+        sprite: Objects/Misc/stamps.rsi
+      - state: handle-inhand-left
+        sprite: Objects/Misc/stamps.rsi
+        color: "#3681bb"
+      right:
+      - state: stamp-inhand-right
+        sprite: Objects/Misc/stamps.rsi
+      - state: handle-inhand-right
+        sprite: Objects/Misc/stamps.rsi
+        color: "#3681bb"
 
 - type: entity
   name: internal affairs agent's rubber stamp
@@ -25,3 +39,17 @@
   - type: Sprite
     sprite: _Arcane/Objects/Misc/stamps.rsi
     state: stamp-iaa
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+        sprite: Objects/Misc/stamps.rsi
+      - state: handle-inhand-left
+        sprite: Objects/Misc/stamps.rsi
+        color: "#1f1f1f"
+      right:
+      - state: stamp-inhand-right
+        sprite: Objects/Misc/stamps.rsi
+      - state: handle-inhand-right
+        sprite: Objects/Misc/stamps.rsi
+        color: "#1f1f1f"
