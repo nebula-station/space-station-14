@@ -82800,7 +82800,7 @@ entities:
       nextFlush: 0
     - type: ContainerContainer
       containers:
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents:
@@ -161223,7 +161223,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents:
@@ -161262,7 +161262,7 @@ entities:
           showEnts: False
           occludes: True
           ent: 12734
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents:
@@ -161281,7 +161281,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents:
@@ -161300,7 +161300,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents:
@@ -161359,7 +161359,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents:

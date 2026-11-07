@@ -175059,8 +175059,6 @@ entities:
     - type: Transform
       pos: 63.5,24.5
       parent: 2
-    - type: Construction
-      defaultTarget: start
 - proto: TomatoSeeds
   entities:
   - uid: 26753

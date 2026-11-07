@@ -91501,7 +91501,7 @@ entities:
           showEnts: False
           occludes: True
           ent: 5459
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
