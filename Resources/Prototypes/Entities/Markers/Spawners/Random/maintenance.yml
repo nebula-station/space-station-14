@@ -84,6 +84,7 @@
         - id: ClothingOuterFlannelGreen
       - id: ClothingOuterVestHazard
       - id: ClothingShoesBootsJack
+      - id: ClothingShoesBootsJackToeless # Nebula edit
       - id: ClothingShoesHighheelBoots
       - id: ClothingShoesBootsLaceup
       - id: ClothingShoesLeather

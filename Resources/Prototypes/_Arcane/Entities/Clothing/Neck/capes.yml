@@ -15,3 +15,12 @@
   components:
   - type: Sprite
     sprite: _Arcane/Clothing/Neck/Cape/arctic_fox_cape.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCapeBlueShield
+  name: “Blue Shield” Officer's Cape
+  description: A cape created specifically for “Blue Shield” employees
+  components: 
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Cape/blueshieldcape.rsi

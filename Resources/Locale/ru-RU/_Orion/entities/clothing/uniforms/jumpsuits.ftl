@@ -6,3 +6,5 @@ ent-ClothingUniformJumpsuitWhiteCaptain = белый комбинезон кап
     .desc = Белый комбинезон капитана символизирующий, что ваша зарплата явно превышает нормы.
 ent-ClothingUniformJumpsuitSheriff = комбинезон шерифа
     .desc = Комбинезон показывающий вашу статусность, как ужасн... великого правителя.
+ent-ClothingUniformJumpsuitCamouflage = камуфляжная униформа
+    .desc = Скрыто всё что нужно.

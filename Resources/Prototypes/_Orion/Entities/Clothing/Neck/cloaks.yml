@@ -28,3 +28,14 @@
   components:
   - type: Sprite
     sprite: _Orion/Clothing/Neck/Cloaks/syndicate_admiral.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakInteQ
+  name: InteQ cloak
+  description: Cloak of the members of the InteQ, with a gold lining inside and a stylish gold shield on the back.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Neck/Cloaks/inteq_cloak.rsi
+  - type: ScannableForPoints # Goob
+    points: 1

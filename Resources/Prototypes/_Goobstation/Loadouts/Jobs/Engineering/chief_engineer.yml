@@ -31,3 +31,8 @@
   id: CESummerShirt
   equipment:
     jumpsuit: ClothingUniformJumpsuitCESummer
+
+- type: loadout
+  id: ClothingNeckMantleWhiteCE
+  equipment:
+    neck: ClothingNeckMantleWhiteCE

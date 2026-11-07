@@ -116,6 +116,7 @@
     # </Trauma>
     # DO NOT ADD MORE, USE UNIFORM DYING
   contrabandInventory:
+    ClothingUniformJumpsuitJacket: 1 # Nebula edit
     ClothingMaskNeckGaiter: 2
     # <Trauma>
     ClothingUniformJumpsuitTacticool: 2 # was 1

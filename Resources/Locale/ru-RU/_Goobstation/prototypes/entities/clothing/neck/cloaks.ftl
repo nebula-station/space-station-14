@@ -10,3 +10,5 @@ ent-ClothingNeckCloakSanabi = плащ генерала-бригадира
     .desc = Потрёпанный, но внушительный плащ, который носят элитные воины.
 ent-ClothingNeckCloakVetCap = плащ капитана-ветерана
     .desc = Плащ с аурой капитана.
+ent-ClothingNeckCloakOuterCommand = плащ офицера ОПЗ
+    .desc = Стильный пурпурный плащ с эмблемой ОПЗ.

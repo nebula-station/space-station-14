@@ -1,0 +1,50 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckEnsembleTrans
+  name: trans ensemble
+  description: Worn by high ranking vampires of the transylvanian society of vampires.
+  components:
+  - type: Item
+    size: Small
+    heldPrefix: all
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Neck/Ensembles/trans.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Neck/Ensembles/trans.rsi
+    equippedPrefix: all
+    slots:
+    - Neck
+  - type: ItemSwitch
+    state: all
+    showLabel: true
+    states:
+      all: !type:ItemSwitchState
+        verb: all
+        sprite:
+          sprite: _Goobstation/Clothing/Neck/Ensembles/trans.rsi
+          state: icon
+      cloak: !type:ItemSwitchState
+        verb: cloak
+        sprite:
+          sprite: _Goobstation/Clothing/Neck/Ensembles/trans.rsi
+          state: cloak-icon
+      cloakJewelry: !type:ItemSwitchState
+        verb: cloak&jewelry
+        sprite:
+          sprite: _Goobstation/Clothing/Neck/Ensembles/trans.rsi
+          state: cloak-icon
+      cloakSash: !type:ItemSwitchState
+        verb: cloak&sash
+        sprite:
+          sprite: _Goobstation/Clothing/Neck/Ensembles/trans.rsi
+          state: cloakSash-icon
+      cloakSashL: !type:ItemSwitchState
+        verb: altcloak&mantle
+        sprite:
+          sprite: _Goobstation/Clothing/Neck/Ensembles/trans.rsi
+          state: cloakSashL-icon

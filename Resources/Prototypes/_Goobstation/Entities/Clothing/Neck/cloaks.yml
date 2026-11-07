@@ -84,3 +84,14 @@
         sprite:
           sprite: _Goobstation/Clothing/Neck/Cloaks/Veterancap.rsi
           state: icon
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCommandContraband]
+  id: ClothingNeckCloakOuterCommand
+  name: outer command cloak
+  description: A stylish purple cloak with Terra-Gov insignia.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Neck/Cloaks/outcommcloak.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Neck/Cloaks/outcommcloak.rsi
