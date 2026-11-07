@@ -88,6 +88,7 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] DoNotMapWhitelist =
         {
             // <Trauma>
+            "/Maps/_Nebula/Current/**", // Nebula edit
             "/Maps/_Goobstation/Shuttles/consul.yml",
             "/Maps/_Trauma/centcomm.yml",
             // </Trauma>
