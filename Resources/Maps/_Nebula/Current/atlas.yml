@@ -24768,7 +24768,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24783,7 +24783,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24798,7 +24798,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24813,7 +24813,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24833,7 +24833,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24858,7 +24858,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24873,7 +24873,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24888,7 +24888,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24903,7 +24903,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24918,7 +24918,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24933,7 +24933,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24948,7 +24948,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents:
@@ -24964,7 +24964,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24979,7 +24979,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -24999,7 +24999,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
@@ -25014,7 +25014,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []

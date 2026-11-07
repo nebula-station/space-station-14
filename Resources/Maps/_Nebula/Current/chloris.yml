@@ -129446,7 +129446,7 @@ entities:
       parent: 2
     - type: ContainerContainer
       containers:
-        disposals: !type:Container
+        DisposalUnitComponent: !type:Container
           showEnts: False
           occludes: True
           ents:
