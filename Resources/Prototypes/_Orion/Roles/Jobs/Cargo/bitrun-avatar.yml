@@ -7,4 +7,3 @@
   startingGear: CargoTechGear # TODO
   icon: "JobIconBitrunAvatar"
   supervisors: job-supervisors-qm
-  canBeAntag: false

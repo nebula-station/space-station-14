@@ -128,3 +128,13 @@ bitrunning-ui-domain-cost = § { $cost }
 bitrunning-ui-domain-cost-tooltip = Required server points to start this domain.
 
 bitrunning-avatar-disconnect-blocked = Neural link is unstable after recent damage. Disconnect available in { $seconds }s.
+
+job-name-bitrunner = Bitrunner
+job-description-bitrunner = Run virtual domains, gather points, and keep the bitrunning network stable.
+job-name-bitrun-avatar = Bitrun Avatar
+job-description-bitrun-avatar = A projected operator body used by a bitrunner inside virtual domains.
+ghost-role-information-skeleton-bartender-name = Skeleton Bartender
+ghost-role-information-skeleton-bartender-description = Keep the beach bar running, serve drinks, and make sure guests have a good time.
+ghost-role-information-skeleton-pirate-bitrunning-name = Skeleton Pirate
+ghost-role-information-skeleton-pirate-bitrunning-description = You are a pirate hostile to bitrunners. Raid them and prevent them from safely finishing their run.
+id-card-access-level-bitrun = Bitrunning
