@@ -273,7 +273,11 @@ public sealed partial class SurveillanceCameraSystem : SharedSurveillanceCameraS
             return;
         }
 
-        _viewSubscriberSystem.AddViewSubscriber(camera, actor.PlayerSession);
+        // Nebula start
+        var subscribeTarget = ResolveSubscribeTarget(camera);
+        _viewSubscriberSystem.AddViewSubscriber(subscribeTarget, actor.PlayerSession);
+        component.ViewerTargets[player] = subscribeTarget;
+        // Nebula end
 
         component.ActivePvsViewers.Add(player);
 
@@ -335,8 +339,9 @@ public sealed partial class SurveillanceCameraSystem : SharedSurveillanceCameraS
             return;
 
         if (Resolve(player, ref actor))
-            _viewSubscriberSystem.RemoveViewSubscriber(camera, actor.PlayerSession);
+            _viewSubscriberSystem.RemoveViewSubscriber(component.ViewerTargets.GetValueOrDefault(player, camera), actor.PlayerSession); // Nebula edit
 
+        component.ViewerTargets.Remove(player); // Nebula edit
         component.ActivePvsViewers.Remove(player);
 
         if (monitor != null)
