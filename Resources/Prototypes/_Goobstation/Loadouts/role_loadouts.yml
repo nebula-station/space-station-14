@@ -21,6 +21,11 @@
   - NanotrasenRepresentativeEnvirosuit
   - NanotrasenRepresentativeEnvirogloves
   - ExclusiveItems
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: RoleSurvivalNukieHonkops
@@ -28,6 +33,11 @@
   - SurvivalSyndicate
   - GroupHonkopsMask
   - GroupPocketTankDouble
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobRoboticist
@@ -48,6 +58,11 @@
   - RoboticistEnvirohelm
   - RoboticistEnvirosuit
   - RoboticistEnvirogloves
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobBrigmedic
@@ -67,6 +82,11 @@
   - BrigmedicEnvirosuit
   - BrigmedicEnvirogloves
   - ExclusiveItems
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobRadioHost
@@ -83,6 +103,11 @@
   - ServiceWorkerEnvirosuit
   - ServiceWorkerEnvirogloves
   - ExclusiveItems
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # gives plasmaman a plasma breathing tank
 # other species get nothing
@@ -90,6 +115,11 @@
   id: RoleSurvivalPlasmaTank
   groups:
   - GroupEVATankPlasma
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # Event-restricted roles
 
@@ -99,6 +129,11 @@
   - ClownBackpack
   - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 # Nebula start
 # - type: roleLoadout
@@ -116,6 +151,11 @@
   - CommonBackpack
   - Survival
   - GroupSpeciesBreathTool
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end
 
 - type: roleLoadout
   id: JobVirologist
@@ -136,3 +176,8 @@
   - VirologyEnvirosuit
   - VirologyEnvirogloves
   - ExclusiveItems
+  # Nebula start
+  - Undershirt
+  - Underwear
+  - Socks
+  # Nebula end

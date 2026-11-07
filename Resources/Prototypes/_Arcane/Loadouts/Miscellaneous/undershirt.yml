@@ -1,0 +1,44 @@
+- type: loadout
+  id: WarmBra
+  equipment:
+    underweart: ClothingUndershirtWarmBra
+
+- type: loadout
+  id: CowSwimsuit
+  equipment:
+    underweart: ClothingUndershirtCowSwimsuit
+
+- type: loadout
+  id: BraBeer
+  equipment:
+    underweart: ClothingBraBeer
+
+- type: loadout
+  id: BraDriada
+  equipment:
+    underweart: ClothingBraDriada
+
+- type: loadout
+  id: BraEroticPurple
+  equipment:
+    underweart: ClothingBraEroticPurple
+
+- type: loadout
+  id: BraMedusa
+  equipment:
+    underweart: ClothingBraMedusa
+
+- type: loadout
+  id: BraLeafs
+  equipment:
+    underweart: ClothingBraLeafs
+
+- type: loadout
+  id: BraPinkFancy
+  equipment:
+    underweart: ClothingBraPinkFancy
+
+- type: loadout
+  id: BraRed
+  equipment:
+    underweart: ClothingBraRed
