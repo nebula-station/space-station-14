@@ -43,7 +43,10 @@ public sealed partial class DeployableBarrierSystem : EntitySystem
 
         if (isDeployed && transform.GridUid != null)
         {
-            _transform.AnchorEntity(uid, transform);
+            // Nebula start
+            if (!transform.Anchored)
+                _transform.AnchorEntity(uid, transform);
+            // Nebula end
             if (fixture != null)
                 _physics.SetHard(uid, fixture, true);
         }
