@@ -1,0 +1,4 @@
+- files: ["terminal_alert.ogg", "terminal_insert_disc.ogg", "terminal_off.ogg", "terminal_processing.ogg", "terminal_success.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from ArcaneSS14 (Bitrunning port)"
+  source: "https://github.com/ArcaneSS14/arcane/commit/7756616166dd5b45586da6a75a19f0aee3e3f244"
