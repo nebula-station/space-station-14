@@ -1,0 +1,33 @@
+- type: entity
+  abstract: true
+  id: RMCPropVehicleBase
+  components:
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    fixedRotation: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,1.4,0.5"
+        density: 190
+        layer:
+        - MobMask
+  - type: Sprite
+    offset: 0.5, 0.5
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Clickable
+  - type: InteractionOutline

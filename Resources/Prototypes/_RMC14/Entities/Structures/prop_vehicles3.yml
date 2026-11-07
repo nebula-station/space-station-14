@@ -1,0 +1,27 @@
+- type: entity
+  parent: RMCPropVehicleBase
+  id: RMCPropVehicleLargeBase
+  abstract: true
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,1.6,0.5"
+        density: 190
+        layer:
+        - MobMask
+  - type: Sprite
+    sprite: _RMC14/Structures/Vehicles/vehicles3.rsi
+    offset: 1.5, 0.5
+
+- type: entity
+  parent: RMCPropVehicleLargeBase
+  id: RMCPropVehicleBoxVanRedF
+  name: box van
+  description: It's locked and seems to be broken down, forget driving this.
+  suffix: Flipped
+  components:
+  - type: Sprite
+    state: box_van_red_f
