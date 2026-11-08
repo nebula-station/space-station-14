@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+- type: entity
+  parent: BaseItem
+  id: ArmTentacleChangeling
+  name: tentacle arm
+  description: It wiggles and pulses!
+  suffix: Unremoveable
+  components:
+  - type: Sprite
+    sprite: _Nebula/Changeling/arm_tentacle.rsi
+    state: icon
+  - type: Item
+    size: Ginormous
+    sprite: _Nebula/Changeling/arm_tentacle.rsi
+  - type: Unremoveable
+  - type: Tag
+    tags:
+    - ErpArmTentacle

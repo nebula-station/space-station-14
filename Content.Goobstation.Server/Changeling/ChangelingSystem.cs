@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Shared._Nebula.Changeling; // Nebula edit
 using System.Linq;
 using Content.Goobstation.Common.Actions;
 using Content.Goobstation.Common.Body;
@@ -428,6 +429,13 @@ public sealed partial class ChangelingSystem : SharedChangelingSystem
             return false;
         }
 
+        // Nebula edit start
+        var attempt = new ChangelingStingAttemptEvent(target, action.Action.Owner);
+        RaiseLocalEvent(uid, ref attempt);
+        if (attempt.Cancelled)
+            return false;
+        // Nebula edit end
+
         if (!overrideMessage)
             Popup.PopupEntity(Loc.GetString("changeling-sting", ("target", Identity.Entity(target, EntityManager))), uid, uid);
         return true;
@@ -699,14 +707,8 @@ public sealed partial class ChangelingSystem : SharedChangelingSystem
         if (!ProtoMan.TryIndex(ent.Comp.EvolutionsProto, out var evoProto))
             return;
 
-        foreach (var startingComp in evoProto.Components)
-        {
-            var startCompType = startingComp.Value.Component.GetType();
-            var startComp = Factory.GetComponent(startCompType);
-
-            if (!HasComp(ent, startCompType)) // don't overwrite the starting components if you already have them (somehow)
-                AddComp(ent, startComp, true);
-        }
+        // Nebula edit
+        EntityManager.AddComponents(ent, evoProto.Components, removeExisting: false);
 
         ent.Comp.EvolutionsAssigned = true;
     }

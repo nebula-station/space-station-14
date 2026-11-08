@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+- type: entity
+  abstract: true
+  parent: BaseChangelingAction
+  id: BaseErpChangelingSting
+  components:
+  - type: Action
+    checkCanInteract: false
+  - type: Sprite
+    sprite: _Nebula/Changeling/erp_abilities.rsi
+  - type: TargetAction
+    interactOnMiss: false
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - Body
+    canTargetSelf: false
+    event: !type:StingReagentEvent
+  - type: ChangelingAction
+    chemicalCost: 15
+    useInLesserForm: true
+  - type: ErpChangelingSting
+
+- type: entity
+  parent: BaseErpChangelingSting
+  id: ActionStingCrocin
+  name: Crocin Sting
+  description: Silently sting your target with crocin, making them aroused. Costs 15 chemicals.
+  components:
+  - type: Sprite
+    layers:
+    - state: sting_crocin
+  - type: ChangelingReagentSting
+    configuration: StingCrocin
+
+- type: entity
+  parent: BaseErpChangelingSting
+  id: ActionStingHexacrocin
+  name: Hexacrocin Sting
+  description: Silently sting your target with hexacrocin, making them burn with lust. Costs 15 chemicals.
+  components:
+  - type: Sprite
+    layers:
+    - state: sting_hexacrocin
+  - type: ChangelingReagentSting
+    configuration: StingHexacrocin
+
+- type: entity
+  parent: BaseErpChangelingSting
+  id: ActionStingPantyDropper
+  name: Panty Dropper Sting
+  description: Silently sting your target with liquid panty dropper, making them aroused and naked. Costs 15 chemicals.
+  components:
+  - type: Sprite
+    layers:
+    - state: sting_panty_dropper
+  - type: ChangelingReagentSting
+    configuration: StingPantyDropper
+
+- type: entity
+  parent: BaseChangelingAction
+  id: ActionToggleArmTentacle
+  name: Toggle Arm Tentacle
+  description: Reform one of your arms into a pleasing tentacle. Retract on secondary use. Costs no chemicals.
+  components:
+  - type: Action
+    useDelay: 2
+  - type: Sprite
+    sprite: _Nebula/Changeling/erp_abilities.rsi
+    layers:
+    - state: arm_tentacle
+  - type: InstantAction
+    event: !type:LingToggleItemEvent
+      item: ArmTentacleChangeling

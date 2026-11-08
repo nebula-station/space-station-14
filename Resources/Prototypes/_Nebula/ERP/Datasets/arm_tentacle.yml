@@ -1,0 +1,63 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: localizedDataset
+  id: ErpTentaclePussyMessages
+  values:
+    prefix: erp-interaction-tentacle-pussy-
+    count: 3
+
+- type: localizedDataset
+  id: ErpTentaclePussySelfMessages
+  values:
+    prefix: erp-interaction-tentacle-pussy-self-
+    count: 3
+
+- type: localizedDataset
+  id: ErpTentaclePenisMessages
+  values:
+    prefix: erp-interaction-tentacle-penis-
+    count: 3
+
+- type: localizedDataset
+  id: ErpTentaclePenisSelfMessages
+  values:
+    prefix: erp-interaction-tentacle-penis-self-
+    count: 3
+
+- type: localizedDataset
+  id: ErpTentacleAnusMessages
+  values:
+    prefix: erp-interaction-tentacle-anus-
+    count: 3
+
+- type: localizedDataset
+  id: ErpTentacleAnusSelfMessages
+  values:
+    prefix: erp-interaction-tentacle-anus-self-
+    count: 3
+
+- type: localizedDataset
+  id: ErpTentacleChestMessages
+  values:
+    prefix: erp-interaction-tentacle-chest-
+    count: 3
+
+- type: localizedDataset
+  id: ErpTentacleChestSelfMessages
+  values:
+    prefix: erp-interaction-tentacle-chest-self-
+    count: 3
+
+- type: localizedDataset
+  id: ErpTentacleMouthMessages
+  values:
+    prefix: erp-interaction-tentacle-mouth-
+    count: 3
+
+- type: localizedDataset
+  id: ErpTentacleMouthSelfMessages
+  values:
+    prefix: erp-interaction-tentacle-mouth-self-
+    count: 3
