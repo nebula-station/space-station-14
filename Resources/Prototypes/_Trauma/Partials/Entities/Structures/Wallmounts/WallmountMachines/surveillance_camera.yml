@@ -4,8 +4,10 @@
   abstract: true
   id: SurveillanceCameraBase
   components:
+  # Nebula start
   - type: Sprite
-    offset: 0, 0
+    offset: 0, -0.5
+  # Nebula end
   - type: ContainerFill
     containers:
       board: [ CameraElectronics ]

@@ -25,24 +25,38 @@
       input: PlumbingDispenser
       output: PlumbingDispenser
   # </Trauma>
+  # Nebula start
   - type: Sprite
-    sprite: Structures/Machines/mixer.rsi
+    sprite: _Arcane/Structures/Machines/mixer.rsi
     snapCardinals: true
     layers:
     - state: mixer_empty
     - state: mixer_screens
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+    - state: mixer_screens_loaded
+      shader: unshaded
+      map: ["mixer_screens_loaded"]
+      visible: false
+    - state: mixer_empty_screen
+      map: ["mixer_empty_screen"]
   - type: Icon
-    sprite: Structures/Machines/mixer.rsi
+    sprite: _Arcane/Structures/Machines/mixer.rsi
     state: mixer_empty
   - type: ItemMapper
+    sprite: _Arcane/Structures/Machines/mixer.rsi
     containerWhitelist: [beakerSlot]
     mapLayers:
       mixer_loaded:
         whitelist:
           components:
           - FitsInDispenser
+      mixer_screens_loaded:
+        whitelist:
+          components:
+          - FitsInDispenser
+  # Nebula end
   - type: ChemMaster
     pillDosageLimit: 20
   - type: Physics
@@ -76,12 +90,17 @@
   - type: ApcPowerReceiver
     powerLoad: 250
   - type: Appearance
+  # Nebula start
   - type: GenericVisualizer
     visuals:
       enum.PowerDeviceVisuals.Powered:
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
+        mixer_empty_screen:
+          True: { visible: false }
+          False: { visible: true }
+  # Nebula end
   # Machine / Construction stuff
   - type: WiresPanel
   - type: Machine

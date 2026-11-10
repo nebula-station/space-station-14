@@ -21,10 +21,10 @@
       components:
         - FingerprintMask
   - type: Sprite
-    sprite: _Orion/Objects/Specific/Medical/firstaidkits.rsi
+    sprite: _Arcane/Objects/Specific/Medical/firstaidkits.rsi # Nebula edit
     state: surgerykit
   - type: Item
-    sprite: _Orion/Objects/Specific/Medical/firstaidkits.rsi
+    sprite: _Arcane/Objects/Specific/Medical/firstaidkits.rsi # Nebula edit
     heldPrefix: surgerykit
     shape:
     - 0,0,3,2

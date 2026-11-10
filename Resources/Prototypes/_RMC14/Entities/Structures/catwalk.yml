@@ -6,14 +6,16 @@
     mode: SnapgridCenter
   components:
   - type: Clickable
+  # Nebula start
   - type: Sprite
-    sprite: _RMC14/Structures/catwalk.rsi
+    sprite: _Arcane/RMC14/Structures/catwalk.rsi
     drawdepth: FloorTiles
     state: catwalk
     noRot: false
   - type: Icon
-    sprite: _RMC14/Structures/catwalk.rsi
+    sprite: _Arcane/RMC14/Structures/catwalk.rsi
     state: catwalk
+  # Nebula end
   - type: Transform
     anchored: true
   - type: FootstepModifier

@@ -8,8 +8,11 @@
   components:
   - type: Icon
     sprite: _Lavaland/Structures/Storage/Crates/necropolechest.rsi
+  # Nebula start
   - type: Sprite
     sprite: _Lavaland/Structures/Storage/Crates/necropolechest.rsi
+    offset: 0, 0
+  # Nebula end
 
 - type: entity
   parent: LavalandCrateNecropolis

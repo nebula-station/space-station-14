@@ -71,10 +71,12 @@
   - type: SpriteFade
   - type: Transform
     anchored: true
+  # Nebula start
   - type: Sprite
     noRot: true
-    sprite: _RMC14/Structures/overhead_signs.rsi
+    sprite: _Arcane/RMC14/Structures/overhead_neon_signs.rsi
     offset: 0.25,0.5
     drawdepth: Overdoors
+  # Nebula end
   - type: Anchorable
   - type: Clickable

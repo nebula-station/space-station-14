@@ -154,12 +154,21 @@
   id: MobAdultSlimesBlue
   parent: MobAdultSlimes
   components:
+  # Nebula start
   - type: DamageStateVisuals
     states:
       Alive:
         Base: blue_adult_slime
+        BaseUnshaded: aslime-mischievous
       Dead:
         Base: blue_adult_slime_dead
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: blue_adult_slime
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: aslime-mischievous
+  # Nebula end
 
 - type: entity
   name: blue slime
@@ -176,22 +185,42 @@
       mindRoles:
       - MindRoleGhostRoleTeamAntagonist
       raffle: null # Trauma - removed mob raffle timer
+    # Nebula start
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: blue_adult_slime
+      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+        state: aslime-angry
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: blue_adult_slime
+          BaseUnshaded: aslime-angry
+        Dead:
+          Base: blue_adult_slime_dead
+    # Nebula end
 
 - type: entity
   name: green slime
   parent: MobAdultSlimes
   id: MobAdultSlimesGreen
   components:
+    # Nebula start
     - type: Sprite
       layers:
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: green_adult_slime
+      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+        state: aslime-mischievous
     - type: DamageStateVisuals
       states:
         Alive:
           Base: green_adult_slime
+          BaseUnshaded: aslime-mischievous
         Dead:
           Base: green_adult_slime_dead
+    # Nebula end
     - type: MeleeWeapon
       damage:
         types:
@@ -215,22 +244,42 @@
       mindRoles:
       - MindRoleGhostRoleTeamAntagonist
       raffle: null # Trauma - removed mob raffle timer
+    # Nebula start
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: green_adult_slime
+      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+        state: aslime-angry
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: green_adult_slime
+          BaseUnshaded: aslime-angry
+        Dead:
+          Base: green_adult_slime_dead
+    # Nebula end
 
 - type: entity
   name: yellow slime
   parent: MobAdultSlimes
   id: MobAdultSlimesYellow
   components:
+    # Nebula start
     - type: Sprite
       layers:
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: yellow_adult_slime
+      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+        state: aslime-mischievous
     - type: DamageStateVisuals
       states:
         Alive:
           Base: yellow_adult_slime
+          BaseUnshaded: aslime-mischievous
         Dead:
           Base: yellow_adult_slime_dead
+    # Nebula end
     - type: MeleeWeapon
       damage:
         types:
@@ -253,3 +302,18 @@
       mindRoles:
       - MindRoleGhostRoleTeamAntagonist
       raffle: null # Trauma - removed mob raffle timer
+    # Nebula start
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: yellow_adult_slime
+      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+        state: aslime-angry
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: yellow_adult_slime
+          BaseUnshaded: aslime-angry
+        Dead:
+          Base: yellow_adult_slime_dead
+    # Nebula end

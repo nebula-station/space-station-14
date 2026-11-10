@@ -7,7 +7,7 @@
   - type: Sprite
     sprite: Objects/Specific/Medical/syndihandheldcrewmonitor.rsi
     layers:
-    - state: syndiscanner
+    - state: scanner
     - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
       visible: false
   - type: Item

@@ -15,7 +15,7 @@
   name: plastic tile
   components:
   - type: Sprite
-    state: steel # no plastic tile item sprites
+    state: steel-plastic # Nebula edit
   - type: Item
     heldPrefix: steel
   - type: FloorTile

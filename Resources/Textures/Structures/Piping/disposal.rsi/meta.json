@@ -5,7 +5,7 @@
         "y": 32
     },
     "license": "CC-BY-SA-3.0",
-    "copyright": "https://github.com/discordia-space/CEV-Eris/blob/bbe32606902c90f5290b57d905a3f31b84dc6d7d/icons/obj/pipes/disposal.dmi and modified by DrSmugleaf. Signal router sprites based on normal router modified by deltanedas (github). disposal bins by EmoGarbage404 (github). pipe-x pipe-xf, conpipe-x by K-Dynamic (github). Signaler sprites based on tagger modified by Wolfkey. Mailing unit sprites based on Structures/mailbox.rsi from commit 3281f408eb58c91ceb7b72ea556ba29e4760b9a1 and made by ketufaispikinut.",
+    "copyright": "Sprited by WalterJe and Taken from TauCeti https://github.com/TauCetiStation/TauCetiClassic/pull/12097. Big upgrade by UmbiMax.   Mailing unit sprites based on Structures/mailbox.rsi from commit 3281f408eb58c91ceb7b72ea556ba29e4760b9a1 and made by ketufaispikinut.",
     "states": [
         {
             "name": "condisposal",
@@ -80,18 +80,15 @@
             "directions": 1,
             "delays": [
                 [
-                    0.066,
-                    0.066,
-                    0.066,
-                    0.066,
-                    0.066,
-                    0.066,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
                     0.5,
-                    0.066,
-                    0.066,
-                    0.066,
-                    0.066,
-                    0.066
+                    0.1,
+                    0.1,
+                    0.1
                 ]
             ]
         },
@@ -100,10 +97,13 @@
             "directions": 1,
             "delays": [
                 [
-                    0.15,
-                    0.15,
-                    0.15,
-                    0.30
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.5,
+                    0.1,
+                    0.1
                 ]
             ]
         },
@@ -139,9 +139,9 @@
             "name": "mailover-handle",
             "directions": 1
         },
-	    {
-	        "name": "mailover-handle-off",
-	        "directions": 1
+        {
+            "name": "mailover-handle-off",
+            "directions": 1
         },
         {
             "name": "dispover-ready",

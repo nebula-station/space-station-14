@@ -511,3 +511,15 @@
   - type: Tag
     tags:
     - Strapon
+
+- type: entity
+  parent: ClothingStrapon
+  id: ClothingStraponHuman
+  name: human strapon
+  description: 
+  components:
+  - type: Sprite
+    sprite: _Arcane/ERP/Toys/Strapon/strapon_human.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Arcane/ERP/Toys/Strapon/strapon_human.rsi

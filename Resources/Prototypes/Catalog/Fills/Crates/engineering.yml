@@ -252,6 +252,12 @@
   - type: StorageFill
     contents:
       - id: ClothingBackpackFirefighterTank
+  # Nebula start
+  - type: Icon
+    sprite: _Arcane/Structures/Storage/Crates/atmos.rsi
+  - type: Sprite
+    sprite: _Arcane/Structures/Storage/Crates/atmos.rsi
+  # Nebula end
 
 - type: entity
   parent: CrateEngineering
@@ -264,3 +270,9 @@
       entity_storage:
         id: AirGrenade
         amount: 3
+  # Nebula start
+  - type: Icon
+    sprite: _Arcane/Structures/Storage/Crates/atmos.rsi
+  - type: Sprite
+    sprite: _Arcane/Structures/Storage/Crates/atmos.rsi
+  # Nebula end

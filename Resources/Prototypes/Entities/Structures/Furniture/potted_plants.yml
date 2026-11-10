@@ -20,11 +20,13 @@
         density: 190
         mask:
         - HighImpassable
+  # Nebula start
   - type: Sprite
     drawdepth: Overdoors
-    offset: "0.0,0.3"
+    offset: "0.0,0.25"
     sprite: Structures/Furniture/potted_plants.rsi
     noRot: true
+  # Nebula end
   - type: Speech
     speechVerb: Plant # for pais (In the secret stash)
   - type: SecretStash

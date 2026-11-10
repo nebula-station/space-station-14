@@ -4,12 +4,20 @@
   name: long range fax machine
   description: Bluespace technologies on the application of bureaucracy.
   components:
+  # Nebula start
   - type: Sprite
     sprite: Structures/Machines/fax_machine.rsi
     drawdepth: SmallObjects
     layers:
     - state: icon
-      map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - state: printing
+      visible: false
+      map: ["enum.FaxMachineVisuals.VisualState"]
+    - state: idle
+      visible: false
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  # Nebula end
   - type: Icon
     sprite: Structures/Machines/fax_machine.rsi
     state: icon
@@ -61,16 +69,19 @@
       blacklist:
         components:
           - CargoSlip
+  # Nebula start
   - type: GenericVisualizer
     visuals:
       enum.PowerDeviceVisuals.Powered:
-        enum.FaxMachineVisuals.VisualState:
-          True: { state: idle }
-          False: { state: icon }
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
       enum.FaxMachineVisuals.VisualState:
         enum.FaxMachineVisuals.VisualState:
-          Printing: { state: printing }
-          Normal: {state: idle}
+          Normal: { visible: false }
+          Inserting: { visible: true }
+          Printing: { state: printing, visible: true }
+  # Nebula end
   - type: ItemSlots
   - type: ContainerContainer
     containers:

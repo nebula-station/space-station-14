@@ -38,7 +38,7 @@ public sealed partial class CCVars
     ///     The map to use for the arrivals station.
     /// </summary>
     public static readonly CVarDef<string> ArrivalsMap =
-        CVarDef.Create("shuttle.arrivals_map", "/Maps/_Trauma/Misc/terminal.yml", CVar.SERVERONLY); // Trauma - changed arrivals terminal
+        CVarDef.Create("shuttle.arrivals_map", "/Maps/_Nebula/Misc/terminal.yml", CVar.SERVERONLY); // Nebula edit
 
     /// <summary>
     ///     Cooldown between arrivals departures. This should be longer than the FTL time or it will double cycle.

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from cev-eris at https://github.com/discordia-space/CEV-Eris/commit/740ff31a81313086cf16761f3677cf1e2ab46c93, sprites in hands by @mishutka09",
+  "copyright": "Taken from https://github.com/tgstation/tgstation/commit/7ae5126783d4365d76fb235340058afdf0af2552, sprites in hands by @mishutka09, resprite hands & lid by UmbiMax",
   "size": {
     "x": 32,
     "y": 32
@@ -11,10 +11,16 @@
       "name": "beakerbluespace",
       "delays": [
         [
-          0.1,
-          0.1
+          0.15,
+          0.15,
+          0.15,
+          0.15,
+          0.15
         ]
       ]
+    },
+    {
+      "name": "lid_beakerbluespace"
     },
     {
       "name": "inhand-left",

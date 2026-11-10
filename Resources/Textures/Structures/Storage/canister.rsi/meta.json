@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from https://github.com/ParadiseSS13/Paradise/ with darkblue-1, green-1, green, greenys-1, greenys, water_vapor-1, and water_vapor modified by damoggen. Paper Sprites by Vermidia.",
+    "copyright": "New Canisters by AftrLite(Github). Taken from ImpStation https://github.com/impstation/imp-station-14/commit/667fc33a23eda72bd028d315c2c533876f70f951, inspired by CEV-Eris sprites at https://github.com/discordia-space/CEV-Eris/commit/476e374cea95ff5e8b1603c48342bf700e2cd7af. Paper label sprites by Entings (GitHub) brown-1, healium-1, purple-1, purple, mask-purple, brown, mask-brown, healium, mask-healium: Frezon canister modified from tgstation, the rest are taken from tgstation at commit https://github.com/tgstation/tgstation/commit/f8581a636acfc1517611a680b7711a74fc7ef335. Paper Sprites by Vermidia. brown-1, healium-1, purple-1: Taken from https://github.com/ParadiseSS13/Paradise/ with darkblue-1, green-1, green, greenys-1, greenys, water_vapor-1, and water_vapor modified by damoggen. Paper Sprites by Vermidia.",
     "size": {
         "x": 32,
         "y": 32
@@ -38,8 +38,12 @@
             "name": "can-o0",
             "delays": [
                 [
-                    0.2,
-                    0.2
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ]
             ]
         },

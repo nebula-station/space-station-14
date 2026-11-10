@@ -130,3 +130,28 @@
               path: /Audio/Effects/break_stone.ogg
               params:
                 volume: -2
+
+- type: entity
+  parent: ADTmarblelady
+  id: ADTBirdMarble
+  name: marble bird
+  description: marble bird
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Decoration/marble_structures/marble_bird.rsi
+    state: marble_bird
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/break_stone.ogg
+              params:
+                volume: -2

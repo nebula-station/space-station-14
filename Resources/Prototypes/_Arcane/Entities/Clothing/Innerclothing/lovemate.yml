@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitBDSMress
+  name: BDSM dress
+  description: Lord have mercy.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/bdsm_dress.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/bdsm_dress.rsi

@@ -32,3 +32,15 @@
     sprite: _Arcane/Clothing/Head/Flowers/white_lily.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/Head/Flowers/white_lily.rsi
+
+- type: entity
+  parent: BaseItem
+  id: BouquetWhiteLily
+  name: white lily bouquet
+  description: An elegant bouquet of white lilies.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Flowers/white_lily.rsi
+    state: bouquet
+  - type: Item
+    size: Small

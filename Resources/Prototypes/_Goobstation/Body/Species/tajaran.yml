@@ -243,11 +243,13 @@
   id: OrganTajaranExternal
   abstract: true
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    sprite: _Arcane/Mobs/Species/Tajaran/parts.rsi
   - type: VisualOrgan
     data:
-      sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+      sprite: _Arcane/Mobs/Species/Tajaran/parts.rsi
+  # Nebula end
   - type: VisualOrganMarkings
     markingData:
       group: Tajaran

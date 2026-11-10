@@ -220,11 +220,13 @@
   id: OrganShadowkinExternal
   abstract: true
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/parts.rsi
+    sprite: _Arcane/Mobs/Species/Shadowkin/parts.rsi
   - type: VisualOrgan
     data:
-      sprite: _EinsteinEngines/Mobs/Species/Shadowkin/parts.rsi
+      sprite: _Arcane/Mobs/Species/Shadowkin/parts.rsi
+  # Nebula end
   - type: VisualOrganMarkings
     markingData:
       group: Shadowkin
@@ -249,9 +251,11 @@
   parent: [ OrganBaseTail, OrganShadowkinExternal ]
   id: OrganShadowkinTail
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Customization/Shadowkin/tails64x32.rsi
+    sprite: _Arcane/Mobs/Customization/Shadowkin/tails64x32.rsi
     state: shadowkin
+  # Nebula end
   - type: VisualOrgan
     data:
       sprite: _Trauma/empty.rsi
@@ -301,37 +305,42 @@
   parent: [ OrganBaseBrain, OrganHumanInternal ]
   id: OrganShadowkinBrain
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
+    sprite: _Arcane/Mobs/Species/Shadowkin/organs.rsi
     layers:
     - state: brain
+  # Nebula end
 
 - type: entity
   parent: [ OrganBaseTongue, OrganHumanInternal ]
   id: OrganShadowkinTongue
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    layers:
-    - state: tongue
+    sprite: _Arcane/Mobs/Species/Shadowkin/organs.rsi
+    state: tongue
+  # Nebula end
 
 - type: entity
   parent: [ OrganBaseAppendix, OrganHumanInternal ]
   id: OrganShadowkinAppendix
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    layers:
-    - state: appendix
+    sprite: _Arcane/Mobs/Species/Shadowkin/organs.rsi
+    state: appendix
+  # Nebula end
 
 - type: entity
   parent: [ OrganBaseEars, OrganHumanInternal ]
   id: OrganShadowkinEars
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    layers:
-    - state: ears
+    sprite: _Arcane/Mobs/Species/Shadowkin/organs.rsi
+    state: ears
+  # Nebula end
 
 - type: entity
   parent: [ OrganBaseLungs, OrganHumanInternal ]
@@ -348,10 +357,12 @@
   parent: [ OrganBaseHeart, OrganHumanInternal ]
   id: OrganShadowkinHeart
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
+    sprite: _Arcane/Mobs/Species/Shadowkin/organs.rsi
     layers:
     - state: heart
+  # Nebula end
   - type: Metabolizer
     metabolizerTypes: [ Shadowkin ]
 
@@ -359,10 +370,11 @@
   parent: [ OrganBaseStomach, OrganHumanInternal ]
   id: OrganShadowkinStomach
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    layers:
-    - state: stomach
+    sprite: _Arcane/Mobs/Species/Shadowkin/organs.rsi
+    state: stomach
+  # Nebula end
   - type: Metabolizer
     metabolizerTypes: [ Shadowkin ]
 
@@ -370,10 +382,11 @@
   parent: [ OrganBaseLiver, OrganHumanInternal ]
   id: OrganShadowkinLiver
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
-    layers:
-    - state: liver
+    sprite: _Arcane/Mobs/Species/Shadowkin/organs.rsi
+    state: liver
+  # Nebula end
   - type: Metabolizer
     metabolizerTypes: [ Shadowkin ]
 
@@ -381,10 +394,12 @@
   parent: [ OrganBaseKidneys, OrganHumanInternal ]
   id: OrganShadowkinKidneys
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
+    sprite: _Arcane/Mobs/Species/Shadowkin/organs.rsi
     layers:
     - state: kidneys
+  # Nebula end
   - type: Metabolizer
     metabolizerTypes: [ Shadowkin ]
 
@@ -392,14 +407,16 @@
   parent: [ OrganBaseEyes, OrganHumanInternal, OrganShadowkinExternal ]
   id: OrganShadowkinEyes
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _EinsteinEngines/Mobs/Species/Shadowkin/organs.rsi
+    sprite: _Arcane/Mobs/Species/Shadowkin/organs.rsi
     layers:
     - state: eyes
   - type: VisualOrgan
     data:
-      sprite: _EinsteinEngines/Mobs/Species/Shadowkin/parts.rsi
-      state: eyes
+      sprite: Mobs/Customization/eyes.rsi
+      state: shadowkin
+  # Nebula end
   - type: OrganComponents
     onAdd:
     - type: NightVision

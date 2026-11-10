@@ -1,0 +1,83 @@
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoBorg
+  name: stack-exo-borg-floor
+  spawn: FloorTileItemExoBorg
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoCornerNE
+  name: stack-exo-corner-ne-floor
+  spawn: FloorTileItemExoCornerNE
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoCornerNW
+  name: stack-exo-corner-nw-floor
+  spawn: FloorTileItemExoCornerNW
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoCornerSE
+  name: stack-exo-corner-se-floor
+  spawn: FloorTileItemExoCornerSE
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoCornerSW
+  name: stack-exo-corner-sw-floor
+  spawn: FloorTileItemExoCornerSW
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoHorizontal
+  name: stack-exo-horizontal-floor
+  spawn: FloorTileItemExoHorizontal
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoHull
+  name: stack-exo-hull-floor
+  spawn: FloorTileItemExoHull
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoTechmaint
+  name: stack-exo-techmaint-floor
+  spawn: FloorTileItemExoTechmaint
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoVertical
+  name: stack-exo-vertical-floor
+  spawn: FloorTileItemExoVertical
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileExoViscera
+  name: stack-exo-viscera-floor
+  spawn: FloorTileItemExoViscera
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileAstroIronsand
+  name: stack-astro-ironsand-floor
+  spawn: FloorTileItemAstroIronsand
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileAstroIronsandBorderless
+  name: stack-astro-ironsand-floor-borderless
+  spawn: FloorTileItemAstroIronsandBorderless
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileIronsandConcrete
+  name: stack-ironsand-concrete-tile
+  spawn: FloorTileItemIronsandConcrete
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileIronsandConcreteSmooth
+  name: stack-ironsand-concrete-smooth
+  spawn: FloorTileItemIronsandConcreteSmooth

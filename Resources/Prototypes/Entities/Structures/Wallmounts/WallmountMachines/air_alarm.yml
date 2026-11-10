@@ -74,6 +74,7 @@
       board: !type:Container
   - type: Appearance
   - type: WiresVisuals
+  # Nebula start
   - type: Sprite
     sprite: Structures/Wallmounts/air_monitors.rsi
     layers:
@@ -81,8 +82,10 @@
       map: ["airAlarmBase"]
     - state: alarm0
       map: ["airAlarmState"] # TODO: fire alarm enum
+      shader: unshaded
     - state: alarmx
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  # Nebula end
   - type: Construction
     graph: AirAlarm
     node: air_alarm

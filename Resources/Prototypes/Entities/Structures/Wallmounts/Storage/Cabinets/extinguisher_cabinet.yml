@@ -4,9 +4,11 @@
   name: extinguisher cabinet
   description: A small wall mounted cabinet designed to hold a fire extinguisher.
   components:
+  # Nebula start
   - type: Sprite
     sprite: _Trauma/Structures/Wallmounts/extinguisher_cabinet.rsi # Trauma
     # snapCardinals: true # Trauma
+    noRot: false
     layers:
     - state: frame
     - state: extinguisher
@@ -14,6 +16,7 @@
       visible: true
     - state: closed
       map: ["enum.OpenableVisuals.Layer"]
+  # Nebula end
   - type: ItemSlots
     slots:
       ItemCabinet:

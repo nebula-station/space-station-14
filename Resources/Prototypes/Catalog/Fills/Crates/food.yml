@@ -13,6 +13,13 @@
         - id: FoodBoxPizzaCotton
         - id: LidSalami
           prob: 0.01
+  # Nebula start
+  - type: Icon
+    sprite: _Orion/Structures/Storage/Crates/kitchen.rsi
+  - type: Sprite
+    sprite: _Orion/Structures/Storage/Crates/kitchen.rsi
+    offset: 0, 0.25
+  # Nebula end
 
 - type: entity
   parent: CratePlastic
@@ -25,6 +32,13 @@
       entity_storage:
         id: BoxMRE
         amount: 6
+  # Nebula start
+  - type: Icon
+    sprite: _Orion/Structures/Storage/Crates/kitchen.rsi
+  - type: Sprite
+    sprite: _Orion/Structures/Storage/Crates/kitchen.rsi
+    offset: 0, 0.25
+  # Nebula end
 
 - type: entity
   parent: CrateFreezer
