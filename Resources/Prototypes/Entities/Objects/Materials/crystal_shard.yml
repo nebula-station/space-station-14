@@ -14,10 +14,13 @@
   - type: Execution
     doAfterDuration: 4.0
   - type: Sprite
+    # Nebula start
     layers:
-      - sprite: _Trauma/Objects/Materials/Shards/crystal.rsi # Trauma
-        state: shard1
-        map: [ "enum.DamageStateVisualLayers.Base" ]
+    - sprite: Objects/Materials/Shards/crystal-shard.rsi
+      state: shard1
+      map:
+      - enum.DamageStateVisualLayers.Base
+    # Nebula end
   - type: RandomSprite
     available:
       - enum.DamageStateVisualLayers.Base:

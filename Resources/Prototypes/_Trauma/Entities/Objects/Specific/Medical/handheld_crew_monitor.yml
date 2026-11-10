@@ -12,6 +12,7 @@
     - state: icon
   - type: Item
     sprite: Objects/Tools/spy_device.rsi
+    heldPrefix: scanner # Nebula edit
   - type: PowerCellDraw
     useCharge: 10
   - type: StaticPrice
@@ -38,9 +39,9 @@
   components:
   - type: Sprite
     layers:
-    - state: syndiscanner
+    - state: scanner # Nebula edit
       sprite: Objects/Specific/Medical/syndihandheldcrewmonitor.rsi
-    - state: screen
+    - state: scanner-light # Nebula edit
       shader: unshaded
       visible: false
       map: [ "enum.PowerDeviceVisualLayers.Powered" ]

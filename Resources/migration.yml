@@ -179,7 +179,7 @@ MachinePowerTransmissionLaserFlatpack: null
 SpawnMobPlantbot: null
 
 # 2026-09-19
-PoweredFloorLight: null
+# PoweredFloorLight: null # Nebula edit
 WallXenoMembrane: ResinMembrane
 WallXenoResin: WallResin
 WallXenoResinThick: WallResin

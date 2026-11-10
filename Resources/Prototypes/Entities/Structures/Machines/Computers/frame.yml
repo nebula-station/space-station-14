@@ -95,7 +95,7 @@
     connectionKey: computer-console
     allowedDirections: East, West
     baseState: broken
-    sprite: _Orion/Structures/Machines/computers.rsi
+    sprite: _Arcane/Structures/Machines/computers.rsi
     states:
       East: computer_l-broken
       West: computer_r-broken

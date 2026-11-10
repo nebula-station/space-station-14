@@ -30,8 +30,11 @@
   components:
   - type: Icon
     sprite: Structures/Storage/Crates/plastic.rsi
+  # Nebula start
   - type: Sprite
     sprite: Structures/Storage/Crates/plastic.rsi
+    offset: 0, 0
+  # Nebula end
   - type: Construction
     graph: CratePlastic
     node: crateplastic
@@ -52,8 +55,11 @@
   components:
   - type: Icon
     sprite: Structures/Storage/Crates/freezer.rsi
+  # Nebula start
   - type: Sprite
     sprite: Structures/Storage/Crates/freezer.rsi
+    offset: 0, 0.25
+  # Nebula end
   - type: AntiRottingContainer
   - type: ExplosionResistance
     damageCoefficient: 0.50
@@ -79,8 +85,11 @@
   components:
   - type: Icon
     sprite: Structures/Storage/Crates/hydroponics.rsi
+  # Nebula start
   - type: Sprite
     sprite: Structures/Storage/Crates/hydroponics.rsi
+    offset: 0, 0.25
+  # Nebula end
   # Nebula start
   - type: Reflect
     reflectProb: 0.2
@@ -96,8 +105,11 @@
   components:
   - type: Icon
     sprite: Structures/Storage/Crates/medical.rsi
+  # Nebula start
   - type: Sprite
     sprite: Structures/Storage/Crates/medical.rsi
+    offset: 0, 0.25
+  # Nebula end
   # Nebula start
   - type: Reflect
     reflectProb: 0.2
@@ -124,8 +136,11 @@
   components:
   - type: Icon
     sprite: Structures/Storage/Crates/o2.rsi
+  # Nebula start
   - type: Sprite
     sprite: Structures/Storage/Crates/o2.rsi
+    offset: 0, 0.25
+  # Nebula end
   # Nebula start
   - type: Reflect
     reflectProb: 0.2
@@ -353,6 +368,10 @@
     sprite: Structures/Storage/Crates/sec_gear.rsi
   - type: AccessReader
     access: [["Armory"]]
+  # Nebula start
+  - type: Icon
+    sprite: Structures/Storage/Crates/sec_gear.rsi
+  # Nebula end
 
 - type: entity
   parent: CrateBaseSecure
@@ -386,6 +405,7 @@
   components:
   - type: EntityStorage
     airtight: false
+  # Nebula start
   - type: Sprite
     sprite: Structures/Storage/Crates/livestock.rsi
     layers:
@@ -396,6 +416,8 @@
       sprite: Structures/Storage/Crates/labels.rsi
       offset: "-0.25,0.625"
       map: ["enum.PaperLabelVisuals.Layer"]
+    offset: 0, 0
+  # Nebula end
   - type: Icon
     sprite: Structures/Storage/Crates/livestock.rsi
     state: base
@@ -445,6 +467,7 @@
   id: CrateRodentCage
   name: hamster cage
   components:
+  # Nebula start
   - type: Sprite
     sprite: Structures/Storage/Crates/cage.rsi
     drawdepth: LargeObjects
@@ -457,6 +480,8 @@
       sprite: Structures/Storage/Crates/labels.rsi
       offset: "0.0,0.125"
       map: ["enum.PaperLabelVisuals.Layer"]
+    offset: 0, 0
+  # Nebula end
   - type: Icon
     sprite: Structures/Storage/Crates/cage.rsi
     state: icon
@@ -508,6 +533,7 @@
   components:
   - type: Sprite
     sprite: Structures/Storage/Crates/lockbox.rsi
+  # Nebula start
   - type: GenericVisualizer
     visuals:
       enum.PaperLabelVisuals.HasLabel:
@@ -524,6 +550,10 @@
         lid_overlay:
           True: { visible: false }
           False: { visible: true }
+        open_overlay:
+          True: { visible: true }
+          False: { visible: false }
+  # Nebula end
   - type: OverrideSell
   - type: Fixtures
     fixtures:
@@ -544,16 +574,19 @@
   parent: CrateBaseLockBox
   name: engineering lock box
   components:
+  # Nebula start
   - type: Sprite
     layers:
     - state: base
-    - state: overlay
-      color: "#ad8c27"
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: overlay-closed
       color: "#ad8c27"
       map: [ lid_overlay ]
+    - state: overlay-open
+      color: "#ad8c27"
+      visible: false
+      map: [open_overlay]
     - state: welded
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
@@ -564,6 +597,7 @@
       sprite: Structures/Storage/Crates/labels.rsi
       offset: "-0.46875,0.03125"
       map: ["enum.PaperLabelVisuals.Layer"]
+  # Nebula end
   - type: OverrideSell
     overrideAccount: Engineering
   - type: AccessReader
@@ -574,16 +608,19 @@
   parent: CrateBaseLockBox
   name: medical lock box
   components:
+  # Nebula start
   - type: Sprite
     layers:
     - state: base
-    - state: overlay
-      color: "#92c7e8"
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: overlay-closed
       color: "#92c7e8"
       map: [ lid_overlay ]
+    - state: overlay-open
+      color: "#92c7e8"
+      visible: false
+      map: [open_overlay]
     - state: welded
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
@@ -594,6 +631,7 @@
       sprite: Structures/Storage/Crates/labels.rsi
       offset: "-0.46875,0.03125"
       map: ["enum.PaperLabelVisuals.Layer"]
+  # Nebula end
   - type: OverrideSell
     overrideAccount: Medical
   - type: AccessReader
@@ -604,16 +642,19 @@
   parent: CrateBaseLockBox
   name: science lock box
   components:
+  # Nebula start
   - type: Sprite
     layers:
     - state: base
-    - state: overlay
-      color: "#ba4bf0"
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: overlay-closed
       color: "#ba4bf0"
       map: [ lid_overlay ]
+    - state: overlay-open
+      color: "#ba4bf0"
+      visible: false
+      map: [open_overlay]
     - state: welded
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
@@ -624,6 +665,7 @@
       sprite: Structures/Storage/Crates/labels.rsi
       offset: "-0.46875,0.03125"
       map: ["enum.PaperLabelVisuals.Layer"]
+  # Nebula end
   - type: OverrideSell
     overrideAccount: Science
   - type: AccessReader
@@ -634,16 +676,19 @@
   parent: CrateBaseLockBox
   name: security lock box
   components:
+  # Nebula start
   - type: Sprite
     layers:
     - state: base
-    - state: overlay
-      color: "#c12d30"
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: overlay-closed
       color: "#c12d30"
       map: [ lid_overlay ]
+    - state: overlay-open
+      color: "#c12d30"
+      visible: false
+      map: [open_overlay]
     - state: welded
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
@@ -654,6 +699,7 @@
       sprite: Structures/Storage/Crates/labels.rsi
       offset: "-0.46875,0.03125"
       map: ["enum.PaperLabelVisuals.Layer"]
+  # Nebula end
   - type: OverrideSell
     overrideAccount: Security
   - type: AccessReader
@@ -664,16 +710,19 @@
   parent: CrateBaseLockBox
   name: service lock box
   components:
+  # Nebula start
   - type: Sprite
     layers:
     - state: base
-    - state: overlay
-      color: "#53b723"
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: overlay-closed
       color: "#53b723"
       map: [ lid_overlay ]
+    - state: overlay-open
+      color: "#53b723"
+      visible: false
+      map: [open_overlay]
     - state: welded
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
@@ -684,6 +733,7 @@
       sprite: Structures/Storage/Crates/labels.rsi
       offset: "-0.46875,0.03125"
       map: ["enum.PaperLabelVisuals.Layer"]
+  # Nebula end
   - type: OverrideSell
     overrideAccount: Service
   - type: AccessReader
@@ -695,6 +745,7 @@
   name: pirate chest
   description: A space pirate chest, not for station lubbers.
   components:
+  # Nebula start
   - type: Sprite
     sprite: Structures/Storage/Crates/piratechest.rsi
     layers:
@@ -709,6 +760,8 @@
       sprite: Structures/Storage/Crates/labels.rsi
       offset: "0.0,-0.09375"
       map: ["enum.PaperLabelVisuals.Layer"]
+    offset: 0, 0
+  # Nebula end
   - type: Icon
     sprite: Structures/Storage/Crates/piratechest.rsi
     state: crate_icon

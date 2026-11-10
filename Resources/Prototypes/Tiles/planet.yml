@@ -12,16 +12,46 @@
   id: FloorPlanetDirt
   parent: BaseFloorPlanet
   name: tiles-dirt-planet-floor
-  sprite: /Textures/Tiles/Planet/dirt.rsi/dirt.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Dirt/dirt.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Dirt/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Dirt/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Dirt/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Dirt/single_edge_SW.png
+    South: /Textures/Tiles/Dirt/double_edge_S.png
+    East: /Textures/Tiles/Dirt/double_edge_E.png
+    North: /Textures/Tiles/Dirt/double_edge_N.png
+    West: /Textures/Tiles/Dirt/double_edge_W.png
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  # Nebula end
+  variants: 5 # Nebula edit
 
 # Desert
 - type: tile
   id: FloorDesert
   parent: BaseFloorPlanet
   name: tiles-desert-floor
-  sprite: /Textures/Tiles/Planet/Desert/desert.png
-  variants: 6
+  # Nebula start
+  sprite: /Textures/Tiles/Desert/desert.png
+  edgeSpritePriority: 2
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Desert/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Desert/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Desert/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Desert/single_edge_SW.png
+    South: /Textures/Tiles/Desert/double_edge_S.png
+    East: /Textures/Tiles/Desert/double_edge_E.png
+    North: /Textures/Tiles/Desert/double_edge_N.png
+    West: /Textures/Tiles/Desert/double_edge_W.png
+  # Nebula end
+  variants: 5 # Nebula edit
 
 - type: tile
   id: FloorLowDesert
@@ -34,18 +64,20 @@
   id: FloorPlanetGrass
   parent: BaseFloorPlanet
   name: tiles-grass-planet-floor
-  sprite: /Textures/Tiles/Planet/Grass/grass.png
-  variants: 4
-  edgeSpritePriority: 1
+  # Nebula start
+  sprite: /Textures/Tiles/Grass/grass.png
+  variants: 6
+  edgeSpritePriority: 5
   edgeSprites:
-    SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/Tiles/Planet/Grass/double_edge.png
+    SouthEast: /Textures/Tiles/Grass/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Grass/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Grass/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Grass/single_edge_SW.png
+    South: /Textures/Tiles/Grass/double_edge_S.png
+    East: /Textures/Tiles/Grass/double_edge_E.png
+    North: /Textures/Tiles/Grass/double_edge_N.png
+    West: /Textures/Tiles/Grass/double_edge_W.png
+  # Nebula end
   baseTurf: FloorPlanetDirt
   footstepSounds:
     collection: FootstepGrass
@@ -55,35 +87,46 @@
   id: FloorBasalt
   name: tiles-basalt-floor
   parent: BaseFloorPlanet
-  sprite: /Textures/Tiles/Planet/basalt.png
+  # Nebula start
+  sprite: /Textures/Tiles/Cave/cave.png
+  edgeSpritePriority: 5
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Cave/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Cave/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Cave/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Cave/single_edge_SW.png
+    South: /Textures/Tiles/Cave/double_edge_S.png
+    East: /Textures/Tiles/Cave/double_edge_E.png
+    North: /Textures/Tiles/Cave/double_edge_N.png
+    West: /Textures/Tiles/Cave/double_edge_W.png
+  # Nebula end
 
 # Snow
 - type: tile
   id: FloorSnow
   parent: BaseFloorPlanet
   name: tiles-snow
-  sprite: /Textures/Tiles/Planet/Snow/snow.png
-  variants: 13
+  # Nebula start
+  sprite: /Textures/Tiles/Snow/snow.png
+  variants: 6
   placementVariants:
-  - 0.8
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0116
-  - 0.0116
-  edgeSpritePriority: 2
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 8
   edgeSprites:
-    South: /Textures/Tiles/Planet/Snow/snow_double_edge_south.png
-    East: /Textures/Tiles/Planet/Snow/snow_double_edge_east.png
-    North: /Textures/Tiles/Planet/Snow/snow_double_edge_north.png
-    West: /Textures/Tiles/Planet/Snow/snow_double_edge_west.png
+    SouthEast: /Textures/Tiles/Snow/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Snow/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Snow/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Snow/single_edge_SW.png
+    South: /Textures/Tiles/Snow/double_edge_S.png
+    East: /Textures/Tiles/Snow/double_edge_E.png
+    North: /Textures/Tiles/Snow/double_edge_N.png
+    West: /Textures/Tiles/Snow/double_edge_W.png
+  # Nebula end
   footstepSounds:
     collection: FootstepSnow
 
@@ -91,7 +134,10 @@
 - type: tile
   id: FloorIce
   name: tiles-ice
-  sprite: /Textures/Tiles/Planet/Snow/ice.png
+  # Nebula start
+  sprite: /Textures/Tiles/Ice/ice.png
+  variants: 4
+  # Nebula end
   isSubfloor: true
   friction: 0.05
   heatCapacity: 10000

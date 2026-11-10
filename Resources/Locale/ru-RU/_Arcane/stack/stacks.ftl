@@ -1,0 +1,14 @@
+stack-astro-ironsand-floor = пол из астро-железного песка
+stack-astro-ironsand-floor-borderless = пол из астро-железного песка без краёв
+stack-exo-borg-floor = механодермальный пол
+stack-exo-corner-ne-floor = экзодермальный угловой пол СВ
+stack-exo-corner-nw-floor = экзодермальный угловой пол СЗ
+stack-exo-corner-se-floor = экзодермальный угловой пол ЮВ
+stack-exo-corner-sw-floor = экзодермальный угловой пол ЮЗ
+stack-exo-horizontal-floor = экзодермальный горизонтальный пол
+stack-exo-hull-floor = экзодермальный пол корпуса
+stack-exo-techmaint-floor = экзодермальный технический пол
+stack-exo-vertical-floor = экзодермальный вертикальный пол
+stack-exo-viscera-floor = экзодермальный висцеральный пол
+stack-ironsand-concrete-smooth = гладкий бетон из железного песка
+stack-ironsand-concrete-tile = бетонная плитка из железного песка

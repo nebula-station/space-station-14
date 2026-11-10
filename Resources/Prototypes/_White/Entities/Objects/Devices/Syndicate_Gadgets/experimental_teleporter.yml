@@ -10,6 +10,10 @@
     sprite: /Textures/_White/Objects/Devices/experimentalsyndicateteleporter.rsi
     layers:
     - state: icon
+    # Nebula start
+    - state: icon-unshaded
+      shader: unshaded
+    # Nebula end
   - type: ExperimentalTeleporter
   - type: LimitedCharges
     maxCharges: 4

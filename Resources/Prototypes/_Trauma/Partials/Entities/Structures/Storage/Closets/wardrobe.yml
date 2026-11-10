@@ -12,12 +12,13 @@
     stateDoorClosed: chapel_door
   - type: AccessReader
     access: [ [ "Chapel" ] ]
+  # Nebula start
   - type: Sprite
     sprite: _Trauma/Structures/Storage/closet.rsi
     layers:
-    - state: generic
+    - state: chapel
       map: ["enum.StorageVisualLayers.Base"]
-    - state: generic_door
+    - state: chapel_door
       map: ["enum.StorageVisualLayers.Door"]
     - state: locked
       map: ["enum.LockVisualLayers.Lock"]
@@ -30,3 +31,7 @@
       sprite: Structures/Storage/closet_labels.rsi
       offset: "-0.065,0"
       map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Icon
+    sprite: _Trauma/Structures/Storage/closet.rsi
+    state: icon
+  # Nebula end

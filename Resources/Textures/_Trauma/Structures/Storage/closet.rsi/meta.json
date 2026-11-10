@@ -1,10 +1,10 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Secure chapel locker edited by Reestock from TG locker textures.",
+    "copyright": "Taken from TGstation, brigmedic locker is a resprited CMO locker, n2 sprites based on fire and emergency sprites, genpop lockers, sci bio locker is a resprited bio viro locker and Evac lockers by PuroSlavKing (GitHub); Arcane chaplain palettes and cross replacing the science locker R, 2026. Native Orion science locker geometry retained.; Previous/local sprites: Secure chapel locker edited by Reestock from TG locker textures.",
     "size": {
         "x": 32,
-        "y": 32
+        "y": 48
     },
     "states": [
         {
@@ -36,6 +36,9 @@
         },
         {
             "name": "locked"
+        },
+        {
+            "name": "icon"
         }
     ]
 }

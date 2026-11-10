@@ -20,7 +20,9 @@
   - type: Construction
     graph: LightFixture
     node: bulbLight
+  # Nebula start
   - type: Sprite
+    offset: 0, 1
     sprite: Structures/Wallmounts/Lighting/strobe_light.rsi
     drawdepth: WallMountedItems
     layers:
@@ -30,6 +32,7 @@
       state: glow
       shader: unshaded
     state: base
+  # Nebula end
   - type: PointLight
     lightMask: ConeDouble
     color: "#FFE4CE"

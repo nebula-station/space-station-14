@@ -35,6 +35,7 @@
   #   pack: EmptyVendingMachineInventory # Nebula edit
   #   offState: off # Nebula edit
   #   normalState: normal-unshaded # Nebula edit
+  # Nebula start
   - type: Sprite
     sprite: _Orion/Structures/Machines/VendingMachines/bitrun.rsi
     noRot: true
@@ -44,8 +45,11 @@
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
       shader: unshaded
+    - state: "normal-unshaded"
+      map: ["enum.VendingMachineVisualLayers.Screen"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  # Nebula end
   - type: PointLight
     color: "#4f8dcf"
     autoRot: true

@@ -1,1 +1,24 @@
-{"version": 1, "license": "CC-BY-SA-3.0","copyright": "human_eyes taken from https://github.com/tgstation/tgstation/blob/8024397cc81c5f47f74cf4279e35728487d0a1a7/icons/mob/human_parts_greyscale.dmi and modified by DrSmugleaf", "size": {"x": 32, "y": 32}, "states": [{"name": "diona", "directions": 4}, {"name": "eyes", "directions": 4}, {"name":"no_eyes"}]}
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "human_eyes taken from https://github.com/tgstation/tgstation/blob/8024397cc81c5f47f74cf4279e35728487d0a1a7/icons/mob/human_parts_greyscale.dmi and modified by DrSmugleaf, shadowkin form https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/commit/5bc3ea02ce03a551c85017f1ddd411315a19a5ca#diff-519788fa2ca74299d1686a44d3ab2098b49ed5ab65d293ec742bead7d49f0b8d",
+    "size": {"x": 32, "y": 32},
+    "states":
+    [
+        {
+        "name": "diona",
+        "directions": 4
+        },
+        {
+            "name": "eyes",
+            "directions": 4
+        },
+        {
+            "name": "shadowkin",
+            "directions": 4},
+
+        {
+            "name":"no_eyes"
+        }
+    ]
+}

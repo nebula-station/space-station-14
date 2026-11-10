@@ -19,12 +19,13 @@
   id: Plating
   parent: BasePlating
   name: tiles-plating
-  sprite: /Textures/_Trauma/Tiles/plating.png # Trauma
+  sprite: /Textures/Tiles/plating.png # Nebula edit
 
 - type: tile
   id: PlatingRCD
   parent: Plating
   name: tiles-rcd-plating
+  sprite: /Textures/Tiles/plating.png # Nebula edit
   baseWhitelist:
     - Space
     - TrainLattice
@@ -44,7 +45,7 @@
   id: FloorHullReinforced
   parent: BasePlating
   name: tiles-hull-reinforced
-  sprite: /Textures/Tiles/hull_reinforced.png
+  sprite: /Textures/Tiles/debug-indestructible.png # Nebula edit
   # <Goob>
   baseTurf: Lattice
   isSubfloor: true
@@ -61,14 +62,16 @@
   id: PlatingDamaged
   parent: BasePlating
   name: tiles-plating
-  sprite: /Textures/_Trauma/Tiles/plating_damaged.png # Trauma
-  variants: 3
+  # Nebula start
+  sprite: /Textures/Tiles/plating-damaged.png
+  variants: 4
+  # Nebula end
 
 - type: tile
   id: PlatingAsteroid
   parent: BasePlating
   name: tiles-asteroid-plating
-  sprite: /Textures/Tiles/Asteroid/asteroid_plating.png
+  sprite: /Textures/Tiles/Asteroid/asteroid-plating.png # Nebula edit
 
 - type: tile
   id: PlatingBrass
@@ -80,7 +83,7 @@
   id: PlatingSnow
   name: tiles-snow-plating
   parent: BasePlating
-  sprite: /Textures/Tiles/snow_plating.png #Not in the snow planet RSI because it doesn't have any metadata. Should probably be moved to its own folder later.
+  sprite: /Textures/Tiles/Snow/snow-plating.png # Nebula edit
   friction: 0.75 #a little less then actual snow
 
 - type: tile

@@ -136,7 +136,7 @@
   suffix: Mining(Salvage)
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/cargo-mining.rsi
+    sprite: Structures/Doors/Airlocks/Standard/mining.rsi # Nebula edit
   - type: Wires
     layoutId: AirlockCargo
   - type: Paintable
@@ -318,7 +318,7 @@
   suffix: Mining(Salvage)
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/cargo-mining.rsi
+    sprite: Structures/Doors/Airlocks/Glass/mining.rsi # Nebula edit
   - type: Paintable
     group: null
 

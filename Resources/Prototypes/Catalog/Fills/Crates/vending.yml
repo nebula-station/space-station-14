@@ -74,3 +74,9 @@
     containers:
       entity_storage:
         id: VendingMachineRestockRobotics
+  # Nebula start
+  - type: Sprite
+    sprite: Structures/Storage/Crates/scicrate_secure.rsi
+  - type: Icon
+    sprite: Structures/Storage/Crates/scicrate_secure.rsi
+  # Nebula end

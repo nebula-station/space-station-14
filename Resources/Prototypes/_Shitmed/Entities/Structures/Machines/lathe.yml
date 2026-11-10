@@ -6,12 +6,21 @@
   name: medical biofabricator
   description: Produces organs and other organic matter that can be surgically grafted onto patients with biomass.
   components:
+  # Nebula start
   - type: Sprite
     sprite: _Shitmed/Structures/Machines/limbgrower.rsi
     snapCardinals: true
     layers:
-    - state: limbgrower_idleoff
+    - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  # Nebula end
 #    - state: limbgrower_idleoff
 #      shader: unshaded
 #      map: ["enum.PowerDeviceVisualLayers.Powered"]
@@ -26,11 +35,15 @@
       tags:
       - Sheet
       - RawMaterial
+  # Nebula start
   - type: Lathe
-    idleState: limbgrower_idleoff
-    runningState: limbgrower_idleon
+    idleState: icon
+    runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticPacks:
     - BiofabPartsStatic
+  # Nebula end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - BiofabPartsEmagStatic

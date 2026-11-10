@@ -37,3 +37,14 @@
             min: 1
             max: 1
         offset: 0
+
+- type: entity
+  parent: ADTPosterBase
+  id: ADTPosterBirhtdayTrianglesPB2
+  name: purple-blue triangles center
+  description: purple-blue triangles center
+  suffix: One Year
+  components:
+  - type: Sprite
+    sprite: _ADT/Structures/Wallmounts/triangles_birthday.rsi
+    state: pbcenter

@@ -12,3 +12,26 @@
     stateBaseClosed: robo_base
     stateDoorOpen: robo_open
     stateDoorClosed: robo_door
+  # Nebula start
+  - type: Icon
+    sprite: _Arcane/Structures/Storage/Closets/roboticist.rsi
+    state: icon
+  - type: Sprite
+    sprite: _Arcane/Structures/Storage/Closets/roboticist.rsi
+    layers:
+    - state: robo_base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: robo_door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: paper
+      visible: false
+      sprite: Structures/Storage/closet_labels.rsi
+      offset: "-0.065,0"
+      map: ["enum.PaperLabelVisuals.Layer"]
+  # Nebula end

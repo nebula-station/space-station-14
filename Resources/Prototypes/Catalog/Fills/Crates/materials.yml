@@ -46,6 +46,13 @@
       entity_storage:
         id: SheetPlastic
         amount: 3
+  # Nebula start
+  - type: Icon
+    sprite: Structures/Storage/Crates/plastic.rsi
+  - type: Sprite
+    sprite: Structures/Storage/Crates/plastic.rsi
+    offset: 0, 0
+  # Nebula end
 
 - type: entity
   parent: CrateGenericSteel

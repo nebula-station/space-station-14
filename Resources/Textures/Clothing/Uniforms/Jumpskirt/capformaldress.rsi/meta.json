@@ -1,30 +1,34 @@
 {
-  "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation https://github.com/tgstation/tgstation/commit/30892aa892a2be846592b068ab71c606e2f0c5b7, edited by emisse for ss14, monkey derivative made by brainfood1183 (github) for ss14 and edited by Ghagliiarghii (github)",
-  "size": {
-    "x": 32,
-    "y": 32
-  },
-  "states": [
-    {
-      "name": "icon"
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tgstation https://github.com/tgstation/tgstation/commit/30892aa892a2be846592b068ab71c606e2f0c5b7, edited by emisse for ss14, monkey derivative made by brainfood1183 (github) for ss14 and edited by Ghagliiarghii (github). Synth states from Afterlight, via Goob-Station. | Resprite: Taken from tgstation https://github.com/tgstation/tgstation/commit/30892aa892a2be846592b068ab71c606e2f0c5b7, monkey derivative made by brainfood1183 (github) for ss14, resprite created by svarshiksatanist on discord & updated by sonicdc, upgraded dont reptilian by discord:prazat911. Taken from ADT https://github.com/AdventureTimeSS14/space_station_ADT/blob/master/Resources/Textures/Clothing/Uniforms/Jumpskirt/capformaldress.rsi",
+    "size": {
+        "x": 32,
+        "y": 32
     },
-    {
-      "name": "equipped-INNERCLOTHING",
-      "directions": 4
-    },
-    {
-      "name": "equipped-INNERCLOTHING-monkey",
-      "directions": 4
-    },
-    {
-      "name": "inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "inhand-right",
-      "directions": 4
-    }
-  ]
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "equipped-INNERCLOTHING",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-monkey",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "equipped-INNERCLOTHING-synth",
+            "directions": 4
+        }
+    ]
 }

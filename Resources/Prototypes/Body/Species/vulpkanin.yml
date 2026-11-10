@@ -285,15 +285,20 @@
   id: OrganVulpkaninExternal
   abstract: true
   components:
+  # Nebula start
   - type: Sprite
-    sprite: Mobs/Species/Vulpkanin/parts.rsi
+    sprite: _Arcane/Mobs/Species/Vulpkanin/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Arcane/Mobs/Species/Vulpkanin/parts.rsi
+  # Nebula end
 
 - type: entity
   parent: [ OrganBaseTorsoSexed, OrganBaseTorsoTailed, OrganVulpkaninExternal ] # Trauma - Tailed torso
   id: OrganVulpkaninTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganVulpkaninExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganVulpkaninExternal ] # Nebula edit
   id: OrganVulpkaninHead
   components:
   - type: VisualOrganMarkings

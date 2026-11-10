@@ -144,3 +144,14 @@
     sprite: _RMC14/Structures/platforms.rsi
   - type: InteractionOutline
   - type: Clickable
+
+- type: entity
+  parent: CMPlatform
+  id: RMCPlatformSandstone
+  name: sandstone platform
+  description: A raised level of metal, often used to elevate areas above others, or construct bridges. You could probably climb it.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/platforms.rsi
+    state: stone
+    color: "#b29082"

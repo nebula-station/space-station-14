@@ -74,14 +74,20 @@
     coreInertPrototype: AnomalyCorePyroclasticInert
     supercriticalSoundAtAnimationStart:
       collection: AnomalyPyroSupercritical
+  # Nebula start
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/pyro_anom.rsi
+    sprite: _Arcane/Structures/Specific/Anomalies/anomaly_fire.rsi
     layers:
-    - state: anom
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
       visible: false
+  # Nebula end
   - type: PointLight
     radius: 6.0
     energy: 7.5
@@ -129,13 +135,20 @@
     supercriticalSoundAtAnimationStart:
       collection: AnomalyGravitySupercritical
     supercriticalDuration: 15s
+  # Nebula start
   - type: Sprite
+    sprite: _Arcane/Structures/Specific/Anomalies/anomaly_gravity.rsi
     layers:
-    - state: anom2
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom2-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
       visible: false
+  # Nebula end
   - type: PointLight
     radius: 5.0
     energy: 20
@@ -163,13 +176,20 @@
     coreInertPrototype: AnomalyCoreElectricityInert
     supercriticalSoundAtAnimationStart:
       collection: AnomalyElectricitySupercritical
+  # Nebula start
   - type: Sprite
+    sprite: _Arcane/Structures/Specific/Anomalies/anomaly_electric.rsi
     layers:
-    - state: anom3
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom3-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
       visible: false
+  # Nebula end
   - type: PointLight
     radius: 2.0
     energy: 5.0
@@ -190,13 +210,20 @@
     maxPulseLength: 300
     supercriticalSoundAtAnimationStart:
       collection: AnomalyFleshSupercritical
+  # Nebula start
   - type: Sprite
+    sprite: _Arcane/Structures/Specific/Anomalies/anomaly_flesh.rsi
     layers:
-    - state: anom5
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom5-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
       visible: false
+  # Nebula end
   - type: PointLight
     radius: 2.0
     energy: 7.5
@@ -278,13 +305,20 @@
   parent: BaseAnomaly
   suffix: Bluespace
   components:
+  # Nebula start
   - type: Sprite
+    sprite: _Arcane/Structures/Specific/Anomalies/anomaly_bluespace.rsi
     layers:
-    - state: anom4
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom4-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
       visible: false
+  # Nebula end
   - type: PointLight
     radius: 2.0
     energy: 7.5
@@ -327,14 +361,20 @@
   parent: BaseAnomaly
   suffix: Ice
   components:
+  # Nebula start
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/ice_anom.rsi
+    sprite: _Arcane/Structures/Specific/Anomalies/anomaly_ice.rsi
     layers:
-    - state: anom
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
       visible: false
+  # Nebula end
   - type: PointLight
     radius: 2.0
     energy: 2.5
@@ -875,14 +915,20 @@
   parent: BaseAnomaly
   suffix: Liquid
   components:
+  # Nebula start
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/liquid_anom.rsi
+    sprite: _Arcane/Structures/Specific/Anomalies/anomaly_liquid.rsi
     layers:
+    - state: shadow-anomaly
+      shader: unshaded
     - state: anom
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
       visible: false
+  # Nebula end
   - type: RandomSprite
     selected: # Initialized layer values. Edited through the ReagentProducerAnomalySystem
       enum.AnomalyVisualLayers.Base:
@@ -995,14 +1041,20 @@
   parent: BaseAnomaly
   suffix: Shadow
   components:
+  # Nebula start
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/shadow_anom.rsi
+    sprite: _Arcane/Structures/Specific/Anomalies/anomaly_shadow.rsi
     layers:
-    - state: anom
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
       visible: false
+  # Nebula end
   - type: PointLight
     radius: 1.5
     energy: 12.5

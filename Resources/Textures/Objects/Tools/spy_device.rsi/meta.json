@@ -21,12 +21,28 @@
       ]
     },
     {
-      "name": "inhand-left",
-      "directions": 4
+        "name": "scanner"
     },
     {
-      "name": "inhand-right",
-      "directions": 4
+        "name": "scanner-light",
+        "delays": [
+            [
+                0.2,
+                0.2,
+                0.2,
+                0.2,
+                0.2,
+                0.2
+            ]
+        ]
+    },
+    {
+        "name": "scanner-inhand-left",
+        "directions": 4
+    },
+    {
+        "name": "scanner-inhand-right",
+        "directions": 4
     }
   ]
 }

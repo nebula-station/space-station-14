@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Sprites made by InfinityPandaRed for Goobstation, Reptilian by Sanyati",
+  "copyright": "Sprites made by InfinityPandaRed for Goobstation, Reptilian by Sanyati. Hydrakin states from Goob-Station.",
   "size": {
     "x": 32,
     "y": 32
@@ -28,6 +28,18 @@
     },
     {
       "name": "equipped-OUTERCLOTHING-reptilian",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-feroxi",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-vulpkanin",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-hydrakin",
       "directions": 4
     }
   ]

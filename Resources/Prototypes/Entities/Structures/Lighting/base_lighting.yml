@@ -21,7 +21,9 @@
   - type: Pullable
   - type: Clickable
   - type: InteractionOutline
+  # Nebula start
   - type: Sprite
+    offset: 0, 1
     drawdepth: WallMountedItems
     layers:
     - map: ["enum.PoweredLightLayers.Base"]
@@ -29,6 +31,7 @@
     - map: ["enum.PoweredLightLayers.Glow"]
       state: glow
       shader: unshaded
+  # Nebula end
   - type: PointLight
     color: "#FFE4CE" # 5000K color temp
     energy: 0.8
@@ -454,7 +457,7 @@
   - type: RotatingLight
     speed: 40
   - type: Sprite
-    sprite: Structures/Wallmounts/Lighting/emergency_light.rsi
+    sprite: Structures/Wallmounts/Lighting/emergency-light.rsi # Nebula edit
     layers:
     - state: base
       map: [ "enum.EmergencyLightVisualLayers.Base" ]
@@ -485,6 +488,9 @@
             max: 1
 
 #Coloured lights
+  # Nebula start
+  - type: Appearance
+  # Nebula end
 - type: entity
   abstract: true
   parent: Poweredlight

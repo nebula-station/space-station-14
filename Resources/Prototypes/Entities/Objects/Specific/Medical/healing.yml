@@ -345,6 +345,11 @@
     count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
   - type: StackPrice
     price: 10
+  # Nebula start
+  - type: Clothing
+    sprite: _Arcane/Clothing/Hands/Gloves/gauze.rsi
+    slots: gloves
+  # Nebula end
 
 - type: entity
   id: Gauze1

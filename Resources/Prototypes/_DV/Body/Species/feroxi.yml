@@ -231,11 +231,13 @@
   id: OrganFeroxiExternal
   abstract: true
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _Goobstation/Mobs/Species/Feroxi/parts.rsi
+    sprite: _Arcane/Mobs/Species/Feroxi/parts.rsi
   - type: VisualOrgan
     data:
-      sprite: _Goobstation/Mobs/Species/Feroxi/parts.rsi
+      sprite: _Arcane/Mobs/Species/Feroxi/parts.rsi
+  # Nebula end
   - type: VisualOrganMarkings
     markingData:
       group: Feroxi
@@ -260,9 +262,11 @@
   parent: [ OrganBaseTail, OrganFeroxiExternal ]
   id: OrganFeroxiTail
   components:
+  # Nebula start
   - type: Sprite
-    sprite: _Goobstation/Mobs/Customization/Feroxi/tail_markings.rsi
+    sprite: _Arcane/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
+  # Nebula end
   - type: VisualOrgan
     data:
       sprite: _Trauma/empty.rsi

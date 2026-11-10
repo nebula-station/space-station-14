@@ -1,0 +1,377 @@
+- type: tile
+  parent: [ BaseStationTile, FloorAsteroidIronsand ]
+  id: FloorAstroIronsand
+  name: tiles-astro-ironsand
+  sprite: /Textures/Tiles/Ironsand/ironsand.png # Nebula edit
+  edgeSpritePriority: 7 # Nebula edit
+  # Nebula start
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Ironsand/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Ironsand/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Ironsand/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Ironsand/single_edge_SW.png
+    South: /Textures/Tiles/Ironsand/double_edge_S.png
+    East: /Textures/Tiles/Ironsand/double_edge_E.png
+    North: /Textures/Tiles/Ironsand/double_edge_N.png
+    West: /Textures/Tiles/Ironsand/double_edge_W.png
+  # Nebula end
+  variants: 5 # Nebula edit
+  footstepSounds:
+    collection: FootstepAsteroid
+  itemDrop: FloorTileItemAstroIronsand
+
+- type: tile
+  parent: [ BaseStationTile, FloorAsteroidIronsandBorderless ]
+  id: FloorAstroIronsandBorderless
+  name: tiles-astro-ironsand-borderless
+  sprite: /Textures/Tiles/Ironsand/ironsand.png # Nebula edit
+  variants: 5 # Nebula edit
+  footstepSounds:
+    collection: FootstepAsteroid
+  itemDrop: FloorTileItemAstroIronsandBorderless
+
+- type: tile
+  id: FloorDarkHerringboneAlt
+  name: tiles-dark-floor-herringbone-alt
+  sprite: /Textures/_Arcane/Tiles/dark_herringbone.png
+  variants: 4
+  placementVariants:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemDark
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorDarkMarbleMono
+  parent: FloorWhiteMarble
+  name: tiles-dark-marble
+  sprite: /Textures/_Arcane/Tiles/Marble/dark-marble-mono.png
+  variants: 6
+  itemDrop: FloorTileItemDarkMarble
+
+- type: tile
+  id: FloorDarkPavementAlt
+  name: tiles-dark-floor-pavement-alt
+  sprite: /Textures/_Arcane/Tiles/dark_pavement.png
+  variants: 4
+  placementVariants:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemDark
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorDarkPavementVerticalAlt
+  name: tiles-dark-floor-pavement-vertical-alt
+  sprite: /Textures/_Arcane/Tiles/dark_pavement_vertical.png
+  variants: 4
+  placementVariants:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemDark
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorExoBorg
+  name: tiles-exo-borg
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-borg.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: FloorTileItemExoBorg
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorExoCornerNE
+  parent: BaseStationTile
+  name: tiles-exo-corner-ne
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-NE.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemExoCornerNE
+
+- type: tile
+  id: FloorExoCornerNW
+  parent: BaseStationTile
+  name: tiles-exo-corner-nw
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-NW.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemExoCornerNW
+
+- type: tile
+  id: FloorExoCornerSE
+  parent: BaseStationTile
+  name: tiles-exo-corner-se
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-SE.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemExoCornerSE
+
+- type: tile
+  id: FloorExoCornerSW
+  parent: BaseStationTile
+  name: tiles-exo-corner-sw
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-SW.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemExoCornerSW
+
+- type: tile
+  id: FloorExoHorizontal
+  parent: BaseStationTile
+  name: tiles-exo-horizontal
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-horizontal.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemExoHorizontal
+
+- type: tile
+  id: FloorExoHull
+  parent: BaseStationTile
+  name: tiles-exo-hull
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-hull.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemExoHull
+
+- type: tile
+  id: FloorExoTechmaint
+  parent: BaseStationTile
+  name: tiles-exo-techmaint
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-maint.png
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: FloorTileItemExoTechmaint
+
+- type: tile
+  id: FloorExoVertical
+  parent: BaseStationTile
+  name: tiles-exo-vertical
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-vertical.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemExoVertical
+
+- type: tile
+  id: FloorExoViscera
+  parent: BaseStationTile
+  name: tiles-exo-viscera
+  sprite: /Textures/_Arcane/Tiles/Exo/exo-viscera.png
+  variants: 3
+  footstepSounds:
+    collection: FootstepBlood
+  itemDrop: FloorTileItemExoViscera
+
+- type: tile
+  id: FloorGlassPlasma
+  parent: BaseStationTile
+  name: tiles-plasma-glass-floor
+  sprite: /Textures/_Arcane/Tiles/Glass/glass-plasma.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: SheetPlasma1
+
+- type: tile
+  id: FloorGlassPlastitanium
+  parent: BaseStationTile
+  name: tiles-plastitanium-glass-floor
+  sprite: /Textures/_Arcane/Tiles/Glass/glass-plastitanium.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: SheetPlasma1
+
+- type: tile
+  id: FloorGlassUranium
+  parent: BaseStationTile
+  name: tiles-uranium-glass-floor
+  sprite: /Textures/_Arcane/Tiles/Glass/glass-uranium.png
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: SheetUranium1
+
+- type: tile
+  id: FloorIronsandConcrete
+  name: tiles-ironsand-concrete-tile
+  sprite: /Textures/_Arcane/Tiles/Planet/Concrete/ironsandconcrete.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemIronsandConcrete
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorIronsandConcreteSmooth
+  name: tiles-ironsand-concrete-smooth
+  sprite: /Textures/_Arcane/Tiles/Planet/Concrete/ironsandconcrete_smooth.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemIronsandConcreteSmooth
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorIronsandTile
+  name: tiles-ironsand-tile
+  sprite: /Textures/_Arcane/Tiles/Asteroid/ironsand_tile.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorSteelHerringboneAlt
+  name: tiles-steel-floor-herringbone-alt
+  sprite: /Textures/_Arcane/Tiles/steel_herringbone.png
+  variants: 4
+  placementVariants:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorSteelPavementAlt
+  name: tiles-steel-floor-pavement-alt
+  sprite: /Textures/_Arcane/Tiles/steel_pavement.png
+  variants: 4
+  placementVariants:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorSteelPavementVerticalAlt
+  name: tiles-steel-floor-pavement-vertical-alt
+  sprite: /Textures/_Arcane/Tiles/steel_pavement_vertical.png
+  variants: 4
+  placementVariants:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorWhiteHerringboneAlt
+  name: tiles-white-floor-herringbone-alt
+  sprite: /Textures/_Arcane/Tiles/white_herringbone.png
+  variants: 4
+  placementVariants:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWhite
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorWhiteMarbleMono
+  parent: FloorWhiteMarble
+  name: tiles-white-marble
+  sprite: /Textures/_Arcane/Tiles/Marble/white-marble-mono.png
+  variants: 6
+  itemDrop: FloorTileItemWhiteMarble
+
+- type: tile
+  id: FloorWhitePavementAlt
+  name: tiles-white-floor-pavement-alt
+  sprite: /Textures/_Arcane/Tiles/white_pavement.png
+  variants: 4
+  placementVariants:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWhite
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorWhitePavementVerticalAlt
+  name: tiles-white-floor-pavement-vertical-alt
+  sprite: /Textures/_Arcane/Tiles/white_pavement_vertical.png
+  variants: 4
+  placementVariants:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWhite
+  heatCapacity: 10000

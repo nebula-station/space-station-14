@@ -1,8 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Normal and vox sprites created by https://github.com/Pronana / princesscheeseballs (Discord). equipped-OUTERCLOTHING-dog modified from equipped-OUTERCLOTHING by Sparlight (GitHub).",
-
+    "copyright": "Normal and vox sprites created by https://github.com/Pronana / princesscheeseballs (Discord). equipped-OUTERCLOTHING-dog modified from equipped-OUTERCLOTHING by Sparlight (GitHub). Hydrakin states from Goob-Station. | Resprite: Normal and vox sprites created by https://github.com/Pronana / princesscheeseballs (Discord). equipped-OUTERCLOTHING-dog modified from equipped-OUTERCLOTHING by Sparlight (GitHub).",
     "size": {
         "x": 32,
         "y": 32
@@ -29,6 +28,10 @@
         },
         {
             "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-hydrakin",
             "directions": 4
         }
     ]

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "From tgstation - https://github.com/tgstation/tgstation/pull/59109, blue-ified by JoeHammad",
+  "copyright": "From tgstation - https://github.com/tgstation/tgstation/pull/59109, blue-ified by JoeHammad. Hydrakin states from Goob-Station.",
   "size": {
     "x": 32,
     "y": 32
@@ -28,6 +28,14 @@
 		{
 		  "name": "equipped-HAND-vox",
 		  "directions": 4
-		}
+		},
+    {
+      "name": "equipped-HAND-sealed-hydrakin",
+      "directions": 4
+    },
+    {
+      "name": "equipped-HAND-hydrakin",
+      "directions": 4
+    }
   ]
 }
