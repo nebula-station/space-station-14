@@ -56,13 +56,6 @@
         - FullTileMask
         layer:
         - WallLayer
-  # Nebula start
-  - type: Occluder
-    polygon:
-    - "-0.5,-0.5"
-    - "0.5,0.5"
-    - "0.5,-0.5"
-  # Nebula end
   - type: Construction
     graph: Girder
     node: diagonalshuttleWall

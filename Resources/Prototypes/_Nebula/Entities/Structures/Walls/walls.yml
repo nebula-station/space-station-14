@@ -1,0 +1,11 @@
+- type: entity
+  parent: WallAbductorDiagonal
+  id: WallAbductorDiagonalOccluded
+  name: shuttle wall
+  suffix: Diagonal, Occluded
+  components:
+  - type: Occluder
+    polygon:
+    - "-0.5,-0.5"
+    - "0.5,0.5"
+    - "0.5,-0.5"
