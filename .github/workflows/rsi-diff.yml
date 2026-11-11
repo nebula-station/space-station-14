@@ -41,12 +41,12 @@ jobs:
         id: rsi-size
         shell: bash
         env:
-          MODIFIED: ${{ steps.files.outputs.modified_files }}
-          REMOVED: ${{ steps.files.outputs.deleted_files }}
-          ADDED: ${{ steps.files.outputs.added_files }}
+          MODIFIED: ${{ steps.files.outputs.modified_files_count }}
+          REMOVED: ${{ steps.files.outputs.deleted_files_count }}
+          ADDED: ${{ steps.files.outputs.added_files_count }}
         run: |
-          # nebula edit: skip huge diffs that exceed the docker argument limit
-          if [ ${#MODIFIED} -gt 100000 ] || [ ${#REMOVED} -gt 100000 ] || [ ${#ADDED} -gt 100000 ]; then
+          # nebula edit: skip huge diffs that exceed the docker argument limit (file lists themselves overflow env, so compare counts)
+          if [ "$MODIFIED" -gt 1000 ] || [ "$REMOVED" -gt 1000 ] || [ "$ADDED" -gt 1000 ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
