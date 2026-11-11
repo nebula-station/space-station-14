@@ -11,7 +11,6 @@ collective-mind-mansus-link = Связь Мансуса
 collective-mind-abductormind = Разум Серых
 collective-mind-binary = Двоичный разум
 collective-mind-mousemind = Разум Мышей
-collective-mind-dronemind = Разум Дронов
 collective-mind-bingle = Связь Бинглов
 collective-mind-shadow-mind = Разум Теней
 collective-mind-xeno = Разум Улья

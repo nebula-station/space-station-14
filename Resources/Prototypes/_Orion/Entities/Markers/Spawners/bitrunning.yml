@@ -114,7 +114,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: _White/Mobs/Aliens/Xenomorphs/larva.rsi
+    - sprite: _Trauma/Mobs/Xenos/larva.rsi
       state: xenomorph
   - type: ConditionalSpawner
     prototypes:
@@ -129,7 +129,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: _White/Mobs/Aliens/Xenomorphs/drone.rsi
+    - sprite: _Trauma/Mobs/Xenos/drone.rsi
       state: xenomorph
   - type: ConditionalSpawner
     prototypes:
@@ -144,7 +144,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: _White/Mobs/Aliens/Xenomorphs/hunter.rsi
+    - sprite: _Trauma/Mobs/Xenos/hunter.rsi
       state: xenomorph
   - type: ConditionalSpawner
     prototypes:
@@ -159,7 +159,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: _White/Mobs/Aliens/Xenomorphs/praetorian.rsi
+    - sprite: _Trauma/Mobs/Xenos/praetorian.rsi
       state: xenomorph
   - type: ConditionalSpawner
     prototypes:
@@ -174,7 +174,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: _White/Mobs/Aliens/Xenomorphs/sentinel.rsi
+    - sprite: _Trauma/Mobs/Xenos/sentinel.rsi
       state: xenomorph
   - type: ConditionalSpawner
     prototypes:

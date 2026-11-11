@@ -70,5 +70,5 @@ construction-graph-tag-magic-ink-catalyst = зачарованный катал�
 construction-graph-tag-bible = любую священную книгу
 construction-graph-tag-bottle = пустую бутылочку
 
-construction-graph-tag-bluespace-core = ядро блюспейс-аномалии
-construction-graph-tag-electric-core = ядро электрической аномалии
+
+construction-graph-tag-any-core = любое ядро аномалии
