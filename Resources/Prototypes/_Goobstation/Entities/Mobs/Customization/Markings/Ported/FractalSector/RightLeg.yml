@@ -1,0 +1,7 @@
+- type: marking
+  id: AurelianVoxRoboticLegRight
+  bodyPart: RLeg
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/aurelian_markings.rsi
+    state: robotic_leg_right

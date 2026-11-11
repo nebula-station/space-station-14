@@ -1,0 +1,13 @@
+- type: marking
+  id: VoxHairCropped
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Mobs/Customization/vox_hair.rsi
+    state: vox_cropped_s
+
+- type: marking
+  id: VoxHairRuffhawk
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Mobs/Customization/vox_hair.rsi
+    state: vox_ruff_hawk_s

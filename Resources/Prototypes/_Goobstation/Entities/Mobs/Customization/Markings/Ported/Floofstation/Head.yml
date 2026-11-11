@@ -1,0 +1,37 @@
+- type: marking
+  id: DionaPollenDust
+  bodyPart: Head
+  forcedColoring: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: dionapollendust
+
+- type: marking
+  id: HumanTattooSkull
+  bodyPart: Head
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_skull
+
+- type: marking
+  id: HumanTattooSkullFace
+  bodyPart: Head
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_skull_face
+
+- type: marking
+  id: ReptilianLineEyes
+  bodyPart: Eyes
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: lineeyes
+
+- type: marking
+  id: SingleAntenna
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/unique.rsi
+    state: singleantennaprimary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/unique.rsi
+    state: singleantennasecondary

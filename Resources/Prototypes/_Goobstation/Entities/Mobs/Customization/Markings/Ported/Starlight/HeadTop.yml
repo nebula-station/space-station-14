@@ -1,0 +1,62 @@
+- type: marking
+  id: MothAntennaeBushyAlt
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/Moth/moth_antennae.rsi
+    state: bushyalt
+
+- type: marking
+  id: MothAntennaeEnlarged
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/Moth/moth_antennae.rsi
+    state: enlarged
+
+- type: marking
+  id: SlimeEarsBunks
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Afterlight/Mobs/Customization/SlimePerson/ears.rsi
+    state: bunks
+
+- type: marking
+  id: SlimeEarsCarblunkle
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Afterlight/Mobs/Customization/SlimePerson/ears.rsi
+    state: carblunkle
+
+- type: marking
+  id: SlimeEarsHoppers
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Afterlight/Mobs/Customization/SlimePerson/ears.rsi
+    state: hoppers
+
+- type: marking
+  id: SlimeEarsStalks
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Afterlight/Mobs/Customization/SlimePerson/ears.rsi
+    state: stalks
+
+- type: marking
+  id: SlimeEarsStalksSmall
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Afterlight/Mobs/Customization/SlimePerson/ears.rsi
+    state: stalks_small
+
+- type: marking
+  id: SlimeEarsThorns
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Afterlight/Mobs/Customization/SlimePerson/ears.rsi
+    state: thorns
+
+- type: marking
+  id: VulpEarPossum
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/vulpkanin/ear_markings.rsi
+    state: possum

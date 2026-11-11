@@ -1,0 +1,17 @@
+- type: marking
+  id: WingsRoboticMerciful
+  bodyPart: Wings
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/IPCwings.rsi
+      state: merciful_base
+    - sprite: _Goobstation/Mobs/Customization/IPCwings.rsi
+      state: merciful_light
+
+- type: marking
+  id: WingsMinimalistic
+  bodyPart: Wings
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/IPCwings32.rsi
+      state: minimalistic_base
+    - sprite: _Goobstation/Mobs/Customization/IPCwings32.rsi
+      state: minimalistic_light

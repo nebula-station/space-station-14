@@ -131,4 +131,6 @@ marking-CreepyArms = Жуткие руки
 marking-CreepyArms-creepy = Жуткие руки
 
 # RArmExtension
-
+marking-SpiderHair1-fluffy = Пушистый
+marking-SpiderHair2-longhorned = Длинные рожки
+marking-SpiderHair3-wisps = Пряди

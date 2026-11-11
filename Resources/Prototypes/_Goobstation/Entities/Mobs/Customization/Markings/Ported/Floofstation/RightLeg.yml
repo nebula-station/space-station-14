@@ -1,0 +1,46 @@
+- type: marking
+  id: HumanTattooSkeletlegR
+  bodyPart: RLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_skelet_leg_r
+
+- type: marking
+  id: LegProstheticRight
+  bodyPart: RLeg
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#E4E4E4"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Impstation/Mobs/Customization/scars.rsi
+    state: leg_r_prosthetic
+
+- type: marking
+  id: ReptilianTattoSkeletLegR
+  bodyPart: RLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: tatto_skelet_leg_r
+
+- type: marking
+  id: VulpPointsCrestLegR
+  bodyPart: RLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+    state: points_crest-legsR
+
+- type: marking
+  id: VulpPointsFadeLegR
+  bodyPart: RLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+    state: points_fade-legsR
+
+- type: marking
+  id: VulpPointsSharpLegR
+  bodyPart: RLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+    state: points_sharp-legsR

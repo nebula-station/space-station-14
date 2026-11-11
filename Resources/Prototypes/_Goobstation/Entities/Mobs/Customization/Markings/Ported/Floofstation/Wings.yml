@@ -1,0 +1,22 @@
+- type: marking
+  id: WingsDragon
+  bodyPart: Wings
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_SimpleStation/Mobs/Customization/wings64x34.rsi
+    state: dragon
+
+- type: marking
+  id: WingsHarpyBionic
+  bodyPart: Wings
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/wings64-32.rsi
+    state: bionic_wings_tone_1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/wings64-32.rsi
+    state: bionic_wings_tone_2
+
+- type: marking
+  id: WingsSkeleton
+  bodyPart: Wings
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/SimpleStation14/Mobs/Customization/wings96x34.rsi
+    state: skeleton

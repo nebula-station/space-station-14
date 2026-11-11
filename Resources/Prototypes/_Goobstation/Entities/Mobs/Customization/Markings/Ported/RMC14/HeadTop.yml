@@ -1,0 +1,29 @@
+- type: marking
+  id: FelinidEarsFlat
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Felinids/felinid_ears.rsi
+    state: flat
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Felinids/felinid_ears.rsi
+    state: flat_inner
+
+- type: marking
+  id: LongEarsDrow
+  bodyPart: HeadTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Customization/ears.rsi
+    state: drow
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: VulpEarFloppy
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Vulpkanin/ear_markings.rsi
+    state: floppy
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Vulpkanin/ear_markings.rsi
+    state: floppy-inner

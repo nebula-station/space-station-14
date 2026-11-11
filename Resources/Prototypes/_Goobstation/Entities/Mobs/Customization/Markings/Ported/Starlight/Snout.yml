@@ -1,0 +1,11 @@
+- type: marking
+  id: SlimeSnout
+  bodyPart: Snout
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/SlimePerson/snout.rsi
+    state: snout
+  coloring:
+    default:
+      type:
+        !type:SkinColoring

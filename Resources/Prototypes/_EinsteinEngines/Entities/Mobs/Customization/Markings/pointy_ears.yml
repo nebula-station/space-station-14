@@ -63,3 +63,11 @@
   sprites:
   - sprite: _EinsteinEngines/Mobs/Customization/pointy_ears.rsi
     state: pointy_ears_large
+
+- type: marking
+  id: PointyEarsNone
+  bodyPart: HeadSide
+  forcedColoring: true
+  sprites:
+  - sprite: _EinsteinEngines/Mobs/Customization/pointy_ears.rsi
+    state: pointy_ears_none

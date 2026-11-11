@@ -1,0 +1,95 @@
+- type: marking
+  id: MothWingsAspen
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: aspen
+
+- type: marking
+  id: MothWingsAtlas
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: atlas
+
+- type: marking
+  id: MothWingsBrown
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: brown
+
+- type: marking
+  id: MothWingsDeathshead
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: deathshead
+
+- type: marking
+  id: MothWingsLovers
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: lovers
+
+- type: marking
+  id: MothWingsLuna
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: luna
+
+- type: marking
+  id: MothWingsPlain
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: plain
+
+- type: marking
+  id: MothWingsPoison
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: poison
+
+- type: marking
+  id: MothWingsRagged
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: ragged
+
+- type: marking
+  id: MothWingsReddish
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: reddish
+
+- type: marking
+  id: MothWingsSnow
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: snow
+
+- type: marking
+  id: MothWingsWitchking
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Nyanotrasen/Mobs/Customization/moth_wings.rsi
+    state: witchking

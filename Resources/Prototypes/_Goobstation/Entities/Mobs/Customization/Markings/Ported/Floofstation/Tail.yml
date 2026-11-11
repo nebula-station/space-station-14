@@ -1,0 +1,235 @@
+- type: marking
+  id: BunnyTail
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: bunnytail
+
+- type: marking
+  id: BunnyTailAlt
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: bunnytailalt
+
+- type: marking
+  id: DobleFur
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: doblefurtailtone1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: doblefurtailtone2
+
+- type: marking
+  id: FelinidTiger
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Felinid/tiger_tail.rsi
+    state: m_tail_tiger_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Felinid/tiger_tail.rsi
+    state: m_tail_tiger_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Felinid/tiger_tail.rsi
+    state: m_tail_tiger_tertiary
+
+- type: marking
+  id: FluffyTail
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: fluffytail
+
+- type: marking
+  id: FoxNineTails
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: foxninetailstone1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: foxninetailstone2
+
+- type: marking
+  id: FoxThreeTails
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: foxthreetailstone1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: foxthreetailstone2
+
+- type: marking
+  id: HorseTailCulty
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: horsetailculty
+
+- type: marking
+  id: HorseTailLong
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: horsetaillong
+
+- type: marking
+  id: SharkTail
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: sharktail
+
+- type: marking
+  id: TailAxolotl
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/SimpleStation14/Mobs/Customization/tails32x32.rsi
+    state: axolotl
+
+- type: marking
+  id: TailBrushtip
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_DEN/Mobs/Customization/Vulpkanin/vulpkanin.rsi
+    state: brushtiptail
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_DEN/Mobs/Customization/Vulpkanin/vulpkanin.rsi
+    state: brushtiptail2
+
+- type: marking
+  id: TailCheesegal
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state: sergtail-1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state: sergtail-2
+
+- type: marking
+  id: TailEasternDragon
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/SimpleStation14/Mobs/Customization/tails32x32.rsi
+    state: easternd_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/SimpleStation14/Mobs/Customization/tails32x32.rsi
+    state: easternd_secondary
+
+- type: marking
+  id: TailFish
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/SimpleStation14/Mobs/Customization/tails32x32.rsi
+    state: fish_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/SimpleStation14/Mobs/Customization/tails32x32.rsi
+    state: fish_secondary
+
+- type: marking
+  id: TailSuccubus
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/SimpleStation14/Mobs/Customization/tails32x32.rsi
+    state: succubus
+
+- type: marking
+  id: TailTentacle
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/SimpleStation14/Mobs/Customization/tails32x32.rsi
+    state: tentacle
+
+- type: marking
+  id: TasselTail
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+            category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: tasseltailtone1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-tails.rsi
+    state: tasseltailtone2

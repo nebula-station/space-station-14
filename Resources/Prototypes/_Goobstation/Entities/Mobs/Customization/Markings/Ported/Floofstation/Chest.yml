@@ -1,0 +1,118 @@
+- type: marking
+  id: HumanTattooChurchdomes
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_churchdomes
+
+- type: marking
+  id: HumanTattooElysiumPatriotism
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_elysium_patriotism
+
+- type: marking
+  id: HumanTattooKarabel
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_karabel
+
+- type: marking
+  id: HumanTattooKrenelMercenary
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_KrenelMercenary
+
+- type: marking
+  id: HumanTattooNarsi
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_narsi
+
+- type: marking
+  id: HumanTattooRose
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_Rose
+
+- type: marking
+  id: HumanTattooSerpentTemptation
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_serpenttemptation
+
+- type: marking
+  id: HumanTattooSymbolElysium
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_symbol_elysium
+
+- type: marking
+  id: LizardChestUnderbellyFeminine
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Reptilian/underbellyfemale.rsi
+    state: body_underbelly
+
+- type: marking
+  id: NeckChestfluff
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_DEN/Mobs/Customization/Vulpkanin/vulpkanin.rsi
+    state: chestfloof
+
+- type: marking
+  id: ReptilianDrawingSkeletBody
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: drawing_skelet_body
+
+- type: marking
+  id: ReptilianDrawingSkeleton
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: drawing_skeleton
+
+- type: marking
+  id: ReptilianDrawingSun
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: drawing_sun
+
+- type: marking
+  id: ReptilianDrawingWarpaint
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: drawing_warpaint
+
+- type: marking
+  id: SpeciesAdaptorFeroxiTorsoFemale
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/DeltaV/Mobs/Species/Feroxi/parts.rsi
+    state: torso_f
+
+- type: marking
+  id: SpeciesAdaptorReptilianTorsoMale
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Species/Reptilian/parts.rsi
+    state: torso_m
+
+- type: marking
+  id: SpeciesAdaptorVulpkaninTorsoMale
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/DeltaV/Mobs/Species/Vulpkanin/parts.rsi
+    state: torso_m

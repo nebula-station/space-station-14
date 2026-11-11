@@ -1,0 +1,72 @@
+- type: marking
+  id: FootProstheticLeft
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#E4E4E4"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Impstation/Mobs/Customization/scars.rsi
+    state: foot_l_prosthetic
+
+- type: marking
+  id: FootProstheticRight
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#E4E4E4"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Impstation/Mobs/Customization/scars.rsi
+    state: foot_r_prosthetic
+
+- type: marking
+  id: HumanTattooFullskelet
+  bodyPart: LLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_fullskelet
+
+- type: marking
+  id: HumanTattooSkeletbody
+  bodyPart: LLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_skelet_body
+
+- type: marking
+  id: HumanTattooSkeletfootL
+  bodyPart: LFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_skelet_foot_l
+
+- type: marking
+  id: HumanTattooSkeletfootR
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_skelet_foot_r
+
+- type: marking
+  id: ReptilianDrawingKhar
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: drawing_khar
+
+- type: marking
+  id: SpeciesAdaptorReptilianLFoot
+  bodyPart: LFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Species/Reptilian/parts.rsi
+    state: l_foot
+
+- type: marking
+  id: SpeciesAdaptorReptilianRFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Species/Reptilian/parts.rsi
+    state: r_foot

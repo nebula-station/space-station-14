@@ -1,0 +1,27 @@
+- type: marking
+  id: BodyHairBack
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/human_body_hair.rsi
+    state: hair_back
+
+- type: marking
+  id: BodyHairChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/human_body_hair.rsi
+    state: hair_chest
+
+- type: marking
+  id: MarkingStandardChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_FarHorizons/Mobs/Customization/ipc/standard/standard_main.rsi
+    state: torso_m
+
+- type: marking
+  id: VulpBellySkunk
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/vulpkanin/body_markings.rsi
+    state: skunk

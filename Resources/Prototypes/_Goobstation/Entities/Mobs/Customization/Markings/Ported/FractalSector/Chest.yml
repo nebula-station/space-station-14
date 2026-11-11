@@ -1,0 +1,14 @@
+- type: marking
+  id: AurelianVoxRoboticChest
+  bodyPart: Chest
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/aurelian_markings.rsi
+    state: robotic_chest
+
+- type: marking
+  id: DwarfChestHair
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: dwarfchesthair

@@ -1,0 +1,290 @@
+- type: marking
+  id: VulpEarWolf
+  bodyPart: HeadTop
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: wolf
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: wolf-inner
+
+- type: marking
+  id: VulpEarTajaran
+  bodyPart: HeadTop
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: msai
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: msai-inner
+
+- type: marking
+  id: VulpEarDalmatian
+  bodyPart: HeadTop
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: dalmatian
+
+- type: marking
+  id: VulpSnoutAlt
+  bodyPart: Snout
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: muzzle_alt
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+
+- type: marking
+  id: VulpSnoutSharp
+  bodyPart: Snout
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: muzzle_sharp
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+
+- type: marking
+  id: VulpSnoutFade
+  bodyPart: Snout
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: muzzle_fade
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+
+- type: marking
+  id: VulpSnoutSwift
+  bodyPart: Snout
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: vulpine-lines
+
+- type: marking
+  id: VulpHeadTiger
+  bodyPart: Head
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: tiger_head
+
+- type: marking
+  id: VulpHeadTigerFace
+  bodyPart: Head
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: tiger_face
+
+- type: marking
+  id: VulpHeadSlash
+  bodyPart: Head
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: slash
+
+- type: marking
+  id: VulpTail
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp-fade
+
+- type: marking
+  id: VulpTailTip
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp-tip
+
+- type: marking
+  id: VulpTailAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag-tip #fade
+
+- type: marking
+  id: VulpTailTipAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag-tip
+
+- type: marking
+  id: VulpTailAlt
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_alt
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_alt-fade
+
+- type: marking
+  id: VulpTailAltTip
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_alt
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_alt-tip
+
+- type: marking
+  id: VulpTailFox
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox-fade
+
+- type: marking
+  id: VulpTailFoxTip
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox-tip
+
+- type: marking
+  id: VulpTailFoxAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag-fade
+
+- type: marking
+  id: VulpTailFoxTipAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag-tip
+
+- type: marking
+  id: VulpTailBushy
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: bushfluff
+
+- type: marking
+  id: VulpTailBushyAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: bushfluff_wag
+
+- type: marking # Goob
+  id: VulpTailCorgi
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: corgi
+
+- type: marking
+  id: VulpTailCorgiAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: corgi_wag
+
+- type: marking
+  id: VulpTailFox2
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox2
+
+- type: marking
+  id: VulpTailFox3
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox3
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox3-tip
+
+- type: marking
+  id: VulpTailOtie
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: otie
+
+- type: marking # Goob
+  id: VulpTailDalmatian
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: dalmatian
+
+- type: marking
+  id: VulpTailDalmatianAnimated
+  bodyPart: Tail
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: dalmatian_wag
+
+- type: marking
+  id: VulpPointsFeet
+  bodyPart: RFoot
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_feet
+
+- type: marking
+  id: VulpPointsCrestLegs
+  bodyPart: LLeg
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_crest-legs
+
+- type: marking
+  id: VulpPointsFadeLegs
+  bodyPart: LLeg
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_fade-legs
+
+- type: marking
+  id: VulpPointsSharpLegs
+  bodyPart: LLeg
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_sharp-legs
+
+- type: marking
+  id: VulpPointsHands
+  bodyPart: RHand
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_hands
+
+- type: marking
+  id: VulpPointsCrestArms
+  bodyPart: LArm
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_crest-arms
+
+- type: marking
+  id: VulpPointsFadeArms
+  bodyPart: LArm
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_fade-arms
+
+- type: marking
+  id: VulpPointsSharpArms
+  bodyPart: LArm
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
+      state: points_sharp-arms

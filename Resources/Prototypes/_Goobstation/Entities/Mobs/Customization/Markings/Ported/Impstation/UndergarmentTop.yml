@@ -1,0 +1,25 @@
+- type: marking
+  id: UndershirtDefaultF
+  bodyPart: UndergarmentTop
+  sexRestriction: [Female]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
+    state: undershirtf
+
+- type: marking
+  id: UndershirtRolledF
+  bodyPart: UndergarmentTop
+  sexRestriction: [Female]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
+    state: rolledundershirtf

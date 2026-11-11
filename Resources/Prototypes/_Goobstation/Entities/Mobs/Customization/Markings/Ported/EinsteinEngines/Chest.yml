@@ -1,0 +1,6 @@
+- type: marking
+  id: MothChitinidBodyMarkings
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Moth/ChitinidMarkings/bodyparts.rsi
+    state: torso_m

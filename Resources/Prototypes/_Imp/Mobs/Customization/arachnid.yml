@@ -175,3 +175,33 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/wings.rsi
     state: creepy
+
+- type: marking
+  id: SpiderGlowEyes
+  bodyPart: Eyes
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Arachnid/eyes.rsi
+    state: glow
+  shaders:
+    glow: unshaded
+
+- type: marking
+  id: SpiderHair1
+  bodyPart: Hair
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Arachnid/hair.rsi
+    state: fluffy
+
+- type: marking
+  id: SpiderHair2
+  bodyPart: Hair
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Arachnid/hair.rsi
+    state: longhorned
+
+- type: marking
+  id: SpiderHair3
+  bodyPart: Hair
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Arachnid/hair.rsi
+    state: wisps

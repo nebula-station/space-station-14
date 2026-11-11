@@ -1,0 +1,68 @@
+- type: marking
+  id: CyberlimbLFootMorpheus
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    state: l_foot
+
+- type: marking
+  id: CyberlimbLFootZenghu
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    state: l_foot
+
+- type: marking
+  id: CyberlimbRFootMorpheus
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    state: r_foot
+
+- type: marking
+  id: CyberlimbRFootZenghu
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    state: r_foot
+
+- type: marking
+  id: PiercingBellybutton
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/piercing.rsi
+    state: piercing_bellybutton
+
+- type: marking
+  id: PiercingLeftEar
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/piercing.rsi
+    state: piercing_left_ear
+
+- type: marking
+  id: PiercingRightEar
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/piercing.rsi
+    state: piercing_right_ear

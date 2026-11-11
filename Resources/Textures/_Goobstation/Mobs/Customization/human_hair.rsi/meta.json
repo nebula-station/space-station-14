@@ -170,6 +170,86 @@
 	  {
         "name": "jinx",
         "directions": 4
+      },
+      {
+        "name": "cotton",
+        "directions": 4
+      },
+      {
+        "name": "impish",
+        "directions": 4
+      },
+      {
+        "name": "gloomyLonger",
+        "directions": 4
+      },
+      {
+        "name": "lila",
+        "directions": 4
+      },
+      {
+        "name": "longTails",
+        "directions": 4
+      },
+      {
+        "name": "strictLong",
+        "directions": 4
+      },
+      {
+        "name": "mermaid",
+        "directions": 4
+      },
+      {
+        "name": "shy",
+        "directions": 4
+      },
+      {
+        "name": "twintail",
+        "directions": 4
+      },
+      {
+        "name": "deathkid",
+        "directions": 4
+      },
+      {
+        "name": "longroundextensions",
+        "directions": 4
+      },
+      {
+        "name": "longtufttipped",
+        "directions": 4
+      },
+      {
+        "name": "orb",
+        "directions": 4
+      },
+      {
+        "name": "pigtailextensions",
+        "directions": 4
+      },
+      {
+        "name": "shortandcurvy",
+        "directions": 4
+      },
+      {
+        "name": "shortroundedextensions",
+        "directions": 4
+      },
+      {
+        "name": "shorttufttipped",
+        "directions": 4
+      },
+      {
+        "name": "triangulum",
+        "directions": 4
+      },
+      {
+        "name": "wolfcutclean",
+        "directions": 4
+      },
+      {
+        "name": "wolfcutmeow",
+        "directions": 4
       }
     ]
   }

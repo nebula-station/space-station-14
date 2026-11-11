@@ -1,0 +1,14 @@
+- type: marking
+  id: LizardSnoutSynth
+  bodyPart: Snout
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/Synthliz/snouts.rsi
+    state: synthsnout_eyes
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/Synthliz/snouts.rsi
+    state: synthsnout_visor
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/Synthliz/snouts.rsi
+    state: synthsnout_frame
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/Synthliz/snouts.rsi
+    state: synthsnout_snout
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/Synthliz/snouts.rsi
+    state: synthsnout_jaw
