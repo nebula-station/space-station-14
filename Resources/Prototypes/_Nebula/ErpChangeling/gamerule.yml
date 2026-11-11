@@ -11,6 +11,7 @@
   components:
   - type: AntagRandomSpawn
   - type: AntagGhostCharacterRule
+    useSelectedCharacter: true
   - type: AntagObjectives
     objectives:
     - ErpChangelingOrgasmObjective

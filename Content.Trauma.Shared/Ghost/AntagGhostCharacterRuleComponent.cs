@@ -13,4 +13,9 @@ public sealed partial class AntagGhostCharacterRuleComponent : Component
 {
     [DataField]
     public ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
+
+    // Nebula edit start
+    [DataField]
+    public bool UseSelectedCharacter;
+    // Nebula edit end
 }
