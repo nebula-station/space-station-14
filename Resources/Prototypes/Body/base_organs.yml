@@ -5,6 +5,11 @@
 - type: markingsGroup
   id: Undergarments
   limits:
+    # Nebula start
+    enum.HumanoidVisualLayers.BodyOverlay:
+      limit: 6
+      required: false
+    # Nebula end
     enum.HumanoidVisualLayers.UndergarmentTop:
       limit: 1
       required: false
@@ -118,6 +123,7 @@
       - Chest
       #- Tail # Trauma - moved to specific Tail part
       - Overlay
+      - BodyOverlay # Nebula edit
       - TailOverlay
       - UndergarmentTop
       - UndergarmentBottom
