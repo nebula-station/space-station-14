@@ -53,10 +53,10 @@ public sealed partial class StationReportSystem : EntitySystem
                 SpawnReport(uid, proto, text);
             }
 
-            // TODO: custom greenshift/threat level announcement
+            // Nebula edit | localization is joke
             _chat.DispatchStationAnnouncement(station,
-                "A summary of the station's situation has been copied and printed to all communications consoles.",
-                "Station Report");
+                Loc.GetString("station-report-announcement"),
+                Loc.GetString("station-report-announcement-sender"));
         }
     }
 

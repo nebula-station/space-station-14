@@ -87,7 +87,7 @@
   id: RingBase
   components:
   - type: Clothing
-    slots: [ gloves, neck ]
+    slots: [ gloves, neck, finger ] # Nebula edit
   - type: Sprite
     sprite: Clothing/Hands/Rings/basic.rsi
   - type: Appearance
