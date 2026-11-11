@@ -1,0 +1,55 @@
+- type: marking
+  id: MothEmoTuft
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Moth/head.rsi
+    state: emotuft
+
+- type: marking
+  id: MothHeadTuft
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Moth/head.rsi
+    state: headtuft
+
+- type: marking
+  id: MothTinyTuft
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Moth/head.rsi
+    state: tinytuft
+
+- type: marking
+  id: MothTuftBangs
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Moth/head.rsi
+    state: tuftbangs
+
+- type: marking
+  id: MothVerticalTuft
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Moth/head.rsi
+    state: verticaltuft
+
+- type: marking
+  id: PrettyFly
+  bodyPart: HeadTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Human/headtop.rsi
+    state: fly
+
+- type: marking
+  id: Shadow
+  bodyPart: Head
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#000000"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Humanoid/head.rsi
+    state: shadow

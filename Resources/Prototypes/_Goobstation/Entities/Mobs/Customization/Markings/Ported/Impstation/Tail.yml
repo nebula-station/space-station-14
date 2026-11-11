@@ -1,0 +1,6 @@
+- type: marking
+  id: AppendagesScorpion
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Arachnid/tail.rsi
+    state: scorpion

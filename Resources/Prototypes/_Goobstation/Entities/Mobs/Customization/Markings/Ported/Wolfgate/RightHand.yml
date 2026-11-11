@@ -1,0 +1,156 @@
+- type: marking
+  id: WFMeridianMarkingBandsAndStripesRHand
+  bodyPart: RHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: bands_and_stripes_r_hand
+
+- type: marking
+  id: WFMeridianMarkingChitinRHand
+  bodyPart: RHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: chitin_r_hand
+
+- type: marking
+  id: WFMeridianMarkingClawTipsRHand
+  bodyPart: RHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: claw_tips_r_hand
+
+- type: marking
+  id: WFMeridianMarkingColorBandsRHand
+  bodyPart: RHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: color_bands_r_hand
+
+- type: marking
+  id: WFMeridianMarkingDalmatianRHand
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: dalmatian_r_hand
+
+- type: marking
+  id: WFMeridianMarkingDogRHand
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: dog_r_hand
+
+- type: marking
+  id: WFMeridianMarkingDrakeBoneRHand
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#CCCCCC"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: drake_bone_r_hand
+
+- type: marking
+  id: WFMeridianMarkingGuilmonMarkRHand
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: guilmon_mark_r_hand
+
+- type: marking
+  id: WFMeridianMarkingGuilmonRHand
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: guilmon_r_hand
+
+- type: marking
+  id: WFMeridianMarkingPantherRHand
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: panther_r_hand
+
+- type: marking
+  id: WFMeridianMarkingSabresuneRHand
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: sabresune_r_hand
+
+- type: marking
+  id: WFMeridianMarkingSplotchesRHand
+  bodyPart: RHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: splotches_r_hand
+
+- type: marking
+  id: WFMeridianMarkingTattooTigerRHand
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#112222"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: tattoo_tiger_r_hand
+
+- type: marking
+  id: WFMeridianMarkingTigerStripeRHand
+  bodyPart: RHand
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_arms.rsi
+    state: tiger_stripe_r_hand

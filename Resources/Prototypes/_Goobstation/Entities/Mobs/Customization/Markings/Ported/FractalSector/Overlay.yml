@@ -1,0 +1,11 @@
+- type: marking
+  id: OniOverlayImpBinds
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#000000"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/oni_markings.rsi
+    state: impbinds

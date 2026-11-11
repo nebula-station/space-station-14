@@ -1,0 +1,495 @@
+- type: marking
+  id: BullishHorns
+  bodyPart: HeadTop
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-ears.rsi
+    state: bullishhorns
+
+- type: marking
+  id: BunnyEars
+  bodyPart: HeadTop
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      bunnyearstone2:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-ears.rsi
+    state: bunnyearstone1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-ears.rsi
+    state: bunnyearstone2
+
+- type: marking
+  id: BunnyEarsAlt
+  bodyPart: HeadTop
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-ears.rsi
+    state: bunnyearsalt
+
+- type: marking
+  id: EarsAntennaFuzzball
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_antenna_fuzzball_FRONT_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_antenna_fuzzball_FRONT_tertiary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_antenna_fuzzball_ADJ_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_antenna_fuzzball_ADJ_tertiary
+
+- type: marking
+  id: EarsAntennaSimple1
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_antenna_simple1_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_antenna_simple1_ADJ_primary
+
+- type: marking
+  id: EarsAntennaSimple2
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_antenna_simple2_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_antenna_simple2_ADJ_primary
+
+- type: marking
+  id: EarsBat
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_bat_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_bat_ADJ_secondary
+
+- type: marking
+  id: EarsCatNormal
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_catnormal_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_catnormal_ADJ_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_catnormal_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_catnormal_FRONT_secondary
+
+- type: marking
+  id: EarsCheesegal
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state: sergears-1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_DEN/Mobs/Customization/Vulpkanin/cheesegal.rsi
+    state: sergears-2
+
+- type: marking
+  id: EarsCobraHood
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_cobrahood_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_cobrahood_ADJ_secondary
+
+- type: marking
+  id: EarsDeer
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_deer_ADJ
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_deer_FRONT
+
+- type: marking
+  id: EarsDeer2
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_deer2_ADJ
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_deer2_FRONT
+
+- type: marking
+  id: EarsDragonLong
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/reptilian_ears.rsi
+    state: dragonlong
+
+- type: marking
+  id: EarsEasternD
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/reptilian_ears.rsi
+    state: easternd_ears
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/reptilian_ears.rsi
+    state: easternd_horns
+
+- type: marking
+  id: EarsElf
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_elf_FRONT
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_elf_ADJ
+
+- type: marking
+  id: EarsElfBroad
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_elfbroad_FRONT
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_elfbroad_ADJ
+
+- type: marking
+  id: EarsElfLonger
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_elflonger_FRONT
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_elflonger_ADJ
+
+- type: marking
+  id: EarsElfWide
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_elfwide_FRONT
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_elfwide_ADJ
+
+- type: marking
+  id: EarsEvolox
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_evolox_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_evolox_FRONT_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_evolox_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_evolox_ADJ_secondary
+
+- type: marking
+  id: EarsEvoloxAlt
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_evolox_alt_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_evolox_alt_FRONT_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_evolox_alt_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_evolox_alt_ADJ_secondary
+
+- type: marking
+  id: EarsFennec
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_fennec_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_fennec_FRONT_tertiary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_fennec_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_fennec_ADJ_tertiary
+
+- type: marking
+  id: EarsFish
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_fish_FRONT
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_fish_ADJ
+
+- type: marking
+  id: EarsFox
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: ears_fox_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: ears_fox_secondary
+
+- type: marking
+  id: EarsHammerhead
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_hammerhead_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_hammerhead_FRONT_secondary
+
+- type: marking
+  id: EarsHawk
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_hawk_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_hawk_ADJ_primary
+
+- type: marking
+  id: EarsHorn1
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_horn1_FRONT
+
+- type: marking
+  id: EarsJellyfish
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_jellyfish_FRONT
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_jellyfish_ADJ
+
+- type: marking
+  id: EarsLovelox
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/reptilian_ears.rsi
+    state: lovelox_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/reptilian_ears.rsi
+    state: lovelox_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/reptilian_ears.rsi
+    state: lovelox_tertiary
+
+- type: marking
+  id: EarsLunasune
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_lunasune_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_lunasune_FRONT_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_lunasune_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_lunasune_ADJ_secondary
+
+- type: marking
+  id: EarsMagus
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/reptilian_ears.rsi
+    state: magus_ears
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/reptilian_ears.rsi
+    state: magus_neck
+
+- type: marking
+  id: EarsMiqote
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_miqote_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_miqote_FRONT_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_miqote_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_miqote_ADJ_secondary
+
+- type: marking
+  id: EarsPede
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_pede_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_pede_FRONT_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_pede_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_pede_ADJ_secondary
+
+- type: marking
+  id: EarsPerky
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_perky_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_perky_FRONT_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_perky_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_perky_ADJ_secondary
+
+- type: marking
+  id: EarsSabresuneExtra
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_extra_sabresune_FRONT
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_extra_sabresune_ADJ
+
+- type: marking
+  id: EarsVirtuasaurHorns
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_horns_virtuasaur
+
+- type: marking
+  id: EarsWolf
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_wolf_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_wolf_FRONT_tertiary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_wolf_ADJ_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/skyratears.rsi
+    state: m_ears_wolf_ADJ_tertiary
+
+- type: marking
+  id: FoxEars
+  bodyPart: HeadTop
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-ears.rsi
+    state: foxears
+
+- type: marking
+  id: GoatHorns
+  bodyPart: HeadTop
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      goathornstone22:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-ears.rsi
+    state: goathornstone1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/kemonomimi-ears.rsi
+    state: goathornstone2
+
+- type: marking
+  id: LizardCrestLargeTop
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Reptilian/crest_large.rsi
+    state: primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Reptilian/crest_large.rsi
+    state: secondary
+
+- type: marking
+  id: ReptilianHornsBaran
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_baran
+
+- type: marking
+  id: ReptilianHornsBullhorns
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_bullhorns
+
+- type: marking
+  id: ReptilianHornsCrown
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_crown
+
+- type: marking
+  id: ReptilianHornsFive
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_five
+
+- type: marking
+  id: ReptilianHornsHighback
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_highback
+
+- type: marking
+  id: ReptilianHornsJacksonchameleon
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_jacksonchameleon
+
+- type: marking
+  id: ReptilianHornsLong
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_long
+
+- type: marking
+  id: ReptilianHornsStagbeetle
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_stagbeetle
+
+- type: marking
+  id: ReptilianHornsSuperlong
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_superlong
+
+- type: marking
+  id: ReptilianHornsTwoago
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: horns_twoago

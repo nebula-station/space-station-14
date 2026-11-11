@@ -1,0 +1,194 @@
+- type: marking
+  id: WFMeridianMarkingBovineLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: bovine_l_foot
+
+- type: marking
+  id: WFMeridianMarkingBovineSpotLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: bovine_spot_l_foot
+
+- type: marking
+  id: WFMeridianMarkingClawTipsLFoot
+  bodyPart: LFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: claw_tips_l_foot
+
+- type: marking
+  id: WFMeridianMarkingDalmatianLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: dalmatian_l_foot
+
+- type: marking
+  id: WFMeridianMarkingDatasharkLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: datashark_l_foot
+
+- type: marking
+  id: WFMeridianMarkingDogSpotLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: dog_spot_l_foot
+
+- type: marking
+  id: WFMeridianMarkingHarpyClawsLFoot
+  bodyPart: LFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: harpy_claws_l_foot
+
+- type: marking
+  id: WFMeridianMarkingHarpyLowerLegsLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: harpy_lower_legs_l_foot
+
+- type: marking
+  id: WFMeridianMarkingHyenaLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: hyena_l_foot
+
+- type: marking
+  id: WFMeridianMarkingLoversGrayscaleLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: lovers_grayscale_l_foot
+
+- type: marking
+  id: WFMeridianMarkingPantherLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: panther_l_foot
+
+- type: marking
+  id: WFMeridianMarkingRaggedGrayscaleLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: ragged_grayscale_l_foot
+
+- type: marking
+  id: WFMeridianMarkingReddishGrayscaleLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: reddish_grayscale_l_foot
+
+- type: marking
+  id: WFMeridianMarkingSabresuneLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: sabresune_l_foot
+
+- type: marking
+  id: WFMeridianMarkingSplotchesLFoot
+  bodyPart: LFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: splotches_l_foot
+
+- type: marking
+  id: WFMeridianMarkingTigerStripeLFoot
+  bodyPart: LFoot
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_legs.rsi
+    state: tiger_stripe_l_foot

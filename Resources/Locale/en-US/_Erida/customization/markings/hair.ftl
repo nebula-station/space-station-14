@@ -1,0 +1,9 @@
+marking-ADTAllAyanami = Ayanami
+marking-ADTAllBubbleGum = Bubble Gum
+marking-ADTAllMavis = Mavis
+marking-ADTAllCloud = Cloud
+marking-ADTAllMorningHairstyle = Morning Hairstyle
+marking-ADTAllMorningHairstyle2 = Morning Hairstyle 2
+marking-ADTAllPonytail = Fluffy Ponytail
+marking-ADTAllPrinceCharming = Prince Charming
+marking-ADTAllShavedFemaleUnisex = Unisex with Bun

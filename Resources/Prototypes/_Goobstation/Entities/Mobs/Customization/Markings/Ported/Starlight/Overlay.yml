@@ -1,0 +1,15 @@
+- type: marking
+  id: VoxAllSeeing
+  bodyPart: Eyes
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/vox.rsi
+    state: allseeingeyes
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/vox.rsi
+    state: allseeingface
+
+- type: marking
+  id: VoxThirdEye
+  bodyPart: Eyes
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/vox.rsi
+    state: thirdeye

@@ -1,0 +1,88 @@
+- type: marking
+  id: HarpyColorableAsymagicalZetawing
+  bodyPart: RArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: asymagical_c_zetawing_layer1
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: asymagical_c_zetawing_layer2
+
+- type: marking
+  id: HarpyColorableDragobatZetawing
+  bodyPart: RArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: dragobat_c_zetawing_layer1
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: dragobat_c_zetawing_layer2
+
+- type: marking
+  id: HarpyColorlessZetawing
+  bodyPart: RArm
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+            color: "#964b00"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: colorless_zetawing
+
+- type: marking
+  id: HarpyDownwardZetawing
+  bodyPart: RArm
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+            color: "#964b00"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: downward_zetawing
+
+- type: marking
+  id: HarpyQuintetZetawing
+  bodyPart: RArm
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+            color: "#964b00"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: quintet_zetawing
+
+- type: marking
+  id: HarpySmallZetawing
+  bodyPart: RArm
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SimpleColoring
+            color: "#964b00"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: small_zetawing
+
+- type: marking
+  id: HarpyTricolorParrotZetawing
+  bodyPart: RArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: tricolor_parrot_zetawing_layer1
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: tricolor_parrot_zetawing_layer2
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_EE/Mobs/Customization/Harpy/harpy_wings.rsi
+    state: tricolor_parrot_zetawing_layer3

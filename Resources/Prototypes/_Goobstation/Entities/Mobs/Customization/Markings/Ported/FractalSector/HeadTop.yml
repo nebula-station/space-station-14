@@ -1,0 +1,20 @@
+- type: marking
+  id: wfbangslong
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/misc_markings.rsi
+    state: bangs_long
+
+- type: marking
+  id: wfbangsshort
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/misc_markings.rsi
+    state: bangs_short
+
+- type: marking
+  id: wgbangsmed
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/misc_markings.rsi
+    state: bangs_medium

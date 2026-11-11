@@ -1,0 +1,20 @@
+- type: marking
+  id: ArachnidCheliceraeBig
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Arachnid/headside.rsi
+    state: big
+
+- type: marking
+  id: ArachnidCheliceraeLongjaw
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Arachnid/headside.rsi
+    state: longjaw
+
+- type: marking
+  id: ArachnidCheliceraeSolifugid
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Arachnid/headside.rsi
+    state: solifugid

@@ -1,0 +1,29 @@
+- type: marking
+  id: DionaSunflower
+  bodyPart: HeadTop
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Diona/head.rsi
+    state: sunflower_base
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Diona/head.rsi
+    state: sunflower_eyes
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Diona/head.rsi
+    state: sunflower_petals1
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Diona/head.rsi
+    state: sunflower_petals2
+
+- type: marking
+  id: DionaSunflowerEyesUnshaded
+  bodyPart: HeadTop
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Impstation/_Impstation/Mobs/Customization/Diona/head.rsi
+    state: sunflower_eyes
+  shaders:
+    sunflower_eyes: unshaded

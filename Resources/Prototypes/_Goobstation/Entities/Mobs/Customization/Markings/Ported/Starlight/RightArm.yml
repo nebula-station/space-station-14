@@ -1,0 +1,13 @@
+- type: marking
+  id: BodyHairRightArm
+  bodyPart: RArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/human_body_hair.rsi
+    state: hair_right_arm
+
+- type: marking
+  id: ScarRightArm
+  bodyPart: RArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/Generic/scars.rsi
+    state: scar-arm-r

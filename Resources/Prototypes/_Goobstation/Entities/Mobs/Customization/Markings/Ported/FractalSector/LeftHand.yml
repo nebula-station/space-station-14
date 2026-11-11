@@ -1,0 +1,20 @@
+- type: marking
+  id: AurelianVoxRoboticHandLeft
+  bodyPart: LHand
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/aurelian_markings.rsi
+    state: robotic_hand_left
+
+- type: marking
+  id: AurelianVoxScutesArmsLeft
+  bodyPart: LHand
+  canBeDisplaced: false
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#bc7d3e"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/aurelian_markings.rsi
+    state: scutes_arms_left

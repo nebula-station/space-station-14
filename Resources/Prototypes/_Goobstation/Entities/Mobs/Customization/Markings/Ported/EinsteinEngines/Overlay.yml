@@ -1,0 +1,23 @@
+- type: marking
+  id: LegDollJointsTattooLeftIPCONLY
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_Impstation/Mobs/Customization/tattoos.rsi
+    state: l_leg_doll
+
+- type: marking
+  id: LegDollJointsTattooRightIPCONLY
+  bodyPart: LLeg
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_Impstation/Mobs/Customization/tattoos.rsi
+    state: r_leg_doll

@@ -1,0 +1,796 @@
+- type: marking
+  id: HumanHairAngel
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: angel
+
+- type: marking
+  id: HumanHairArataki
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: arataki
+
+- type: marking
+  id: HumanHairBobStrand
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: bob_strand
+
+- type: marking
+  id: HumanHairBobWithTail
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: bob_with_tail
+
+- type: marking
+  id: HumanHairBraidCrookedBangs
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: braid_crooked_bangs
+
+- type: marking
+  id: HumanHairDreadlocksShort
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: dreadlocks_short
+
+- type: marking
+  id: HumanHairDreadlocksShortTale
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: dreadlocks_short_tale
+
+- type: marking
+  id: HumanHairDreadlocksTale
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: dreadlocks_tale
+
+- type: marking
+  id: HumanHairGacha
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: gacha
+
+- type: marking
+  id: HumanHairGakupo
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: gakupo
+
+- type: marking
+  id: HumanHairHardMorning
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: hardmorning
+
+- type: marking
+  id: HumanHairHatsuneMiku
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: hatsunemiku
+
+- type: marking
+  id: HumanHairKasaneTeto
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: kasaneteto
+
+- type: marking
+  id: HumanHairLongStraight
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: long_straight
+
+- type: marking
+  id: HumanHairManBunBob
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: man_bun_bob
+
+- type: marking
+  id: HumanHairManLong
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: man_long
+
+- type: marking
+  id: HumanHairManMessy
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: manmessy
+
+- type: marking
+  id: HumanHairMessyBangsEyes
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: messybangseyes
+
+- type: marking
+  id: HumanHairMulletArcane
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: mullet
+
+- type: marking
+  id: HumanHairNeru
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: neru
+
+- type: marking
+  id: HumanHairPinkamina
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: pinkamina
+
+- type: marking
+  id: HumanHairPrincess
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: princess
+
+- type: marking
+  id: HumanHairShortMullet
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: short_mullet
+
+- type: marking
+  id: HumanHairSpider
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: spider
+
+- type: marking
+  id: HumanHairTale
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: tale
+
+- type: marking
+  id: HumanHairTaleBang
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: tale_bang
+
+- type: marking
+  id: HumanHairThreeBun
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: hairthreebun
+
+- type: marking
+  id: HumanHairThreeBunAlt
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: hairthreebunalt
+
+- type: marking
+  id: HumanHairTord
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: tord
+
+- type: marking
+  id: HumanHairTwilight
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: twilight
+
+- type: marking
+  id: HumanHairWolfcutF
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: wolfcut_f
+
+- type: marking
+  id: HumanHairWolfcutM
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: wolfcut_m
+
+- type: marking
+  id: MothBraid
+  bodyPart: Hair
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Moth/hairs.rsi
+    state: braid
+
+- type: marking
+  id: MothCurly
+  bodyPart: Hair
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Moth/hairs.rsi
+    state: curly
+
+- type: marking
+  id: MothNeat
+  bodyPart: Hair
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Moth/hairs.rsi
+    state: neat
+
+- type: marking
+  id: MothWild
+  bodyPart: Hair
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Moth/hairs.rsi
+    state: wild
+
+- type: marking
+  id: MothWildLong
+  bodyPart: Hair
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Moth/hairs.rsi
+    state: wild_long
+
+- type: marking
+  id: MothWings
+  bodyPart: Hair
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Moth/hairs.rsi
+    state: wings
+
+- type: marking
+  id: SlimeHairFoam
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/hair.rsi
+    state: hairfoam
+
+- type: marking
+  id: amazon
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_amazon
+
+- type: marking
+  id: astolfo
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_astolfo
+
+- type: marking
+  id: baum
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_baum
+
+- type: marking
+  id: beachwave
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_beachwave
+
+- type: marking
+  id: bluntbangs
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_bluntbangs
+
+- type: marking
+  id: bluntbangs_alt
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_bluntbangs_alt
+
+- type: marking
+  id: braided_front
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_braided_front
+
+- type: marking
+  id: braided_sidetail
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_braided_sidetail
+
+- type: marking
+  id: bunhead4
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_bunhead4
+
+- type: marking
+  id: combed
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_combed
+
+- type: marking
+  id: combedbob
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_combedbob
+
+- type: marking
+  id: cottonalt
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_cottonalt
+
+- type: marking
+  id: curly
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_curly
+
+- type: marking
+  id: diagonal_bangs
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_diagonal_bangs
+
+- type: marking
+  id: dreadlocks_long
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_dreadlocks_long
+
+- type: marking
+  id: fluffy_bangs
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_fluffy_bangs
+
+- type: marking
+  id: fluffy_short
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_fluffy_short
+
+- type: marking
+  id: fortuneteller
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_fortuneteller
+
+- type: marking
+  id: froofylong
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_froofylong
+
+- type: marking
+  id: geisha
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_geisha
+
+- type: marking
+  id: gentle_bun
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_gentle_bun
+
+- type: marking
+  id: glammetal
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_glammetal
+
+- type: marking
+  id: gloomy_long
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_gloomy_long
+
+- type: marking
+  id: grande
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_grande
+
+- type: marking
+  id: hairfre
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_hairfre
+
+- type: marking
+  id: halfcut
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_halfcut
+
+- type: marking
+  id: halfcut_rough
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_halfcut_rough
+
+- type: marking
+  id: halfshave_glamorous
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: halfshave_glamorous
+
+- type: marking
+  id: halfshave_long
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: halfshave_long
+
+- type: marking
+  id: halfshave_messy
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: halfshave_messy
+
+- type: marking
+  id: halfshave_messylong
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: halfshave_messylong
+
+- type: marking
+  id: holo_tuber
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_holo_tuber
+
+- type: marking
+  id: hyenamane
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_hyenamane
+
+- type: marking
+  id: inari
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: inari
+
+- type: marking
+  id: jay
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_jay
+
+- type: marking
+  id: jessica
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_jessica
+
+- type: marking
+  id: kajam
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_kajam
+
+- type: marking
+  id: longovereye_alt
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_longovereye_alt
+
+- type: marking
+  id: longsidepartstraight
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_longsidepartstraight
+
+- type: marking
+  id: longsmoothie
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: longsmoothie
+
+- type: marking
+  id: loose_slicked
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_loose_slicked
+
+- type: marking
+  id: mcsqueeb
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_mcsqueeb
+
+- type: marking
+  id: mediumbraid
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_mediumbraid
+
+- type: marking
+  id: mia
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_mia
+
+- type: marking
+  id: newyou
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_newyou
+
+- type: marking
+  id: phoenix
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_phoenix
+
+- type: marking
+  id: phoenix_half_shaven
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_phoenix_half_shaven
+
+- type: marking
+  id: poofy
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_poofy
+
+- type: marking
+  id: punktails
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_punktails
+
+- type: marking
+  id: quadcurls
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_quadcurls
+
+- type: marking
+  id: ring_tails
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_ring_tails
+
+- type: marking
+  id: rowbraid
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_rowbraid
+
+- type: marking
+  id: rowdualtail
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_rowdualtail
+
+- type: marking
+  id: royal_curls
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_royal_curls
+
+- type: marking
+  id: runner
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_runner
+
+- type: marking
+  id: sabitsuki
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_sabitsuki
+
+- type: marking
+  id: scully
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_scully
+
+- type: marking
+  id: short_tassles
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_short_tassles
+
+- type: marking
+  id: shortbob
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: shortbob
+
+- type: marking
+  id: shortside
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: shortside
+
+- type: marking
+  id: sleaze
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_sleaze
+
+- type: marking
+  id: slightlymessy
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_slightlymessy
+
+- type: marking
+  id: spicy
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_spicy
+
+- type: marking
+  id: stacy
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_stacy
+
+- type: marking
+  id: strict
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_strict
+
+- type: marking
+  id: toriyama
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_toriyama
+
+- type: marking
+  id: tri_bun_long
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_tri_bun_long
+
+- type: marking
+  id: twintailsberly
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: twintailsberly
+
+- type: marking
+  id: violet
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_violet
+
+- type: marking
+  id: violet_ponytail
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_violet_ponytail
+
+- type: marking
+  id: viper
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_viper
+
+- type: marking
+  id: volajupompless
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_volajupompless
+
+- type: marking
+  id: ziegler
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_ziegler
+
+- type: marking
+  id: zoey
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Orion/Mobs/Customization/human_hair.rsi
+    state: hair_zoey

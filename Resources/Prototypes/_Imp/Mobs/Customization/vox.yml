@@ -643,3 +643,15 @@
     state: sunandmoon
 
 # RArmExtension
+
+- type: marking
+  id: VoxTailSplit2
+  bodyPart: Tail
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi
+    state: split
+  coloring:
+    default:
+      type:
+        !type:SkinColoring

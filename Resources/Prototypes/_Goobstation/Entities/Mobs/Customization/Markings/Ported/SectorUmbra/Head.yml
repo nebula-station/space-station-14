@@ -1,0 +1,27 @@
+- type: marking
+  id: LizardHeadLEDVisor
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#808080"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/reptilian_parts.rsi
+    state: head_ledvisor_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/reptilian_parts.rsi
+    state: head_ledvisor_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/reptilian_parts.rsi
+    state: head_ledvisor_tertiary
+
+- type: marking
+  id: SyntheticScreen
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/synthetic.rsi
+    state: synthetic_screen

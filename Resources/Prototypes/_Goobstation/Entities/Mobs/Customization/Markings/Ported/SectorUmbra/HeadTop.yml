@@ -1,0 +1,6 @@
+- type: marking
+  id: LizardHeadAquaticFrills
+  bodyPart: Head
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_Umbra/Mobs/Customization/aquaticheadfrills.rsi
+    state: AquaticHeadFrills

@@ -1,0 +1,661 @@
+- type: marking
+  id: FoxBelly
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_Starlight/Mobs/Customization/vulpkanin/vulpkanin.rsi
+    state: vulp_belly-torso
+
+- type: marking
+  id: WFMeridianMarkingBackStripeChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: back_stripe_chest
+
+- type: marking
+  id: WFMeridianMarkingBellyOutlineChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: belly_outline_chest
+
+- type: marking
+  id: WFMeridianMarkingBellySlimAltTonageChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#555555"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: belly_slim_alt_tonage_chest
+
+- type: marking
+  id: WFMeridianMarkingBellySlimChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: belly_slim_chest
+
+- type: marking
+  id: WFMeridianMarkingBodyTonageChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#555555"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: body_tonage_chest
+
+- type: marking
+  id: WFMeridianMarkingBodyWeightChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: body_weight_chest
+
+- type: marking
+  id: WFMeridianMarkingBodyWeightChestFeminine
+  bodyPart: Chest
+  sexRestriction: [Female]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: body_weight_chest_f
+
+- type: marking
+  id: WFMeridianMarkingChitinChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: chitin_chest
+
+- type: marking
+  id: WFMeridianMarkingColorBandsChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: color_bands_chest
+
+- type: marking
+  id: WFMeridianMarkingCorgiChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: corgi_chest
+
+- type: marking
+  id: WFMeridianMarkingCorvidChestFeminine
+  bodyPart: Chest
+  sexRestriction: [Female]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: corvid_chest_f
+
+- type: marking
+  id: WFMeridianMarkingDalmatianChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: dalmatian_chest
+
+- type: marking
+  id: WFMeridianMarkingDatasharkChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: datashark_chest
+
+- type: marking
+  id: WFMeridianMarkingDogChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: dog_chest
+
+- type: marking
+  id: WFMeridianMarkingDogSpotChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: dog_spot_chest
+
+- type: marking
+  id: WFMeridianMarkingDrakeBoneChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#CCCCCC"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: drake_bone_chest
+
+- type: marking
+  id: WFMeridianMarkingEeveeChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: eevee_chest
+
+- type: marking
+  id: WFMeridianMarkingFennecChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: fennec_chest
+
+- type: marking
+  id: WFMeridianMarkingFennecChestFeminine
+  bodyPart: Chest
+  sexRestriction: [Female]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: fennec_chest_f
+
+- type: marking
+  id: WFMeridianMarkingFloofChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: floof_chest
+
+- type: marking
+  id: WFMeridianMarkingFoxChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: fox_chest
+
+- type: marking
+  id: WFMeridianMarkingFoxChestFeminine
+  bodyPart: Chest
+  sexRestriction: [Female]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: fox_chest_f
+
+- type: marking
+  id: WFMeridianMarkingGuilmonChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: guilmon_chest
+
+- type: marking
+  id: WFMeridianMarkingGuilmonMarkChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: guilmon_mark_chest
+
+- type: marking
+  id: WFMeridianMarkingHarlequinChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: harlequin_chest
+
+- type: marking
+  id: WFMeridianMarkingHarlequinChestFeminine
+  bodyPart: Chest
+  sexRestriction: [Female]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: harlequin_chest_f
+
+- type: marking
+  id: WFMeridianMarkingHarlequinReversedChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: harlequin_reversed_chest
+
+- type: marking
+  id: WFMeridianMarkingHarlequinReversedChestFeminine
+  bodyPart: Chest
+  sexRestriction: [Female]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: harlequin_reversed_chest_f
+
+- type: marking
+  id: WFMeridianMarkingHawkChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: hawk_chest
+
+- type: marking
+  id: WFMeridianMarkingHyenaChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: hyena_chest
+
+- type: marking
+  id: WFMeridianMarkingHyenaSideChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: hyena_side_chest
+
+- type: marking
+  id: WFMeridianMarkingJackalBackFurAccentsChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: jackal_back_fur_accents_chest
+
+- type: marking
+  id: WFMeridianMarkingJackalBackFurChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: jackal_back_fur_chest
+
+- type: marking
+  id: WFMeridianMarkingLightBellyChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: light_belly_chest
+
+- type: marking
+  id: WFMeridianMarkingLightbearerChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: lightbearer_chest
+
+- type: marking
+  id: WFMeridianMarkingPantherChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: panther_chest
+
+- type: marking
+  id: WFMeridianMarkingSabresuneChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: sabresune_chest
+
+- type: marking
+  id: WFMeridianMarkingSharkChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: shark_chest
+
+- type: marking
+  id: WFMeridianMarkingShepherdChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: shepherd_chest
+
+- type: marking
+  id: WFMeridianMarkingShepherdSpotChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: shepherd_spot_chest
+
+- type: marking
+  id: WFMeridianMarkingSimpleLightBellyChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: simple_light_belly_chest
+
+- type: marking
+  id: WFMeridianMarkingSimpleLightBellyChestFeminine
+  bodyPart: Chest
+  sexRestriction: [Female]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: simple_light_belly_chest_f
+
+- type: marking
+  id: WFMeridianMarkingSplotchesChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: splotches_chest
+
+- type: marking
+  id: WFMeridianMarkingTattooButterflyChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#112222"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: tattoo_butterfly_chest
+
+- type: marking
+  id: WFMeridianMarkingTattooHeartChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#112222"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: tattoo_heart_chest
+
+- type: marking
+  id: WFMeridianMarkingTattooInfinityChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#112222"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: tattoo_infinity_chest
+
+- type: marking
+  id: WFMeridianMarkingTattooTigerChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#112222"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: tattoo_tiger_chest
+
+- type: marking
+  id: WFMeridianMarkingTigerSpotChestFeminine
+  bodyPart: Chest
+  sexRestriction: [Female]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: tiger_spot_chest_f
+
+- type: marking
+  id: WFMeridianMarkingTigerStripeChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: tiger_stripe_chest
+
+- type: marking
+  id: WFMeridianMarkingTopSurgeryScarsChest
+  bodyPart: Chest
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: top_surgery_scars_chest
+
+- type: marking
+  id: WFMeridianMarkingWhiteflyGrayscaleChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: whitefly_grayscale_chest
+
+- type: marking
+  id: WFMeridianMarkingWolfChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: wolf_chest
+
+- type: marking
+  id: WFMeridianMarkingWolfSpotChest
+  bodyPart: Chest
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_chest.rsi
+    state: wolf_spot_chest

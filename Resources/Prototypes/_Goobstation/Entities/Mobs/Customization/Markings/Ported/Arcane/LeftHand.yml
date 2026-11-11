@@ -1,0 +1,127 @@
+- type: marking
+  id: AndroidScrapHandLeft
+  bodyPart: LHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/android.rsi
+    state: l_hand_scrap
+
+- type: marking
+  id: AndroidSyntHandLeft
+  bodyPart: LHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/android.rsi
+    state: l_hand_synt
+
+- type: marking
+  id: BS2LHand
+  bodyPart: LHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: bs2ipc_l_hand
+
+- type: marking
+  id: BSHLHand
+  bodyPart: LHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: bshipc_l_hand
+
+- type: marking
+  id: CyberlimbLHandHephaestusTitan
+  bodyPart: LHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    state: l_hand
+
+- type: marking
+  id: CyberlimbLHandMorpheus
+  bodyPart: LHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    state: l_hand
+
+- type: marking
+  id: CyberlimbLHandXion
+  bodyPart: LHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Cyberlimbs/xion.rsi
+    state: l_hand
+
+- type: marking
+  id: CyberlimbLHandZenghu
+  bodyPart: LHand
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    state: l_hand
+
+- type: marking
+  id: IPCLHand
+  bodyPart: LHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: ipc_l_hand
+
+- type: marking
+  id: IPSLHand
+  bodyPart: LHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: ips_l_hand
+
+- type: marking
+  id: MCGLHand
+  bodyPart: LHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: mcgipc_l_hand
+
+- type: marking
+  id: PawsitronsLHand
+  bodyPart: LHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: pawsitrons_l_hand
+
+- type: marking
+  id: SGMLHand
+  bodyPart: LHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: sgmipc_l_hand
+
+- type: marking
+  id: SteampunkLHand
+  bodyPart: LHand
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: staripc_l_hand
