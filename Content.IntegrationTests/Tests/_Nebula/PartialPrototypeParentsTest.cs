@@ -61,8 +61,8 @@ public sealed class PartialPrototypeParentsTest
 
                 foreach (var mapping in root.OfType<YamlMappingNode>())
                 {
-                    string? kind = null, id = null;
-                    YamlNode? parents = null;
+                    string kind = null, id = null;
+                    YamlNode parents = null;
                     var clear = false;
                     foreach (var (key, value) in mapping.Children)
                     {
