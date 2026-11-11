@@ -57,7 +57,7 @@
     currencyWhitelist:
     - EvolutionPoint
     balance:
-      EvolutionPoint: 6
+      EvolutionPoint: 10
   - type: MindRole
     antagPrototype: ErpChangeling
     exclusiveAntag: true

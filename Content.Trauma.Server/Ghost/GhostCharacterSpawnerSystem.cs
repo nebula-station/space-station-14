@@ -80,6 +80,10 @@ public sealed partial class GhostCharacterSpawnerSystem : EntitySystem
         {
             var user = session.UserId;
             profile = GetDesiredProfile(user);
+            // Nebula edit start
+            if (profile == null && ent.Comp.UseSelectedCharacter && _prefs.TryGetCachedPreferences(user, out var prefs))
+                profile = prefs.SelectedCharacter as HumanoidCharacterProfile;
+            // Nebula edit end
             if (profile?.Name is {} name)
             {
                 _character.AddSpawnedCharacter(user, name);
