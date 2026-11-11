@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+blood-cult-deconvert-speech-1 = Av'te Nar'Sie
+blood-cult-deconvert-speech-2 = Pa'lid Mors
+blood-cult-deconvert-speech-3 = INO INO ORA ANA
+blood-cult-deconvert-speech-4 = SAT ANA!
+blood-cult-deconvert-speech-5 = Daim'niodeis Arc'iai Le'eones
+blood-cult-deconvert-speech-6 = R'ge Na'sie
+blood-cult-deconvert-speech-7 = Diabo us Vo'iscum
+blood-cult-deconvert-speech-8 = Eld' Mon Nobis
+blood-cult-deconverted-message-others = Похоже, {$target} { GENDER($target) ->
+        [female] вернулась
+        [epicene] вернулись
+        [neuter] вернулось
+       *[other] вернулся
+    } к своей прежней вере!
+blood-cult-deconverted-message-self = Незнакомый белый свет вспыхивает в вашем разуме, очищая скверну Геометра и все воспоминания о служении ей.

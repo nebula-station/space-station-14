@@ -53,6 +53,11 @@
   eventType: Maintenance
 
 - type: secretPlusRule
+  id: GiantMushroomSpawnHorde
+  chaos: 200
+  eventType: HostilesSpawn
+
+- type: secretPlusRule
   id: GiftsEngineering
   chaos: -40
   eventType: FreeStuffUseful

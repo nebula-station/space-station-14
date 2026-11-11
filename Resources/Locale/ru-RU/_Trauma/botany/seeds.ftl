@@ -21,3 +21,5 @@ seeds-synthmeat-name = синтмясо
 seeds-balloonmelon-name = дыня-шар
 
 seeds-steelwheat-name = стальная пшеница
+
+seeds-plasticcap-name = пластиковая шляпка

@@ -51,9 +51,7 @@
     color: "#d64bc3"
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-  - type: Tag
-    tags:
-      - DroneUsable
+  # Nebula edit
 
 - type: entity
   parent: VendingMachine
@@ -86,6 +84,4 @@
     color: "#a625e2"
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-  - type: Tag
-    tags:
-      - DroneUsable
+  # Nebula edit

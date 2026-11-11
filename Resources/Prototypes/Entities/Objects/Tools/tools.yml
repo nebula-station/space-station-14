@@ -30,7 +30,6 @@
       path: /Audio/Items/wirecutter_drop.ogg
   - type: Tag
     tags:
-    - DroneUsable # Trauma
     - Wirecutter
   - type: Sprite
     sprite: Objects/Tools/wirecutters.rsi
@@ -121,7 +120,6 @@
       path: /Audio/Items/screwdriver_drop.ogg
   - type: Tag
     tags:
-    - DroneUsable # Trauma
     - Screwdriver
   - type: Sprite
     sprite: Objects/Tools/screwdriver.rsi
@@ -181,7 +179,6 @@
       path: /Audio/Items/wrench_drop.ogg
   - type: Tag
     tags:
-    - DroneUsable # Trauma
     - Wrench
   - type: Sprite
     sprite: Objects/Tools/wrench.rsi
@@ -261,7 +258,6 @@
         type: NetworkConfiguratorBoundUserInterface
   - type: Tag
     tags:
-      - DroneUsable # Trauma
       - Multitool
       - DoorElectronicsConfigurator
   - type: PhysicalComposition
@@ -352,7 +348,6 @@
   # </Trauma>
   - type: Tag
     tags:
-    - DroneUsable # Trauma
     - Powerdrill
   - type: Sprite
     sprite: Objects/Tools/drill.rsi
@@ -423,7 +418,6 @@
   # <Trauma>
   - type: Tag
     tags:
-    - DroneUsable
     - RCD # specifically not using the component for that because RPD also uses it
   # </Trauma>
   - type: RCD
