@@ -119,6 +119,11 @@ namespace Content.Shared.Chemistry
         U60 = 60,
         U120 = 120,
         All,
+        // Nebula start
+        U25 = 25,
+        U50 = 50,
+        U100 = 100,
+        // Nebula end
     }
 
     public enum ChemMasterDrawSource
