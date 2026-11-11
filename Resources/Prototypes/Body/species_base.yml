@@ -211,6 +211,7 @@
     healRate: 4
     speedModifierThresholds:
       Hard: 0.7
+  - type: Posing
   # Nebula end
 
 - type: entity
