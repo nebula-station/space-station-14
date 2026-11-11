@@ -49,3 +49,14 @@
     blacklist:
       tags:
       - NukeOpsUplink
+
+- type: listing
+  id: UplinkKravMagaImplanter
+  name: uplink-krav-maga-implanter-name
+  description: uplink-krav-maga-implanter-desc
+  icon: { sprite: _Goobstation/Clothing/Hands/Gloves/kravgloves.rsi, state: icon }
+  productEntity: KravMagaImplanter
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkImplants
