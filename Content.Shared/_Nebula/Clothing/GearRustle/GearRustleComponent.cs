@@ -16,5 +16,5 @@ public sealed partial class GearRustleComponent : Component
     /// Null disables the rustle for an inheriting prototype.
     /// </summary>
     [DataField(readOnly: true)]
-    public SoundSpecifier? Sound = new SoundCollectionSpecifier("SecGearRustle", AudioParams.Default.WithVolume(-15f));
+    public SoundSpecifier? Sound = new SoundCollectionSpecifier("SecGearRustle", AudioParams.Default.WithVolume(-12.7f));
 }

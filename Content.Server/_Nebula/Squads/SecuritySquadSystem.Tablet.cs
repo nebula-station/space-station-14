@@ -19,7 +19,7 @@ public sealed partial class SecuritySquadSystem
 {
     private static readonly EntProtoId BrigTimer = "BrigTimer";
     private static readonly TimeSpan CombatTime = TimeSpan.FromSeconds(5);
-    private static readonly TimeSpan EnemyMarkTime = TimeSpan.FromSeconds(3);
+    private static readonly TimeSpan EnemyMarkTime = TimeSpan.FromSeconds(6);
     private static readonly TimeSpan CombatWindow = TimeSpan.FromSeconds(2);
     private static readonly FixedPoint2 CombatDamage = 20;
     private static readonly TimeSpan TabletRefreshInterval = TimeSpan.FromSeconds(0.5);
