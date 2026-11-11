@@ -3,6 +3,11 @@
   id: BaseBeaker
   abstract: true
   components:
+  # Nebula start
+  - type: Solution
+    solution:
+      maxVol: 50
+  # Nebula end
   - type: Tag
     tags:
     - GlassBeaker
@@ -109,6 +114,11 @@
   id: BaseBeakerMetallic
   abstract: true
   components:
+  # Nebula start
+  - type: Solution
+    solution:
+      maxVol: 50
+  # Nebula end
   - type: Tag
     tags:
     - GlassBeaker
@@ -283,6 +293,11 @@
   description: Used to contain a large amount of chemicals or solutions.
   id: LargeBeaker
   components:
+  # Nebula start
+  - type: Solution
+    solution:
+      maxVol: 100
+  # Nebula end
   - type: Spillable
     solution: beaker
   - type: Sprite
@@ -313,6 +328,11 @@
   description: Used to contain chemicals or solutions without reactions.
   id: CryostasisBeaker
   components:
+  # Nebula start
+  - type: Solution
+    solution:
+      maxVol: 60
+  # Nebula end
   # <Trauma>
   - type: PhysicalComposition
     materialComposition:
@@ -334,6 +354,11 @@
   description: Powered by experimental bluespace technology.
   id: BluespaceBeaker
   components:
+  # Nebula start
+  - type: Solution
+    solution:
+      maxVol: 1000
+  # Nebula end
   # <Trauma>
   - type: PhysicalComposition
     materialComposition:

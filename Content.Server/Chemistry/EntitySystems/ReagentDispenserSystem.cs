@@ -116,6 +116,11 @@ namespace Content.Server.Chemistry.EntitySystems
 
         private void OnSetDispenseAmountMessage(Entity<ReagentDispenserComponent> reagentDispenser, ref ReagentDispenserSetDispenseAmountMessage message)
         {
+            // Nebula start
+            if (!Enum.IsDefined(message.ReagentDispenserDispenseAmount))
+                return;
+            // Nebula end
+
             reagentDispenser.Comp.DispenseAmount = message.ReagentDispenserDispenseAmount;
             UpdateUiState(reagentDispenser);
             ClickSound(reagentDispenser);
@@ -138,16 +143,23 @@ namespace Content.Server.Chemistry.EntitySystems
             if (outputContainer is not { Valid: true } || !_solutionContainerSystem.TryGetFitsInDispenser(outputContainer.Value, out var solution, out _))
                 return;
 
-            if (_solutionContainerSystem.TryGetDrainableSolution(storedContainer, out var src, out _) &&
-                _solutionContainerSystem.TryGetRefillableSolution(outputContainer.Value, out var dst, out _))
+            // Nebula start
+            if (_solutionContainerSystem.TryGetDrainableSolution(storedContainer, out var src, out var sourceSolution) &&
+                _solutionContainerSystem.TryGetRefillableSolution(outputContainer.Value, out var dst, out var targetSolution))
             {
+                var requested = (FixedPoint2) (int) reagentDispenser.Comp.DispenseAmount;
+                var amount = FixedPoint2.Min(requested, FixedPoint2.Min(sourceSolution.Volume, targetSolution.AvailableVolume));
+                if (amount <= FixedPoint2.Zero)
+                    return;
+
                 // force open container, if applicable, to avoid confusing people on why it doesn't dispense
                 _openable.SetOpen(storedContainer, true);
                 _solutionTransferSystem.Transfer(new SolutionTransferData(reagentDispenser,
                         storedContainer, src.Value,
                         outputContainer.Value, dst.Value,
-                        (int)reagentDispenser.Comp.DispenseAmount));
+                        amount));
             }
+            // Nebula end
 
             UpdateUiState(reagentDispenser);
             ClickSound(reagentDispenser);
