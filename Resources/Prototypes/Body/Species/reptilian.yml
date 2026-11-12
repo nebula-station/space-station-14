@@ -110,6 +110,11 @@
           32:
             sprite: Mobs/Species/Reptilian/displacement.rsi
             state: mask
+      outerClothing: # Nebula - Monolith, suits follow the legs like jumpsuits and shoes
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Reptilian/displacement.rsi
+            state: outerClothing
     displacements:
       # <Trauma>
       shoes:
@@ -133,6 +138,11 @@
           32:
             sprite: Mobs/Species/Reptilian/displacement.rsi
             state: mask
+      outerClothing: # Nebula - Monolith, suits follow the legs like jumpsuits and shoes
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Reptilian/displacement.rsi
+            state: outerClothing
   - type: InitialBody
     organs:
       Torso: OrganReptilianTorso

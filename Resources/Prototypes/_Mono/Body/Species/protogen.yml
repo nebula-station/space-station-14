@@ -1,0 +1,283 @@
+# Ported from Monolith-DS by Nebula, converted to the organ based body.
+
+- type: markingsGroup
+  parent: Undergarments
+  id: Protogen
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 6
+      required: true
+      default: [ ProtogenEars ]
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: true
+      default: [ ProtogenVisor ]
+    enum.HumanoidVisualLayers.SnoutCover:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Face:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Eyes:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ ProtogenTail ]
+    enum.HumanoidVisualLayers.TailOverlay:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Wings:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.WingsBehind:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Overlay:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Special:
+      limit: 6
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceProtogen
+  categories: [ HideSpawnMenu ]
+  name: protogen appearance
+  components:
+  - type: Inventory
+    # protogens are human shaped, only female jumpsuits, the visor under masks and helmets need displacement
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _Mono/Mobs/Species/Protogen/displacement.rsi
+            state: jumpsuit-female
+      mask:
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Protogen/displacement.rsi
+            state: mask
+      head: # Nebula - Monolith, helmets sit over the visor
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Protogen/displacement.rsi
+            state: head
+    displacements:
+      mask:
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Protogen/displacement.rsi
+            state: mask
+      head: # Nebula - Monolith, helmets sit over the visor
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Protogen/displacement.rsi
+            state: head
+  - type: InitialBody
+    organs:
+      Torso: OrganProtogenTorso
+      Head: OrganProtogenHead
+      Tail: OrganProtogenTail
+      ArmLeft: OrganProtogenArmLeft
+      ArmRight: OrganProtogenArmRight
+      HandRight: OrganProtogenHandRight
+      HandLeft: OrganProtogenHandLeft
+      LegLeft: OrganProtogenLegLeft
+      LegRight: OrganProtogenLegRight
+      FootLeft: OrganProtogenFootLeft
+      FootRight: OrganProtogenFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganHumanHeart
+      Stomach: OrganHumanStomach
+      Liver: OrganHumanLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Protogen
+
+- type: entity
+  parent:
+  - AppearanceProtogen
+  - BaseSpeciesMobOrganic
+  id: MobProtogen
+  name: Urist McHardDrive
+  components:
+  - type: Damageable
+    damageModifierSet: Protogen
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+  - type: Speech
+    speechSounds: Pai
+    allowedEmotes: [ Beep, Ping, Buzz ]
+  - type: Vocal
+    emoteSounds: UnisexIPC
+  - type: TypingIndicator
+    proto: robot
+  - type: Deathgasp
+    prototype: SiliconDeathgasp
+    needsCritical: false
+  - type: HarpySinger
+  - type: Instrument
+    allowPercussion: true
+    allowProgramChange: true
+    program: 52
+  - type: SwappableInstrument
+    instrumentList:
+      "Daw": { 0: 0 }
+  - type: LanguageSpeaker
+    speaks:
+    - TauCetiBasic
+    understands:
+    - TauCetiBasic
+    - RobotTalk
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.25
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganProtogen
+  abstract: true
+  suffix: protogen
+
+- type: entity
+  parent: OrganProtogen
+  id: OrganProtogenExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Mono/Mobs/Species/Protogen/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Mono/Mobs/Species/Protogen/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Protogen
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorsoTailed, OrganProtogenExternal ]
+  id: OrganProtogenTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganProtogenExternal ]
+  id: OrganProtogenHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.HeadSide
+    - enum.HumanoidVisualLayers.Snout
+    dependentHidingLayers:
+      enum.HumanoidVisualLayers.Snout:
+      - enum.HumanoidVisualLayers.SnoutCover
+
+# The tail is drawn by markings. The torso has no hideable Tail layer, so suits never hide it.
+- type: entity
+  parent: [ OrganBaseTail, OrganProtogenExternal ]
+  id: OrganProtogenTail
+  components:
+  - type: Sprite
+    sprite: _Mono/Mobs/Customization/protogen_parts.rsi
+    state: tail_protogen
+  - type: VisualOrgan
+    data:
+      sprite: _Trauma/empty.rsi
+      state: empty
+  - type: OrganComponents
+    onAdd:
+    - type: Wagging
+      action: ActionToggleWaggingVulpkanin
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganProtogenExternal ]
+  id: OrganProtogenArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganProtogenExternal ]
+  id: OrganProtogenArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganProtogenExternal ]
+  id: OrganProtogenHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganProtogenExternal ]
+  id: OrganProtogenHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganProtogenExternal ]
+  id: OrganProtogenLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganProtogenExternal ]
+  id: OrganProtogenLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganProtogenExternal ]
+  id: OrganProtogenFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganProtogenExternal ]
+  id: OrganProtogenFootRight

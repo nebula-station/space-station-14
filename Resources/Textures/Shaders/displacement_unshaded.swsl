@@ -5,6 +5,8 @@ uniform highp float displacementSize;
 uniform highp vec4 displacementUV;
 // Nebula
 uniform highp float displacementScale;
+// Nebula - size of the displacement map in texels
+uniform highp float displacementTexels;
 
 varying highp vec2 displacementCoord;
 
@@ -14,12 +16,19 @@ void vertex() {
 
 void fragment() {
     // Nebula
-    if (displacementCoord.x < 0.0 || displacementCoord.x > 1.0 || displacementCoord.y < 0.0 || displacementCoord.y > 1.0) {
+    // Both lookups go to the center of the same texel. Interpolated separately they can land on
+    // different sides of a texel edge, which shows as flickering seams when moving or zooming.
+    highp vec2 texel = UV / TEXTURE_PIXEL_SIZE;
+    highp vec2 snap = floor(texel) + vec2(0.5) - texel;
+    highp vec2 uv = UV + snap * TEXTURE_PIXEL_SIZE;
+    highp vec2 coord = displacementCoord + snap / displacementTexels;
+
+    if (coord.x < 0.0 || coord.x > 1.0 || coord.y < 0.0 || coord.y > 1.0) {
         COLOR = zTexture(UV);
     } else {
-        highp vec4 displacementSample = texture2D(displacementMap, mix(displacementUV.xy, displacementUV.zw, displacementCoord));
+        highp vec4 displacementSample = texture2D(displacementMap, mix(displacementUV.xy, displacementUV.zw, coord));
         highp vec2 displacementValue = (displacementSample.xy - vec2(128.0 / 255.0)) / (1.0 - 128.0 / 255.0);
-        COLOR = zTexture(UV + displacementValue * TEXTURE_PIXEL_SIZE * displacementSize * vec2(1.0, -1.0));
+        COLOR = zTexture(uv + displacementValue * TEXTURE_PIXEL_SIZE * displacementSize * vec2(1.0, -1.0));
         COLOR.a *= displacementSample.a;
     }
 }

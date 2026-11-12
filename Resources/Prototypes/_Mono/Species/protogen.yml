@@ -1,0 +1,17 @@
+# Ported from Monolith-DS by Nebula
+
+- type: species
+  id: Protogen
+  name: species-name-protogen
+  roundStart: true
+  prototype: MobProtogen
+  dollPrototype: AppearanceProtogen
+  defaultSkinTone: "#ffda93"
+  skinColoration: Hues
+  naming: FirstLast
+  defaultSoundsBySex:
+  - UnisexIPC
+  - UnisexIPC
+  - UnisexIPC
+  voices:
+  - UnisexIPC

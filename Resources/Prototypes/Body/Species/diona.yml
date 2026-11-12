@@ -160,6 +160,7 @@
       methods: [Touch]
       effects:
       - !type:WashCreamPie
+      - !type:WashCumOverlay # Nebula
     - reagents: [ PlantBGone ]
       methods: [ Touch ]
       effects:

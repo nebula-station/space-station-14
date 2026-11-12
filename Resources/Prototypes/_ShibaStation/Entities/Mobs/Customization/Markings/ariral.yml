@@ -37,3 +37,34 @@
     state: tail
   - sprite: _ShibaStation/Mobs/Customization/Ariral/tail_markings.rsi
     state: tail_long
+
+# Nebula start - wagging variants ported from Monolith, applied only by the wag toggle
+- type: marking
+  id: AriralTailAnimated
+  bodyPart: Tail
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _LuaM/Mobs/Species/Ariral/tail_markings.rsi
+    state: tail_wagging
+
+- type: marking
+  id: AriralTailFluffAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: _LuaM/Mobs/Species/Ariral/tail_markings.rsi
+    state: tail_wagging
+  - sprite: _LuaM/Mobs/Species/Ariral/tail_markings.rsi
+    state: tail_overlay_wagging
+
+- type: marking
+  id: AriralTailBigFluffAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: _LuaM/Mobs/Species/Ariral/tail_markings.rsi
+    state: tail_wagging
+  - sprite: _LuaM/Mobs/Species/Ariral/tail_markings.rsi
+    state: tail_long_wagging
+# Nebula end

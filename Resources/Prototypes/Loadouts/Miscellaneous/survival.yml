@@ -22,6 +22,18 @@
     - Moth
     - Reptilian
     - Vulpkanin
+    # Nebula start - oxygen breathing species that were missing, they spawned without a survival box
+    - Felinid
+    - Oni
+    - Tajaran
+    - Demon
+    - Ariral
+    - Harpy
+    - Feroxi
+    - Shadowkin
+    - Protogen
+    - Goblin
+    # Nebula end
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

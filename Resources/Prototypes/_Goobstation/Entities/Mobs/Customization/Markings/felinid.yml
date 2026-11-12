@@ -6,3 +6,13 @@
     state: base_fox_tail
   - sprite: _Goobstation/Mobs/Customization/Felinid/foxtail.rsi
     state: base_fox_tail_tip
+
+# Nebula - wagging variant ported from Monolith, applied only by the wag toggle
+- type: marking
+  id: FelinidTailFoxtailAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: Mobs/Customization/Vulpkanin/tail_markings.rsi
+    state: vulp-wagging
+  - sprite: Mobs/Customization/Vulpkanin/tail_markings.rsi
+    state: vulp-wagging-tip

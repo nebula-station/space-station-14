@@ -45,6 +45,7 @@ public sealed partial class MeleeWeaponSystem : SharedMeleeWeaponSystem
     public override void Initialize()
     {
         base.Initialize();
+        UpdatesAfter.Add(typeof(Robust.Client.GameObjects.TransformSystem)); // Nebula - Monolith, arcs follow the user after its transform updated
 
         SubscribeNetworkEvent<MeleeLungeEvent>(OnMeleeLunge);
         UpdatesOutsidePrediction = true;

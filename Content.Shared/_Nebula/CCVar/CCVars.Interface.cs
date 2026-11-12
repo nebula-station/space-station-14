@@ -36,13 +36,13 @@ public sealed partial class NCCVars
     ///     Whether the lobby shows the background picked by the server for the round.
     /// </summary>
     public static readonly CVarDef<bool> LobbyBackgroundRandom =
-        CVarDef.Create("nebula.ui.lobby_background_random", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("nebula.ui.lobby_background_random", false, CVar.CLIENTONLY | CVar.ARCHIVE); // Nebula - the animated LuaMSky2 is shown by default
 
     /// <summary>
     ///     Lobby background prototype shown while <see cref="LobbyBackgroundRandom"/> is off.
     /// </summary>
     public static readonly CVarDef<string> LobbyBackground =
-        CVarDef.Create("nebula.ui.lobby_background", "", CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("nebula.ui.lobby_background", "LuaMSky2", CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
     ///     Whether lobby players can open the list of jobs the ready players want.

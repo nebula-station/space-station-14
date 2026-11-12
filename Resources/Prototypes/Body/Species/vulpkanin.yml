@@ -17,8 +17,8 @@
       default: [ VulpEar ]
     enum.HumanoidVisualLayers.Snout:
       limit: 6
-      required: true
-      default: [ VulpSnout ]
+      required: false # Nebula - the Monolith head already has a snout
+      blacklist: [ VulpSnout ] # Nebula - the full snout drew a second one over it, patterns are still allowed
     enum.HumanoidVisualLayers.SnoutCover:
       limit: 6
       required: false
@@ -121,52 +121,49 @@
     species: Vulpkanin
   - type: Inventory
     speciesId: vulpkanin
+    # Nebula - Monolith sprites and displacement maps
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Vulpkanin/displacement.rsi
+            state: jumpsuit-female
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/displacement.rsi
+            state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Reptilian/displacement.rsi
+            state: outerClothing
+      mask:
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Vulpkanin/displacement.rsi
+            state: mask
     displacements:
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            sprite: _LuaM/Mobs/Species/Vulpkanin/displacement.rsi
             state: jumpsuit
-      back:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: back
-      outerClothing:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: outerwear
-      gloves:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: hand
       shoes:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            sprite: _White/Mobs/Species/displacement.rsi
             state: shoes
-      head:
+      outerClothing:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: head
-      neck:
+            sprite: _LuaM/Mobs/Species/Reptilian/displacement.rsi
+            state: outerClothing
+      mask:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: neck
-      eyes:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: eyes
-      belt:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: belt
+            sprite: _LuaM/Mobs/Species/Vulpkanin/displacement.rsi
+            state: mask
 
 - type: entity
   parent:
@@ -285,15 +282,19 @@
   id: OrganVulpkaninExternal
   abstract: true
   components:
+  # Nebula - Monolith body sprites, eyes keep the upstream rsi since it has the eyes state
   - type: Sprite
-    sprite: Mobs/Species/Vulpkanin/parts.rsi
+    sprite: _LuaM/Mobs/Species/Vulpkanin/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _LuaM/Mobs/Species/Vulpkanin/parts.rsi
 
 - type: entity
   parent: [ OrganBaseTorsoSexed, OrganBaseTorsoTailed, OrganVulpkaninExternal ] # Trauma - Tailed torso
   id: OrganVulpkaninTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganVulpkaninExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganVulpkaninExternal ] # Nebula - sexed Monolith head
   id: OrganVulpkaninHead
   components:
   - type: VisualOrganMarkings
@@ -310,7 +311,7 @@
       Hair:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            sprite: _LuaM/Mobs/Species/Vulpkanin/displacement.rsi # Nebula - Monolith
             state: hair
 
 - type: entity

@@ -5,6 +5,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Shared.Sprinting;
+using Content.Shared.Movement.Components; // Nebula - Monolith
 using Robust.Client.Animations;
 using Robust.Shared.Timing;
 
@@ -64,6 +65,10 @@ public sealed partial class SprintingSystem : SharedSprintingSystem
             if (!component.IsSprinting
                 || !_timing.IsFirstTimePredicted
                 || _timing.CurTime - component.LastStep < component.TimeBetweenSteps)
+                continue;
+
+            // Nebula - Monolith, no dust clouds while standing still with sprint held
+            if (TryComp<InputMoverComponent>(uid, out var mover) && !mover.HasDirectionalMovement)
                 continue;
 
             var ent = Spawn(component.StepAnimation, Transform(uid).Coordinates);

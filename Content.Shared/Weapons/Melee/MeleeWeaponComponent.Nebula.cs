@@ -11,4 +11,16 @@ public sealed partial class MeleeWeaponComponent
     /// </summary>
     [DataField]
     public bool ResistanceBypassLightOnly;
+
+    /// <summary>
+    /// How far from the user the swing and thrust animations reach, in tiles. Ported from Monolith.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public float AnimationOffset = 1f;
+
+    /// <summary>
+    /// Alternates the wide swing direction on every attack, like Monolith does.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool AlternateSwing = true;
 }

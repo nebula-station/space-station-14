@@ -521,3 +521,38 @@
   sprites:
   - sprite: _Nebula/Mobs/Customization/Demon/demondrake.rsi
     state: r_drake_arm
+
+# Nebula - wagging variants ported from Monolith (Wega), applied only by the wag toggle
+- type: marking
+  id: DemonTailDefaultAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: _Nebula/Mobs/Species/Demon/tails_wagging.rsi
+    state: tail_waggin
+
+- type: marking
+  id: DemonTail1Animated
+  bodyPart: Tail
+  sprites:
+  - sprite: _Nebula/Mobs/Species/Demon/tails_wagging.rsi
+    state: tail_waggin
+  - sprite: _Nebula/Mobs/Species/Demon/tails_wagging.rsi
+    state: demon_tail_waggin
+
+- type: marking
+  id: DemonTailLongAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: _Nebula/Mobs/Species/Demon/tails_wagging.rsi
+    state: tail_waggin
+  - sprite: _Nebula/Mobs/Species/Demon/tails_wagging.rsi
+    state: long_waggin
+
+- type: marking
+  id: DemonTailUpAnimated
+  bodyPart: Tail
+  sprites:
+  - sprite: _Nebula/Mobs/Species/Demon/tails_wagging.rsi
+    state: tail_waggin
+  - sprite: _Nebula/Mobs/Species/Demon/tails_wagging.rsi
+    state: up_waggin

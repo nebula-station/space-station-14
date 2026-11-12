@@ -85,28 +85,49 @@
   components:
   - type: Inventory
     speciesId: reptilian
+    # Nebula - displacement maps ported from Monolith
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Reptilian/displacement.rsi
+            sprite: _LuaM/Mobs/Species/Ariral/displacement.rsi
             state: jumpsuit-female
       shoes:
         sizeMaps:
           32:
-            sprite: _White/Mobs/Species/Reptilian/displacement.rsi
+            sprite: _White/Mobs/Species/displacement.rsi
             state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Ariral/displacement.rsi
+            state: outerClothing
+      head:
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Ariral/displacement.rsi
+            state: head
     displacements:
       jumpsuit:
         sizeMaps:
           32:
-            sprite: _White/Mobs/Species/Reptilian/displacement.rsi
+            sprite: _LuaM/Mobs/Species/Ariral/displacement.rsi
             state: jumpsuit
       shoes:
         sizeMaps:
           32:
-            sprite: _White/Mobs/Species/Reptilian/displacement.rsi
+            sprite: _White/Mobs/Species/displacement.rsi
             state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Ariral/displacement.rsi
+            state: outerClothing
+      head:
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Ariral/displacement.rsi
+            state: head
   - type: InitialBody
     organs:
       Torso: OrganAriralTorso
@@ -244,6 +265,10 @@
     data:
       sprite: _Trauma/empty.rsi
       state: empty
+  - type: OrganComponents # Nebula - tail wagging, ported from Monolith
+    onAdd:
+    - type: Wagging
+      action: ActionToggleWaggingVulpkanin
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganAriralExternal ]

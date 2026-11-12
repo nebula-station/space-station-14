@@ -1,0 +1,20 @@
+reagent-name-semen = сперма
+reagent-description-semen = Продукт чьего-то производства...
+
+reagent-name-femcum = женские выделения
+reagent-description-femcum = Продукт чьего-то производства...
+
+ent-PuddleSemen = лужа
+    .desc = Липкая лужица на полу.
+
+ent-PuddleFemCum = лужа
+    .desc = Липкая лужица на полу.
+
+ent-EffectCumWall = пятно
+    .desc = Липкое пятно.
+
+entity-effect-guidebook-wash-cum-overlay =
+    { $chance ->
+        [1] Смывает
+        *[other] смыть
+    } липкие пятна

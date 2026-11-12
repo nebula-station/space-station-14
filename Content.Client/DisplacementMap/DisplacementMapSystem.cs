@@ -99,8 +99,8 @@ public sealed partial class DisplacementMapSystem : EntitySystem
             }
 
             // Nebula
-            if (layerSize != mapSize)
-                SetDisplacementScale(sprite, index, data, (float) layerSize / mapSize);
+            if (layerSize != mapSize || mapSize != EyeManager.PixelsPerMeter)
+                SetDisplacementScale(sprite, index, data, (float) layerSize / mapSize, mapSize);
         }
 
         var displacementLayer = _serialization.CreateCopy(displacementDataLayer, notNullableOverride: true);
@@ -128,7 +128,7 @@ public sealed partial class DisplacementMapSystem : EntitySystem
     }
 
     // Nebula start
-    private void SetDisplacementScale(Entity<SpriteComponent> sprite, int index, DisplacementData data, float scale)
+    private void SetDisplacementScale(Entity<SpriteComponent> sprite, int index, DisplacementData data, float scale, int mapSize)
     {
         if (sprite.Comp[index] is not SpriteComponent.Layer { Shader: { } shader } layer)
             return;
@@ -136,6 +136,7 @@ public sealed partial class DisplacementMapSystem : EntitySystem
         if (MarkingGradientSystem.IsGradientLayer(layer))
         {
             shader.SetParameter("displacementScale", scale);
+            shader.SetParameter("displacementTexels", (float) mapSize);
             return;
         }
 
@@ -144,6 +145,7 @@ public sealed partial class DisplacementMapSystem : EntitySystem
 
         var scaled = shader.Duplicate();
         scaled.SetParameter("displacementScale", scale);
+        scaled.SetParameter("displacementTexels", (float) mapSize);
         sprite.Comp.LayerSetShader(index, scaled, layer.ShaderPrototype?.Id);
     }
     // Nebula end

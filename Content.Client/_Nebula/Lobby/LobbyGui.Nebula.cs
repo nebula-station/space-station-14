@@ -49,6 +49,11 @@ public sealed partial class LobbyGui
     public ServerInfo ServerInfo => NebulaLobby.ServerInfo;
     public RichTextLabel PlaytimeComment => NebulaLobby.PlaytimeComment;
     public RichTextLabel LobbySong => NebulaLobby.LobbySong;
+    public ShapedButton PreviousSongButton => NebulaLobby.PreviousSongButton;
+    public ShapedButton NextSongButton => NebulaLobby.NextSongButton;
+    public ShapedButton PauseSongButton => NebulaLobby.PauseSongButton;
+    public ShapedButton PreviousBackgroundButton => NebulaLobby.PreviousBackgroundButton;
+    public ShapedButton NextBackgroundButton => NebulaLobby.NextBackgroundButton;
     public RichTextLabel LobbyBackground => NebulaLobby.LobbyBackground;
     public RichTextLabel LobbyMessageLabel => NebulaLobby.LobbyMessageLabel;
 }

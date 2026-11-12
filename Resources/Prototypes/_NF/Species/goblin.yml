@@ -1,0 +1,261 @@
+# Goblins, ported from Frontier (sector-frontier-14-archive) by Nebula.
+# Converted from the old body/humanoidBaseSprite format to the organ based body.
+
+- type: species
+  id: Goblin
+  name: species-name-goblin
+  roundStart: true
+  prototype: MobGoblin
+  dollPrototype: AppearanceGoblin
+  defaultSkinTone: "#486a1b"
+  skinColoration: HumanToned
+  maleFirstNames: NamesGoblinFirstMale
+  femaleFirstNames: NamesGoblinFirstFemale
+  lastNames: NamesGoblinLast
+  naming: FirstLast
+  defaultSoundsBySex:
+  - MaleGoblin
+  - FemaleGoblin
+  - MaleGoblin
+  voices:
+  - MaleGoblin
+  - FemaleGoblin
+  # goblins are small, Frontier drew them at 0.86 x 0.75
+  minHeight: 0.70
+  defaultHeight: 0.75
+  maxHeight: 0.85
+  minWidth: 0.80
+  defaultWidth: 0.86
+  maxWidth: 0.95
+
+- type: markingsGroup
+  parent: Undergarments
+  id: Goblin
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ GoblinEarsBasic ]
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.SnoutCover:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Face:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Eyes:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.TailOverlay:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Wings:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.WingsBehind:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Overlay:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.Special:
+      limit: 6
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceGoblin
+  categories: [ HideSpawnMenu ]
+  name: goblin appearance
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: InitialBody
+    organs:
+      Torso: OrganGoblinTorso
+      Head: OrganGoblinHead
+      ArmLeft: OrganGoblinArmLeft
+      ArmRight: OrganGoblinArmRight
+      HandRight: OrganGoblinHandRight
+      HandLeft: OrganGoblinHandLeft
+      LegLeft: OrganGoblinLegLeft
+      LegRight: OrganGoblinLegRight
+      FootLeft: OrganGoblinFootLeft
+      FootRight: OrganGoblinFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganHumanHeart
+      Stomach: OrganHumanStomach
+      Liver: OrganHumanLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Goblin
+
+- type: entity
+  parent:
+  - AppearanceGoblin
+  - BaseSpeciesMobOrganic
+  id: MobGoblin
+  name: Urist McGoblin
+  components:
+  - type: Damageable
+    damageModifierSet: Goblin
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 3
+  - type: Speech
+    speechSounds: Alto
+    speechVerb: Goblin
+    allowedEmotes:
+    - GoblinMutter
+    - GoblinThroatSinging
+    - Hiss
+  - type: Vocal
+    emoteSounds: MaleGoblin
+  - type: GoblinAccent
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 1
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.85
+      80: 0.75
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganGoblin
+  abstract: true
+  suffix: goblin
+
+- type: entity
+  parent: OrganGoblin
+  id: OrganGoblinExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _NF/Mobs/Species/Goblin/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _NF/Mobs/Species/Goblin/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Goblin
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganGoblinExternal ]
+  id: OrganGoblinTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganGoblinExternal ]
+  id: OrganGoblinHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.Snout
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganGoblinExternal ]
+  id: OrganGoblinArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganGoblinExternal ]
+  id: OrganGoblinArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganGoblinExternal ]
+  id: OrganGoblinHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganGoblinExternal ]
+  id: OrganGoblinHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganGoblinExternal ]
+  id: OrganGoblinLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganGoblinExternal ]
+  id: OrganGoblinLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganGoblinExternal ]
+  id: OrganGoblinFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganGoblinExternal ]
+  id: OrganGoblinFootRight
+
+- type: damageModifierSet
+  id: Goblin
+  coefficients:
+    Blunt: 1.2
+    Slash: 1.2
+    Piercing: 1.2
+    Poison: 0.75
+    Caustic: 0.9
+

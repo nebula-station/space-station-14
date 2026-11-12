@@ -9,6 +9,7 @@ using Robust.Client;
 using Robust.Client.ResourceManagement;
 using Robust.Client.State;
 using Robust.Shared.Audio;
+using Robust.Shared.Audio.Components; // Nebula - Monolith
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -40,6 +41,8 @@ public sealed partial class ContentAudioSystem
     /// Short info about lobby soundtrack currently playing. Is null if soundtrack is not playing.
     /// </summary>
     private LobbySoundtrackInfo? _lobbySoundtrackInfo;
+
+    private TimeSpan? _lobbyPausedAt; // Nebula - Monolith, lobby music pause
 
     private Action<LobbySoundtrackChangedEvent>? _lobbySoundtrackChanged;
 
@@ -160,10 +163,10 @@ public sealed partial class ContentAudioSystem
     /// <param name="playlist">Array of soundtrack filenames for lobby playlist.</param>
     private void StartLobbyMusic(string[] playlist)
     {
+        _lobbyPlaylist = playlist; // Nebula - Monolith, keep the playlist so tracks can be switched after enabling music
         if (_lobbySoundtrackInfo != null || !_configManager.GetCVar(CCVars.LobbyMusicEnabled))
             return;
 
-        _lobbyPlaylist = playlist;
         if (_lobbyPlaylist.Length == 0)
         {
             return;
@@ -176,6 +179,7 @@ public sealed partial class ContentAudioSystem
     {
         if (!_resourceCache.TryGetResource(new ResPath(soundtrackFilename), out AudioResource? audio))
         {
+            Log.Warning($"Failed to load lobby soundtrack {soundtrackFilename}"); // Nebula
             return;
         }
 
@@ -193,6 +197,7 @@ public sealed partial class ContentAudioSystem
             return;
         }
 
+        _lobbyPausedAt = null; // Nebula - Monolith
         var nextTrackOn = _timing.CurTime + audio.AudioStream.Length;
         _lobbySoundtrackInfo = new LobbySoundtrackInfo(soundtrackFilename, nextTrackOn, playResult.Value.Entity);
 
@@ -207,8 +212,11 @@ public sealed partial class ContentAudioSystem
             return;
         }
 
-        _audio.Stop(_lobbySoundtrackInfo.MusicStreamEntityUid);
+        // Nebula - Monolith, delete the stream right away, _audio.Stop only queues it and skips non first-time predicted calls
+        if (Exists(_lobbySoundtrackInfo.MusicStreamEntityUid))
+            Del(_lobbySoundtrackInfo.MusicStreamEntityUid);
         _lobbySoundtrackInfo = null;
+        _lobbyPausedAt = null; // Nebula - Monolith
         var lobbySongChangedEvent = new LobbySoundtrackChangedEvent();
         _lobbySoundtrackChanged?.Invoke(lobbySongChangedEvent);
     }
@@ -245,13 +253,63 @@ public sealed partial class ContentAudioSystem
     {
         if (
             _lobbySoundtrackInfo != null
-            && _timing.CurTime >= _lobbySoundtrackInfo.NextTrackOn
+            && _lobbyPausedAt == null // Nebula - Monolith
+            && (_timing.CurTime >= _lobbySoundtrackInfo.NextTrackOn || !Exists(_lobbySoundtrackInfo.MusicStreamEntityUid)) // Nebula - Monolith
             && _lobbyPlaylist?.Length > 0
             )
         {
-            var nextSoundtrackFilename = GetNextSoundtrackFromPlaylist(_lobbySoundtrackInfo.Filename, _lobbyPlaylist);
-            PlaySoundtrack(nextSoundtrackFilename);
+            SkipLobbyTrack(1); // Nebula - Monolith
         }
+    }
+
+    /// <summary>
+    /// Switches the lobby music to the next or previous track of the playlist. Ported from Monolith.
+    /// Skips tracks that fail to load, so one broken file doesn't stop the music.
+    /// </summary>
+    public void SkipLobbyTrack(int delta)
+    {
+        if (_lobbyPlaylist is not { Length: > 0 } playlist || !_configManager.GetCVar(CCVars.LobbyMusicEnabled))
+            return;
+
+        var index = _lobbySoundtrackInfo == null ? -1 : Array.IndexOf(playlist, _lobbySoundtrackInfo.Filename);
+        if (index < 0 && delta < 0)
+            index = 0;
+
+        if (_lobbySoundtrackInfo != null && Exists(_lobbySoundtrackInfo.MusicStreamEntityUid))
+            Del(_lobbySoundtrackInfo.MusicStreamEntityUid); // Nebula - Monolith, see EndLobbyMusic
+        _lobbySoundtrackInfo = null;
+        _lobbyPausedAt = null;
+
+        for (var i = 0; i < playlist.Length && _lobbySoundtrackInfo == null; i++)
+        {
+            index = ((index + delta) % playlist.Length + playlist.Length) % playlist.Length;
+            PlaySoundtrack(playlist[index]);
+        }
+    }
+
+    /// <summary>
+    /// Whether the lobby music is paused with <see cref="ToggleLobbyMusicPause"/>. Ported from Monolith.
+    /// </summary>
+    public bool LobbyMusicPaused => _lobbyPausedAt != null;
+
+    /// <summary>
+    /// Pauses or resumes the current lobby track. Ported from Monolith.
+    /// </summary>
+    public void ToggleLobbyMusicPause()
+    {
+        if (_lobbySoundtrackInfo is not { } info || !Exists(info.MusicStreamEntityUid))
+            return;
+
+        if (_lobbyPausedAt is { } pausedAt)
+        {
+            _audio.SetState(info.MusicStreamEntityUid, AudioState.Playing);
+            _lobbySoundtrackInfo = info with { NextTrackOn = info.NextTrackOn + (_timing.CurTime - pausedAt) };
+            _lobbyPausedAt = null;
+            return;
+        }
+
+        _audio.SetState(info.MusicStreamEntityUid, AudioState.Paused);
+        _lobbyPausedAt = _timing.CurTime;
     }
 
     private static string GetNextSoundtrackFromPlaylist(string currentSoundtrackFilename, string[] playlist)

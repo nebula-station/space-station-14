@@ -71,6 +71,9 @@ binds:
 - function: Walk
   type: State
   key: Shift
+- function: ToggleFocus # Nebula - Monolith look ahead
+  type: State
+  key: Space
 # Shuttle
 - function: ShuttleStrafeUp
   type: State
