@@ -140,10 +140,6 @@ public sealed partial class MeleeWeaponSystem
                         new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.5f), length * 0.10f),
                         new AnimationTrackProperty.KeyFrame(endRotation, length * 0.15f),
                         new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.9f), length * 0.20f),
-                        new AnimationTrackProperty.KeyFrame(startRotation, 0f),
-                        new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.5f), length * 0.10f),
-                        new AnimationTrackProperty.KeyFrame(endRotation, length * 0.15f),
-                        new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.9f), length * 0.20f),
                         new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.8f), length * 0.55f, Easings.OutQuart),
                     },
                 },
@@ -153,7 +149,6 @@ public sealed partial class MeleeWeaponSystem
                     Property = nameof(SpriteComponent.Offset),
                     KeyFrames =
                     {
-                        new AnimationTrackProperty.KeyFrame(startRotationOffset, 0f),
                         new AnimationTrackProperty.KeyFrame(startRotationOffset, 0f),
                         new AnimationTrackProperty.KeyFrame(minRotationOffset, length * 0.10f),
                         new AnimationTrackProperty.KeyFrame(endRotationOffset, length * 0.15f),
@@ -183,7 +178,6 @@ public sealed partial class MeleeWeaponSystem
                     KeyFrames =
                     {
                         new AnimationTrackProperty.KeyFrame(startOffset, 0f),
-                        new AnimationTrackProperty.KeyFrame(startOffset, 0f),
                         new AnimationTrackProperty.KeyFrame(Vector2.Lerp(startOffset, endOffset, 0.65f), length * 0.10f),
                         new AnimationTrackProperty.KeyFrame(endOffset, length * 0.20f),
                         new AnimationTrackProperty.KeyFrame(Vector2.Lerp(startOffset, endOffset, 0.9f), length * 0.30f),
@@ -198,7 +192,7 @@ public sealed partial class MeleeWeaponSystem
     {
         return new Animation
         {
-            Length = TimeSpan.FromSeconds(start + end), // Nebula. arent keyframe times gaps, not absolute times?
+            Length = TimeSpan.FromSeconds(start + end), // Nebula - keyframe times are gaps between frames, so the fade ends at start + end
             AnimationTracks =
             {
                 new AnimationTrackComponentProperty()
