@@ -140,7 +140,11 @@ public sealed partial class MeleeWeaponSystem
                         new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.5f), length * 0.10f),
                         new AnimationTrackProperty.KeyFrame(endRotation, length * 0.15f),
                         new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.9f), length * 0.20f),
-                        new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.8f), length * 0.6f, Easings.OutQuart),
+                        new AnimationTrackProperty.KeyFrame(startRotation, 0f),
+                        new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.5f), length * 0.10f),
+                        new AnimationTrackProperty.KeyFrame(endRotation, length * 0.15f),
+                        new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.9f), length * 0.20f),
+                        new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.8f), length * 0.55f, Easings.OutQuart),
                     },
                 },
                 new AnimationTrackComponentProperty()
