@@ -127,7 +127,7 @@ public sealed partial class MeleeWeaponSystem
 
         return new Animation()
         {
-            Length = TimeSpan.FromSeconds(length + 0.05f),
+            Length = TimeSpan.FromSeconds(length),
             AnimationTracks =
             {
                 new AnimationTrackComponentProperty()
