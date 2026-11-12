@@ -23,4 +23,10 @@ public sealed partial class MeleeWeaponComponent
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool AlternateSwing = true;
+    
+    /// <summary>
+    /// Current side of an alternating swing, toggled every attack when <see cref="AlternateSwing"/> is set.
+    /// </summary>
+    [AutoNetworkedField]
+    public bool SwingFlipped;
 }
