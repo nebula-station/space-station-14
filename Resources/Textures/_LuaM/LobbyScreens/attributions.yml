@@ -1,6 +1,5 @@
-# Animated lobby backgrounds made for Monolith-DS (LuaM).
-# The license was not stated in the source repository, confirm it before publishing.
+# Animated lobby backgrounds made from free stock images, ported from Monolith-DS (LuaM).
 - files: ["LuaMGalaxy1", "LuaMSky1", "LuaMSky2", "LuaMPlanets1", "LuaMPlanets2", "LuaMSpace1", "LuaMSpace2", "LuaMSpace3"]
   license: "Custom"
-  copyright: "Added to Monolith-DS by C_Quarian (commit cde97effee)"
-  source: "Monolith-DS repository, Resources/Textures/_LuaM/LobbyScreens"
+  copyright: "Custom, free stock images. Added to Monolith-DS by C_Quarian (commit cde97effee)"
+  source: "NA"
