@@ -11,6 +11,7 @@ using Content.Shared.Mobs;
 using Content.Shared.Movement.Events;
 using Content.Shared.Standing;
 using Content.Shared.Stunnable;
+using Robust.Shared.Input;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -26,7 +27,7 @@ public abstract partial class SharedPosingSystem : EntitySystem
     private const float OffsetSpeed = 0.2f;
     private const float AngleSpeed = 20f;
 
-    private readonly Dictionary<EntityUid, (float Angle, float OffsetX, float OffsetY, TimeSpan LastUpdate)> _continuousInput = new();
+    private readonly Dictionary<(EntityUid Uid, BoundKeyFunction Function), (float Angle, Vector2 Offset, GameTick Start, GameTick End)> _continuousInput = new();
 
     public override void Initialize()
     {
@@ -34,12 +35,12 @@ public abstract partial class SharedPosingSystem : EntitySystem
 
         CommandBinds.Builder
             .Bind(ContentKeyFunctions.TogglePosing, InputCmdHandler.FromDelegate(OnTogglePosingKey, handle: false))
-            .Bind(ContentKeyFunctions.PosingOffsetRight, ContinuousHandler(offsetX: OffsetSpeed))
-            .Bind(ContentKeyFunctions.PosingOffsetLeft, ContinuousHandler(offsetX: -OffsetSpeed))
-            .Bind(ContentKeyFunctions.PosingOffsetUp, ContinuousHandler(offsetY: OffsetSpeed))
-            .Bind(ContentKeyFunctions.PosingOffsetDown, ContinuousHandler(offsetY: -OffsetSpeed))
-            .Bind(ContentKeyFunctions.PosingRotatePositive, ContinuousHandler(angle: -AngleSpeed))
-            .Bind(ContentKeyFunctions.PosingRotateNegative, ContinuousHandler(angle: AngleSpeed))
+            .Bind(ContentKeyFunctions.PosingOffsetRight, ContinuousHandler(ContentKeyFunctions.PosingOffsetRight, offset: new Vector2(OffsetSpeed, 0f)))
+            .Bind(ContentKeyFunctions.PosingOffsetLeft, ContinuousHandler(ContentKeyFunctions.PosingOffsetLeft, offset: new Vector2(-OffsetSpeed, 0f)))
+            .Bind(ContentKeyFunctions.PosingOffsetUp, ContinuousHandler(ContentKeyFunctions.PosingOffsetUp, offset: new Vector2(0f, OffsetSpeed)))
+            .Bind(ContentKeyFunctions.PosingOffsetDown, ContinuousHandler(ContentKeyFunctions.PosingOffsetDown, offset: new Vector2(0f, -OffsetSpeed)))
+            .Bind(ContentKeyFunctions.PosingRotatePositive, ContinuousHandler(ContentKeyFunctions.PosingRotatePositive, angle: -AngleSpeed))
+            .Bind(ContentKeyFunctions.PosingRotateNegative, ContinuousHandler(ContentKeyFunctions.PosingRotateNegative, angle: AngleSpeed))
             .Register<SharedPosingSystem>();
     }
 
@@ -54,45 +55,62 @@ public abstract partial class SharedPosingSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var now = _timing.CurTime;
-        foreach (var (uid, input) in _continuousInput.ToArray())
+        var tick = _timing.CurTick;
+        var keepTicks = (uint) _timing.TickRate;
+        foreach (var (key, input) in _continuousInput.ToArray())
         {
-            if (!TryComp<PosingComponent>(uid, out var posing) || !posing.Posing)
+            if (!TryComp<PosingComponent>(key.Uid, out var posing) || !posing.Posing)
             {
-                _continuousInput.Remove(uid);
+                _continuousInput.Remove(key);
                 continue;
             }
 
-            var timeSinceLastUpdate = now - input.LastUpdate;
-            if (timeSinceLastUpdate.TotalSeconds < 0.016)
+            if (tick < input.Start)
                 continue;
 
-            var delta = Math.Min(0.1f, (float) timeSinceLastUpdate.TotalSeconds);
+            if (tick >= input.End)
+            {
+                if (tick.Value - input.End.Value > keepTicks)
+                    _continuousInput.Remove(key);
 
-            if (input.Angle != 0)
-                TryAdjustPosingAngle(uid, input.Angle * delta, posing);
+                continue;
+            }
 
-            if (input.OffsetX != 0 || input.OffsetY != 0)
-                TryAdjustPosingOffset(uid, new Vector2(input.OffsetX, input.OffsetY) * delta, posing);
+            if (input.Angle != 0f)
+                TryAdjustPosingAngle(key.Uid, input.Angle * frameTime, posing);
 
-            _continuousInput[uid] = (input.Angle, input.OffsetX, input.OffsetY, now);
+            if (input.Offset != Vector2.Zero)
+                TryAdjustPosingOffset(key.Uid, input.Offset * frameTime, posing);
         }
     }
 
-    private InputCmdHandler ContinuousHandler(float angle = 0f, float offsetX = 0f, float offsetY = 0f)
+    private InputCmdHandler ContinuousHandler(BoundKeyFunction function, float angle = 0f, Vector2 offset = default)
     {
         return InputCmdHandler.FromDelegate(
             session =>
             {
                 if (session?.AttachedEntity is { } userUid && HasComp<PosingComponent>(userUid))
-                    _continuousInput[userUid] = (angle, offsetX, offsetY, _timing.CurTime);
+                    _continuousInput[(userUid, function)] = (angle, offset, _timing.CurTick, GameTick.MaxValue);
             },
             session =>
             {
-                if (session?.AttachedEntity is { } userUid)
-                    _continuousInput.Remove(userUid);
+                if (session?.AttachedEntity is not { } userUid
+                    || !_continuousInput.TryGetValue((userUid, function), out var input))
+                    return;
+
+                input.End = _timing.CurTick;
+                _continuousInput[(userUid, function)] = input;
             },
             handle: false);
+    }
+
+    private void RemoveContinuousInput(EntityUid uid)
+    {
+        foreach (var key in _continuousInput.Keys.ToArray())
+        {
+            if (key.Uid == uid)
+                _continuousInput.Remove(key);
+        }
     }
 
     private void OnTogglePosingKey(ICommonSession? session)
@@ -134,7 +152,7 @@ public abstract partial class SharedPosingSystem : EntitySystem
         posingComp.CurrentOffset = Vector2.Zero;
 
         if (!posingComp.Posing)
-            _continuousInput.Remove(uid);
+            RemoveContinuousInput(uid);
 
         ClientTogglePosing(uid, posingComp);
         Dirty(uid, posingComp);
