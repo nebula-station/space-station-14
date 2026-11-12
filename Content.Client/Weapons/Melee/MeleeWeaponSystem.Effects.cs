@@ -67,7 +67,7 @@ public sealed partial class MeleeWeaponSystem
                 && TryComp(weapon, out SpriteComponent? weaponSpriteComponent))
                 _sprite.CopySprite((weapon, weaponSpriteComponent), (animationUid, sprite));
 
-            if (meleeWeaponComponent.SwingLeft)
+            if (meleeWeaponComponent.SwingLeft || meleeWeaponComponent.SwingFlipped) // Nebula - alternating swings
                 angle *= -1;
 
             length = Math.Clamp(1f / MathF.Max(meleeWeaponComponent.AttackRate, 0.01f) * 0.6f, MinAnimationLength, MaxAnimationLength);
