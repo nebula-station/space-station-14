@@ -1,4 +1,4 @@
-// Nebula - ported from Monolith: smooth client-side look ahead toward the cursor (Space)
+// Nebula - ported from Monolith: smooth client-side look ahead toward the cursor
 using System.Numerics;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Camera;
