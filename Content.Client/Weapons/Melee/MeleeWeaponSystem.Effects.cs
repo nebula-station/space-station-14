@@ -198,7 +198,7 @@ public sealed partial class MeleeWeaponSystem
     {
         return new Animation
         {
-            Length = TimeSpan.FromSeconds(end),
+            Length = TimeSpan.FromSeconds(start + end), // Nebula. arent keyframe times gaps, not absolute times?
             AnimationTracks =
             {
                 new AnimationTrackComponentProperty()
