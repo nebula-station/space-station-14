@@ -25,3 +25,18 @@ infinity-dorm-room-desc-beach = Выдолбленный внутри горы �
 
 infinity-dorm-room-name-cosmic = Андромеда
 infinity-dorm-room-desc-cosmic = Для любителей неизвестности и космической экзотики.
+
+infinity-dorm-room-name-pondbar = Бар с прудом
+infinity-dorm-room-desc-pondbar = Уютный бар у тихого пруда.
+
+infinity-dorm-room-name-minibeach = Мини-пляж
+infinity-dorm-room-desc-minibeach = Маленький пляж для отдыха у воды.
+
+infinity-dorm-room-name-homebar = Домашний бар
+infinity-dorm-room-desc-homebar = Небольшой бар для своих.
+
+infinity-dorm-room-name-pcclub = Ночной ПК-клуб
+infinity-dorm-room-desc-pcclub = Мерцающие мониторы и игры до самого утра.
+
+infinity-dorm-room-name-xenoborgshuttle = Шаттл ксеноборгов
+infinity-dorm-room-desc-xenoborgshuttle = Отдых на борту захваченного шаттла ксеноборгов.
