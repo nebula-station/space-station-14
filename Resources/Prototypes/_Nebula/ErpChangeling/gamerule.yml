@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+# Added to the Extended preset in Partials/game_presets.yml
+- type: entity
+  parent: BaseAntagGhostRoleRule
+  id: ErpChangelingSpawn
+  components:
+  - type: AntagRandomSpawn
+  - type: AntagGhostCharacterRule
+    useSelectedCharacter: true
+  - type: AntagObjectives
+    objectives:
+    - ErpChangelingOrgasmObjective
+    - ErpChangelingArouseCrewObjective
+    - ErpChangelingTakeFormObjective
+    - ErpChangelingEscapeObjective
+  - type: AntagSelection
+    agentName: erp-changeling-round-end-agent-name
+    antags:
+    - !type:FixedAntagCount
+      proto: ErpChangeling

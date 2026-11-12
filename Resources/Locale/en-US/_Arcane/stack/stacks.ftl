@@ -1,0 +1,14 @@
+stack-astro-ironsand-floor = astro-ironsand floor
+stack-astro-ironsand-floor-borderless = borderless astro-ironsand floor
+stack-exo-borg-floor = mechadermis floor
+stack-exo-corner-ne-floor = exodermis NE corner floor
+stack-exo-corner-nw-floor = exodermis NW corner floor
+stack-exo-corner-se-floor = exodermis SE corner floor
+stack-exo-corner-sw-floor = exodermis SW corner floor
+stack-exo-horizontal-floor = exodermis horizontal floor
+stack-exo-hull-floor = exodermis hull floor
+stack-exo-techmaint-floor = exodermis techmaint floor
+stack-exo-vertical-floor = exodermis vertical floor
+stack-exo-viscera-floor = exodermis viscera floor
+stack-ironsand-concrete-smooth = ironsand concrete smooth
+stack-ironsand-concrete-tile = ironsand concrete tile

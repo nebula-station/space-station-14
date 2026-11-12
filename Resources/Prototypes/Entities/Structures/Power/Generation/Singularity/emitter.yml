@@ -33,7 +33,7 @@
       map: ["enum.EmitterVisualLayers.Lights"]
     - state: locked
       shader: unshaded
-      visible: false
+      # visible: false # Nebula edit
       map: ["enum.LockVisualLayers.Lock"]
   - type: Emitter
   - type: PowerState

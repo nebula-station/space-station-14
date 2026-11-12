@@ -123,12 +123,13 @@
   - type: PlacementReplacement
     key: cable_mv
   # </Trauma>
+  # Nebula start
   - type: Sprite
     sprite: Structures/Power/Cables/mv_cable.rsi
     layers:
     - state: mvcable_0
-      color: "#e0dd76" # Trauma - was Yellow
-    - state: mvstripes_0
+      color: Yellow
+  # Nebula end
   - type: Icon
     sprite: Structures/Power/Cables/mv_cable.rsi
     state: mvcable_4
@@ -153,7 +154,7 @@
             max: 1
   - type: CableVisualizer
     statePrefix: mvcable_
-    extraLayerPrefix: mvstripes_
+    # extraLayerPrefix: mvstripes_ # Nebula edit
 
 - type: entity
   id: CableMVUncuttable
@@ -173,10 +174,12 @@
   - type: PlacementReplacement
     key: cable_lv
   # </Trauma>
+  # Nebula start
   - type: Sprite
-    color: "#566e52" # Trauma - was Green
+    color: Green
     sprite: Structures/Power/Cables/lv_cable.rsi
     state: lvcable_0
+  # Nebula end
   - type: Icon
     sprite: Structures/Power/Cables/lv_cable.rsi
     state: lvcable_4

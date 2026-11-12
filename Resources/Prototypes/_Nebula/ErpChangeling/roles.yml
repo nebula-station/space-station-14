@@ -1,0 +1,106 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+- type: antag
+  id: ErpChangeling
+  name: roles-antag-erp-changeling-name
+  antagonist: true
+  setPreference: false
+  objective: roles-antag-erp-changeling-objective
+  guides: [ Changelings ]
+  tags:
+  - OnStation
+  - Midround
+
+- type: antagSpecifier
+  parent: RestrictedAntag
+  id: ErpChangeling
+  spawnerPrototype: SpawnPointGhostErpChangeling
+  pickPlayer: false
+  startingGear: ErpChangelingGear
+  briefing:
+    text: erp-changeling-role-greeting
+    color: "#FF69B4"
+    sound: /Audio/_Goobstation/Ambience/Antag/changeling_start.ogg
+  blacklist:
+    components:
+    - Silicon
+    - BorgChassis
+  components:
+  - type: Changeling
+    evolutionsProto: ErpChangeling
+  - type: RevolutionaryImmune
+  - type: ZombieImmune
+  mindRoles:
+  - MindRoleErpChangeling
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleErpChangeling
+  name: ERP Changeling Role
+  components:
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+        interactionRange: 0 # no range or validation because it's on the role and would immediately get closed
+        requireInputValidation: false
+  - type: Store
+    name: store-preset-name-changeling
+    categories: # no combat abilities
+    - ChangelingAbilitySting
+    - ChangelingAbilityUtility
+    - ChangelingAbilityErp
+    currencyWhitelist:
+    - EvolutionPoint
+    balance:
+      EvolutionPoint: 10
+  - type: MindRole
+    antagPrototype: ErpChangeling
+    exclusiveAntag: true
+    roleType: SoloAntagonist
+    subtype: role-subtype-erp-changeling
+  - type: ChangelingRole
+
+- type: startingGear
+  id: ErpChangelingGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlack
+    shoes: ClothingShoesBootsJack
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpackDuffel
+    ears: ClothingHeadsetGrey
+    id: VisitorIDCard
+  storage:
+    back:
+    - BoxSurvival
+
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
+  id: SpawnPointGhostErpChangeling
+  components:
+  - type: GhostRole
+    name: ghost-role-information-erp-changeling-name
+    description: ghost-role-information-erp-changeling-description
+    rules: ghost-role-information-erp-changeling-rules
+    mindRoles:
+    - MindRoleErpChangeling
+    raffle:
+      settings: ErpChangeling
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+    - state: green
+    - sprite: _Nebula/Changeling/erp_abilities.rsi
+      state: arm_tentacle
+
+- type: ghostRoleRaffleSettings
+  id: ErpChangeling
+  settings:
+    initialDuration: 15
+    joinExtendsDurationBy: 0
+    maxDuration: 15

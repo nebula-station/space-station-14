@@ -179,7 +179,7 @@ MachinePowerTransmissionLaserFlatpack: null
 SpawnMobPlantbot: null
 
 # 2026-09-19
-PoweredFloorLight: null
+# PoweredFloorLight: null # Nebula edit
 WallXenoMembrane: ResinMembrane
 WallXenoResin: WallResin
 WallXenoResinThick: WallResin
@@ -575,8 +575,8 @@ FoodDonutBlumpkin: FoodDonutBluePumpkin
 FoodDonutJellyBlumpkin: FoodDonutJellyBluePumpkin
 
 # 2024-02-19
-#Drone: null
-#SpawnMobDrone: null
+Drone: null
+SpawnMobDrone: null
 #Onestar: null # I dont think this is even mapped, but just in case
 
 # 2024-02-22
@@ -1353,4 +1353,6 @@ StrangeBerrySeeds: null
 TaskVial: null
 VendingMachineInteQDrobeNerf: VendingMachineSyndieDrobe
 WeaponWaterPistolFilledFire: null
+DormNotifierMarker: null
+ClothingBackpackSatchelDrone: ClothingBackpackSatchel
 # Nebula end

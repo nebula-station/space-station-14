@@ -19,6 +19,7 @@
       - Body
   - type: Climbable
     vaultable: false
+  # Nebula start
   - type: Sprite
     sprite: Structures/Piping/disposal.rsi
     layers:
@@ -29,8 +30,10 @@
       visible: false
     - map: [ "enum.DisposalUnitVisualLayers.OverlayCharging" ]
       state: dispover-ready
+      shader: unshaded
     - map: [ "enum.DisposalUnitVisualLayers.OverlayFull" ]
       state: dispover-full
+      shader: unshaded
       visible: false
     - map: [ "enum.DisposalUnitVisualLayers.OverlayEngaged" ]
       state: dispover-handle
@@ -42,6 +45,9 @@
           True: { state: disposal }
           False: { state: disposal-charging }
       enum.DisposalUnitVisuals.IsFlushing:
+        enum.DisposalUnitVisualLayers.Base:
+          True: { visible: false }
+          False: { visible: true }
         enum.DisposalUnitVisualLayers.OverlayFlushing:
           True: { visible: true }
           False: { visible: false }
@@ -72,6 +78,7 @@
           False: { visible: false }
         enum.DisposalUnitVisualLayers.OverlayFull:
           False: { visible: false }
+  # Nebula end
   - type: Physics
     bodyType: Static
   - type: Fixtures

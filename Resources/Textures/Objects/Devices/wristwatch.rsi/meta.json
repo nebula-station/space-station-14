@@ -91,6 +91,10 @@
       "directions": 4
     },
     {
+      "name": "equipped-WRISTS",
+      "directions": 4
+    },
+    {
       "name": "equipped-HAND",
       "directions": 4
     }

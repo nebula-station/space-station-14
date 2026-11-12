@@ -111,7 +111,6 @@
       - ClothMade
       - Gauze
       - RawMaterial
-      - DroneUsable # Goobstation
       - ConstructionMaterial
   - type: Construction
     graph: WebObjects # not sure if I should either keep this here or just make another prototype. Will keep it here just in case.
@@ -182,7 +181,6 @@
     tags:
       - ClothMade
       - RawMaterial
-      - DroneUsable # Goobstation
       - ConstructionMaterial
   - type: Item
     heldPrefix: durathread
@@ -224,7 +222,6 @@
     tags:
     - Wooden
     - RawMaterial
-    - DroneUsable # Goobstation
     - WoodPlank # Goobstation
     - ConstructionMaterial
   - type: Solution
@@ -409,7 +406,6 @@
     tags:
       - ClothMade
       - RawMaterial
-      - DroneUsable # Goobstation
       - Boll
   - type: PhysicalComposition
     materialComposition:
@@ -482,17 +478,23 @@
     materialComposition:
       Bananium: 150
   - type: Sprite
-    state: bananium_1 # Trauma - theres only 2 states in this sprite
+    # Nebula start
+    sprite: Objects/Materials/bananium.rsi
+    state: bananium-3
+    # Nebula end
     layers:
-    - state: bananium_1 # Trauma
+    - state: bananium-3 # Nebula edit
       map: [ "base" ]
   - type: Stack
     stackType: Bananium
     count: 10
     baseLayer: base
     layerStates:
-    - bananium
-    - bananium_1 # Trauma - replaced _2 and _3
+    # Nebula start
+    - bananium-1
+    - bananium-2
+    - bananium-3
+    # Nebula end
   - type: FlavorProfile
     flavors:
     - banana
@@ -528,7 +530,7 @@
   suffix: Single
   components:
   - type: Sprite
-    state: bananium
+    state: bananium-1 # Nebula edit
   - type: Stack
     count: 1
 

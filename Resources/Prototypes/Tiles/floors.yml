@@ -33,87 +33,107 @@
   id: FloorSteel
   parent: BaseStationTile
   name: tiles-steel-floor
-  sprite: /Textures/_Trauma/Tiles/steel.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteel
 
 - type: tile
   id: FloorSteelCheckerLight
   parent: BaseStationTile
   name: tiles-steel-floor-checker-light
-  sprite: /Textures/_Trauma/Tiles/cafeteria.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Checker/checker-light.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelCheckerLight
 
 - type: tile
   id: FloorSteelCheckerDark
   parent: BaseStationTile
   name: tiles-steel-floor-checker-dark
-  sprite: /Textures/_Trauma/Tiles/checker_dark.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Checker/checker-dark.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelCheckerDark
 
 - type: tile
   id: FloorSteelMini
   parent: BaseStationTile
   name: tiles-steel-floor-mini
-  sprite: /Textures/_Trauma/Tiles/steel_mini.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray-mini.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelMini
 
 - type: tile
   id: FloorSteelPavement
   parent: BaseStationTile
   name: tiles-steel-floor-pavement
-  sprite: /Textures/_Trauma/Tiles/steel_pavement.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray-pavement.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelPavement
 
 - type: tile
   id: FloorSteelDiagonal
   parent: BaseStationTile
   name: tiles-steel-floor-diagonal
-  sprite: /Textures/_Trauma/Tiles/steel_diagonal.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/_Arcane/Tiles/steel_diagonal.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelDiagonal
 
 - type: tile
   id: FloorSteelOffset
   parent: BaseStationTile
   name: tiles-steel-floor-offset
-  sprite: /Textures/_Trauma/Tiles/steel_offset.png # Trauma
+  sprite: /Textures/_Arcane/Tiles/steel_offset.png # Nebula edit
   itemDrop: FloorTileItemSteelOffset
 
 - type: tile
   id: FloorSteelMono
   parent: BaseStationTile
   name: tiles-steel-floor-mono
-  sprite: /Textures/_Trauma/Tiles/steel_mono.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray-mono.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelMono
 
 - type: tile
   id: FloorSteelPavementVertical
   parent: BaseStationTile
   name: tiles-steel-floor-pavement-vertical
-  sprite: /Textures/_Trauma/Tiles/steel_pavement_vertical.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray-pavement-vertical.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelPavementVertical
 
 - type: tile
   id: FloorSteelHerringbone
   parent: BaseStationTile
   name: tiles-steel-floor-herringbone
-  sprite: /Textures/_Trauma/Tiles/steel_herringbone.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray-herringbone.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelHerringbone
 
 - type: tile
   id: FloorSteelDiagonalMini
   parent: BaseStationTile
   name: tiles-steel-floor-diagonal-mini
-  sprite: /Textures/_Trauma/Tiles/steel_diagonal_mini.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/_Arcane/Tiles/steel_diagonal_mini.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelDiagonalMini
 
 - type: tile
@@ -129,16 +149,20 @@
   parent: BaseStationTile
   id: FloorSteelVerticalSlatsBordered
   name: tiles-steel-floor-vertical-slats-bordered
-  sprite: /Textures/Tiles/steel_vertical_slats_bordered.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray-vertical-slats.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelVerticalSlatsBordered
 
 - type: tile
   parent: BaseStationTile
   id: FloorSteelHorizontalSlatsBordered
   name: tiles-steel-floor-horizontal-slats-bordered
-  sprite: /Textures/Tiles/steel_horizontal_slats_bordered.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray-horizontal-slats.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemSteelHorizontalSlatsBordered
 
 - type: tile
@@ -163,8 +187,10 @@
   id: FloorPlastic
   parent: BaseStationTile
   name: tiles-plastic-floor
-  sprite: /Textures/_Trauma/Tiles/plastic.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray-plastic.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemPlastic # Trauma - plastic tile items
   tileRipResistance: 80 # Trauma
 
@@ -172,8 +198,10 @@
   id: FloorWood
   parent: BaseStationTile
   name: tiles-wood
-  sprite: /Textures/_Trauma/Tiles/wood.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Wood/wood.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepWood
   barestepSounds:
@@ -185,8 +213,10 @@
   id: FloorWhite
   parent: BaseStationTile
   name: tiles-white-floor
-  sprite: /Textures/_Trauma/Tiles/white.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/White/white.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhite
@@ -196,8 +226,10 @@
   id: FloorWhiteMini
   parent: BaseStationTile
   name: tiles-white-floor-mini
-  sprite: /Textures/_Trauma/Tiles/white_mini.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/White/white-mini.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteMini
@@ -216,24 +248,30 @@
   parent: BaseStationTile
   id: FloorWhiteVerticalSlatsBordered
   name: tiles-white-floor-vertical-slats-bordered
-  sprite: /Textures/Tiles/white_vertical_slats_bordered.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/White/white-vertical-slats.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemWhiteVerticalSlatsBordered
 
 - type: tile
   parent: BaseStationTile
   id: FloorWhiteHorizontalSlatsBordered
   name: tiles-white-floor-horizontal-slats-bordered
-  sprite: /Textures/Tiles/white_horizontal_slats_bordered.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/White/white-horizontal-slats.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemWhiteHorizontalSlatsBordered
 
 - type: tile
   id: FloorWhitePavement
   parent: BaseStationTile
   name: tiles-white-floor-pavement
-  sprite: /Textures/_Trauma/Tiles/white_pavement.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/White/white-pavement.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhitePavement
@@ -243,8 +281,10 @@
   id: FloorWhiteDiagonal
   parent: BaseStationTile
   name: tiles-white-floor-diagonal
-  sprite: /Textures/_Trauma/Tiles/white_diagonal.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/_Arcane/Tiles/white_diagonal.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteDiagonal
@@ -254,7 +294,7 @@
   id: FloorWhiteOffset
   parent: BaseStationTile
   name: tiles-white-floor-offset
-  sprite: /Textures/_Trauma/Tiles/white_offset.png # Trauma
+  sprite: /Textures/_Arcane/Tiles/white_offset.png # Nebula edit
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteOffset
@@ -264,8 +304,10 @@
   id: FloorWhiteMono
   parent: BaseStationTile
   name: tiles-white-floor-mono
-  sprite: /Textures/_Trauma/Tiles/white_mono.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/White/white-mono.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteMono
@@ -275,8 +317,10 @@
   id: FloorWhitePavementVertical
   parent: BaseStationTile
   name: tiles-white-floor-pavement-vertical
-  sprite: /Textures/_Trauma/Tiles/white_pavement_vertical.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/White/white-pavement-vertical.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhitePavementVertical
@@ -286,8 +330,10 @@
   id: FloorWhiteHerringbone
   parent: BaseStationTile
   name: tiles-white-floor-herringbone
-  sprite: /Textures/_Trauma/Tiles/white_herringbone.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/White/white-herringbone.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteHerringbone
@@ -297,8 +343,10 @@
   id: FloorWhiteDiagonalMini
   parent: BaseStationTile
   name: tiles-white-floor-diagonal-mini
-  sprite: /Textures/_Trauma/Tiles/white_diagonal_mini.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/_Arcane/Tiles/white_diagonal_mini.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteDiagonalMini
@@ -308,8 +356,10 @@
   id: FloorWhitePlastic
   parent: BaseStationTile
   name: tiles-plastic-white-floor
-  sprite: /Textures/_Trauma/Tiles/white_plastic.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/White/white-plastic.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemPlasticWhite # Trauma - plastic tile items
@@ -319,8 +369,10 @@
   id: FloorDark
   parent: BaseStationTile
   name: tiles-dark-floor
-  sprite: /Textures/_Trauma/Tiles/dark.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Dark/dark.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDark
@@ -329,8 +381,10 @@
   id: FloorDarkMini
   parent: BaseStationTile
   name: tiles-dark-floor-mini
-  sprite: /Textures/_Trauma/Tiles/dark_mini.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Dark/dark-mini.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkMini
@@ -349,24 +403,30 @@
   parent: BaseStationTile
   id: FloorDarkVerticalSlatsBordered
   name: tiles-dark-floor-vertical-slats-bordered
-  sprite: /Textures/Tiles/dark_vertical_slats_bordered.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Dark/dark-vertical-slats.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemDarkVerticalSlatsBordered
 
 - type: tile
   parent: BaseStationTile
   id: FloorDarkHorizontalSlatsBordered
   name: tiles-dark-floor-horizontal-slats-bordered
-  sprite: /Textures/Tiles/dark_horizontal_slats_bordered.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Dark/dark-horizontal-slats.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemDarkHorizontalSlatsBordered
 
 - type: tile
   id: FloorDarkPavement
   parent: BaseStationTile
   name: tiles-dark-floor-pavement
-  sprite: /Textures/_Trauma/Tiles/dark_pavement.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Dark/dark-pavement.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkPavement
@@ -376,8 +436,10 @@
   id: FloorDarkDiagonal
   parent: BaseStationTile
   name: tiles-dark-floor-diagonal
-  sprite: /Textures/_Trauma/Tiles/dark_diagonal.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/_Arcane/Tiles/dark_diagonal.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkDiagonal
@@ -387,7 +449,7 @@
   id: FloorDarkOffset
   parent: BaseStationTile
   name: tiles-dark-floor-offset
-  sprite: /Textures/Tiles/dark_offset.png
+  sprite: /Textures/_Arcane/Tiles/dark_offset.png # Nebula edit
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkOffset
@@ -397,8 +459,10 @@
   id: FloorDarkMono
   parent: BaseStationTile
   name: tiles-dark-floor-mono
-  sprite: /Textures/_Trauma/Tiles/dark_mono.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Dark/dark-mono.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkMono
@@ -408,8 +472,10 @@
   id: FloorDarkPavementVertical
   parent: BaseStationTile
   name: tiles-dark-floor-pavement-vertical
-  sprite: /Textures/_Trauma/Tiles/dark_pavement_vertical.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Dark/dark-pavement-vertical.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkPavementVertical
@@ -419,8 +485,10 @@
   id: FloorDarkHerringbone
   parent: BaseStationTile
   name: tiles-dark-floor-herringbone
-  sprite: /Textures/_Trauma/Tiles/dark_herringbone.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Dark/dark-herringbone.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkHerringbone
@@ -430,8 +498,10 @@
   id: FloorDarkDiagonalMini
   parent: BaseStationTile
   name: tiles-dark-floor-diagonal-mini
-  sprite: /Textures/_Trauma/Tiles/dark_diagonal_mini.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/_Arcane/Tiles/dark_diagonal_mini.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkDiagonalMini
@@ -441,8 +511,10 @@
   id: FloorDarkPlastic
   parent: BaseStationTile
   name: tiles-plastic-dark-floor
-  sprite: /Textures/_Trauma/Tiles/dark_plastic.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Dark/dark-plastic.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemPlasticDark # Trauma - plastic tile items
@@ -452,7 +524,7 @@
   id: FloorTechMaint
   parent: BaseStationTile
   name: tiles-techmaint-floor
-  sprite: /Textures/_Trauma/Tiles/tech_maint.png # Trauma
+  sprite: /Textures/_Arcane/Tiles/tech_maint.png # Nebula edit
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemTechmaint
@@ -462,7 +534,7 @@
   id: FloorTechMaintDark
   parent: BaseStationTile
   name: tiles-techmaint-floor-dark
-  sprite: /Textures/_Trauma/Tiles/tech_maint_dark.png # Trauma
+  sprite: /Textures/Tiles/Basic/Dark/dark-maint.png # Nebula edit
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemTechmaintDark
@@ -472,7 +544,7 @@
   id: FloorReinforced
   parent: BaseStationTile
   name: tiles-reinforced-floor
-  sprite: /Textures/_Trauma/Tiles/reinforced.png # Trauma
+  sprite: /Textures/Tiles/reinforced.png # Nebula edit
   footstepSounds:
     collection: FootstepHull
   itemDrop: PartRodMetal1
@@ -482,7 +554,7 @@
   id: FloorMono
   parent: BaseStationTile
   name: tiles-mono-floor
-  sprite: /Textures/Tiles/mono.png
+  sprite: /Textures/_Arcane/Tiles/mono.png # Nebula edit
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemMono
@@ -502,7 +574,7 @@
   id: FloorSteelDirty
   parent: BaseStationTile
   name: tiles-dirty-steel-floor
-  sprite: /Textures/Tiles/steel_dirty.png
+  sprite: /Textures/_Arcane/Tiles/steel_dirty.png # Nebula edit
   #variants: 4 # Trauma - no
   footstepSounds:
     collection: FootstepPlating
@@ -512,7 +584,7 @@
   id: FloorElevatorShaft
   parent: BaseStationTile
   name: tiles-elevator-shaft
-  sprite: /Textures/Tiles/elevator_shaft.png
+  sprite: /Textures/_Arcane/Tiles/elevator_shaft.png # Nebula edit
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemElevatorShaft
@@ -551,14 +623,14 @@
   parent: BaseStationTile
   name: tiles-lime-floor
   sprite: /Textures/Tiles/lime.png
-  variants: 4
+  # variants: 4 # Nebula edit
   itemDrop: FloorTileItemLime
 
 - type: tile
   id: FloorMining
   parent: BaseStationTile
   name: tiles-mining-tile
-  sprite: /Textures/Tiles/mining_floor.png
+  sprite: /Textures/_Arcane/Tiles/mining_floor.png # Nebula edit
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemMining
@@ -568,7 +640,7 @@
   id: FloorMiningDark
   parent: BaseStationTile
   name: tiles-mining-dark-tile
-  sprite: /Textures/Tiles/mining_floor_dark.png
+  sprite: /Textures/_Arcane/Tiles/mining_floor_dark.png # Nebula edit
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemMiningDark
@@ -578,7 +650,7 @@
   id: FloorMiningLight
   parent: BaseStationTile
   name: tiles-mining-light-tile
-  sprite: /Textures/Tiles/mining_floor_light.png
+  sprite: /Textures/_Arcane/Tiles/mining_floor_light.png # Nebula edit
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemMiningLight
@@ -599,7 +671,7 @@
   id: FloorShowroom
   parent: BaseStationTile
   name: tiles-showroom-floor
-  sprite: /Textures/Tiles/showroom.png
+  sprite: /Textures/_Arcane/Tiles/showroom.png # Nebula edit
   itemDrop: FloorTileItemShowroom
   tileRipResistance: 100 # Goob
 
@@ -607,7 +679,7 @@
   id: FloorHydro
   parent: BaseStationTile
   name: tiles-hydro-floor
-  sprite: /Textures/Tiles/hydro.png
+  sprite: /Textures/_Arcane/Tiles/hydro.png # Nebula edit
   itemDrop: FloorTileItemHydro
   tileRipResistance: 50 # Goob
 
@@ -615,8 +687,10 @@
   id: FloorBar
   parent: BaseStationTile
   name: tiles-bar-floor
-  sprite: /Textures/_Trauma/Tiles/bar.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Checker/checker-bar.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemBar
   tileRipResistance: 100 # Goob
 
@@ -624,7 +698,7 @@
   id: FloorClown
   parent: BaseStationTile
   name: tiles-clown-floor
-  sprite: /Textures/Tiles/clown.png
+  sprite: /Textures/Tiles/Checker/checker-clown.png # Nebula edit
   itemDrop: FloorTileItemClown
   tileRipResistance: 50 # Goob
 
@@ -632,7 +706,7 @@
   id: FloorMime
   parent: BaseStationTile
   name: tiles-mime-floor
-  sprite: /Textures/_Trauma/Tiles/mime.png # Trauma
+  sprite: /Textures/Tiles/Checker/checker-mime.png # Nebula edit
   itemDrop: FloorTileItemMime
   tileRipResistance: 50 # Goob
 
@@ -640,7 +714,7 @@
   id: FloorKitchen
   parent: BaseStationTile
   name: tiles-kitchen-floor
-  sprite: /Textures/Tiles/kitchen.png
+  sprite: /Textures/Tiles/Checker/checker-kitchen.png # Nebula edit
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemKitchen
@@ -650,7 +724,7 @@
   id: FloorLaundry
   parent: BaseStationTile
   name: tiles-laundry-floor
-  sprite: /Textures/Tiles/laundry.png
+  sprite: /Textures/Tiles/Checker/checker-laundry.png # Nebula edit
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemLaundry
@@ -660,8 +734,10 @@
   id: FloorSteelDamaged
   parent: BaseStationTile
   name: tiles-steel-floor
-  sprite: /Textures/_Trauma/Tiles/steel_damaged.png # Trauma
-  variants: 5
+  # Nebula start
+  sprite: /Textures/Tiles/Basic/Gray/gray-damaged.png
+  variants: 4
+  # Nebula end
   itemDrop: FloorTileItemSteel #This should probably be made null when it becomes possible to make it such, in SS13 prying destroyed tiles wouldn't give you anything.
   tileRipResistance: 175 # Goob
 
@@ -670,8 +746,10 @@
   id: FloorConcrete
   parent: BaseStationTile
   name: tiles-concrete-tile
-  sprite: /Textures/Tiles/Planet/Concrete/concrete.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Concrete/concrete.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemConcrete
@@ -681,8 +759,10 @@
   id: FloorConcreteMono
   parent: BaseStationTile
   name: tiles-concrete-slab
-  sprite: /Textures/Tiles/Planet/Concrete/concrete_mono.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Concrete/concrete-mono.png
+  variants: 2
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemConcreteMono
@@ -692,8 +772,10 @@
   id: FloorConcreteSmooth
   parent: BaseStationTile
   name: tiles-concrete-smooth
-  sprite: /Textures/Tiles/Planet/Concrete/concrete_smooth.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Concrete/concrete-smooth.png
+  variants: 2
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemConcreteSmooth
@@ -869,15 +951,17 @@
   id: FloorShuttleWhite
   parent: BaseStationTile
   name: tiles-white-shuttle-floor
-  sprite: /Textures/Tiles/shuttlewhite.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Shuttle/shuttle-white.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemShuttleWhite
 
 - type: tile
   id: FloorShuttleGrey
   parent: BaseStationTile
   name: tiles-grey-shuttle-floor
-  sprite: /Textures/Tiles/shuttlegrey.png
+  sprite: /Textures/Tiles/Shuttle/shuttle-gray.png # Nebula edit
   #variants: 4 # Trauma - no
   itemDrop: FloorTileItemShuttleGrey
 
@@ -885,7 +969,7 @@
   id: FloorShuttleBlack
   parent: BaseStationTile
   name: tiles-black-shuttle-floor
-  sprite: /Textures/Tiles/shuttleblack.png
+  sprite: /Textures/Tiles/Shuttle/shuttle-black.png # Nebula edit
   #variants: 4 # Trauma - no
   itemDrop: FloorTileItemShuttleBlack
 
@@ -893,23 +977,27 @@
   id: FloorShuttleBlue
   parent: BaseStationTile
   name: tiles-blue-shuttle-floor
-  sprite: /Textures/Tiles/shuttleblue.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Shuttle/shuttle-blue.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemShuttleBlue
 
 - type: tile
   id: FloorShuttleOrange
   parent: BaseStationTile
   name: tiles-orange-shuttle-floor
-  sprite: /Textures/Tiles/shuttleorange.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Shuttle/shuttle-orange.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemShuttleOrange
 
 - type: tile
   id: FloorShuttlePurple
   parent: BaseStationTile
   name: tiles-purple-shuttle-floor
-  sprite: /Textures/Tiles/shuttlepurple.png
+  sprite: /Textures/Tiles/Shuttle/shuttle-purple.png # Nebula edit
   #variants: 4 # Trauma - no
   itemDrop: FloorTileItemShuttlePurple
 
@@ -917,7 +1005,7 @@
   id: FloorShuttleRed
   parent: BaseStationTile
   name: tiles-red-shuttle-floor
-  sprite: /Textures/Tiles/shuttlered.png
+  sprite: /Textures/Tiles/Shuttle/shuttle-red.png # Nebula edit
   #variants: 4 # Trauma - no
   itemDrop: FloorTileItemShuttleRed
 
@@ -947,8 +1035,10 @@
   id: FloorGlass
   parent: BaseStationTile
   name: tiles-glass-floor
-  sprite: /Textures/Tiles/glass.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Glass/glass.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: SheetGlass1
@@ -958,8 +1048,10 @@
   id: FloorRGlass
   parent: BaseStationTile
   name: tiles-reinforced-glass-floor
-  sprite: /Textures/Tiles/rglass.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Glass/glass-reinf.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   itemDrop: SheetRGlass1
@@ -979,7 +1071,10 @@
   id: FloorGreenCircuit
   parent: BaseStationTile
   name: tiles-green-circuit-floor
-  sprite: /Textures/Tiles/green_circuit.png
+  # Nebula start
+  sprite: /Textures/Tiles/Circuit/circuit-green.png
+  variants: 2
+  # Nebula end
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemGCircuit
@@ -989,7 +1084,10 @@
   id: FloorBlueCircuit
   parent: BaseStationTile
   name: tiles-blue-circuit-floor
-  sprite: /Textures/Tiles/blue_circuit.png
+  # Nebula start
+  sprite: /Textures/Tiles/Circuit/circuit-blue.png
+  variants: 2
+  # Nebula end
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemBCircuit
@@ -999,7 +1097,10 @@
   id: FloorRedCircuit
   parent: BaseStationTile
   name: tiles-red-circuit-floor
-  sprite: /Textures/Tiles/red_circuit.png
+  # Nebula start
+  sprite: /Textures/Tiles/Circuit/circuit-red.png
+  variants: 2
+  # Nebula end
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemRCircuit
@@ -1020,7 +1121,10 @@
 - type: tile
   id: FloorGrass
   name: tiles-planet-grass-floor
-  sprite: /Textures/Tiles/grass.png
+  # Nebula start
+  sprite: /Textures/Tiles/Grass/grass.png
+  variants: 6
+  # Nebula end
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1032,7 +1136,20 @@
 - type: tile
   id: FloorGrassJungle
   name: tiles-jungle-grass-floor
-  sprite: /Textures/Tiles/grassjungle.png
+  # Nebula start
+  sprite: /Textures/Tiles/GrassJungle/grass.png
+  edgeSpritePriority: 4
+  edgeSprites:
+    SouthEast: /Textures/Tiles/GrassJungle/single_edge_SE.png
+    NorthEast: /Textures/Tiles/GrassJungle/single_edge_NE.png
+    NorthWest: /Textures/Tiles/GrassJungle/single_edge_NW.png
+    SouthWest: /Textures/Tiles/GrassJungle/single_edge_SW.png
+    South: /Textures/Tiles/GrassJungle/double_edge_S.png
+    East: /Textures/Tiles/GrassJungle/double_edge_E.png
+    North: /Textures/Tiles/GrassJungle/double_edge_N.png
+    West: /Textures/Tiles/GrassJungle/double_edge_W.png
+  # Nebula end
+  variants: 6 # Nebula edit
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1044,8 +1161,20 @@
 - type: tile
   id: FloorGrassDark
   name: tiles-dark-grass-floor
-  sprite: /Textures/Tiles/grassdark.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/GrassDark/grass.png
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/Tiles/GrassDark/single_edge_SE.png
+    NorthEast: /Textures/Tiles/GrassDark/single_edge_NE.png
+    NorthWest: /Textures/Tiles/GrassDark/single_edge_NW.png
+    SouthWest: /Textures/Tiles/GrassDark/single_edge_SW.png
+    South: /Textures/Tiles/GrassDark/double_edge_S.png
+    East: /Textures/Tiles/GrassDark/double_edge_E.png
+    North: /Textures/Tiles/GrassDark/double_edge_N.png
+    West: /Textures/Tiles/GrassDark/double_edge_W.png
+  # Nebula end
+  variants: 6 # Nebula edit
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1068,8 +1197,16 @@
 - type: tile
   id: FloorDirt
   name: tiles-dirt-floor
-  sprite: /Textures/Tiles/dirt.png
-  variants: 4
+  sprite: /Textures/Tiles/Dirt/dirt.png # Nebula edit
+  # Nebula start
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  # Nebula end
+  variants: 5 # Nebula edit
   baseTurf: Plating
   isSubfloor: true
   footstepSounds:
@@ -1083,21 +1220,9 @@
   id: FloorAsteroidSandBorderless
   name: tiles-asteroid-sand-borderless
   sprite: /Textures/Tiles/Asteroid/asteroid.png
-  variants: 13
-  placementVariants:
-  - 0.8
-  - 0.0166 #Should be roughly 20%.... I think??? I don't know dude, I'm just a YAML monkey.
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0116
-  - 0.0116
+  # Nebula start
+  variants: 7
+  # Nebula end
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1109,16 +1234,18 @@
   id: FloorAsteroidSand
   parent: FloorAsteroidSandBorderless
   name: tiles-asteroid-sand
-  edgeSpritePriority: 1
+  edgeSpritePriority: 6 # Nebula edit
+  # Nebula start
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    South: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    East: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    North: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    West: /Textures/Tiles/Asteroid/asteroid_double_edge.png
+    SouthEast: /Textures/Tiles/Asteroid/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Asteroid/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Asteroid/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Asteroid/single_edge_SW.png
+    South: /Textures/Tiles/Asteroid/double_edge_S.png
+    East: /Textures/Tiles/Asteroid/double_edge_E.png
+    North: /Textures/Tiles/Asteroid/double_edge_N.png
+    West: /Textures/Tiles/Asteroid/double_edge_W.png
+  # Nebula end
 
 - type: tile
   id: FloorAsteroidSandDugBorderless
@@ -1176,21 +1303,23 @@
   id: FloorAsteroidSandRed
   parent: FloorAsteroidSandRedBorderless
   name: tiles-asteroid-sand
+  sprite: /Textures/_Arcane/Tiles/Asteroid/asteroid_red.png # Nebula edit
   edgeSpritePriority: 1
+  # Nebula start
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    South: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    East: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    North: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    West: /Textures/Tiles/Asteroid/asteroid_double_edge.png
+    SouthEast: /Textures/_Arcane/Tiles/Asteroid/asteroid_single_edge.png
+    NorthEast: /Textures/_Arcane/Tiles/Asteroid/asteroid_single_edge.png
+    NorthWest: /Textures/_Arcane/Tiles/Asteroid/asteroid_single_edge.png
+    SouthWest: /Textures/_Arcane/Tiles/Asteroid/asteroid_single_edge.png
+  # Nebula end
 
 - type: tile
   id: FloorAsteroidTile
   name: tiles-asteroid-tile
-  sprite: /Textures/Tiles/Asteroid/asteroid_tile.png
+  # Nebula start
+  sprite: /Textures/Tiles/Asteroid/asteroid-tile.png
+  variants: 4
+  # Nebula end
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -1202,8 +1331,10 @@
 - type: tile
   id: FloorAsteroidIronsandBorderless
   name: tiles-asteroid-ironsand-borderless
-  sprite: /Textures/Tiles/Asteroid/ironsand.png
-  variants: 15
+  # Nebula start
+  sprite: /Textures/Tiles/Ironsand/ironsand.png
+  variants: 5
+  # Nebula end
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1215,16 +1346,20 @@
   id: FloorAsteroidIronsand
   parent: FloorAsteroidIronsandBorderless
   name: tiles-asteroid-ironsand
-  edgeSpritePriority: 1
+  # Nebula start
+  sprite: /Textures/Tiles/Ironsand/ironsand.png
+  variants: 5
+  edgeSpritePriority: 7
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/iron_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/iron_single_edge.png
-    South: /Textures/Tiles/Asteroid/iron_double_edge.png
-    East: /Textures/Tiles/Asteroid/iron_double_edge.png
-    North: /Textures/Tiles/Asteroid/iron_double_edge.png
-    West: /Textures/Tiles/Asteroid/iron_double_edge.png
+    SouthEast: /Textures/Tiles/Ironsand/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Ironsand/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Ironsand/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Ironsand/single_edge_SW.png
+    South: /Textures/Tiles/Ironsand/double_edge_S.png
+    East: /Textures/Tiles/Ironsand/double_edge_E.png
+    North: /Textures/Tiles/Ironsand/double_edge_N.png
+    West: /Textures/Tiles/Ironsand/double_edge_W.png
+  # Nebula end
 
 - type: tile
   id: FloorAsteroidSandUnvariantizedBorderless
@@ -1282,8 +1417,20 @@
 - type: tile
   id: FloorCave
   name: tiles-cave
-  sprite: /Textures/Tiles/cave.png
-  variants: 7
+  # Nebula start
+  sprite: /Textures/Tiles/Cave/cave.png
+  edgeSpritePriority: 5
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Cave/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Cave/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Cave/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Cave/single_edge_SW.png
+    South: /Textures/Tiles/Cave/double_edge_S.png
+    East: /Textures/Tiles/Cave/double_edge_E.png
+    North: /Textures/Tiles/Cave/double_edge_N.png
+    West: /Textures/Tiles/Cave/double_edge_W.png
+  # Nebula end
+  variants: 1 # Nebula edit
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1306,7 +1453,7 @@
   parent: BaseStationTile
   name: tiles-flesh-floor
   sprite: /Textures/Tiles/meat.png
-  variants: 4
+  variants: 2 # Nebula edit
   footstepSounds:
     collection: FootstepBlood
   itemDrop: FloorTileItemFlesh
@@ -1317,7 +1464,7 @@
   id: FloorTechMaint2
   parent: BaseStationTile
   name: tiles-techmaint2-floor
-  sprite: /Textures/_Trauma/Tiles/steel_maint.png # Trauma
+  sprite: /Textures/Tiles/Basic/Gray/gray-maint.png # Nebula edit
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemSteelMaint
@@ -1327,8 +1474,10 @@
   id: FloorTechMaint3
   parent: BaseStationTile
   name: tiles-techmaint3-floor
-  sprite: /Textures/Tiles/grating_maint.png
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/grating-maint.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemGratingMaint
@@ -1338,8 +1487,10 @@
   id: FloorWoodTile
   parent: BaseStationTile
   name: tiles-wood2
-  sprite: /Textures/_Trauma/Tiles/wood_tile.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Wood/wood-tile.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepWood
   barestepSounds:
@@ -1351,7 +1502,7 @@
   id: FloorBrokenWood
   parent: BaseStationTile
   name: tiles-wood3
-  sprite: /Textures/_Trauma/Tiles/wood_broken.png # Trauma
+  sprite: /Textures/Tiles/Wood/wood-broken.png # Nebula edit
   variants: 7
   footstepSounds:
     collection: FootstepWood
@@ -1364,7 +1515,7 @@
   id: FloorWebTile
   parent: BaseStationTile
   name: tiles-web
-  sprite: /Textures/Tiles/Misc/Web/web_tile.png
+  sprite: /Textures/Tiles/web.png # Nebula edit
   footstepSounds:
     collection: FootstepCarpet
   barestepSounds:
@@ -1375,8 +1526,20 @@
 - type: tile
   id: FloorChromite
   name: tiles-chromite
-  sprite: /Textures/Tiles/chromite.png
-  variants: 7
+  # Nebula start
+  sprite: /Textures/Tiles/Chromite/chromite.png
+  edgeSpritePriority: 5
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Chromite/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Chromite/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Chromite/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Chromite/single_edge_SW.png
+    South: /Textures/Tiles/Chromite/double_edge_S.png
+    East: /Textures/Tiles/Chromite/double_edge_E.png
+    North: /Textures/Tiles/Chromite/double_edge_N.png
+    West: /Textures/Tiles/Chromite/double_edge_W.png
+  # Nebula end
+  variants: 1 # Nebula edit
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1410,18 +1573,20 @@
   parent: BaseStationTile
   id: FloorAstroGrass
   name: tiles-astro-grass
-  sprite: /Textures/Tiles/Planet/Grass/grass.png
-  variants: 4
-  edgeSpritePriority: 1
+  # Nebula start
+  sprite: /Textures/Tiles/Grass/grass.png
+  variants: 6
+  edgeSpritePriority: 5
   edgeSprites:
-    SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/Tiles/Planet/Grass/double_edge.png
+    SouthEast: /Textures/Tiles/Grass/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Grass/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Grass/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Grass/single_edge_SW.png
+    South: /Textures/Tiles/Grass/double_edge_S.png
+    East: /Textures/Tiles/Grass/double_edge_E.png
+    North: /Textures/Tiles/Grass/double_edge_N.png
+    West: /Textures/Tiles/Grass/double_edge_W.png
+  # Nebula end
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemAstroGrass
@@ -1431,6 +1596,10 @@
   parent: [ BaseStationTile, FloorGrass ]
   id: FloorMowedAstroGrass
   name: tiles-mowed-astro-grass
+  # Nebula start
+  sprite: /Textures/Tiles/Grass/grass.png
+  variants: 6
+  # Nebula end
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemMowedAstroGrass
@@ -1440,6 +1609,20 @@
   parent: [ BaseStationTile, FloorGrassJungle ]
   id: FloorJungleAstroGrass
   name: tiles-jungle-astro-grass
+  # Nebula start
+  sprite: /Textures/Tiles/GrassJungle/grass.png
+  edgeSpritePriority: 4
+  edgeSprites:
+    SouthEast: /Textures/Tiles/GrassJungle/single_edge_SE.png
+    NorthEast: /Textures/Tiles/GrassJungle/single_edge_NE.png
+    NorthWest: /Textures/Tiles/GrassJungle/single_edge_NW.png
+    SouthWest: /Textures/Tiles/GrassJungle/single_edge_SW.png
+    South: /Textures/Tiles/GrassJungle/double_edge_S.png
+    East: /Textures/Tiles/GrassJungle/double_edge_E.png
+    North: /Textures/Tiles/GrassJungle/double_edge_N.png
+    West: /Textures/Tiles/GrassJungle/double_edge_W.png
+  # Nebula end
+  variants: 6 # Nebula edit
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemJungleAstroGrass
@@ -1449,6 +1632,20 @@
   parent: [ BaseStationTile, FloorGrassDark ]
   id: FloorDarkAstroGrass
   name: tiles-dark-astro-grass
+  # Nebula start
+  sprite: /Textures/Tiles/GrassDark/grass.png
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/Tiles/GrassDark/single_edge_SE.png
+    NorthEast: /Textures/Tiles/GrassDark/single_edge_NE.png
+    NorthWest: /Textures/Tiles/GrassDark/single_edge_NW.png
+    SouthWest: /Textures/Tiles/GrassDark/single_edge_SW.png
+    South: /Textures/Tiles/GrassDark/double_edge_S.png
+    East: /Textures/Tiles/GrassDark/double_edge_E.png
+    North: /Textures/Tiles/GrassDark/double_edge_N.png
+    West: /Textures/Tiles/GrassDark/double_edge_W.png
+  # Nebula end
+  variants: 6 # Nebula edit
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemDarkAstroGrass
@@ -1466,7 +1663,10 @@
   parent: BaseStationTile
   id: FloorAstroIce
   name: tiles-astro-ice
-  sprite: /Textures/Tiles/Planet/Snow/ice.png
+  # Nebula start
+  sprite: /Textures/Tiles/Ice/ice.png
+  variants: 4
+  # Nebula end
   friction: 0.05
   mobFriction: 0.05
   mobAcceleration: 0.1
@@ -1478,6 +1678,27 @@
   parent: [ BaseStationTile, FloorSnow ]
   id: FloorAstroSnow
   name: tiles-astro-snow
+  # Nebula start
+  sprite: /Textures/Tiles/Snow/snow.png
+  edgeSpritePriority: 8
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Snow/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Snow/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Snow/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Snow/single_edge_SW.png
+    South: /Textures/Tiles/Snow/double_edge_S.png
+    East: /Textures/Tiles/Snow/double_edge_E.png
+    North: /Textures/Tiles/Snow/double_edge_N.png
+    West: /Textures/Tiles/Snow/double_edge_W.png
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  # Nebula end
+  variants: 6 # Nebula edit
   footstepSounds:
     collection: FootstepSnow
   itemDrop: FloorTileItemAstroSnow
@@ -1488,6 +1709,18 @@
   parent: [ BaseStationTile, FloorAsteroidSand ]
   id: FloorAstroAsteroidSand
   name: tiles-astro-asteroid-sand
+  edgeSpritePriority: 6 # Nebula edit
+  # Nebula start
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Asteroid/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Asteroid/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Asteroid/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Asteroid/single_edge_SW.png
+    South: /Textures/Tiles/Asteroid/double_edge_S.png
+    East: /Textures/Tiles/Asteroid/double_edge_E.png
+    North: /Textures/Tiles/Asteroid/double_edge_N.png
+    West: /Textures/Tiles/Asteroid/double_edge_W.png
+  # Nebula end
   footstepSounds:
     collection: FootstepAsteroid
   itemDrop: FloorTileItemAstroAsteroidSand
@@ -1504,6 +1737,20 @@
   parent: [ BaseStationTile, FloorDesert ]
   id: FloorDesertAstroSand
   name: tiles-desert-astro-sand
+  # Nebula start
+  sprite: /Textures/Tiles/Desert/desert.png
+  edgeSpritePriority: 2
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Desert/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Desert/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Desert/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Desert/single_edge_SW.png
+    South: /Textures/Tiles/Desert/double_edge_S.png
+    East: /Textures/Tiles/Desert/double_edge_E.png
+    North: /Textures/Tiles/Desert/double_edge_N.png
+    West: /Textures/Tiles/Desert/double_edge_W.png
+  # Nebula end
+  variants: 5 # Nebula edit
   footstepSounds:
     collection: FootstepAsteroid
   itemDrop: FloorTileItemDesertAstroSand
@@ -1512,8 +1759,10 @@
   id: FloorWoodLarge
   parent: BaseStationTile
   name: tiles-wood-large
-  sprite: /Textures/_Trauma/Tiles/wood_large.png # Trauma
-  variants: 4
+  # Nebula start
+  sprite: /Textures/Tiles/Wood/wood-large.png
+  variants: 1
+  # Nebula end
   footstepSounds:
     collection: FootstepWood
   barestepSounds:
@@ -1584,8 +1833,10 @@
   id: FloorWhiteMarble
   parent: BaseStationTile
   name: tiles-white-marble
-  sprite: /Textures/Tiles/white_marble.png
-  variants: 8
+  # Nebula start
+  sprite: /Textures/Tiles/Marble/white-marble.png
+  variants: 6
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   friction: 0.8
@@ -1595,8 +1846,10 @@
   id: FloorDarkMarble
   parent: BaseStationTile
   name: tiles-dark-marble
-  sprite: /Textures/Tiles/dark_marble.png
-  variants: 8
+  # Nebula start
+  sprite: /Textures/Tiles/Marble/dark-marble.png
+  variants: 6
+  # Nebula end
   footstepSounds:
     collection: FootstepTile
   friction: 0.8

@@ -9,6 +9,7 @@
   - type: ResistLocker
   - type: Transform
     noRot: true
+  # Nebula start
   - type: Sprite
     noRot: true
     sprite: Structures/Storage/closet.rsi
@@ -24,6 +25,8 @@
       visible: false
       sprite: Structures/Storage/closet_labels.rsi
       map: ["enum.PaperLabelVisuals.Layer"]
+    offset: 0, 0.25
+  # Nebula end
   - type: MovedByPressure
   - type: DamageOnHighSpeedImpact
     damage:

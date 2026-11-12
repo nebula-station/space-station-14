@@ -26,3 +26,6 @@ uplink-clothing-chameleon-thieving-gloves-desc = Незаметно крадит
 
 uplink-holster-name = Плечевая кобура
 uplink-holster-desc = Глубокая плечевая кобура, способная вместить множество видов боеприпасов.
+
+uplink-chameleon-eva-suit-name = Набор EVA-хамелеон
+uplink-chameleon-eva-suit-desc = Будьте готовы к любой ситуации с низким давлением. Может принять облик любого скафандра или пальто!

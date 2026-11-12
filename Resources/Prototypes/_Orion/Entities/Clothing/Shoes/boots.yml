@@ -5,9 +5,9 @@
   description: A pair of knee-high jackboots. All style, all the time.
   components:
   - type: Sprite
-    sprite: _Orion/Clothing/Shoes/Boots/jackboots_tall.rsi
+    sprite: _Arcane/Clothing/Shoes/Boots/jackboots_tall.rsi # Nebula edit
   - type: Clothing
-    sprite: _Orion/Clothing/Shoes/Boots/jackboots_tall.rsi
+    sprite: _Arcane/Clothing/Shoes/Boots/jackboots_tall.rsi # Nebula edit
 
 - type: entity
   parent: ClothingShoesBootsJack
@@ -16,9 +16,9 @@
   description: A pair of knee-high jackboots, complete with heels. All style, all the time.
   components:
   - type: Sprite
-    sprite: _Orion/Clothing/Shoes/Boots/jackboots_heels_tall.rsi
+    sprite: _Arcane/Clothing/Shoes/Boots/jackboots_heels_tall.rsi # Nebula edit
   - type: Clothing
-    sprite: _Orion/Clothing/Shoes/Boots/jackboots_heels_tall.rsi
+    sprite: _Arcane/Clothing/Shoes/Boots/jackboots_heels_tall.rsi # Nebula edit
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepHighHeels
@@ -33,9 +33,9 @@
   description: Modified pair of jackboots, particularly friendly to those species whose toes hold claws.
   components:
   - type: Sprite
-    sprite: _Orion/Clothing/Shoes/Boots/jackboots_toeless.rsi
+    sprite: _Arcane/Clothing/Shoes/Boots/jackboots_toeless.rsi # Nebula edit
   - type: Clothing
-    sprite: _Orion/Clothing/Shoes/Boots/jackboots_toeless.rsi
+    sprite: _Arcane/Clothing/Shoes/Boots/jackboots_toeless.rsi # Nebula edit
   - type: FootstepModifier
     footstepSoundCollection:
       collection: BarestepHard

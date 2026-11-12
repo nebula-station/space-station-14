@@ -1,0 +1,26 @@
+{
+  "copyright": "Taken from TGstation, brigmedic locker is a resprited CMO locker, n2 sprites based on fire and emergency sprites, genpop lockers, sci bio locker is a resprited bio viro locker and Evac lockers by PuroSlavKing (GitHub); Palette-only variants for Arcane, 2026. Original source patterns, including the science locker R, retained.",
+  "license": "CC-BY-SA-3.0",
+  "version": 1,
+  "size": {
+    "y": 48,
+    "x": 32
+  },
+  "states": [
+    {
+      "name": "generic"
+    },
+    {
+      "name": "robo_wardrobe_door"
+    },
+    {
+      "name": "generic_open"
+    },
+    {
+      "name": "welded"
+    },
+    {
+      "name": "icon"
+    }
+  ]
+}

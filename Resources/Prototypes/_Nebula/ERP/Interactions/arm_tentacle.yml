@@ -1,0 +1,105 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+- type: panelInteraction
+  id: TentaclePussy
+  category: Pussy
+  kind: Erotic
+  userArouse: 2
+  targetArouse: 15
+  range: 1.5
+  sound:
+    collection: ErpChampFingering
+  messages: ErpTentaclePussyMessages
+  selfMessages: ErpTentaclePussySelfMessages
+  icon: &tentacleIcon
+    sprite: _Nebula/Changeling/erp_abilities.rsi
+    state: arm_tentacle
+  userRequirements: &tentacleHeld
+  - !type:HeldItemRequirement
+    whitelist:
+      tags:
+      - ErpArmTentacle
+  targetRequirements:
+  - !type:SexRequirement
+    sexes:
+    - Female
+    - Futanari
+  - !type:ExposedBodyPartRequirement
+    part: Groin
+
+- type: panelInteraction
+  id: TentaclePenis
+  category: Penis
+  kind: Erotic
+  userArouse: 2
+  targetArouse: 15
+  range: 1.5
+  sound:
+    collection: ErpChampFingering
+  messages: ErpTentaclePenisMessages
+  selfMessages: ErpTentaclePenisSelfMessages
+  icon: *tentacleIcon
+  userRequirements: *tentacleHeld
+  targetRequirements:
+  - !type:SexRequirement
+    sexes:
+    - Male
+    - Futanari
+  - !type:ExposedBodyPartRequirement
+    part: Groin
+
+- type: panelInteraction
+  id: TentacleAnus
+  category: Anus
+  kind: Erotic
+  userArouse: 2
+  targetArouse: 15
+  range: 1.5
+  sound:
+    collection: ErpChampFingering
+  messages: ErpTentacleAnusMessages
+  selfMessages: ErpTentacleAnusSelfMessages
+  icon: *tentacleIcon
+  userRequirements: *tentacleHeld
+  targetRequirements:
+  - !type:ExposedBodyPartRequirement
+    part: Groin
+
+- type: panelInteraction
+  id: TentacleChest
+  category: Chest
+  kind: Erotic
+  userArouse: 2
+  targetArouse: 8
+  range: 1.5
+  sound:
+    collection: ErpChampFingering
+  messages: ErpTentacleChestMessages
+  selfMessages: ErpTentacleChestSelfMessages
+  icon: *tentacleIcon
+  userRequirements: *tentacleHeld
+  targetRequirements:
+  - !type:SexRequirement
+    sexes:
+    - Female
+    - Futanari
+  - !type:ExposedBodyPartRequirement
+    part: Chest
+
+- type: panelInteraction
+  id: TentacleMouth
+  category: Mouth
+  kind: Erotic
+  userArouse: 5
+  targetArouse: 3
+  range: 1.5
+  sound:
+    collection: ErpBlowjob
+  messages: ErpTentacleMouthMessages
+  selfMessages: ErpTentacleMouthSelfMessages
+  icon: *tentacleIcon
+  userRequirements: *tentacleHeld

@@ -7,15 +7,17 @@
   # Nebula start
   - type: EdgeConnection
     allowedDirections: None
-  # Nebula end
   - type: Sprite
-    noRot: true
+    sprite: _Arcane/Structures/Machines/Computers/tv.rsi
+    noRot: false
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
       state: television
     - map: ["computerLayerScreen"]
-      state: detective_television
+      state: television_playing
+      shader: unshaded
+  # Nebula end
   - type: Computer
     board: ComputerTelevisionCircuitboard
   - type: PointLight

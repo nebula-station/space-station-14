@@ -3,115 +3,168 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using Content.IntegrationTests.Fixtures;
-using Robust.Shared.ContentPack;
-using Robust.Shared.Serialization.Markdown;
-using Robust.Shared.Serialization.Markdown.Mapping;
-using Robust.Shared.Serialization.Markdown.Sequence;
-using Robust.Shared.Serialization.Markdown.Value;
-using Robust.Shared.Utility;
+using YamlDotNet.RepresentationModel;
 
 namespace Content.IntegrationTests.Tests._Nebula;
 
 /// <summary>
-/// A partial that drops a parent declared by the base file leaves a stale edge in the engine's inheritance graph
-/// (MultiRootInheritanceGraph.Add never removes it). The stale parent then releases the child before its real parent
-/// is resolved, so the prototype randomly loses inherited components, differently on client and server.
-/// The race itself can't be tested reliably, so this checks the YAML that causes it.
+/// Partial parents get added to the base ones. A parent listed twice freezes prototype loading,
+/// so this reads the YAML from disk instead of starting a server.
 /// </summary>
 [TestFixture]
-public sealed class PartialPrototypeParentsTest : GameTest
+public sealed class PartialPrototypeParentsTest
 {
-    private static readonly ResPath PrototypesDir = new("/Prototypes");
-    private static readonly ResPath PartialsDir = new("/Prototypes/_Trauma/Partials");
-
     /// <summary>
-    /// Prototypes that still have the race: these partials replace the parent outright, so the fix is changing
-    /// <c>parent</c> in the base file. Remove entries as they get fixed.
+    /// Partial folders in load order, see Content.Trauma.Shared EntryPoint.
     /// </summary>
-    private static readonly HashSet<string> KnownViolations =
+    private static readonly string[] PartialDirs =
     [
-        "BaseChangelingRule",
-        "BaseHandheldCrewMonitor",
-        "BaseWeaponPowerCellSmall",
-        "DefaultStationBeaconRobotics",
-        "EncryptionKeyRobo",
-        "Stunprod",
-        "WardrobeChapel",
-        "WeaponEnergyCrossbowBase",
+        Path.Combine("_Trauma", "Partials"),
+        Path.Combine("_Nebula", "Partials"),
     ];
 
     [Test]
-    public async Task PartialsKeepBaseParents()
+    public void PartialsHaveNoDuplicateParents()
     {
-        var resources = Server.ResolveDependency<IResourceManager>();
+        var prototypes = FindPrototypesDir();
 
-        Dictionary<(string Kind, string Id), List<string>> baseParents = [];
-        List<(string Kind, string Id, List<string> Parents, ResPath File)> partials = [];
+        Dictionary<(string Kind, string Id), YamlNode> baseParents = [];
+        List<(int Order, string Kind, string Id, YamlNode Parents, bool Clear, string File)> partials = [];
 
-        foreach (var file in resources.ContentFindFiles(PrototypesDir).Where(f => f.Extension == "yml"))
+        foreach (var file in Directory.EnumerateFiles(prototypes, "*.yml", SearchOption.AllDirectories))
         {
-            var isPartial = file.TryRelativeTo(PartialsDir, out _);
-            using var reader = resources.ContentFileReadText(file);
-
-            foreach (var document in DataNodeParser.ParseYamlStream(reader))
+            var relative = Path.GetRelativePath(prototypes, file);
+            var order = -1;
+            for (var i = 0; i < PartialDirs.Length; i++)
             {
-                if (document.Root is not SequenceDataNode prototypes)
+                if (relative.StartsWith(PartialDirs[i] + Path.DirectorySeparatorChar))
+                    order = i;
+            }
+
+            var stream = new YamlStream();
+            try
+            {
+                using var reader = new StreamReader(file);
+                stream.Load(reader);
+            }
+            catch (Exception)
+            {
+                continue; // the linter catches broken files
+            }
+
+            foreach (var document in stream.Documents)
+            {
+                if (document.RootNode is not YamlSequenceNode root)
                     continue;
 
-                foreach (var mapping in prototypes.OfType<MappingDataNode>())
+                foreach (var mapping in root.OfType<YamlMappingNode>())
                 {
-                    if (!mapping.TryGet<ValueDataNode>("type", out var kind)
-                        || !mapping.TryGet<ValueDataNode>("id", out var id)
-                        || !TryGetParents(mapping, out var parents))
+                    string kind = null, id = null;
+                    YamlNode parents = null;
+                    var clear = false;
+                    foreach (var (key, value) in mapping.Children)
+                    {
+                        if (key is not YamlScalarNode { Value: { } name })
+                            continue;
+
+                        switch (name)
+                        {
+                            case "type":
+                                kind = (value as YamlScalarNode)?.Value;
+                                break;
+                            case "id":
+                                id = (value as YamlScalarNode)?.Value;
+                                break;
+                            case "parent":
+                                parents = value;
+                                clear = IsTag(key, "!Clear") || IsTag(value, "!Clear");
+                                break;
+                        }
+                    }
+
+                    if (kind == null || id == null || parents == null)
                         continue;
 
-                    if (isPartial)
-                        partials.Add((kind.Value, id.Value, parents, file));
+                    if (order >= 0)
+                        partials.Add((order, kind, id, parents, clear, relative));
                     else
-                        baseParents[(kind.Value, id.Value)] = parents;
+                        baseParents[(kind, id)] = parents;
                 }
             }
         }
 
-        List<string> errors = [];
-        HashSet<string> violating = [];
-
-        foreach (var (kind, id, parents, file) in partials)
+        Dictionary<(string Kind, string Id), List<string>> effective = [];
+        foreach (var (key, node) in baseParents)
         {
-            if (!baseParents.TryGetValue((kind, id), out var original))
-                continue;
-
-            var dropped = original.Except(parents).ToList();
-            if (dropped.Count == 0)
-                continue;
-
-            violating.Add(id);
-            if (KnownViolations.Contains(id))
-                continue;
-
-            errors.Add($"{file}: {kind} {id} drops base parent(s) {string.Join(", ", dropped)}, which makes prototype loading race. "
-                + "If the dropped parent is an ancestor of the new one, list it last: parent: [ New, Old ]. "
-                + "Otherwise change parent in the base file instead of the partial.");
+            effective[key] = Elements(node).Select(e => e.Value ?? string.Empty).ToList();
         }
 
-        foreach (var id in KnownViolations.Except(violating))
+        List<string> errors = [];
+        foreach (var (_, kind, id, node, clear, file) in partials.OrderBy(p => p.Order))
         {
-            errors.Add($"{id} no longer drops a base parent, remove it from {nameof(KnownViolations)}.");
+            var key = (kind, id);
+            if (!effective.TryGetValue(key, out var parents) || clear
+                || node is YamlScalarNode && baseParents.GetValueOrDefault(key) is YamlScalarNode or null)
+            {
+                parents = [];
+            }
+
+            foreach (var parent in Elements(node))
+            {
+                var value = parent.Value ?? string.Empty;
+                var tag = parent.Tag.IsEmpty ? null : parent.Tag.Value;
+                if (tag == "!Remove")
+                    parents.Remove(value);
+                else if (tag?.StartsWith("!Index:") == true && int.TryParse(tag["!Index:".Length..], out var index))
+                    parents.Insert(Math.Clamp(index < 0 ? parents.Count + index : index, 0, parents.Count), value);
+                else
+                    parents.Add(value);
+            }
+
+            effective[key] = parents;
+
+            var duplicates = parents.GroupBy(p => p).Where(g => g.Count() > 1).Select(g => g.Key).ToList();
+            if (duplicates.Count > 0)
+            {
+                errors.Add($"{file}: {kind} {id} ends up with parents [{string.Join(", ", parents)}], "
+                    + $"{string.Join(", ", duplicates)} is listed twice and freezes prototype loading. "
+                    + "Only list the new parent in the partial.");
+            }
         }
 
         Assert.That(errors, Is.Empty, string.Join("\n", errors));
     }
 
-    private static bool TryGetParents(MappingDataNode mapping, out List<string> parents)
+    private static bool IsTag(YamlNode node, string tag)
     {
-        parents = [];
-        if (mapping.TryGet<ValueDataNode>("parent", out var single))
-            parents.Add(single.Value);
-        else if (mapping.TryGet<SequenceDataNode>("parent", out var list))
-            parents.AddRange(list.OfType<ValueDataNode>().Select(parent => parent.Value));
+        return !node.Tag.IsEmpty && node.Tag.Value == tag;
+    }
 
-        return parents.Count > 0;
+    private static IEnumerable<YamlScalarNode> Elements(YamlNode node)
+    {
+        return node switch
+        {
+            YamlScalarNode scalar => [scalar],
+            YamlSequenceNode seq => seq.OfType<YamlScalarNode>(),
+            _ => [],
+        };
+    }
+
+    private static string FindPrototypesDir()
+    {
+        var dir = new DirectoryInfo(TestContext.CurrentContext.TestDirectory);
+        while (dir != null)
+        {
+            var candidate = Path.Combine(dir.FullName, "Resources", "Prototypes");
+            if (Directory.Exists(candidate))
+                return candidate;
+
+            dir = dir.Parent;
+        }
+
+        Assert.Fail("Could not find Resources/Prototypes above the test directory.");
+        return string.Empty;
     }
 }

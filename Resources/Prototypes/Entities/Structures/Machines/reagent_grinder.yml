@@ -45,12 +45,18 @@
       enum.ReagentGrinderUiKey.Key:
         type: ReagentGrinderBoundUserInterface
   - type: Appearance
+  # Nebula start
   - type: GenericVisualizer
     visuals:
       enum.ReagentGrinderVisualState.BeakerAttached:
         grinder:
           True: {state: "grinder_beaker_attached"}
           False: {state: "grinder_empty"}
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  # Nebula end
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -70,6 +76,7 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+  # Nebula start
   - type: Sprite
     sprite: Structures/Machines/grinder.rsi
     drawdepth: LargeObjects
@@ -82,6 +89,11 @@
     - map: [ "enum.SolutionContainerLayers.Fill" ]
       state: beakerSlot1
     # </Trauma>
+    - state: grinder_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+  # Nebula end
   - type: ApcPowerReceiver
     powerLoad: 5
   - type: PowerState

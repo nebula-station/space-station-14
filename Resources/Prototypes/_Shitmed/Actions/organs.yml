@@ -8,14 +8,16 @@
   name: "[color=red]Tentacle Slam[/color]"
   description: Use your tentacles to grab and stun a target player!
   components:
+  # Nebula start
   - type: Sprite
-    sprite: Mobs/Aliens/Asteroid/goliath.rsi
+    sprite: Mobs/Aliens/Asteroid/goliath_tentacle.rsi
     layers:
     - state: goliath_tentacle_spawn
       map: [ "enum.ActionVisuals.Icon" ]
     - state: goliath_tentacle_wiggle
       visible: false
       map: [ "enum.ActionVisuals.IconToggled" ]
+  # Nebula end
   - type: Action
     useDelay: 80
     raiseOnUser: true

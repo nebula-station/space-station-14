@@ -5,6 +5,7 @@
   id: FloorWoodParquet
   name: tiles-wood-parquet
   sprite: /Textures/_Corvax/Tiles/wood_parquet.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodParquet
 
 - type: tile
@@ -12,30 +13,47 @@
   id: FloorWoodChess
   name: tiles-wood-chess
   sprite: /Textures/_Corvax/Tiles/wood_chess.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodChess
 
 - type: tile
   parent: FloorWood
   id: FloorWoodBlack
   name: tiles-wood-black
+  # Nebula start
+  sprite: /Textures/_Corvax/Tiles/wood_black.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemWoodBlack
 
 - type: tile
   parent: FloorWood
   id: FloorWoodLargeBlack
   name: tiles-wood-large-black
+  # Nebula start
+  sprite: /Textures/_Corvax/Tiles/wood_large_black.png
+  variants: 4
+  # Nebula end
   itemDrop: FloorTileItemWoodLargeBlack
 
 - type: tile
   parent: FloorWood
   id: FloorWoodParquetBlack
   name: tiles-wood-parquet-black
+  # Nebula start
+  sprite: /Textures/_Corvax/Tiles/wood_parquet_black.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemWoodParquetBlack
 
 - type: tile
   parent: FloorWood
   id: FloorWoodChessBlack
   name: tiles-wood-chess-black
+  # Nebula start
+  sprite: /Textures/_Corvax/Tiles/wood_chess_black.png
+  variants: 1
+  # Nebula end
   itemDrop: FloorTileItemWoodChessBlack
 
 - type: tile
@@ -43,6 +61,7 @@
   id: FloorWoodDark # 8h video essay
   name: tiles-wood-dark
   sprite: /Textures/_Corvax/Tiles/wood_dark.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodDark
 
 - type: tile
@@ -50,6 +69,7 @@
   id: FloorWoodLargeDark
   name: tiles-wood-large-dark
   sprite: /Textures/_Corvax/Tiles/wood_large_dark.png
+  variants: 4 # Nebula edit
   itemDrop: FloorTileItemWoodLargeDark
 
 - type: tile
@@ -57,6 +77,7 @@
   id: FloorWoodParquetDark
   name: tiles-wood-parquet-dark
   sprite: /Textures/_Corvax/Tiles/wood_parquet_dark.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodParquetDark
 
 - type: tile
@@ -64,6 +85,7 @@
   id: FloorWoodChessDark
   name: tiles-wood-chess-dark
   sprite: /Textures/_Corvax/Tiles/wood_chess_dark.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodChessDark
 
 - type: tile
@@ -71,6 +93,7 @@
   id: FloorWoodLight
   name: tiles-wood-light
   sprite: /Textures/_Corvax/Tiles/wood_light.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodLight
 
 - type: tile
@@ -78,6 +101,7 @@
   id: FloorWoodLargeLight
   name: tiles-wood-large-light
   sprite: /Textures/_Corvax/Tiles/wood_large_light.png
+  variants: 4 # Nebula edit
   itemDrop: FloorTileItemWoodLargeLight
 
 - type: tile
@@ -85,6 +109,7 @@
   id: FloorWoodParquetLight
   name: tiles-wood-parquet-light
   sprite: /Textures/_Corvax/Tiles/wood_parquet_light.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodParquetLight
 
 - type: tile
@@ -92,6 +117,7 @@
   id: FloorWoodChessLight
   name: tiles-wood-chess-light
   sprite: /Textures/_Corvax/Tiles/wood_chess_light.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodChessLight
 
 - type: tile
@@ -99,12 +125,17 @@
   id: FloorWoodRed
   name: tiles-wood-red
   sprite: /Textures/_Corvax/Tiles/wood_red.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodRed
 
 - type: tile
   parent: FloorWood
   id: FloorWoodLargeRed
   name: tiles-wood-large-red
+  # Nebula start
+  sprite: /Textures/_Corvax/Tiles/wood_large_red.png
+  variants: 4
+  # Nebula end
   itemDrop: FloorTileItemWoodLargeRed
 
 - type: tile
@@ -112,6 +143,7 @@
   id: FloorWoodParquetRed
   name: tiles-wood-parquet-red
   sprite: /Textures/_Corvax/Tiles/wood_parquet_red.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodParquetRed
 
 - type: tile
@@ -119,4 +151,5 @@
   id: FloorWoodChessRed
   name: tiles-wood-chess-red
   sprite: /Textures/_Corvax/Tiles/wood_chess_red.png
+  variants: 1 # Nebula edit
   itemDrop: FloorTileItemWoodChessRed

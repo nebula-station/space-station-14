@@ -50,7 +50,7 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] Grids =
         {
-            "/Maps/_Trauma/centcomm.yml", // Trauma
+            "/Maps/_Nebula/centcomm.yml", // Nebula edit
             AdminTestArenaSystem.ArenaMapPath
         };
 
@@ -106,6 +106,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_Goobstation/Shuttles/consul.yml",
             "/Maps/_Trauma/centcomm.yml",
             // </Trauma>
+            "/Maps/_Nebula/centcomm.yml", // Nebula edit
             "/Maps/Shuttles/AdminSpawn/**" // admin gaming
         };
 

@@ -5,10 +5,11 @@
   description: Return to your body and end the current avatar session.
   components:
   - type: Action
+  # Nebula start
   - type: Sprite
-    layers:
-    - sprite: _Orion/Structures/Machines/netpod.rsi
-      state: netpod_closed_active
+    sprite: _Orion/Structures/Machines/netpod.rsi
+    state: netpod_closed_active
+  # Nebula end
   - type: InstantAction
     event: !type:BitrunningDisconnectAvatarActionEvent
 
@@ -38,9 +39,10 @@
     useDelay: 20
     itemIconStyle: BigAction
   - type: Sprite
-    layers:
-    - sprite: Interface/Actions/actions_borg.rsi
-      state: treatment-module
+    # Nebula start
+    sprite: Objects/Specific/Medical/firstaidkits.rsi
+    state: firstaid
+    # Nebula end
   - type: InstantAction
     event: !type:BitrunningLesserHealActionEvent
 
@@ -53,10 +55,11 @@
   - type: Action
     useDelay: 8
     itemIconStyle: BigAction
+  # Nebula start
   - type: Sprite
-    layers:
-    - sprite: Mobs/Aliens/Carps/space.rsi
-      state: icon
+    sprite: Mobs/Aliens/Carps/space.rsi
+    state: icon
+  # Nebula end
   - type: InstantAction
     event: !type:PolymorphSpellEvent
       protoId: BitrunningAvatarDragonPolymorph
@@ -71,10 +74,11 @@
   - type: Action
     useDelay: 8
     itemIconStyle: BigAction
+  # Nebula start
   - type: Sprite
-    layers:
-    - sprite: Mobs/Animals/bear.rsi
-      state: bear
+    sprite: Mobs/Animals/bear.rsi
+    state: bear
+  # Nebula end
   - type: InstantAction
     event: !type:PolymorphSpellEvent
       protoId: BitrunningAvatarBearPolymorph

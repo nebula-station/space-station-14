@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Nett" />
     <PackageReference Include="JetBrains.Annotations" PrivateAssets="All" />
-    <PackageReference Include="SixLabors.ImageSharp" /> <!-- nebula edit-->
+    <PackageReference Include="SixLabors.ImageSharp" />
     <PackageReference Include="Pidgin" />
     <PackageReference Include="Robust.Shared.AuthLib" />
   </ItemGroup>

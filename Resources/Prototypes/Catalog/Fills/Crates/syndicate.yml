@@ -22,6 +22,12 @@
         - id: ClothingOuterHardsuitJuggernaut
         - !type:NestedSelector
           tableId: SyndicateHardsuitExtrasEntityTable
+  # Nebula start
+  - type: Icon
+    sprite: Structures/Storage/Crates/syndicate_secure.rsi
+  - type: Sprite
+    sprite: Structures/Storage/Crates/syndicate_secure.rsi
+  # Nebula end
 
 - type: entity
   parent: [ CrateSyndicate, StorePresetUplink, BaseSyndicateContraband ]

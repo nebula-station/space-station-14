@@ -1,0 +1,74 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Credits to BlueMoon Station for the idea.
+
+- type: entity
+  abstract: true
+  parent: [BaseChangelingObjective, BaseTargetObjective]
+  id: BaseErpChangelingTargetObjective
+  components:
+  - type: PickRandomPerson
+    conditions:
+    - !type:ErpConsentCondition
+      tag: HornyAntagVictim
+      allowed: [ Yes ]
+    - !type:BodyWhitelistCondition
+      blacklist:
+        components:
+        - Silicon
+        - Changeling
+
+- type: entity
+  parent: BaseErpChangelingTargetObjective
+  id: ErpChangelingOrgasmObjective
+  description: Our prey must feel us. Their body should give in completely.
+  components:
+  - type: Objective
+    icon:
+      sprite: _Nebula/Changeling/erp_abilities.rsi
+      state: sting_hexacrocin
+  - type: TargetObjective
+    title: objective-condition-erp-orgasm-title
+  - type: ErpOrgasmCondition
+
+- type: entity
+  parent: BaseErpChangelingTargetObjective
+  id: ErpChangelingTakeFormObjective
+  description: We want to wear their body as our own.
+  components:
+  - type: Objective
+    icon:
+      sprite: _Goobstation/Changeling/changeling_abilities.rsi
+      state: sting_extractdna
+  - type: TargetObjective
+    title: objective-condition-erp-take-form-title
+  - type: ErpTakeFormCondition
+
+- type: entity
+  parent: BaseChangelingObjective
+  id: ErpChangelingArouseCrewObjective
+  components:
+  - type: Objective
+    icon:
+      sprite: _Nebula/Changeling/erp_abilities.rsi
+      state: sting_crocin
+  - type: NumberObjective
+    min: 3
+    max: 5
+    title: objective-condition-erp-arouse-crew-title
+    description: objective-condition-erp-arouse-crew-description
+  - type: ErpArouseCrewCondition
+
+- type: entity
+  parent: BaseChangelingObjective
+  id: ErpChangelingEscapeObjective
+  name: Escape to CentComm alive and unrestrained via the escape shuttle.
+  description: Our performance is over, time to leave the stage.
+  components:
+  - type: Objective
+    icon:
+      sprite: Structures/Furniture/chairs.rsi
+      state: shuttle
+  - type: EscapeShuttleCondition

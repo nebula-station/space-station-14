@@ -2,6 +2,6 @@
 
 - type: tile
   id: Lattice
-  sprite: /Textures/_Trauma/Tiles/lattice.png
+  sprite: /Textures/Tiles/lattice.png # Nebula edit
   deconstructTimeMultiplier: 1
   variants: 1

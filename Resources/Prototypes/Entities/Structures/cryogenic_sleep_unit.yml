@@ -8,12 +8,17 @@
     flags:
     - Anchorable
   - type: Rotatable
+  # Nebula start
   - type: Sprite
     noRot: true
     sprite: Structures/cryostorage.rsi
     layers:
     - state: sleeper_0
       map: ["base"]
+    - state: sleeper_0-overlay
+      shader: unshaded
+      map: ["overlay"]
+  # Nebula end
   - type: UserInterface
     interfaces:
       enum.CryostorageUIKey.Key:
@@ -49,12 +54,17 @@
     containers:
       storage: !type:ContainerSlot
   - type: Appearance
+  # Nebula start
   - type: GenericVisualizer
     visuals:
       enum.CryostorageVisuals.Full:
         base:
           True: { state: sleeper_1 }
           False: { state: sleeper_0 }
+        overlay:
+          True: { state: sleeper_1-overlay }
+          False: { state: sleeper_0-overlay }
+  # Nebula end
 
 # This one handles all spawns, latejoin and roundstart.
 - type: entity

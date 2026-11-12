@@ -377,20 +377,22 @@
       Critical:
         reagent: SpaceDrugs
         quantity: 25
+  # Nebula start
   - type: RandomSprite
     available:
         - enum.DamageStateVisualLayers.Base:
             medibot: ""
           enum.DamageStateVisualLayers.BaseUnshaded:
-            powered: Rainbow
+            powered-unshaded: Rainbow
   - type: Sprite
-    sprite: _Goobstation/Mobs/Silicon/Bots/medibot.rsi
+    sprite: _Arcane/Mobs/Silicon/Bots/medibot.rsi
     layers:
       - state: medibot
         map: [ "enum.DamageStateVisualLayers.Base" ]
-      - state: powered
+      - state: powered-unshaded
         map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
         shader: unshaded
+  # Nebula end
   - type: HTN
     rootTask:
       task: MedibotCompound

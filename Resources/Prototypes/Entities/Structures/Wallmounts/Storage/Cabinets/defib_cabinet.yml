@@ -7,16 +7,22 @@
   placement:
     mode: SnapgridCenter
   components:
+  # Nebula start
   - type: Sprite
     sprite: Structures/Wallmounts/defib_cabinet.rsi
     noRot: false
     layers:
     - state: frame
+    - state: light
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
     - state: fill
       map: ["enum.ItemCabinetVisuals.Layer"]
       visible: true
     - state: closed
       map: ["enum.OpenableVisuals.Layer"]
+  # Nebula end
   - type: ItemSlots
     slots:
       ItemCabinet:
@@ -38,6 +44,22 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
+  # Nebula start
+  - type: GenericVisualizer
+    visuals:
+      enum.ItemCabinetVisuals.ContainsItem:
+        enum.ItemCabinetVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: { state: open }
+          False: { state: closed }
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  # Nebula end
 
 - type: entity
   parent: DefibrillatorCabinet

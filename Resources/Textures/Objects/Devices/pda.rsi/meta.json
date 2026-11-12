@@ -8,6 +8,14 @@
     },
     "states": [
         {
+            "name": "equipped-BELT",
+            "directions": 4
+        },
+        {
+            "name": "equipped-IDCARD",
+            "directions": 4
+        },
+        {
             "name": "id_overlay"
         },
         {

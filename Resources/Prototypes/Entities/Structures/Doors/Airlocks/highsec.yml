@@ -5,7 +5,7 @@
   description: Keeps the bad out and keeps the good in.
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/airlock-vault.rsi
+    sprite: Structures/Doors/Airlocks/highsec/highsec.rsi # Nebula edit
   - type: Door
     crushDamage:
       types:

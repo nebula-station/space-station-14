@@ -213,11 +213,14 @@
   components:
   - type: Transform
     anchored: true
+  # Nebula start
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/camera.rsi
+    offset: 0, -0.5
     layers:
     - state: camera_off
+  # Nebula end
   - type: Clickable
   - type: InteractionOutline
   - type: Damageable
