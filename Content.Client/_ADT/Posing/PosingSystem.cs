@@ -1,6 +1,8 @@
-// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-License-Identifier: AGPL-3.0-only AND GPL-3.0-only
 // Ported from https://github.com/AdventureTimeSS14/space_station_ADT/blob/296c8b93290412fb8b446c0f42ce107851eefedf/Content.Client/ADT/Posing/PosingSystem.cs
+// Ported from https://github.com/wega-team/ss14-wega/blob/fb7f83ef99fb7bb977976d0649a20dc8c4bba058/Content.Client/_Wega/Posing/PosingSystem.cs
 
+using System.Numerics;
 using Content.Shared._ADT.Posing;
 using Content.Shared.Input;
 using Robust.Client.GameObjects;
@@ -17,8 +19,17 @@ public sealed partial class PosingSystem : SharedPosingSystem
     [Dependency] private SpriteSystem _sprite = default!;
 
     private const string PosingContext = "posing";
+    private const float LerpDuration = 0.15f;
+    private const float ReturnDuration = 0.2f;
 
-    private readonly HashSet<EntityUid> _posing = [];
+    private readonly Dictionary<EntityUid, (
+        Vector2 Offset,
+        Angle Angle,
+        Vector2 TargetOffset,
+        Angle TargetAngle,
+        float LerpTime,
+        bool IsReturning
+    )> _interpolationState = new();
 
     public override void Initialize()
     {
@@ -38,25 +49,42 @@ public sealed partial class PosingSystem : SharedPosingSystem
     {
         base.Shutdown();
         _input.Contexts.Remove(PosingContext);
+        _interpolationState.Clear();
     }
 
     [SubscribeLocalEvent]
     private void OnAfterHandleState(Entity<PosingComponent> ent, ref AfterAutoHandleStateEvent args)
     {
-        if (ent.Comp.Posing)
-        {
-            _posing.Add(ent);
+        if (_playerManager.LocalEntity == ent.Owner)
             return;
-        }
 
-        if (_posing.Remove(ent))
-            ResetSprite(ent);
+        var posing = ent.Comp;
+        if (posing.Posing && _interpolationState.TryGetValue(ent, out var state))
+        {
+            state.TargetOffset = posing.CurrentOffset;
+            state.TargetAngle = posing.CurrentAngle;
+            state.LerpTime = 0f;
+            state.IsReturning = false;
+            _interpolationState[ent] = state;
+        }
+        else if (posing.Posing)
+        {
+            _interpolationState[ent] = (posing.CurrentOffset, posing.CurrentAngle, posing.CurrentOffset, posing.CurrentAngle, 0f, false);
+        }
+        else if (_interpolationState.TryGetValue(ent, out state) && !state.IsReturning)
+        {
+            state.IsReturning = true;
+            state.LerpTime = 0f;
+            state.TargetOffset = Vector2.Zero;
+            state.TargetAngle = Angle.Zero;
+            _interpolationState[ent] = state;
+        }
     }
 
     [SubscribeLocalEvent]
     private void OnShutdown(Entity<PosingComponent> ent, ref ComponentShutdown args)
     {
-        if (!_posing.Remove(ent))
+        if (!_interpolationState.Remove(ent))
             return;
 
         if (!TerminatingOrDeleted(ent))
@@ -78,18 +106,32 @@ public sealed partial class PosingSystem : SharedPosingSystem
         base.ClientTogglePosing(uid, posing);
 
         if (posing.Posing)
-            _posing.Add(uid);
-        else if (_posing.Remove(uid))
-            ResetSprite((uid, posing));
+        {
+            _interpolationState[uid] = (posing.CurrentOffset, posing.CurrentAngle, posing.CurrentOffset, posing.CurrentAngle, 0f, false);
+            ApplySprite((uid, posing), posing.CurrentOffset, posing.CurrentAngle);
+        }
+        else if (_interpolationState.TryGetValue(uid, out var state))
+        {
+            state.IsReturning = true;
+            state.LerpTime = 0f;
+            state.TargetOffset = Vector2.Zero;
+            state.TargetAngle = Angle.Zero;
+            _interpolationState[uid] = state;
+        }
 
         if (_playerManager.LocalEntity == uid)
             _input.Contexts.SetActiveContext(posing.Posing ? PosingContext : posing.DefaultInputContext);
     }
 
+    private void ApplySprite(Entity<PosingComponent> ent, Vector2 offset, Angle angle)
+    {
+        _sprite.SetOffset(ent.Owner, ent.Comp.DefaultOffset + offset);
+        _sprite.SetRotation(ent.Owner, Angle.FromDegrees(ent.Comp.DefaultAngle) + angle);
+    }
+
     private void ResetSprite(Entity<PosingComponent> ent)
     {
-        _sprite.SetOffset(ent.Owner, ent.Comp.DefaultOffset);
-        _sprite.SetRotation(ent.Owner, Angle.FromDegrees(ent.Comp.DefaultAngle));
+        ApplySprite(ent, Vector2.Zero, Angle.Zero);
     }
 
     // Other animations overwrite the sprite offset and rotation, so the pose is reapplied every frame.
@@ -97,13 +139,73 @@ public sealed partial class PosingSystem : SharedPosingSystem
     {
         base.FrameUpdate(frameTime);
 
-        foreach (var uid in _posing)
+        var query = EntityQueryEnumerator<PosingComponent>();
+        while (query.MoveNext(out var uid, out var posing))
         {
-            if (!TryComp<PosingComponent>(uid, out var posing))
-                continue;
-
-            _sprite.SetOffset(uid, posing.DefaultOffset + posing.CurrentOffset);
-            _sprite.SetRotation(uid, Angle.FromDegrees(posing.DefaultAngle) + posing.CurrentAngle);
+            if (posing.Posing)
+                UpdatePosing((uid, posing), frameTime);
+            else
+                UpdateReturning((uid, posing), frameTime);
         }
+    }
+
+    private void UpdatePosing(Entity<PosingComponent> ent, float frameTime)
+    {
+        var posing = ent.Comp;
+        if (!_interpolationState.TryGetValue(ent, out var state) || state.IsReturning)
+            state = (posing.CurrentOffset, posing.CurrentAngle, posing.CurrentOffset, posing.CurrentAngle, 0f, false);
+
+        if (state.TargetOffset != posing.CurrentOffset || state.TargetAngle != posing.CurrentAngle)
+        {
+            state.TargetOffset = posing.CurrentOffset;
+            state.TargetAngle = posing.CurrentAngle;
+            state.LerpTime = 0f;
+        }
+
+        state.LerpTime += frameTime;
+        var t = Math.Min(1f, state.LerpTime / LerpDuration);
+
+        if (t >= 1f)
+        {
+            state.Offset = state.TargetOffset;
+            state.Angle = state.TargetAngle;
+        }
+        else
+        {
+            state.Offset = Vector2.Lerp(state.Offset, state.TargetOffset, t);
+            state.Angle = Angle.FromDegrees(MathHelper.Lerp(state.Angle.Degrees, state.TargetAngle.Degrees, t));
+        }
+
+        ApplySprite(ent, state.Offset, state.Angle);
+        _interpolationState[ent] = state;
+    }
+
+    private void UpdateReturning(Entity<PosingComponent> ent, float frameTime)
+    {
+        if (!_interpolationState.TryGetValue(ent, out var state))
+            return;
+
+        if (!state.IsReturning)
+        {
+            state.IsReturning = true;
+            state.LerpTime = 0f;
+            state.TargetOffset = Vector2.Zero;
+            state.TargetAngle = Angle.Zero;
+        }
+
+        state.LerpTime += frameTime;
+        var t = Math.Min(1f, state.LerpTime / ReturnDuration);
+
+        if (t >= 1f)
+        {
+            _interpolationState.Remove(ent);
+            ResetSprite(ent);
+            return;
+        }
+
+        state.Offset = Vector2.Lerp(state.Offset, state.TargetOffset, t);
+        state.Angle = Angle.FromDegrees(MathHelper.Lerp(state.Angle.Degrees, state.TargetAngle.Degrees, t));
+        _interpolationState[ent] = state;
+        ApplySprite(ent, state.Offset, state.Angle);
     }
 }
