@@ -154,9 +154,10 @@ public sealed partial class MeleeWeaponSystem
                     KeyFrames =
                     {
                         new AnimationTrackProperty.KeyFrame(startRotationOffset, 0f),
+                        new AnimationTrackProperty.KeyFrame(startRotationOffset, 0f),
                         new AnimationTrackProperty.KeyFrame(minRotationOffset, length * 0.10f),
                         new AnimationTrackProperty.KeyFrame(endRotationOffset, length * 0.15f),
-                        new AnimationTrackProperty.KeyFrame(Vector2.Lerp(startRotationOffset, endRotationOffset, 0.8f), length * 0.6f, Easings.OutQuart),
+                        new AnimationTrackProperty.KeyFrame(Vector2.Lerp(startRotationOffset, endRotationOffset, 0.8f), length * 0.75f, Easings.OutQuart),
                     },
                 },
             },
