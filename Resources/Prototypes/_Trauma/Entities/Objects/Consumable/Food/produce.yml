@@ -86,11 +86,11 @@
     solution:
       reagents:
       - ReagentId: Nutriment
-        Quantity: 20
+        Quantity: 15 # Nebula edit
       - ReagentId: Vitamin
-        Quantity: 10
+        Quantity: 7.5 # Nebula edit
       - ReagentId: CoconutWater
-        Quantity: 10
+        Quantity: 7.5 # Nebula edit
   - type: Extractable
     juiceSolution:
       reagents:
@@ -274,11 +274,11 @@
       maxVol: 14
       reagents:
       - ReagentId: Nutriment
-        Quantity: 10
+        Quantity: 7 # Nebula edit
       - ReagentId: Vitamin
-        Quantity: 4
+        Quantity: 3 # Nebula edit
       - ReagentId: Desoxyephedrine
-        Quantity: 5
+        Quantity: 4 # Nebula edit
   - type: Tag
     tags:
     - Fruit
@@ -356,11 +356,11 @@
     solution:
       reagents:
       - ReagentId: Synthflesh
-        Quantity: 40
+        Quantity: 20 # Nebula edit
       - ReagentId: UncookedAnimalProteins
-        Quantity: 10
+        Quantity: 5 # Nebula edit
       - ReagentId: GastroToxin
-        Quantity: 10
+        Quantity: 5 # Nebula edit
   - type: Produce
     plantId: SynthMeatPlants
   - type: Tag

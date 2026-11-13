@@ -16,11 +16,11 @@
     solution:
       reagents:
       - ReagentId: Nutriment
-        Quantity: 45
+        Quantity: 36 # Nebula edit
       - ReagentId: Protein
-        Quantity: 15
+        Quantity: 12 # Nebula edit
       - ReagentId: Vitamin
-        Quantity: 15
+        Quantity: 12 # Nebula edit
 
 # Breakfasts
 

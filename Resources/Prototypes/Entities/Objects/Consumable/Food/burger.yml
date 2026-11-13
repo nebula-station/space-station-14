@@ -1089,11 +1089,11 @@
     solution:
       reagents:
       - ReagentId: Nutriment
-        Quantity: 79
+        Quantity: 42 # Nebula edit
       - ReagentId: Protein
-        Quantity: 20
+        Quantity: 11 # Nebula edit
       - ReagentId: Vitamin
-        Quantity: 11
+        Quantity: 5 # Nebula edit
       - ReagentId: TableSalt
         Quantity: 1
       - ReagentId: Blackpepper

@@ -318,6 +318,13 @@
   name: pig in a blanket
   description: A tiny sausage wrapped in a flakey, buttery roll. Free this pig from its blanket prison by eating it.
   components:
+  # Nebula start
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 30
+  # Nebula end
   - type: Item
     size: Tiny
     shape:
