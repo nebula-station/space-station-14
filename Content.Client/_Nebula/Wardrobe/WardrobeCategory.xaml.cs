@@ -13,6 +13,7 @@ using Robust.Client.GameObjects;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Client._Nebula.Wardrobe;
 
@@ -25,8 +26,13 @@ public sealed partial class WardrobeCategory : BoxContainer
     private const int ColumnWidth = 320;
 
     private readonly WardrobeCategoryPrototype _category;
+    private readonly SpriteSystem _sprite;
+    private readonly List<(EntityPrototype Entity, WardrobeItemSet Set)> _entries = [];
     private readonly List<(WardrobeItem Item, WardrobeItemSet Set)> _items = [];
-    private readonly List<ISearchableControl> _searchable;
+    private List<ISearchableControl> _searchable = [];
+    private bool _built;
+    private HumanoidCharacterProfile? _profile;
+    private int? _rank;
 
     public event Action<EntProtoId, bool>? Toggled;
 
@@ -35,32 +41,23 @@ public sealed partial class WardrobeCategory : BoxContainer
         RobustXamlLoader.Load(this);
 
         _category = category;
+        _sprite = sprite;
         SearchPanel.Shape = NebulaShapes.Control;
         SearchIcon.Texture = NebulaIcons.Get("Ghost/search");
 
-        List<(EntityPrototype Entity, WardrobeItemSet Set)> entries = [];
         foreach (var set in category.Sets)
         {
             foreach (var id in set.Items)
             {
                 if (proto.TryIndex(id, out var entity))
-                    entries.Add((entity, set));
+                    _entries.Add((entity, set));
             }
         }
 
-        entries.Sort((a, b) => a.Set.Tier != b.Set.Tier
+        _entries.Sort((a, b) => a.Set.Tier != b.Set.Tier
             ? a.Set.Tier.CompareTo(b.Set.Tier)
             : string.Compare(a.Entity.Name, b.Entity.Name, StringComparison.CurrentCultureIgnoreCase));
 
-        foreach (var (entity, set) in entries)
-        {
-            var item = new WardrobeItem(entity, set.Tier, sprite);
-            item.Toggled += (control, pressed) => Toggled?.Invoke(control.Item, pressed);
-            Items.AddChild(item);
-            _items.Add((item, set));
-        }
-
-        _searchable = Items.GetSearchableControls();
         SearchBar.OnTextChanged += _ =>
         {
             foreach (var element in _searchable)
@@ -75,18 +72,50 @@ public sealed partial class WardrobeCategory : BoxContainer
     /// </summary>
     public void Refresh(HumanoidCharacterProfile profile, int? rank)
     {
+        _profile = profile;
+        _rank = rank;
+
         var count = 0;
+        foreach (var (entity, _) in _entries)
+        {
+            if (profile.Wardrobe.Contains(entity.ID))
+                count++;
+        }
 
         foreach (var (item, set) in _items)
         {
-            var pressed = profile.Wardrobe.Contains(item.Item);
-            if (pressed)
-                count++;
-
-            item.SetState(pressed, !set.IsAllowed(rank));
+            item.SetState(profile.Wardrobe.Contains(item.Item), !set.IsAllowed(rank));
         }
 
         Status.Text = Loc.GetString("nebula-wardrobe-category-status", ("count", count), ("max", _category.MaxLimit));
+    }
+
+    protected override void FrameUpdate(FrameEventArgs args)
+    {
+        base.FrameUpdate(args);
+
+        if (_built)
+            return;
+
+        _built = true;
+        foreach (var (entity, set) in _entries)
+        {
+            var item = new WardrobeItem(entity, set.Tier, _sprite);
+            item.Toggled += (control, pressed) => Toggled?.Invoke(control.Item, pressed);
+            Items.AddChild(item);
+            _items.Add((item, set));
+        }
+
+        _searchable = Items.GetSearchableControls();
+
+        var query = SearchBar.Text.Trim();
+        foreach (var element in _searchable)
+        {
+            element.SetHiddenState(true, query);
+        }
+
+        if (_profile != null)
+            Refresh(_profile, _rank);
     }
 
     protected override void Resized()
