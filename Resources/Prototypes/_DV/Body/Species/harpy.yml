@@ -94,12 +94,22 @@
           32:
             sprite: _DV/Mobs/Species/Harpy/displacement.rsi
             state: jumpsuit
+      outerClothing: # Nebula - Monolith, suits follow the harpy legs
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Harpy/displacement.rsi
+            state: outerClothing
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
           32:
             sprite: _DV/Mobs/Species/Harpy/displacement.rsi
             state: jumpsuit
+      outerClothing: # Nebula - Monolith, suits follow the harpy legs
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Harpy/displacement.rsi
+            state: outerClothing
   - type: InitialBody
     organs:
       Torso: OrganHarpyTorso

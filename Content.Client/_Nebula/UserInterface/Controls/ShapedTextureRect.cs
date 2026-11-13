@@ -34,6 +34,12 @@ public sealed class ShapedTextureRect : Control, IBackdropSource
 
     public Texture? Texture { get; set; }
 
+    /// <summary>
+    /// Texture blurred for the backdrop instead of <see cref="Texture"/>.
+    /// Animated lobby backgrounds set it to their first frame, so the blur isn't redone every frame.
+    /// </summary>
+    public Texture? BlurTexture { get; set; }
+
     public ShapedTextureStretch Stretch { get; set; } = ShapedTextureStretch.Cover;
 
     public bool BlurEnabled { get; set; }
@@ -57,7 +63,13 @@ public sealed class ShapedTextureRect : Control, IBackdropSource
         var (uvMin, uvMax) = GetUv(texture.Size, width, height);
 
         if (BlurEnabled)
-            UpdateBlur(handle, texture, uvMin, uvMax);
+        {
+            var blurTexture = BlurTexture ?? texture;
+            var (blurMin, blurMax) = ReferenceEquals(blurTexture, texture)
+                ? (uvMin, uvMax)
+                : GetUv(blurTexture.Size, width, height);
+            UpdateBlur(handle, blurTexture, blurMin, blurMax);
+        }
 
         _outline.Update(PixelSizeBox, this.GetStyle(StylePropertyShape, ShapeStyle.Square), UIScale, 0f);
 

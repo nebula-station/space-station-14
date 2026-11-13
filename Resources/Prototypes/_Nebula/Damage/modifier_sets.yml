@@ -28,3 +28,14 @@
     Structural: 0.5
   flatReductions:
     Blunt: 6 # Just a bit more tough
+
+# Ported from Monolith-DS
+- type: damageModifierSet
+  id: Protogen
+  coefficients:
+    Heat: 1.1
+    Cold: 1.15
+    Radiation: 1.55
+    Blunt: 0.8
+    Slash: 0.9
+    Piercing: 0.9

@@ -371,4 +371,10 @@ public sealed partial class GoobCVars
     /// </summary>
     public static readonly CVarDef<float> GpsUpdateRate =
         CVarDef.Create("gps.update_rate", 1f, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
+    /// Shows the "You are ..." intro when joining a round from the lobby. Goob PR #7395, can be turned off in accessibility options.
+    /// </summary>
+    public static readonly CVarDef<bool> RoundIntroEnabled =
+        CVarDef.Create("game.round_intro", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 }

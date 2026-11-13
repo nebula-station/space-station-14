@@ -32,7 +32,8 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
         }
 
         // Update smoothing and sprite based on volume.
-        if (TryComp<IconSmoothComponent>(uid, out var smooth))
+        // Nebula - NoSprite puddles draw their own sprite (e.g. ERP fluid puddles), never switch them to splat states
+        if (TryComp<IconSmoothComponent>(uid, out var smooth) && smooth.Mode != IconSmoothingMode.NoSprite)
         {
             if (volume < LowThreshold)
             {

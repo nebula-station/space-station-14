@@ -611,6 +611,17 @@ public abstract partial class SharedMoverController : VirtualController
 
         mobMover.StepSoundDistance -= distanceNeeded;
 
+        // Nebula - Frontier/Monolith: a hardsuit that covers the boots is what hits the floor,
+        // so its steps play right after putting it on, even barefoot or for species with silent bare feet.
+        if (_inventory.TryGetSlotEntity(uid, "outerClothing", out var outerClothing) &&
+            FootstepModifierQuery.TryComp(outerClothing, out var outerModifier) &&
+            outerModifier.FootstepSoundCollection != null)
+        {
+            sound = outerModifier.FootstepSoundCollection;
+            return true;
+        }
+        // Nebula end
+
         // DeltaV - Don't play the sound if they have no shoes and the component
         if (NoShoesSilentQuery.HasComp(uid) &&
             !_inventory.TryGetSlotEntity(uid, "shoes", out var _))

@@ -170,6 +170,12 @@ public sealed partial class ClientGameTicker : GameTicker
     [SubscribeNetworkEvent]
     private void JoinGame(TickerJoinGameEvent message)
     {
+        // Goob - round intro fades to black and switches the state itself
+        var attempt = new Content.Goobstation.Shared.RoundIntro.ClientJoinGameAttemptEvent();
+        RaiseLocalEvent(ref attempt);
+        if (attempt.Handled)
+            return;
+
         _stateManager.RequestStateChange<GameplayState>();
     }
 

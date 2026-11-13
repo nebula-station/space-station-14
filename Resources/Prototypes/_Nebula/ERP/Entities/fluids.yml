@@ -1,0 +1,111 @@
+# SPDX-FileCopyrightText: 2026 C_Quarian
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Ported from Arcane.
+
+# Stain left on a wall when someone finishes facing it. Washed by water, soap and space cleaner.
+- type: entity
+  id: EffectCumWall
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        hard: false
+        mask:
+        - ItemMask
+        layer:
+        - LowImpassable
+  - type: Sprite
+    noRot: true
+    drawdepth: Effects
+    sprite: _Arcane/Effects/cumoverlay.rsi
+    state: cum_obj
+  - type: CumStain
+  - type: Reactive
+    reactions:
+    - reagents: [ Water, SpaceCleaner, SoapReagent ]
+      methods: [ Touch ]
+      effects:
+      - !type:RemoveCumStain
+  - type: TimedDespawn
+    lifetime: 1200
+  - type: Tag
+    tags:
+    - HideContextMenu
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleSemen
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    noRot: true
+    drawdepth: Puddles
+    color: white
+    sprite: _Arcane/Effects/genitals_effects.rsi
+    layers:
+    - state: semen1
+      map: [ "random" ]
+  - type: RandomSprite
+    available:
+    - random:
+        semen1: ""
+        semen2: ""
+        semen3: ""
+        semen4: ""
+  - type: IconSmooth
+    key: semen_puddles
+    mode: NoSprite
+  - type: Solution
+    id: puddle
+    solution:
+      reagents:
+      - ReagentId: Semen
+        Quantity: 10
+  - type: Tag
+    tags:
+    - HideContextMenu
+    - DNASolutionScannable
+
+- type: entity
+  parent: PuddleTemporary # not PuddleSemen, solution reagents would be inherited too
+  id: PuddleFemCum
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    noRot: true
+    drawdepth: Puddles
+    color: white
+    sprite: _Arcane/Effects/genitals_effects.rsi
+    layers:
+    - state: fem1
+      map: [ "random" ]
+  - type: RandomSprite
+    available:
+    - random:
+        fem1: ""
+        fem2: ""
+        fem3: ""
+        fem4: ""
+  - type: IconSmooth
+    key: femcum_puddles
+    mode: NoSprite
+  - type: Solution
+    id: puddle
+    solution:
+      reagents:
+      - ReagentId: FemCum
+        Quantity: 10
+  - type: Tag
+    tags:
+    - HideContextMenu
+    - DNASolutionScannable

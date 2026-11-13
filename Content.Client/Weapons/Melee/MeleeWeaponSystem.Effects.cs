@@ -15,6 +15,11 @@ public sealed partial class MeleeWeaponSystem
     private const string SlashAnimationKey = "melee-slash";
     private const string ThrustAnimationKey = "melee-thrust";
 
+    // Nebula - bounds for the attack rate based animation length
+    private const float DefaultAnimationLength = 0.6f;
+    private const float MinAnimationLength = 0.15f;
+    private const float MaxAnimationLength = 1f;
+
     /// <summary>
     /// Does all of the melee effects for a player that are predicted, i.e. character lunge and weapon animation.
     /// </summary>
@@ -51,6 +56,10 @@ public sealed partial class MeleeWeaponSystem
             return;
         }
 
+        // Nebula - Monolith melee animations: duration follows the attack rate, swing reach follows AnimationOffset
+        var length = DefaultAnimationLength;
+        var offset = 1f;
+
         if (arcComponent.Animation != WeaponArcAnimation.None
             && TryComp(weapon, out MeleeWeaponComponent? meleeWeaponComponent))
         {
@@ -58,11 +67,13 @@ public sealed partial class MeleeWeaponSystem
                 && TryComp(weapon, out SpriteComponent? weaponSpriteComponent))
                 _sprite.CopySprite((weapon, weaponSpriteComponent), (animationUid, sprite));
 
-            if (meleeWeaponComponent.SwingLeft)
+            if (meleeWeaponComponent.SwingLeft || meleeWeaponComponent.SwingFlipped) // Nebula - alternating swings
                 angle *= -1;
+
+            length = Math.Clamp(1f / MathF.Max(meleeWeaponComponent.AttackRate, 0.01f) * 0.6f, MinAnimationLength, MaxAnimationLength);
+            offset = meleeWeaponComponent.AnimationOffset;
         }
         _sprite.SetRotation((animationUid, sprite), localPos.ToWorldAngle());
-        var distance = Math.Clamp(localPos.Length() / 2f, 0.2f, 1f);
 
         var xform = Transform(animationUid);
         TrackUserComponent track;
@@ -72,9 +83,9 @@ public sealed partial class MeleeWeaponSystem
             case WeaponArcAnimation.Slash:
                 track = EnsureComp<TrackUserComponent>(animationUid);
                 track.User = user;
-                _animation.Play(animationUid, GetSlashAnimation(sprite, angle, spriteRotation), SlashAnimationKey);
+                _animation.Play(animationUid, GetSlashAnimation(sprite, angle, spriteRotation, length, offset), SlashAnimationKey);
                 if (arcComponent.Fadeout)
-                    _animation.Play(animationUid, GetFadeAnimation(sprite, 0.065f, 0.065f + 0.05f), FadeAnimationKey);
+                    _animation.Play(animationUid, GetFadeAnimation(sprite, length * 0.5f, length * 0.5f), FadeAnimationKey);
                 break;
             case WeaponArcAnimation.Thrust:
                 track = EnsureComp<TrackUserComponent>(animationUid);
@@ -86,9 +97,9 @@ public sealed partial class MeleeWeaponSystem
                     spriteRotation = Angle.FromDegrees(360) - spriteRotation;
 
                 // Goobstation - Shove Rework End
-                _animation.Play(animationUid, GetThrustAnimation((animationUid, sprite), distance, spriteRotation), ThrustAnimationKey);
+                _animation.Play(animationUid, GetThrustAnimation((animationUid, sprite), offset, spriteRotation, length), ThrustAnimationKey);
                 if (arcComponent.Fadeout)
-                    _animation.Play(animationUid, GetFadeAnimation(sprite, 0.05f, 0.15f), FadeAnimationKey);
+                    _animation.Play(animationUid, GetFadeAnimation(sprite, length * 0.5f, length + 0.15f), FadeAnimationKey);
                 break;
             case WeaponArcAnimation.None:
                 var (mapPos, mapRot) = TransformSystem.GetWorldPositionRotation(userXform);
@@ -101,15 +112,16 @@ public sealed partial class MeleeWeaponSystem
         }
     }
 
-    private Animation GetSlashAnimation(SpriteComponent sprite, Angle arc, Angle spriteRotation)
+    // Nebula - Monolith slash: a quick swing past the target and a slow settle back
+    private Animation GetSlashAnimation(SpriteComponent sprite, Angle arc, Angle spriteRotation, float length, float offset)
     {
-        const float slashStart = 0.03f;
-        const float slashEnd = 0.065f;
-        const float length = slashEnd + 0.05f;
-        var startRotation = sprite.Rotation + arc / 2;
-        var endRotation = sprite.Rotation - arc / 2;
-        var startRotationOffset = startRotation.RotateVec(new Vector2(0f, -1f));
-        var endRotationOffset = endRotation.RotateVec(new Vector2(0f, -1f));
+        var startRotation = sprite.Rotation + arc * 0.5f;
+        var endRotation = sprite.Rotation - arc * 0.5f;
+
+        var startRotationOffset = startRotation.RotateVec(new Vector2(0f, -offset * 0.9f));
+        var minRotationOffset = sprite.Rotation.RotateVec(new Vector2(0f, -offset * 1.1f));
+        var endRotationOffset = endRotation.RotateVec(new Vector2(0f, -offset * 0.9f));
+
         startRotation += spriteRotation;
         endRotation += spriteRotation;
 
@@ -125,9 +137,11 @@ public sealed partial class MeleeWeaponSystem
                     KeyFrames =
                     {
                         new AnimationTrackProperty.KeyFrame(startRotation, 0f),
-                        new AnimationTrackProperty.KeyFrame(startRotation, slashStart),
-                        new AnimationTrackProperty.KeyFrame(endRotation, slashEnd)
-                    }
+                        new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.5f), length * 0.10f),
+                        new AnimationTrackProperty.KeyFrame(endRotation, length * 0.15f),
+                        new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.9f), length * 0.20f),
+                        new AnimationTrackProperty.KeyFrame(Angle.Lerp(startRotation, endRotation, 0.8f), length * 0.55f, Easings.OutQuart),
+                    },
                 },
                 new AnimationTrackComponentProperty()
                 {
@@ -136,20 +150,20 @@ public sealed partial class MeleeWeaponSystem
                     KeyFrames =
                     {
                         new AnimationTrackProperty.KeyFrame(startRotationOffset, 0f),
-                        new AnimationTrackProperty.KeyFrame(startRotationOffset, slashStart),
-                        new AnimationTrackProperty.KeyFrame(endRotationOffset, slashEnd)
-                    }
+                        new AnimationTrackProperty.KeyFrame(minRotationOffset, length * 0.10f),
+                        new AnimationTrackProperty.KeyFrame(endRotationOffset, length * 0.15f),
+                        new AnimationTrackProperty.KeyFrame(Vector2.Lerp(startRotationOffset, endRotationOffset, 0.8f), length * 0.75f, Easings.OutQuart),
+                    },
                 },
-            }
+            },
         };
     }
 
-    private Animation GetThrustAnimation(Entity<SpriteComponent> sprite, float distance, Angle spriteRotation)
+    // Nebula - Monolith thrust: a stab with a small recoil
+    private Animation GetThrustAnimation(Entity<SpriteComponent> sprite, float offset, Angle spriteRotation, float length)
     {
-        const float thrustEnd = 0.05f;
-        const float length = 0.15f;
-        var startOffset = sprite.Comp.Rotation.RotateVec(new Vector2(0f, -distance / 5f));
-        var endOffset = sprite.Comp.Rotation.RotateVec(new Vector2(0f, -distance));
+        var startOffset = Vector2.Zero;
+        var endOffset = sprite.Comp.Rotation.RotateVec(new Vector2(0f, -offset * 1.2f));
         _sprite.SetRotation(sprite.AsNullable(), sprite.Comp.Rotation + spriteRotation);
 
         return new Animation()
@@ -164,11 +178,13 @@ public sealed partial class MeleeWeaponSystem
                     KeyFrames =
                     {
                         new AnimationTrackProperty.KeyFrame(startOffset, 0f),
-                        new AnimationTrackProperty.KeyFrame(endOffset, thrustEnd),
-                        new AnimationTrackProperty.KeyFrame(endOffset, length),
-                    }
+                        new AnimationTrackProperty.KeyFrame(Vector2.Lerp(startOffset, endOffset, 0.65f), length * 0.10f),
+                        new AnimationTrackProperty.KeyFrame(endOffset, length * 0.20f),
+                        new AnimationTrackProperty.KeyFrame(Vector2.Lerp(startOffset, endOffset, 0.9f), length * 0.30f),
+                        new AnimationTrackProperty.KeyFrame(Vector2.Lerp(startOffset, endOffset, 0.7f), length * 0.40f, Easings.OutQuart),
+                    },
                 },
-            }
+            },
         };
     }
 
@@ -176,7 +192,7 @@ public sealed partial class MeleeWeaponSystem
     {
         return new Animation
         {
-            Length = TimeSpan.FromSeconds(end),
+            Length = TimeSpan.FromSeconds(start + end), // Nebula - keyframe times are gaps between frames, so the fade ends at start + end
             AnimationTracks =
             {
                 new AnimationTrackComponentProperty()
@@ -212,8 +228,10 @@ public sealed partial class MeleeWeaponSystem
                     InterpolationMode = AnimationInterpolationMode.Linear,
                     KeyFrames =
                     {
-                        new AnimationTrackProperty.KeyFrame(direction.Normalized() * 0.15f, 0f),
-                        new AnimationTrackProperty.KeyFrame(Vector2.Zero, length)
+                        // Nebula - Monolith lunge: lean into the hit instead of snapping forward
+                        new AnimationTrackProperty.KeyFrame(Vector2.Zero, 0f),
+                        new AnimationTrackProperty.KeyFrame(direction.Normalized() * 0.15f, length * 0.4f),
+                        new AnimationTrackProperty.KeyFrame(Vector2.Zero, length * 0.6f),
                     }
                 }
             }
@@ -228,7 +246,7 @@ public sealed partial class MeleeWeaponSystem
         var query = EntityQueryEnumerator<TrackUserComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var arcComponent, out var xform))
         {
-            if (arcComponent.User == null || TerminatingOrDeleted(arcComponent.User)) // Goobstation
+            if (arcComponent.User == null || TerminatingOrDeleted(arcComponent.User) || !xform.ParentUid.IsValid()) // Goobstation, Nebula - parent check
                 continue;
 
             Vector2 targetPos = TransformSystem.GetWorldPosition(arcComponent.User.Value);
@@ -239,7 +257,9 @@ public sealed partial class MeleeWeaponSystem
                 targetPos += entRotation.RotateVec(arcComponent.Offset);
             }
 
-            TransformSystem.SetWorldPosition(uid, targetPos);
+            // Nebula - Monolith: local position without lerp, so the arc does not trail behind a moving user
+            var localPos = Vector2.Transform(targetPos, TransformSystem.GetInvWorldMatrix(xform.ParentUid));
+            TransformSystem.SetLocalPositionNoLerp(uid, localPos, xform);
         }
     }
 

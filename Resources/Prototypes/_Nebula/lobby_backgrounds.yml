@@ -1,0 +1,66 @@
+# Animated lobby backgrounds, ported from Monolith-DS (LuaM) by Nebula.
+# Frames are 000, 001, ... in the folder, background points at the first one.
+
+- type: lobbyBackground
+  id: LuaMGalaxy1
+  background: /Textures/_LuaM/LobbyScreens/LuaMGalaxy1/000.webp
+  frames: 14
+  frameTime: 0.15
+  title: lobby-state-background-luamgalaxy1
+  artist: lobby-state-background-luam-artist
+
+- type: lobbyBackground
+  id: LuaMSky1
+  background: /Textures/_LuaM/LobbyScreens/LuaMSky1/000.webp
+  frames: 10
+  frameTime: 0.1
+  title: lobby-state-background-luamsky1
+  artist: lobby-state-background-luam-artist
+
+- type: lobbyBackground
+  id: LuaMSky2
+  background: /Textures/_LuaM/LobbyScreens/LuaMSky2/000.webp
+  frames: 10
+  frameTime: 0.08
+  title: lobby-state-background-luamsky2
+  artist: lobby-state-background-luam-artist
+
+- type: lobbyBackground
+  id: LuaMPlanets1
+  background: /Textures/_LuaM/LobbyScreens/LuaMPlanets1/000.webp
+  frames: 20
+  frameTime: 0.2
+  title: lobby-state-background-luamplanets1
+  artist: lobby-state-background-luam-artist
+
+- type: lobbyBackground
+  id: LuaMPlanets2
+  background: /Textures/_LuaM/LobbyScreens/LuaMPlanets2/000.webp
+  frames: 15
+  frameTime: 0.1
+  title: lobby-state-background-luamplanets2
+  artist: lobby-state-background-luam-artist
+
+- type: lobbyBackground
+  id: LuaMSpace1
+  background: /Textures/_LuaM/LobbyScreens/LuaMSpace1/000.webp
+  frames: 20
+  frameTime: 0.1
+  title: lobby-state-background-luamspace1
+  artist: lobby-state-background-luam-artist
+
+- type: lobbyBackground
+  id: LuaMSpace2
+  background: /Textures/_LuaM/LobbyScreens/LuaMSpace2/000.webp
+  frames: 24
+  frameTime: 0.1
+  title: lobby-state-background-luamspace2
+  artist: lobby-state-background-luam-artist
+
+- type: lobbyBackground
+  id: LuaMSpace3
+  background: /Textures/_LuaM/LobbyScreens/LuaMSpace3/000.webp
+  frames: 20
+  frameTime: 0.1
+  title: lobby-state-background-luamspace3
+  artist: lobby-state-background-luam-artist

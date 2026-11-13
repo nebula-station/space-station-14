@@ -203,6 +203,7 @@
       methods: [ Touch ]
       effects:
       - !type:WashCreamPie
+      - !type:WashCumOverlay # Nebula
     - reagents: [ Water ]
       methods: [ Touch ]
       effects:

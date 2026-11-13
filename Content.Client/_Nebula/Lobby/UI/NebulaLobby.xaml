@@ -39,8 +39,49 @@
 
                         <nc:ShapedPanel StyleClasses="NebulaSection" Orientation="Vertical">
                             <BoxContainer Orientation="Vertical" Margin="10" SeparationOverride="6">
-                                <RichTextLabel Name="LobbySong" Access="Public" />
-                                <RichTextLabel Name="LobbyBackground" Access="Public" />
+                                <!-- Monolith port: previous / next lobby track -->
+                                <BoxContainer Orientation="Horizontal" SeparationOverride="4">
+                                    <nc:ShapedButton Name="PreviousSongButton"
+                                                     Access="Public"
+                                                     StyleClasses="NebulaButtonBar"
+                                                     Text="&lt;"
+                                                     MinWidth="28"
+                                                     VerticalAlignment="Center"
+                                                     ToolTip="{Loc 'ui-lobby-song-previous'}" />
+                                    <nc:ShapedButton Name="PauseSongButton"
+                                                     Access="Public"
+                                                     StyleClasses="NebulaButtonBar"
+                                                     MinWidth="28"
+                                                     IconSize="14"
+                                                     VerticalAlignment="Center"
+                                                     ToolTip="{Loc 'ui-lobby-song-pause'}" />
+                                    <RichTextLabel Name="LobbySong" Access="Public" HorizontalExpand="True" VerticalAlignment="Center" />
+                                    <nc:ShapedButton Name="NextSongButton"
+                                                     Access="Public"
+                                                     StyleClasses="NebulaButtonBar"
+                                                     Text="&gt;"
+                                                     MinWidth="28"
+                                                     VerticalAlignment="Center"
+                                                     ToolTip="{Loc 'ui-lobby-song-next'}" />
+                                </BoxContainer>
+                                <!-- Monolith port: previous / next lobby background -->
+                                <BoxContainer Orientation="Horizontal" SeparationOverride="4">
+                                    <nc:ShapedButton Name="PreviousBackgroundButton"
+                                                     Access="Public"
+                                                     StyleClasses="NebulaButtonBar"
+                                                     Text="&lt;"
+                                                     MinWidth="28"
+                                                     VerticalAlignment="Center"
+                                                     ToolTip="{Loc 'ui-lobby-background-previous'}" />
+                                    <RichTextLabel Name="LobbyBackground" Access="Public" HorizontalExpand="True" VerticalAlignment="Center" />
+                                    <nc:ShapedButton Name="NextBackgroundButton"
+                                                     Access="Public"
+                                                     StyleClasses="NebulaButtonBar"
+                                                     Text="&gt;"
+                                                     MinWidth="28"
+                                                     VerticalAlignment="Center"
+                                                     ToolTip="{Loc 'ui-lobby-background-next'}" />
+                                </BoxContainer>
                                 <nlobby:NebulaLinkBar Margin="0 4 0 0" />
                                 <nlobby:NebulaSupportButton Margin="0 2 0 0" />
                             </BoxContainer>

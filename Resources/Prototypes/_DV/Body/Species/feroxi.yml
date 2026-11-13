@@ -97,6 +97,11 @@
           32:
             sprite: _White/Mobs/Species/displacement.rsi
             state: shoes
+      outerClothing: # Nebula - same legs maps as reptilians, suits follow them
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Reptilian/displacement.rsi
+            state: outerClothing
     displacements:
       jumpsuit:
         sizeMaps:
@@ -108,6 +113,11 @@
           32:
             sprite: _White/Mobs/Species/displacement.rsi
             state: shoes
+      outerClothing: # Nebula - same legs maps as reptilians, suits follow them
+        sizeMaps:
+          32:
+            sprite: _LuaM/Mobs/Species/Reptilian/displacement.rsi
+            state: outerClothing
   - type: InitialBody
     organs:
       Torso: OrganFeroxiTorso

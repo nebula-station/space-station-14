@@ -1,0 +1,8 @@
+# Lobby tracks added to the lobby playlist, the default track plays first every round.
+
+- type: lobbyTrack
+  id: FrontierArrivals
+  path: /Audio/_NF/Lobby/frontier-arrivals.ogg
+  title: Frontier Arrivals
+  artist: troglodyte71
+  default: true

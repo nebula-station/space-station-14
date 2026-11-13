@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2026 C_Quarian
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Ported from Arcane. Spawned in puddles by OrgasmSystem.
+
+- type: reagent
+  id: Semen
+  name: reagent-name-semen
+  group: Foods
+  desc: reagent-description-semen
+  physicalDesc: reagent-physical-desc-sticky
+  flavor: salty
+  color: "#f2f2ea"
+  recognizable: true
+
+- type: reagent
+  id: FemCum
+  name: reagent-name-femcum
+  group: Foods
+  desc: reagent-description-femcum
+  physicalDesc: reagent-physical-desc-sticky
+  flavor: salty
+  color: "#e8dcc8"
+  recognizable: true

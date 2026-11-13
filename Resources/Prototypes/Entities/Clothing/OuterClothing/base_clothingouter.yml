@@ -219,6 +219,7 @@
   id: ClothingOuterEVASuitBase
   name: base EVA Suit
   components:
+  - type: SpeedTieredFootsteps # Nebula - Monolith/Hullrot: light, medium or heavy steps by the suit's slowdown
   # <Trauma>
   - type: IgniteFromGasImmunity
     parts:
@@ -258,6 +259,7 @@
   id: ClothingOuterHardsuitBase
   name: base hardsuit
   components:
+  - type: SpeedTieredFootsteps # Nebula - Monolith/Hullrot: light, medium or heavy steps by the suit's slowdown
   - type: PressureProtection
     highPressureMultiplier: 0.3
   - type: ClothingSpeedModifier

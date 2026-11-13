@@ -9,6 +9,7 @@
   params:
     displacementSize: 127
     displacementScale: 1 # Nebula
+    displacementTexels: 32 # Nebula
 
 - type: shader
   id: DisplacedDraw
@@ -17,6 +18,7 @@
   params:
     displacementSize: 127
     displacementScale: 1 # Nebula
+    displacementTexels: 32 # Nebula
 
 - type: shader
   id: DisplacedDrawUnshaded
@@ -25,3 +27,4 @@
   params:
     displacementSize: 127
     displacementScale: 1 # Nebula
+    displacementTexels: 32 # Nebula

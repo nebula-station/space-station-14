@@ -19,6 +19,23 @@ public sealed partial class MarkingManager
     private FrozenDictionary<HumanoidVisualLayers, FrozenDictionary<string, MarkingPrototype>> _categorizedMarkings = default!;
     private FrozenDictionary<string, MarkingPrototype> _markings = default!;
 
+    // Nebula start - wagging variants are only applied by the wag toggle, never picked in the editor
+    /// <summary>
+    /// Suffix of animated marking variants swapped in by the wagging toggle.
+    /// </summary>
+    public const string WaggingSuffix = "Animated";
+
+    private FrozenSet<string> _waggingVariants = FrozenSet<string>.Empty;
+
+    /// <summary>
+    /// Whether the marking is the animated variant of another marking, used only while wagging.
+    /// </summary>
+    public bool IsWaggingVariant(string markingId)
+    {
+        return _waggingVariants.Contains(markingId);
+    }
+    // Nebula end
+
     public void Initialize()
     {
         _prototype.PrototypesReloaded += OnPrototypeReload;
@@ -47,6 +64,13 @@ public sealed partial class MarkingManager
         }
 
         _markings = _prototype.EnumeratePrototypes<MarkingPrototype>().ToFrozenDictionary(x => x.ID);
+
+        // Nebula
+        _waggingVariants = _markings.Keys
+            .Where(id => id.Length > WaggingSuffix.Length
+                         && id.EndsWith(WaggingSuffix, StringComparison.Ordinal)
+                         && _markings.ContainsKey(id[..^WaggingSuffix.Length]))
+            .ToFrozenSet();
         _categorizedMarkings = markingDict.ToFrozenDictionary(
             x => x.Key,
             x => x.Value.ToFrozenDictionary());
@@ -77,6 +101,9 @@ public sealed partial class MarkingManager
         foreach (var (key, marking) in MarkingsByLayer(layer))
         {
             if (!CanBeApplied(groupProto, sex, marking, whitelisted))
+                continue;
+
+            if (_waggingVariants.Contains(key)) // Nebula
                 continue;
 
             res.Add(key, marking);
@@ -119,6 +146,10 @@ public sealed partial class MarkingManager
 
     private bool CanBeApplied(MarkingsGroupPrototype group, Sex sex, MarkingPrototype prototype, bool whitelisted)
     {
+        // Nebula - per layer blacklist of the group
+        if (group.Limits.GetValueOrDefault(prototype.BodyPart)?.Blacklist.Contains(prototype.ID) == true)
+            return false;
+
         if (prototype.GroupWhitelist == null)
         {
             if (whitelisted)

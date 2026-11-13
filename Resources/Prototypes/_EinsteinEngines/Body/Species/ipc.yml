@@ -138,6 +138,7 @@
   id: MobIPC
   name: Urist McPositronic
   components:
+  - type: SparkEjaculation # Nebula - IPCs vent sparks instead of fluids
   - type: LanguageSpeaker
     speaks:
     - TauCetiBasic
@@ -280,6 +281,7 @@
       methods: [ Touch ]
       effects:
       - !type:WashCreamPie
+      - !type:WashCumOverlay # Nebula
     - reagents: [ Water ]
       methods: [ Touch ]
       effects:

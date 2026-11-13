@@ -831,6 +831,8 @@
   name: syndicate commander hardsuit # Goob edit
   description: A bulked up version of the blood-red hardsuit, purpose-built for the commander of a syndicate operative squad. Has significantly improved armor for those deadly front-lines firefights. # Goob edit
   components:
+  - type: SpeedTieredFootsteps # Nebula - Monolith: always heavy steps
+    forcedTier: Heavy
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/syndiecommander.rsi
   - type: Clothing
@@ -1113,6 +1115,8 @@
   name: ERT leader's hardsuit # Goob edit
   description: A protective hardsuit worn by the leader of an emergency response team. # Goob edit
   components:
+  - type: SpeedTieredFootsteps # Nebula - Monolith: always heavy steps
+    forcedTier: Heavy
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
   - type: Clothing

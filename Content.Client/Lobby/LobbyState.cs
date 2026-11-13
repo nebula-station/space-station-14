@@ -129,6 +129,8 @@ namespace Content.Client.Lobby
 
         public override void FrameUpdate(FrameEventArgs e)
         {
+            UpdateNebulaLobbyBackground(e.DeltaSeconds); // Nebula - animated backgrounds
+
             if (_gameTicker.IsGameStarted)
             {
                 Lobby!.StartTime.Text = string.Empty;
@@ -230,6 +232,7 @@ namespace Content.Client.Lobby
 
         private void UpdateLobbySoundtrackInfo(LobbySoundtrackChangedEvent ev)
         {
+            UpdatePauseSongButton(); // Nebula - Monolith, a new track is never paused
             if (ev.SoundtrackFilename == null)
             {
                 Lobby!.LobbySong.SetMarkup(Loc.GetString("lobby-state-song-no-song-text"));
@@ -240,14 +243,15 @@ namespace Content.Client.Lobby
                 )
             {
                 var lobbyStream = lobbySongResource.AudioStream;
+                var track = GetNebulaLobbyTrack(ev.SoundtrackFilename); // Nebula - Monolith track titles
 
-                var title = string.IsNullOrEmpty(lobbyStream.Title)
+                var title = track?.Title ?? (string.IsNullOrEmpty(lobbyStream.Title)
                     ? Loc.GetString("lobby-state-song-unknown-title")
-                    : lobbyStream.Title;
+                    : lobbyStream.Title);
 
-                var artist = string.IsNullOrEmpty(lobbyStream.Artist)
+                var artist = track?.Artist ?? (string.IsNullOrEmpty(lobbyStream.Artist)
                     ? Loc.GetString("lobby-state-song-unknown-artist")
-                    : lobbyStream.Artist;
+                    : lobbyStream.Artist);
 
                 var markup = Loc.GetString("lobby-state-song-text",
                     ("songTitle", title),
@@ -261,7 +265,7 @@ namespace Content.Client.Lobby
         {
             if (_protoMan.TryIndex(GetNebulaLobbyBackground(), out var proto)) // Nebula edit
             {
-                Lobby!.Background.Texture = _resourceCache.GetResource<TextureResource>(proto.Background);
+                SetNebulaLobbyBackground(proto); // Nebula - animated backgrounds
 
                 var markup = Loc.GetString("lobby-state-background-text",
                     ("backgroundTitle", Loc.GetString(proto.Title)),
@@ -271,7 +275,7 @@ namespace Content.Client.Lobby
             }
             else
             {
-                Lobby!.Background.Texture = null;
+                SetNebulaLobbyBackground(null); // Nebula - animated backgrounds
 
                 Lobby!.LobbyBackground.SetMarkup(Loc.GetString("lobby-state-background-no-background-text"));
             }

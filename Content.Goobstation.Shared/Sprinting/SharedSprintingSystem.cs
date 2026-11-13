@@ -102,6 +102,24 @@ public abstract partial class SharedSprintingSystem : EntitySystem
         if (!SprintEnabled) // Traumastation
             return;
 
+        // Nebula start - Monolith, sprinting doesn't drain stamina while standing still with sprint held
+        if (_net.IsServer)
+        {
+            var moverQuery = EntityQueryEnumerator<SprinterComponent, InputMoverComponent, StaminaComponent>();
+            while (moverQuery.MoveNext(out var uid, out var sprinter, out var mover, out var stamina))
+            {
+                if (!sprinter.IsSprinting)
+                    continue;
+
+                var moving = mover.HasDirectionalMovement;
+                if (moving == stamina.ActiveDrains.ContainsKey(sprinter.StaminaDrainKey))
+                    continue;
+
+                _staminaSystem.ToggleStaminaDrain(uid, sprinter.StaminaDrainRate, moving, true, sprinter.StaminaDrainKey, uid);
+            }
+        }
+        // Nebula end
+
         // We dont add it to the EQE since the comp might get added as this runs.
         var query = EntityQueryEnumerator<SprinterComponent, StaminaModifierStatusEffectComponent>();
         while (query.MoveNext(out var uid, out var sprinterComp, out var staminaComp))

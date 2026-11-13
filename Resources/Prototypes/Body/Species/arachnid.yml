@@ -158,6 +158,7 @@
       methods: [Touch]
       effects:
       - !type:WashCreamPie
+      - !type:WashCumOverlay # Nebula
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:

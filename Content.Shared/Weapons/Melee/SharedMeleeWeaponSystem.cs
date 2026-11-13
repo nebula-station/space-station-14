@@ -527,6 +527,13 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
 
         DirtyField(weaponUid, weapon, nameof(MeleeWeaponComponent.NextAttack));
 
+        // Nebula - Monolith: alternate the swing side every attack, unless the weapon always swings left
+        if (weapon.AlternateSwing && !weapon.SwingLeft)
+        {
+            weapon.SwingFlipped = !weapon.SwingFlipped;
+            DirtyField(weaponUid, weapon, nameof(MeleeWeaponComponent.SwingFlipped));
+        }
+
         // Do this AFTER attack so it doesn't spam every tick
         var ev = new AttemptMeleeEvent(user, weaponUid, weapon, attack); // Lavaland Change: WHY ARENT YOU FUCKS PASSING THE USER RAHHHHHHHHHHH
         RaiseLocalEvent(weaponUid, ref ev);
