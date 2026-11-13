@@ -8,6 +8,7 @@ using Content.Trauma.Common.Speech;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 using System.Collections.Frozen;
 using System.Text;
 
@@ -91,7 +92,7 @@ public abstract partial class SharedChatSystem
 
         var nameString = jobIcon is not { }
             ? entityName
-            : Loc.GetString("chat-radio-message-name-with-icon", ("jobIcon", jobIcon), ("jobName", jobName ?? ""), ("name", entityName));
+            : Loc.GetString("chat-radio-message-name-with-icon", ("jobIcon", jobIcon), ("jobName", FormattedMessage.EscapeStringParameter(jobName ?? "")), ("name", entityName)); // Nebula edit
 
         return Loc.GetString(finalWrapId,
             ("color", channel is { } ? channel.Color : color),
