@@ -1,20 +1,14 @@
 marking-EarringsStudLeft = Stud Earrings (Left)
-marking-EarringsStudLeft-stud_l = Stud Earrings (Left)
 
 marking-EarringsStudRight = Stud Earrings (Right)
-marking-EarringsStudRight-stud_r = Stud Earrings (Right)
 
 marking-EarringsHeavyLeft = Heavy Earrings (Left)
-marking-EarringsHeavyLeft-heavy_l = Heavy Earrings (Left)
 
 marking-EarringsHeavyRight = Heavy Earrings (Right)
-marking-EarringsHeavyRight-heavy_r = Heavy Earrings (Right)
 
 marking-EarringsDropBasicLeft = Drop Earrings (Left)
-marking-EarringsDropBasicLeft-drop_l = Drop Earrings (Left)
 
 marking-EarringsDropBasicRight = Drop Earrings (Right)
-marking-EarringsDropBasicRight-drop_r = Drop Earrings (Right)
 
 marking-EarringsDropColoredLeft = Colored Drop Earrings (Left)
 marking-EarringsDropColoredLeft-drop_colored_tone_1_l = Material
@@ -33,40 +27,28 @@ marking-EarringsDropLongRight-drop_long_tone_1_r = Material
 marking-EarringsDropLongRight-drop_long_tone_2_r = Ornament
 
 marking-EarringsCrescentLeft = Crescent Earrings (Left)
-marking-EarringsCrescentLeft-crescent_l = Crescent Earrings (Left)
 
 marking-EarringsCrescentRight = Crescent Earrings (Right)
-marking-EarringsCrescentRight-crescent_r = Crescent Earrings (Right)
 
 marking-EarringsBangleLeft = Bangle Earrings (Left)
-marking-EarringsBangleLeft-bangle_l = Bangle Earrings (Left)
 
 marking-EarringsBangleRight = Bangle Earrings (Right)
-marking-EarringsBangleRight-bangle_r = Bangle Earrings (Right)
 
 marking-EarringsHoopBasicLeft = Hoop Earrings (Left)
-marking-EarringsHoopBasicLeft-hoop_l = Hoop Earrings (Left)
 
 marking-EarringsHoopBasicRight = Hoop Earrings (Right)
-marking-EarringsHoopBasicRight-hoop_r = Hoop Earrings (Right)
 
 marking-EarringsHoopMiniLeft = Mini Hoop Earrings (Left)
-marking-EarringsHoopMiniLeft-hoop_mini_l = Mini Hoop Earrings (Left)
 
 marking-EarringsHoopMiniRight = Mini Hoop Earrings (Right)
-marking-EarringsHoopMiniRight-hoop_mini_r = Mini Hoop Earrings (Right)
 
 marking-EarringsCrossBasicLeft = Cross Earrings (Left)
-marking-EarringsCrossBasicLeft-cross_l = Cross Earrings (Left)
 
 marking-EarringsCrossBasicRight = Cross Earrings (Right)
-marking-EarringsCrossBasicRight-cross_r = Cross Earrings (Right)
 
 marking-EarringsCrossSaintPeterLeft = St. Peter Cross Earrings (Left)
-marking-EarringsCrossSaintPeterLeft-cross_saint_peter_l = St. Peter Cross Earrings (Left)
 
 marking-EarringsCrossSaintPeterRight = St. Peter Cross Earrings (Right)
-marking-EarringsCrossSaintPeterRight-cross_saint_peter_r = St. Peter Cross Earrings (Right)
 
 marking-EarringsGemstoneBasicLeft = Gemstone Earrings (Left)
 marking-EarringsGemstoneBasicLeft-gemstone_tone_1_l = Material
@@ -111,10 +93,8 @@ marking-EarringsDangleLongRight-dangle_long_tone_1_r = Material
 marking-EarringsDangleLongRight-dangle_long_tone_2_r = Ornament
 
 marking-EarringsEightLeft = Eight Earrings (Left)
-marking-EarringsEightLeft-eight_l = Eight Earrings (Left)
 
 marking-EarringsEightRight = Eight Earrings (Right)
-marking-EarringsEightRight-eight_r = Eight Earrings (Right)
 
 marking-EarringsCrystalBasicLeft = Crystal Earrings (Left)
 marking-EarringsCrystalBasicLeft-crystal_tone_1_l = Material

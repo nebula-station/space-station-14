@@ -7,7 +7,6 @@
 
 # HEAD
 marking-LizardHeadGuilmon= Lizard, guilmon
-marking-LizardHeadGuilmon-guilmon = Main
 
 marking-LizardShoutEasternDragon= Lizard, eastern dragon
 marking-LizardShoutEasternDragon-eastern_dragon = Outer
@@ -56,26 +55,16 @@ marking-SnakeLargeTail-snake_large_overlay = Outer
 
 # SPINES
 marking-LizardChestSpinesAquatic = Lizard, chest, spines (Aquatic)
-marking-LizardChestSpinesAquatic-spines_aquatic = Spikes
 marking-LizardChestSpinesAquaticWithoutTail = Lizard, chest, spines (Aquatic, without tail)
-marking-LizardChestSpinesAquaticWithoutTail-spines_aquatic = Spikes
 
 marking-LizardChestSpinesLong = Lizard, chest, spines (Long)
-marking-LizardChestSpinesLong-spines_long = Spikes
 marking-LizardChestSpinesLongWithoutTail = Lizard, chest, spines (Long, without tail)
-marking-LizardChestSpinesLongWithoutTail-spines_long = Spikes
 
 marking-LizardChestSpinesLongMembrane = Lizard, chest, spines (Long, Membrane)
-marking-LizardChestSpinesLongMembrane-spines_longmembrane = spines
 marking-LizardChestSpinesLongMembraneWithoutTail = Lizard, chest, spines (Long, Membrane, without tail)
-marking-LizardChestSpinesLongMembraneWithoutTail-spines_longmembrane = spines
 
 marking-LizardChestSpinesShort = Lizard, chest, spines (Short)
-marking-LizardChestSpinesShort-spines_short = Spikes
 marking-LizardChestSpinesShortWithoutTail = Lizard, chest, spines (Short, without tail)
-marking-LizardChestSpinesShortWithoutTail-spines_short = Spikes
 
 marking-LizardChestSpinesShortMembrane = Lizard, chest, spines (Short, Membrane)
-marking-LizardChestSpinesShortMembrane-spines_short = Spikes
 marking-LizardChestSpinesShortMembraneWithoutTail = Lizard, chest, spines (Short, Membrane, without tail)
-marking-LizardChestSpinesShortMembraneWithoutTail-spines_short = Spikes

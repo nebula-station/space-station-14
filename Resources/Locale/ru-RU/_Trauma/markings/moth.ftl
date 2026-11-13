@@ -1,59 +1,52 @@
-marking-MothWingsStellar-plain = Крыло
 
-marking-MothWingsDefault-atlas = Крыло
 
-marking-MothWingsDeathhead-deathhead_1 = 1
-marking-MothWingsDeathhead-deathhead_2 = 2
+marking-MothWingsDeathhead-deathhead_1 = Основа
+marking-MothWingsDeathhead-deathhead_2 = Второй слой
 
-marking-MothWingsFirewatch-firewatch_1 = 1
-marking-MothWingsFirewatch-firewatch_2 = 2
-marking-MothWingsFirewatch-firewatch_3 = 3
+marking-MothWingsFirewatch-firewatch_1 = Основа
+marking-MothWingsFirewatch-firewatch_2 = Второй слой
+marking-MothWingsFirewatch-firewatch_3 = Третий слой
 
-marking-MothWingsJungle-jungle_1 = 1
-marking-MothWingsJungle-jungle_2 = 2
+marking-MothWingsJungle-jungle_1 = Основа
+marking-MothWingsJungle-jungle_2 = Второй слой
 
-marking-MothWingsMoffra-mothra_1 = 1
-marking-MothWingsMoffra-mothra_2 = 2
-marking-MothWingsMoffra-mothra_3 = 3
-marking-MothWingsMoffra-mothra_4 = 4
+marking-MothWingsMoffra-mothra_1 = Основа
+marking-MothWingsMoffra-mothra_2 = Второй слой
+marking-MothWingsMoffra-mothra_3 = Третий слой
+marking-MothWingsMoffra-mothra_4 = Четвёртый слой
 
-marking-MothWingsPlasmafire-plasmafire_1 = 1
-marking-MothWingsPlasmafire-plasmafire_2 = 2
+marking-MothWingsPlasmafire-plasmafire_1 = Основа
+marking-MothWingsPlasmafire-plasmafire_2 = Второй слой
 
-marking-MothWingsRoyal-royal_1 = 1
-marking-MothWingsRoyal-royal_2 = 2
+marking-MothWingsRoyal-royal_1 = Основа
+marking-MothWingsRoyal-royal_2 = Второй слой
 
-marking-MothWingsWitchwing-witchwing_1 = 1
-marking-MothWingsWitchwing-witchwing_2 = 2
+marking-MothWingsWitchwing-witchwing_1 = Основа
+marking-MothWingsWitchwing-witchwing_2 = Второй слой
 
-marking-MothWingsMonarch = Крылья (Монарх)
-marking-MothWingsMonarch-monarch = Крыло
+marking-MothWingsMonarch = Монарх
 
-marking-MothWingsFan-ragged = Крыло
+marking-MothWingsBluespace = Блюспейс
+marking-MothWingsBluespace-bluespace_1 = Основа
+marking-MothWingsBluespace-bluespace_2 = Второй слой
 
-marking-MothWingsDfan-poison = Крыло
+marking-MothWingsLadybug-snow_1 = Основа
+marking-MothWingsLadybug-snow_2 = Второй слой
 
-marking-MothWingsBluespace = Крылья (Блюспейс)
-marking-MothWingsBluespace-bluespace_1 = 1
-marking-MothWingsBluespace-bluespace_2 = 2
+marking-MothWingsDbushy-brown_1 = Основа
+marking-MothWingsDbushy-brown_2 = Второй слой
 
-marking-MothWingsLadybug-snow_1 = 1
-marking-MothWingsLadybug-snow_2 = 2
+marking-MothWingsStriped-lovers_1 = Основа
+marking-MothWingsStriped-lovers_2 = Второй слой
 
-marking-MothWingsDbushy-brown_1 = 1
-marking-MothWingsDbushy-brown_2 = 2
+marking-MothWingsSwirly-moonfly_1 = Основа
+marking-MothWingsSwirly-moonfly_2 = Второй слой
 
-marking-MothWingsStriped-lovers_1 = 1
-marking-MothWingsStriped-lovers_2 = 2
+marking-MothWingsRosy = Розовые
+marking-MothWingsRosy-rosy_1 = Основа
+marking-MothWingsRosy-rosy_2 = Второй слой
 
-marking-MothWingsSwirly-moonfly_1 = 1
-marking-MothWingsSwirly-moonfly_2 = 2
-
-marking-MothWingsRosy = Крылья (Розовые)
-marking-MothWingsRosy-rosy_1 = 1
-marking-MothWingsRosy-rosy_2 = 2
-
-marking-MothWingsLightbearer = Крылья (Светоносец)
-marking-MothWingsLightbearer-lightbearer_1 = 1
-marking-MothWingsLightbearer-lightbearer_2 = 2
-marking-MothWingsLightbearer-lightbearer_3 = 3
+marking-MothWingsLightbearer = Светоносец
+marking-MothWingsLightbearer-lightbearer_1 = Основа
+marking-MothWingsLightbearer-lightbearer_2 = Подсветка
+marking-MothWingsLightbearer-lightbearer_3 = Третий слой

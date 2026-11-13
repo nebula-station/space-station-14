@@ -1,6 +1,4 @@
-marking-MothWingsStellar-plain = Wing
 
-marking-MothWingsDefault-atlas = Wing
 
 marking-MothWingsDeathhead-deathhead_1 = 1
 marking-MothWingsDeathhead-deathhead_2 = 2
@@ -27,11 +25,6 @@ marking-MothWingsWitchwing-witchwing_1 = 1
 marking-MothWingsWitchwing-witchwing_2 = 2
 
 marking-MothWingsMonarch = Wings (Monarch)
-marking-MothWingsMonarch-monarch = Wing
-
-marking-MothWingsFan-ragged = Wing
-
-marking-MothWingsDfan-poison = Wing
 
 marking-MothWingsBluespace = Wings (Bluespace)
 marking-MothWingsBluespace-bluespace_1 = 1

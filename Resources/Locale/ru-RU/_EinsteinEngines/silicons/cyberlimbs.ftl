@@ -5,8 +5,8 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 marking-MobIPCHeadDefault = Монитор
-marking-MobIPCChestDefault = Шасси, Мужское
-marking-MobIPCChestFemaleDefault = Шасси, Женское
+marking-MobIPCChestDefault = Шасси (мужское)
+marking-MobIPCChestFemaleDefault = Шасси (женское)
 marking-MobIPCTorsoDefault = Шасси, Мужское
 marking-MobIPCTorsoFemaleDefault = Шасси, Женское
 marking-MobIPCLArmDefault = Рука

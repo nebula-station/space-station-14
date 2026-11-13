@@ -6,23 +6,16 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-marking-VoxFacialHairBeard = Вокс, Перьевая борода
-marking-VoxFacialHairBeard-beard_s = Вокс Борода (Перья)
+marking-VoxFacialHairBeard = Перьевая борода
 
-marking-VoxFacialHairColonel = Вокс, Полковник
-marking-VoxFacialHairColonel-colonel_s = Вокс Усы (Полковник)
+marking-VoxFacialHairColonel = Полковник
 
-marking-VoxFacialHairFu = Вокс, Перья Фу
-marking-VoxFacialHairFu-fu_s = Вокс Усы (Перья Фу)
+marking-VoxFacialHairFu = Перья Фу
 
-marking-VoxFacialHairNeck = Вокс, Шейные перья
-marking-VoxFacialHairNeck-neck_s = Вокс Борода (Шейные Перья)
+marking-VoxFacialHairNeck = Шейные перья
 
-marking-VoxFacialHairMane = Вокс, Борода (Грива)
-marking-VoxFacialHairMane-mane_s = Вокс Борода (Грива)
+marking-VoxFacialHairMane = Борода (грива)
 
-marking-VoxFacialHairManeSmall = Вокс, Борода (Малая грива)
-marking-VoxFacialHairManeSmall-manesmall_s = Вокс Борода (Малая Грива)
+marking-VoxFacialHairManeSmall = Борода (малая грива)
 
-marking-VoxFacialHairTufts = Вокс, Бакенбарды (Пряди)
-marking-VoxFacialHairTufts-tuft_s = Вокс Бакенбарды (Пряди)
+marking-VoxFacialHairTufts = Бакенбарды (пряди)

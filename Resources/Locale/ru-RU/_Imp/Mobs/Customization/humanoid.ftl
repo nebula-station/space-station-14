@@ -7,227 +7,179 @@ marking-BodyhairHumanMale-bodyhairmale = Волосы на теле
 marking-BodyhairHumanUnsexed = Волосы на теле
 marking-BodyhairHumanUnsexed-bodyhairmale = Волосы на теле
 marking-ChestBackstabbed = Удар в спину
-marking-ChestBackstabbed-backstabbed = Удар в спину
 marking-ChestCutHere = Татуировка «Режь здесь»
-marking-ChestCutHere-cuthere = Татуировка «Режь здесь»
 marking-ChestHeavyTattoos = Тяжёлые татуировки на груди
-marking-ChestHeavyTattoos-heavy1 = Тяжёлые татуировки на груди (Верх)
-marking-ChestHeavyTattoos-heavy2 = Тяжёлые татуировки на груди (Средина)
-marking-ChestHeavyTattoos-heavy3 = Тяжёлые татуировки на груди (Низ)
+marking-ChestHeavyTattoos-heavy1 = Основа
+marking-ChestHeavyTattoos-heavy2 = Второй слой
+marking-ChestHeavyTattoos-heavy3 = Третий слой
 marking-ChestNecklace = Ожерелье
-marking-ChestNecklace-necklace = Ожерелье
-marking-ChestTwistingLeft = Скрученный шрам (Слева)
-marking-ChestTwistingLeft-twistingleft = Скрученный шрам (Слева)
-marking-ChestTwistingRight = Скрученный шрам (Справа)
-marking-ChestTwistingRight-twistingright = Скрученный шрам (Справа)
+marking-ChestTwistingLeft = Скрученный шрам (слева)
+marking-ChestTwistingRight = Скрученный шрам (справа)
 marking-HumanoidAbs = Мышцы
-marking-HumanoidAbs-muscular = Мышцы
-marking-ProstheticShoulderL = Протез (Левое плечо)
-marking-ProstheticShoulderL-prostheticshoulderleft = Протез
-marking-ProstheticShoulderR = Протез (Правое плечо)
-marking-ProstheticShoulderR-prostheticshoulderright = Протез (Правое плечо)
-marking-TattooAnchor = Татуировка (Якорь)
-marking-TattooAnchor-anchor = Татуировка
+marking-ProstheticShoulderL = Протез левого плеча
+marking-ProstheticShoulderR = Протез правого плеча
+marking-TattooAnchor = Татуировка (якорь)
 marking-TattooCode1 = Татуировка (QR-код на спине маленький)
-marking-TattooCode1-code1 = Татуировка
 marking-TattooCode2 = Татуировка (QR-код на спине средний)
-marking-TattooCode2-code2 = Татуировка
 marking-TattooCode3 = Татуировка (QR-код на спине большой)
-marking-TattooCode3-code3 = Татуировка
-marking-TattooDragon = Татуировка (Дракон)
-marking-TattooDragon-dragontattoo1 = Тело
+marking-TattooDragon = Татуировка (дракон)
+marking-TattooDragon-dragontattoo1 = Основа
 marking-TattooDragon-dragontattoo2 = Акценты
-marking-TattooNanotrasenChest-nanotrasen = Татуировка на груди (NanoTrasen)
 marking-ChestStar = Звёздный шрам
-marking-ChestStar-star = Звёздный шрам
 marking-TorsoIncision = Разрез на туловище
-marking-TorsoIncision-torso_incision = Разрез на туловище
-marking-TattooVinesHumanoid = Татуировка (Вьюнки)
-marking-TattooVinesHumanoid-vines = Татуировка (Вьюнки)
+marking-TattooVinesHumanoid = Татуировка (вьюнки)
 marking-VitiligoChestF = Распространение витилиго
 marking-VitiligoChestSpots = Пятна витилиго
 
 # Head
 
-marking-EyebrowsBig = Брови (Большие)
-marking-EyebrowsBig-eyebrowsthick = Брови (Большие)
-marking-EyebrowsBigger = Брови (Ещё больше)
-marking-EyebrowsBigger-eyebrowsultra = Брови (Ещё больше)
+marking-EyebrowsBig = Брови (большие)
+marking-EyebrowsBigger = Брови (ещё больше)
 marking-EyebrowsUnibrow = Монобровь
-marking-EyebrowsUnibrow-eyebrowsunibrow = Монобровь
 marking-HeadHeavyTattoos = Тяжёлые татуировки на шее
-marking-HeadHeavyTattoos-heavy1 = Тяжёлые татуировки на шее (Нижняя часть)
-marking-HeadHeavyTattoos-heavy2 = Тяжёлые татуировки на шее (Верхняя часть)
+marking-HeadHeavyTattoos-heavy1 = Основа
+marking-HeadHeavyTattoos-heavy2 = Второй слой
 marking-HeadTwisting = Скрученный шрам
-marking-HeadTwisting-twisting = Скрученный шрам
-marking-HeadTwistingFlipped = Скрученный шрам, перевёрнутый
-marking-HeadTwistingFlipped-twistingflipped = Скрученный шрам, перевёрнутый
+marking-HeadTwistingFlipped = Скрученный шрам (перевёрнутый)
 marking-HumanoidEyebags = Мешки под глазами
-marking-HumanoidEyebags-eyebags = Мешки под глазами
 marking-SmileScars = Джонкер
-marking-SmileScars-smile = Джонкер
-marking-VitiligoHeadJaw = Витилиго (Челюсть)
-marking-VitiligoHeadL = Витилиго (Левый глаз)
-marking-VitiligoHeadR = Витилиго (Правый глаз)
+marking-VitiligoHeadJaw = Витилиго (челюсть)
+marking-VitiligoHeadL = Витилиго (левый глаз)
+marking-VitiligoHeadR = Витилиго (правый глаз)
 
 # Snout
 
 marking-HeadSeptum = Пирсинг в перегородке носа
-marking-HeadSeptum-septum = Пирсинг в перегородке носа
 
 # Eyes
 
 # RArm
 
-marking-ArmDollJointsTattooRight = Татуировка шарниров куклы (Правая рука)
-marking-ArmDollJointsTattooRight-doll = Татуировка шарниров куклы (Правая рука)
-marking-ArmHeavyTattoosRight = Тяжёлые татуировки на правой руке
-marking-ArmHeavyTattoosRight-heavy1 = Тяжёлые татуировки на руке (Верхняя часть)
-marking-ArmHeavyTattoosRight-heavy2 = Тяжёлые татуировки на руке (Нижняя часть)
-marking-ArmProstheticRight = Протез (Правая рука)
-marking-ArmProstheticRight-prosthetic = Протез (Правая рука)
-marking-ArmTwistingRight = Скрученный шрам (Правая рука)
-marking-ArmTwistingRight-twisting = Скрученный шрам (Правая рука)
-marking-TattooCode4 = Татуировка (QR-код правая рука)
-marking-TattooCode4-code4 = Татуировка
-marking-TattooCode5 = Татуировка (Штрихкод правая рука)
-marking-TattooCode5-code5 = Татуировка
-marking-TattooHeartR = Татуировка (Сердце правая рука)
-marking-TattooHeartR-heart = Татуировка
-marking-VitiligoArmR = Витилиго (Правая рука)
+marking-ArmDollJointsTattooRight = Татуировка шарниров куклы
+marking-ArmHeavyTattoosRight = Тяжёлые татуировки
+marking-ArmHeavyTattoosRight-heavy1 = Основа
+marking-ArmHeavyTattoosRight-heavy2 = Второй слой
+marking-ArmProstheticRight = Протез
+marking-ArmTwistingRight = Скрученный шрам
+marking-TattooCode4 = Татуировка (QR-код)
+marking-TattooCode5 = Татуировка (штрихкод)
+marking-TattooHeartR = Татуировка (сердце)
+marking-VitiligoArmR = Витилиго
 
 # LArm
 
-marking-ArmDollJointsTattooLeft = Татуировка шарниров куклы (Левая рука)
-marking-ArmDollJointsTattooLeft-doll = Татуировка шарниров куклы (Левая рука)
-marking-ArmHeavyTattoosLeft = Тяжёлые татуировки на левой руке
-marking-ArmHeavyTattoosLeft-heavy1 = Тяжёлые татуировки на руке (Верхняя часть)
-marking-ArmHeavyTattoosLeft-heavy2 = Тяжёлые татуировки на руке (Нижняя часть)
-marking-ArmProstheticLeft = Протез (Левая рука)
-marking-ArmProstheticLeft-prosthetic = Протез (Левая рука)
-marking-ArmTwistingLeft = Скрученный шрам (Левая рука)
-marking-ArmTwistingLeft-twisting = Скрученный шрам (Левая рука)
-marking-TattooHeartL = Татуировка (Сердце левая рука)
-marking-TattooHeartL-heart = Татуировка
-marking-VitiligoArmL = Витилиго (Левая рука)
+marking-ArmDollJointsTattooLeft = Татуировка шарниров куклы
+marking-ArmHeavyTattoosLeft = Тяжёлые татуировки
+marking-ArmHeavyTattoosLeft-heavy1 = Основа
+marking-ArmHeavyTattoosLeft-heavy2 = Второй слой
+marking-ArmProstheticLeft = Протез
+marking-ArmTwistingLeft = Скрученный шрам
+marking-TattooHeartL = Татуировка (сердце)
+marking-VitiligoArmL = Витилиго
 
 # RLeg
 
-marking-LegDollJointsTattooRight = Татуировка шарниров куклы (Правая нога)
-marking-LegDollJointsTattooRight-doll = Татуировка шарниров куклы (Правая нога)
-marking-LegHeavyTattoosRight = Тяжёлые татуировки на правой ноге
-marking-LegHeavyTattoosRight-heavy1 = Тяжёлые татуировки на ноге (Верхняя часть)
-marking-LegHeavyTattoosRight-heavy2 = Тяжёлые татуировки на ноге (Нижняя часть)
-marking-LegTwistingRight = Скрученный шрам (Правая нога)
-marking-LegTwistingRight-twisting = Скрученный шрам (Правая нога)
-marking-VitiligoLegR = Витилиго (Правая нога)
+marking-LegDollJointsTattooRight = Татуировка шарниров куклы
+marking-LegHeavyTattoosRight = Тяжёлые татуировки
+marking-LegHeavyTattoosRight-heavy1 = Основа
+marking-LegHeavyTattoosRight-heavy2 = Второй слой
+marking-LegTwistingRight = Скрученный шрам
+marking-VitiligoLegR = Витилиго
 
 # LLeg
 
-marking-LegDollJointsTattooLeft = Татуировка шарниров куклы (Левая нога)
-marking-LegDollJointsTattooLeft-doll = Татуировка шарниров куклы (Левая нога)
-marking-LegHeavyTattoosLeft = Тяжёлые татуировки на левой ноге
-marking-LegHeavyTattoosLeft-heavy1 = Тяжёлые татуировки на ноге (Верхняя часть)
-marking-LegHeavyTattoosLeft-heavy2 = Тяжёлые татуировки на ноге (Нижняя часть)
-marking-LegTwistingLeft = Скрученный шрам (Левая нога)
-marking-LegTwistingLeft-twisting = Скрученный шрам (Левая нога)
-marking-VitiligoLegL = Витилиго (Левая нога)
+marking-LegDollJointsTattooLeft = Татуировка шарниров куклы
+marking-LegHeavyTattoosLeft = Тяжёлые татуировки
+marking-LegHeavyTattoosLeft-heavy1 = Основа
+marking-LegHeavyTattoosLeft-heavy2 = Второй слой
+marking-LegTwistingLeft = Скрученный шрам
+marking-VitiligoLegL = Витилиго
 
 # LFoot
 
-marking-FootDollJointsTattooLeft = Татуировка шарниров куклы (Левая стопа)
-marking-FootDollJointsTattooLeft-doll = Татуировка шарниров куклы (Левая стопа)
-marking-FootHeavyTattoosLeft = Тяжёлые татуировки на левой стопе
-marking-FootHeavyTattoosLeft-heavy1 = Тяжёлые татуировки на внутренней стороне стопы
-marking-FootHeavyTattoosLeft-heavy2 = Тяжёлые татуировки на внешней стороне стопы
+marking-FootDollJointsTattooLeft = Татуировка шарниров куклы
+marking-FootHeavyTattoosLeft = Тяжёлые татуировки
+marking-FootHeavyTattoosLeft-heavy1 = Основа
+marking-FootHeavyTattoosLeft-heavy2 = Внешняя часть
 
 # RFoot
 
-marking-FootDollJointsTattooRight = Татуировка шарниров куклы (Правая стопа)
-marking-FootDollJointsTattooRight-doll = Татуировка шарниров куклы (Правая стопа)
-marking-FootHeavyTattoosRight = Тяжёлые татуировки на правой стопе
-marking-FootHeavyTattoosRight-heavy1 = Тяжёлые татуировки на внутренней стороне стопы
-marking-FootHeavyTattoosRight-heavy2 = Тяжёлые татуировки на внешней стороне стопы
+marking-FootDollJointsTattooRight = Татуировка шарниров куклы
+marking-FootHeavyTattoosRight = Тяжёлые татуировки
+marking-FootHeavyTattoosRight-heavy1 = Основа
+marking-FootHeavyTattoosRight-heavy2 = Внешняя часть
 
 # LHand
 
-marking-HandBraceletLeft = Браслет (Левая рука)
-marking-HandBraceletLeft-bracelet = Браслет (Левая рука)
-marking-HandDollJointsTattooLeft = Татуировка шарниров куклы (Левая рука)
-marking-HandDollJointsTattooLeft-doll = Татуировка шарниров куклы (Левая рука)
-marking-HandHeavyTattoosLeft = Тяжёлые татуировки на левой руке
-marking-HandHeavyTattoosLeft-heavy1 = Тяжёлые татуировки на внешней стороне руки
-marking-HandHeavyTattoosLeft-heavy2 = Тяжёлые татуировки на внутренней стороне руки
-marking-HandProstheticLeft = Протез (Левая рука)
-marking-HandProstheticLeft-prosthetic = Протез (Левая рука)
-marking-HandRingsLeft = Кольца (Левая рука)
-marking-HandRingsLeft-rings1 = Левый указательный палец
+marking-HandBraceletLeft = Браслет
+marking-HandDollJointsTattooLeft = Татуировка шарниров куклы
+marking-HandHeavyTattoosLeft = Тяжёлые татуировки
+marking-HandHeavyTattoosLeft-heavy1 = Основа
+marking-HandHeavyTattoosLeft-heavy2 = Внутренняя часть
+marking-HandProstheticLeft = Протез
+marking-HandRingsLeft = Кольца
+marking-HandRingsLeft-rings1 = Основа
 marking-HandRingsLeft-rings2 = Левый безымянный палец
-marking-HandTwistingLeft = Скрученный шрам (Левая рука)
-marking-HandTwistingLeft-twisting = Скрученный шрам (Левая рука)
-marking-VitiligoHandL = Витилиго (Левая рука)
+marking-HandTwistingLeft = Скрученный шрам
+marking-VitiligoHandL = Витилиго
 
 # RHand
 
-marking-HandBraceletRight = Браслет (Правая рука)
-marking-HandBraceletRight-bracelet = Браслет (Правая рука)
-marking-HandDollJointsTattooRight = Татуировка шарниров куклы (Правая рука)
-marking-HandDollJointsTattooRight-doll = Татуировка шарниров куклы (Правая рука)
-marking-HandHeavyTattoosRight = Тяжёлые татуировки на правой руке
-marking-HandHeavyTattoosRight-heavy1 = Тяжёлые татуировки на внешней стороне руки
-marking-HandHeavyTattoosRight-heavy2 = Тяжёлые татуировки на внутренней стороне руки
-marking-HandProstheticRight = Протез (Правая рука)
-marking-HandProstheticRight-prosthetic = Протез (Правая рука)
-marking-HandRingsRight = Кольца (Правая рука)
-marking-HandRingsRight-rings1 = Правый указательный палец
+marking-HandBraceletRight = Браслет
+marking-HandDollJointsTattooRight = Татуировка шарниров куклы
+marking-HandHeavyTattoosRight = Тяжёлые татуировки
+marking-HandHeavyTattoosRight-heavy1 = Основа
+marking-HandHeavyTattoosRight-heavy2 = Внутренняя часть
+marking-HandProstheticRight = Протез
+marking-HandRingsRight = Кольца
+marking-HandRingsRight-rings1 = Основа
 marking-HandRingsRight-rings2 = Правый безымянный палец
-marking-HandTwistingRight = Скрученный шрам (Правая рука)
-marking-HandTwistingRight-twisting = Скрученный шрам (Правая рука)
-marking-VitiligoHandR = Витилиго (Правая рука)
+marking-HandTwistingRight = Скрученный шрам
+marking-VitiligoHandR = Витилиго
 
 # FacialHair
 
-marking-FloralBeard = Борода (Цветочная)
+marking-FloralBeard = Борода (цветочная)
 
 # Hair
 
 marking-BurqaSolid = Бурка
-marking-HairFloralLong = Цветочные волосы (Длинные)
-marking-HairFloralMid = Цветочные волосы (Средние)
-marking-HijabFashionable = Хиджаб (Модный)
-marking-HijabSimple = Хиджаб (Простой)
+marking-HairFloralLong = Цветочные волосы (длинные)
+marking-HairFloralMid = Цветочные волосы (средние)
+marking-HijabFashionable = Хиджаб (модный)
+marking-HijabSimple = Хиджаб (простой)
 marking-HumanHairFrenchBraid = Французская коса
 marking-HumanHairGatheredlow = Низко собранные волосы
-marking-HumanHairHalfUpShort = Полу хвост (Короткий)
-marking-HumanHairHalfUpLong = Полу хвост (Длинный)
-marking-HumanHairHalfUpUndercut = Полу хвост (Андеркат)
+marking-HumanHairHalfUpShort = Полу хвост (короткий)
+marking-HumanHairHalfUpLong = Полу хвост (длинный)
+marking-HumanHairHalfUpUndercut = Полу хвост (андеркат)
 marking-HumanHairLowpigtails = Низкие хвостики
-marking-HumanHairMidPartLong = Пробор посередине (Длинные)
-marking-HumanHairMidPartLonger = Пробор посередине (Ещё длиннее)
-marking-HumanHairMulletSideshave = Маллет (Бритьё по бокам)
-marking-HumanHairSpikyPonytailLong = Хвост (Длинный колючий)
-marking-HumanHairUndercutCurly = Андеркат (Кудрявый)
-marking-HumanHairSideshaveCurly = Бритьё по бокам (Кудрявый)
+marking-HumanHairMidPartLong = Пробор посередине (длинные)
+marking-HumanHairMidPartLonger = Пробор посередине (ещё длиннее)
+marking-HumanHairMulletSideshave = Маллет (бритьё по бокам)
+marking-HumanHairSpikyPonytailLong = Хвост (длинный колючий)
+marking-HumanHairUndercutCurly = Андеркат (кудрявый)
+marking-HumanHairSideshaveCurly = Бритьё по бокам (кудрявый)
 marking-MessyPonytail = Неопрятный хвост
 marking-Niqab = Никаб
-marking-TichelFashionable = Тикель (Модный)
-marking-TichelSimple = Тикель (Простой)
+marking-TichelFashionable = Тикель (модный)
+marking-TichelSimple = Тикель (простой)
 marking-HumanHairShaggy = Кудрявый
-marking-HumanHairShaggyLonger = Кудрявый (Длиннее)
-marking-HumanHairShaggyMessy = Кудрявый (Неаккуратный)
-marking-HumanHairSusie = Злая Девчонка (Челка)
+marking-HumanHairShaggyLonger = Кудрявый (длиннее)
+marking-HumanHairShaggyMessy = Кудрявый (неаккуратный)
+marking-HumanHairSusie = Злая Девчонка (челка)
 marking-HumanHairSusieNoBangs = Злая Девчонка
 
 # Tail  
 
 # RArmExtension  
 
-marking-HeadEarrings = Серьги (Маленькие)
-marking-HeadEarrings-earrings1 = Правая серьга
-marking-HeadEarrings-earrings2 = Левая серьга
-marking-HeadEarringsDrop = Серьги (Капельки)
-marking-HeadEarringsDrop-earringsdrop1 = Правая серьга
-marking-HeadEarringsDrop-earringsdrop2 = Левая серьга
-marking-HeadEarringsWeights = Серьги (Грузики)
-marking-HeadEarringsWeights-earringsweights1 = Правая серьга
-marking-HeadEarringsWeights-earringsweights2 = Левая серьга
+marking-HeadEarrings = Серьги (маленькие)
+marking-HeadEarrings-earrings1 = Основа
+marking-HeadEarrings-earrings2 = Второй слой
+marking-HeadEarringsDrop = Серьги (капельки)
+marking-HeadEarringsDrop-earringsdrop1 = Основа
+marking-HeadEarringsDrop-earringsdrop2 = Второй слой
+marking-HeadEarringsWeights = Серьги (грузики)
+marking-HeadEarringsWeights-earringsweights1 = Основа
+marking-HeadEarringsWeights-earringsweights2 = Второй слой

@@ -1,3 +1,3 @@
-marking-LizardHornsEasternDragon = Драконьи рога
-marking-LizardHornsEasternDragon-dragon-antlers-left = Левый рог
+marking-LizardHornsEasternDragon = Драконьи рога (унатх)
+marking-LizardHornsEasternDragon-dragon-antlers-left = Основа
 marking-LizardHornsEasternDragon-dragon-antlers-right = Правый рог

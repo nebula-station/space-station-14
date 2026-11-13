@@ -1,29 +1,17 @@
 marking-TajaranTorsoBelly = Chest Fur
-marking-TajaranTorsoBelly-belly = Fur
 marking-TajaranTorsoCrest = Chest Fur (Crest)
-marking-TajaranTorsoCrest-crest = Fur
 marking-TajaranTorsoFullBelly = Chest Fur (Full)
-marking-TajaranTorsoFullBelly-fullbelly = Fur
 
 marking-TajaranHeadMuzzle = Muzzle
-marking-TajaranHeadMuzzle-muzzle = Muzzle
 marking-TajaranHeadMuzzleLarge = Muzzle (Large)
-marking-TajaranHeadMuzzleLarge-muzzle_large = Muzzle
 marking-TajaranHeadNose = Nose
-marking-TajaranHeadNose-nose = Nose
 marking-TajaranHeadPatches = Patches
-marking-TajaranHeadPatches-patch = Patches
 marking-TajaranHeadPoints = Points
-marking-TajaranHeadPoints-points = Points
 marking-TajaranHeadTiger = Tiger
-marking-TajaranHeadTiger-tiger_face = Stripes
 marking-TajaranHeadTigerAlt = Tiger (Alternative)
-marking-TajaranHeadTigerAlt-tiger_head = Stripes
 
 marking-TajaranEarsRetro = Classic Ears
-marking-TajaranEarsRetro-ears = Ears
 marking-TajaranEarsRetroNear = Classic Ears (Alternative)
-marking-TajaranEarsRetroNear-ears_near = Ears
 marking-TajaranEarsSeparate = Classic Ears (Separated)
 marking-TajaranEarsSeparate-outears = Outer
 marking-TajaranEarsSeparate-inears = Inner
@@ -32,20 +20,16 @@ marking-TajaranEarsSeparateNear-outears_near = Outer
 marking-TajaranEarsSeparateNear-inears_near = Inner
 
 marking-TajaranTailAnim = Classic Tail (Animated)
-marking-TajaranTailAnim-tail_anim = Tail
 marking-TajaranTailAnimRings = Classic Tail (Animated, Rings)
 marking-TajaranTailAnimRings-tail_anim = Tail
 marking-TajaranTailAnimRings-tail_anim_rings = Rings
 marking-TajaranTailRetro = Classic Tail
-marking-TajaranTailRetro-tail = Tail
 marking-TajaranTailRetroRings = Classic Tail (Rings)
 marking-TajaranTailRetroRings-tail = Tail
 marking-TajaranTailRetroRings-tail_rings = Rings
 
 marking-TajaranOverlayPatch = Patches
-marking-TajaranOverlayPatch-patch = Patches
 marking-TajaranOverlayPoints = Points
-marking-TajaranOverlayPoints-points = Points
 
 marking-TajaranEarsBasic = Basic Ears
 marking-TajaranEarsBasic-basic_outer = Outer ear
@@ -80,14 +64,8 @@ marking-TajaranEarsWide = Wide Ears
 marking-TajaranEarsWide-wide_outer = Outer ear
 marking-TajaranEarsWide-wide_inner = Inner ear
 marking-TajaranLeopardChest = Leopard Spots (Chest)
-marking-TajaranLeopardChest-leopard_chest = Spots
 marking-TajaranLeopardAltChest = Leopard Spots (Chest, Alt)
-marking-TajaranLeopardAltChest-leopard_alt_chest = Spots
 marking-TajaranLeopardLArm = Leopard Spots (Left Arm)
-marking-TajaranLeopardLArm-leopard_l_arm = Spots
 marking-TajaranLeopardRArm = Leopard Spots (Right Arm)
-marking-TajaranLeopardRArm-leopard_r_arm = Spots
 marking-TajaranLeopardLHand = Leopard Spots (Left Hand)
-marking-TajaranLeopardLHand-leopard_l_hand = Spots
 marking-TajaranLeopardRHand = Leopard Spots (Right Hand)
-marking-TajaranLeopardRHand-leopard_r_hand = Spots
