@@ -55,7 +55,7 @@ public sealed partial class LobbyState
     /// </summary>
     private void SetNebulaLobbyBackground(LobbyBackgroundPrototype? proto)
     {
-        _backgroundAnimation ??= new LobbyBackgroundAnimation(_resourceCache);
+        _backgroundAnimation ??= new LobbyBackgroundAnimation();
         _backgroundAnimation.Stop();
 
         if (Lobby == null)
