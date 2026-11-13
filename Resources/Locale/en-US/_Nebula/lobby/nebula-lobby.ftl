@@ -1,6 +1,7 @@
 nebula-lobby-phase-preround = Preparing for the round
 nebula-lobby-phase-in-round = Round in progress
 nebula-lobby-round-time = Round time: { $hours }h { $minutes }m
+nebula-lobby-server-name = Nebula
 
 nebula-lobby-button-changelog = Changelog
 nebula-lobby-button-link-account = Link account
