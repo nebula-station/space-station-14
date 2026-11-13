@@ -1,6 +1,7 @@
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared._Nebula.Humanoid.Markings;
 using Content.Shared.Body;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Shared.Prototypes;
@@ -74,6 +75,7 @@ public sealed partial class MarkingManager
         _categorizedMarkings = markingDict.ToFrozenDictionary(
             x => x.Key,
             x => x.Value.ToFrozenDictionary());
+        CacheRecommendations(); // Nebula edit
     }
 
     public FrozenDictionary<string, MarkingPrototype> MarkingsByLayer(HumanoidVisualLayers category)
@@ -125,7 +127,7 @@ public sealed partial class MarkingManager
 
     private void OnPrototypeReload(PrototypesReloadedEventArgs args)
     {
-        if (args.WasModified<MarkingPrototype>())
+        if (args.WasModified<MarkingPrototype>() || args.WasModified<MarkingRecommendationPrototype>()) // Nebula edit
             CachePrototypes();
     }
 

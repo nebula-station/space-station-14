@@ -43,7 +43,7 @@ public sealed partial class OrganMarkingPicker : Control
         base.EnteredTree();
 
         _markingsModel.OrganProfileDataChanged += OnOrganProfileDataChanged;
-        _markingsModel.EnforcementsChanged += UpdateMarkings;
+        _markingsModel.EnforcementsChanged += QueueUpdateMarkings; // Nebula edit
     }
 
     protected override void ExitedTree()
@@ -51,7 +51,7 @@ public sealed partial class OrganMarkingPicker : Control
         base.ExitedTree();
 
         _markingsModel.OrganProfileDataChanged -= OnOrganProfileDataChanged;
-        _markingsModel.EnforcementsChanged -= UpdateMarkings;
+        _markingsModel.EnforcementsChanged -= QueueUpdateMarkings; // Nebula edit
     }
 
     public bool Empty => LayerTabs.ChildCount == 0;
@@ -59,7 +59,7 @@ public sealed partial class OrganMarkingPicker : Control
     private void OnOrganProfileDataChanged(bool refresh)
     {
         if (refresh)
-            UpdateMarkings();
+            QueueUpdateMarkings(); // Nebula edit
     }
 
     private void UpdateMarkings()

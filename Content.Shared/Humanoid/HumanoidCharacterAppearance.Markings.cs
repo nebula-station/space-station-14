@@ -145,7 +145,7 @@ public sealed partial class HumanoidCharacterAppearance
                 if (layerLimits is null || layerLimits.Limit <= 0)
                     continue;
 
-                layerMarkings.Add(layer, PickLayerRandomMarkings(layer, layerLimits, allMarkings, palette, random));
+                layerMarkings.Add(layer, PickNebulaLayerMarkings(layer, organData.Group, layerLimits, allMarkings, palette, random)); // Nebula edit
             }
             markings.Add(organ, layerMarkings);
         }

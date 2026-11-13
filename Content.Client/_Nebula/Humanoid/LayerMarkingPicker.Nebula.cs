@@ -3,18 +3,18 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
-using Content.Client._Nebula.Humanoid;
 using Content.Shared._Nebula.CCVar;
 using Content.Shared.Humanoid.Markings;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Client.Humanoid;
 
 public sealed partial class LayerMarkingPicker
 {
     [Dependency] private IConfigurationManager _cfg = default!;
-    [Dependency] private IEntityManager _entity = default!;
+    [Dependency] private MarkingManager _markingManager = default!;
     [Dependency] private ILocalizationManager _loc = default!;
 
     private const string FilterOwn = "own";
@@ -23,9 +23,10 @@ public sealed partial class LayerMarkingPicker
 
     private readonly List<string> _filters = [];
     private readonly List<LayerMarkingItem> _baseOrder = [];
-    private MarkingRecommendationSystem? _recommendations;
     private ProtoId<MarkingsGroupPrototype> _group;
     private string _filter = FilterAll;
+    private bool _built;
+    private bool _resetQueued;
 
     /// <summary>
     /// Fills the filter with the markings groups of this layer and applies the remembered filter.
@@ -34,21 +35,14 @@ public sealed partial class LayerMarkingPicker
     {
         IoCManager.InjectDependencies(this);
 
-        _recommendations = _entity.System<MarkingRecommendationSystem>();
         _group = group;
-
-        foreach (var child in Items.Children)
-        {
-            if (child is LayerMarkingItem item)
-                _baseOrder.Add(item);
-        }
 
         var hasOwn = false;
         var hasCommon = false;
         HashSet<ProtoId<MarkingsGroupPrototype>> others = [];
         foreach (var marking in _allMarkings.Keys)
         {
-            var groups = _recommendations.GetGroups(marking);
+            var groups = _markingManager.GetRecommendedGroups(marking);
             if (groups.Count == 0)
                 hasCommon = true;
 
@@ -95,6 +89,57 @@ public sealed partial class LayerMarkingPicker
         ReorderButton.OnPressed += _ => FilterButton.Visible = !ReorderButton.Pressed && _filters.Count > 1;
     }
 
+    protected override void FrameUpdate(FrameEventArgs args)
+    {
+        base.FrameUpdate(args);
+
+        if (!_built)
+        {
+            _built = true;
+            _resetQueued = false;
+            Build();
+            return;
+        }
+
+        if (!_resetQueued)
+            return;
+
+        _resetQueued = false;
+        UpdateCount();
+        RefreshItems();
+        RefreshFilter();
+    }
+
+    private void Build()
+    {
+        OrderingItems.AddChild(new LayerMarkingOrderer(_markingsModel, _organ, _layer));
+        UpdateMarkings();
+
+        foreach (var child in Items.Children)
+        {
+            if (child is LayerMarkingItem item)
+                _baseOrder.Add(item);
+        }
+
+        UpdateCount();
+
+        if (_filters.Count > 0)
+            SelectFilter(Math.Max(_filters.IndexOf(_filter), 0));
+    }
+
+    private void QueueReset()
+    {
+        _resetQueued = true;
+    }
+
+    private void RefreshItems()
+    {
+        foreach (var item in _baseOrder)
+        {
+            item.RefreshSelection();
+        }
+    }
+
     private void SelectFilter(int index)
     {
         FilterButton.SelectId(index);
@@ -114,7 +159,7 @@ public sealed partial class LayerMarkingPicker
     /// </summary>
     private void RefreshFilter()
     {
-        if (_recommendations == null)
+        if (_filters.Count == 0)
             return;
 
         SelectFilter(_filters.IndexOf(_filter));
@@ -122,7 +167,7 @@ public sealed partial class LayerMarkingPicker
 
     private void UpdateVisibility()
     {
-        if (_recommendations == null)
+        if (_filters.Count == 0)
             return;
 
         var query = SearchBar.Text.Trim();
@@ -134,7 +179,7 @@ public sealed partial class LayerMarkingPicker
 
     private bool MatchesFilter(string marking)
     {
-        var groups = _recommendations!.GetGroups(marking);
+        var groups = _markingManager.GetRecommendedGroups(marking);
         return _filter switch
         {
             FilterAll => true,
