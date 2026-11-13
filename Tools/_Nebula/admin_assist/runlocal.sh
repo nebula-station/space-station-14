@@ -130,7 +130,7 @@ MIGRATIONS="$(docker compose -f "$COMPOSE_FILE" exec -T "$DB_SERVICE" \
 echo "Applying Admin Assist database roles and schema..."
 docker compose -f "$COMPOSE_FILE" exec -T "$DB_SERVICE" \
     psql -v ON_ERROR_STOP=1 -U ss14 -d "$DB_NAME" \
-    -v ro_password=local_ro -v rw_password=local_rw -v game_role=ss14 \
+    -v ro_password=local_ro -v rw_password=local_rw \
     -f /aa/ops/01_roles.sql
 docker compose -f "$COMPOSE_FILE" exec -T "$DB_SERVICE" \
     psql -v ON_ERROR_STOP=1 -U ss14 -d "$DB_NAME" -f /aa/ops/02_admin_assist_schema.sql

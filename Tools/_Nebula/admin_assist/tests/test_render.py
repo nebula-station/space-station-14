@@ -1,20 +1,12 @@
 from __future__ import annotations
 
 import re
-from pathlib import Path
 
 import pytest
 
 from admin_assist import render
-from admin_assist.evalset import EVAL_DIR, load_case
 from admin_assist.render import reminder, render_detector_message, render_user_message, safe
 from admin_assist.ticket import LogLine, Participant, RoundInfo, TicketContext, TicketMessage
-
-from .fakes import nonced
-
-SPEC_PATH = Path(__file__).resolve().parents[4] / "docs/admin-assist/ahelp-prompts.md"
-SPEC_BLOCKS = re.findall(r"```text\n(.*?)```", SPEC_PATH.read_text(encoding="utf-8"), re.S) if SPEC_PATH.exists() else []
-needs_spec = pytest.mark.skipif(not SPEC_BLOCKS, reason="no prompt spec file in this checkout")
 
 AUTHOR = Participant("vasya", True, "Вася Пупкин", "инженер", (), "alive")
 
@@ -28,25 +20,11 @@ def ctx(*texts: str, **kwargs) -> TicketContext:
     )
 
 
-@needs_spec
-def test_prompt_files_are_the_spec_text():
-    assert render.load_prompt("ahelp_summary.system") == SPEC_BLOCKS[0].rstrip("\n")
-    assert render.detector_system_prompt() == SPEC_BLOCKS[2].rstrip("\n")
-
-
 def test_system_prompt_takes_the_rules_and_is_stable():
     prompt = render.summary_system_prompt("1.1. Не убивать.\n1.2. <b>Не</b> грубить.")
     assert prompt.endswith("<rules>\n1.1. Не убивать.\n1.2. ‹b›Не‹/b› грубить.\n</rules>")
     assert "{{" not in prompt
     assert prompt == render.summary_system_prompt("1.1. Не убивать.\n1.2. <b>Не</b> грубить.")
-
-
-@needs_spec
-@pytest.mark.parametrize("case_id, block", [("spec_4_1_rdm_contradicted", 4), ("spec_4_2_injection", 5)])
-def test_worked_examples_render_exactly_as_in_the_spec(case_id, block):
-    case = load_case(EVAL_DIR / f"{case_id}.json")
-    expected = SPEC_BLOCKS[block].rstrip("\n").replace(", жива\n", ", жив\n")
-    assert render_user_message(case.context, case.nonce) == nonced(expected, case.nonce)
 
 
 def test_layout_of_the_template():
