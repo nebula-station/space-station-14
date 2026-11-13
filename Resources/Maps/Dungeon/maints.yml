@@ -100,7 +100,7 @@ entities:
             color: '#FFFFFFFF'
             id: Bushf2
           decals:
-            67: -0.025895834,9.01513
+            67: 0,9.01513
         - node:
             cleanable: True
             color: '#FFFFFF6D'
