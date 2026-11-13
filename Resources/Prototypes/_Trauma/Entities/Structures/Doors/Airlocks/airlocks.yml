@@ -9,6 +9,10 @@
   components:
   - type: Sprite
     sprite: _Trauma/Structures/Doors/robotics.rsi
+  # Nebula start
+  - type: Airlock
+    openUnlitVisible: false
+  # Nebula end
 
 - type: entity
   parent: AirlockScienceGlass
@@ -17,3 +21,7 @@
   components:
   - type: Sprite
     sprite: _Trauma/Structures/Doors/robotics-glass.rsi
+  # Nebula start
+  - type: Airlock
+    openUnlitVisible: false
+  # Nebula end

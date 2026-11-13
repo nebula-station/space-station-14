@@ -17,6 +17,10 @@
   components:
   - type: Sprite
     sprite: _Goobstation/Wizard/Structures/Airlocks/Standard/uranium.rsi
+  # Nebula start
+  - type: Airlock
+    openUnlitVisible: false
+  # Nebula end
   - type: Construction
     graph: AirlockUranium
     node: airlock
@@ -32,6 +36,10 @@
   components:
   - type: Sprite
     sprite: _Goobstation/Wizard/Structures/Airlocks/Glass/uranium.rsi
+  # Nebula start
+  - type: Airlock
+    openUnlitVisible: false
+  # Nebula end
   - type: Construction
     graph: AirlockUranium
     node: glassAirlock
