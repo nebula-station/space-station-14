@@ -13,6 +13,7 @@
   - type: Construction
     graph: GlassesMedSecHUD
     node: glassesMedSec
+  - type: SkewedHud # Nebula edit
 
 - type: entity
   parent: ClothingEyesBase
