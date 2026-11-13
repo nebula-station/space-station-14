@@ -1,0 +1,6 @@
+- type: marking
+  id: IPCsnoutysmile
+  bodyPart: Snout
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/wayfarer_ipc_screen.rsi
+    state: ipc_screen_snoutysmile

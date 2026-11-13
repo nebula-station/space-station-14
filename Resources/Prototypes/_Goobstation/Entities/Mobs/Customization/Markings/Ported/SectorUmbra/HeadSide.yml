@@ -1,0 +1,23 @@
+- type: marking
+  id: SyntheticAntennaLeft
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/synthetic.rsi
+    state: synthetic_antenna_left
+
+- type: marking
+  id: SyntheticAntennaRight
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/SectorUmbra/_CD/Mobs/Customization/synthetic.rsi
+    state: synthetic_antenna_right

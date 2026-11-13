@@ -20,6 +20,21 @@
   category: General
   gridPath: /Maps/_Arcane/InfinityDorms/bath.yml
 
+- type: infinityDormRoom
+  id: PondBar
+  category: General
+  gridPath: /Maps/_Nebula/InfinityDorms/pond_bar.yml
+
+- type: infinityDormRoom
+  id: MiniBeach
+  category: General
+  gridPath: /Maps/_Nebula/InfinityDorms/mini_beach.yml
+
+- type: infinityDormRoom
+  id: HomeBar
+  category: General
+  gridPath: /Maps/_Nebula/InfinityDorms/home_bar.yml
+
 # endregion
 
 # region Unusual
@@ -39,6 +54,11 @@
   category: Unusual
   gridPath: /Maps/_Arcane/InfinityDorms/beach.yml
 
+- type: infinityDormRoom
+  id: PcClub
+  category: Unusual
+  gridPath: /Maps/_Nebula/InfinityDorms/pc_club.yml
+
 # endregion
 
 # region Exotic
@@ -47,5 +67,10 @@
   id: Cosmic
   category: Exotic
   gridPath: /Maps/_Arcane/InfinityDorms/cosmic.yml
+
+- type: infinityDormRoom
+  id: XenoborgShuttle
+  category: Exotic
+  gridPath: /Maps/_Nebula/InfinityDorms/xenoborg_shuttle.yml
 
 # endregion

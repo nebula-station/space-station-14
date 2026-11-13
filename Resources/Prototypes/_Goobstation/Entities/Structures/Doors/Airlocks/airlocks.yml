@@ -7,6 +7,10 @@
   components:
   - type: Sprite
     sprite: _Goobstation/Structures/Doors/Airlocks/Standard/janitor.rsi
+  # Nebula start
+  - type: Airlock
+    openUnlitVisible: false
+  # Nebula end
   - type: Wires
     layoutId: AirlockService
 
@@ -17,6 +21,10 @@
   components:
   - type: Sprite
     sprite: _Goobstation/Structures/Doors/Airlocks/Glass/janitor.rsi
+  # Nebula start
+  - type: Airlock
+    openUnlitVisible: false
+  # Nebula end
   - type: Wires
     layoutId: AirlockService
 
@@ -30,6 +38,10 @@
       board: [ DoorElectronicsAtmospherics ]
   - type: Sprite
     sprite: _Goobstation/Structures/Doors/Airlocks/Glass/atmossealed.rsi
+  # Nebula start
+  - type: Airlock
+    openUnlitVisible: false
+  # Nebula end
   - type: Fixtures
     fixtures:
       fix1:

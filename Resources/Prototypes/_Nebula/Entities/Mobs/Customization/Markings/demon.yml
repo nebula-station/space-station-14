@@ -377,63 +377,63 @@
 
 - type: marking
   id: DemonBodyCowSpots
-  bodyPart: Overlay
+  bodyPart: BodyOverlay
   sprites:
   - sprite: _Nebula/Mobs/Species/Demon/markings.rsi
     state: cow_spots
 
 - type: marking
   id: DemonBodyGuardStripes
-  bodyPart: Overlay
+  bodyPart: BodyOverlay
   sprites:
   - sprite: _Nebula/Mobs/Species/Demon/markings.rsi
     state: guards_stripes
 
 - type: marking
   id: DemonBodyLinesEmperos
-  bodyPart: Overlay
+  bodyPart: BodyOverlay
   sprites:
   - sprite: _Nebula/Mobs/Species/Demon/markings.rsi
     state: lines_emperos
 
 - type: marking
   id: DemonBodyQueenLines
-  bodyPart: Overlay
+  bodyPart: BodyOverlay
   sprites:
   - sprite: _Nebula/Mobs/Species/Demon/markings.rsi
     state: queen_lines
 
 - type: marking
   id: DemonBodyTreeLines
-  bodyPart: Overlay
+  bodyPart: BodyOverlay
   sprites:
   - sprite: _Nebula/Mobs/Species/Demon/markings.rsi
     state: tree_lines
 
 - type: marking
   id: DemonBodyTrinitySpots
-  bodyPart: Overlay
+  bodyPart: BodyOverlay
   sprites:
   - sprite: _Nebula/Mobs/Species/Demon/markings.rsi
     state: trinity_spots
 
 - type: marking
   id: DemonBodyAratakiPainting
-  bodyPart: Overlay
+  bodyPart: BodyOverlay
   sprites:
   - sprite: _Nebula/Mobs/Species/Demon/markings.rsi
     state: arataki_painting
 
 - type: marking
   id: DemonBodyGradientPaint
-  bodyPart: Overlay
+  bodyPart: BodyOverlay
   sprites:
   - sprite: _Nebula/Mobs/Species/Demon/markings.rsi
     state: gradient_paint
 
 - type: marking
   id: DemonBodySkeleton
-  bodyPart: Overlay
+  bodyPart: BodyOverlay
   sprites:
   - sprite: _Nebula/Mobs/Species/Demon/markings.rsi
     state: skeleton

@@ -1,0 +1,14 @@
+- type: marking
+  id: AurelianVoxRoboticLegLeft
+  bodyPart: LLeg
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/aurelian_markings.rsi
+    state: robotic_leg_left
+
+- type: marking
+  id: DwarfLegHair
+  bodyPart: LLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: dwarfleghair

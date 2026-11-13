@@ -1,0 +1,7 @@
+- type: marking
+  id: MothStrippedArms
+  bodyPart: LArm
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/Moth/arms.rsi
+    state: stripped-arm-l

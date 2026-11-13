@@ -1,0 +1,21 @@
+- type: marking
+  id: MothWingsClassicSelene
+  bodyPart: Tail
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_DV/Mobs/Customization/Moth/moth_wings.rsi
+    state: selene
+
+- type: marking
+  id: RMCLizardChestDragonwings
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_RMC14/Mobs/Customization/reptilian.rsi
+    state: body_dragonwings
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_RMC14/Mobs/Customization/reptilian.rsi
+    state: body_dragonwings_membrane

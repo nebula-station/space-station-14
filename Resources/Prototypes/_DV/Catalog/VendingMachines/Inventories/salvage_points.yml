@@ -46,6 +46,10 @@
     cost: 750
   - id: LavalandJaunter
     cost: 750
+  # Nebula start
+  - id: SpaceCash5000
+    cost: 750
+  # Nebula end
   - id: WeaponCrusher
     cost: 750
   - id: WeaponProtoKineticAccelerator

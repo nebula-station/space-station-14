@@ -1,0 +1,69 @@
+- type: marking
+  id: HumanHairCurly
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: curly
+
+- type: marking
+  id: HumanHairGloomyMedium
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: gloomy_medium
+
+- type: marking
+  id: HumanHairHalfshaveSnout
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: halfshave_snout
+
+- type: marking
+  id: HumanHairJessica
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: jessica
+
+- type: marking
+  id: HumanHairShorthair4
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: shorthair4
+
+- type: marking
+  id: HumanHairSlimedropletAlt
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: slimedroplet_alt
+
+- type: marking
+  id: HumanHairSlimetendrilsAlt
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: slimetendrils_alt
+
+- type: marking
+  id: HumanHairSpicy
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: spicy
+
+- type: marking
+  id: HumanHairTwintailFloor
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: twintail_floor
+
+- type: marking
+  id: HumanHairVeryshortovereye
+  bodyPart: Hair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/WhiteDream/_White/Mobs/Customization/human_hair.rsi
+    state: veryshortovereye

@@ -89,6 +89,9 @@
     enum.HumanoidVisualLayers.Special:
       limit: 6
       required: false
+    enum.HumanoidVisualLayers.BodyOverlay:
+      limit: 6
+      required: false
     # Nebula end
 
 ## Mob

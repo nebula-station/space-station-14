@@ -15,3 +15,5 @@ uplink-magazine-m7s-name = Магазин M7S (5x23 мм)
 uplink-magazine-m7s-desc = Запасной магазин для M7S.
 uplink-magazine-m41-name = Магазин M-41 (5x56 мм винтовочный)
 uplink-magazine-m41-desc = Запасной магазин для M-41.
+uplink-krav-maga-implanter-name = Имплант крав-мага
+uplink-krav-maga-implanter-desc = Нейроимплант, обучающий основам крав-мага. Обучение сохраняется, пока имплант внутри.

@@ -1,0 +1,6 @@
+- type: marking
+  id: LizardFloofNeckfull
+  bodyPart: HeadSide
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/Mobs/Customization/reptilian_parts.rsi
+    state: floof_neckfull

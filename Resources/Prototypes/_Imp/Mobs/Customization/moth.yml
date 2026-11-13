@@ -539,3 +539,30 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/wings.rsi
     state: lanternfly
+
+- type: marking
+  id: MothChestGlow
+  bodyPart: Chest
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Moth/chest.rsi
+    state: glow
+  shaders:
+    glow: unshaded
+
+- type: marking
+  id: MothHeadGlow
+  bodyPart: Head
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Moth/head.rsi
+    state: glow
+  shaders:
+    glow: unshaded
+
+- type: marking
+  id: MothGlowAntenna
+  bodyPart: HeadTop
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Moth/headtop.rsi
+    state: glowantenna
+  shaders:
+    glowantenna: unshaded

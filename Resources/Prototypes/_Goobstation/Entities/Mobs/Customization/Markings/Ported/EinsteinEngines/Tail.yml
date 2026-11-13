@@ -1,0 +1,14 @@
+- type: marking
+  id: TailDatashark
+  bodyPart: Tail
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_ADT/Mobs/Customization/Reptilian/reptilian_tails.rsi
+    state: datashark_ears_inner
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_ADT/Mobs/Customization/Reptilian/reptilian_tails.rsi
+    state: datashark_ears
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_ADT/Mobs/Customization/Reptilian/reptilian_tails.rsi
+    state: datashark_fin
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_ADT/Mobs/Customization/Reptilian/reptilian_tails.rsi
+    state: datashark_tail
+  - sprite: _Goobstation/Mobs/Customization/Ported/EinsteinEngines/_ADT/Mobs/Customization/Reptilian/reptilian_tails.rsi
+    state: datashark_taildata

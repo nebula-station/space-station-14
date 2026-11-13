@@ -1,0 +1,467 @@
+- type: marking
+  id: WFMeridianMarkingBackStripeHead
+  bodyPart: Head
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: back_stripe_head
+
+- type: marking
+  id: WFMeridianMarkingClownCrossHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFF00"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: clown_cross_head
+
+- type: marking
+  id: WFMeridianMarkingClownLipsHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FF0033"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: clown_lips_head
+
+- type: marking
+  id: WFMeridianMarkingCorgiHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: corgi_head
+
+- type: marking
+  id: WFMeridianMarkingCorvidHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: corvid_head
+
+- type: marking
+  id: WFMeridianMarkingDalmatianHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: dalmatian_head
+
+- type: marking
+  id: WFMeridianMarkingDogSpotHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: dog_spot_head
+
+- type: marking
+  id: WFMeridianMarkingDrakeEyesHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FF0000"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: drake_eyes_head
+
+- type: marking
+  id: WFMeridianMarkingEarsHead
+  bodyPart: Head
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: ears_head
+
+- type: marking
+  id: WFMeridianMarkingEeveeHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: eevee_head
+
+- type: marking
+  id: WFMeridianMarkingFennecHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: fennec_head
+
+- type: marking
+  id: WFMeridianMarkingFoxHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: fox_head
+
+- type: marking
+  id: WFMeridianMarkingGuilmonMarkHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: guilmon_mark_head
+
+- type: marking
+  id: WFMeridianMarkingHarlequinReversedHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: harlequin_reversed_head
+
+- type: marking
+  id: WFMeridianMarkingHawkHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: hawk_head
+
+- type: marking
+  id: WFMeridianMarkingHyenaHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: hyena_head
+
+- type: marking
+  id: WFMeridianMarkingHyenaSideHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: hyena_side_head
+
+- type: marking
+  id: WFMeridianMarkingInsectAntennaeHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#CCCCCC"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: insect_antennae_head
+
+- type: marking
+  id: WFMeridianMarkingLargeEyesHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FF0000"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: large_eyes_head
+
+- type: marking
+  id: WFMeridianMarkingMonsterMouthHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#CCCCCC"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: monster_mouth_head
+
+- type: marking
+  id: WFMeridianMarkingMonsterMouthWhiteEyeCompatibleHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#CCCCCC"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: monster_mouth_white_eye_compatible_head
+
+- type: marking
+  id: WFMeridianMarkingOrcaHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: orca_head
+
+- type: marking
+  id: WFMeridianMarkingPantherHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: panther_head
+
+- type: marking
+  id: WFMeridianMarkingPilotHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#CCCCCC"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: pilot_head
+
+- type: marking
+  id: WFMeridianMarkingPilotJawHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#CCCCCC"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: pilot_jaw_head
+
+- type: marking
+  id: WFMeridianMarkingSabresuneHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: sabresune_head
+
+- type: marking
+  id: WFMeridianMarkingScleraHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FF0000"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: sclera_head
+
+- type: marking
+  id: WFMeridianMarkingSharkHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: shark_head
+
+- type: marking
+  id: WFMeridianMarkingShepherdSpotHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: shepherd_spot_head
+
+- type: marking
+  id: WFMeridianMarkingSplotchesHead
+  bodyPart: Head
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: splotches_head
+
+- type: marking
+  id: WFMeridianMarkingSplotchesSwappedHead
+  bodyPart: Head
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: splotches_swapped_head
+
+- type: marking
+  id: WFMeridianMarkingTajaranHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: tajaran_head
+
+- type: marking
+  id: WFMeridianMarkingThreeEyesHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FF0000"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: three_eyes_head
+
+- type: marking
+  id: WFMeridianMarkingTigerSpotHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: tiger_spot_head
+
+- type: marking
+  id: WFMeridianMarkingTigerStripeHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: tiger_stripe_head
+
+- type: marking
+  id: WFMeridianMarkingWolfHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: wolf_head
+
+- type: marking
+  id: WFMeridianMarkingWolfSpotHead
+  bodyPart: Head
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Wolfgate/_WF/MeridianMarkings/body_head.rsi
+    state: wolf_spot_head

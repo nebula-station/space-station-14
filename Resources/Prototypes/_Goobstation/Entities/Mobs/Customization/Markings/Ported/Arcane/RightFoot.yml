@@ -1,0 +1,86 @@
+- type: marking
+  id: AndroidDefaultRFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/android_default.rsi
+    state: r_foot
+
+- type: marking
+  id: AndroidScrapFootRight
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/android.rsi
+    state: r_foot_scrap
+
+- type: marking
+  id: AndroidSyntFootRight
+  bodyPart: RFoot
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffffff"
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/android.rsi
+    state: r_foot_synt
+
+- type: marking
+  id: HI2RFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: hi2ipc_r_foot
+
+- type: marking
+  id: IPCRFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: ipc_r_foot
+
+- type: marking
+  id: PawsitronsRFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: pawsitrons_r_foot
+
+- type: marking
+  id: SGMRFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: sgmipc_r_foot
+
+- type: marking
+  id: SteampunkRFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: staripc_r_foot
+
+- type: marking
+  id: WTMRFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: wtmipc_r_foot
+
+- type: marking
+  id: XM2RFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: xm2ipc_r_foot
+
+- type: marking
+  id: ZHPRFoot
+  bodyPart: RFoot
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Arcane/_Arcane/Mobs/Customization/IPC/ipc_parts.rsi
+    state: zhpipc_r_foot

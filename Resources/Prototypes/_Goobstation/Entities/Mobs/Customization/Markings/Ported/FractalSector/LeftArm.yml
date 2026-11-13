@@ -1,0 +1,22 @@
+- type: marking
+  id: AurelianVoxArmMarkingsLeft
+  bodyPart: LArm
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/aurelian_markings.rsi
+    state: arm_markings_left
+
+- type: marking
+  id: AurelianVoxRoboticArmLeft
+  bodyPart: LArm
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/aurelian_markings.rsi
+    state: robotic_arm_left
+
+- type: marking
+  id: DwarfArmHair
+  bodyPart: LArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_Impstation/Mobs/Customization/markingsbundle1.rsi
+    state: dwarfarmhair

@@ -246,3 +246,60 @@
 # Tail
 
 # RArmExtension
+
+- type: marking
+  id: FadingStars
+  bodyPart: LLeg
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/head.rsi
+    state: fadingstars1
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/head.rsi
+    state: fadingstars2
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/head.rsi
+    state: fadingstars3
+  shaders:
+    fadingstars1: unshaded
+    fadingstars2: unshaded
+    fadingstars3: unshaded
+
+- type: marking
+  id: SlimeEyeglow
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: glow
+  shaders:
+    glow: unshaded
+
+- type: marking
+  id: SlimeEyesDroopyGlowing
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: droopyglow
+  shaders:
+    droopyglow: unshaded
+
+- type: marking
+  id: SlimeEyesCyclopsGlowing
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: cyclopsglow
+  shaders:
+    cyclopsglow: unshaded

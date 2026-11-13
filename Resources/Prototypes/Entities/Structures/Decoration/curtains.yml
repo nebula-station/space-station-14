@@ -31,6 +31,10 @@
     closeTimeTwo: 0.1
     openTimeOne: 0.5
     openTimeTwo: 0.1
+    # Nebula start
+    openingAnimationTime: 0
+    closingAnimationTime: 0
+    # Nebula end
     openSound:
       path: /Audio/Effects/curtain_openclose.ogg
     closeSound:

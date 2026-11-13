@@ -1,0 +1,20 @@
+- type: marking
+  id: BodyHairRightLeg
+  bodyPart: RLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/human_body_hair.rsi
+    state: hair_right_leg
+
+- type: marking
+  id: LegScarRight
+  bodyPart: RLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/Generic/scars.rsi
+    state: scar-leg-r
+
+- type: marking
+  id: VoxFeatheredLegRight
+  bodyPart: RLeg
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Starlight/_Starlight/Mobs/Customization/vox.rsi
+    state: rightlegfeathered

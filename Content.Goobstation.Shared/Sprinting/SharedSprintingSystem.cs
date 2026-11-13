@@ -75,7 +75,7 @@ public abstract partial class SharedSprintingSystem : EntitySystem
         SubscribeLocalEvent<StandingStateComponent, SprintAttemptEvent>(OnStandingStateSprintAttempt);
         SubscribeLocalEvent<BuckleComponent, SprintAttemptEvent>(OnBuckleSprintAttempt);
         SubscribeLocalEvent<SprinterComponent, EntityZombifiedEvent>(OnZombified);
-        SubscribeLocalEvent<SprinterComponent, StartCollideEvent>(OnCollide);
+        // SubscribeLocalEvent<SprinterComponent, StartCollideEvent>(OnCollide); // Nebula edit
 
         // Traumastation
         Subs.CVar(_cfg, TraumaCVars.SprintEnabled, value => SprintEnabled = value, true);

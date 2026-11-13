@@ -1,0 +1,6 @@
+- type: marking
+  id: VoxFacialHairRuffBeard
+  bodyPart: FacialHair
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Nyanotrasen/Mobs/Customization/vox_facial_hair.rsi
+    state: vox_ruff_beard_s

@@ -1,0 +1,20 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: KravMagaImplant
+  name: krav maga implant
+  description: A neural implant that teaches the user the basics of Krav Maga.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: KnowledgeGrantOnWear
+    skills:
+      MartialArtKravMaga: 88
+    experience:
+      MartialArtKravMaga: 2
+
+- type: entity
+  parent: BaseImplantOnlyImplanterSyndi
+  id: KravMagaImplanter
+  suffix: Krav Maga
+  components:
+  - type: Implanter
+    implant: KravMagaImplant

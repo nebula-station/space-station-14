@@ -1,0 +1,15 @@
+- type: marking
+  id: AurelianVoxArmMarkingsRight
+  bodyPart: RArm
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/aurelian_markings.rsi
+    state: arm_markings_right
+
+- type: marking
+  id: AurelianVoxRoboticArmRight
+  bodyPart: RArm
+  canBeDisplaced: false
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/FractalSector/_WF/Mobs/Customization/aurelian_markings.rsi
+    state: robotic_arm_right

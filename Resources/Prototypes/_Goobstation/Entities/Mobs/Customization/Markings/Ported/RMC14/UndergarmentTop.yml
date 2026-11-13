@@ -1,0 +1,31 @@
+- type: marking
+  id: RMCUndershirtClassic
+  bodyPart: UndergarmentTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Customization/undershirt.rsi
+    state: c_classic
+
+- type: marking
+  id: RMCUndershirtRolled
+  bodyPart: UndergarmentTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Customization/undershirt.rsi
+    state: t_rolled_undershirt
+
+- type: marking
+  id: RMCUndershirtRolledSleeveless
+  bodyPart: UndergarmentTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Customization/undershirt.rsi
+    state: t_rolled_undershirt_sleeveless
+
+- type: marking
+  id: RMCUndershirtSleeveless
+  bodyPart: UndergarmentTop
+  forcedColoring: true
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Customization/undershirt.rsi
+    state: t_undershirt_sleeveless

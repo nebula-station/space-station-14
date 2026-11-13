@@ -1,0 +1,47 @@
+- type: marking
+  id: Malstrem
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: _Erida/Customization/Markings/headaugs.rsi
+    state: malstrem
+
+- type: marking
+  id: Beholder
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: _Erida/Customization/Markings/headaugs.rsi
+    state: beholder
+
+- type: marking
+  id: Terminator
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: _Erida/Customization/Markings/headaugs.rsi
+    state: terminator
+
+- type: marking
+  id: Iron_jaw
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: _Erida/Customization/Markings/headaugs.rsi
+    state: iron_jaw

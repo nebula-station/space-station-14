@@ -1,0 +1,26 @@
+- type: marking
+  id: FelinidCatSnout
+  bodyPart: Snout
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Felinids/felinid_snouts.rsi
+    state: snout_cat
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Felinids/felinid_snouts.rsi
+    state: snout_cat_nose
+
+- type: marking
+  id: VulpSnoutShortAlt1
+  bodyPart: Snout
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Vulpkanin/short_snout.rsi
+    state: m_snout_fscanidalt_FRONT_primary
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Vulpkanin/short_snout.rsi
+    state: m_snout_fscanidalt_FRONT_secondary
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Vulpkanin/short_snout.rsi
+    state: m_snout_fscanidalt_FRONT_tertiary
+
+- type: marking
+  id: VulpSnouted
+  bodyPart: Snout
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/RMC14/_RMC14/Mobs/Vulpkanin/parts.rsi
+    state: snout

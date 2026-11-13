@@ -1,0 +1,55 @@
+- type: marking
+  id: HumanTattooArmImheartmomL
+  bodyPart: LArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_arm_imheartmom_l
+
+- type: marking
+  id: HumanTattooArmlazaL
+  bodyPart: LArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattooarm-laza_l
+
+- type: marking
+  id: HumanTattooLineArmL
+  bodyPart: LArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_line_arm_l
+
+- type: marking
+  id: HumanTattooSkeletarmL
+  bodyPart: LArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Human/custom.rsi
+    state: tattoo_skelet_arm_l
+
+- type: marking
+  id: ReptilianTattoSkeletArmL
+  bodyPart: LArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_ADT/Mobs/Customization/Reptilian/custom.rsi
+    state: tatto_skelet_arm_l
+
+- type: marking
+  id: VulpPointsCrestArmL
+  bodyPart: LArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+    state: points_crest-armsL
+
+- type: marking
+  id: VulpPointsFadeArmL
+  bodyPart: LArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+    state: points_fade-armsL
+
+- type: marking
+  id: VulpPointsSharpArmL
+  bodyPart: LArm
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Ported/Floofstation/_Floof/Mobs/Customization/Vulpkanin/body_markings.rsi
+    state: points_sharp-armsL
