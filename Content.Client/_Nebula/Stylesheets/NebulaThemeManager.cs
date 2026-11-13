@@ -94,6 +94,11 @@ public sealed partial class NebulaThemeManager
         return _scoped;
     }
 
+    public bool IsScopedStylesheet(Stylesheet? sheet)
+    {
+        return sheet != null && ReferenceEquals(sheet, _scoped);
+    }
+
     private void Rebuild()
     {
         _rebuildQueued = false;
