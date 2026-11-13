@@ -187,6 +187,7 @@
     # </Trauma>
     - SecurityWeaponsStatic
     - SecurityAmmoStatic
+    - SecurityAmmoHighCaliberStatic # Nebula edit
     # - SyndicateAmmoStatic # Trauma
   - type: BlueprintReceiver
     whitelist:
@@ -496,6 +497,7 @@
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
     - SecurityAmmoStatic
+    - SecurityAmmoHighCaliberStatic # Nebula edit
     - SecurityWeaponsStatic
     # Goobstation
     - SecurityEquipmentStaticGoob
@@ -564,6 +566,7 @@
       unlitRunningState: unlit-building
       staticPacks:
       - SecurityAmmoStatic
+      - SecurityAmmoHighCaliberStatic # Nebula edit
     # - type: EmagLatheRecipes
     #   emagStaticPacks:
       # - SyndicateAmmoStatic # Trauma
