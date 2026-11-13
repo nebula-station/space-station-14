@@ -28,8 +28,9 @@ public sealed partial class AirlockSystem : SharedAirlockSystem
         if (comp.OpenUnlitVisible) // Otherwise there are flashes of the fallback sprite between clicking on the door and the door closing animation starting.
         {
             door.OpenSpriteStates.Add((DoorVisualLayers.BaseUnlit, comp.OpenSpriteState));
-            door.ClosedSpriteStates.Add((DoorVisualLayers.BaseUnlit, comp.ClosedSpriteState));
         }
+
+        door.ClosedSpriteStates.Add((DoorVisualLayers.BaseUnlit, comp.ClosedSpriteState)); // Nebula edit
 
         ((Animation)door.OpeningAnimation).AnimationTracks.Add(new AnimationTrackSpriteFlick()
         {
@@ -103,14 +104,10 @@ public sealed partial class AirlockSystem : SharedAirlockSystem
 
             if (!showBolted && !showEmergency)
             {
-                if (state == DoorState.Closing || state == DoorState.Opening || state == DoorState.Denying) // Trauma - removed Closed check for our sprites
+                if (state == DoorState.Closing || state == DoorState.Opening || state == DoorState.Denying || state == DoorState.Closed) // Nebula edit
                     showBaseUnlit = true;
 
                 if (state == DoorState.Open && comp.OpenUnlitVisible)
-                    showBaseUnlit = true;
-
-                _appearanceSystem.TryGetData<bool>(uid, DoorVisuals.ClosedLights, out var closedLightsVisible, args.Component);
-                if (state == DoorState.Closed && closedLightsVisible)
                     showBaseUnlit = true;
             }
         }
