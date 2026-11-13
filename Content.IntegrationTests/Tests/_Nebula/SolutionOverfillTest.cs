@@ -3,8 +3,9 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.Components.SolutionManager;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.Manager;
+using Robust.Shared.Serialization.Markdown.Mapping;
 
 namespace Content.IntegrationTests.Tests._Nebula;
 
@@ -20,6 +21,8 @@ public sealed class SolutionOverfillTest
     /// </summary>
     private static readonly EntProtoId WaterFloor = "FloorWaterEntity";
 
+    private const string LegacyManager = "SolutionContainerManager";
+
     [Test]
     public async Task PrefilledSolutionsFitMaxVolume()
     {
@@ -27,6 +30,7 @@ public sealed class SolutionOverfillTest
         var server = pair.Server;
         var protoMan = server.ProtoMan;
         var compFactory = server.EntMan.ComponentFactory;
+        var serialization = server.ResolveDependency<ISerializationManager>();
 
         await server.WaitAssertion(() =>
         {
@@ -40,13 +44,13 @@ public sealed class SolutionOverfillTest
                 if (proto.TryComp<SolutionComponent>(out var solution, compFactory))
                     Check(errors, proto.ID, solution.Id, solution.Solution);
 
-#pragma warning disable CS0612
-                if (proto.TryComp<SolutionContainerManagerComponent>(out var manager, compFactory) && manager.Solutions != null)
-#pragma warning restore CS0612
+                if (proto.Components.TryGetValue(LegacyManager, out var legacy)
+                    && serialization.WriteValue(legacy.Component.GetType(), legacy.Component) is MappingDataNode node
+                    && node.TryGet<MappingDataNode>("solutions", out var solutions))
                 {
-                    foreach (var (name, sol) in manager.Solutions)
+                    foreach (var (name, sol) in solutions)
                     {
-                        Check(errors, proto.ID, name, sol);
+                        Check(errors, proto.ID, name, serialization.Read<Solution>(sol));
                     }
                 }
             }
