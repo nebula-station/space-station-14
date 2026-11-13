@@ -17,6 +17,10 @@
     sprite: _Orion/Structures/Doors/Airlocks/Double/double_glass_airlock.rsi
     snapCardinals: false
     offset: 0.5,0
+  # Nebula start
+  - type: Airlock
+    animatePanel: false
+  # Nebula end
   - type: AnimationPlayer
   - type: Fixtures
     fixtures:

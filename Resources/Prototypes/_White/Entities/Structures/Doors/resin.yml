@@ -93,6 +93,7 @@
     powered: true
     openingSpriteState: closed_unlit
     closingSpriteState: closed_unlit
+    denySpriteState: closed_unlit # Nebula edit
   - type: AccessReader
     access: [["Xenomorph"]]
     breakOnAccessBreaker: false
