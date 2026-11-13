@@ -1190,13 +1190,13 @@
     solution:
       reagents:
       - ReagentId: Nutriment
-        Quantity: 15
+        Quantity: 9 # Nebula edit
       - ReagentId: Vitamin
-        Quantity: 2.5
+        Quantity: 1.5 # Nebula edit
       - ReagentId: Sugar
-        Quantity: 6.25
+        Quantity: 3.75 # Nebula edit
       - ReagentId: Plasma
-        Quantity: 1.25
+        Quantity: 0.75 # Nebula edit
   - type: Edible
     transferAmount: 3
   - type: PointLight

@@ -370,7 +370,7 @@
     solution:
       reagents:
       - ReagentId: Stimulants
-        Quantity: 15
+        Quantity: 11 # Nebula edit
 
 - type: entity
   parent: BaseRanchingEgg

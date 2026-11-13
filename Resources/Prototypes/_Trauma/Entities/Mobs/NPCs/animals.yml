@@ -1156,11 +1156,11 @@
     solution:
       reagents:
       - ReagentId: Honk
-        Quantity: 30
+        Quantity: 10 # Nebula edit
       - ReagentId: Happiness
-        Quantity: 30
+        Quantity: 10 # Nebula edit
       - ReagentId: Laughter
-        Quantity: 30
+        Quantity: 10 # Nebula edit
   - type: SolutionRegeneration
     generated:
       reagents:

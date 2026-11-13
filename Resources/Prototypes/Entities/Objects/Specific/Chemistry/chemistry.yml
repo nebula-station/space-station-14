@@ -207,7 +207,7 @@
     solution:
       reagents:
       - ReagentId: Cryoxadone
-        Quantity: 60
+        Quantity: 50 # Nebula edit
 
 - type: entity
   parent: Beaker
@@ -220,7 +220,7 @@
     solution:
       reagents:
       - ReagentId: Arithrazine
-        Quantity: 60
+        Quantity: 50 # Nebula edit
 
 - type: entity
   parent: Beaker
@@ -233,7 +233,7 @@
     solution:
       reagents:
       - ReagentId: Sigynate
-        Quantity: 60
+        Quantity: 50 # Nebula edit
 
 - type: entity
   parent: Beaker
@@ -246,7 +246,7 @@
     solution:
       reagents:
       - ReagentId: Phalanximine
-        Quantity: 60
+        Quantity: 50 # Nebula edit
 
 - type: entity
   parent: Beaker
@@ -259,7 +259,7 @@
     solution:
       reagents:
       - ReagentId: Diphenhydramine
-        Quantity: 60
+        Quantity: 50 # Nebula edit
 
 - type: entity
   parent: Beaker
@@ -272,7 +272,7 @@
     solution:
       reagents:
       - ReagentId: Bruizine
-        Quantity: 60
+        Quantity: 50 # Nebula edit
 
 - type: entity
   parent: Beaker
@@ -285,7 +285,7 @@
     solution:
       reagents:
       - ReagentId: Lacerinol
-        Quantity: 60
+        Quantity: 50 # Nebula edit
 
 - type: entity
   name: large beaker

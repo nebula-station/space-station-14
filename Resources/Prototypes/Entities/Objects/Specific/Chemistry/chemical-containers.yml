@@ -36,9 +36,9 @@
     solution:
       reagents:
       - ReagentId: Puncturase
-        Quantity: 192
+        Quantity: 160 # Nebula edit
       - ReagentId: TranexamicAcid
-        Quantity: 48
+        Quantity: 40 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -51,9 +51,9 @@
     solution:
       reagents:
       - ReagentId: Pyrazine
-        Quantity: 60
+        Quantity: 50 # Nebula edit
       - ReagentId: Dermaline
-        Quantity: 180
+        Quantity: 150 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -66,9 +66,9 @@
     solution:
       reagents:
       - ReagentId: DexalinPlus
-        Quantity: 120
+        Quantity: 100 # Nebula edit
       - ReagentId: Saline
-        Quantity: 120
+        Quantity: 100 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -81,7 +81,7 @@
     solution:
       reagents:
       - ReagentId: Tricordrazine
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -94,7 +94,7 @@
     solution:
       reagents:
       - ReagentId: Blood
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -107,7 +107,7 @@
     solution:
       reagents:
       - ReagentId: Water
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -121,7 +121,7 @@
     solution:
       reagents:
       - ReagentId: Carbon
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -135,7 +135,7 @@
     solution:
       reagents:
       - ReagentId: Iodine
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -149,7 +149,7 @@
     solution:
       reagents:
       - ReagentId: Fluorine
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -163,7 +163,7 @@
     solution:
       reagents:
       - ReagentId: Chlorine
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -177,7 +177,7 @@
     solution:
       reagents:
       - ReagentId: Aluminium
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -191,7 +191,7 @@
     solution:
       reagents:
       - ReagentId: Phosphorus
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -205,7 +205,7 @@
     solution:
       reagents:
       - ReagentId: Sulfur
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -219,7 +219,7 @@
     solution:
       reagents:
       - ReagentId: Silicon
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -233,7 +233,7 @@
     solution:
       reagents:
       - ReagentId: Hydrogen
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -247,7 +247,7 @@
     solution:
       reagents:
       - ReagentId: Lithium
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -261,7 +261,7 @@
     solution:
       reagents:
       - ReagentId: Sodium
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -275,7 +275,7 @@
     solution:
       reagents:
       - ReagentId: Potassium
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -289,7 +289,7 @@
     solution:
       reagents:
       - ReagentId: Radium
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -303,7 +303,7 @@
     solution:
       reagents:
       - ReagentId: Iron
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -317,7 +317,7 @@
     solution:
       reagents:
       - ReagentId: Copper
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -331,7 +331,7 @@
     solution:
       reagents:
       - ReagentId: Gold
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -345,7 +345,7 @@
     solution:
       reagents:
       - ReagentId: Mercury
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -359,7 +359,7 @@
     solution:
       reagents:
       - ReagentId: Silver
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -373,7 +373,7 @@
     solution:
       reagents:
       - ReagentId: Ethanol
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -387,7 +387,7 @@
     solution:
       reagents:
       - ReagentId: Sugar
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -401,7 +401,7 @@
     solution:
       reagents:
       - ReagentId: Nitrogen
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -415,7 +415,7 @@
     solution:
       reagents:
       - ReagentId: Oxygen
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -429,7 +429,7 @@
     solution:
       reagents:
       - ReagentId: PlantBGone
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -443,7 +443,7 @@
     solution:
       reagents:
       - ReagentId: WeldingFuel
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -457,7 +457,7 @@
     solution:
       reagents:
       - ReagentId: Bicaridine
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -471,7 +471,7 @@
     solution:
       reagents:
       - ReagentId: Puncturase
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -485,7 +485,7 @@
     solution:
       reagents:
       - ReagentId: Dermaline
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -499,7 +499,7 @@
     solution:
       reagents:
       - ReagentId: Dylovene
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -513,7 +513,7 @@
     solution:
       reagents:
       - ReagentId: TranexamicAcid
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -527,7 +527,7 @@
     solution:
       reagents:
       - ReagentId: Hyronalin
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -541,7 +541,7 @@
     solution:
       reagents:
       - ReagentId: Saline
-        Quantity: 240
+        Quantity: 200 # Nebula edit
 
 - type: entity
   parent: Jug
@@ -555,4 +555,4 @@
     solution:
       reagents:
       - ReagentId: DexalinPlus
-        Quantity: 240
+        Quantity: 200 # Nebula edit
