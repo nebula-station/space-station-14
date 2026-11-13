@@ -78,6 +78,7 @@ public sealed partial class OrganMarkingPicker : Control
                 continue;
 
             var control = new LayerMarkingPicker(_markingsModel, _organ, layer, allMarkings);
+            control.SetRecommendationGroup(_group); // Nebula edit
             LayerTabs.AddChild(control);
             if (Loc.TryGetString($"markings-layer-{layer}-{_group.Id}", out var layerTitle))
                 LayerTabs.SetTabTitle(i, layerTitle);

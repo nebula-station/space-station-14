@@ -72,8 +72,8 @@
       - Overlay
       - BodyOverlay # Nebula edit
       - TailOverlay
-      - UndergarmentTop
-      - UndergarmentBottom
+      # - UndergarmentTop # Nebula edit
+      # - UndergarmentBottom # Nebula edit
       - Special
 
 - type: entity

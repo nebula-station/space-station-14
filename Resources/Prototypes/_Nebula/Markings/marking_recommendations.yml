@@ -1,0 +1,89 @@
+- type: markingRecommendation
+  id: Arachnid
+  group: Arachnid
+  paths: [ /arachnid/ ]
+
+- type: markingRecommendation
+  id: Ariral
+  group: Ariral
+  paths: [ /ariral/ ]
+
+- type: markingRecommendation
+  id: Decapoid
+  group: Decapoid
+  paths: [ decapoid ]
+
+- type: markingRecommendation
+  id: Demon
+  group: Demon
+  paths: [ /demon/ ]
+
+- type: markingRecommendation
+  id: Diona
+  group: Diona
+  paths: [ diona ]
+
+- type: markingRecommendation
+  id: Felinid
+  group: Felinid
+  paths: [ felinid, /cat_parts.rsi ]
+
+- type: markingRecommendation
+  id: Feroxi
+  group: Feroxi
+  paths: [ /feroxi/ ]
+
+- type: markingRecommendation
+  id: Harpy
+  group: Harpy
+  paths: [ /harpy/, /harpy_ ]
+
+- type: markingRecommendation
+  id: IPC
+  group: IPC
+  paths: [ /ipc/, /ipc_, /ipcwings, /wayfarer_ipc_screen.rsi, /cybernetics/, /cyberlimbs/ ]
+
+- type: markingRecommendation
+  id: Moth
+  group: Moth
+  paths: [ moth ]
+
+- type: markingRecommendation
+  id: Oni
+  group: Oni
+  paths: [ /oni/, /oni_ ]
+
+- type: markingRecommendation
+  id: Reptilian
+  group: Reptilian
+  paths: [ reptilian ]
+
+- type: markingRecommendation
+  id: Shadow
+  group: Shadow
+  paths: [ /shadow/ ]
+
+- type: markingRecommendation
+  id: Shadowkin
+  group: Shadowkin
+  paths: [ /shadowkin/, /shadekin/ ]
+
+- type: markingRecommendation
+  id: Slime
+  group: Slime
+  paths: [ /slimeperson/, /slime_parts.rsi ]
+
+- type: markingRecommendation
+  id: Tajaran
+  group: Tajaran
+  paths: [ /tajaran/ ]
+
+- type: markingRecommendation
+  id: Vox
+  group: Vox
+  paths: [ /vox ]
+
+- type: markingRecommendation
+  id: Vulpkanin
+  group: Vulpkanin
+  paths: [ /vulpkanin/ ]

@@ -5,40 +5,53 @@
 using System.Linq;
 using Content.Client._Nebula.Lobby;
 using Content.Shared.Clothing.Components;
-using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
+using Content.Trauma.Common.Inventory;
 using Robust.Shared.Map;
+using Robust.Shared.Prototypes;
 
 namespace Content.Client.Lobby.UI.ProfileEditorControls;
 
 public sealed partial class ProfilePreviewSpriteView
 {
+    private static readonly ProtoId<InventorySlotPrototype>[] UnderwearSlots = { "underwearb", "underweart", "socks" };
+
     /// <summary>
-    /// Reloads the dummy dressed either in the job clothing or in the wardrobe items, in underwear or naked.
+    /// Reloads the dummy dressed either in the job clothing or in the wardrobe items, in their underwear only or naked.
     /// </summary>
     public void LoadPreview(HumanoidCharacterProfile profile, JobPrototype? jobOverride, bool wardrobe, NebulaPreviewClothing clothing)
     {
-        if (clothing == NebulaPreviewClothing.Naked)
-            profile = WithoutUndergarments(profile);
-
-        var dressed = clothing == NebulaPreviewClothing.All;
+        var dressed = clothing != NebulaPreviewClothing.Naked;
         LoadPreview(profile, jobOverride, dressed && !wardrobe);
 
         if (dressed && wardrobe)
             GiveDummyWardrobe(profile);
+
+        if (clothing == NebulaPreviewClothing.Underwear)
+            StripToUnderwear();
     }
 
-    private static HumanoidCharacterProfile WithoutUndergarments(HumanoidCharacterProfile profile)
+    /// <summary>
+    /// Takes off everything except the underpants, the bra and the socks. Goes from the last slot, so pockets and belts come off
+    /// before the jumpsuit they hang on.
+    /// </summary>
+    private void StripToUnderwear()
     {
-        var markings = profile.Appearance.Markings.ToDictionary(
-            organ => organ.Key,
-            organ => organ.Value
-                .Where(layer => layer.Key is not (HumanoidVisualLayers.UndergarmentTop or HumanoidVisualLayers.UndergarmentBottom))
-                .ToDictionary(layer => layer.Key, layer => layer.Value));
+        var inventory = EntMan.System<InventorySystem>();
+        if (!inventory.TryGetSlots(PreviewDummy, out var slots))
+            return;
 
-        return profile.WithCharacterAppearance(profile.Appearance.WithMarkings(markings));
+        for (var i = slots.Length - 1; i >= 0; i--)
+        {
+            var slot = slots[i].Name;
+            if (Array.IndexOf(UnderwearSlots, slot) >= 0)
+                continue;
+
+            if (inventory.TryUnequip(PreviewDummy, slot, out var item, silent: true, force: true, reparent: false))
+                EntMan.DeleteEntity(item.Value);
+        }
     }
 
     /// <summary>
