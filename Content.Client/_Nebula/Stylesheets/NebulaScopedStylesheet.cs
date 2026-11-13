@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Client._Nebula.UserInterface;
 using Content.Client._Nebula.UserInterface.Shapes;
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Controls;
@@ -56,6 +57,7 @@ public static class NebulaScopedStylesheet
         AddButtonRules(rules, p);
         AddFieldRules(rules, p);
         AddContainerRules(rules, p);
+        AddOptionPopupRules(rules, p);
 
         return new Stylesheet(rules);
     }
@@ -201,6 +203,42 @@ public static class NebulaScopedStylesheet
 
         AddScrollBarRules<VScrollBar>(rules, p, new Thickness(3, 2));
         AddScrollBarRules<HScrollBar>(rules, p, new Thickness(2, 3));
+    }
+
+    private static void AddOptionPopupRules(List<StyleRule> rules, NebulaPalette p)
+    {
+        var popup = E<Popup>().Class(OptionButton.StyleClassPopup);
+        var background = new ShapedStyleBox
+        {
+            BackgroundColor = p.SurfaceContainer,
+            BorderColor = p.Layer0Border,
+            BorderThickness = 1f,
+            Shape = NebulaShapes.Card,
+        };
+
+        rules.Add(popup.ParentOf(E<PanelContainer>().Class(OptionButton.StyleClassOptionsBackground))
+            .Panel(background));
+
+        (string Pseudo, Color Fill, Color Text)[] states =
+        [
+            (ContainerButton.StylePseudoClassNormal, Color.Transparent, p.OnSurface),
+            (ContainerButton.StylePseudoClassHover, p.Layer2Hover, p.OnSurface),
+            (ContainerButton.StylePseudoClassPressed, p.SecondaryContainer, p.OnSecondaryContainer),
+            (ContainerButton.StylePseudoClassDisabled, Color.Transparent, p.OnSurface.WithAlpha(0.38f)),
+        ];
+
+        foreach (var (pseudo, fill, text) in states)
+        {
+            var item = popup
+                .ParentOf(E<ScrollContainer>())
+                .ParentOf(E<BoxContainer>())
+                .ParentOf(E<BoxContainer>())
+                .ParentOf(E<ContainerButton>().Class(ContainerButton.StyleClassButton).Pseudo(pseudo));
+
+            rules.Add(item.Box(Box(fill, NebulaShapes.Control, 10, 3))
+                .Prop(Control.StylePropertyModulateSelf, Color.White));
+            rules.Add(item.ParentOf(E<Label>()).FontColor(text));
+        }
     }
 
     private static void AddScrollBarRules<T>(List<StyleRule> rules, NebulaPalette p, Thickness inset)
