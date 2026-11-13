@@ -172,14 +172,19 @@ public sealed partial class LayerMarkingItem : BoxContainer, ISearchableControl
             var selector = new ColorSelectorSliders();
             selector.SelectorType = ColorSelectorSliders.ColorSelectorType.Hsv;
 
-            var label = _markingPrototype.Sprites[i] switch
+            // Nebula start
+            if (_markingPrototype.Sprites.Count > 1)
             {
-                SpriteSpecifier.Rsi rsi => Loc.TryGetString($"marking-{_markingPrototype.ID}-{rsi.RsiState}", out var name) ? name : rsi.RsiState, // Trauma - default to the state like r_hand if it isn't defined
-                SpriteSpecifier.Texture texture => Loc.GetString($"marking-{_markingPrototype.ID}-{texture.TexturePath.Filename}"),
-                _ => throw new InvalidOperationException("SpriteSpecifier not of known type"),
-            };
+                var label = _markingPrototype.Sprites[i] switch
+                {
+                    SpriteSpecifier.Rsi rsi => Loc.TryGetString($"marking-{_markingPrototype.ID}-{rsi.RsiState}", out var name) ? name : rsi.RsiState, // Trauma - default to the state like r_hand if it isn't defined
+                    SpriteSpecifier.Texture texture => Loc.GetString($"marking-{_markingPrototype.ID}-{texture.TexturePath.Filename}"),
+                    _ => throw new InvalidOperationException("SpriteSpecifier not of known type"),
+                };
 
-            container.AddChild(new Label { Text = label });
+                container.AddChild(new Label { Text = label });
+            }
+            // Nebula end
             container.AddChild(selector);
 
             selector.Color = marking.MarkingColors[i];

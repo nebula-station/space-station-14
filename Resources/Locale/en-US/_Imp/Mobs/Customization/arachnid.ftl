@@ -1,14 +1,12 @@
 # Chest
 
 marking-ArachnidOverlayFluffy = Fluffy
-marking-ArachnidOverlayFluffy-fluffy = Fluff
 
 marking-ArachnidTorsoSegments = Segmented Chest
 marking-ArachnidTorsoSegments-segments1 = Chest
 marking-ArachnidTorsoSegments-segments2 = Stomach
 
 marking-SpiderMirror = Mirror
-marking-SpiderMirror-mirror = Mirror
 
 # Head
 
@@ -19,7 +17,6 @@ marking-ArachnidHeadSegments-segments2 = Stripe
 # Snout
 
 marking-WhipSpiderMouth = Chelicerae (Whip)
-marking-WhipSpiderMouth-whipspidermouth = Chelicerae
 
 # Eyes
 
@@ -57,7 +54,6 @@ marking-SpiderEyesMulti-multi3 = Middle Bottom
 marking-SpiderEyesMulti-multi4 = Bottom
 
 marking-SpiderGlowEyes = Glowing Eyes
-marking-SpiderGlowEyes-glow = Glowing Eyes
 
 # RArm
 
@@ -130,7 +126,6 @@ marking-SpiderHair3 = Wisps
 # HeadSide
 
 marking-ArachnidCheliceraeSmall = Chelicerae (Small)
-marking-ArachnidCheliceraeSmall-small = Chelicerae
 
 # HeadTop
 
@@ -145,6 +140,5 @@ marking-AbdomenWidow-widow1 = Abdomen and Arms
 marking-AbdomenWidow-widow2 = Marking
 
 marking-CreepyArms = Creepy Arms
-marking-CreepyArms-creepy = Creepy Arms
 
 # RArmExtension

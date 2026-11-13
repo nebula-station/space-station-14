@@ -7,13 +7,10 @@ marking-FeroxiTailAndDorsal-feroxi-tail = Base Tail
 marking-FeroxiTailAndDorsal-feroxi-dorsal = Base Dorsal
 
 marking-FeroxiSnout = Snout
-marking-FeroxiSnout-feroxi-snout = Base Snout
 
 marking-FeroxiHeadStripesTiger = Tiger Stripes
-marking-FeroxiHeadStripesTiger-feroxi-head-stripes-tiger = Stripes
 
 marking-FeroxiHeadStripesTigerAlt = Tiger Stripes (alternative)
-marking-FeroxiHeadStripesTigerAlt-feroxi-head-stripes-tiger-alt = Stripes
 
 marking-FeroxiEarsTips = Tipped Ears
 marking-FeroxiEarsTips-feroxi-ears = Base Ears
@@ -26,7 +23,6 @@ marking-FeroxiEarsTiger-feroxi-ears-inner = Inner Ear
 marking-FeroxiEarsTiger-feroxi-ears-tiger = Stripes
 
 marking-FeroxiEarsPierced = Pierced Ears
-marking-FeroxiEarsPierced-feroxi-ears-pierced = Base Ears
 
 marking-FeroxiEarsPiercedTiger = Pierced Ears with Stripes
 marking-FeroxiEarsPiercedTiger-feroxi-ears-pierced = Base Ears
@@ -95,7 +91,6 @@ marking-FeroxiStripedTailAndDorsal-feroxi-dorsal = Base Dorsal
 marking-FeroxiStripedTailAndDorsal-feroxi-dorsal-stripes = Dorsal Stripes
 
 marking-FeroxiTail = Tail
-marking-FeroxiTail-feroxi-tail = Base Tail
 
 marking-FeroxiTipTail = Tail with Tips
 marking-FeroxiTipTail-feroxi-tail = Base Tail
@@ -190,64 +185,43 @@ marking-FeroxiFullTipTwoToneTailAndDorsal-feroxi-tail-second-dorsal-tip = Second
 marking-FeroxiFullTipTwoToneTailAndDorsal-feroxi-dorsal-tip = Dorsal Tip
 
 marking-FeroxiTorsoStripesBlitz = Small Under Arm Stripes
-marking-FeroxiTorsoStripesBlitz-feroxi-torso-stripes-blitz = Stripes
 
 marking-FeroxiTorsoStripesTiger = Full Stripes
-marking-FeroxiTorsoStripesTiger-feroxi-torso-stripes-tiger = Stripes
 
 marking-FeroxiTorsoStripesTigerAlt = Full Stripes (alternative)
-marking-FeroxiTorsoStripesTigerAlt-feroxi-torso-stripes-tiger-alt = Stripes
 
 marking-FeroxiTorsoCountershadingF = Countershading (Feminine)
-marking-FeroxiTorsoCountershadingF-feroxi-torso-countershading-f = Countershading
 
 marking-FeroxiTorsoCountershadingM = Countershading (Masculine)
-marking-FeroxiTorsoCountershadingM-feroxi-torso-countershading-m = Countershading
 
 marking-FeroxiLLegStripesBlitz = Calf Stripes (Left)
-marking-FeroxiLLegStripesBlitz-feroxi-Lleg-stripes-blitz = Stripes
 
 marking-FeroxiRLegStripesBlitz = Calf Stripes (Right)
-marking-FeroxiRLegStripesBlitz-feroxi-Rleg-stripes-blitz = Stripes
 
 marking-FeroxiLLegStripesTiger = Full Stripes (Left)
-marking-FeroxiLLegStripesTiger-feroxi-Lleg-stripes-tiger = Stripes
 
 marking-FeroxiRLegStripesTiger = Full Stripes (Right)
-marking-FeroxiRLegStripesTiger-feroxi-Rleg-stripes-tiger = Stripes
 
 marking-FeroxiLArmStripesBlitz = Shoulder Stripes (Left)
-marking-FeroxiLArmStripesBlitz-feroxi-Larm-stripes-blitz = Stripes
 
 marking-FeroxiRArmStripesBlitz = Shoulder Stripes (Right)
-marking-FeroxiRArmStripesBlitz-feroxi-Rarm-stripes-blitz = Stripes
 
 marking-FeroxiLArmStripesTiger = Full Stripes (Left)
-marking-FeroxiLArmStripesTiger-feroxi-Larm-stripes-tiger = Stripes
 
 marking-FeroxiRArmStripesTiger = Full Stripes (Right)
-marking-FeroxiRArmStripesTiger-feroxi-Rarm-stripes-tiger = Stripes
 
 marking-FeroxiLHandTip = Countershading Hand
-marking-FeroxiLHandTip-feroxi-Lhand-tip = Countershading
 
 marking-FeroxiRHandTip = Countershading Hand
-marking-FeroxiRHandTip-feroxi-Rhand-tip = Countershading
 
 marking-FeroxiLHandStripesTiger = Hand with Stripes
-marking-FeroxiLHandStripesTiger-feroxi-Lhand-stripes-tiger = Stripes
 
 marking-FeroxiRHandStripesTiger = Hand with Stripes
-marking-FeroxiRHandStripesTiger-feroxi-Rhand-stripes-tiger = Stripes
 
 marking-FeroxiLFootTip = Countershading Foot
-marking-FeroxiLFootTip-feroxi-Lfoot-tip = Countershading
 
 marking-FeroxiRFootTip = Countershading Foot
-marking-FeroxiRFootTip-feroxi-Rfoot-tip = Countershading
 
 marking-FeroxiLFootStripesTiger = Foot with Stripes
-marking-FeroxiLFootStripesTiger-feroxi-Lfoot-stripes-tiger = Stripes
 
 marking-FeroxiRFootStripesTiger = Foot with Stripes
-marking-FeroxiRFootStripesTiger-feroxi-Rfoot-stripes-tiger = Stripes
