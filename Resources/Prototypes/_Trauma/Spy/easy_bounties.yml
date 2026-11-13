@@ -120,7 +120,7 @@
 - type: spyBounty
   parent: EasyBountyBase
   id: BorgCharger
-  departmentBlacklist: [Engineering]
+  departmentBlacklist: [Science] # Nebula edit
   selector: !type:SpySpecificEntityBountySelectorEvent
     protos: [BorgCharger]
     queryComp: Charger

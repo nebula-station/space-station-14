@@ -4,16 +4,16 @@
   id: RoboticsConsoleCircuitboard
   components:
   - type: Sprite
-    state: cpu_engineering
+    state: cpu_science # Nebula edit
 
 - type: entity
   id: StationAiUploadCircuitboard
   components:
   - type: Sprite
-    state: cpu_engineering
+    state: cpu_science # Nebula edit
 
 - type: entity
   id: StationAiFixerCircuitboard
   components:
   - type: Sprite
-    state: cpu_engineering
+    state: cpu_science # Nebula edit

@@ -8,8 +8,10 @@
       storagebase: !type:AllSelector
         children:
         - id: EngineeringTechFabCircuitboard
-        - id: RoboticsConsoleCircuitboard
-        - id: StationAiFixerCircuitboard
+        # Nebula start
+        # - id: RoboticsConsoleCircuitboard
+        # - id: StationAiFixerCircuitboard
+        # Nebula end
 
 - type: entity
   id: BoxCMOCircuitboards
@@ -53,5 +55,7 @@
         children:
         - id: XenobiologyBountyComputerCircuitboard
         - id: ScienceTechFabCircuitboard # replaces circuit printer and protolathe
-        - !Remove id: RoboticsConsoleCircuitboard # Moved to CE
-        - !Remove id: StationAiFixerCircuitboard # Moved to CE
+        # Nebula start
+        # - !Remove id: RoboticsConsoleCircuitboard # Moved to CE
+        # - !Remove id: StationAiFixerCircuitboard # Moved to CE
+        # Nebula end

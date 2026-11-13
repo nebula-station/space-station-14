@@ -4,4 +4,4 @@
   id: WeaponEnergyTurretAI
   components:
   - type: AccessReader
-    access: !Clear [["StationAi"], ["ChiefEngineer"]]
+    access: !Clear [["StationAi"], ["ResearchDirector"]] # Nebula edit

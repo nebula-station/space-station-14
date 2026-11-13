@@ -43,8 +43,10 @@
 - type: department
   id: Engineering
   weight: 12
-  roles:
-  - Roboticist
+  # Nebula start
+  # roles:
+  # - Roboticist
+  # Nebula end
 
 - type: department
   id: Medical
@@ -63,6 +65,7 @@
   weight: 15
   roles:
   - Geneticist
+  - Roboticist # Nebula edit
 
 - type: department
   id: Service

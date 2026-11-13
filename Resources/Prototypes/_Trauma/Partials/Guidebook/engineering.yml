@@ -5,4 +5,4 @@
   children:
   - Automation
   - Circuits
-  - Robotics
+  # - Robotics # Nebula edit

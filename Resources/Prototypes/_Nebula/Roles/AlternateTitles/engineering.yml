@@ -72,13 +72,3 @@
   id: AltTitleTechnicalAssistantTrainee
   job: TechnicalAssistant
   name: job-alt-name-technical-assistant-trainee
-
-- type: jobAlternateTitle
-  id: AltTitleRoboticistMechatronics
-  job: Roboticist
-  name: job-alt-name-roboticist-mechatronics
-
-- type: jobAlternateTitle
-  id: AltTitleRoboticistCyborgTechnician
-  job: Roboticist
-  name: job-alt-name-roboticist-cyborg-technician

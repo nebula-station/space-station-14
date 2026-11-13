@@ -2,8 +2,10 @@
 
 - type: borgType
   id: generic
-  radioChannels:
-  - Engineering
+  # Nebula start
+  # radioChannels:
+  # - Engineering
+  # Nebula end
   addComponents:
   - type: ModifyKnowledgeGrant
     skills:
@@ -17,9 +19,11 @@
 - type: borgType
   id: engineering
   lawset: Engineer
-  radioChannels:
-  - Engineering
-  - !Remove Science
+  # Nebula start
+  # radioChannels:
+  # - Engineering
+  # - !Remove Science
+  # Nebula end
   addComponents:
   - type: ModifyKnowledgeGrant
     skills:
@@ -44,9 +48,11 @@
   lawset: Salvage
   defaultModules:
   - BorgModulePKA
-  radioChannels:
-  - Engineering
-  - !Remove Science
+  # Nebula start
+  # radioChannels:
+  # - Engineering
+  # - !Remove Science
+  # Nebula end
   addComponents:
   - type: NoWieldNeeded
   - type: SlavedBorg # Special AI labeling for salv borgs.
@@ -63,9 +69,11 @@
   lawset: Janitor
   defaultModules:
   - !Index:0 BorgModuleTool
-  radioChannels:
-  - Engineering
-  - !Remove Science
+  # Nebula start
+  # radioChannels:
+  # - Engineering
+  # - !Remove Science
+  # Nebula end
   addComponents:
   - type: ModifyKnowledgeGrant
     skills:
@@ -82,9 +90,11 @@
   - !Index:0 BorgModuleTool
   - BorgModuleSurgery
   - BorgModuleLollypop
-  radioChannels:
-  - Engineering
-  - !Remove Science
+  # Nebula start
+  # radioChannels:
+  # - Engineering
+  # - !Remove Science
+  # Nebula end
   addComponents:
   - type: ModifyKnowledgeGrant
     skills:
@@ -101,9 +111,11 @@
   lawset: Clown
   defaultModules:
   - !Index:0 BorgModuleTool
-  radioChannels:
-  - Engineering
-  - !Remove Science
+  # Nebula start
+  # radioChannels:
+  # - Engineering
+  # - !Remove Science
+  # Nebula end
   addComponents:
   - type: ModifyKnowledgeGrant
     skills:

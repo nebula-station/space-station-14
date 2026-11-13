@@ -4,4 +4,4 @@
   id: HolopadScienceRobotics
   components:
   - type: Label
-    localizedLabel: holopad-engineering-robotics
+    localizedLabel: holopad-science-robotics # Nebula edit

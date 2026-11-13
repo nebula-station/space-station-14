@@ -32,3 +32,13 @@
   id: AltTitleResearchAssistantTrainee
   job: ResearchAssistant
   name: job-alt-name-research-assistant-trainee
+
+- type: jobAlternateTitle
+  id: AltTitleRoboticistMechatronics
+  job: Roboticist
+  name: job-alt-name-roboticist-mechatronics
+
+- type: jobAlternateTitle
+  id: AltTitleRoboticistCyborgTechnician
+  job: Roboticist
+  name: job-alt-name-roboticist-cyborg-technician

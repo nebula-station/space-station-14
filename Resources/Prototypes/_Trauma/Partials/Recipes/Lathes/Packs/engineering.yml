@@ -20,8 +20,10 @@
   - StorageBinCircuitboard
   - InteractorCircuitboard
   - CondenserMachineCircuitBoard
-  - ExosuitFabricatorMachineCircuitboard
-  - BorgChargerCircuitboard
+  # Nebula start
+  # - ExosuitFabricatorMachineCircuitboard
+  # - BorgChargerCircuitboard
+  # Nebula end
 
 ## Dynamic
 

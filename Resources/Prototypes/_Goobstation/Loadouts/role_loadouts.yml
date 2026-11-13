@@ -44,9 +44,11 @@
   groups:
   - GroupTankHarness
   - RoboticistHead
+  - ScientistNeck # Nebula edit
   - RoboticistJumpsuit
   - RoboticistBackpack
   - RoboticistOuterClothing
+  - RoboticistGloves # Nebula edit
   - RoboticistShoes
   - RoboticistPDA
   - Glasses
