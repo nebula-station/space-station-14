@@ -19,6 +19,14 @@ public sealed partial class ShopVendorSystem : SharedShopVendorSystem
         UpdateAppearance(ent);
     }
 
+    // Nebula start
+    [SubscribeLocalEvent]
+    private void OnStartup(Entity<ShopVendorComponent> ent, ref ComponentStartup args)
+    {
+        UpdateAppearance(ent);
+    }
+    // Nebula end
+
     [SubscribeLocalEvent]
     private void OnAutoHandleState(Entity<ShopVendorComponent> ent, ref AfterAutoHandleStateEvent args)
     {
