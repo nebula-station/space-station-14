@@ -29,6 +29,7 @@
   - type: SetSelector
     possibleSets:
     - BSOHardsuitLightSet
+    - BSOModsuitSet # Nebula edit
     maxSelectedSets: 1
 
 - type: entity
