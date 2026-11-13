@@ -22,8 +22,6 @@ public sealed partial class NebulaVotePopup : Control
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IVoteManager _voteManager = default!;
 
-    private const int MaxColumns = 3;
-
     private readonly VoteManager.ActiveVote _vote;
     private readonly Label _caller;
     private readonly Label _title;
@@ -99,11 +97,10 @@ public sealed partial class NebulaVotePopup : Control
         _title.AddStyleClass(NebulaStyleClass.Title);
         content.AddChild(_title);
 
-        var grid = new GridContainer
+        var options = new WrapContainer
         {
-            Columns = Math.Clamp(vote.Entries.Length, 1, MaxColumns),
-            HSeparationOverride = 6,
-            VSeparationOverride = 6,
+            SeparationOverride = 6,
+            CrossSeparationOverride = 6,
         };
 
         _options = new ShapedButton[vote.Entries.Length];
@@ -112,15 +109,15 @@ public sealed partial class NebulaVotePopup : Control
         for (var i = 0; i < _options.Length; i++)
         {
             var option = i;
-            var button = new ShapedButton { HorizontalExpand = true };
+            var button = new ShapedButton();
             button.AddStyleClass(NebulaStyleClass.ButtonTonal);
             button.OnPressed += _ => _voteManager.SendCastVote(_vote.Id, option);
 
             _options[i] = button;
-            grid.AddChild(button);
+            options.AddChild(button);
         }
 
-        content.AddChild(grid);
+        content.AddChild(options);
 
         var footer = new BoxContainer
         {
