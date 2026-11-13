@@ -1,6 +1,7 @@
 using System.IO;
 using System.Linq;
 using Content.Client.Administration.UI.CustomControls;
+using Content.Shared._Nebula.Administration; // Nebula edit
 using Content.Client.Eui;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Eui;
@@ -71,8 +72,8 @@ public sealed partial class AdminLogsEui : BaseEui
             LogsControl.Search,
             LogsControl.SelectedTypes.ToHashSet(),
             null,
-            null,
-            null,
+            FocusBefore, // Nebula edit
+            FocusAfter, // Nebula edit
             LogsControl.SelectedPlayers.Count != 0,
             LogsControl.SelectedPlayers.ToArray(),
             null,
@@ -205,7 +206,7 @@ public sealed partial class AdminLogsEui : BaseEui
         }
 
         FirstState = false;
-        LogsControl.SetRoundSpinBox(s.RoundId);
+        LogsControl.SetRoundSpinBox(_adminAssistFocus?.RoundNumber ?? s.RoundId); // Nebula edit
         RequestLogs();
     }
 
@@ -241,6 +242,11 @@ public sealed partial class AdminLogsEui : BaseEui
                     LogsControl.SetTypesSelection(setLogFilter.Types, setLogFilter.InvertTypes);
 
                 break;
+            // Nebula edit start
+            case AdminAssistLogFocusMessage focus:
+                FocusAdminAssistCitation(focus);
+                break;
+            // Nebula edit end
         }
     }
 

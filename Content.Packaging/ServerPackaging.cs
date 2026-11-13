@@ -204,6 +204,8 @@ public static class ServerPackaging
             inputPassCore.InjectFileFromDisk("Content.Client.zip", Path.Combine("release", "SS14.Client.zip"));
         }
 
+        await AdminAssistPackaging.WriteSidecar(platform.Rid, inputPassCore, cancel); // Nebula edit
+
         inputPassCore.InjectFinished();
         inputPassResources.InjectFinished();
     }

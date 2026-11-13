@@ -234,8 +234,8 @@ public sealed partial class AHelpUIController: UIController, IOnSystemChanged<Bw
             Maximized = false,
             Title = Loc.GetString("bwoink-admin-title"),
             Monitor = monitor,
-            Width = 900,
-            Height = 500
+            Width = 1100, // Nebula edit
+            Height = 700
         });
 
         helper.ClydeWindow.RequestClosed += helper.OnRequestClosed;

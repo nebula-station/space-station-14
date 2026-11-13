@@ -7,7 +7,7 @@ using static Content.Shared.Administration.Notes.AdminNoteEuiMsg;
 namespace Content.Client.Administration.UI.Notes;
 
 [UsedImplicitly]
-public sealed class AdminNotesEui : BaseEui
+public sealed partial class AdminNotesEui : BaseEui // Nebula edit
 {
     public AdminNotesEui()
     {
@@ -43,6 +43,7 @@ public sealed class AdminNotesEui : BaseEui
         Logger.Debug($"Create {s.CanCreate} Delete {s.CanDelete} Edit {s.CanEdit}");
         NoteControl.SetPermissions(s.CanCreate, s.CanDelete, s.CanEdit,
             s.CanWatchlist); // Trauma
+        AdminAssistPrefill(s); // Nebula edit
     }
 
     public override void Opened()

@@ -1,0 +1,22 @@
+# docker compose up -d --wait
+# docker compose down
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ss14
+      POSTGRES_PASSWORD: local_game
+      POSTGRES_DB: ss14
+    ports:
+      - "127.0.0.1:55432:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+    volumes:
+      - ./dev/initdb.sh:/docker-entrypoint-initdb.d/10-admin-assist.sh:ro
+      - ./ops:/aa/ops:ro
+      - ./tests/fixtures:/aa/fixtures:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U ss14 -d ss14"]
+      interval: 1s
+      timeout: 2s
+      retries: 30

@@ -1,0 +1,72 @@
+{
+  "id": "no_logs_for_claim",
+  "title": "Author blames a man in a red jumpsuit; the logs show only the author's own state changes",
+  "context": {
+    "round": {
+      "number": 2027,
+      "time": "00:36",
+      "gamemode": "traitor",
+      "player_count": 25
+    },
+    "messages": [
+      {
+        "time": "00:36:12",
+        "sender": "Zayac_pro",
+        "text": "меня убили в техах"
+      },
+      {
+        "time": "00:36:20",
+        "sender": "Zayac_pro",
+        "text": "какой-то в красном комбинезоне"
+      },
+      {
+        "time": "00:36:29",
+        "sender": "Zayac_pro",
+        "text": "ника не знаю, он подошёл сзади"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Zayac_pro",
+        "is_author": true,
+        "character": "Влад Зайцев",
+        "job": "инженер",
+        "antag": [],
+        "state": "dead"
+      }
+    ],
+    "window": [
+      "00:31:12",
+      "00:36:39"
+    ],
+    "logs": [
+      {
+        "time": "00:33:50",
+        "text": "Say from Влад Зайцев (Zayac_pro): чё-то тут темно"
+      },
+      {
+        "time": "00:34:35",
+        "text": "Влад Зайцев (Zayac_pro) state changed from Alive to Critical"
+      },
+      {
+        "time": "00:35:10",
+        "text": "Влад Зайцев (Zayac_pro) state changed from Critical to Dead"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "неясно"
+    ]
+  },
+  "review": [
+    "Briefing should say plainly that the logs name no cause and no attacker; the red jumpsuit is only a claim."
+  ]
+}

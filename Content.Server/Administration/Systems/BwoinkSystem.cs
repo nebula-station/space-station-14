@@ -790,6 +790,7 @@ namespace Content.Server.Administration.Systems
         private async void OnBwoinkInternal(BwoinkParams bwoinkParams)
         {
             _activeConversations[bwoinkParams.Message.UserId] = DateTime.Now;
+            PersistAHelpMessage(bwoinkParams); // Nebula edit
 
             var admins = GetTargetAdmins();
             var adminMsg = await FormatFullMessageForRecipient(forAdmin: true, bwoinkParams.SenderAdmin, bwoinkParams.SenderId, bwoinkParams.Message,

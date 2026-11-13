@@ -1,0 +1,61 @@
+{
+  "id": "question_execution_rule",
+  "title": "SB officer asks if he may execute a captured traitor",
+  "context": {
+    "round": {
+      "number": 2019,
+      "time": "00:52",
+      "gamemode": "traitor",
+      "player_count": 28
+    },
+    "messages": [
+      {
+        "time": "00:52:03",
+        "sender": "Okhotnik_sb",
+        "text": "вопрос по правилам"
+      },
+      {
+        "time": "00:52:15",
+        "sender": "Okhotnik_sb",
+        "text": "мы поймали предателя с пушкой, можно его казнить сразу?"
+      },
+      {
+        "time": "00:52:24",
+        "sender": "Okhotnik_sb",
+        "text": "капитана нет на связи"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Okhotnik_sb",
+        "is_author": true,
+        "character": "Артём Власов",
+        "job": "офицер СБ",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "00:47:03",
+      "00:52:34"
+    ],
+    "logs": [],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "НИЗКИЙ"
+    ],
+    "type": [
+      "вопрос"
+    ],
+    "not_contains": {
+      "Правила": [
+        "5.1"
+      ]
+    }
+  },
+  "review": [
+    "The Nebula rules have no rule on executions; the briefing must not invent one (no Правила line, or «явно применимого правила нет»). It does not decide for the officer."
+  ]
+}

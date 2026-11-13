@@ -1,0 +1,64 @@
+{
+  "id": "bare_admin_nothing",
+  "title": "Ticket is just the word 'админ'; nothing else to go on",
+  "context": {
+    "round": {
+      "number": 2011,
+      "time": "00:47",
+      "gamemode": "traitor",
+      "player_count": 24
+    },
+    "messages": [
+      {
+        "time": "00:47:10",
+        "sender": "Vasya_kot",
+        "text": "админ"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Vasya_kot",
+        "is_author": true,
+        "character": "Тимур Беляев",
+        "job": "грузчик",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "00:42:10",
+      "00:47:20"
+    ],
+    "logs": [
+      {
+        "time": "00:43:20",
+        "text": "Say from Тимур Беляев (Vasya_kot): кто-нибудь видел где ящики со склада?"
+      },
+      {
+        "time": "00:45:02",
+        "text": "Say from Тимур Беляев (Vasya_kot): ладно сам найду"
+      },
+      {
+        "time": "00:46:15",
+        "text": "Emote from Тимур Беляев (Vasya_kot): пожимает плечами"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ",
+      "НИЗКИЙ"
+    ],
+    "type": [
+      "другое"
+    ],
+    "assessment": [
+      "неясно"
+    ]
+  },
+  "review": [
+    "Briefing should say the player is waiting and the problem is not described; no invented grievance.",
+    "Суть must say the problem is not described (any wording)."
+  ]
+}

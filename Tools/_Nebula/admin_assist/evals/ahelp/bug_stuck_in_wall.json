@@ -1,0 +1,66 @@
+{
+  "id": "bug_stuck_in_wall",
+  "title": "Player stuck inside a wall after shuttle docking",
+  "context": {
+    "round": {
+      "number": 2017,
+      "time": "03:02",
+      "gamemode": "traitor",
+      "player_count": 33
+    },
+    "messages": [
+      {
+        "time": "03:02:15",
+        "sender": "Zhuk_228",
+        "text": "я застрял в стене после того как шаттл пристыковался"
+      },
+      {
+        "time": "03:02:24",
+        "sender": "Zhuk_228",
+        "text": "не могу двигаться, вытащите плиз"
+      },
+      {
+        "time": "03:02:30",
+        "sender": "Zhuk_228",
+        "text": "мостик у стыковочного шлюза"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Zhuk_228",
+        "is_author": true,
+        "character": "Павел Жуков",
+        "job": "инженер",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "02:57:15",
+      "03:02:40"
+    ],
+    "logs": [
+      {
+        "time": "03:00:40",
+        "text": "Say from Павел Жуков (Zhuk_228): шаттл подходит к стыковке"
+      },
+      {
+        "time": "03:01:55",
+        "text": "Say from Павел Жуков (Zhuk_228): эээ что за дела я в стене"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ",
+      "НИЗКИЙ"
+    ],
+    "type": [
+      "баг"
+    ]
+  },
+  "review": [
+    "Short layout only; no Оценка."
+  ]
+}

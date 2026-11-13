@@ -1,0 +1,137 @@
+{
+  "id": "fragmented_emotional",
+  "title": "Angry fragmented ticket from a captain with an admin reply in the middle",
+  "context": {
+    "round": {
+      "number": 2030,
+      "time": "01:33",
+      "gamemode": "traitor",
+      "player_count": 31
+    },
+    "messages": [
+      {
+        "time": "01:33:01",
+        "sender": "Kapitan_Bob",
+        "text": "админ!!"
+      },
+      {
+        "time": "01:33:05",
+        "sender": "Kapitan_Bob",
+        "text": "клоун опять"
+      },
+      {
+        "time": "01:33:09",
+        "sender": "Kapitan_Bob",
+        "text": "я каптан а он мне подножки"
+      },
+      {
+        "time": "01:33:14",
+        "sender": "Kapitan_Bob",
+        "text": "пол мне разлил и сваливает"
+      },
+      {
+        "time": "01:33:22",
+        "sender": "SomeAdmin",
+        "text": "смотрю, что случилось?",
+        "is_admin": true
+      },
+      {
+        "time": "01:33:30",
+        "sender": "Kapitan_Bob",
+        "text": "он мой ай ди украл пока я лежал"
+      },
+      {
+        "time": "01:33:35",
+        "sender": "Kapitan_Bob",
+        "text": "ну я его пристрелил канеш"
+      },
+      {
+        "time": "01:33:41",
+        "sender": "Kapitan_Bob",
+        "text": "он первый начал"
+      },
+      {
+        "time": "01:33:47",
+        "sender": "Kapitan_Bob",
+        "text": "накажите этого шута"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Kapitan_Bob",
+        "is_author": true,
+        "character": "Роберт Хейз",
+        "job": "капитан",
+        "antag": [],
+        "state": "alive"
+      },
+      {
+        "username": "Pirozhok",
+        "is_author": false,
+        "character": "Тото Пирожков",
+        "job": "клоун",
+        "antag": [],
+        "state": "crit"
+      }
+    ],
+    "window": [
+      "01:28:01",
+      "01:33:57"
+    ],
+    "logs": [
+      {
+        "time": "01:29:15",
+        "text": "Say from Тото Пирожков (Pirozhok): хонк! кэп, поскользнись!"
+      },
+      {
+        "time": "01:29:50",
+        "text": "Тото Пирожков (Pirozhok) used disarm on Роберт Хейз (Kapitan_Bob)"
+      },
+      {
+        "time": "01:30:20",
+        "text": "Тото Пирожков (Pirozhok) used disarm on Роберт Хейз (Kapitan_Bob)"
+      },
+      {
+        "time": "01:30:45",
+        "text": "Say from Роберт Хейз (Kapitan_Bob): клоун, ещё раз и я стреляю"
+      },
+      {
+        "time": "01:31:10",
+        "text": "Тото Пирожков (Pirozhok) used disarm on Роберт Хейз (Kapitan_Bob)"
+      },
+      {
+        "time": "01:32:25",
+        "text": "Projectile пуля (.45) shot by Роберт Хейз (Kapitan_Bob) hit Тото Пирожков (Pirozhok) and dealt 30 damage"
+      },
+      {
+        "time": "01:32:26",
+        "text": "Роберт Хейз (Kapitan_Bob) caused Тото Пирожков (Pirozhok) state to change from Alive to Critical"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "неясно",
+      "скорее валидно",
+      "скорее нарушение"
+    ],
+    "cite_any": [
+      "L2",
+      "L3",
+      "L5",
+      "L6",
+      "L7"
+    ]
+  },
+  "review": [
+    "The ID theft has no log line; the briefing should present it as a claim only.",
+    "Proportionality of the shot is the open question; the admin's reply is not evidence."
+  ]
+}

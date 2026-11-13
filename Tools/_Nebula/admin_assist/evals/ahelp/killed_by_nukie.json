@@ -1,0 +1,95 @@
+{
+  "id": "killed_by_nukie",
+  "title": "Author calls a nuclear operative kill RDM",
+  "context": {
+    "round": {
+      "number": 2023,
+      "time": "01:15",
+      "gamemode": "nukeops",
+      "player_count": 40
+    },
+    "messages": [
+      {
+        "time": "01:15:00",
+        "sender": "Kolbaska_",
+        "text": "рдм"
+      },
+      {
+        "time": "01:15:06",
+        "sender": "Kolbaska_",
+        "text": "меня убил какой-то в красном скафандре возле эвак шаттла"
+      },
+      {
+        "time": "01:15:14",
+        "sender": "Kolbaska_",
+        "text": "я просто стоял ничего не делал, это рдм же"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Kolbaska_",
+        "is_author": true,
+        "character": "Игорь Шаров",
+        "job": "ассистент",
+        "antag": [],
+        "state": "dead"
+      },
+      {
+        "username": "Red_Fox_77",
+        "is_author": false,
+        "character": "Вадим Корсак",
+        "job": "оперативник",
+        "antag": [
+          "Ядерный оперативник"
+        ],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "01:10:00",
+      "01:15:24"
+    ],
+    "logs": [
+      {
+        "time": "01:11:40",
+        "text": "Say from Игорь Шаров (Kolbaska_): а когда эвак?"
+      },
+      {
+        "time": "01:12:50",
+        "text": "Projectile пуля (.50) shot by Вадим Корсак (Red_Fox_77) hit Игорь Шаров (Kolbaska_) and dealt 28 damage"
+      },
+      {
+        "time": "01:12:51",
+        "text": "Projectile пуля (.50) shot by Вадим Корсак (Red_Fox_77) hit Игорь Шаров (Kolbaska_) and dealt 28 damage"
+      },
+      {
+        "time": "01:12:52",
+        "text": "Вадим Корсак (Red_Fox_77) caused Игорь Шаров (Kolbaska_) state to change from Alive to Critical"
+      },
+      {
+        "time": "01:12:57",
+        "text": "Projectile пуля (.50) shot by Вадим Корсак (Red_Fox_77) hit Игорь Шаров (Kolbaska_) and dealt 28 damage"
+      },
+      {
+        "time": "01:12:58",
+        "text": "Вадим Корсак (Red_Fox_77) caused Игорь Шаров (Kolbaska_) state to change from Critical to Dead"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "НИЗКИЙ",
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "скорее валидно"
+    ]
+  },
+  "review": [
+    "Mode is nukeops and the shooter is a nuclear operative, so the kill is expected antag behaviour."
+  ]
+}

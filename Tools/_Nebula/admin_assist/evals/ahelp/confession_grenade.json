@@ -1,0 +1,99 @@
+{
+  "id": "confession_grenade",
+  "title": "Player admits blowing up a coworker while testing a grenade in the research lab",
+  "context": {
+    "round": {
+      "number": 2025,
+      "time": "01:27",
+      "gamemode": "traitor",
+      "player_count": 30
+    },
+    "messages": [
+      {
+        "time": "01:27:05",
+        "sender": "Kefirchik",
+        "text": "админ, хочу признаться"
+      },
+      {
+        "time": "01:27:14",
+        "sender": "Kefirchik",
+        "text": "я в научке тестила гранату и случайно подорвала Mura_Mur"
+      },
+      {
+        "time": "01:27:22",
+        "sender": "Kefirchik",
+        "text": "он в крите, я позвала медика"
+      },
+      {
+        "time": "01:27:30",
+        "sender": "Kefirchik",
+        "text": "это случайно, готова отвечать"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Kefirchik",
+        "is_author": true,
+        "character": "Эльза Рихтер",
+        "job": "учёный",
+        "antag": [],
+        "state": "alive"
+      },
+      {
+        "username": "Mura_Mur",
+        "is_author": false,
+        "character": "Антон Шпак",
+        "job": "учёный",
+        "antag": [],
+        "state": "crit"
+      }
+    ],
+    "window": [
+      "01:22:05",
+      "01:27:40"
+    ],
+    "logs": [
+      {
+        "time": "01:23:40",
+        "text": "Say from Эльза Рихтер (Kefirchik): сейчас проверим эту штуку"
+      },
+      {
+        "time": "01:24:30",
+        "text": "Эльза Рихтер (Kefirchik) caused граната to explode (Default) at Pos:(12.5, -3.5) with intensity 40 slope 5"
+      },
+      {
+        "time": "01:24:31",
+        "text": "Эльза Рихтер (Kefirchik) caused Антон Шпак (Mura_Mur) state to change from Alive to Critical"
+      },
+      {
+        "time": "01:24:50",
+        "text": "Say from Эльза Рихтер (Kefirchik): МЕДИКА В РНД СРОЧНО!"
+      },
+      {
+        "time": "01:25:20",
+        "text": "Say from Эльза Рихтер (Kefirchik): держись, медик идёт"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ",
+      "НИЗКИЙ"
+    ],
+    "type": [
+      "признание"
+    ],
+    "assessment": [
+      "неясно",
+      "скорее валидно"
+    ],
+    "cite_any": [
+      "L2",
+      "L3"
+    ]
+  },
+  "review": [
+    "The briefing should not recommend a punishment; the log supports the claim that Kefirchik caused the explosion."
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "consent_complaint",
+  "title": "ERP interactions continue after the author said no",
+  "context": {
+    "round": {
+      "number": 2021,
+      "time": "01:50",
+      "gamemode": "traitor",
+      "player_count": 34
+    },
+    "messages": [
+      {
+        "time": "01:50:05",
+        "sender": "Lisichka_",
+        "text": "админ"
+      },
+      {
+        "time": "01:50:12",
+        "sender": "Lisichka_",
+        "text": "Barsik_Bro постоянно тыкает эрп действия на моём персонаже"
+      },
+      {
+        "time": "01:50:20",
+        "sender": "Lisichka_",
+        "text": "я сказала нет в лууке а он дальше"
+      },
+      {
+        "time": "01:50:28",
+        "sender": "Lisichka_",
+        "text": "пожалуйста уберите его от меня"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Lisichka_",
+        "is_author": true,
+        "character": "Яна Мороз",
+        "job": "уборщик",
+        "antag": [],
+        "state": "alive"
+      },
+      {
+        "username": "Barsik_Bro",
+        "is_author": false,
+        "character": "Глеб Рябов",
+        "job": "бармен",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "01:45:05",
+      "01:50:38"
+    ],
+    "logs": [
+      {
+        "time": "01:46:10",
+        "text": "Глеб Рябов (Barsik_Bro) used an ERP panel interaction (Kiss, public) on Яна Мороз (Lisichka_), target ERP status: No"
+      },
+      {
+        "time": "01:46:50",
+        "text": "Глеб Рябов (Barsik_Bro) used an ERP panel interaction (Hug, public) on Яна Мороз (Lisichka_), target ERP status: No"
+      },
+      {
+        "time": "01:47:30",
+        "text": "LOOC from Яна Мороз (Lisichka_): не надо, мне это не нравится, прекрати"
+      },
+      {
+        "time": "01:47:58",
+        "text": "Глеб Рябов (Barsik_Bro) used an ERP panel interaction (Kiss, private) on Яна Мороз (Lisichka_), target ERP status: No"
+      },
+      {
+        "time": "01:48:20",
+        "text": "Глеб Рябов (Barsik_Bro) used an ERP panel interaction (Hug, private) on Яна Мороз (Lisichka_), target ERP status: No"
+      },
+      {
+        "time": "01:48:44",
+        "text": "Private ERP emote from Глеб Рябов (Barsik_Bro): (текст скрыт)"
+      },
+      {
+        "time": "01:49:05",
+        "text": "LOOC from Яна Мороз (Lisichka_): я же просила, хватит"
+      },
+      {
+        "time": "01:49:30",
+        "text": "Глеб Рябов (Barsik_Bro) used an ERP panel interaction (Kiss, private) on Яна Мороз (Lisichka_), target ERP status: No"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ВЫСОКИЙ",
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "скорее нарушение"
+    ],
+    "cite_any": [
+      "L4",
+      "L5",
+      "L6",
+      "L8"
+    ],
+    "contains": {
+      "Правила": [
+        "6"
+      ]
+    }
+  },
+  "review": [
+    "Briefing must stay neutral and metadata-only; no explicit wording.",
+    "Раздел 6 (ERP) is the closest fit: «Изнасилования только по обоюдному согласию», «Помеха ERP запрещена». The interactions continued after the LOOC refusal [L3]."
+  ]
+}

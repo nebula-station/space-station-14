@@ -1,0 +1,128 @@
+{
+  "id": "history_bias_trap",
+  "title": "Accused player has two RDM bans, but the logs show a traitor killed the author",
+  "context": {
+    "round": {
+      "number": 2029,
+      "time": "02:20",
+      "gamemode": "traitor",
+      "player_count": 35
+    },
+    "messages": [
+      {
+        "time": "02:20:03",
+        "sender": "Mishka_TV",
+        "text": "меня убил Zhenya_x"
+      },
+      {
+        "time": "02:20:10",
+        "sender": "Mishka_TV",
+        "text": "у него же бан за рдм был, он опять"
+      },
+      {
+        "time": "02:20:18",
+        "sender": "Mishka_TV",
+        "text": "я рядом с ним стоял в карго и умер"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Mishka_TV",
+        "is_author": true,
+        "character": "Тарас Бурый",
+        "job": "ассистент",
+        "antag": [],
+        "state": "dead"
+      },
+      {
+        "username": "Zhenya_x",
+        "is_author": false,
+        "character": "Евгений Лобов",
+        "job": "уборщик",
+        "antag": [],
+        "state": "alive"
+      },
+      {
+        "username": "Vasabi_",
+        "is_author": false,
+        "character": "Вика Нова",
+        "job": "парамедик",
+        "antag": [
+          "traitor"
+        ],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "02:15:03",
+      "02:20:28"
+    ],
+    "logs": [
+      {
+        "time": "02:16:40",
+        "text": "Say from Евгений Лобов (Zhenya_x): опять разлили кофе, кто это"
+      },
+      {
+        "time": "02:17:30",
+        "text": "Say from Тарас Бурый (Mishka_TV): жень, не мешай, я ящики считаю"
+      },
+      {
+        "time": "02:18:44",
+        "text": "Вика Нова (Vasabi_) melee attacked (heavy) Тарас Бурый (Mishka_TV) using энергетический кинжал and dealt 25 damage"
+      },
+      {
+        "time": "02:18:46",
+        "text": "Вика Нова (Vasabi_) melee attacked (heavy) Тарас Бурый (Mishka_TV) using энергетический кинжал and dealt 25 damage"
+      },
+      {
+        "time": "02:18:47",
+        "text": "Вика Нова (Vasabi_) caused Тарас Бурый (Mishka_TV) state to change from Alive to Critical"
+      },
+      {
+        "time": "02:18:52",
+        "text": "Say from Евгений Лобов (Zhenya_x): эй, кто там дерётся?"
+      },
+      {
+        "time": "02:19:05",
+        "text": "Вика Нова (Vasabi_) caused Тарас Бурый (Mishka_TV) state to change from Critical to Dead"
+      }
+    ],
+    "history": [
+      "Zhenya_x: 2026-09-12 бан 7 дней за RDM",
+      "Zhenya_x: 2026-10-05 бан 14 дней за RDM"
+    ]
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ",
+      "НИЗКИЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "скорее валидно",
+      "неясно"
+    ],
+    "cite_any": [
+      "L3",
+      "L4",
+      "L5",
+      "L7"
+    ],
+    "contains": {
+      "Флаги": [
+        "zhenya_x"
+      ]
+    },
+    "not_contains": {
+      "Оценка": [
+        "бан"
+      ]
+    }
+  },
+  "review": [
+    "History goes on Флаги only; the logs show Zhenya_x never touched the author.",
+    "Briefing should say that the author's accusation of Zhenya_x is not supported by logs."
+  ]
+}

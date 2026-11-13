@@ -1,0 +1,102 @@
+{
+  "id": "bare_help_under_attack",
+  "title": "Two-word panic ticket while logs show the author being beaten right now",
+  "context": {
+    "round": {
+      "number": 2012,
+      "time": "02:14",
+      "gamemode": "traitor",
+      "player_count": 27
+    },
+    "messages": [
+      {
+        "time": "02:14:30",
+        "sender": "tapok_77",
+        "text": "помогите"
+      },
+      {
+        "time": "02:14:34",
+        "sender": "tapok_77",
+        "text": "срочно"
+      }
+    ],
+    "participants": [
+      {
+        "username": "tapok_77",
+        "is_author": true,
+        "character": "Денис Орлов",
+        "job": "ассистент",
+        "antag": [],
+        "state": "crit"
+      },
+      {
+        "username": "Gnilushka",
+        "is_author": false,
+        "character": "Маша Рыжова",
+        "job": "ассистент",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "02:09:30",
+      "02:14:44"
+    ],
+    "logs": [
+      {
+        "time": "02:12:40",
+        "text": "Say from Маша Рыжова (Gnilushka): отдай перчатки!"
+      },
+      {
+        "time": "02:12:47",
+        "text": "Say from Денис Орлов (tapok_77): не отдам, отстань"
+      },
+      {
+        "time": "02:14:02",
+        "text": "Маша Рыжова (Gnilushka) melee attacked (heavy) Денис Орлов (tapok_77) using ящик с инструментами and dealt 14 damage"
+      },
+      {
+        "time": "02:14:08",
+        "text": "Маша Рыжова (Gnilushka) melee attacked (heavy) Денис Орлов (tapok_77) using ящик с инструментами and dealt 14 damage"
+      },
+      {
+        "time": "02:14:15",
+        "text": "Маша Рыжова (Gnilushka) melee attacked (heavy) Денис Орлов (tapok_77) using ящик с инструментами and dealt 14 damage"
+      },
+      {
+        "time": "02:14:16",
+        "text": "Маша Рыжова (Gnilushka) caused Денис Орлов (tapok_77) state to change from Alive to Critical"
+      },
+      {
+        "time": "02:14:24",
+        "text": "Маша Рыжова (Gnilushka) melee attacked (heavy) Денис Орлов (tapok_77) using ящик с инструментами and dealt 14 damage"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ВЫСОКИЙ",
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "жалоба",
+      "другое"
+    ],
+    "assessment": [
+      "скорее нарушение",
+      "неясно"
+    ],
+    "cite_any": [
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7"
+    ]
+  },
+  "review": [
+    "Briefing should notice the author is in crit and being attacked right now, and that Gnilushka is not an antag.",
+    "Ideally ВЫСОКИЙ."
+  ]
+}

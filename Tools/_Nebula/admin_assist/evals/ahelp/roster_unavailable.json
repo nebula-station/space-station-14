@@ -1,0 +1,94 @@
+{
+  "id": "roster_unavailable",
+  "title": "Round state endpoint failed: antag, job and state unknown for both players",
+  "context": {
+    "round": {
+      "number": 2031,
+      "time": "01:19",
+      "gamemode": null,
+      "player_count": null
+    },
+    "messages": [
+      {
+        "time": "01:19:20",
+        "sender": "Dymok_11",
+        "text": "меня убили просто так"
+      },
+      {
+        "time": "01:19:28",
+        "sender": "Dymok_11",
+        "text": "Starlord_x выстрелил из ничего"
+      },
+      {
+        "time": "01:19:36",
+        "sender": "Dymok_11",
+        "text": "мы вообще не общались"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Dymok_11",
+        "is_author": true,
+        "character": "Аня Дымова",
+        "job": null,
+        "antag": null,
+        "state": null
+      },
+      {
+        "username": "Starlord_x",
+        "is_author": false,
+        "character": "Олег Старков",
+        "job": null,
+        "antag": null,
+        "state": null
+      }
+    ],
+    "window": [
+      "01:14:20",
+      "01:19:46"
+    ],
+    "logs": [
+      {
+        "time": "01:15:30",
+        "text": "Say from Аня Дымова (Dymok_11): пойду проверю щитовую"
+      },
+      {
+        "time": "01:17:12",
+        "text": "Projectile пуля (9mm) shot by Олег Старков (Starlord_x) hit Аня Дымова (Dymok_11) and dealt 20 damage"
+      },
+      {
+        "time": "01:17:14",
+        "text": "Projectile пуля (9mm) shot by Олег Старков (Starlord_x) hit Аня Дымова (Dymok_11) and dealt 20 damage"
+      },
+      {
+        "time": "01:17:16",
+        "text": "Олег Старков (Starlord_x) caused Аня Дымова (Dymok_11) state to change from Alive to Critical"
+      },
+      {
+        "time": "01:17:30",
+        "text": "Олег Старков (Starlord_x) caused Аня Дымова (Dymok_11) state to change from Critical to Dead"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "неясно",
+      "скорее нарушение"
+    ],
+    "contains": {
+      "Проверить": [
+        "антаг"
+      ]
+    }
+  },
+  "review": [
+    "Antag status of Starlord_x is unknown; the briefing must say so rather than guess."
+  ]
+}
