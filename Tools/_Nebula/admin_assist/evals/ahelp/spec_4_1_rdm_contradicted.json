@@ -1,0 +1,151 @@
+{
+  "id": "spec_4_1_rdm_contradicted",
+  "title": "Spec 4.1: RDM complaint the logs contradict",
+  "nonce": "7f3a",
+  "context": {
+    "round": {
+      "number": 1847,
+      "time": "01:11",
+      "gamemode": "traitor",
+      "player_count": 31
+    },
+    "messages": [
+      {
+        "time": "01:10:41",
+        "sender": "pelmen_enjoyer",
+        "text": "админ"
+      },
+      {
+        "time": "01:10:44",
+        "sender": "pelmen_enjoyer",
+        "text": "меня рдмнули"
+      },
+      {
+        "time": "01:10:49",
+        "sender": "pelmen_enjoyer",
+        "text": "бармен просто подошла и начала бить я даже ничего не делал"
+      },
+      {
+        "time": "01:10:53",
+        "sender": "pelmen_enjoyer",
+        "text": "стоял в баре заказывал выпить и она с дробовика в упор"
+      },
+      {
+        "time": "01:10:55",
+        "sender": "pelmen_enjoyer",
+        "text": "ник Алина Штерн вроде"
+      }
+    ],
+    "participants": [
+      {
+        "username": "pelmen_enjoyer",
+        "is_author": true,
+        "character": "Гриша Ковалёв",
+        "job": "ботаник",
+        "antag": [],
+        "state": "dead"
+      },
+      {
+        "username": "Morozko",
+        "is_author": false,
+        "character": "Алина Штерн",
+        "job": "бармен",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "01:07:30",
+      "01:11:05"
+    ],
+    "logs": [
+      {
+        "time": "01:07:52",
+        "text": "pelmen_enjoyer (Гриша Ковалёв) said \"налей бесплатно, я ботаник, мы тебе травку растим\""
+      },
+      {
+        "time": "01:09:03",
+        "text": "Morozko (Алина Штерн) said \"денег нет — вали из бара\""
+      },
+      {
+        "time": "01:09:21",
+        "text": "pelmen_enjoyer (Гриша Ковалёв) hit Morozko (Алина Штерн) with fists for 5 Blunt"
+      },
+      {
+        "time": "01:09:23",
+        "text": "pelmen_enjoyer (Гриша Ковалёв) hit Morozko (Алина Штерн) with fists for 5 Blunt"
+      },
+      {
+        "time": "01:09:26",
+        "text": "Morozko (Алина Штерн) said \"ещё раз тронешь — стреляю\""
+      },
+      {
+        "time": "01:09:41",
+        "text": "pelmen_enjoyer (Гриша Ковалёв) threw Бутылка пива at Morozko (Алина Штерн), hit for 8 Blunt"
+      },
+      {
+        "time": "01:09:44",
+        "text": "Morozko (Алина Штерн) shot pelmen_enjoyer (Гриша Ковалёв) with Двустволка for 54 Piercing"
+      },
+      {
+        "time": "01:09:45",
+        "text": "pelmen_enjoyer (Гриша Ковалёв) is now Critical"
+      },
+      {
+        "time": "01:09:49",
+        "text": "Morozko (Алина Штерн) shot pelmen_enjoyer (Гриша Ковалёв) with Двустволка for 54 Piercing"
+      },
+      {
+        "time": "01:09:49",
+        "text": "pelmen_enjoyer (Гриша Ковалёв) is now Dead"
+      }
+    ],
+    "history": [
+      "pelmen_enjoyer: 2026-10-28 заметка \"грубил в ООК\"",
+      "pelmen_enjoyer: тот же HWID, что у kvas_lover (2026-09-30 бан 7 дней за RDM)",
+      "Morozko: 2026-10-19 устное предупреждение \"добила игрока в крите после драки\""
+    ]
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "скорее валидно",
+      "неясно"
+    ],
+    "cite_all": [
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L9"
+    ],
+    "contains": {
+      "Расхождения": [
+        "ничего не делал"
+      ],
+      "Флаги": [
+        "kvas_lover"
+      ]
+    },
+    "not_contains": {
+      "Оценка": [
+        "hwid",
+        "kvas_lover",
+        "бан"
+      ],
+      "Правила": [
+        "3.4"
+      ]
+    }
+  },
+  "review": [
+    "Логи shows the author attacking first and continuing after the warning.",
+    "Оценка does not call Morozko's response RDM. The Nebula rules have no rule on finishing off a player in crit; the second shot [L9] may be raised under 1.1 at most. Citing 3.4 (Правдоподобные персонажи) is wrong.",
+    "Both history items are on Флаги and do not drive Оценка."
+  ]
+}

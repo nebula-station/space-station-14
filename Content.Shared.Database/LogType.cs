@@ -533,4 +533,8 @@ public enum LogType
     /// Trauma - ChemiCompiler related logs.
     /// </summary>
     ChemiCompiler = 20005,
+
+    Erp = 30001,
+
+    AdminFollow = 30002,
 }

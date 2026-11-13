@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Orientation="Vertical"
     HorizontalExpand="True">
+    <BoxContainer Name="AdminAssistArea" Access="Public" Orientation="Vertical" /> <!-- Nebula edit -->
     <OutputPanel Name="TextOutput" VerticalExpand="true" />
     <RichTextLabel Name="TypingIndicator" Access="Public" />
     <HistoryLineEdit Name="SenderLineEdit" />

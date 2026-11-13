@@ -54,6 +54,9 @@ namespace Content.Server.Database
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
         public DbSet<CustomVoteLog> CustomVoteLog { get; set; } = null!;
         public DbSet<CustomVoteLogOption> CustomVoteLogOption { get; set; } = null!;
+        public DbSet<AHelpMessage> AHelpMessage { get; set; } = null!; // Nebula edit
+        public DbSet<AHelpBriefingVote> AHelpBriefingVote { get; set; } = null!; // Nebula edit
+        public DbSet<AHelpTicketRequest> AHelpTicketRequest { get; set; } = null!; // Nebula edit
 
         // <Trauma>
         public DbSet<RMCDiscordAccount> RMCDiscordAccounts { get; set; } = default!;

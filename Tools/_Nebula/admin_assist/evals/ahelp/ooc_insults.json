@@ -1,0 +1,104 @@
+{
+  "id": "ooc_insults",
+  "title": "Author complains of insults in OOC",
+  "context": {
+    "round": {
+      "number": 2032,
+      "time": "02:44",
+      "gamemode": "traitor",
+      "player_count": 30
+    },
+    "messages": [
+      {
+        "time": "02:44:10",
+        "sender": "Tetya_Mila",
+        "text": "этот Vitek_Gigant меня оскорбляет в оок"
+      },
+      {
+        "time": "02:44:19",
+        "sender": "Tetya_Mila",
+        "text": "я просила прекратить а он дальше"
+      },
+      {
+        "time": "02:44:27",
+        "sender": "Tetya_Mila",
+        "text": "сделайте с ним что нибудь"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Tetya_Mila",
+        "is_author": true,
+        "character": "Людмила Орлова",
+        "job": "ассистент",
+        "antag": [],
+        "state": "alive"
+      },
+      {
+        "username": "Vitek_Gigant",
+        "is_author": false,
+        "character": "Виктор Гигантов",
+        "job": "грузчик",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "02:39:10",
+      "02:44:37"
+    ],
+    "logs": [
+      {
+        "time": "02:40:20",
+        "text": "OOC from Vitek_Gigant: Tetya_Mila ты вообще играть не умеешь, тупая"
+      },
+      {
+        "time": "02:41:05",
+        "text": "OOC from Tetya_Mila: следи за словами пожалуйста"
+      },
+      {
+        "time": "02:41:30",
+        "text": "OOC from Vitek_Gigant: Tetya_Mila иди учись, нубина"
+      },
+      {
+        "time": "02:42:15",
+        "text": "OOC from Tetya_Mila: прекрати, это оскорбления"
+      },
+      {
+        "time": "02:42:40",
+        "text": "OOC from Vitek_Gigant: Tetya_Mila а ты жалуйся, лузер"
+      },
+      {
+        "time": "02:43:20",
+        "text": "OOC from Vitek_Gigant: Tetya_Mila позор сервера, всё равно"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "скорее нарушение"
+    ],
+    "cite_any": [
+      "L1",
+      "L3",
+      "L5",
+      "L6"
+    ],
+    "contains": {
+      "Правила": [
+        "3.5"
+      ]
+    }
+  },
+  "review": [
+    "Insults are mild but directed; the briefing should not recommend a punishment.",
+    "Rule 3.5: «Оскорбления в LOOC и OOC чатах считаются мета-хейтом»."
+  ]
+}

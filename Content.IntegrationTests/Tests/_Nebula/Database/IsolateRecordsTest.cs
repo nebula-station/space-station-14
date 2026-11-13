@@ -18,10 +18,12 @@ namespace Content.IntegrationTests.Tests._Nebula.Database;
 [TestFixture]
 public sealed class IsolateRecordsTest : GameTest
 {
+    // Баны этого теста остаются в базе пары, а Dirty базу не чистит: пару нельзя отдавать дальше (иначе падает PardonTest).
     public override PoolSettings PoolSettings => new()
     {
         Connected = false,
         Dirty = true,
+        Destructive = true,
     };
 
     [Test]

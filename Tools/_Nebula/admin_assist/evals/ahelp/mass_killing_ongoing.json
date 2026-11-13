@@ -1,0 +1,143 @@
+{
+  "id": "mass_killing_ongoing",
+  "title": "Non-antag engineer is killing several players in the bar right now",
+  "context": {
+    "round": {
+      "number": 2022,
+      "time": "02:31",
+      "gamemode": "traitor",
+      "player_count": 36
+    },
+    "messages": [
+      {
+        "time": "02:31:40",
+        "sender": "tihiy_omut",
+        "text": "АДМИН СРОЧНО"
+      },
+      {
+        "time": "02:31:46",
+        "sender": "tihiy_omut",
+        "text": "инженер Gaika_Key убивает людей в баре"
+      },
+      {
+        "time": "02:31:52",
+        "sender": "tihiy_omut",
+        "text": "я прячусь за стойкой он уже троих"
+      },
+      {
+        "time": "02:31:58",
+        "sender": "tihiy_omut",
+        "text": "он продолжает"
+      }
+    ],
+    "participants": [
+      {
+        "username": "tihiy_omut",
+        "is_author": true,
+        "character": "Нина Седых",
+        "job": "учёный",
+        "antag": [],
+        "state": "alive"
+      },
+      {
+        "username": "Gaika_Key",
+        "is_author": false,
+        "character": "Руслан Гайкин",
+        "job": "инженер",
+        "antag": [],
+        "state": "alive"
+      },
+      {
+        "username": "Cherepashka",
+        "is_author": false,
+        "character": "Лиза Бор",
+        "job": "ассистент",
+        "antag": [],
+        "state": "dead"
+      }
+    ],
+    "window": [
+      "02:26:40",
+      "02:32:08"
+    ],
+    "logs": [
+      {
+        "time": "02:29:20",
+        "text": "Say from Руслан Гайкин (Gaika_Key): всем лежать"
+      },
+      {
+        "time": "02:29:35",
+        "text": "Руслан Гайкин (Gaika_Key) melee attacked (heavy) Лиза Бор (Cherepashka) using монтировка and dealt 12 damage"
+      },
+      {
+        "time": "02:29:38",
+        "text": "Руслан Гайкин (Gaika_Key) melee attacked (heavy) Лиза Бор (Cherepashka) using монтировка and dealt 12 damage"
+      },
+      {
+        "time": "02:29:40",
+        "text": "Руслан Гайкин (Gaika_Key) caused Лиза Бор (Cherepashka) state to change from Alive to Critical"
+      },
+      {
+        "time": "02:29:52",
+        "text": "Руслан Гайкин (Gaika_Key) caused Лиза Бор (Cherepashka) state to change from Critical to Dead"
+      },
+      {
+        "time": "02:30:15",
+        "text": "Руслан Гайкин (Gaika_Key) melee attacked (heavy) Фёдор Голубев (Mr_Pigeon) using монтировка and dealt 12 damage"
+      },
+      {
+        "time": "02:30:18",
+        "text": "Руслан Гайкин (Gaika_Key) caused Фёдор Голубев (Mr_Pigeon) state to change from Alive to Critical"
+      },
+      {
+        "time": "02:30:30",
+        "text": "Руслан Гайкин (Gaika_Key) caused Фёдор Голубев (Mr_Pigeon) state to change from Critical to Dead"
+      },
+      {
+        "time": "02:31:02",
+        "text": "Руслан Гайкин (Gaika_Key) melee attacked (heavy) Ева Кремень (Lampochka) using монтировка and dealt 12 damage"
+      },
+      {
+        "time": "02:31:05",
+        "text": "Руслан Гайкин (Gaika_Key) caused Ева Кремень (Lampochka) state to change from Alive to Critical"
+      },
+      {
+        "time": "02:31:20",
+        "text": "Руслан Гайкин (Gaika_Key) caused Ева Кремень (Lampochka) state to change from Critical to Dead"
+      },
+      {
+        "time": "02:31:30",
+        "text": "Say from Руслан Гайкин (Gaika_Key): кто следующий?"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ВЫСОКИЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "скорее нарушение"
+    ],
+    "cite_any": [
+      "L2",
+      "L3",
+      "L5",
+      "L6",
+      "L9",
+      "L10"
+    ],
+    "contains": {
+      "Правила": [
+        "1."
+      ]
+    }
+  },
+  "review": [
+    "Briefing should mention three different victims and that Gaika_Key is not an antag.",
+    "Rule 1.2 (Массовый гриф: «массовые убийства») fits, or 1.1; Раздел 5 is for antags only."
+  ]
+}

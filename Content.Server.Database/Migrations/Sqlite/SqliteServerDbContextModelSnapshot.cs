@@ -17,6 +17,140 @@ namespace Content.Server.Database.Migrations.Sqlite
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.6");
 
+            modelBuilder.Entity("Content.Server.Database.AHelpBriefingVote", b =>
+                {
+                    b.Property<long>("SummaryId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("summary_id");
+
+                    b.Property<Guid>("AdminUserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("admin_user_id");
+
+                    b.Property<short>("Vote")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("vote");
+
+                    b.Property<DateTime>("VotedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("voted_at");
+
+                    b.HasKey("SummaryId", "AdminUserId")
+                        .HasName("PK_ahelp_briefing_vote");
+
+                    b.ToTable("ahelp_briefing_vote", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.AHelpMessage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("ahelp_message_id");
+
+                    b.Property<bool>("AdminOnly")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("admin_only");
+
+                    b.Property<bool>("FromDiscord")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("from_discord");
+
+                    b.Property<int?>("RoundId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("round_id");
+
+                    b.Property<bool>("SenderIsAdmin")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("sender_is_admin");
+
+                    b.Property<string>("SenderName")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("sender_name");
+
+                    b.Property<Guid>("SenderUserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("sender_user_id");
+
+                    b.Property<DateTime>("SentAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("sent_at");
+
+                    b.Property<int>("ServerId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("server_id");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("text");
+
+                    b.Property<Guid>("TicketOwnerUserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("ticket_owner_user_id");
+
+                    b.HasKey("Id")
+                        .HasName("PK_ahelp_message");
+
+                    b.HasIndex("RoundId")
+                        .HasDatabaseName("IX_ahelp_message_round_id");
+
+                    b.HasIndex("ServerId")
+                        .HasDatabaseName("IX_ahelp_message_server_id");
+
+                    b.HasIndex("TicketOwnerUserId", "Id")
+                        .HasDatabaseName("IX_ahelp_message_ticket_owner_user_id_ahelp_message_id");
+
+                    b.ToTable("ahelp_message", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.AHelpTicketRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("ahelp_ticket_request_id");
+
+                    b.Property<Guid>("AdminUserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("admin_user_id");
+
+                    b.Property<short>("Kind")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("kind");
+
+                    b.Property<DateTime>("RequestedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("requested_at");
+
+                    b.Property<int?>("RoundId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("round_id");
+
+                    b.Property<int>("ServerId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("server_id");
+
+                    b.Property<Guid>("TicketOwnerUserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("ticket_owner_user_id");
+
+                    b.HasKey("Id")
+                        .HasName("PK_ahelp_ticket_request");
+
+                    b.HasIndex("RequestedAt")
+                        .HasDatabaseName("IX_ahelp_ticket_request_requested_at");
+
+                    b.HasIndex("RoundId")
+                        .HasDatabaseName("IX_ahelp_ticket_request_round_id");
+
+                    b.HasIndex("ServerId")
+                        .HasDatabaseName("IX_ahelp_ticket_request_server_id");
+
+                    b.ToTable("ahelp_ticket_request", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.Admin", b =>
                 {
                     b.Property<Guid>("UserId")
@@ -1844,6 +1978,44 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasDatabaseName("IX_player_round_rounds_id");
 
                     b.ToTable("player_round", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.AHelpMessage", b =>
+                {
+                    b.HasOne("Content.Server.Database.Round", "Round")
+                        .WithMany()
+                        .HasForeignKey("RoundId")
+                        .HasConstraintName("FK_ahelp_message_round_round_id");
+
+                    b.HasOne("Content.Server.Database.Server", "Server")
+                        .WithMany()
+                        .HasForeignKey("ServerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_ahelp_message_server_server_id");
+
+                    b.Navigation("Round");
+
+                    b.Navigation("Server");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.AHelpTicketRequest", b =>
+                {
+                    b.HasOne("Content.Server.Database.Round", "Round")
+                        .WithMany()
+                        .HasForeignKey("RoundId")
+                        .HasConstraintName("FK_ahelp_ticket_request_round_round_id");
+
+                    b.HasOne("Content.Server.Database.Server", "Server")
+                        .WithMany()
+                        .HasForeignKey("ServerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_ahelp_ticket_request_server_server_id");
+
+                    b.Navigation("Round");
+
+                    b.Navigation("Server");
                 });
 
             modelBuilder.Entity("Content.Server.Database.Admin", b =>

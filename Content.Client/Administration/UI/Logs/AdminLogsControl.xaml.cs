@@ -315,6 +315,9 @@ public sealed partial class AdminLogsControl : Control
         if (!label.Log.Message.Contains(LogSearch.Text, StringComparison.OrdinalIgnoreCase))
             return false;
 
+        if (HiddenByAdminAssist(label)) // Nebula edit
+            return false; // Nebula edit
+
         return true;
     }
 
@@ -490,6 +493,7 @@ public sealed partial class AdminLogsControl : Control
             ref var log = ref span[i];
             var separator = new Separator { StyleClasses = { StyleClass.LowDivider } };
             var label = new AdminLogLabel(ref log, separator);
+            HighlightAdminAssistCited(label); // Nebula edit
             label.Visible = ShouldShowLog(label);
 
             TotalLogs++;

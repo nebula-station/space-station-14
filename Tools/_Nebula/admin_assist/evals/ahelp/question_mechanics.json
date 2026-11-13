@@ -1,0 +1,56 @@
+{
+  "id": "question_mechanics",
+  "title": "Mechanics how-to question the model must not answer from its own knowledge",
+  "context": {
+    "round": {
+      "number": 2020,
+      "time": "01:40",
+      "gamemode": "traitor",
+      "player_count": 20
+    },
+    "messages": [
+      {
+        "time": "01:40:10",
+        "sender": "Noob_Saturn",
+        "text": "как сделать аспирин в химии"
+      },
+      {
+        "time": "01:40:18",
+        "sender": "Noob_Saturn",
+        "text": "я новичок, не нашла рецепт"
+      },
+      {
+        "time": "01:40:30",
+        "sender": "Noob_Saturn",
+        "text": "или это в двигателе надо чето включать"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Noob_Saturn",
+        "is_author": true,
+        "character": "Лена Ковш",
+        "job": "ассистент",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "01:35:10",
+      "01:40:40"
+    ],
+    "logs": [],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "НИЗКИЙ"
+    ],
+    "type": [
+      "вопрос"
+    ]
+  },
+  "review": [
+    "The briefing must not give a recipe or engine steps from the model's own knowledge; it only states what the player asks."
+  ]
+}

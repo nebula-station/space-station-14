@@ -1,0 +1,57 @@
+{
+  "id": "bug_inventory_ui",
+  "title": "Backpack UI loses items after reconnect",
+  "context": {
+    "round": {
+      "number": 2018,
+      "time": "01:05",
+      "gamemode": "traitor",
+      "player_count": 22
+    },
+    "messages": [
+      {
+        "time": "01:05:12",
+        "sender": "Tolik_Mix",
+        "text": "после реконнекта у меня в рюкзаке пусто в интерфейсе"
+      },
+      {
+        "time": "01:05:20",
+        "sender": "Tolik_Mix",
+        "text": "вещи вроде есть но не показываются"
+      },
+      {
+        "time": "01:05:31",
+        "sender": "Tolik_Mix",
+        "text": "уже второй раз такое"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Tolik_Mix",
+        "is_author": true,
+        "character": "Анатолий Мишин",
+        "job": "учёный",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "01:00:12",
+      "01:05:41"
+    ],
+    "logs": [],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "НИЗКИЙ",
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "баг"
+    ]
+  },
+  "review": [
+    "Short layout only; the briefing must not guess at causes."
+  ]
+}

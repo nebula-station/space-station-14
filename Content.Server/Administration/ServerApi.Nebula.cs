@@ -16,6 +16,7 @@ public sealed partial class ServerApi
     private void InitializeNebulaPart()
     {
         RegisterHandler(HttpMethod.Post, "/linking/update", RequestUpdateDiscordLinkingData);
+        InitializeRoundState();
     }
 
     private async Task RequestUpdateDiscordLinkingData(IStatusHandlerContext context)

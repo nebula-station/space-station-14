@@ -1,0 +1,90 @@
+# SPDX-FileCopyrightText: 2026 Nebula Station
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+[net]
+port = 1212
+upnp = false
+
+[game]
+hostname = "Admin Assist Local Test"
+
+[auth]
+mode = 0
+
+[console]
+loginlocal = true
+
+[database]
+engine = "postgres"
+pg_host = "127.0.0.1"
+pg_port = 55432
+pg_username = "ss14"
+pg_password = "local_game"
+pg_database = "ss14_playtest"
+
+[adminlogs]
+server_name = "unknown"
+
+[nebula]
+isolate_records = false
+
+# Сайдкар (Tools/_Nebula/admin_assist) читает этот же файл: uv run python -m admin_assist --config <путь>.
+[admin_assist]
+ingame_briefings = true
+ahelp_persist = true
+# На боевом сервере true: сервер сам запускает сайдкар. Здесь его запускает runlocal.sh.
+sidecar = false
+# Общий для игры и сайдкара. Никогда не коммитьте настоящие ключи.
+round_state_token = "<openssl rand -hex 32>"
+round_state_url = "http://127.0.0.1:1212/admin_assist/round_state"
+round_state_timeout_s = 3
+
+game_dsn = "postgresql://admin_assist_ro:local_ro@127.0.0.1:55432/ss14_playtest"
+own_dsn = "postgresql://admin_assist_rw:local_rw@127.0.0.1:55432/ss14_playtest"
+db_statement_timeout_ms = 5000
+
+kidmesh_base_url = "https://api.kidmesh.best/v1"
+kidmesh_timeout_s = 30
+kidmesh_max_retries = 2
+kidmesh_pause_s = 600
+kidmesh_fold_system = true
+kidmesh_catalog_url = "https://kidmesh.best/api/models"
+catalog_poll_s = 600
+kidmesh_key = ""
+
+model_main_id = "deepseek-v4.1-flash-1017"
+model_main_key = ""
+model_main_multiplier = 1.0
+model_fallback_id = "glm-5.3"
+model_fallback_key = ""
+model_fallback_multiplier = 2.5
+model_small_id = "gpt-6-luna"
+model_small_key = ""
+model_small_multiplier = 0.9
+
+# feature_ahelp_summary = "main:low"
+# feature_done_typing = "main:none"
+
+price_rub_per_mtok = 4.35
+cached_input_factor = 0.5
+budget_rub = 500
+budget_alert_fraction = 0.8
+
+context_before_s = 300
+context_after_s = 10
+context_max_log_lines = 150
+context_max_participants = 6
+new_player_hours = 10
+
+rules_file = "rules/nebula.ru.txt"
+poll_s = 2
+detector_debounce_s = 6
+detector_force_s = 75
+ticket_gap_s = 900
+ticket_stale_s = 600
+ticket_max_summaries = 3
+summary_max_tokens = 4000
+max_parallel_calls = 3
+
+feedback_poll_s = 300
+erp_text_to_model = false

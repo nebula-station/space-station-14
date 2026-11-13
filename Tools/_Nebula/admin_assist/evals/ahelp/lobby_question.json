@@ -1,0 +1,53 @@
+{
+  "id": "lobby_question",
+  "title": "Lobby player asks about whitelist for a head role and where the rules are",
+  "context": {
+    "round": {
+      "number": null,
+      "time": null,
+      "gamemode": null,
+      "player_count": null
+    },
+    "messages": [
+      {
+        "time": "19:42:10",
+        "sender": "Newbie_Anya",
+        "text": "здравствуйте, как получить вайтлист на главу отдела?"
+      },
+      {
+        "time": "19:42:25",
+        "sender": "Newbie_Anya",
+        "text": "и где найти правила сервера"
+      },
+      {
+        "time": "19:42:40",
+        "sender": "Newbie_Anya",
+        "text": "я тут впервые"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Newbie_Anya",
+        "is_author": true,
+        "character": null,
+        "job": null,
+        "antag": [],
+        "state": "lobby"
+      }
+    ],
+    "window": null,
+    "logs": [],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "НИЗКИЙ"
+    ],
+    "type": [
+      "вопрос"
+    ]
+  },
+  "review": [
+    "No round is running; the briefing must not invent whitelist procedure."
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "sec_arrest_valid",
+  "title": "Author says SB arrested him for nothing; chat and logs show he refused to leave the armory and hit the officer first",
+  "context": {
+    "round": {
+      "number": 2024,
+      "time": "00:44",
+      "gamemode": "traitor",
+      "player_count": 27
+    },
+    "messages": [
+      {
+        "time": "00:44:10",
+        "sender": "Bublik_X",
+        "text": "сб меня скрутило ни за что"
+      },
+      {
+        "time": "00:44:19",
+        "sender": "Bublik_X",
+        "text": "я просто шёл мимо"
+      },
+      {
+        "time": "00:44:28",
+        "sender": "Bublik_X",
+        "text": "офицер Cop_Dmitrich оглушил и надел наручники"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Bublik_X",
+        "is_author": true,
+        "character": "Юра Кузнецов",
+        "job": "инженер",
+        "antag": [],
+        "state": "alive"
+      },
+      {
+        "username": "Cop_Dmitrich",
+        "is_author": false,
+        "character": "Роман Стрельцов",
+        "job": "офицер СБ",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "00:39:10",
+      "00:44:38"
+    ],
+    "logs": [
+      {
+        "time": "00:40:30",
+        "text": "Say from Роман Стрельцов (Cop_Dmitrich): гражданин, это оружейная, покиньте помещение"
+      },
+      {
+        "time": "00:40:41",
+        "text": "Say from Юра Кузнецов (Bublik_X): мне надо, я чиню проводку"
+      },
+      {
+        "time": "00:40:52",
+        "text": "Say from Роман Стрельцов (Cop_Dmitrich): второе предупреждение, выходите"
+      },
+      {
+        "time": "00:41:03",
+        "text": "Say from Юра Кузнецов (Bublik_X): да пошёл ты, это мой доступ"
+      },
+      {
+        "time": "00:41:20",
+        "text": "Юра Кузнецов (Bublik_X) melee attacked (light) Роман Стрельцов (Cop_Dmitrich) using their hands and dealt 5 damage"
+      },
+      {
+        "time": "00:41:24",
+        "text": "Юра Кузнецов (Bublik_X) melee attacked (light) Роман Стрельцов (Cop_Dmitrich) using their hands and dealt 5 damage"
+      },
+      {
+        "time": "00:41:30",
+        "text": "Роман Стрельцов (Cop_Dmitrich) used disarm on Юра Кузнецов (Bublik_X)"
+      },
+      {
+        "time": "00:41:36",
+        "text": "Роман Стрельцов (Cop_Dmitrich) melee attacked (heavy) Юра Кузнецов (Bublik_X) using дубинка and dealt 8 damage"
+      },
+      {
+        "time": "00:41:39",
+        "text": "Роман Стрельцов (Cop_Dmitrich) melee attacked (heavy) Юра Кузнецов (Bublik_X) using дубинка and dealt 8 damage"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ",
+      "НИЗКИЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "скорее валидно"
+    ],
+    "cite_any": [
+      "L5",
+      "L6"
+    ]
+  },
+  "review": [
+    "Briefing should show warnings [L1][L3], the author's refusal and first hits [L5][L6], then the officer's response.",
+    "Расхождения should call out «ни за что» / «просто шёл мимо» as contradicted by the logs."
+  ]
+}

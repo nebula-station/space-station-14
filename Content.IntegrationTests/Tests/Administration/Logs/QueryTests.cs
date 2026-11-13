@@ -47,7 +47,7 @@ public sealed class QueryTests : GameTest
 
         var filter = new LogFilter
         {
-            Round = sGamerTicker.RoundId,
+            Round = sGamerTicker.RoundDatabaseId, // Nebula edit
             Search = guid.ToString(),
             Types = new HashSet<LogType> { LogType.Unknown },
             After = date,

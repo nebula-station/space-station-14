@@ -1,0 +1,63 @@
+{
+  "id": "dispute_jobban",
+  "title": "Player disputes a fresh role ban; history gives the ban and an older note",
+  "context": {
+    "round": {
+      "number": 2026,
+      "time": "02:05",
+      "gamemode": "traitor",
+      "player_count": 32
+    },
+    "messages": [
+      {
+        "time": "02:05:11",
+        "sender": "Lordik_Mini",
+        "text": "мне только что дали джоббан на химика"
+      },
+      {
+        "time": "02:05:20",
+        "sender": "Lordik_Mini",
+        "text": "я считаю это несправедливо"
+      },
+      {
+        "time": "02:05:31",
+        "sender": "Lordik_Mini",
+        "text": "хочу обсудить, я ничего плохого не делал"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Lordik_Mini",
+        "is_author": true,
+        "character": "Артём Нестеров",
+        "job": null,
+        "antag": [],
+        "state": "ghost"
+      }
+    ],
+    "window": [
+      "02:00:11",
+      "02:05:41"
+    ],
+    "logs": [],
+    "history": [
+      "Lordik_Mini: 2026-11-11 джоббан (Chemist) 7 дней за выпуск газа в коридор",
+      "Lordik_Mini: 2026-10-14 заметка \"предупреждён за опасные эксперименты в химии\""
+    ]
+  },
+  "expect": {
+    "priority": [
+      "НИЗКИЙ",
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "оспаривание"
+    ],
+    "assessment": [
+      "неясно"
+    ]
+  },
+  "review": [
+    "History is on Флаги and should not drive the assessment; the briefing should not take a side on the ban."
+  ]
+}

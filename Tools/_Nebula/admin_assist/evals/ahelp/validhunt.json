@@ -1,0 +1,105 @@
+{
+  "id": "validhunt",
+  "title": "Traitor killed by a botanist who knew about him from the radio",
+  "context": {
+    "round": {
+      "number": 2028,
+      "time": "01:58",
+      "gamemode": "traitor",
+      "player_count": 29
+    },
+    "messages": [
+      {
+        "time": "01:58:03",
+        "sender": "Shadow_Ninja",
+        "text": "меня валидхантнули"
+      },
+      {
+        "time": "01:58:12",
+        "sender": "Shadow_Ninja",
+        "text": "ботаник Ogurec_ погнался за мной по всей станции"
+      },
+      {
+        "time": "01:58:20",
+        "sender": "Shadow_Ninja",
+        "text": "я его даже не трогал, просто шёл по коридору"
+      }
+    ],
+    "participants": [
+      {
+        "username": "Shadow_Ninja",
+        "is_author": true,
+        "character": "Виктор Крафт",
+        "job": "ассистент",
+        "antag": [
+          "traitor"
+        ],
+        "state": "dead"
+      },
+      {
+        "username": "Ogurec_",
+        "is_author": false,
+        "character": "Пётр Огурцов",
+        "job": "ботаник",
+        "antag": [],
+        "state": "alive"
+      }
+    ],
+    "window": [
+      "01:53:03",
+      "01:58:30"
+    ],
+    "logs": [
+      {
+        "time": "01:53:10",
+        "text": "Say from Пётр Огурцов (Ogurec_): по рации сказали что Виктор Крафт предатель"
+      },
+      {
+        "time": "01:54:20",
+        "text": "Say from Пётр Огурцов (Ogurec_): стой, предатель!"
+      },
+      {
+        "time": "01:54:28",
+        "text": "Say from Виктор Крафт (Shadow_Ninja): отстань, я просто иду"
+      },
+      {
+        "time": "01:55:02",
+        "text": "Пётр Огурцов (Ogurec_) melee attacked (heavy) Виктор Крафт (Shadow_Ninja) using садовая лопата and dealt 12 damage"
+      },
+      {
+        "time": "01:55:05",
+        "text": "Пётр Огурцов (Ogurec_) melee attacked (heavy) Виктор Крафт (Shadow_Ninja) using садовая лопата and dealt 12 damage"
+      },
+      {
+        "time": "01:55:07",
+        "text": "Пётр Огурцов (Ogurec_) caused Виктор Крафт (Shadow_Ninja) state to change from Alive to Critical"
+      },
+      {
+        "time": "01:55:15",
+        "text": "Пётр Огурцов (Ogurec_) caused Виктор Крафт (Shadow_Ninja) state to change from Critical to Dead"
+      }
+    ],
+    "history": []
+  },
+  "expect": {
+    "priority": [
+      "ОБЫЧНЫЙ"
+    ],
+    "type": [
+      "жалоба"
+    ],
+    "assessment": [
+      "скорее нарушение",
+      "неясно"
+    ],
+    "contains": {
+      "Правила": [
+        "2.4"
+      ]
+    }
+  },
+  "review": [
+    "The briefing should note Ogurec_ is not security and that the logs show no attack by the author on Ogurec_.",
+    "Rule 2.4 allows self-defence (отогнать антагониста) but not «догнать и убить»; the briefing should not rule out defence without a log."
+  ]
+}
