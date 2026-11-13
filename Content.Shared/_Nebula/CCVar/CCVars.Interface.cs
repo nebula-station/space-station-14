@@ -79,4 +79,10 @@ public sealed partial class NCCVars
     /// </summary>
     public static readonly CVarDef<bool> AllyOutline =
         CVarDef.Create("nebula.hud.ally_outline", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    ///     Last filter picked in the marking picker: <c>own</c>, <c>all</c>, <c>common</c> or a markings group id.
+    /// </summary>
+    public static readonly CVarDef<string> MarkingsFilter =
+        CVarDef.Create("nebula.ui.markings_filter", "own", CVar.CLIENTONLY | CVar.ARCHIVE);
 }

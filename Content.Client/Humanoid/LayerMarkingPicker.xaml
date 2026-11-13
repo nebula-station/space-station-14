@@ -1,5 +1,10 @@
 <BoxContainer xmlns="https://spacestation14.io" Orientation="Vertical">
+    <!-- Nebula start -->
+    <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
     <LineEdit Name="SearchBar" PlaceHolder="{Loc 'markings-search'}" HorizontalExpand="True" />
+        <OptionButton Name="FilterButton" MinWidth="180" Visible="False" />
+    </BoxContainer>
+    <!-- Nebula end -->
     <ScrollContainer Name="SelectionItems" HorizontalExpand="True" VerticalExpand="True">
         <GridContainer Name="Items" Columns="2" Margin="4" />
     </ScrollContainer>

@@ -53,6 +53,7 @@ public sealed partial class LayerMarkingPicker : BoxContainer
         base.EnteredTree();
 
         _markingsModel.MarkingsReset += UpdateCount;
+        _markingsModel.MarkingsReset += RefreshFilter; // Nebula edit
         _markingsModel.MarkingsChanged += MarkingsChanged;
     }
 
@@ -61,6 +62,7 @@ public sealed partial class LayerMarkingPicker : BoxContainer
         base.ExitedTree();
 
         _markingsModel.MarkingsReset -= UpdateCount;
+        _markingsModel.MarkingsReset -= RefreshFilter; // Nebula edit
         _markingsModel.MarkingsChanged -= MarkingsChanged;
     }
 
