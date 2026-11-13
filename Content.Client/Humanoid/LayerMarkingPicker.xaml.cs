@@ -31,9 +31,9 @@ public sealed partial class LayerMarkingPicker : BoxContainer
         _organ = organ;
         _layer = layer;
 
-        OrderingItems.AddChild(new LayerMarkingOrderer(markingsModel, organ, layer));
+        // OrderingItems.AddChild(new LayerMarkingOrderer(markingsModel, organ, layer)); // Nebula edit
 
-        UpdateMarkings();
+        // UpdateMarkings(); // Nebula edit
 
         SearchBar.OnTextChanged += _ =>
         {
@@ -52,8 +52,7 @@ public sealed partial class LayerMarkingPicker : BoxContainer
     {
         base.EnteredTree();
 
-        _markingsModel.MarkingsReset += UpdateCount;
-        _markingsModel.MarkingsReset += RefreshFilter; // Nebula edit
+        _markingsModel.MarkingsReset += QueueReset; // Nebula edit
         _markingsModel.MarkingsChanged += MarkingsChanged;
     }
 
@@ -61,8 +60,7 @@ public sealed partial class LayerMarkingPicker : BoxContainer
     {
         base.ExitedTree();
 
-        _markingsModel.MarkingsReset -= UpdateCount;
-        _markingsModel.MarkingsReset -= RefreshFilter; // Nebula edit
+        _markingsModel.MarkingsReset -= QueueReset; // Nebula edit
         _markingsModel.MarkingsChanged -= MarkingsChanged;
     }
 
@@ -72,6 +70,7 @@ public sealed partial class LayerMarkingPicker : BoxContainer
             return;
 
         UpdateCount();
+        RefreshItems(); // Nebula edit
     }
 
     private void UpdateMarkings()

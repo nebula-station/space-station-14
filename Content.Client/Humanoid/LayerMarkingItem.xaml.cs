@@ -72,25 +72,27 @@ public sealed partial class LayerMarkingItem : BoxContainer, ISearchableControl
     {
         base.EnteredTree();
 
-        _markingsModel.MarkingsReset += UpdateSelection;
-        _markingsModel.MarkingsChanged += MarkingsChanged;
+        // _markingsModel.MarkingsReset += UpdateSelection; // Nebula edit
+        // _markingsModel.MarkingsChanged += MarkingsChanged; // Nebula edit
     }
 
     protected override void ExitedTree()
     {
         base.ExitedTree();
 
-        _markingsModel.MarkingsReset -= UpdateSelection;
-        _markingsModel.MarkingsChanged -= MarkingsChanged;
+        // _markingsModel.MarkingsReset -= UpdateSelection; // Nebula edit
+        // _markingsModel.MarkingsChanged -= MarkingsChanged; // Nebula edit
     }
 
-    private void MarkingsChanged(ProtoId<OrganCategoryPrototype> organ, HumanoidVisualLayers layer)
-    {
-        if (_organ != organ ||  _layer != layer)
-            return;
-
-        UpdateSelection();
-    }
+    // Nebula start
+    // private void MarkingsChanged(ProtoId<OrganCategoryPrototype> organ, HumanoidVisualLayers layer)
+    // {
+    //     if (_organ != organ ||  _layer != layer)
+    //         return;
+    //
+    //     UpdateSelection();
+    // }
+    // Nebula end
 
     private void UpdateData()
     {

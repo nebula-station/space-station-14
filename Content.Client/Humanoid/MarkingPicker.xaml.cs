@@ -20,26 +20,23 @@ public sealed partial class MarkingPicker : Control
 
     public void SetModel(MarkingsViewModel model)
     {
-        _markingsModel = model;
-
-        _markingsModel.OrganDataChanged += UpdateMarkings;
-        _markingsModel.EnforcementsChanged += UpdateMarkings;
+        SetModelNebula(model); // Nebula edit
     }
 
     protected override void EnteredTree()
     {
         base.EnteredTree();
 
-        _markingsModel?.OrganDataChanged += UpdateMarkings;
-        _markingsModel?.EnforcementsChanged += UpdateMarkings;
+        _markingsModel?.OrganDataChanged += QueueUpdateMarkings; // Nebula edit
+        _markingsModel?.EnforcementsChanged += QueueUpdateMarkings; // Nebula edit
     }
 
     protected override void ExitedTree()
     {
         base.ExitedTree();
 
-        _markingsModel?.OrganDataChanged -= UpdateMarkings;
-        _markingsModel?.EnforcementsChanged -= UpdateMarkings;
+        _markingsModel?.OrganDataChanged -= QueueUpdateMarkings; // Nebula edit
+        _markingsModel?.EnforcementsChanged -= QueueUpdateMarkings; // Nebula edit
     }
 
     private void UpdateMarkings()

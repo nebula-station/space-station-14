@@ -11,6 +11,11 @@ public sealed partial class LayerMarkingItem
 {
     private MarkingGradientControl? _gradientControl;
 
+    public void RefreshSelection()
+    {
+        UpdateSelection();
+    }
+
     private void AddGradientControl(Marking marking)
     {
         _gradientControl = new MarkingGradientControl();
