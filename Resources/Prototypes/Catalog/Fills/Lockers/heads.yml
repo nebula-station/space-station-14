@@ -278,7 +278,7 @@
     children:
     - !type:NestedSelector # Trauma
       tableId: LockerFillResearchDirectorTrauma
-    #- id: Intellicard # Trauma - CE has it now
+    - id: Intellicard # Nebula edit
     - id: BoxEncryptionKeyScience
     - id: BoxRDCircuitboards
     - id: ClothingBeltUtilityFilled

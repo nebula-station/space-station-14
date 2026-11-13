@@ -323,7 +323,7 @@
   cost:
     Spesos: 1500
   categories:
-  - EngineeringHoP
+  - ScienceHoP # Nebula edit
   restockTime: 0
   resetRestockOnPurchase: true
   restockAfterPurchase: 60

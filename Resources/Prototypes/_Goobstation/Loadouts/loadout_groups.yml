@@ -1084,21 +1084,29 @@
   loadouts:
   - RoboticistJumpsuit
   - RoboticistJumpskirt
+  - ResearchMJ # Nebula edit
 
 - type: loadoutGroup
   id: RoboticistBackpack
   name: loadout-group-roboticist-backpack
   loadouts:
-  - StationEngineerBackpack
-  - StationEngineerSatchel
-  - StationEngineerDuffel
-  - StationEngineerMessenger
+  # Nebula start
+  # - StationEngineerBackpack
+  # - StationEngineerSatchel
+  # - StationEngineerDuffel
+  # - StationEngineerMessenger
+  - ScientistBackpack
+  - ScientistSatchel
+  - ScientistDuffel
+  - ScientistMessenger
+  # Nebula end
 
 - type: loadoutGroup
   id: RoboticistOuterClothing
   name: loadout-group-roboticist-outerclothing
   minLimit: 0
   loadouts:
+  - RegularLabCoat # Nebula edit
   - RoboticistLabCoat
   - RoboticistWintercoat
 
@@ -1108,6 +1116,7 @@
   loadouts:
   - WhiteShoes
   - BlackShoes
+  - ScienceWinterBoots # Nebula edit
 
 - type: loadoutGroup
   id: RoboticistGloves

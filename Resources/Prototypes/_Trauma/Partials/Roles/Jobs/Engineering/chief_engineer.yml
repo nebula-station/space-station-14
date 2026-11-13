@@ -5,8 +5,10 @@
   antagAdvantage: 75
   guides:
   - Engineering
-  access:
-  - Robotics
+  # Nebula start
+  # access:
+  # - Robotics
+  # Nebula end
   special:
   - !type:OrganChipsSpecial
     chips:

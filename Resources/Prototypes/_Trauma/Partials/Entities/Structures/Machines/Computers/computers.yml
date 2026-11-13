@@ -11,21 +11,21 @@
   components:
   - type: AccessReader
     access: !Clear
-    - [ "ChiefEngineer" ]
+    - [ "ResearchDirector" ] # Nebula edit
 
 - type: entity
   id: StationAiUploadComputer
   components:
   - type: AccessReader
     access: !Clear
-    - [ "ChiefEngineer" ]
+    - [ "ResearchDirector" ] # Nebula edit
 
 - type: entity
   id: ComputerRoboticsControl
   components:
   - type: AccessReader
     access: !Clear
-    - [ "ChiefEngineer" ]
+    - [ "ResearchDirector" ] # Nebula edit
 
 - type: entity
   id: ComputerStationTeleportersControl

@@ -29,8 +29,8 @@
   - type: IntrinsicRadioTransmitter
     channels: !Clear
     - Common
-    - Engineering
+    - Science # Nebula edit
   - type: ActiveRadio
     channels: !Clear
     - Common
-    - Engineering
+    - Science # Nebula edit

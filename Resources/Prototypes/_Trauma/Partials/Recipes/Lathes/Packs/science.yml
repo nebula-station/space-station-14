@@ -9,9 +9,11 @@
   - !Remove ProtolatheMachineCircuitboard
   - !Remove AutolatheMachineCircuitboard
   - !Remove CircuitImprinterMachineCircuitboard
-  # Moved to EngineeringBoardsStatic
-  - !Remove ExosuitFabricatorMachineCircuitboard
-  - !Remove BorgChargerCircuitboard
+  # Nebula start
+  # # Moved to EngineeringBoardsStatic
+  # - !Remove ExosuitFabricatorMachineCircuitboard
+  # - !Remove BorgChargerCircuitboard
+  # Nebula end
 
 ## Dynamic
 

@@ -1,5 +1,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: entity
-  parent: !Clear DefaultStationBeaconEngineering
-  id: DefaultStationBeaconRobotics
+# Nebula start
+# - type: entity
+  # parent: !Clear DefaultStationBeaconEngineering
+  # id: DefaultStationBeaconRobotics
+# Nebula end
