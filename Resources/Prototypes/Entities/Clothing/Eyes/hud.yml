@@ -76,6 +76,7 @@
     - HudSecurity
     - PetWearable
     - WhitelistChameleon
+  - type: SkewedHud # Nebula edit
 
 - type: entity
   parent: [ClothingEyesHudBase, BaseCommandContraband]
