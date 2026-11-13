@@ -57,10 +57,8 @@ public sealed partial class AdminAssistSidecarSystem : EntitySystem
         _stopping?.Wait(StopTimeout * 2);
     }
 
-    public override void Update(float frameTime)
+    public void Supervise()
     {
-        base.Update(frameTime);
-
         var now = _timing.RealTime;
         if (now < _nextCheck)
             return;
