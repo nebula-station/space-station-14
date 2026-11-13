@@ -1,6 +1,7 @@
 nebula-lobby-phase-preround = Подготовка к раунду
 nebula-lobby-phase-in-round = Раунд идёт
 nebula-lobby-round-time = Время раунда: { $hours }ч. { $minutes }мин.
+nebula-lobby-server-name = Nebula
 
 nebula-lobby-button-changelog = Обновления
 nebula-lobby-button-link-account = Привязка

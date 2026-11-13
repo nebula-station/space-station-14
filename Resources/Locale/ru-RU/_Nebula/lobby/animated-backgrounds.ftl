@@ -6,7 +6,7 @@ lobby-state-background-luamplanets2 = Планеты II
 lobby-state-background-luamspace1 = Космос
 lobby-state-background-luamspace2 = Космос II
 lobby-state-background-luamspace3 = Космос III
-lobby-state-background-luam-artist = Custom
+lobby-state-background-luam-artist = Unknown
 
 ui-lobby-song-previous = Предыдущий трек
 ui-lobby-song-pause = Пауза
