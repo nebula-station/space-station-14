@@ -72,6 +72,23 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: dwarfism
+      # Nebula start
+      socks:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: dwarfism
+      underwearb:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: dwarfism
+      underweart:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: dwarfism
+      # Nebula end
   - type: InitialBody
     organs:
       Torso: OrganDwarfTorso
