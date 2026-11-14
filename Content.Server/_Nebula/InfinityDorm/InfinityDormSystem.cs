@@ -133,7 +133,6 @@ public sealed partial class InfinityDormSystem : EntitySystem
     {
         levelPrototype = null;
 
-
         if (ent.Comp.WhitelistedAlertLevel.Count == 0)
             return false;
 
@@ -142,7 +141,7 @@ public sealed partial class InfinityDormSystem : EntitySystem
             || !_proto.TryIndex(level, out levelPrototype))
             return false;
 
-        return ent.Comp.WhitelistedAlertLevel.Contains(level.Value);
+        return !ent.Comp.WhitelistedAlertLevel.Contains(level.Value);
     }
 
     #endregion
