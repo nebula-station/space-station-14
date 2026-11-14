@@ -2,6 +2,7 @@
 using Content.Trauma.Common.Heretic;
 // </Trauma>
 using System.Diagnostics.CodeAnalysis;
+using Robust.Shared.Timing; // Nebula edit
 using Content.Shared.Hands;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
@@ -27,6 +28,7 @@ namespace Content.Shared.Inventory.VirtualItem;
 /// </remarks>
 public abstract partial class SharedVirtualItemSystem : EntitySystem
 {
+    [Dependency] private IGameTiming _timing = default!; // Nebula edit
     [Dependency] private SharedContainerSystem _containerSystem = default!;
     [Dependency] private SharedItemSystem _itemSystem = default!;
     [Dependency] private InventorySystem _inventorySystem = default!;
@@ -251,6 +253,11 @@ public abstract partial class SharedVirtualItemSystem : EntitySystem
     /// </summary>
     public void DeleteVirtualItem(Entity<VirtualItemComponent> item, EntityUid user, bool queueDel = true) // Goob edit
     {
+        // Nebula edit start, deleting while applying state is real desyncs pvs and causes a full state reset
+        if (_timing.ApplyingState && !IsClientSide(item))
+            return;
+        // Nebula edit end
+
         var userEv = new VirtualItemDeletedEvent(item.Comp.BlockingEntity, user, item.Owner); // Goobstation
         RaiseLocalEvent(user, userEv);
 
