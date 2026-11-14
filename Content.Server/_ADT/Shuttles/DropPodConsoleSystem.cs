@@ -19,7 +19,7 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Destructible;
 using Content.Shared.Humanoid;
 using Content.Shared.Maps;
-using Content.Server.Shuttles.Components;
+using Content.Shared.Shuttles.Components;
 using Content.Shared.Stacks;
 using Content.Shared.Throwing;
 using Content.Shared.UserInterface;
@@ -40,6 +40,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Shared.Decals;
 using Content.Shared.NukeOps;
+using Content.Shared.GameTicking.Rules;
 using Content.Shared.GameTicking.Rules.Components;
 using Content.Shared.Gibbing;
 using Content.Shared.Mobs.Components;
@@ -68,6 +69,7 @@ public sealed partial class DropPodConsoleSystem : EntitySystem
     [Dependency] private DecalSystem _decalSystem = default!;
     // Nebula start
     [Dependency] private GibbingSystem _gibbing = default!;
+    [Dependency] private NukeopsRuleSystem _nukeops = default!;
     // Nebula end
 
     public override void Update(float frameTime)
@@ -565,11 +567,7 @@ public sealed partial class DropPodConsoleSystem : EntitySystem
 
         dropPod.Launched = true;
         // Nebula start
-        var leftQuery = EntityQueryEnumerator<NukeopsRuleComponent>();
-        while (leftQuery.MoveNext(out var nukeops))
-        {
-            nukeops.LeftOutpost = true;
-        }
+        _nukeops.MarkLeftOutpost();
         // Nebula end
         comp.LastLaunchTime = _timing.CurTime;
         dropPod.TargetStationGrid = beaconXform.GridUid;

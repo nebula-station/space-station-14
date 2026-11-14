@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 using System.Numerics;
-using Content.Client.Administration.UI.CustomControls;
+using Content.Client.UserInterface.Controls;
 using Content.Shared._ADT.Shuttles.Components;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
@@ -164,7 +164,7 @@ public sealed class DropPodConsoleBui(EntityUid owner, Enum uiKey) : BoundUserIn
         scrollBox.AddChild(_beaconList);
         panel.AddChild(scrollBox);
 
-        panel.AddChild(new HSeparator { Margin = new Thickness(0, 0, 0, 6) });
+        panel.AddChild(new Separator { Margin = new Thickness(0, 0, 0, 6) });
 
         var selectedHeader = new Label
         {
@@ -180,7 +180,7 @@ public sealed class DropPodConsoleBui(EntityUid owner, Enum uiKey) : BoundUserIn
         };
         panel.AddChild(_selectedLabel);
 
-        panel.AddChild(new HSeparator { Margin = new Thickness(0, 0, 0, 6) });
+        panel.AddChild(new Separator { Margin = new Thickness(0, 0, 0, 6) });
 
         panel.AddChild(new Label
         {
