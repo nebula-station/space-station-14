@@ -15,6 +15,7 @@ using Content.Server.Info;
 using Content.Server.IoC;
 using Content.Server.Maps;
 using Content.Server._Nebula.Administration;
+using Content.Server._Nebula.Administration.Systems; // Nebula
 using Content.Server.NodeContainer.NodeGroups;
 using Content.Server.Players.JobWhitelist;
 using Content.Server.Players.PlayTimeTracking;
@@ -190,6 +191,7 @@ namespace Content.Server.Entry
                     _playTimeTracking.Update();
                     _watchlistWebhookManager.Update();
                     _connection.Update();
+                    _entSys.GetEntitySystem<AdminAssistSidecarSystem>().Supervise(); // Nebula
                     break;
             }
         }
