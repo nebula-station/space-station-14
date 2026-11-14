@@ -10,3 +10,12 @@ Entries:
   url: https://github.com/
   avatar_url: https://avatars.githubusercontent.com/u/110207359?v=4
   title: Test
+- author: DefinitelyNotMori
+  changes:
+    - type: Fix
+      message: Починил баг перезагрузки окружения во время игры
+  id: 2
+  time: '2026-11-14T11:51:29.0000000+00:00'
+  url: https://github.com/nebula-station/space-station-14/pull/88
+  avatar_url: https://avatars.githubusercontent.com/u/92030026?v=4
+  title: '[Fix] Full state resets from virtual item deletion'
