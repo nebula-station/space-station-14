@@ -24,6 +24,7 @@
       params:
         volume: -5
   # </Trauma>
+  - type: BitrunningPoints # Nebula edit
   - type: Sprite
     sprite: Objects/Misc/id_cards.rsi
   - type: Clothing
