@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import logging
+import os
 import signal
 import sys
 import threading
@@ -46,8 +47,10 @@ def check(config: Config) -> None:
 
 
 def watch_stdin(stream: BinaryIO, loop: asyncio.AbstractEventLoop, stop: Callable[[], object]) -> threading.Thread:
+    fd = stream.fileno()
+
     def wait() -> None:
-        while stream.read(65536):
+        while os.read(fd, 65536):
             pass
         log.info("the game server closed stdin")
         loop.call_soon_threadsafe(stop)
