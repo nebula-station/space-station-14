@@ -8,6 +8,8 @@
   - type: InfinityDormTeleporter
     minValueForRoomId: 1
     maxValueForRoomId: 100000
+    whitelistedAlertLevel:
+    - Green
   - type: InteractionOutline
   - type: Physics
     canCollide: false
