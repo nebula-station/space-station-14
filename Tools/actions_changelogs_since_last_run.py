@@ -140,6 +140,10 @@ def main():
         # when running this normally in a GitHub actions workflow,
         # it will get the old changelog from the GitHub API
         last_changelog_stream, publish_context = get_last_changelog()
+        if last_changelog_stream is None:
+            # Nebula edit
+            print("No previous successful publish run found; using this run as the changelog baseline")
+            return
 
     last_changelog = yaml.safe_load(last_changelog_stream)
     with open(CHANGELOG_FILE, "r") as f:
@@ -161,7 +165,7 @@ def main():
 
 def get_most_recent_workflow(
     sess: requests.Session, current_run: dict[str, Any]
-) -> Any:
+) -> Any | None:
     past_runs = get_past_runs(sess, current_run)
     for run in past_runs["workflow_runs"]:
         # First past successful run that isn't our current run.
@@ -170,7 +174,7 @@ def get_most_recent_workflow(
 
         return run
 
-    raise RuntimeError("No previous successful publish workflow run found")
+    return None # Nebula edit
 
 
 def get_current_run(
@@ -193,7 +197,7 @@ def get_past_runs(sess: requests.Session, current_run: Any) -> Any:
     return resp.json()
 
 
-def get_last_changelog() -> tuple[str, dict[str, Any]]:
+def get_last_changelog() -> tuple[str | None, dict[str, Any] | None]:
     github_repository = os.environ["GITHUB_REPOSITORY"]
     github_run = os.environ["GITHUB_RUN_ID"]
     github_token = os.environ["GITHUB_TOKEN"]
@@ -205,6 +209,8 @@ def get_last_changelog() -> tuple[str, dict[str, Any]]:
 
     current_run = get_current_run(session, github_repository, github_run)
     most_recent = get_most_recent_workflow(session, current_run)
+    if most_recent is None: # Nebula edit
+        return None, None
     last_sha = most_recent["head_sha"]
     print(f"Last successful publish job was {most_recent['id']}: {last_sha}")
     last_changelog_stream = get_last_changelog_by_sha(
