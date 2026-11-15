@@ -10,7 +10,7 @@
     prototypes: [ ERTLeaderGearExtended ]
     roleLoadout: [ RoleSurvivalMilitaryDouble ]
   - type: AutoImplant
-    implants: [ FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
 - type: randomHumanoidSettings
   id: ERTSecurityEVAExtended
@@ -20,7 +20,7 @@
     prototypes: [ ERTSecurityGearExtended ]
     roleLoadout: [ RoleSurvivalMilitaryDouble ]
   - type: AutoImplant
-    implants: [ FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
 - type: randomHumanoidSettings
   id: ERTMedicalEVAExtended
@@ -30,7 +30,7 @@
     prototypes: [ ERTMedicalGearExtended ]
     roleLoadout: [ RoleSurvivalMilitaryDouble ]
   - type: AutoImplant
-    implants: [ FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
 - type: randomHumanoidSettings
   id: ERTEngineerEVAExtended
@@ -40,7 +40,7 @@
     prototypes: [ ERTEngineerGearExtended ]
     roleLoadout: [ RoleSurvivalMilitaryDouble ]
   - type: AutoImplant
-    implants: [ FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
 - type: randomHumanoidSettings
   id: ERTJanitorEVAExtended
@@ -50,7 +50,7 @@
     prototypes: [ ERTJanitorGearExtended ]
     roleLoadout: [ RoleSurvivalMilitaryDouble ]
   - type: AutoImplant
-    implants: [ FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
 - type: randomHumanoidSettings
   id: ERTChaplainEVAExtended
@@ -60,7 +60,7 @@
     prototypes: [ ERTChaplainGearExtended ]
     roleLoadout: [ RoleSurvivalMilitaryDouble ]
   - type: AutoImplant
-    implants: [ FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
 
 - type: entity
   parent: RandomHumanoidSpawnerERTLeaderEVA
