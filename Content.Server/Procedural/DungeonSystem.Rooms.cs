@@ -207,7 +207,8 @@ public sealed partial class DungeonSystem
             {
                 // <Trauma> - replaces offset slop
                 var position = Transform(decal).Coordinates.Position;
-                position = Vector2.Transform(position + grid.TileSizeHalfVector - roomCenter, roomTransform);
+                position = Vector2.Transform(position - roomCenter, roomTransform) - grid.TileSizeHalfVector;
+                position = (Vector2) (position * 32f).Rounded() / 32f;
                 // </Trauma>
 
                 if (!clearExisting && reservedTiles?.Contains(position.Floored()) == true)

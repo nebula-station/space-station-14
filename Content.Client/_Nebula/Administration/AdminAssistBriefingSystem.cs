@@ -47,6 +47,8 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
 
     private Comparison<PlayerInfo>? _listOrder;
 
+    private Comparison<PlayerInfo>? _channelComparison;
+
     private (string Username, string Draft, TimeSpan Until)? _noteDraft;
 
     public override void Initialize()
@@ -122,7 +124,8 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
         _listShownIn = bwoink;
         var list = bwoink.ChannelSelector;
         _listOrder = list.Comparison;
-        list.Comparison = CompareChannels;
+        _channelComparison ??= CompareChannels;
+        list.Comparison = _channelComparison;
         list.PlayerListContainer.GenerateItem += AddStripe;
         list.OnSelectionChanged += OnChannelSelected;
         list.PopulateList();
@@ -134,7 +137,7 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
             return;
 
         var list = bwoink.ChannelSelector;
-        if (list.Comparison == (Comparison<PlayerInfo>) CompareChannels)
+        if (ReferenceEquals(list.Comparison, _channelComparison))
             list.Comparison = _listOrder;
         list.PlayerListContainer.GenerateItem -= AddStripe;
         list.OnSelectionChanged -= OnChannelSelected;
