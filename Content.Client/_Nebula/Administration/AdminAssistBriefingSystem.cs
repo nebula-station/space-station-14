@@ -7,6 +7,7 @@ using Content.Client.Administration.Managers;
 using Content.Client.Administration.Systems;
 using Content.Client.Administration.UI.Bwoink;
 using Content.Client.Administration.UI.CustomControls;
+using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Bwoink;
 using Content.Shared._Nebula.Administration;
 using Content.Shared._Nebula.CCVar;
@@ -44,6 +45,8 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
 
     private BwoinkControl? _listShownIn;
 
+    private Comparison<PlayerInfo>? _listOrder;
+
     private (string Username, string Draft, TimeSpan Until)? _noteDraft;
 
     public override void Initialize()
@@ -63,6 +66,11 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
         base.Shutdown();
 
         _adminSystem.PlayerListChanged -= OnPlayerListChanged;
+        var list = _listShownIn?.ChannelSelector;
+        UnhookChannelList();
+        _shownIn = null;
+        if (list is { Disposed: false })
+            list.PopulateList();
     }
 
     private void OnPlayerListChanged(List<PlayerInfo> players)
@@ -88,15 +96,14 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
             }
         }
 
-        if (helper is AdminAHelpUIHandler { Control: { Disposed: false } bwoink } && bwoink != _listShownIn)
+        if (helper is AdminAHelpUIHandler { Control: { Disposed: false } bwoink })
         {
-            _listShownIn = bwoink;
-            HookChannelList(bwoink.ChannelSelector);
-            bwoink.ChannelSelector.OnSelectionChanged += selected =>
-            {
-                if (selected != null)
-                    EnsureRequestRow(selected.SessionId);
-            };
+            if (bwoink != _listShownIn)
+                HookChannelList(bwoink);
+        }
+        else
+        {
+            UnhookChannelList();
         }
 
         if (_requested.Count == 0)
@@ -109,34 +116,62 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
         }
     }
 
-    private void HookChannelList(PlayerListControl list)
+    private void HookChannelList(BwoinkControl bwoink)
     {
-        var order = list.Comparison;
-        list.Comparison = (a, b) =>
-        {
-            if (a.IsPinned != b.IsPinned)
-                return a.IsPinned ? -1 : 1;
-
-            var rank = ListRank(a.SessionId).CompareTo(ListRank(b.SessionId));
-            if (rank != 0)
-                return rank;
-
-            return order?.Invoke(a, b) ?? 0;
-        };
-        list.PlayerListContainer.GenerateItem += (data, button) =>
-        {
-            if (data is PlayerListData { Info: var info }
-                && OpenTicket(info.SessionId) is { } briefing
-                && button.ChildCount > 0
-                && button.GetChild(0) is PlayerListEntry entry)
-            {
-                var claim = _claims.GetValueOrDefault(info.SessionId);
-                var stripe = AdminAssistPriority.Stripe(briefing.Priority, claim?.AdminName);
-                entry.AddChild(stripe);
-                stripe.SetPositionInParent(0);
-            }
-        };
+        UnhookChannelList();
+        _listShownIn = bwoink;
+        var list = bwoink.ChannelSelector;
+        _listOrder = list.Comparison;
+        list.Comparison = CompareChannels;
+        list.PlayerListContainer.GenerateItem += AddStripe;
+        list.OnSelectionChanged += OnChannelSelected;
         list.PopulateList();
+    }
+
+    private void UnhookChannelList()
+    {
+        if (_listShownIn is not { } bwoink)
+            return;
+
+        var list = bwoink.ChannelSelector;
+        if (list.Comparison == (Comparison<PlayerInfo>) CompareChannels)
+            list.Comparison = _listOrder;
+        list.PlayerListContainer.GenerateItem -= AddStripe;
+        list.OnSelectionChanged -= OnChannelSelected;
+        _listShownIn = null;
+        _listOrder = null;
+    }
+
+    private int CompareChannels(PlayerInfo a, PlayerInfo b)
+    {
+        if (a.IsPinned != b.IsPinned)
+            return a.IsPinned ? -1 : 1;
+
+        var rank = ListRank(a.SessionId).CompareTo(ListRank(b.SessionId));
+        if (rank != 0)
+            return rank;
+
+        return _listOrder?.Invoke(a, b) ?? 0;
+    }
+
+    private void AddStripe(ListData data, ListContainerButton button)
+    {
+        if (data is PlayerListData { Info: var info }
+            && OpenTicket(info.SessionId) is { } briefing
+            && button.ChildCount > 0
+            && button.GetChild(0) is PlayerListEntry entry)
+        {
+            var claim = _claims.GetValueOrDefault(info.SessionId);
+            var stripe = AdminAssistPriority.Stripe(briefing.Priority, claim?.AdminName);
+            entry.AddChild(stripe);
+            stripe.SetPositionInParent(0);
+        }
+    }
+
+    private void OnChannelSelected(PlayerInfo? selected)
+    {
+        if (selected != null)
+            EnsureRequestRow(selected.SessionId);
     }
 
     private void RefreshChannelList()
