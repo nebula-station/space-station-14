@@ -89,8 +89,8 @@
   - type: Storage
     maxItemSize: Ginormous
     grid:
-    - 0,0,4,0
-    - 0,1,3,1
+    - 0,0,6,0 # Nebula edit
+    - 0,1,5,1 # Nebula edit
   # </Trauma>
   - type: EntityTableContainerFill
     containers:
@@ -98,6 +98,7 @@
         children: # Trauma
         - id: WeaponSubMachineGunC20r
         - id: MagazinePistolSubMachineGun # Trauma
+          amount: 3 # Nebula edit
         - id: SkillChipSMG # Trauma
 
 - type: entity
