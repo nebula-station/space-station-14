@@ -208,11 +208,19 @@ def get_last_changelog() -> tuple[str | None, dict[str, Any] | None]:
     session.headers["X-GitHub-Api-Version"] = "2022-11-28"
 
     current_run = get_current_run(session, github_repository, github_run)
-    most_recent = get_most_recent_workflow(session, current_run)
-    if most_recent is None: # Nebula edit
-        return None, None
-    last_sha = most_recent["head_sha"]
-    print(f"Last successful publish job was {most_recent['id']}: {last_sha}")
+    # Nebula edit start
+    since_sha = os.environ.get("CHANGELOG_SINCE_SHA", "").strip()
+    if since_sha:
+        most_recent = {}
+        last_sha = since_sha
+        print(f"Using changelog baseline override: {last_sha}")
+    else:
+        most_recent = get_most_recent_workflow(session, current_run)
+        if most_recent is None:
+            return None, None
+        last_sha = most_recent["head_sha"]
+        print(f"Last successful publish job was {most_recent['id']}: {last_sha}")
+    # Nebula edit end
     last_changelog_stream = get_last_changelog_by_sha(
         session, last_sha, github_repository
     )
