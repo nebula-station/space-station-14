@@ -4,3 +4,8 @@
   - MagazineBoxShotgunHighCaliber
   - MagazineBoxShotgunSlugHighCaliber
   - MagazineBoxShotgunPracticeHighCaliber
+
+- type: latheRecipePack
+  id: SecurityPulseAmmoStatic
+  recipes:
+  - MagazinePulseRifle

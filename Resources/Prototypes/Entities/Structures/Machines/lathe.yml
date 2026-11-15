@@ -498,6 +498,7 @@
     - SecurityPracticeStatic
     - SecurityAmmoStatic
     - SecurityAmmoHighCaliberStatic # Nebula edit
+    - SecurityPulseAmmoStatic # Nebula edit
     - SecurityWeaponsStatic
     # Goobstation
     - SecurityEquipmentStaticGoob
