@@ -1,0 +1,6 @@
+- type: entity
+  parent: OrganHumanStomach
+  id: OrganTajaranStomach
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Human, Animal ]

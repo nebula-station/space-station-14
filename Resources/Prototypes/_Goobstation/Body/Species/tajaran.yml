@@ -137,7 +137,7 @@
       Ears: OrganHumanEars
       Lungs: OrganHumanLungs
       Heart: OrganHumanHeart
-      Stomach: OrganHumanStomach
+      Stomach: OrganTajaranStomach # Nebula edit
       Liver: OrganHumanLiver
       Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
@@ -201,6 +201,7 @@
     understands:
     - TauCetiBasic
     - SiikMaas
+  - type: FelinidAbilities # Nebula edit
   - type: Reactive
     reactions:
     - reagents: [ Water, SpaceCleaner ]
