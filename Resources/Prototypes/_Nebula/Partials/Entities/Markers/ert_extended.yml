@@ -1,0 +1,78 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: ErtRandomHumanoidSpawner1
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertsecext: SpawnERTLeaderEVAExtended
+      ertmedext: SpawnERTLeaderEVAExtended
+      ertengiext: SpawnERTLeaderEVAExtended
+      ertjaniext: SpawnERTLeaderEVAExtended
+      ertchapext: SpawnERTLeaderEVAExtended
+
+- type: entity
+  id: ErtRandomHumanoidSpawner2
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertsecext: SpawnERTMedicalEVAExtended
+      ertmedext: SpawnERTMedicalEVAExtended
+      ertengiext: SpawnERTEngineerEVAExtended
+      ertjaniext: SpawnERTJanitorEVAExtended
+      ertchapext: SpawnERTChaplainEVAExtended
+
+- type: entity
+  id: ErtRandomHumanoidSpawner3
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertsecext: SpawnERTSecurityEVAExtended
+      ertmedext: SpawnERTMedicalEVAExtended
+      ertengiext: SpawnERTEngineerEVAExtended
+      ertjaniext: SpawnERTJanitorEVAExtended
+      ertchapext: SpawnERTChaplainEVAExtended
+
+- type: entity
+  id: ErtConditionalItemSpawner1
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertmedext: SpawnCrateChemistrySupplies
+      ertengiext: SpawnVendingMachineEngivend
+      ertjaniext: SpawnCrateJanitorialCleanerGrenades
+      ertchapext: SpawnCrematorium
+
+- type: entity
+  id: ErtConditionalItemSpawner2
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertsecext: SpawnGunSafePulseCarbine
+      ertmedext: SpawnEnergyChemDispenser
+      ertengiext: SpawnCrateEngineeringAMEControl
+      ertjaniext: SpawnCrateJanitorialReplacementLights
+      ertchapext: SpawnAltarSpawner
+
+- type: entity
+  id: ErtConditionalItemSpawner3
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertmedext: SpawnChemMaster
+      ertengiext: SpawnCrateEngineeringAMEShielding
+      ertjaniext: SpawnCrateJanitorialMousetraps
+      ertchapext: SpawnAltarSpawner
+
+- type: entity
+  id: ErtConditionalItemSpawner4
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertsecext: SpawnGunSafeERTOrdnance
+      ertmedext: SpawnGrinderSupplies
+      ertengiext: SpawnCrateEngineeringAMEJar
+      ertjaniext: SpawnCratePlantBGoneSpray
+      ertchapext: SpawnCrateHolySuppliesAdvanced

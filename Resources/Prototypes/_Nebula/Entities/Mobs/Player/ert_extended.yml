@@ -1,0 +1,111 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: randomHumanoidSettings
+  id: ERTLeaderEVAExtended
+  parent: ERTLeaderEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTLeaderGearExtended ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+  - type: AutoImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+
+- type: randomHumanoidSettings
+  id: ERTSecurityEVAExtended
+  parent: ERTSecurityEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTSecurityGearExtended ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+  - type: AutoImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+
+- type: randomHumanoidSettings
+  id: ERTMedicalEVAExtended
+  parent: ERTMedicalEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTMedicalGearExtended ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+  - type: AutoImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+
+- type: randomHumanoidSettings
+  id: ERTEngineerEVAExtended
+  parent: ERTEngineerEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTEngineerGearExtended ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+  - type: AutoImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+
+- type: randomHumanoidSettings
+  id: ERTJanitorEVAExtended
+  parent: ERTJanitorEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTJanitorGearExtended ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+  - type: AutoImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+
+- type: randomHumanoidSettings
+  id: ERTChaplainEVAExtended
+  parent: ERTChaplainEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTChaplainGearExtended ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+  - type: AutoImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant ]
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTLeaderEVA
+  id: RandomHumanoidSpawnerERTLeaderEVAExtended
+  suffix: ERTRole, EVA, Extended
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTLeaderEVAExtended
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTSecurityEVA
+  id: RandomHumanoidSpawnerERTSecurityEVAExtended
+  suffix: ERTRole, EVA, Extended
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTSecurityEVAExtended
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTMedicalEVA
+  id: RandomHumanoidSpawnerERTMedicalEVAExtended
+  suffix: ERTRole, EVA, Extended
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTMedicalEVAExtended
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTEngineerEVA
+  id: RandomHumanoidSpawnerERTEngineerEVAExtended
+  suffix: ERTRole, EVA, Extended
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTEngineerEVAExtended
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTJanitorEVA
+  id: RandomHumanoidSpawnerERTJanitorEVAExtended
+  suffix: ERTRole, EVA, Extended
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTJanitorEVAExtended
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTChaplainEVA
+  id: RandomHumanoidSpawnerERTChaplainEVAExtended
+  suffix: ERTRole, EVA, Extended
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTChaplainEVAExtended

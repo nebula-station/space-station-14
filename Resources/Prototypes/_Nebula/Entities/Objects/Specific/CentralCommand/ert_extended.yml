@@ -1,0 +1,68 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: [ BaseItem, BaseSetSelector, BaseCentcommContraband ]
+  id: ERTExtendedUndeterminedWeapon
+  name: emergency response weaponry pack
+  description: A small remote utilizing bluespace technology to drop in a loadout directly to you. Choose wisely.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Specific/Security/ertundetermined.rsi
+    state: icon
+  - type: SetSelector
+    possibleSets:
+    - ERTExtendedBallisticsSet
+    - ERTExtendedPulseSet
+    - ERTExtendedBreacherSet
+    maxSelectedSets: 1
+
+- type: entity
+  parent: WeaponPulseCarbine
+  id: WeaponPulseCarbineAdvanced
+  name: advanced pulse carbine
+  description: A state-of-the-art pulse carbine. This particular one has an experimental recharging cell.
+  components:
+  - type: BatterySelfRecharger
+    autoRechargeRate: 80
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingERT
+  id: ClothingBeltMilitaryWebbingFilledERT
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: BeltAssaultBSOEntityTable
+
+- type: entity
+  parent: GunSafeBaseSecure
+  id: GunSafePulseCarbine
+  name: pulse carbine safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: WeaponPulseCarbine
+          amount: 3
+
+- type: entity
+  parent: GunSafeBaseSecure
+  id: GunSafeERTOrdnance
+  name: ordnance safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: TelescopicShield
+          amount: 3
+        - id: ExGrenade
+          amount: 3
+        - id: EmpGrenade
+          amount: 3
+        - id: Truncheon
+          amount: 3
