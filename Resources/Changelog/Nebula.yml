@@ -19,3 +19,16 @@ Entries:
   url: https://github.com/nebula-station/space-station-14/pull/88
   avatar_url: https://avatars.githubusercontent.com/u/92030026?v=4
   title: '[Fix] Full state resets from virtual item deletion'
+- author: plasmagh0st
+  changes:
+    - type: Fix
+      message: Карта Silly снова окружена морем
+    - type: Fix
+      message: >-
+        Полоски приоритета в списке ахелпов больше не дублируются после
+        перезахода админа
+  id: 3
+  time: '2026-11-15T16:28:49.0000000+00:00'
+  url: https://github.com/nebula-station/space-station-14/pull/91
+  avatar_url: https://avatars.githubusercontent.com/u/302218122?v=4
+  title: Minor fixes
