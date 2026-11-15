@@ -1,0 +1,206 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: startingGear
+  id: ERTLeaderGearExtended
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTLeader
+    back: ClothingBackpackERTLeader
+    shoes: ClothingShoesBootsMagERT
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesHudMedSec
+    neck: ExecutiveIDCard
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTLeader
+    id: ERTLeaderPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltMilitaryWebbingFilledERT
+    pocket1: WeaponPulsePistol
+    pocket2: CombatKnife
+    suitstorage: WeaponDisablerSMG
+  storage:
+    back:
+    - ERTExtendedUndeterminedWeapon
+    - Binoculars
+    - HoloprojectorField
+    - PinpointerNuclear
+    - PowerCellHigh
+    - MedkitCombatFilled
+    - MedkitCombatFilled
+    - TelescopicShield
+    - EmpGrenade
+
+- type: startingGear
+  id: ERTSecurityGearExtended
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTSecurity
+    back: ClothingBackpackERTSecurity
+    shoes: ClothingShoesBootsMagERT
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    neck: ExecutiveIDCard
+    outerClothing: ClothingOuterHardsuitERTSecurity
+    id: ERTSecurityPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltMilitaryWebbingFilledERT
+    pocket1: WeaponPulsePistol
+    pocket2: CombatKnife
+    suitstorage: WeaponDisablerSMG
+  storage:
+    back:
+    - ERTExtendedUndeterminedWeapon
+    - BoxZiptie
+    - Flash
+    - TearGasGrenade
+    - ExGrenade
+    - EmpGrenade
+    - MedkitCombatFilled
+    - TelescopicShield
+    - PowerCellHigh
+
+- type: startingGear
+  id: ERTMedicalGearExtended
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTMedic
+    back: ClothingBackpackERTMedical
+    shoes: ClothingShoesBootsMagERT
+    mask: ClothingMaskGasERT
+    neck: ExecutiveIDCard
+    eyes: ClothingEyesGlassesMedSec
+    gloves: ClothingHandsGlovesNitrile
+    outerClothing: ClothingOuterHardsuitERTMedical
+    id: ERTMedicPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltSecurityWebbingFilledMedical
+    pocket1: WeaponPulsePistol
+    pocket2: CombatKnife
+  storage:
+    back:
+    - MedicalBeamGunBattery
+    - DefibrillatorCompact
+    - CentCommHypo
+    - ParamedHypo
+    - MedkitAdvancedFilled
+    - MedkitCombatFilled
+    - JugOxandrolone
+    - JugSalicylicAcid
+    - ChemistryBottleOmnizine
+    - CartridgeAtropine
+    - CartridgeAtropine
+    - ClothingEyesGlassesChemical
+
+- type: startingGear
+  id: ERTEngineerGearExtended
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTEngineer
+    back: ClothingBackpackERTEngineer
+    shoes: ClothingShoesBootsMagERT
+    neck: ExecutiveIDCard
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesHudDiagnostic
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTEngineer
+    id: ERTEngineerPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket1: WeaponPulsePistol
+    pocket2: CombatKnife
+    suitstorage: WeaponShotgunEnforcer
+  storage:
+    back:
+    - RCD
+    - RCDAmmo
+    - RCDAmmo
+    - RCDAmmo
+    - GasAnalyzer
+    - trayScanner
+    - HolofanProjector
+    - PartRodMetal
+    - SheetPlasteel
+    - MiningDrillDiamond
+    - MetalFoamGrenade
+    - AirGrenade
+    - BoxLethalshot
+    - BoxShotgunSlug
+    belt:
+    - JawsOfLife
+    - PowerDrill
+    - WelderIndustrialAdvanced
+    - Multitool
+    - EmergencyMedipen
+
+- type: startingGear
+  id: ERTJanitorGearExtended
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTJanitor
+    back: ClothingBackpackERTJanitor
+    shoes: ClothingShoesBootsMagERT
+    mask: ClothingMaskGasERT
+    neck: ExecutiveIDCard
+    eyes: ClothingEyesGlassesChemical
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTJanitor
+    id: ERTJanitorPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket1: WeaponPulsePistol
+    pocket2: CombatKnife
+    suitstorage: WeaponLauncherHydra
+  inhand:
+  - TrashBag
+  storage:
+    back:
+    - SoapNT
+    - Plunger
+    - Screwdriver
+    - AdvMopItem
+    - MedkitCombatFilled
+    - GrenadeCleanade
+    - GrenadeCleanade
+    - GrenadeCleanade
+    - GrenadeCleanade
+    - GrenadeCleanade
+    - GrenadeCleanade
+    belt:
+    - MegaSprayBottleSpaceCleaner
+    - Holoprojector
+    - LightReplacerFilled
+    - WireBrushElectrical
+    - CrowbarRed
+    - EmergencyMedipen
+
+- type: startingGear
+  id: ERTChaplainGearExtended
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTChaplain
+    back: ClothingBackpackERTChaplain
+    shoes: ClothingShoesBootsMagERT
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesHudMedical
+    neck: ExecutiveIDCard
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTChaplain
+    id: ERTChaplainPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltMilitaryWebbingERT
+    pocket1: WeaponPulsePistol
+    pocket2: CombatKnife
+  storage:
+    back:
+    - BoxCandle
+    - BodyBagFolded
+    - BodyBagFolded
+    - JugWater
+    - JugBlood
+    - FoodBakedBunHotX
+    - FoodBakedBunHotX
+    - MedkitCombatFilled
+    belt:
+    - ChaplainUndeterminedBible
+    - Nullrod
+    - Lantern
+    - CrowbarRed
+    - FlippoEngravedLighter
+    - EmergencyMedipen

@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entityEffect
+  id: SpawnERTLeaderEVAExtended
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTLeaderEVAExtended
+
+- type: entityEffect
+  id: SpawnERTSecurityEVAExtended
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTSecurityEVAExtended
+
+- type: entityEffect
+  id: SpawnERTMedicalEVAExtended
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTMedicalEVAExtended
+
+- type: entityEffect
+  id: SpawnERTEngineerEVAExtended
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTEngineerEVAExtended
+
+- type: entityEffect
+  id: SpawnERTJanitorEVAExtended
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTJanitorEVAExtended
+
+- type: entityEffect
+  id: SpawnERTChaplainEVAExtended
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTChaplainEVAExtended
+
+- type: entityEffect
+  id: SpawnGunSafePulseCarbine
+  effects:
+  - !type:SpawnEntity
+    entity: GunSafePulseCarbine
+
+- type: entityEffect
+  id: SpawnGunSafeERTOrdnance
+  effects:
+  - !type:SpawnEntity
+    entity: GunSafeERTOrdnance

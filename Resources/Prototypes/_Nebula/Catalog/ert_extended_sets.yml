@@ -1,0 +1,48 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: selectableSet
+  id: ERTExtendedBallisticsSet
+  name: selectable-set-ert-ballistic-name
+  description: selectable-set-ert-ballistic-description
+  sprite:
+    sprite: _Orion/Objects/Weapons/Guns/Rifles/annie/big.rsi
+    state: base
+  content:
+  - WeaponRifleAnnie
+  - MagazineLightRifle
+  - MagazineLightRifle
+  - MagazineLightRifle
+  - WeaponPistolN1984
+  - MagazineMagnum
+  - MagazineMagnum
+
+- type: selectableSet
+  id: ERTExtendedPulseSet
+  name: selectable-set-ert-pulse-name
+  description: selectable-set-ert-pulse-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
+    state: icon
+  content:
+  - WeaponPulseCarbineAdvanced
+  - WeaponEnergyRevolver
+  - EnergySpeedloaderPulse
+  - EnergySpeedloaderPulse
+  - EnergySpeedloaderDisabler
+
+- type: selectableSet
+  id: ERTExtendedBreacherSet
+  name: selectable-set-ert-breacher-name
+  description: selectable-set-ert-breacher-description
+  sprite:
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
+    state: icon
+  content:
+  - WeaponShotgunEnforcer
+  - BoxLethalshot
+  - BoxShotgunSlug
+  - BoxShotgunIncendiary
+  - ExGrenade
+  - SmokeGrenade
