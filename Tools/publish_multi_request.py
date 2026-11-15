@@ -33,6 +33,8 @@ def main():
         "Content-Type": "application/json"
     }
     resp = session.post(f"{ROBUST_CDN_URL}fork/{FORK_ID}/publish/start", json=data, headers=headers)
+    if not resp.ok: # Nebula edit
+        print(resp.text)
     resp.raise_for_status()
     print("Publish successfully started, adding files...")
 
@@ -68,6 +70,10 @@ def get_files_to_publish() -> Iterable[str]:
 
 
 def get_engine_version() -> str:
+    # Nebula edit start
+    if os.environ.get("ENGINE_VERSION"):
+        return os.environ["ENGINE_VERSION"]
+    # Nebula edit end
     proc = subprocess.run(["git", "describe","--tags", "--abbrev=0"], stdout=subprocess.PIPE, cwd="RobustToolbox", check=True, encoding="UTF-8")
     tag = proc.stdout.strip()
     assert tag.startswith("v")
