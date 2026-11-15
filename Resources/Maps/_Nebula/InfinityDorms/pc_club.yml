@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 11/10/2026 20:41:09
-  entityCount: 562
+  entityCount: 561
 maps: []
 grids:
 - 1
@@ -1316,13 +1316,6 @@ entities:
     - type: Transform
       parent: 1
       pos: -3.4538803,7.605264
-- proto: DebugAPCRecharging
-  entities:
-  - uid: 292
-    components:
-    - type: Transform
-      parent: 1
-      pos: 1.5,10.5
 - proto: Desktop
   entities:
   - uid: 122
@@ -2182,13 +2175,6 @@ entities:
       parent: 1
       rot: 3.141592653589793 rad
       pos: -4.5,-2.5
-- proto: GravityGeneratorMini
-  entities:
-  - uid: 291
-    components:
-    - type: Transform
-      parent: 1
-      pos: -0.5,10.5
 - proto: Hookah
   entities:
   - uid: 248
@@ -2289,6 +2275,13 @@ entities:
       parent: 1
       rot: 3.141592653589793 rad
       pos: 2.5,1.5
+- proto: OmniControlUnit
+  entities:
+  - uid: 292
+    components:
+    - type: Transform
+      parent: 1
+      pos: 1.5,10.5
 - proto: Paper
   entities:
   - uid: 285

@@ -301,7 +301,7 @@ public sealed partial class InfinityDormSystem : EntitySystem
 
     private void MarkAllUserItemsWithTag(EntityUid user, ProtoId<TagPrototype> tagProto)
     {
-        foreach (var item in _inventory.GetHandOrInventoryEntities(user).ToList())
+        foreach (var item in GetUserItems(user))
         {
             MarkRecursive(item, tagProto);
         }
