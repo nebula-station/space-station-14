@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: reagent
+  parent: Milk
+  id: BreastMilk
+  name: reagent-name-breast-milk
+  desc: reagent-desc-breast-milk
+  flavor: sweet
+  color: "#F3EFE6"

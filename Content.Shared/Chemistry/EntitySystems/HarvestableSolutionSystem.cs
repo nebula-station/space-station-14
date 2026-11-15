@@ -1,3 +1,4 @@
+using Content.Shared._Nebula.Chemistry; // Nebula edit
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Events;
 using Content.Shared.DoAfter;
@@ -93,6 +94,9 @@ public sealed partial class HarvestableSolutionSystem : EntitySystem
             return false;
         }
 
+        if (!CanHarvestAttempt(ent.Owner, user, container, popup)) // Nebula edit
+            return false;
+
         var sourceIdentity = Identity.Entity(ent.Owner, EntityManager);
         var targetIdentity = Identity.Entity(container, EntityManager);
 
@@ -160,4 +164,13 @@ public sealed partial class HarvestableSolutionSystem : EntitySystem
 
         return true;
     }
+
+    // Nebula edit start
+    private bool CanHarvestAttempt(EntityUid source, EntityUid user, EntityUid container, bool popup)
+    {
+        var ev = new HarvestSolutionAttemptEvent(user, container, popup);
+        RaiseLocalEvent(source, ref ev);
+        return !ev.Cancelled;
+    }
+    // Nebula edit end
 }

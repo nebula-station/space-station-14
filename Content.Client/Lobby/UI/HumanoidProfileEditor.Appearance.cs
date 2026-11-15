@@ -281,6 +281,7 @@ public sealed partial class HumanoidProfileEditor
         UpdateAltTitleGender(); // Nebula edit
         UpdateVoiceControls();
         _markingsModel.SetOrganSexes(newSex);
+        RefreshTraits(); // Nebula edit
         ReloadPreview();
     }
 

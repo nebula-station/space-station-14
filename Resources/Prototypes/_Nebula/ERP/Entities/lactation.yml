@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: Solution
+  id: SolutionBreasts
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    id: breasts
+    solution:
+      maxVol: 50
+      reagents:
+      - ReagentId: BreastMilk
+        Quantity: 20
+  - type: SatiationProduction
+    producer: Parent
+    delay: 60
+    satiationUsage: 5
+    minimumSatiationThreshold: Peckish
+  - type: SolutionProducer
+    generated:
+      reagents:
+      - ReagentId: BreastMilk
+        Quantity: 5
