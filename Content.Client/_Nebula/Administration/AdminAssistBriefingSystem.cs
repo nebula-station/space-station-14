@@ -45,8 +45,6 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
 
     private BwoinkControl? _listShownIn;
 
-    private PlayerListControl? _hookedList;
-
     private Comparison<PlayerInfo>? _listOrder;
 
     private (string Username, string Draft, TimeSpan Until)? _noteDraft;
@@ -68,7 +66,11 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
         base.Shutdown();
 
         _adminSystem.PlayerListChanged -= OnPlayerListChanged;
+        var list = _listShownIn?.ChannelSelector;
         UnhookChannelList();
+        _shownIn = null;
+        if (list is { Disposed: false })
+            list.PopulateList();
     }
 
     private void OnPlayerListChanged(List<PlayerInfo> players)
@@ -94,10 +96,14 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
             }
         }
 
-        if (helper is AdminAHelpUIHandler { Control: { Disposed: false } bwoink } && bwoink != _listShownIn)
+        if (helper is AdminAHelpUIHandler { Control: { Disposed: false } bwoink })
         {
-            _listShownIn = bwoink;
-            HookChannelList(bwoink.ChannelSelector);
+            if (bwoink != _listShownIn)
+                HookChannelList(bwoink);
+        }
+        else
+        {
+            UnhookChannelList();
         }
 
         if (_requested.Count == 0)
@@ -110,10 +116,11 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
         }
     }
 
-    private void HookChannelList(PlayerListControl list)
+    private void HookChannelList(BwoinkControl bwoink)
     {
         UnhookChannelList();
-        _hookedList = list;
+        _listShownIn = bwoink;
+        var list = bwoink.ChannelSelector;
         _listOrder = list.Comparison;
         list.Comparison = CompareChannels;
         list.PlayerListContainer.GenerateItem += AddStripe;
@@ -123,16 +130,16 @@ public sealed partial class AdminAssistBriefingSystem : EntitySystem
 
     private void UnhookChannelList()
     {
-        if (_hookedList is not { } list)
+        if (_listShownIn is not { } bwoink)
             return;
 
-        list.Comparison = _listOrder;
+        var list = bwoink.ChannelSelector;
+        if (list.Comparison == (Comparison<PlayerInfo>) CompareChannels)
+            list.Comparison = _listOrder;
         list.PlayerListContainer.GenerateItem -= AddStripe;
         list.OnSelectionChanged -= OnChannelSelected;
-        _hookedList = null;
+        _listShownIn = null;
         _listOrder = null;
-        if (!list.Disposed)
-            list.PopulateList();
     }
 
     private int CompareChannels(PlayerInfo a, PlayerInfo b)
