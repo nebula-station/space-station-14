@@ -31,6 +31,12 @@ public sealed partial class LactationSystem : EntitySystem
     {
         var manager = EnsureComp<SolutionManagerComponent>(ent);
         var container = _container.EnsureContainer<Container>(ent, manager.Container);
+        foreach (var solution in container.ContainedEntities)
+        {
+            if (Prototype(solution)?.ID == ent.Comp.Solution.Id)
+                return;
+        }
+
         _solution.CreateSolution(ent.Comp.Solution, container);
     }
 

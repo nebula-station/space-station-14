@@ -14,5 +14,5 @@ public sealed partial class LactationComponent : Component
     public EntProtoId Solution = "SolutionBreasts";
 
     [DataField]
-    public List<string> BlockingSlots = new() { "jumpsuit", "outerClothing" };
+    public List<string> BlockingSlots = new() { "jumpsuit", "outerClothing", "underweart" };
 }

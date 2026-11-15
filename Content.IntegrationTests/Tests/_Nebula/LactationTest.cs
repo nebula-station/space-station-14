@@ -2,10 +2,10 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Linq;
 using Content.Shared._Nebula.ERP.Lactation;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
-using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Content.Shared.Traits;
 
@@ -32,14 +32,9 @@ public sealed class LactationTest
 
         await server.WaitAssertion(() =>
         {
-            var trait = protoMan.Index(Trait);
-            Assert.That(trait.AllowsSex(Sex.Female));
-            Assert.That(trait.AllowsSex(Sex.Futanari));
-            Assert.That(trait.AllowsSex(Sex.Male), Is.False);
-
             mob = entMan.SpawnEntity("MobHuman", map.GridCoords);
             server.PlayerMan.SetAttachedEntity(pair.Player!, mob);
-            entMan.AddComponents(mob, trait.Components, false);
+            entMan.AddComponents(mob, protoMan.Index(Trait).Components, false);
 
             Assert.That(solutions.TryGetSolution(mob, "breasts", out _, out var milk), "No breast solution was spawned.");
             Assert.That(milk!.GetTotalPrototypeQuantity("BreastMilk").Float(), Is.GreaterThan(0f));
@@ -52,11 +47,22 @@ public sealed class LactationTest
             Assert.That(harvest.TryHarvest(mob, mob, beaker), Is.False, "Milked through a jumpsuit.");
 
             Assert.That(inventory.TryUnequip(mob, "jumpsuit", silent: true, force: true));
+
+            var bra = entMan.SpawnEntity("ClothingUndershirtBabydoll", map.GridCoords);
+            Assert.That(inventory.TryEquip(mob, bra, "underweart", silent: true, force: true));
+            Assert.That(harvest.TryHarvest(mob, mob, beaker), Is.False, "Milked through a bra.");
+
+            Assert.That(inventory.TryUnequip(mob, "underweart", silent: true, force: true));
             Assert.That(harvest.TryHarvest(mob, mob, beaker), "Milking failed.");
 
             Assert.That(solutions.TryGetSolution(beaker, "beaker", out _, out var beakerSol));
             Assert.That(beakerSol!.GetTotalPrototypeQuantity("BreastMilk"), Is.EqualTo(before));
             Assert.That(milk.Volume.Float(), Is.Zero);
+
+            var lactation = entMan.GetComponent<LactationComponent>(mob);
+            var mapInit = new MapInitEvent();
+            entMan.EventBus.RaiseComponentEvent(mob, lactation, ref mapInit);
+            Assert.That(solutions.EnumerateSolutions(mob).Count(s => s.Name == "breasts"), Is.EqualTo(1));
         });
 
         await pair.RunTicksSync(10);

@@ -4,7 +4,7 @@ trait-lactation-desc = Пока вы сыты, ваша грудь выраба�
 lactation-verb-milk = Подоить
 lactation-dry = { CAPITALIZE($source) } пока не даёт молока.
 lactation-success = { CAPITALIZE($target) } наполняется грудным молоком ({ $amount } ед.).
-lactation-covered = { CAPITALIZE($target) } ещё в одежде, сначала снимите комбинезон и верхнюю одежду.
+lactation-covered = { CAPITALIZE($target) } ещё в одежде, сначала её нужно снять.
 
 reagent-name-breast-milk = грудное молоко
 reagent-desc-breast-milk = Тёплое сладкое молоко, прямо из чьей-то груди.
