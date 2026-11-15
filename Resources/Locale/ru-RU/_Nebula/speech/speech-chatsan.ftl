@@ -478,8 +478,6 @@ nebula-chatsan-word-199 = гк
 nebula-chatsan-replacement-199 = ГК
 nebula-chatsan-word-200 = дк
 nebula-chatsan-replacement-200 = ДК
-nebula-chatsan-word-207 = [\/\\@]+
-nebula-chatsan-replacement-207 = !
 nebula-chatsan-word-208 = _
 nebula-chatsan-replacement-208 = -
 nebula-chatsan-word-209 = =
