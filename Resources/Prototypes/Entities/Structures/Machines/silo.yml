@@ -31,6 +31,7 @@
           True: { state: silo_active }
           False: { state: silo }
   - type: OreSilo
+    range: 500 # Nebula edit
   - type: MaterialStorage
     whitelist:
       tags:
