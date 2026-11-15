@@ -50,7 +50,6 @@
   components:
   - type: GameRuleSpawner
     toSpawn:
-      ertsecext: SpawnGunSafePulseCarbine
       ertmedext: SpawnEnergyChemDispenser
       ertengiext: SpawnCrateEngineeringAMEControl
       ertjaniext: SpawnCrateJanitorialReplacementLights

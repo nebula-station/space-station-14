@@ -8,8 +8,6 @@ ent-ERTExtendedUndeterminedWeapon = набор вооружения ОБР
     .desc = Небольшой пульт, использующий блюспейс-технологии для доставки снаряжения прямо к вам. Выбирайте с умом.
 ent-WeaponPulseCarbineAdvanced = усовершенствованный импульсный карабин
     .desc = Новейший импульсный карабин. Этот оснащён экспериментальной самозаряжающейся батареей.
-ent-GunSafePulseCarbine = оружейный сейф импульсных карабинов
-    .desc = { ent-GunSafeBaseSecure.desc }
 ent-GunSafeERTOrdnance = сейф снаряжения ОБР
     .desc = { ent-GunSafeBaseSecure.desc }
 
