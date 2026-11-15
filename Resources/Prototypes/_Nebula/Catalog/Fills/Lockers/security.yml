@@ -1,0 +1,70 @@
+- type: entity
+  abstract: true
+  id: AlertLevelLockAmber
+  components:
+  - type: StationAlertLevelLock
+    lockedAlertLevels:
+    - Green
+    - Blue
+    - Yellow
+    - Violet
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLockAmber]
+  id: GunSafeRandomImpulseAlertLockedHighPop
+  name: impulse weapons safe
+  suffix: Random, impulse, High pop, Alert Level Lock
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeRandomImpulseHighPop
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband, AlertLevelLockAmber]
+  id: GunSafeRandomImpulseAlertLockedLowPop
+  name: impulse weapons safe
+  suffix: Random, impulse, Low pop, Alert Level Lock
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeRandomImpulseLowPop
+
+- type: entityTable
+  id: FillGunSafeRandomImpulseHighPop
+  table: !type:AllSelector
+    children:
+    - id: WeaponPulseRifleAP12
+      amount: !type:RangeNumberSelector
+        range: 3, 5
+    - id: MagazinePulseRifle
+      amount: !type:RangeNumberSelector
+        range: 5, 10
+    - !type:GroupSelector
+      children:
+      - !type:AllSelector
+        weight: 20
+        children:
+        - id: WeaponPulseShotgunHellHammer
+        - id: MagazinePulseShotgun
+          amount: 4
+      - !type:AllSelector
+        weight: 20
+        children:
+        - id: WeaponPulseSMGTritonM3
+        - id: MagazinePulseSubMachinePistol
+          amount: 4
+      - !type:NoneSelector
+        weight: 60
+
+- type: entityTable
+  id: FillGunSafeRandomImpulseLowPop
+  table: !type:AllSelector
+    children:
+    - id: WeaponPulseRifleAP12
+      amount: !type:RangeNumberSelector
+        range: 2, 3
+    - id: MagazinePulseRifle
+      amount: !type:RangeNumberSelector
+        range: 3, 6
