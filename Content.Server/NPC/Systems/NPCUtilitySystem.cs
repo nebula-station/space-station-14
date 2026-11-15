@@ -5,6 +5,7 @@ using Content.Shared.Wieldable.Components;
 using Content.Server.Wizard;
 // </Trauma>
 using System.Linq;
+using Content.Server._Nebula.NPC;
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.Hands.Systems;
 using Content.Server.NPC.Queries;
@@ -292,6 +293,10 @@ public sealed partial class NPCUtilitySystem : EntitySystem
 
                 return Math.Clamp(distance / radius, 0f, 1f);
             }
+            // Nebula start
+            case RandomCon:
+                return _random.NextFloat();
+            // Nebula end
             case TargetRequiresWieldAndCanWieldCon: // Goobstation
             {
                 if (!HasComp<GunRequiresWieldComponent>(targetUid) ||
@@ -516,6 +521,11 @@ public sealed partial class NPCUtilitySystem : EntitySystem
                 }
                 break;
             }
+            // Nebula start
+            case CleanableDecalsQuery:
+                AddCleanableDecals(owner, vision, entities);
+                break;
+            // Nebula end
             default:
                 throw new NotImplementedException();
         }
