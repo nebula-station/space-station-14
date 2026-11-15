@@ -41,3 +41,12 @@ Entries:
   url: https://github.com/nebula-station/space-station-14/pull/92
   avatar_url: https://avatars.githubusercontent.com/u/302218122?v=4
   title: '[Add] Extended ERT gamerules'
+- author: DefinitelyNotMori
+  changes:
+    - type: Add
+      message: Лактация через черту
+  id: 5
+  time: '2026-11-15T16:45:15.0000000+00:00'
+  url: https://github.com/nebula-station/space-station-14/pull/93
+  avatar_url: https://avatars.githubusercontent.com/u/92030026?v=4
+  title: '[Add] Lactation'
