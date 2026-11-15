@@ -45,6 +45,13 @@ public sealed partial class HumanoidProfileEditor
                 continue;
             }
             // </Trauma>
+            // Nebula edit start
+            if (Profile is { } profile && !trait.AllowsSex(profile.Sex))
+            {
+                Profile = profile.WithoutTraitPreference(trait.ID, _prototypeManager);
+                continue;
+            }
+            // Nebula edit end
             if (trait.Category == null)
             {
                 defaultTraits.Add(trait.ID);

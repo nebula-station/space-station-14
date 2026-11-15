@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2026 DefinitelyNotMori
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: trait
+  id: Lactation
+  name: trait-lactation-name
+  description: trait-lactation-desc
+  category: Quirks
+  includedSexes:
+  - Female
+  - Futanari
+  components:
+  - type: Lactation
+  - type: HarvestableSolution
+    solutionName: breasts
+    verbText: lactation-verb-milk
+    emptyMessage: lactation-dry
+    successMessage: lactation-success

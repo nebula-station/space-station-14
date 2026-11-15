@@ -57,6 +57,9 @@ public sealed partial class TraitSystem : EntitySystem
                 continue;
             // End Goobstation: Species trait support
 
+            if (!traitPrototype.AllowsSex(args.Profile.Sex)) // Nebula edit
+                continue;
+
             // Add all components required by the prototype
             if (traitPrototype.Components.Count > 0)
                 EntityManager.AddComponents(args.Mob, traitPrototype.Components, false);
