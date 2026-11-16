@@ -1,6 +1,8 @@
 - type: vendingMachineInventory
   id: LoveMateInventory
   startingInventory:
+    ClothingMaskDog: 3
+    ClothingEyesCatMask: 3
     SexyMuzzle: 3
     Gag: 3
     GagRing: 3
@@ -10,12 +12,36 @@
     ClothingUniformJumpsuitWhiteShirt: 3
     ClothingHandsGlovesBDSM: 3
     ClothingHeadCowHorns: 3
+    ClothingHeadbandCat: 3
+    ClothingHeadbandCow: 3
+    ClothingHeadbandDog: 3
+    ClothingHeadbandFox: 3
+    ClothingHeadbandKitsune: 3
     ClothingHeadDemonHorns: 3
     Whip: 2
     LongWhip: 2
     PaddleStack: 2
     SoftHandcuffs: 2
+    ClothingNeckChokerBell: 3
+    ClothingNeckChokerDefault: 3
+    ClothingNeckChokerHeart: 3
+    ClothingNeckChokerHeartSpikes: 3
+    ClothingNeckChokerLaceBlack: 3
+    ClothingNeckChokerLacePink: 3
+    ClothingNeckChokerLaceRed: 3
+    ClothingNeckChokerLaceWhite: 3
+    ClothingNeckChokerPinkHeart: 3
+    ClothingNeckChokerPinkHeartSpikes: 3
+    ClothingNeckChokerPinkSpikes: 3
+    ClothingNeckChokerRed: 3
+    ClothingNeckChokerRedBell: 3
+    ClothingNeckChokerRedHeart: 3
+    ClothingNeckChokerRedSpikes: 3
+    ClothingNeckChokerRedSpikesHeart: 3
+    ClothingNeckChokerRing: 3
+    ClothingNeckChokerSpikes: 3
     Leash: 3
+    BdsmLeash: 3
     Shibari: 2
     BlowGreen: 3
     BlowPink: 3

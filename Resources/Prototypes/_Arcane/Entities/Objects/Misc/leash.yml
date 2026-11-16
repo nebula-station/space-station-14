@@ -1,0 +1,11 @@
+- type: entity
+  parent: Leash
+  id: BdsmLeash
+  name: leather leash
+  description: For those who like to keep the situation under complete control. Well, or on a leash.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Misc/bdsm_leash.rsi
+    state: icon
+  - type: Item
+    sprite: _Arcane/Objects/Misc/bdsm_leash.rsi

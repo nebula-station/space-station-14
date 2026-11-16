@@ -23,11 +23,11 @@
     - map: [ "finger" ]
     - map: [ "leftarmband" ]
     - map: [ "rightarmband" ]
-    - map: [ "necklace" ]
     # Lua end
     - map: [ "outerClothing" ]
     - map: [ "eyes" ]
     - map: [ "neck" ]
+    - map: [ "necklace" ] # Nebula edit
     - map: [ "back" ]
     - map: [ "mask" ]
     - map: [ "head" ]

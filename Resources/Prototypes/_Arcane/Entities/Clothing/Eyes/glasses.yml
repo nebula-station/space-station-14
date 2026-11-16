@@ -9,3 +9,14 @@
     sprite: _Arcane/Clothing/Eyes/Sponsor/twilight_sparkle.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/Eyes/Sponsor/twilight_sparkle.rsi
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesCatMask
+  name: cat mask
+  description: A decorative mask shaped like a cute cat face.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Mask/cat_mask.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Mask/cat_mask.rsi

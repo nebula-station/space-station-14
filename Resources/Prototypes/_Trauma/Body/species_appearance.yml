@@ -75,6 +75,7 @@
     - map: [ "belt" ] # Nebula edit
     - map: [ "back" ]
     - map: [ "neck" ]
+    - map: [ "necklace" ] # Nebula edit
     - map: [ "suitstorage" ]
 
     # Stuff that goes in front of equipment

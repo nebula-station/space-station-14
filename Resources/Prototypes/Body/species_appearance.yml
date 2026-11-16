@@ -64,12 +64,12 @@
     - map: [ "finger" ]
     - map: [ "leftarmband" ]
     - map: [ "rightarmband" ]
-    - map: [ "necklace" ]
     # Lua end
     - map: [ "outerClothing" ]
     - map: [ "belt" ] # Nebula edit
     - map: [ "back" ]
     - map: [ "neck" ]
+    - map: [ "necklace" ] # Nebula edit
     - map: [ "suitstorage" ]
 
     # Stuff that goes in front of equipment

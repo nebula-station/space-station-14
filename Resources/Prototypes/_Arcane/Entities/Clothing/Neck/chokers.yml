@@ -1,0 +1,209 @@
+- type: entity
+  abstract: true
+  parent: ClothingNeckBase
+  id: ClothingNeckChokerBase
+  components:
+  - type: Clothing
+    slots:
+    - necklace
+    quickEquip: true
+    equipDelay: 4
+    unequipDelay: 5
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerBell
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_bell.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_bell.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerDefault
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_default.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_default.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerHeart
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_heart.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_heart.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerHeartSpikes
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_heart_spikes.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_heart_spikes.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerLaceBlack
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_lace_black.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_lace_black.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerLacePink
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_lace_pink.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_lace_pink.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerLaceRed
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_lace_red.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_lace_red.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerLaceWhite
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_lace_white.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_lace_white.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerPinkHeart
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_pink_heart.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_pink_heart.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerPinkHeartSpikes
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_pink_heart_spikes.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_pink_heart_spikes.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerPinkSpikes
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_pink_spikes.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_pink_spikes.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerRed
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerRedBell
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red_bell.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red_bell.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerRedHeart
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red_heart.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red_heart.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerRedSpikes
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red_spikes.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red_spikes.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerRedSpikesHeart
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red-spikes_heart.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_red-spikes_heart.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerRing
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_ring.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_ring.rsi
+
+- type: entity
+  parent: ClothingNeckChokerBase
+  id: ClothingNeckChokerSpikes
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Collars/choker_spikes.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Arcane/Clothing/Neck/Collars/choker_spikes.rsi
