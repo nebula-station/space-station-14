@@ -9,3 +9,17 @@
     state: icon
   - type: Clothing
     sprite: _Arcane/Clothing/Mask/gascommaid.rsi
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskDog
+  name: dog mask
+  description: A full face mask in the shape of a dog’s head.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Mask/dog_mask.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Mask/dog_mask.rsi
+  - type: HideLayerClothing
+    layers:
+      Snout: Mask

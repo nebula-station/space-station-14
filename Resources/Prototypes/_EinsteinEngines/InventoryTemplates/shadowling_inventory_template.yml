@@ -27,3 +27,19 @@
     uiWindowPos: 2,1
     strippingWindowPos: 2,4
     displayName: ID
+  # Nebula start
+  - name: finger
+    slotTexture: finger
+    slotFlags: FINGER
+    stripTime: 2
+    uiWindowPos: 3,1
+    strippingWindowPos: 3,4
+    displayName: Finger
+  - name: necklace
+    slotTexture: necklace
+    slotFlags: NECKLACE
+    stripTime: 2
+    uiWindowPos: 3,2
+    strippingWindowPos: 3,3
+    displayName: Necklace
+  # Nebula end
