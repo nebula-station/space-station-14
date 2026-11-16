@@ -50,3 +50,12 @@ Entries:
   url: https://github.com/nebula-station/space-station-14/pull/93
   avatar_url: https://avatars.githubusercontent.com/u/92030026?v=4
   title: '[Add] Lactation'
+- author: plasmagh0st
+  changes:
+    - type: Tweak
+      message: Из шаттла усиленного ОБР убран сейф импульсных карабинов
+  id: 6
+  time: '2026-11-16T19:45:50.0000000+00:00'
+  url: https://github.com/nebula-station/space-station-14/pull/96
+  avatar_url: https://avatars.githubusercontent.com/u/302218122?v=4
+  title: '[Tweak] Remove Impulse vaults from Extended ships'
