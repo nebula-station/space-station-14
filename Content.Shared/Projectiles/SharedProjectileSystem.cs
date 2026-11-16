@@ -229,6 +229,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
     private void OnBeingShot(Entity<ProjectileComponent> entity, ref ProjectileShotEvent args)
     {
         entity.Comp.WhenToStopIgnoringShooter = _timing.CurTime + entity.Comp.DelayToAcknowledgeShooter;
+        entity.Comp.ProjectileSpent = false; // Nebula
         Dirty(entity);
     }
 

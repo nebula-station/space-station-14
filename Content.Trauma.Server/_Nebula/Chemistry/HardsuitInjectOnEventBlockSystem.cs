@@ -4,6 +4,7 @@
 
 using Content.Server.Chemistry.Components;
 using Content.Shared._Nebula.Chemistry;
+using Content.Shared.Projectiles;
 using Content.Trauma.Shared._Nebula.Chemistry;
 using Content.Trauma.Shared.Medical.Hypoport;
 
@@ -18,15 +19,11 @@ public sealed partial class HardsuitInjectOnEventBlockSystem : EntitySystem
     [Dependency] private HardsuitInjectionBlockSystem _block = default!;
 
     [SubscribeLocalEvent]
-    private void OnWhileEmbeddedStartup(Entity<SolutionInjectWhileEmbeddedComponent> ent, ref ComponentStartup args)
+    private void OnMapInit(Entity<EmbeddableProjectileComponent> ent, ref MapInitEvent args)
     {
-        EnsureComp<HardsuitBlocksEmbedComponent>(ent);
-    }
-
-    [SubscribeLocalEvent]
-    private void OnOnEmbedStartup(Entity<SolutionInjectOnEmbedComponent> ent, ref ComponentStartup args)
-    {
-        EnsureComp<HardsuitBlocksEmbedComponent>(ent);
+        if (HasComp<SolutionInjectWhileEmbeddedComponent>(ent)
+            || HasComp<SolutionInjectOnEmbedComponent>(ent))
+            EnsureComp<HardsuitBlocksEmbedComponent>(ent);
     }
 
     [SubscribeLocalEvent(before: [typeof(HypoportSystem)])]

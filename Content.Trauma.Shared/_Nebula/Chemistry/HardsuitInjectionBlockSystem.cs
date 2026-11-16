@@ -2,7 +2,6 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Events;
 using Content.Shared._Nebula.Projectiles;
 using Content.Shared.Inventory;
@@ -19,6 +18,7 @@ namespace Content.Trauma.Shared._Nebula.Chemistry;
 /// </summary>
 public sealed partial class HardsuitInjectionBlockSystem : EntitySystem
 {
+    [Dependency] private HypoportSystem _hypoport = default!;
     [Dependency] private InventorySystem _inventory = default!;
     [Dependency] private TagSystem _tag = default!;
 
@@ -30,7 +30,7 @@ public sealed partial class HardsuitInjectionBlockSystem : EntitySystem
     private void OnBeforeInject(Entity<InventoryComponent> ent, ref TargetBeforeInjectEvent args)
     {
         if (args.Cancelled
-            || !IsInstant(args.UsedInjector)
+            || !_hypoport.IsHypospray(args.UsedInjector)
             || !IsBlocked(ent, args.EntityUsingInjector))
             return;
 
@@ -54,13 +54,5 @@ public sealed partial class HardsuitInjectionBlockSystem : EntitySystem
         return user != target
             && _inventory.TryGetSlotEntity(target, SuitSlot, out var suit)
             && _tag.HasTag(suit.Value, HardsuitTag);
-    }
-
-    private bool IsInstant(EntityUid injector)
-    {
-        return TryComp<InjectorComponent>(injector, out var comp)
-            && ProtoMan.Resolve(comp.ActiveModeProtoId, out var mode)
-            && mode.DelayPerVolume == TimeSpan.Zero
-            && mode.MobTime == TimeSpan.Zero;
     }
 }
