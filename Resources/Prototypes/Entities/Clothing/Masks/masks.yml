@@ -84,8 +84,6 @@
   # </Trauma>
   # Nebula start
   - type: SecDispatch
-    combatSound:
-      path: /Audio/_Nebula/Security/dispatch_hailer.ogg
     entries:
     - name: sec-dispatch-help-name
       message: sec-dispatch-help-message
@@ -93,24 +91,32 @@
         sprite: Structures/Wallmounts/Lighting/emergency_light.rsi
         state: emergency_light_on
       combat: true
+      sound:
+        path: /Audio/_Nebula/Security/dispatch_help.ogg
     - name: sec-dispatch-enemy-name
       message: sec-dispatch-enemy-message
       icon:
         sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
         state: icon
       combat: true
+      sound:
+        path: /Audio/_Nebula/Security/dispatch_enemy.ogg
     - name: sec-dispatch-megafauna-name
       message: sec-dispatch-megafauna-message
       icon:
         sprite: _Lavaland/Mobs/legion.rsi
         state: legion
       combat: true
+      sound:
+        path: /Audio/_Nebula/Security/dispatch_megafauna.ogg
     - name: sec-dispatch-contact-name
       message: sec-dispatch-contact-message
       icon:
         sprite: Interface/Misc/crosshair_pointers.rsi
         state: gun_sight
       combat: true
+      sound:
+        path: /Audio/_Nebula/Security/dispatch_contact.ogg
     - name: sec-dispatch-location-name
       message: sec-dispatch-location-message
       icon:
