@@ -45,6 +45,7 @@
   - type: Tag
     tags:
       - HEVSuit
+      - Hardsuit # Nebula edit
 
 - type: entity
   parent: ClothingOuterBase

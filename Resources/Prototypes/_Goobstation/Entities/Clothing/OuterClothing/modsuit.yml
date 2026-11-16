@@ -42,6 +42,7 @@
   - type: Tag
     tags:
     - PlasmamanSafe
+    - Hardsuit # Nebula edit
   - type: IgniteFromGasImmunity
     parts:
     - Torso

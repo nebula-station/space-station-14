@@ -10,6 +10,7 @@ using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Throwing;
 using Content.Shared.Whitelist;
+using Content.Shared._Nebula.Projectiles;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
@@ -96,7 +97,10 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
     private void OnEmbedProjectileHit(Entity<EmbeddableProjectileComponent> embeddable, ref ProjectileHitEvent args)
     {
-        EmbedAttach(embeddable, args.Target, args.Shooter, embeddable.Comp);
+        // Nebula start
+        if (!EmbedAttach(embeddable, args.Target, args.Shooter, embeddable.Comp))
+            return;
+        // Nebula end
 
         // Raise a specific event for projectiles.
         if (!TryComp<ProjectileComponent>(embeddable, out var projectile))
@@ -106,8 +110,15 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         RaiseLocalEvent(embeddable, ref ev);
     }
 
-    private void EmbedAttach(EntityUid uid, EntityUid target, EntityUid? user, EmbeddableProjectileComponent component)
+    private bool EmbedAttach(EntityUid uid, EntityUid target, EntityUid? user, EmbeddableProjectileComponent component) // Nebula edit
     {
+        // Nebula start
+        var attempt = new EmbedAttemptEvent(target, user);
+        RaiseLocalEvent(uid, ref attempt);
+        if (attempt.Cancelled)
+            return false;
+        // Nebula end
+
         TryComp<PhysicsComponent>(uid, out var physics);
         _physics.SetLinearVelocity(uid, Vector2.Zero, body: physics);
         _physics.SetBodyType(uid, BodyType.Static, body: physics);
@@ -139,6 +150,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         // </Trauma>
 
         embeddedContainer.EmbeddedObjects.Add(uid);
+        return true; // Nebula edit
     }
 
     public void EmbedDetach(EntityUid uid, EmbeddableProjectileComponent? component, EntityUid? user = null)
