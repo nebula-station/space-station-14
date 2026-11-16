@@ -4,8 +4,6 @@
 
 using Content.Server.Chemistry.Components;
 using Content.Shared._Nebula.Chemistry;
-using Content.Shared._Nebula.Projectiles;
-using Content.Shared.Throwing;
 using Content.Trauma.Shared._Nebula.Chemistry;
 using Content.Trauma.Shared.Medical.Hypoport;
 
@@ -20,15 +18,15 @@ public sealed partial class HardsuitInjectOnEventBlockSystem : EntitySystem
     [Dependency] private HardsuitInjectionBlockSystem _block = default!;
 
     [SubscribeLocalEvent]
-    private void OnWhileEmbeddedEmbedAttempt(Entity<SolutionInjectWhileEmbeddedComponent> ent, ref EmbedAttemptEvent args)
+    private void OnWhileEmbeddedStartup(Entity<SolutionInjectWhileEmbeddedComponent> ent, ref ComponentStartup args)
     {
-        TryBlockEmbed(ent, ref args);
+        EnsureComp<HardsuitBlocksEmbedComponent>(ent);
     }
 
     [SubscribeLocalEvent]
-    private void OnOnEmbedEmbedAttempt(Entity<SolutionInjectOnEmbedComponent> ent, ref EmbedAttemptEvent args)
+    private void OnOnEmbedStartup(Entity<SolutionInjectOnEmbedComponent> ent, ref ComponentStartup args)
     {
-        TryBlockEmbed(ent, ref args);
+        EnsureComp<HardsuitBlocksEmbedComponent>(ent);
     }
 
     [SubscribeLocalEvent(before: [typeof(HypoportSystem)])]
@@ -41,14 +39,6 @@ public sealed partial class HardsuitInjectOnEventBlockSystem : EntitySystem
     private void OnMeleeAttempt(Entity<MeleeChemicalInjectorComponent> ent, ref InjectOnEventAttemptEvent args)
     {
         TryBlockInject(ref args);
-    }
-
-    private void TryBlockEmbed(EntityUid projectile, ref EmbedAttemptEvent args)
-    {
-        // thrown syringes come without a user, the syringe gun throws them too
-        var user = args.User ?? CompOrNull<ThrownItemComponent>(projectile)?.Thrower;
-        if (_block.IsBlocked(args.Target, user))
-            args.Cancelled = true;
     }
 
     private void TryBlockInject(ref InjectOnEventAttemptEvent args)

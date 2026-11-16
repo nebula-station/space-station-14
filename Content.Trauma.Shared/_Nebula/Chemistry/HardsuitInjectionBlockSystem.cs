@@ -4,8 +4,10 @@
 
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Events;
+using Content.Shared._Nebula.Projectiles;
 using Content.Shared.Inventory;
 using Content.Shared.Tag;
+using Content.Shared.Throwing;
 using Content.Trauma.Shared.Medical.Hypoport;
 using Robust.Shared.Prototypes;
 
@@ -34,6 +36,14 @@ public sealed partial class HardsuitInjectionBlockSystem : EntitySystem
 
         args.OverrideMessage = Loc.GetString(BlockedMessage);
         args.Cancel();
+    }
+
+    [SubscribeLocalEvent]
+    private void OnEmbedAttempt(Entity<HardsuitBlocksEmbedComponent> ent, ref EmbedAttemptEvent args)
+    {
+        var user = args.User ?? CompOrNull<ThrownItemComponent>(ent)?.Thrower;
+        if (IsBlocked(args.Target, user))
+            args.Cancelled = true;
     }
 
     /// <summary>
