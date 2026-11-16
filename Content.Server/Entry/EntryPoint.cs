@@ -214,13 +214,8 @@ namespace Content.Server.Entry
 
         private static void LoadConfigPresets(IConfigurationManager cfg, IResourceManager res, ISawmill sawmill)
         {
-            LoadBuildConfigPresets(cfg, res, sawmill);
-
             var presets = cfg.GetCVar(CCVars.ConfigPresets);
-            if (presets == "")
-                return;
-
-            foreach (var preset in presets.Split(','))
+            foreach (var preset in presets.Split(',', StringSplitOptions.RemoveEmptyEntries)) // Nebula edit
             {
                 var path = $"{ConfigPresetsDir}{preset}.toml";
                 if (!res.TryContentFileRead(path, out var file))
@@ -232,6 +227,8 @@ namespace Content.Server.Entry
                 cfg.LoadDefaultsFromTomlStream(file);
                 sawmill.Info("Loaded config preset: {Preset}", path);
             }
+
+            LoadBuildConfigPresets(cfg, res, sawmill); // Nebula edit
         }
 
         private static void LoadBuildConfigPresets(IConfigurationManager cfg, IResourceManager res, ISawmill sawmill)
