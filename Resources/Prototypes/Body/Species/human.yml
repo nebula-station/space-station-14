@@ -95,6 +95,7 @@
     organs:
       Torso: OrganHumanTorso
       Head: OrganHumanHead
+      Tail: OrganHumanTail # Nebula edit
       ArmLeft: OrganHumanArmLeft
       ArmRight: OrganHumanArmRight
       HandRight: OrganHumanHandRight
@@ -196,7 +197,7 @@
       group: Human
 
 - type: entity
-  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganHumanExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorsoTailed, OrganHumanExternal ] # Nebula edit
   id: OrganHumanTorso
 
 - type: entity

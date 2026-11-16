@@ -313,6 +313,7 @@
     flavorKind: station-event-random-sentience-flavor-mechanical
   - type: Absorbent
     pickupAmount: 10
+  - type: FloorCleaner # Nebula edit
   - type: UseDelay
     delay: 2
   - type: SolutionRegeneration

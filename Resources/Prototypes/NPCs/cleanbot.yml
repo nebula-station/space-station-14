@@ -4,6 +4,11 @@
     - tasks:
         - !type:HTNCompoundTask
           task: BufferNearbyPuddlesCompound
+    # Nebula start
+    - tasks:
+        - !type:HTNCompoundTask
+          task: BufferNearbyDecalsCompound
+    # Nebula end
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound

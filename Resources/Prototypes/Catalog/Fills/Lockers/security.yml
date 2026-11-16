@@ -118,6 +118,7 @@
     - id: MaterialBones1 # Remains of a longrotten brigmedic.
       amount: 5
     # </Trauma>
+    - id: UndeterminedVoidsuitBrigMed # Nebula edit
     - id: ClothingUniformJumpskirtOfLife
       prob: 0.1
     - id: MedkitOxygenFilled

@@ -1,0 +1,15 @@
+- type: entity
+  parent: [ OrganBaseTail, OrganHumanExternal ]
+  id: OrganHumanTail
+  components:
+  - type: Sprite
+    sprite: _Trauma/Mobs/Species/Cat/parts.rsi
+    state: tail
+  - type: VisualOrgan
+    data:
+      sprite: _Trauma/empty.rsi
+      state: empty
+  - type: OrganComponents
+    onAdd:
+    - type: Wagging
+      action: ActionToggleWaggingVulpkanin

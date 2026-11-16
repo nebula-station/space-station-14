@@ -21,3 +21,5 @@ ent-OrganTajaranFootLeft = { ent-OrganHumanFootLeft }
 ent-OrganTajaranFootRight = { ent-OrganHumanFootRight }
     .desc = { ent-OrganHumanFootRight.desc }
 ent-OrganTajaranTail = хвост
+ent-OrganTajaranStomach = { ent-OrganHumanStomach }
+    .desc = { ent-OrganHumanStomach.desc }

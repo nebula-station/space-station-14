@@ -1,0 +1,60 @@
+- type: utilityQuery
+  id: NearbyCleanableDecals
+  query:
+    - !type:CleanableDecalsQuery
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+    - !type:TargetAccessibleCon
+      curve: !type:BoolCurve
+    - !type:TargetInLOSOrCurrentCon
+      curve: !type:BoolCurve
+
+- type: utilityQuery
+  id: RandomCleanableDecal
+  query:
+    - !type:CleanableDecalsQuery
+  considerations:
+    - !type:TargetAccessibleCon
+      curve: !type:BoolCurve
+    - !type:TargetInLOSOrCurrentCon
+      curve: !type:BoolCurve
+    - !type:RandomCon
+      curve: !type:QuadraticCurve
+
+# Goes for the nearest cleanable decal, like a footprint; if there is no path to it, tries a random one instead
+- type: htnCompound
+  id: BufferNearbyDecalsCompound
+  branches:
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UtilityOperator
+            proto: NearbyCleanableDecals
+        - !type:HTNCompoundTask
+          task: CleanTargetDecalCompound
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UtilityOperator
+            proto: RandomCleanableDecal
+        - !type:HTNCompoundTask
+          task: CleanTargetDecalCompound
+
+- type: htnCompound
+  id: CleanTargetDecalCompound
+  branches:
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:MoveToOperator
+            pathfindInPlanning: true
+            removeKeyOnFinish: false
+            targetKey: TargetCoordinates
+            pathfindKey: TargetPathfind
+            rangeKey: MeleeRange
+        - !type:HTNPrimitiveTask
+          preconditions:
+            - !type:TargetInRangePrecondition
+              targetKey: Target
+              rangeKey: InteractRange
+          operator: !type:InteractWithOperator
+            targetKey: Target

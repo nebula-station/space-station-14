@@ -17,12 +17,19 @@
   id: BriefcaseWeaponViperFilled
   name: secure viper case
   components:
+  # Nebula start
+  - type: Storage
+    maxItemSize: Ginormous
+    grid:
+    - 0,0,4,1
+  # Nebula end
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
         children:
         - id: WeaponPistolViper
         - id: MagazinePistolHighCapacity
+          amount: 3 # Nebula edit
         - id: SkillChipPistol
 
 - type: entity
@@ -30,12 +37,19 @@
   id: BriefcaseWeaponCobraFilled
   name: secure cobra case
   components:
+  # Nebula start
+  - type: Storage
+    maxItemSize: Ginormous
+    grid:
+    - 0,0,4,1
+  # Nebula end
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
         children:
         - id: WeaponPistolCobra
         - id: MagazinePistolCaselessRifle
+          amount: 3 # Nebula edit
         - id: SkillChipPistol
 
 - type: entity
@@ -207,6 +221,7 @@
         children:
         - id: WeaponRifleM90
         - id: MagazineRifle
+          amount: 3 # Nebula edit
         - id: SkillChipRifle
 
 - type: entity

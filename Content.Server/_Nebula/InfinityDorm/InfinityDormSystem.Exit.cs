@@ -8,6 +8,7 @@ using Content.Shared._Nebula.InfinityDorms;
 using Content.Shared._Nebula.InfinityDorms.Components;
 using Content.Shared._Nebula.InfinityDorms.States;
 using Content.Shared.Database;
+using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Tag;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
@@ -90,10 +91,20 @@ public sealed partial class InfinityDormSystem
 
     private void DeleteAllUserItemsWithTag(EntityUid user, ProtoId<TagPrototype> tagProto)
     {
-        foreach (var item in _inventory.GetHandOrInventoryEntities(user).ToList())
+        foreach (var item in GetUserItems(user))
         {
             DeleteRecursive(item, tagProto);
         }
+    }
+
+    private List<EntityUid> GetUserItems(EntityUid user)
+    {
+        var items = _inventory.GetHandOrInventoryEntities(user).ToList();
+
+        if (TryComp<BorgChassisComponent>(user, out var chassis))
+            items.AddRange(chassis.ModuleContainer.ContainedEntities);
+
+        return items;
     }
 
     private void DeleteRecursive(EntityUid item, ProtoId<TagPrototype> tag)
