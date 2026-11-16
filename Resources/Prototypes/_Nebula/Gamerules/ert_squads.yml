@@ -1,0 +1,52 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: SpawnERTSecurity
+  id: SpawnERTDelta5
+  components:
+  - type: ConditionalSpawnRule
+    key: ertdelta5
+
+- type: entity
+  parent: SpawnERTSecurity
+  id: SpawnERTEpsilon6
+  components:
+  - type: ConditionalSpawnRule
+    key: ertepsilon6
+
+- type: entity
+  parent: SpawnERTSecurityExtended
+  id: SpawnERTNu7
+  components:
+  - type: ConditionalSpawnRule
+    key: ertnu7
+
+- type: entity
+  parent: SpawnERTSecurityExtended
+  id: SpawnERTAlpha9
+  components:
+  - type: ConditionalSpawnRule
+    key: ertalpha9
+
+- type: entity
+  parent: SpawnERTChaplain
+  id: SpawnERTEta77
+  components:
+  - type: ConditionalSpawnRule
+    key: erteta77
+
+- type: entity
+  parent: SpawnCBURN
+  id: SpawnERTTheta4
+  components:
+  - type: ConditionalSpawnRule
+    key: erttheta4
+
+- type: entity
+  parent: SpawnCBURN
+  id: SpawnERTBeta7
+  components:
+  - type: ConditionalSpawnRule
+    key: ertbeta7
