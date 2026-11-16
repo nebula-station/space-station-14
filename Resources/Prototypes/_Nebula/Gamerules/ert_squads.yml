@@ -6,6 +6,8 @@
   parent: SpawnERTSecurity
   id: SpawnERTDelta5
   components:
+  - type: StationEvent
+    startAnnouncement: station-event-ert-delta5-enroute
   - type: ConditionalSpawnRule
     key: ertdelta5
 
@@ -13,6 +15,8 @@
   parent: SpawnERTSecurity
   id: SpawnERTEpsilon6
   components:
+  - type: StationEvent
+    startAnnouncement: station-event-ert-epsilon6-enroute
   - type: ConditionalSpawnRule
     key: ertepsilon6
 
@@ -20,6 +24,8 @@
   parent: SpawnERTSecurityExtended
   id: SpawnERTNu7
   components:
+  - type: StationEvent
+    startAnnouncement: station-event-ert-nu7-enroute
   - type: ConditionalSpawnRule
     key: ertnu7
 
@@ -27,6 +33,8 @@
   parent: SpawnERTSecurityExtended
   id: SpawnERTAlpha9
   components:
+  - type: StationEvent
+    startAnnouncement: station-event-ert-alpha9-enroute
   - type: ConditionalSpawnRule
     key: ertalpha9
 
@@ -34,6 +42,8 @@
   parent: SpawnERTChaplain
   id: SpawnERTEta77
   components:
+  - type: StationEvent
+    startAnnouncement: station-event-ert-eta77-enroute
   - type: ConditionalSpawnRule
     key: erteta77
 
@@ -41,6 +51,8 @@
   parent: SpawnCBURN
   id: SpawnERTTheta4
   components:
+  - type: StationEvent
+    startAnnouncement: station-event-ert-theta4-enroute
   - type: ConditionalSpawnRule
     key: erttheta4
 
@@ -48,5 +60,7 @@
   parent: SpawnCBURN
   id: SpawnERTBeta7
   components:
+  - type: StationEvent
+    startAnnouncement: station-event-ert-beta7-enroute
   - type: ConditionalSpawnRule
     key: ertbeta7

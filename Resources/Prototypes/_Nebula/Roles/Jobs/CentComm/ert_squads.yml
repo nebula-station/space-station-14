@@ -52,10 +52,36 @@
     - MagazineRifle
 
 - type: startingGear
+  parent: ERTMedicalGear
+  id: ERTMedicalGearDelta5
+  storage:
+    back:
+    - ClothingEyesGlassesChemical
+    - ChemistryBottleOmnizine
+    - MedkitAdvancedFilled
+    - CentCommHypo
+    - BluespaceBeakerOxandrolone
+    - BluespaceBeakerSalicylicAcid
+    - ParamedHypo
+    - CartridgeAtropine
+    - CartridgeAtropine
+
+- type: startingGear
   parent: ERTMedicalGearEVA
   id: ERTMedicalGearEpsilon6
   equipment:
     eyes: ClothingEyesNightVisionSecurityGoggles
+  storage:
+    back:
+    - ClothingEyesGlassesChemical
+    - ChemistryBottleOmnizine
+    - MedkitAdvancedFilled
+    - CentCommHypo
+    - BluespaceBeakerOxandrolone
+    - BluespaceBeakerSalicylicAcid
+    - ParamedHypo
+    - CartridgeAtropine
+    - CartridgeAtropine
 
 - type: startingGear
   parent: ERTLeaderGearExtended
@@ -131,7 +157,8 @@
     - ParamedHypo
     - MedkitAdvancedFilled
     - MedkitCombatFilled
-    - BluespaceBeakerERTMedical
+    - BluespaceBeakerOxandrolone
+    - BluespaceBeakerSalicylicAcid
     - ChemistryBottleOmnizine
     - CartridgeAtropine
     - CartridgeAtropine
@@ -231,7 +258,8 @@
     - ParamedHypo
     - MedkitAdvancedFilled
     - MedkitCombatFilled
-    - BluespaceBeakerERTMedical
+    - BluespaceBeakerOxandrolone
+    - BluespaceBeakerSalicylicAcid
     - ChemistryBottleOmnizine
     - CartridgeAtropine
     - CartridgeAtropine

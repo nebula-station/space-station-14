@@ -3,6 +3,14 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: randomHumanoidSettings
+  id: ERTMedicalDelta5
+  parent: ERTMedical
+  components:
+  - type: Loadout
+    prototypes: [ ERTMedicalGearDelta5 ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+
+- type: randomHumanoidSettings
   id: ERTLeaderEpsilon6
   parent: ERTLeaderEVA
   components:
@@ -107,6 +115,14 @@
   - type: Loadout
     prototypes: [ CBURNGearBeta7 ]
     roleLoadout: [ RoleCBURNSquad ]
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTMedical
+  id: RandomHumanoidSpawnerERTMedicalDelta5
+  suffix: ERTRole, Basic, Delta-5
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTMedicalDelta5
 
 - type: entity
   parent: RandomHumanoidSpawnerERTLeaderEVA

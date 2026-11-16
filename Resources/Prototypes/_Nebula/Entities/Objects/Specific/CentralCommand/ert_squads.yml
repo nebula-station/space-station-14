@@ -97,15 +97,29 @@
 
 - type: entity
   parent: BluespaceBeaker
-  id: BluespaceBeakerERTMedical
-  suffix: ERT
+  id: BluespaceBeakerOxandrolone
+  suffix: oxandrolone
   components:
+  - type: Label
+    localizedLabel: reagent-name-oxandrolone
   - type: Solution
     solution:
       maxVol: 1000
       reagents:
       - ReagentId: Oxandrolone
         Quantity: 200
+
+- type: entity
+  parent: BluespaceBeaker
+  id: BluespaceBeakerSalicylicAcid
+  suffix: salicylic acid
+  components:
+  - type: Label
+    localizedLabel: reagent-name-salicylic-acid
+  - type: Solution
+    solution:
+      maxVol: 1000
+      reagents:
       - ReagentId: SalicylicAcid
         Quantity: 200
 
