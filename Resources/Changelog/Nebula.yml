@@ -59,3 +59,12 @@ Entries:
   url: https://github.com/nebula-station/space-station-14/pull/96
   avatar_url: https://avatars.githubusercontent.com/u/302218122?v=4
   title: '[Tweak] Remove Impulse vaults from Extended ships'
+- author: plasmagh0st
+  changes:
+    - type: Add
+      message: Больше видов ОБР
+  id: 7
+  time: '2026-11-18T11:00:19.0000000+00:00'
+  url: https://github.com/nebula-station/space-station-14/pull/102
+  avatar_url: https://avatars.githubusercontent.com/u/302218122?v=4
+  title: '[Add] Variabilities of ERT'
