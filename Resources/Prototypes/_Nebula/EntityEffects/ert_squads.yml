@@ -1,0 +1,110 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entityEffect
+  id: SpawnERTLeaderDelta5
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTLeader
+
+- type: entityEffect
+  id: SpawnERTSecurityDelta5
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTSecurity
+
+- type: entityEffect
+  id: SpawnERTMedicalDelta5
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTMedicalDelta5
+
+- type: entityEffect
+  id: SpawnERTLeaderEpsilon6
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTLeaderEpsilon6
+
+- type: entityEffect
+  id: SpawnERTSecurityEpsilon6
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTSecurityEpsilon6
+
+- type: entityEffect
+  id: SpawnERTMedicalEpsilon6
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTMedicalEpsilon6
+
+- type: entityEffect
+  id: SpawnERTLeaderNu7
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTLeaderNu7
+  - !type:SpawnEntity
+    entity: WeaponLightMachineGunRPD
+  - !type:SpawnEntity
+    entity: MagazineLightMachineGunRPD
+    number: 3
+
+- type: entityEffect
+  id: SpawnERTSecurityNu7
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTSecurityNu7
+
+- type: entityEffect
+  id: SpawnERTMedicalNu7
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTMedicalNu7
+
+- type: entityEffect
+  id: SpawnERTLeaderAlpha9
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTLeaderAlpha9
+
+- type: entityEffect
+  id: SpawnERTSecurityAlpha9
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTSecurityAlpha9
+
+- type: entityEffect
+  id: SpawnERTMedicalAlpha9
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTMedicalAlpha9
+
+- type: entityEffect
+  id: SpawnERTLeaderEta77
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTLeaderEta77
+
+- type: entityEffect
+  id: SpawnERTChaplainEta77
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: ERTChaplainEta77
+
+- type: entityEffect
+  id: SpawnCBURNAgentTheta4
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: CBURNAgentTheta4
+
+- type: entityEffect
+  id: SpawnCBURNAgentBeta7
+  effects:
+  - !type:SpawnRandomHumanoid
+    settings: CBURNAgentBeta7
+
+- type: entityEffect
+  id: SpawnGunSafeCBURNTheta4
+  effects:
+  - !type:SpawnEntity
+    entity: GunSafeCBURNTheta4

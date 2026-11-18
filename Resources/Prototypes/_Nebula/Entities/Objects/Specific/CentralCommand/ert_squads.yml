@@ -1,0 +1,199 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: SyringeCase
+  id: SyringeCaseNu7
+  suffix: Nu-7
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: AdvancedCombatMedipen
+        - id: CombatMedipen
+          amount: 3
+        - id: PunctAutoInjector
+          amount: 2
+        - id: BurnAutoInjector
+          amount: 2
+        - id: AirlossAutoInjector
+          amount: 2
+
+- type: entity
+  parent: SyringeCase
+  id: SyringeCaseAlpha9
+  suffix: Alpha-9
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: AdvancedCombatMedipen
+          amount: 2
+        - id: CombatMedipen
+          amount: 2
+        - id: PunctAutoInjector
+          amount: 2
+        - id: BurnAutoInjector
+          amount: 2
+        - id: AirlossAutoInjector
+          amount: 2
+
+- type: entity
+  parent: SyringeCase
+  id: SyringeCaseEta77
+  suffix: Eta-77
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BruteAutoInjector
+          amount: 2
+        - id: CombatMedipen
+          amount: 2
+        - id: PunctAutoInjector
+          amount: 2
+        - id: BurnAutoInjector
+          amount: 2
+        - id: AirlossAutoInjector
+          amount: 2
+
+- type: entity
+  parent: SyringeCase
+  id: SyringeCaseTheta4
+  suffix: Theta-4
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BruteAutoInjector
+          amount: 2
+        - id: BurnAutoInjector
+          amount: 2
+        - id: AirlossAutoInjector
+          amount: 2
+
+- type: entity
+  parent: SyringeCase
+  id: SyringeCaseBeta7
+  suffix: Beta-7
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BruteAutoInjector
+          amount: 2
+        - id: BurnAutoInjector
+          amount: 2
+        - id: AirlossAutoInjector
+          amount: 2
+        - id: AmbuzolMedipen
+          amount: 2
+
+- type: entity
+  parent: BluespaceBeaker
+  id: BluespaceBeakerOxandrolone
+  suffix: oxandrolone
+  components:
+  - type: Label
+    localizedLabel: reagent-name-oxandrolone
+  - type: Solution
+    solution:
+      maxVol: 1000
+      reagents:
+      - ReagentId: Oxandrolone
+        Quantity: 200
+
+- type: entity
+  parent: BluespaceBeaker
+  id: BluespaceBeakerSalicylicAcid
+  suffix: salicylic acid
+  components:
+  - type: Label
+    localizedLabel: reagent-name-salicylic-acid
+  - type: Solution
+    solution:
+      maxVol: 1000
+      reagents:
+      - ReagentId: SalicylicAcid
+        Quantity: 200
+
+- type: entity
+  parent: ClothingEyesNightVisionSecurityGoggles
+  id: ClothingEyesNightVisionSecurityGogglesHealth
+  suffix: Health bars
+  components:
+  - type: ShowHealthBars
+
+- type: entity
+  parent: ClothingEyesGlassesDeathsquad
+  id: ClothingEyesGlassesAlpha9
+  name: Alpha-9 tech visor
+  components:
+  - type: ChameleonClothing
+    default: ClothingEyesGlassesAlpha9
+    showVerb: false
+    affectedByEmp: false
+    canBeSetByController: false
+
+- type: entity
+  parent: ClothingShoesBootsMagAdv
+  id: ClothingShoesBootsMagAdvAlpha9
+  suffix: Alpha-9
+  components:
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
+    requireActivated: false
+
+- type: entity
+  parent: ClothingOuterHardsuitERTSecurity
+  id: ClothingOuterHardsuitERTSecurityAlpha9
+  suffix: Alpha-9
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.405
+        Slash: 0.405
+        Piercing: 0.405
+        Heat: 0.405
+        Radiation: 0.405
+        Caustic: 0.405
+
+- type: entity
+  parent: ClothingOuterHardsuitERTMedical
+  id: ClothingOuterHardsuitERTMedicalAlpha9
+  suffix: Alpha-9
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.405
+        Slash: 0.405
+        Piercing: 0.405
+        Heat: 0.405
+        Radiation: 0.405
+        Caustic: 0.405
+
+- type: entity
+  parent: GunSafeBaseSecure
+  id: GunSafeCBURNTheta4
+  name: CBURN equipment safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ClothingBackpackFlamethrower
+        - id: WeaponFlamethrower
+        - id: FuelTankFlamethrower
+          amount: 5
+        - id: WeaponEarthGovLaserMG
+        - id: InducerCombat
+        - id: XenobioVolatileOrgan

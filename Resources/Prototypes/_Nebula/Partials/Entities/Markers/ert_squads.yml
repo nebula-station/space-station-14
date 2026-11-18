@@ -1,0 +1,76 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: ErtRandomHumanoidSpawner1
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertdelta5: SpawnERTLeaderDelta5
+      ertepsilon6: SpawnERTLeaderEpsilon6
+      ertnu7: SpawnERTLeaderNu7
+      ertalpha9: SpawnERTLeaderAlpha9
+      erteta77: SpawnERTLeaderEta77
+      erttheta4: SpawnCBURNAgentTheta4
+      ertbeta7: SpawnCBURNAgentBeta7
+
+- type: entity
+  id: ErtRandomHumanoidSpawner2
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertdelta5: SpawnERTMedicalDelta5
+      ertepsilon6: SpawnERTMedicalEpsilon6
+      ertnu7: SpawnERTMedicalNu7
+      ertalpha9: SpawnERTMedicalAlpha9
+      erteta77: SpawnERTChaplainEta77
+      erttheta4: SpawnCBURNAgentTheta4
+      ertbeta7: SpawnCBURNAgentBeta7
+
+- type: entity
+  id: ErtRandomHumanoidSpawner3
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertdelta5: SpawnERTSecurityDelta5
+      ertepsilon6: SpawnERTSecurityEpsilon6
+      ertnu7: SpawnERTSecurityNu7
+      ertalpha9: SpawnERTSecurityAlpha9
+      erteta77: SpawnERTChaplainEta77
+      erttheta4: SpawnCBURNAgentTheta4
+      ertbeta7: SpawnCBURNAgentBeta7
+
+- type: entity
+  id: ErtConditionalItemSpawner1
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      erteta77: SpawnCrematorium
+
+- type: entity
+  id: ErtConditionalItemSpawner2
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      erteta77: SpawnAltarSpawner
+
+- type: entity
+  id: ErtConditionalItemSpawner3
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      erteta77: SpawnAltarSpawner
+      erttheta4: SpawnGunSafeCBURNTheta4
+      ertbeta7: SpawnGunSafeLaserRandom
+
+- type: entity
+  id: ErtConditionalItemSpawner4
+  components:
+  - type: GameRuleSpawner
+    toSpawn:
+      ertnu7: SpawnGunSafeERTOrdnance
+      ertalpha9: SpawnGunSafeERTOrdnance
+      erteta77: SpawnCrateHolySuppliesAdvanced
+      erttheta4: SpawnGunSafeCburnSpear
+      ertbeta7: SpawnGunSafeCburnSpear

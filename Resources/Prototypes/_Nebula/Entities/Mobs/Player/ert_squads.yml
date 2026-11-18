@@ -1,0 +1,229 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: randomHumanoidSettings
+  id: ERTMedicalDelta5
+  parent: ERTMedical
+  components:
+  - type: Loadout
+    prototypes: [ ERTMedicalGearDelta5 ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+
+- type: randomHumanoidSettings
+  id: ERTLeaderEpsilon6
+  parent: ERTLeaderEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTLeaderGearEpsilon6 ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+
+- type: randomHumanoidSettings
+  id: ERTSecurityEpsilon6
+  parent: ERTSecurityEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTSecurityGearEpsilon6 ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+
+- type: randomHumanoidSettings
+  id: ERTMedicalEpsilon6
+  parent: ERTMedicalEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTMedicalGearEpsilon6 ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+
+- type: randomHumanoidSettings
+  id: ERTLeaderNu7
+  parent: ERTLeaderEVAExtended
+  components:
+  - type: Loadout
+    prototypes: [ ERTLeaderGearNu7 ]
+    roleLoadout: [ RoleERTSquad ]
+  - type: AutoImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, FreedomImplant, BluespaceLifelineImplant, RadioImplantCentcomm, NutrimentPumpImplant, StypticStimulatorImplant, KravMagaImplant ]
+
+- type: randomHumanoidSettings
+  id: ERTSecurityNu7
+  parent: ERTSecurityEVAExtended
+  components:
+  - type: Loadout
+    prototypes: [ ERTSecurityGearNu7 ]
+    roleLoadout: [ RoleERTSquad ]
+
+- type: randomHumanoidSettings
+  id: ERTMedicalNu7
+  parent: ERTMedicalEVAExtended
+  components:
+  - type: Loadout
+    prototypes: [ ERTMedicalGearNu7 ]
+    roleLoadout: [ RoleERTSquad ]
+
+- type: randomHumanoidSettings
+  id: ERTLeaderAlpha9
+  parent: ERTLeaderEVAExtended
+  components:
+  - type: Loadout
+    prototypes: [ ERTLeaderGearAlpha9 ]
+    roleLoadout: [ RoleERTSquad ]
+
+- type: randomHumanoidSettings
+  id: ERTSecurityAlpha9
+  parent: ERTSecurityEVAExtended
+  components:
+  - type: Loadout
+    prototypes: [ ERTSecurityGearAlpha9 ]
+    roleLoadout: [ RoleERTSquad ]
+
+- type: randomHumanoidSettings
+  id: ERTMedicalAlpha9
+  parent: ERTMedicalEVAExtended
+  components:
+  - type: Loadout
+    prototypes: [ ERTMedicalGearAlpha9 ]
+    roleLoadout: [ RoleERTSquad ]
+
+- type: randomHumanoidSettings
+  id: ERTLeaderEta77
+  parent: ERTLeaderEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTLeaderGearEta77 ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+
+- type: randomHumanoidSettings
+  id: ERTChaplainEta77
+  parent: ERTChaplainEVA
+  components:
+  - type: Loadout
+    prototypes: [ ERTChaplainGearEta77 ]
+    roleLoadout: [ RoleSurvivalMilitaryDouble ]
+
+- type: randomHumanoidSettings
+  id: CBURNAgentTheta4
+  parent: CBURNAgent
+  components:
+  - type: Loadout
+    prototypes: [ CBURNGearTheta4 ]
+    roleLoadout: [ RoleCBURNSquad ]
+
+- type: randomHumanoidSettings
+  id: CBURNAgentBeta7
+  parent: CBURNAgent
+  components:
+  - type: Loadout
+    prototypes: [ CBURNGearBeta7 ]
+    roleLoadout: [ RoleCBURNSquad ]
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTMedical
+  id: RandomHumanoidSpawnerERTMedicalDelta5
+  suffix: ERTRole, Basic, Delta-5
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTMedicalDelta5
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTLeaderEVA
+  id: RandomHumanoidSpawnerERTLeaderEpsilon6
+  suffix: ERTRole, EVA, Epsilon-6
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTLeaderEpsilon6
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTSecurityEVA
+  id: RandomHumanoidSpawnerERTSecurityEpsilon6
+  suffix: ERTRole, EVA, Epsilon-6
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTSecurityEpsilon6
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTMedicalEVA
+  id: RandomHumanoidSpawnerERTMedicalEpsilon6
+  suffix: ERTRole, EVA, Epsilon-6
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTMedicalEpsilon6
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTLeaderEVA
+  id: RandomHumanoidSpawnerERTLeaderNu7
+  suffix: ERTRole, EVA, Nu-7
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTLeaderNu7
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTSecurityEVA
+  id: RandomHumanoidSpawnerERTSecurityNu7
+  suffix: ERTRole, EVA, Nu-7
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTSecurityNu7
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTMedicalEVA
+  id: RandomHumanoidSpawnerERTMedicalNu7
+  suffix: ERTRole, EVA, Nu-7
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTMedicalNu7
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTLeaderEVA
+  id: RandomHumanoidSpawnerERTLeaderAlpha9
+  suffix: ERTRole, EVA, Alpha-9
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTLeaderAlpha9
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTSecurityEVA
+  id: RandomHumanoidSpawnerERTSecurityAlpha9
+  suffix: ERTRole, EVA, Alpha-9
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTSecurityAlpha9
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTMedicalEVA
+  id: RandomHumanoidSpawnerERTMedicalAlpha9
+  suffix: ERTRole, EVA, Alpha-9
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTMedicalAlpha9
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTLeaderEVA
+  id: RandomHumanoidSpawnerERTLeaderEta77
+  suffix: ERTRole, EVA, Eta-77
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTLeaderEta77
+
+- type: entity
+  parent: RandomHumanoidSpawnerERTChaplainEVA
+  id: RandomHumanoidSpawnerERTChaplainEta77
+  suffix: ERTRole, EVA, Eta-77
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ERTChaplainEta77
+
+- type: entity
+  parent: RandomHumanoidSpawnerCBURNUnit
+  id: RandomHumanoidSpawnerCBURNUnitTheta4
+  suffix: ERTRole, Theta-4
+  components:
+  - type: RandomHumanoidSpawner
+    settings: CBURNAgentTheta4
+
+- type: entity
+  parent: RandomHumanoidSpawnerCBURNUnit
+  id: RandomHumanoidSpawnerCBURNUnitBeta7
+  suffix: ERTRole, Beta-7
+  components:
+  - type: RandomHumanoidSpawner
+    settings: CBURNAgentBeta7

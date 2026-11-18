@@ -1,0 +1,407 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: roleLoadout
+  id: RoleERTSquad
+  groups:
+  - Undershirt
+  - Underwear
+  - Socks
+
+- type: roleLoadout
+  id: RoleCBURNSquad
+  groups:
+  - SurvivalExtended
+  - Undershirt
+  - Underwear
+  - Socks
+
+- type: startingGear
+  parent: ERTLeaderGearEVA
+  id: ERTLeaderGearEpsilon6
+  equipment:
+    eyes: ClothingEyesNightVisionSecurityGoggles
+    suitstorage: WeaponRifleBR64
+  storage:
+    belt:
+    - MagazineHeavyRifleBR64
+    - MagazineHeavyRifleBR64
+    - MagazineHeavyRifleBR64
+    - MagazineHeavyRifleBR64
+    - MagazineHeavyRifleBR64
+    - MagazineHeavyRifleBR64
+    - MagazineHeavyRifleBR64
+    - MagazineHeavyRifleBR64
+
+- type: startingGear
+  parent: ERTSecurityGearEVA
+  id: ERTSecurityGearEpsilon6
+  equipment:
+    eyes: ClothingEyesNightVisionSecurityGoggles
+    suitstorage: WeaponRifleM16A4
+  storage:
+    belt:
+    - MagazineRifle
+    - MagazineRifle
+    - MagazineRifle
+    - MagazineRifle
+    - MagazineRifle
+    - MagazineRifle
+    - MagazineRifle
+    - MagazineRifle
+
+- type: startingGear
+  parent: ERTMedicalGear
+  id: ERTMedicalGearDelta5
+  storage:
+    back:
+    - ClothingEyesGlassesChemical
+    - ChemistryBottleOmnizine
+    - MedkitAdvancedFilled
+    - CentCommHypo
+    - BluespaceBeakerOxandrolone
+    - BluespaceBeakerSalicylicAcid
+    - ParamedHypo
+    - CartridgeAtropine
+    - CartridgeAtropine
+
+- type: startingGear
+  parent: ERTMedicalGearEVA
+  id: ERTMedicalGearEpsilon6
+  equipment:
+    eyes: ClothingEyesNightVisionSecurityGoggles
+  storage:
+    back:
+    - ClothingEyesGlassesChemical
+    - ChemistryBottleOmnizine
+    - MedkitAdvancedFilled
+    - CentCommHypo
+    - BluespaceBeakerOxandrolone
+    - BluespaceBeakerSalicylicAcid
+    - ParamedHypo
+    - CartridgeAtropine
+    - CartridgeAtropine
+
+- type: startingGear
+  parent: ERTLeaderGearExtended
+  id: ERTLeaderGearNu7
+  equipment:
+    eyes: ClothingEyesNightVisionSecurityGogglesHealth
+    belt: ClothingBeltMilitaryWebbingERT
+    suitstorage: WeaponPulseShotgunHellHammer
+  storage:
+    back:
+    - HoloprojectorField
+    - PinpointerNuclear
+    - PowerCellHigh
+    - MedkitCombatFilled
+    - MedkitCombatFilled
+    - TelescopicShield
+    - EmpGrenade
+    - SyringeCaseNu7
+    - BolaEnergy
+    - BolaEnergy
+    - CrowbarRed
+    belt:
+    - MagazinePulseShotgun
+    - MagazinePulseShotgun
+    - MagazinePulseShotgun
+    - MagazinePulseShotgun
+    - MagazinePulseShotgun
+    - MagazinePulseShotgun
+    - MagazinePulseShotgun
+    - MagazinePulseShotgun
+
+- type: startingGear
+  parent: ERTSecurityGearExtended
+  id: ERTSecurityGearNu7
+  equipment:
+    eyes: ClothingEyesNightVisionSecurityGogglesHealth
+    belt: ClothingBeltMilitaryWebbingERT
+    suitstorage: WeaponPulseRifleAP12
+  storage:
+    back:
+    - Flash
+    - TearGasGrenade
+    - ExGrenade
+    - EmpGrenade
+    - MedkitCombatFilled
+    - TelescopicShield
+    - PowerCellHigh
+    - SyringeCaseNu7
+    - BolaEnergy
+    - BolaEnergy
+    - CrowbarRed
+    - MagazinePulseRifle
+    - MagazinePulseRifle
+    - MagazinePulseRifle
+    - MagazinePulseRifle
+    - BoxSurvivalMilitaryDouble
+    belt:
+    - MagazinePulseRifle
+    - MagazinePulseRifle
+    - MagazinePulseRifle
+    - MagazinePulseRifle
+
+- type: startingGear
+  parent: ERTMedicalGearExtended
+  id: ERTMedicalGearNu7
+  equipment:
+    eyes: ClothingEyesNightVisionSecurityGogglesHealth
+  storage:
+    back:
+    - MedicalBeamGunBattery
+    - DefibrillatorCompact
+    - CentCommHypo
+    - ParamedHypo
+    - MedkitAdvancedFilled
+    - MedkitCombatFilled
+    - BluespaceBeakerOxandrolone
+    - BluespaceBeakerSalicylicAcid
+    - ChemistryBottleOmnizine
+    - CartridgeAtropine
+    - CartridgeAtropine
+    - ClothingEyesGlassesChemical
+    - SyringeCaseNu7
+    - BolaEnergy
+    - BolaEnergy
+    - CrowbarRed
+    - BoxSurvivalMilitaryDouble
+
+- type: startingGear
+  parent: ERTLeaderGearExtended
+  id: ERTLeaderGearAlpha9
+  equipment:
+    eyes: ClothingEyesGlassesAlpha9
+    shoes: ClothingShoesBootsMagAdvAlpha9
+    belt: ClothingBeltMilitaryWebbingERT
+    suitstorage: WeaponLauncherGL70
+  storage:
+    back:
+    - HoloprojectorField
+    - PinpointerNuclear
+    - PowerCellHigh
+    - MedkitCombatFilled
+    - MedkitCombatFilled
+    - TelescopicShield
+    - EmpGrenade
+    - SyringeCaseAlpha9
+    - CentcommStimpack
+    - CentcommStimpack
+    - BolaEnergy
+    - BolaEnergy
+    - WeaponRevolverMateba
+    - SpeedLoaderMagnum
+    - SpeedLoaderMagnum
+    - CrowbarRed
+    belt:
+    - GrenadeFrag
+    - GrenadeFrag
+    - GrenadeFrag
+    - GrenadeFrag
+    - GrenadeFrag
+    - GrenadeFrag
+    - GrenadeFrag
+    - GrenadeFrag
+
+- type: startingGear
+  parent: ERTSecurityGearExtended
+  id: ERTSecurityGearAlpha9
+  equipment:
+    eyes: ClothingEyesGlassesAlpha9
+    shoes: ClothingShoesBootsMagAdvAlpha9
+    outerClothing: ClothingOuterHardsuitERTSecurityAlpha9
+    belt: ClothingBeltMilitaryWebbingERT
+    suitstorage: WeaponPulseSMGTritonM3
+  storage:
+    back:
+    - Flash
+    - TearGasGrenade
+    - ExGrenade
+    - EmpGrenade
+    - MedkitCombatFilled
+    - TelescopicShield
+    - PowerCellHigh
+    - SyringeCaseAlpha9
+    - CentcommStimpack
+    - CentcommStimpack
+    - BolaEnergy
+    - BolaEnergy
+    - WeaponRevolverMateba
+    - SpeedLoaderMagnum
+    - SpeedLoaderMagnum
+    - CrowbarRed
+    - BoxSurvivalMilitaryDouble
+    belt:
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+
+- type: startingGear
+  parent: ERTMedicalGearExtended
+  id: ERTMedicalGearAlpha9
+  equipment:
+    eyes: ClothingEyesGlassesAlpha9
+    shoes: ClothingShoesBootsMagAdvAlpha9
+    outerClothing: ClothingOuterHardsuitERTMedicalAlpha9
+  storage:
+    back:
+    - MedicalBeamGunBattery
+    - DefibrillatorCompact
+    - CentCommHypo
+    - ParamedHypo
+    - MedkitAdvancedFilled
+    - MedkitCombatFilled
+    - BluespaceBeakerOxandrolone
+    - BluespaceBeakerSalicylicAcid
+    - ChemistryBottleOmnizine
+    - CartridgeAtropine
+    - CartridgeAtropine
+    - ClothingEyesGlassesChemical
+    - SyringeCaseAlpha9
+    - CentcommStimpack
+    - CentcommStimpack
+    - BolaEnergy
+    - BolaEnergy
+    - WeaponRevolverMateba
+    - SpeedLoaderMagnum
+    - SpeedLoaderMagnum
+    - CrowbarRed
+    - BoxSurvivalMilitaryDouble
+
+- type: startingGear
+  parent: ERTLeaderGearEVA
+  id: ERTLeaderGearEta77
+  equipment:
+    eyes: ClothingEyesNightVisionSecurityGoggles
+    suitstorage: WeaponPulseSMGTritonM3
+  storage:
+    back:
+    - HoloprojectorField
+    - PinpointerNuclear
+    - PowerCellHigh
+    - PowerCellHigh
+    - MedkitCombatFilled
+    - MedkitCombatFilled
+    - TelescopicShield
+    - CentcommStimpack
+    - SyringeCaseEta77
+    belt:
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+    - MagazinePulseSubMachinePistol
+
+- type: startingGear
+  parent: ERTChaplainGearEVA
+  id: ERTChaplainGearEta77
+  equipment:
+    eyes: ClothingEyesNightVisionSecurityGoggles
+    belt: ClothingBeltHolsterFilledChaplain
+    suitstorage: RatvarianSpear
+  storage:
+    back:
+    - BodyBagFolded
+    - BodyBagFolded
+    - JugWater
+    - SyringeCaseEta77
+    - WeaponShotgunBulldogLegallyDistinct
+    - BolaEnergy
+    - BolaEnergy
+    - ChaplainUndeterminedBible
+    - CrowbarRed
+    - Nullrod
+    belt: []
+
+- type: startingGear
+  id: CBURNGearTheta4
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    back: ClothingBackpackDuffelCBURN
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesNightVisionSecurityGoggles
+    ears: ClothingHeadsetAltCentCom
+    gloves: ClothingHandsGlovesCombat
+    neck: ExecutiveIDCard
+    outerClothing: ClothingOuterHardsuitCBURN
+    shoes: ClothingShoesBootsMagERT
+    id: CBURNPDA
+    belt: ClothingBeltSecurity
+    suitstorage: CburnSpear
+  storage:
+    back:
+    - GrenadeFlashBang
+    - AmbuzolPlusMedipen
+    - MedkitCombatFilled
+    - SyringeCaseTheta4
+    - CrowbarRed
+    - WeaponShotgunBulldogLegallyDistinct
+    - MagazineShotgunSlug
+    - MagazineShotgunSlug
+    - MagazineShotgunSlug
+    - MagazineShotgunSlug
+    - DoubleEmergencyOxygenTankFilled
+    belt:
+    - MagazineShotgunIncendiary
+    - MagazineShotgunIncendiary
+    - MagazineShotgunIncendiary
+    - MagazineShotgunIncendiary
+    - MagazineShotgunIncendiary
+    - MagazineShotgunIncendiary
+    - MagazineShotgunIncendiary
+    - MagazineShotgunIncendiary
+
+- type: startingGear
+  id: CBURNGearBeta7
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    back: ClothingBackpackDuffelCBURN
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesNightVisionSecurityGogglesHealth
+    ears: ClothingHeadsetAltCentCom
+    gloves: ClothingHandsGlovesCombat
+    neck: ExecutiveIDCard
+    outerClothing: ClothingOuterHardsuitCBURN
+    shoes: ClothingShoesBootsMagERT
+    id: CBURNPDA
+    pocket1: InfectionScannerCburn
+    belt: ClothingBeltSecurity
+    suitstorage: WeaponLaserCellSMG
+  storage:
+    back:
+    - GrenadeFlashBang
+    - AmbuzolPlusMedipen
+    - AmbuzolMedipen
+    - AmbuzolMedipen
+    - MedkitCombatFilled
+    - SyringeCaseBeta7
+    - CrowbarRed
+    - WeaponPistolN1984
+    - MagazineMagnum
+    - MagazineMagnum
+    - MagazineMagnum
+    - MagazineMagnum
+    - DoubleEmergencyOxygenTankFilled
+    - InducerCombatBattery
+    - WeaponPulsePistol
+    - BodyBagFolded
+    - BodyBagFolded
+    belt:
+    - PowerCellIRSMG
+    - PowerCellIRSMG
+    - PowerCellIRSMG
+    - PowerCellIRSMG
+    - PowerCellIRSMG
+    - PowerCellIRSMG
+    - PowerCellIRSMG
+    - PowerCellIRSMG
