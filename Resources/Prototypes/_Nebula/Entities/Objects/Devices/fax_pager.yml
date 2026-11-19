@@ -1,0 +1,32 @@
+- type: entity
+  parent: BaseItem
+  id: FaxPager
+  name: fax pager
+  description: Buzzes when a linked fax gets a message. Click a fax with it to link or unlink.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Devices/fax_pager.rsi
+    state: icon
+  - type: Item
+    sprite: _Nebula/Objects/Devices/fax_pager.rsi
+    size: Tiny
+  - type: FaxPager
+
+- type: entity
+  parent: FaxPager
+  id: FaxPagerAdmin
+  suffix: Admin
+  description: Buzzes when a linked fax gets a message. Can be linked to as many faxes as you want.
+  components:
+  - type: FaxPager
+    maxFaxes: 1000
+
+- type: entity
+  parent: FaxPagerAdmin
+  id: FaxPagerAdminAuto
+  suffix: Admin, Auto
+  description: Links to every fax on its station by itself. Off a station, links to every fax on the grid it is on.
+  components:
+  - type: FaxPager
+    maxFaxes: 1000
+    autoLink: true

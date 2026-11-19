@@ -17,6 +17,7 @@
     - id: ReinforcementCallerHoP
     - id: ArmoryOverrideKeyComponents
     - id: BoxSkillChipsService
+    - id: FaxPager # Nebula
 
 - type: entityTable
   id: LockerFillChiefEngineerTrauma
@@ -81,3 +82,4 @@
   table: !type:AllSelector
     children:
     - id: ArmoryOverrideKeyComponents
+    - id: FaxPager # Nebula
