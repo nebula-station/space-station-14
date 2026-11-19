@@ -84,6 +84,7 @@
       - state: paper-inhand-left
       right:
       - state: paper-inhand-right
+  - type: Material # Nebula
   - type: PhysicalComposition
     materialComposition: # Goob - Recycle update
       Paper: 25
