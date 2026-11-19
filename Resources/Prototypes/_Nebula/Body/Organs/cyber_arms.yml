@@ -1,0 +1,524 @@
+- type: entity
+  parent: ActionAugmentOpenToolsPanel
+  id: ActionCyberToolArmLeft
+  name: Left arm tools
+  description: Pick a tool built into your left arm, or retract the deployed one.
+
+- type: entity
+  parent: ActionAugmentOpenToolsPanel
+  id: ActionCyberToolArmRight
+  name: Right arm tools
+  description: Pick a tool built into your right arm, or retract the deployed one.
+
+- type: entity
+  abstract: true
+  id: BaseCyberToolArm
+  components:
+  - type: Augment
+  - type: Storage
+    maxItemSize: Huge
+    defaultStorageOrientation: Vertical
+    grid:
+    - 0,0,11,5
+    whitelist:
+      components:
+      - CyberToolArmItem
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+  - type: AugmentToolPanel
+    switchCharge: 0
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+      enum.AugmentToolPanelUiKey.Key:
+        type: AugmentToolPanelMenuBoundUserInterface
+        interactionRange: 0
+  - type: AugmentActivatableUI
+    key: enum.AugmentToolPanelUiKey.Key
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmMechwright
+  description: Augmented arm for the tiders of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - Wrench
+    - Screwdriver
+    - Crowbar
+    - Wirecutter
+    - Welder
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmMechwright ]
+  id: OrganCyberArmMechwrightLeft
+  name: left mechwright arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_steel_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_steel_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmMechwright ]
+  id: OrganCyberArmMechwrightRight
+  name: right mechwright arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_steel_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_steel_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmReaper
+  description: Augmented arm for the surgeons of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - Scalpel
+    - Retractor
+    - Hemostat
+    - Cautery
+    - SawElectric
+    - Drill
+    - Bonesetter
+    - BoneGel
+    - MedicalStitches
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmReaper ]
+  id: OrganCyberArmReaperLeft
+  name: left reaper arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_silver_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_silver_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmReaper ]
+  id: OrganCyberArmReaperRight
+  name: right reaper arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_silver_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_silver_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmInvestigator
+  description: Augmented arm for the researchers of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - NodeScanner
+    - FreezeRayCyber
+    - RadcasterCyber
+    - VialCyberEmpty
+    - VialCyberWater
+    - VialCyberBlood
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmInvestigator ]
+  id: OrganCyberArmInvestigatorLeft
+  name: left investigator arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_investigator_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_investigator_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmInvestigator ]
+  id: OrganCyberArmInvestigatorRight
+  name: right investigator arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_investigator_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_investigator_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmScribe
+  description: Augmented arm for the bureaucrats of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - Pen
+    - StampCyber
+    - PrinterCyber
+    - FilingCabinetCyber
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmScribe ]
+  id: OrganCyberArmScribeLeft
+  name: left scribe arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_scribe_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_scribe_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmScribe ]
+  id: OrganCyberArmScribeRight
+  name: right scribe arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_scribe_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_scribe_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmPersephone
+  description: Augmented arm for the botanists of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - HydroponicsToolMiniHoe
+    - HydroponicsToolClippers
+    - HydroponicsToolScythe
+    - HydroponicsToolHatchet
+    - HydroponicsToolSpade
+    - Dropper
+    - CyberReagentGrinder
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmPersephone ]
+  id: OrganCyberArmPersephoneLeft
+  name: left persephone arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_persephone_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_persephone_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmPersephone ]
+  id: OrganCyberArmPersephoneRight
+  name: right persephone arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_persephone_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_persephone_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmSpacer
+  description: Augmented arm for the salvagers of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - WeaponProtoKineticAccelerator
+    - WeaponGrapplingGun
+    - WeaponCrusherDagger
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmSpacer ]
+  id: OrganCyberArmSpacerLeft
+  name: left spacer arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_spacer_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_spacer_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmSpacer ]
+  id: OrganCyberArmSpacerRight
+  name: right spacer arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_spacer_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_spacer_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmRiplet
+  description: Augmented arm for the cargo techs of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - CyberEquipmentGrabber
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmRiplet ]
+  id: OrganCyberArmRipletLeft
+  name: left riplet arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_riplet_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_riplet_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmRiplet ]
+  id: OrganCyberArmRipletRight
+  name: right riplet arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_riplet_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_riplet_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmEngineer
+  description: Augmented arm for the engineers of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - JawsOfLife
+    - PowerDrill
+    - RCD
+    - WelderExperimental
+  - type: CyberwareHumanity
+    cost: 2
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmEngineer ]
+  id: OrganCyberArmEngineerLeft
+  name: left engineer arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_engineer_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_engineer_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmEngineer ]
+  id: OrganCyberArmEngineerRight
+  name: right engineer arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_engineer_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_engineer_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmAngel
+  description: Augmented arm for the doctors of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - EnergyScalpel
+    - AdvancedRetractor
+    - EnergyCautery
+    - AdvancedBoneGel
+  - type: CyberwareHumanity
+    cost: 2
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmAngel ]
+  id: OrganCyberArmAngelLeft
+  name: left angel arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_angel_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_angel_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmAngel ]
+  id: OrganCyberArmAngelRight
+  name: right angel arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_angel_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_angel_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmGorilla
+  description: Augmented arm for the scientists of the modern age.
+  components:
+  - type: CyberToolArm
+    tools:
+    - AnomalyScanner
+    - WeaponGauntletGorillaCyber
+    - WeaponPistolCHIMPCyber
+  - type: CyberwareHumanity
+    cost: 2
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmGorilla ]
+  id: OrganCyberArmGorillaLeft
+  name: left G.O.R.I.L.L.A. arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_gorilla_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_gorilla_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmGorilla ]
+  id: OrganCyberArmGorillaRight
+  name: right G.O.R.I.L.L.A. arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_gorilla_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_gorilla_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight
+
+- type: entity
+  abstract: true
+  parent: BaseCyberToolArm
+  id: BaseCyberArmHerakles
+  description: Augmented arm for the security officers of the modern age. Strong enough to toss people around and pry open doors.
+  components:
+  - type: CyberToolArm
+    tools:
+    - HoloRestrainerCyber
+    - MeleeWeaponCyberHerakles
+  - type: CyberwareHumanity
+    cost: 2
+
+- type: entity
+  parent: [ OrganCyberneticArmLeft, BaseCyberArmHerakles ]
+  id: OrganCyberArmHeraklesLeft
+  name: left herakles arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_bulwark_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_bulwark_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmLeft
+
+- type: entity
+  parent: [ OrganCyberneticArmRight, BaseCyberArmHerakles ]
+  id: OrganCyberArmHeraklesRight
+  name: right herakles arm
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_bulwark_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_bulwark_arm
+  - type: AugmentAction
+    action: ActionCyberToolArmRight

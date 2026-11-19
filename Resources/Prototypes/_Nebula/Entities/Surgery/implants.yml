@@ -1,0 +1,202 @@
+# Hand Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenHandImplant
+  name: Open Cavity For Hand Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Hand ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: HandImplant
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertHandImplant
+  name: Insert Hand Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Hand ]
+  - type: SurgeryOrganCondition
+    organ: HandImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: HandImplant
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveHandImplant
+  name: Remove Hand Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepClampInternalBleeders
+    - SurgeryStepRemoveOrgan
+  - type: SurgeryPartCondition
+    parts: [ Hand ]
+  - type: SurgeryOrganCondition
+    organ: HandImplant
+
+# Chest Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenChestImplant
+  name: Open Cavity For Chest Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: ChestImplant
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertChestImplant
+  name: Insert Chest Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: ChestImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: ChestImplant
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveChestImplant
+  name: Remove Chest Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepClampInternalBleeders
+    - SurgeryStepRemoveOrgan
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: ChestImplant
+
+# Heart Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenHeartImplant
+  name: Open Cavity For Heart Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: HeartImplant
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertHeartImplant
+  name: Insert Heart Implant
+  components:
+  - type: Surgery
+    steps:
+    - SurgeryStepSawBones
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: HeartImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: HeartImplant
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveHeartImplant
+  name: Remove Heart Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: HeartImplant
+
+# Brain Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenBrainImplant
+  name: Open Cavity For Brain Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: BrainImplant
+
+- type: entity
+  parent: BaseSurgeryInsertOrgan
+  id: SurgeryInsertBrainImplant
+  name: Insert Brain Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: BrainImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: BrainImplant
+
+- type: entity
+  parent: BaseSurgeryRemoveOrgan
+  id: SurgeryRemoveBrainImplant
+  name: Remove Brain Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: BrainImplant
+
+# Nose Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenNoseImplant
+  name: Open Cavity For Nose Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: NoseImplant
+
+- type: entity
+  parent: BaseSurgeryInsertOrgan
+  id: SurgeryInsertNoseImplant
+  name: Insert Nose Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: NoseImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: NoseImplant
+
+- type: entity
+  parent: BaseSurgeryRemoveOrgan
+  id: SurgeryRemoveNoseImplant
+  name: Remove Nose Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: NoseImplant

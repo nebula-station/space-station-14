@@ -17,6 +17,12 @@
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
+  # Nebula start
+  - OrganCyberArmScribeLeft
+  - OrganCyberArmScribeRight
+  - OrganCyberArmPersephoneLeft
+  - OrganCyberArmPersephoneRight
+  # Nebula end
   # Goobstation R&D Console rework start
   position: -2,4
   technologyPrerequisites:
@@ -314,6 +320,7 @@
   - SyringeBluespace
   - MedkitCombat # Goobstation - remove medkitcombat from static to research
   - VialBluespace # goob edit - bluespace vials
+  - AutosurgeonPlateletFactoriesPDV # Nebula edit
   # Goobstation R&D Console rework start
   position: 4,5
   technologyPrerequisites:

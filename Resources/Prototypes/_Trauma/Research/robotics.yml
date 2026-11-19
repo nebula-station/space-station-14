@@ -177,6 +177,7 @@
   - DiagnosticCyberneticEyes
   - SecurityCyberneticEyes
   - MedicalCyberneticEyes
+  - OrganHumanityChipMk1 # Nebula edit
   position: -7,4
   technologyPrerequisites:
   - BasicCybernetics
@@ -221,21 +222,7 @@
   recipeUnlocks:
   - AugmentPowerCellSlotCasing
   - AugmentRechargerCasing
-
-- type: technology
-  id: ImplantedTools
-  name: research-technology-implanted-tools
-  icon:
-    sprite: _Shitmed/Objects/Augments/arm.rsi
-    state: base
-  discipline: Robotics
-  tier: 2
-  cost: 10000
-  position: -5,5
-  technologyPrerequisites:
-  - BasicAugmentation
-  recipeUnlocks:
-  - AugmentToolPanelCasing
-  - AugmentUtilityPanelElectronics
-  - AugmentBotanyPanelElectronics
-  - AugmentSurgeryPanelElectronics
+  # Nebula start
+  - NoseImplantOlfactory
+  - BrainImplantComms
+  # Nebula end

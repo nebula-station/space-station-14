@@ -213,6 +213,9 @@
     speedModifierThresholds:
       Hard: 0.7
   - type: Posing
+  - type: Humanity
+    speciesBonus:
+      Human: 1
   # Nebula end
 
 - type: entity

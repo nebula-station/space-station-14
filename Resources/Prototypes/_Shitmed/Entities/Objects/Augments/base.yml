@@ -5,6 +5,10 @@
   parent: OrganBaseChildInternal
   id: BaseAugment
   components:
+  # Nebula start
+  - type: CyberwareHumanity
+    cost: 1
+  # Nebula end
   - type: Augment
   - type: SurgeryTool
     ignoreToggle: true # ItemToggle is used for augment logic not surgical tool usability

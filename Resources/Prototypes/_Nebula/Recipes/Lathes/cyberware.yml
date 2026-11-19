@@ -1,0 +1,338 @@
+- type: latheRecipe
+  id: OrganDermalArmor
+  result: OrganDermalArmor
+  completetime: 10
+  materials:
+    Plasteel: 3000
+    Gold: 1500
+    Plasma: 1500
+    Uranium: 1000
+
+- type: latheRecipe
+  id: OrganDermalArmorReflective
+  result: OrganDermalArmorReflective
+  completetime: 10
+  materials:
+    Glass: 3000
+    Uranium: 1500
+    Silver: 2000
+    Plasma: 1000
+
+- type: latheRecipe
+  id: OrganDermalArmorHeavyUSSP
+  result: OrganDermalArmorHeavyUSSP
+  completetime: 10
+  materials:
+    Plasteel: 3000
+    Gold: 1500
+    Uranium: 1500
+    BSCrystal: 100
+
+- type: latheRecipe
+  id: OrganHumanityChipMk1
+  result: OrganHumanityChipMk1
+  completetime: 10
+  materials:
+    Steel: 3000
+    Plasma: 1000
+    Uranium: 1500
+    Gold: 500
+
+- type: latheRecipe
+  id: AutosurgeonPlateletFactoriesPDV
+  result: AutosurgeonPlateletFactoriesPDV
+  completetime: 15
+  materials:
+    Gold: 1500
+    Uranium: 1500
+    BSCrystal: 100
+
+# Radiant tool arms, each side is printed separately.
+
+- type: latheRecipe
+  id: OrganCyberArmMechwrightLeft
+  result: OrganCyberArmMechwrightLeft
+  completetime: 10
+  materials:
+    Steel: 3000
+    Plastic: 1500
+    Glass: 1000
+
+- type: latheRecipe
+  id: OrganCyberArmMechwrightRight
+  result: OrganCyberArmMechwrightRight
+  completetime: 10
+  materials:
+    Steel: 3000
+    Plastic: 1500
+    Glass: 1000
+
+- type: latheRecipe
+  id: OrganCyberArmReaperLeft
+  result: OrganCyberArmReaperLeft
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 3000
+    Silver: 500
+
+- type: latheRecipe
+  id: OrganCyberArmReaperRight
+  result: OrganCyberArmReaperRight
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 3000
+    Silver: 500
+
+- type: latheRecipe
+  id: OrganCyberArmInvestigatorLeft
+  result: OrganCyberArmInvestigatorLeft
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 3000
+    Gold: 500
+
+- type: latheRecipe
+  id: OrganCyberArmInvestigatorRight
+  result: OrganCyberArmInvestigatorRight
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 3000
+    Gold: 500
+
+- type: latheRecipe
+  id: OrganCyberArmScribeLeft
+  result: OrganCyberArmScribeLeft
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 1500
+    Plastic: 500
+
+- type: latheRecipe
+  id: OrganCyberArmScribeRight
+  result: OrganCyberArmScribeRight
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 1500
+    Plastic: 500
+
+- type: latheRecipe
+  id: OrganCyberArmPersephoneLeft
+  result: OrganCyberArmPersephoneLeft
+  completetime: 10
+  materials:
+    Steel: 2000
+    Glass: 2000
+    Plastic: 500
+
+- type: latheRecipe
+  id: OrganCyberArmPersephoneRight
+  result: OrganCyberArmPersephoneRight
+  completetime: 10
+  materials:
+    Steel: 2000
+    Glass: 2000
+    Plastic: 500
+
+- type: latheRecipe
+  id: OrganCyberArmSpacerLeft
+  result: OrganCyberArmSpacerLeft
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 1500
+    Gold: 500
+
+- type: latheRecipe
+  id: OrganCyberArmSpacerRight
+  result: OrganCyberArmSpacerRight
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 1500
+    Gold: 500
+
+- type: latheRecipe
+  id: OrganCyberArmRipletLeft
+  result: OrganCyberArmRipletLeft
+  completetime: 10
+  materials:
+    Steel: 3000
+    Plastic: 2500
+    Glass: 1000
+    Silver: 500
+
+- type: latheRecipe
+  id: OrganCyberArmRipletRight
+  result: OrganCyberArmRipletRight
+  completetime: 10
+  materials:
+    Steel: 3000
+    Plastic: 2500
+    Glass: 1000
+    Silver: 500
+
+- type: latheRecipe
+  id: OrganCyberArmEngineerLeft
+  result: OrganCyberArmEngineerLeft
+  completetime: 10
+  materials:
+    Steel: 3000
+    Silver: 1500
+    Plasma: 500
+    Plasteel: 1000
+
+- type: latheRecipe
+  id: OrganCyberArmEngineerRight
+  result: OrganCyberArmEngineerRight
+  completetime: 10
+  materials:
+    Steel: 3000
+    Silver: 1500
+    Plasma: 500
+    Plasteel: 1000
+
+- type: latheRecipe
+  id: OrganCyberArmAngelLeft
+  result: OrganCyberArmAngelLeft
+  completetime: 10
+  materials:
+    Plastic: 3000
+    Uranium: 1000
+    Plasma: 2000
+    Silver: 500
+
+- type: latheRecipe
+  id: OrganCyberArmAngelRight
+  result: OrganCyberArmAngelRight
+  completetime: 10
+  materials:
+    Plastic: 3000
+    Uranium: 1000
+    Plasma: 2000
+    Silver: 500
+
+- type: latheRecipe
+  id: OrganCyberArmGorillaLeft
+  result: OrganCyberArmGorillaLeft
+  completetime: 10
+  materials:
+    Glass: 2500
+    Gold: 1000
+    Plasma: 1000
+
+- type: latheRecipe
+  id: OrganCyberArmGorillaRight
+  result: OrganCyberArmGorillaRight
+  completetime: 10
+  materials:
+    Glass: 2500
+    Gold: 1000
+    Plasma: 1000
+
+- type: latheRecipe
+  id: OrganCyberArmHeraklesLeft
+  result: OrganCyberArmHeraklesLeft
+  completetime: 10
+  materials:
+    Plasteel: 2500
+    Uranium: 1500
+    Plasma: 2000
+    Silver: 500
+
+- type: latheRecipe
+  id: OrganCyberArmHeraklesRight
+  result: OrganCyberArmHeraklesRight
+  completetime: 10
+  materials:
+    Plasteel: 2500
+    Uranium: 1500
+    Plasma: 2000
+    Silver: 500
+
+# Radiant implants.
+
+- type: latheRecipe
+  id: ChestImplantInternalAnalyzer
+  result: ChestImplantInternalAnalyzer
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 1500
+    Plastic: 500
+
+- type: latheRecipe
+  id: NoseImplantOlfactory
+  result: NoseImplantOlfactory
+  completetime: 10
+  materials:
+    Steel: 2000
+    Silver: 500
+
+- type: latheRecipe
+  id: BrainImplantComms
+  result: BrainImplantComms
+  completetime: 10
+  materials:
+    Steel: 500
+    Silver: 1500
+    Plastic: 1000
+
+- type: latheRecipe
+  id: HandImplantInsulated
+  result: HandImplantInsulated
+  completetime: 10
+  materials:
+    Plasma: 500
+    Uranium: 1500
+
+- type: latheRecipe
+  id: ChestImplantThermal
+  result: ChestImplantThermal
+  completetime: 10
+  materials:
+    Uranium: 1500
+    Plasma: 2000
+    Silver: 500
+    Gold: 500
+
+- type: latheRecipe
+  id: ChestImplantHemostatic
+  result: ChestImplantHemostatic
+  completetime: 10
+  materials:
+    Uranium: 2000
+    Plasma: 1500
+    Silver: 500
+    Gold: 500
+
+- type: latheRecipe
+  id: HandImplantClaws
+  result: HandImplantClaws
+  completetime: 10
+  materials:
+    Plasteel: 1000
+    Gold: 1500
+    Silver: 1000
+
+- type: latheRecipe
+  id: HandImplantForensics
+  result: HandImplantForensics
+  completetime: 10
+  materials:
+    Uranium: 500
+    Silver: 2000
+
+- type: latheRecipe
+  id: HandImplantThrusters
+  result: HandImplantThrusters
+  completetime: 10
+  materials:
+    Glass: 3000
+    Silver: 2000
+    Uranium: 500

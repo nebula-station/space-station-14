@@ -57,7 +57,7 @@ public sealed partial class AugmentToolPanelSystem : EntitySystem
     private void OnSwitchTool(Entity<AugmentToolPanelComponent> augment, ref AugmentToolPanelSwitchMessage args)
     {
         if (_augment.GetBody(augment) is not {} body ||
-            !_augmentPowerCell.TryUseChargeBody(body, augment.Comp.SwitchCharge))
+            augment.Comp.SwitchCharge > 0 && !_augmentPowerCell.TryUseChargeBody(body, augment.Comp.SwitchCharge)) // Nebula edit
             return;
 
         SwitchTool(augment, GetEntity(args.DesiredTool), body);
@@ -75,7 +75,7 @@ public sealed partial class AugmentToolPanelSystem : EntitySystem
             return;
 
         // the arm's symmetry is the same as the hand
-        var part = _partQuery.Comp(partUid);
+        var part = _partQuery.CompOrNull(augment) ?? _partQuery.Comp(partUid); // Nebula edit
         var location = part.Symmetry switch
         {
             BodyPartSymmetry.None => HandLocation.Middle,

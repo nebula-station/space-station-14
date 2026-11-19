@@ -140,6 +140,12 @@
   - Truncheon
   - TelescopicShield
   - HoloprojectorSecurity
+  # Nebula start
+  - OrganCyberArmHeraklesLeft
+  - OrganCyberArmHeraklesRight
+  - HandImplantClaws
+  - HandImplantForensics
+  # Nebula end
 
 - type: technology
   id: ConcentratedLaserWeaponry

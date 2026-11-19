@@ -1,0 +1,196 @@
+- type: entity
+  abstract: true
+  parent: BaseAutosurgeon
+  id: BaseAutosurgeonCyberware
+  components:
+  - type: AutoSurgeon
+    entries: []
+
+- type: entity
+  abstract: true
+  parent: [ BaseAutosurgeonCyberware, BaseSyndicateContraband ]
+  id: BaseAutosurgeonCyberwareSyndicate
+  components:
+  - type: Sprite
+    state: icon-syndie
+
+- type: entity
+  abstract: true
+  parent: [ BaseAutosurgeonCyberware, BaseSyndicateContraband ]
+  id: BaseAutosurgeonMieyo
+  components:
+  - type: Sprite
+    state: icon-mmc
+
+# Mantis blades
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonMantisBladesPlasteel
+  name: autosurgeon (plasteel mantis blades)
+  description: Implants a pair of covert deployable plasteel mantis blades into both of your arms.
+  components:
+  - type: CyberAutoSurgeon
+    organForEachPart: OrganArmMantisBladePlasteel
+
+- type: entity
+  parent: BaseAutosurgeonMieyo
+  id: AutosurgeonMantisBladesMieyo
+  name: MMC autosurgeon (mantis blades)
+  description: Implants a pair of covert deployable mantis blades into both of your arms. That's really cool.
+  components:
+  - type: CyberAutoSurgeon
+    organForEachPart: OrganArmMantisBlade
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonMantisBladesMaxTac
+  name: Max-Tac autosurgeon (mantis blades)
+  description: Implants a pair of covert deployable Max-Tac mantis blades into both of your arms.
+  components:
+  - type: CyberAutoSurgeon
+    organForEachPart: OrganArmMantisBladeMaxTac
+
+# Subdermal armor slot
+
+- type: entity
+  parent: BaseAutosurgeonMieyo
+  id: AutosurgeonDermalArmorPDV
+  name: PDV autosurgeon (E-SAPI dermal armor)
+  description: Implants an array of E-SAPI armor plates into the body. Makes you more vulnerable to shock and a bit slower, but makes you more resistant to bullets and heat.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganDermalArmorPDV
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonOpticalCamoPDV
+  name: PDV autosurgeon (optical camo)
+  description: Weaves a mesh of light-bending fibers under the skin. Goes into the subdermal armor slot.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganOpticalCamo
+
+# Neural stabilizer chips
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonHumanityChipMk1
+  name: autosurgeon (neural stabilizer chip Mk I)
+  description: Puts a neural stabilizer chip into the head, replacing the old one. Raises the humanity limit by 2.
+  components:
+  - type: CyberAutoSurgeon
+    targetPart: Head
+    newOrgan: OrganHumanityChipMk1
+
+- type: entity
+  parent: AutosurgeonHumanityChipMk1
+  id: AutosurgeonHumanityChipMk2
+  name: autosurgeon (neural stabilizer chip Mk II)
+  description: Puts a neural stabilizer chip into the head, replacing the old one. Raises the humanity limit by 3.
+  components:
+  - type: CyberAutoSurgeon
+    targetPart: Head
+    newOrgan: OrganHumanityChipMk2
+
+- type: entity
+  parent: AutosurgeonHumanityChipMk1
+  id: AutosurgeonHumanityChipMk3
+  name: autosurgeon (neural stabilizer chip Mk III)
+  description: Puts a neural stabilizer chip into the head, replacing the old one. Raises the humanity limit by 4.
+  components:
+  - type: CyberAutoSurgeon
+    targetPart: Head
+    newOrgan: OrganHumanityChipMk3
+
+# CNS implants
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonSandevistanTSF
+  name: TSF autosurgeon (WJY-21X sandevistan)
+  description: Wires a reverse-engineered MMC Sandevistan into the central nervous system. Doesn't cool down as fast as the real thing.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganCNSTSFSandevistan
+
+- type: entity
+  parent: BaseAutosurgeonMieyo
+  id: AutosurgeonSandevistanMieyo
+  name: MMC autosurgeon (EVT-002 Lotus)
+  description: Wires a strange implant into the central nervous system. It's a sterile bag full of a series of autoinjectors, electroneural links, and thermomachines designed to allow the user to push themselves to the limit.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganCNSMMCSandevistan
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonKerenzikovUSSP
+  name: USSP autosurgeon (Kerenzikov)
+  description: Wires a USSP Kerenzikov reflex booster into the central nervous system. Lets you shoot while it runs, but hurts you every second, and three times harder after 10 seconds.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganCNSKerenzikov
+
+# Body upgrades
+
+- type: entity
+  parent: BaseAutosurgeonMieyo
+  id: AutosurgeonMuscleFibersMieyo
+  name: MMC autosurgeon (muscle fibers suite)
+  description: Implants a suite of muscle enhancements into the body. Now you can dash around like a pro.
+  components:
+  - type: AutoSurgeon
+    entries:
+    - targetCategory: Torso
+      userComponents:
+      - type: DashAction
+        actionProto: ActionDashMuscleFibersImplant
+  - type: CyberAutoSurgeon
+    humanityCost: 1
+
+- type: entity
+  parent: BaseAutosurgeonCyberware
+  id: AutosurgeonPlateletFactoriesPDV
+  name: PDV autosurgeon (platelet factories Mk III)
+  description: Implants the Vanguard's best set of bioengineered organs, healing blunt damage and burns and trying to keep you alive even when badly hurt.
+  components:
+  - type: AutoSurgeon
+    entries:
+    - targetCategory: Torso
+      userComponents:
+      - type: PlateletFactories
+        intervalSeconds: 1
+        damagePerInterval:
+          types:
+            Blunt: -0.87
+            Slash: -0.87
+            Piercing: -0.87
+            Heat: -0.865
+            Shock: -0.865
+            Cold: -0.865
+            Caustic: -0.865
+        critMultiplier: .25
+  - type: CyberAutoSurgeon
+    humanityCost: 2
+    humanityKey: PlateletFactories
+
+# Subdermal implants
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonCombatMedipen
+  name: autosurgeon (combat medipen implant)
+  description: Installs an implant that injects a combat medipen dose on demand and automatically when the owner goes critical.
+  components:
+  - type: CyberAutoSurgeon
+    implant: CombatMedipenImplant
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonStimulant
+  name: autosurgeon (stimulant implant)
+  description: Installs an implant that injects a dose of stimulants on demand and automatically when the owner goes critical.
+  components:
+  - type: CyberAutoSurgeon
+    implant: StimulantImplant

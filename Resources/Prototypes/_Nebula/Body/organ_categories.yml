@@ -1,0 +1,14 @@
+- type: organCategory
+  id: HandImplant
+
+- type: organCategory
+  id: ChestImplant
+
+- type: organCategory
+  id: HeartImplant
+
+- type: organCategory
+  id: BrainImplant
+
+- type: organCategory
+  id: NoseImplant

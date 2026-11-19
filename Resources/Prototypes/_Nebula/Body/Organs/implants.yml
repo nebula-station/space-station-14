@@ -1,0 +1,177 @@
+# Radiant implants as Trauma organs, one per slot.
+
+- type: entity
+  abstract: true
+  parent: BaseAugment
+  id: BaseCyberImplant
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Medical/implants.rsi
+  - type: Cybernetics
+    empDamage:
+      types:
+        Shock: 5
+  - type: Item
+    size: Tiny
+
+# Hand
+
+- type: entity
+  abstract: true
+  parent: BaseCyberImplant
+  id: BaseCyberImplantHand
+  components:
+  - type: ChildOrgan
+    parents: [ HandLeft, HandRight ]
+  - type: Organ
+    category: HandImplant
+
+- type: entity
+  parent: BaseCyberImplantHand
+  id: HandImplantInsulated
+  name: insulated hand implant
+  description: Protects its owner from electric shocks.
+  components:
+  - type: Sprite
+    state: hand_implant_insulated
+  - type: OrganComponents
+    onAdd:
+    - type: Insulated
+
+- type: entity
+  parent: BaseCyberImplantHand
+  id: HandImplantForensics
+  name: forensic hand implant
+  description: Keeps its owner from leaving fingerprints.
+  components:
+  - type: Sprite
+    state: hand_implant_forensics
+  - type: OrganComponents
+    onAdd:
+    - type: FingerprintMask
+
+- type: entity
+  parent: BaseCyberImplantHand
+  id: HandImplantThrusters
+  name: micro-thruster implant
+  description: Helps its owner move around in zero gravity.
+  components:
+  - type: Sprite
+    state: hand_implant_thrusters
+  - type: OrganComponents
+    onAdd:
+    - type: MovementAlwaysTouching
+  - type: OrganExamine
+    examine: cyber-implant-examine-thrusters
+
+- type: entity
+  parent: BaseCyberImplantHand
+  id: HandImplantClaws
+  name: retractable claws implant
+  description: Conceals a pair of retractable plasteel claws inside the hand.
+  components:
+  - type: Sprite
+    state: hand_implant_claws
+  - type: OrganActions
+    actions:
+    - ActionRetractableItemAdvancedClaws
+  - type: RetractOnOrganDisabled
+  - type: CyberwareHumanity
+    cost: 2
+
+# Chest
+
+- type: entity
+  parent: BaseCyberImplant
+  id: ChestImplantInternalAnalyzer
+  name: internal health analyzer
+  description: A cybernetic module in the chest cavity that constantly shows the health of those around its owner.
+  components:
+  - type: Sprite
+    state: brain_implant_nexus
+  - type: ChildOrgan
+    parents: [ Torso ]
+  - type: Organ
+    category: ChestImplant
+  - type: OrganComponents
+    onAdd:
+    - type: ShowHealthBars
+    - type: ShowHealthIcons
+
+- type: entity
+  abstract: true
+  parent: BaseCyberImplant
+  id: BaseCyberImplantHeart
+  components:
+  - type: Sprite
+    state: brain_implant_nexus
+  - type: ChildOrgan
+    parents: [ Torso ]
+  - type: Organ
+    category: HeartImplant
+  - type: OrganExamine
+    examine: cyber-implant-examine-heart
+  - type: CyberwareHumanity
+    cost: 2
+
+- type: entity
+  parent: BaseCyberImplantHeart
+  id: ChestImplantHemostatic
+  name: hemostatic heart implant
+  description: A medical module attached to the heart that slowly mends physical injuries. Reacts badly to EMP.
+  components:
+  - type: CyberHeartImplant
+    healing:
+      types:
+        Blunt: -1
+        Slash: -1
+        Piercing: -1
+
+- type: entity
+  parent: BaseCyberImplantHeart
+  id: ChestImplantThermal
+  name: thermoregenerative heart implant
+  description: A medical module attached to the heart that slowly mends burns and frostbite. Reacts badly to EMP.
+  components:
+  - type: CyberHeartImplant
+    healing:
+      types:
+        Heat: -1
+        Cold: -1
+
+# Head
+
+- type: entity
+  parent: BaseCyberImplant
+  id: BrainImplantComms
+  name: comms brain implant
+  description: A built-in radio with four encryption key slots. Insert the keys before installation.
+  components:
+  - type: Sprite
+    state: brain_implant_comms
+  - type: ChildOrgan
+    parents: [ Head ]
+  - type: Organ
+    category: BrainImplant
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
+  - type: EncryptionKeyHolder
+    keySlots: 4
+  - type: OrganRadio
+
+- type: entity
+  parent: BaseCyberImplant
+  id: NoseImplantOlfactory
+  name: olfactory implant
+  description: Lets its owner sniff out a person and see everything they have touched.
+  components:
+  - type: Sprite
+    state: nose_implant_scent
+  - type: ChildOrgan
+    parents: [ Head ]
+  - type: Organ
+    category: NoseImplant
+  - type: OrganComponents
+    onAdd:
+    - type: ScentTracker

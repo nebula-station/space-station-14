@@ -1,0 +1,31 @@
+- type: technology
+  id: DermalArmorTech
+  name: research-technology-dermal-armor
+  icon:
+    sprite: _Mono/Objects/Misc/cybernetics.rsi
+    state: armor-chest
+  discipline: Arsenal
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - OrganDermalArmor
+  - OrganDermalArmorReflective
+  position: 6,-1
+  technologyPrerequisites:
+  - WeaponLaserCellRevolverTech
+  - HighEndSurgery
+
+- type: technology
+  id: DermalArmorAdvancedTech
+  name: research-technology-dermal-armor-advanced
+  icon:
+    sprite: _LuaM/Objects/Misc/heavy_armor_base.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - OrganDermalArmorHeavyUSSP
+  position: 6,-2
+  technologyPrerequisites:
+  - DermalArmorTech
