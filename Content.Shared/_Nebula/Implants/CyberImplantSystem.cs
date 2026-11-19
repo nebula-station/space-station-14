@@ -45,6 +45,7 @@ public sealed partial class CyberImplantSystem : EntitySystem
                 || !_container.TryGetContainer(action, RetractableItemActionComponent.ContainerId, out var container))
                 continue;
 
+            RemComp<AntiDropLockedComponent>(item);
             RemComp<UnremoveableComponent>(item);
             _container.Insert(item, container);
         }

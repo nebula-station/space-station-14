@@ -3,6 +3,7 @@ using Content.Goobstation.Common.Stunnable;
 using Content.Trauma.Common.Damage;
 // </Trauma>
 using System.Linq;
+using Content.Shared._Nebula.Damage;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Alert;
 using Content.Shared.CCVar;
@@ -520,6 +521,11 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         Dirty(uid, component);
 
         _adminLogger.Add(LogType.Stamina, LogImpact.Medium, $"{ToPrettyString(uid):user} entered stamina crit");
+
+        // Nebula start
+        var critEv = new StaminaCritEnteredEvent();
+        RaiseLocalEvent(uid, ref critEv);
+        // Nebula end
     }
 
     public void ExitStamCrit(EntityUid uid, StaminaComponent? component = null) // Trauma - made public

@@ -1,0 +1,19 @@
+- type: entity
+  parent: BaseArmAugment
+  id: ArmImplantRiotShield
+  name: corporate arm-mounted riot shield
+  description: Projects a hardlight riot shield into the hand of its arm.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/bm_implants.rsi
+    state: toolkit
+  - type: Item
+    size: Small
+  - type: OrganActions
+    actions:
+    - ActionToggleImplantShield
+  - type: ImplantShieldArm
+    shield: ImplantRiotShield
+  - type: ContainerContainer
+    containers:
+      implant_shield: !type:ContainerSlot

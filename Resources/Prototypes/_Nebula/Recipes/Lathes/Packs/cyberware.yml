@@ -8,6 +8,7 @@
   - OrganCyberArmHeraklesRight
   - HandImplantClaws
   - HandImplantForensics
+  - ArmImplantRiotShield
 
 - type: latheRecipePack
   id: CyberwareMedical
@@ -21,6 +22,10 @@
   - OrganCyberArmAngelRight
   - ChestImplantThermal
   - ChestImplantHemostatic
+  - HandImplantAntiDrop
+  - CnsImplantRebooter
+  - HeartImplantReviver
+  - ThroatImplantBreathingTube
 
 - type: latheRecipePack
   id: CyberwareEngineering

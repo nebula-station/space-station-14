@@ -12,3 +12,6 @@
 
 - type: organCategory
   id: NoseImplant
+
+- type: organCategory
+  id: ThroatImplant

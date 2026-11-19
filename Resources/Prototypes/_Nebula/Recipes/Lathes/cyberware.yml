@@ -336,3 +336,48 @@
     Glass: 3000
     Silver: 2000
     Uranium: 500
+
+- type: latheRecipe
+  id: HandImplantAntiDrop
+  result: HandImplantAntiDrop
+  completetime: 10
+  materials:
+    Steel: 2000
+    Plastic: 1500
+    Silver: 1000
+    Plasma: 500
+
+- type: latheRecipe
+  id: CnsImplantRebooter
+  result: CnsImplantRebooter
+  completetime: 10
+  materials:
+    Plastic: 2000
+    Uranium: 1000
+    Glass: 3000
+
+- type: latheRecipe
+  id: HeartImplantReviver
+  result: HeartImplantReviver
+  completetime: 10
+  materials:
+    Plasma: 2000
+    Silver: 1000
+    Uranium: 500
+
+- type: latheRecipe
+  id: ThroatImplantBreathingTube
+  result: ThroatImplantBreathingTube
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 1500
+
+- type: latheRecipe
+  id: ArmImplantRiotShield
+  result: ArmImplantRiotShield
+  completetime: 10
+  materials:
+    Glass: 3000
+    Gold: 1500
+    Plasteel: 1000

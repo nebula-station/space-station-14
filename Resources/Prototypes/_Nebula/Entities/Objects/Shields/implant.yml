@@ -1,0 +1,19 @@
+- type: entity
+  parent: BaseShield
+  id: ImplantRiotShield
+  name: hardlight shield
+  description: A hardlight plane of force projected from an arm implant. Overloads under heavy fire and needs time to restabilize.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Weapons/Melee/implant_shield.rsi
+    state: icon
+  - type: Item
+    sprite: _Nebula/Objects/Weapons/Melee/implant_shield.rsi
+    size: Ginormous
+    heldPrefix: null
+  - type: DisarmMalus
+    malus: 1
+  - type: ImplantShield
+  - type: StaticPrice
+    price: 0

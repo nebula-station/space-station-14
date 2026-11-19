@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from BlueMoon-Station at https://github.com/BlueMoon-Labs/BlueMoon-Station/blob/17f632027d7bf08e53533a811eb42fa7bf72e3c6/icons/obj/surgery.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "brain_implant"
+    },
+    {
+      "name": "brain_implant_overlay"
+    },
+    {
+      "name": "chest_implant"
+    },
+    {
+      "name": "chest_implant_overlay"
+    },
+    {
+      "name": "implant_mask"
+    },
+    {
+      "name": "toolkit"
+    }
+  ]
+}

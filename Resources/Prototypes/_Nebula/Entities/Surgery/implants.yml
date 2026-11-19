@@ -200,3 +200,39 @@
     parts: [ Head ]
   - type: SurgeryOrganCondition
     organ: NoseImplant
+
+# Throat Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenThroatImplant
+  name: Open Cavity For Throat Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: ThroatImplant
+
+- type: entity
+  parent: BaseSurgeryInsertOrgan
+  id: SurgeryInsertThroatImplant
+  name: Insert Throat Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: ThroatImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: ThroatImplant
+
+- type: entity
+  parent: BaseSurgeryRemoveOrgan
+  id: SurgeryRemoveThroatImplant
+  name: Remove Throat Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: ThroatImplant

@@ -175,3 +175,85 @@
   - type: OrganComponents
     onAdd:
     - type: ScentTracker
+
+# BlueMoon implants
+
+- type: entity
+  parent: BaseCyberImplantHand
+  id: HandImplantAntiDrop
+  name: anti-drop implant
+  description: Forces the hand muscles to contract and locks the held item in place. Toggle it in the hand holding the item.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/bm_implants.rsi
+    layers:
+    - state: brain_implant
+    - state: brain_implant_overlay
+      color: "#DE7E00"
+  - type: OrganActions
+    actions:
+    - ActionToggleAntiDrop
+  - type: AntiDropImplant
+
+- type: entity
+  parent: BaseOrganCNSImplant
+  id: CnsImplantRebooter
+  name: CNS rebooter implant
+  description: Reboots the central nervous system with a burst once its owner collapses from exhaustion.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/bm_implants.rsi
+    layers:
+    - state: brain_implant
+    - state: brain_implant_overlay
+      color: "#FFFF00"
+  - type: Item
+    size: Tiny
+  - type: CyberwareHumanity
+    cost: 1
+  - type: StaticPrice
+    price: 500
+  - type: CnsRebooter
+
+- type: entity
+  parent: BaseCyberImplantHeart
+  id: HeartImplantReviver
+  name: reviver implant
+  description: Patches up a dead body and defibrillates it, at the cost of the owner's heart.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/bm_implants.rsi
+    layers:
+    - state: chest_implant
+    - state: chest_implant_overlay
+      color: "#AD0000"
+  - type: HeartReviver
+    healing:
+      types:
+        Asphyxiation: -5
+        Blunt: -2
+        Slash: -2
+        Piercing: -2
+        Heat: -2
+        Cold: -2
+        Shock: -2
+        Poison: -1
+  - type: OrganComponents
+    onAdd:
+    - type: HeartReviverHost
+
+- type: entity
+  parent: BaseCyberImplant
+  id: ThroatImplantBreathingTube
+  name: breathing tube implant
+  description: Adds an internals connector to the throat, so a tank can be used without a mask.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/bm_implants.rsi
+    state: implant_mask
+  - type: ChildOrgan
+    parents: [ Head ]
+  - type: Organ
+    category: ThroatImplant
+  - type: BreathMask
+  - type: BreathingTubeImplant
