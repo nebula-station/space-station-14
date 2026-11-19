@@ -39,7 +39,7 @@ public sealed class DocumentPrinterPaperTest
         {
             var blank = entMan.SpawnEntity("Paper", map.GridCoords);
             Assert.That(storage.TryInsertMaterialEntity(user, blank, printer));
-            Assert.That(storage.GetMaterialAmount(printer, "Paper"), Is.EqualTo(25));
+            Assert.That(storage.GetMaterialAmount(printer, "Paper"), Is.EqualTo(100));
 
             var written = entMan.SpawnEntity("Paper", map.GridCoords);
             paperSys.SetContent(written, "hello");
@@ -49,7 +49,7 @@ public sealed class DocumentPrinterPaperTest
             entMan.GetComponent<PaperComponent>(stamped).StampState = "paper_stamp-centcom";
             Assert.That(storage.TryInsertMaterialEntity(user, stamped, printer), Is.False);
 
-            Assert.That(storage.GetMaterialAmount(printer, "Paper"), Is.EqualTo(25));
+            Assert.That(storage.GetMaterialAmount(printer, "Paper"), Is.EqualTo(100));
             Assert.That(entMan.EntityExists(written));
             Assert.That(entMan.EntityExists(stamped));
         });

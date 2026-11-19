@@ -13,7 +13,7 @@
       color: "#1dff00"
   - type: PhysicalComposition
     materialComposition:
-      Paper: 25 # Nebula
+      Paper: 50
   - type: SpawnItemsOnUse
     items:
     - id: NukeCodePaper
