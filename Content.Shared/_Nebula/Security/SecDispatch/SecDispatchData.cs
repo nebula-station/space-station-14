@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Actions;
+using Robust.Shared.Audio;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
@@ -23,8 +24,17 @@ public sealed partial class SecDispatchEntry
     [DataField(required: true)]
     public SpriteSpecifier Icon = SpriteSpecifier.Invalid;
 
+    /// <summary>
+    /// Highlights the option in the menu.
+    /// </summary>
     [DataField]
     public bool Combat;
+
+    /// <summary>
+    /// Played to every player whose worn headset received this report.
+    /// </summary>
+    [DataField]
+    public SoundSpecifier? Sound;
 }
 
 [Serializable, NetSerializable]

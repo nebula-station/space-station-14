@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Radio;
-using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
@@ -29,12 +28,6 @@ public sealed partial class SecDispatchComponent : Component
     /// </summary>
     [DataField]
     public TimeSpan Cooldown = TimeSpan.FromSeconds(10);
-
-    /// <summary>
-    /// Played to every player whose worn headset received a combat report from this mask.
-    /// </summary>
-    [DataField]
-    public SoundSpecifier? CombatSound;
 
     /// <summary>
     /// Reports in menu order: clockwise starting from 9 o'clock, so with eight entries the first four fill the top half.

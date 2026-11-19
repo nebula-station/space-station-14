@@ -61,7 +61,7 @@ public sealed partial class SecDispatchSystem : SharedSecDispatchSystem
         var location = _navMap.GetNearestBeaconString(user, onlyName: true);
         var message = Loc.GetString(entry.Message, ("location", location));
 
-        if (entry.Combat && ent.Comp.CombatSound is { } sound)
+        if (entry.Sound is { } sound)
             _radioSound.SendRadioMessage(user, message, ent.Comp.Channel, ent.Owner, sound);
         else
             _radio.SendRadioMessage(user, message, _proto.Index(ent.Comp.Channel), ent.Owner);
