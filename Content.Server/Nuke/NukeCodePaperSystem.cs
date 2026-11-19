@@ -71,7 +71,8 @@ namespace Content.Server.Nuke
                     new List<StampDisplayInfo>
                     {
                         new StampDisplayInfo { StampedName = Loc.GetString("stamp-component-stamped-name-centcom"), StampedColor = Color.FromHex("#BB3232") },
-                    }
+                    },
+                    senderFaxName: Loc.GetString("stamp-component-stamped-name-centcom") // Nebula
                 );
                 _faxSystem.Receive(faxEnt, printout, null, fax);
 

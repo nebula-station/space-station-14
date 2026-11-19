@@ -2,6 +2,7 @@
 using Content.Goobstation.Common.Administration.Notifications;
 using Content.Goobstation.Shared.Fax;
 // </Trauma>
+using Content.Shared._Nebula.Fax; // Nebula
 using Content.Server.Administration;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
@@ -537,7 +538,8 @@ public sealed partial class FaxSystem : EntitySystem
                     metadata.EntityPrototype.ID,
                     paper.StampState,
                     paper.StampedBy,
-                    paper.EditingDisabled),
+                    paper.EditingDisabled,
+                    component.FaxName), // Nebula
         };
 
         _deviceNetworkSystem.SendPacket(uid, component.DestinationFaxAddress, ref payload);
@@ -574,6 +576,9 @@ public sealed partial class FaxSystem : EntitySystem
 
         if (component.NotifyAdmins)
             NotifyAdmins(faxName, user, sender); // Trauma - pass user and sender
+
+        var receivedEv = new FaxReceivedEvent(faxName); // Nebula
+        RaiseLocalEvent(uid, ref receivedEv); // Nebula
 
         if (printout != null) // Trauma
             component.PrintingQueue.Enqueue(printout);
