@@ -89,7 +89,7 @@ public sealed partial class HypoportSystem : EntitySystem
         }
     }
 
-    private bool IsHypospray(EntityUid uid)
+    public bool IsHypospray(EntityUid uid) // Nebula edit
     {
         var comp = _injectorQuery.Comp(uid);
         if (!ProtoMan.Resolve(comp.ActiveModeProtoId, out var mode))

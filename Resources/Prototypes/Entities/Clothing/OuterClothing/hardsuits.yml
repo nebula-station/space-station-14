@@ -1345,7 +1345,7 @@
   - type: ModifyDelayedKnockdown # Goobstation - End
     cancel: true
   - type: Tag
-    tags: [] # ignore "WhitelistChameleon" tag
+    tags: [ Hardsuit ] # Nebula edit
 
 #CBURN Hardsuit
 - type: entity
