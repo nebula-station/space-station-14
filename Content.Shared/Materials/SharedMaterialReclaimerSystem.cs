@@ -14,6 +14,7 @@ using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Nutrition.EntitySystems;
+using Content.Shared.Paper; // Nebula
 using Content.Shared.Stacks;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
@@ -142,7 +143,7 @@ public abstract partial class SharedMaterialReclaimerSystem : EntitySystem
             return false;
 
         if (_whitelistSystem.IsWhitelistFail(component.Whitelist, item) ||
-            _whitelistSystem.IsWhitelistPass(component.Blacklist, item))
+            _whitelistSystem.IsWhitelistPass(component.Blacklist, item) && !HasComp<PaperComponent>(item)) // Nebula
             return false;
 
         if (Container.TryGetContainingContainer((item, null, null), out _) && !Container.TryRemoveFromContainer(item))

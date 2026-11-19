@@ -16,6 +16,7 @@
   parent: FaxPager
   id: FaxPagerAdmin
   suffix: Admin
+  categories: [ DoNotMap ]
   description: Buzzes when a linked fax gets a message. Can be linked to as many faxes as you want.
   components:
   - type: FaxPager
