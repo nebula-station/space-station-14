@@ -163,6 +163,7 @@ namespace Content.Client.Entry
 
             _overlayManager.AddOverlay(new SingularityOverlay());
             _overlayManager.AddOverlay(new RadiationPulseOverlay());
+            _overlayManager.AddOverlay(new Content.Client._Funkystation.Explosion.ExplosionShockWaveOverlay()); // Nebula - Monolith: explosion shockwave
             _chatManager.Initialize();
             _clientPreferencesManager.Initialize();
             _euiManager.Initialize();

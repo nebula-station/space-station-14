@@ -1,0 +1,10 @@
+# Ported from Monolith-DS (LuaM) by Nebula, the trait was removed upstream in Monolith-DS#304.
+
+- type: trait
+  id: LuaMArcanAccent
+  name: trait-luam-arcan-accent-name
+  description: trait-luam-arcan-accent-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: ArcanAccent

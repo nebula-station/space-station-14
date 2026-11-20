@@ -21,6 +21,7 @@ public abstract partial class SharedVisualBodySystem
                 Forced = true,
                 IsChildMarking = true,
                 Gradient = marking.Gradient, // Nebula edit
+                Size = marking.Size, // Nebula - WolfGate
             };
 
             forcedColors.Add((childMarking, childProto));

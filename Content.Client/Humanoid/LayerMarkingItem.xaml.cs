@@ -123,6 +123,8 @@ public sealed partial class LayerMarkingItem : BoxContainer, ISearchableControl
 
             _gradientControl?.SetGradient(marking.Gradient, GradientRoots(marking)); // Nebula edit
         }
+
+        UpdateSizeControl(selected); // Nebula - WolfGate
     }
 
     private void SelectButtonPressed(BaseButton.ButtonEventArgs args)
