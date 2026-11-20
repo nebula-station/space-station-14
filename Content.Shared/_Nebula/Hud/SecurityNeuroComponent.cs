@@ -35,6 +35,15 @@ public sealed partial class SecurityNeuroComponent : Component
     public bool Commander;
 
     /// <summary>
+    /// Name of the owner's squad, null without one.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    public string? SquadName;
+
+    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    public Color SquadColor;
+
+    /// <summary>
     /// Other members of the owner's squad.
     /// </summary>
     [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]

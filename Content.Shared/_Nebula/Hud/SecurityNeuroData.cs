@@ -29,6 +29,11 @@ public record struct SecurityNeuroSquadMember
 {
     public required string Name;
     public required MobState State;
+
+    /// <summary>
+    /// The first member of the squad leads it.
+    /// </summary>
+    public bool Leader;
 }
 
 /// <summary>

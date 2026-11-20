@@ -42,11 +42,23 @@ public static class SecurityHud
     /// </summary>
     public const string ImplantSource = "security-implant";
 
-    public static SkewedHudLine Member(string name, MobState state)
+    public static SkewedHudLine SquadName(string name, Color color)
     {
         return new SkewedHudLine
         {
-            Label = Loc.GetString("skewed-hud-member"),
+            Label = Loc.GetString("skewed-hud-squad"),
+            Value = name,
+            Color = color,
+            LabelColor = color.WithAlpha(0.65f),
+            Lags = true,
+        };
+    }
+
+    public static SkewedHudLine Member(string name, MobState state, bool leader)
+    {
+        return new SkewedHudLine
+        {
+            Label = Loc.GetString(leader ? "skewed-hud-leader" : "skewed-hud-member"),
             Value = name,
             Color = SkewedHudSystem.StateColor(state),
             Lags = true,
@@ -65,7 +77,7 @@ public static class SecurityHud
         };
     }
 
-    public static SkewedHudTask Task(SecurityHudTaskKind kind, string text)
+    public static SkewedHudTask Task(SecurityHudTaskKind kind, string text, string? description = null)
     {
         return new SkewedHudTask
         {
@@ -86,6 +98,7 @@ public static class SecurityHud
                 _ => "skewed-hud-task-wanted",
             }),
             Text = text,
+            Description = description,
             Order = (int) kind,
             Urgent = kind is SecurityHudTaskKind.Implant
                 or SecurityHudTaskKind.Loss

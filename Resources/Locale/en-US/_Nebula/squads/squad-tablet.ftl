@@ -24,6 +24,9 @@ squad-tablet-create = Create
 squad-tablet-create-hint = Pick a name and a free color, then drag officers into the squad.
 squad-tablet-delete = Disband
 squad-tablet-drop-hint = Drag officers here.
+squad-tablet-leader = Leader
+squad-tablet-make-leader = Lead
+squad-tablet-make-leader-tooltip = Make the squad leader. The leader is always first in the list.
 
 squad-order-advance = Advance
 squad-order-hold = Hold

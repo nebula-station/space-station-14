@@ -335,21 +335,24 @@ public sealed partial class SquadMonitorTab : BoxContainer
         if (squad.Members.Count == 0)
             card.AddChild(SquadUi.Muted(Loc.GetString("squad-tablet-squad-empty")));
 
-        foreach (var member in squad.Members)
+        for (var i = 0; i < squad.Members.Count; i++)
         {
-            card.AddChild(CreateMember(member));
+            card.AddChild(CreateMember(squad.Members[i], i == 0));
         }
 
         return card;
     }
 
-    private Control CreateMember(SquadTabletMember member)
+    private Control CreateMember(SquadTabletMember member, bool leader)
     {
         var row = new CyberButton(member.Name, CyberButtonStyle.Row) { HorizontalExpand = true, MinHeight = 26 };
         row.Content.Margin = new Thickness(18, 3, 8, 3);
         row.Label.HorizontalExpand = true;
         row.Label.ClipText = true;
         row.Label.FontOverride = CyberDraw.Font(11);
+        if (leader)
+            row.Content.AddChild(CyberDraw.Label(Loc.GetString("squad-tablet-leader").ToUpperInvariant(), CyberPalette.Cyan, 10, true));
+
         row.Content.AddChild(SquadUi.Status(member));
 
         var record = member.Record;

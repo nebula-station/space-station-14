@@ -1,5 +1,6 @@
 neuro-profile-security-header = NT-SEC // НЕЙРОИНТЕРФЕЙС  { $time }
 skewed-hud-member = БОЕЦ
+skewed-hud-leader = ЛИДЕР
 skewed-hud-location = ЛОКАЦИЯ
 skewed-hud-status = СТАТУС
 skewed-hud-code = КОД

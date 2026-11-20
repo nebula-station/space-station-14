@@ -1,5 +1,6 @@
 neuro-profile-security-header = NT-SEC // NEURAL INTERFACE  { $time }
 skewed-hud-member = UNIT
+skewed-hud-leader = LEADER
 skewed-hud-location = LOCATION
 skewed-hud-status = STATUS
 skewed-hud-code = CODE

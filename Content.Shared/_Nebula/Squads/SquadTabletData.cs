@@ -230,6 +230,16 @@ public sealed class SquadTabletAssignMessage(uint record, int? squad) : BoundUse
     public int? Squad { get; } = squad;
 }
 
+/// <summary>
+/// Moves the member to the top of their squad, which makes them its leader.
+/// </summary>
+[Serializable, NetSerializable]
+public sealed class SquadTabletSetLeaderMessage(int squad, uint record) : BoundUserInterfaceMessage
+{
+    public int Squad { get; } = squad;
+    public uint Record { get; } = record;
+}
+
 [Serializable, NetSerializable]
 public sealed class SquadTabletPlaceOrderMessage(int squad, ProtoId<SquadOrderPrototype> order, NetCoordinates coordinates)
     : BoundUserInterfaceMessage

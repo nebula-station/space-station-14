@@ -1,0 +1,9 @@
+# Job icons are priority 1 and the mindshield is a Mod layer, so the leader icon goes right under the job.
+- type: statusIcon
+  id: SquadLeaderIcon
+  priority: 2
+  locationPreference: Right
+  isShaded: true
+  icon:
+    sprite: /Textures/_Nebula/Interface/Squads/squad_icons.rsi
+    state: leader

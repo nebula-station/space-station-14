@@ -114,6 +114,21 @@ public sealed partial class SecuritySquadSystem
     }
 
     [SubscribeLocalEvent]
+    private void HandleSetLeaderMessage(Entity<SquadTabletComponent> ent, ref SquadTabletSetLeaderMessage args)
+    {
+        if (!TryGetActorStation(ent, args.Actor, out var station))
+            return;
+
+        var key = new StationRecordKey(args.Record, station);
+        if (!_records.TryGetRecord<GeneralStationRecord>(key, out var record)
+            || !TrySetLeader(key, args.Squad))
+            return;
+
+        _adminLog.Add(LogType.Action, LogImpact.Low,
+            $"{ToPrettyString(args.Actor):user} made {record.Name} the leader of security squad {args.Squad}");
+    }
+
+    [SubscribeLocalEvent]
     private void HandlePlaceOrderMessage(Entity<SquadTabletComponent> ent, ref SquadTabletPlaceOrderMessage args)
     {
         if (!TryGetActorStation(ent, args.Actor, out var station)
