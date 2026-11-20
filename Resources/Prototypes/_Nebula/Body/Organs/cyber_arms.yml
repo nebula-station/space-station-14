@@ -57,6 +57,10 @@
   id: OrganCyberArmMechwrightLeft
   name: left mechwright arm
   components:
+  - type: ContainerContainer # Wounds from OrganBase, storagebase from Storage: first parent wins on merge
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_steel_arm
@@ -72,6 +76,10 @@
   id: OrganCyberArmMechwrightRight
   name: right mechwright arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_steel_arm
@@ -105,6 +113,10 @@
   id: OrganCyberArmReaperLeft
   name: left reaper arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_silver_arm
@@ -120,6 +132,10 @@
   id: OrganCyberArmReaperRight
   name: right reaper arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_silver_arm
@@ -150,6 +166,10 @@
   id: OrganCyberArmInvestigatorLeft
   name: left investigator arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_investigator_arm
@@ -165,6 +185,10 @@
   id: OrganCyberArmInvestigatorRight
   name: right investigator arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_investigator_arm
@@ -193,6 +217,10 @@
   id: OrganCyberArmScribeLeft
   name: left scribe arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_scribe_arm
@@ -208,6 +236,10 @@
   id: OrganCyberArmScribeRight
   name: right scribe arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_scribe_arm
@@ -239,6 +271,10 @@
   id: OrganCyberArmPersephoneLeft
   name: left persephone arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_persephone_arm
@@ -254,6 +290,10 @@
   id: OrganCyberArmPersephoneRight
   name: right persephone arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_persephone_arm
@@ -281,6 +321,10 @@
   id: OrganCyberArmSpacerLeft
   name: left spacer arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_spacer_arm
@@ -296,6 +340,10 @@
   id: OrganCyberArmSpacerRight
   name: right spacer arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_spacer_arm
@@ -321,6 +369,10 @@
   id: OrganCyberArmRipletLeft
   name: left riplet arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_riplet_arm
@@ -336,6 +388,10 @@
   id: OrganCyberArmRipletRight
   name: right riplet arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_riplet_arm
@@ -366,6 +422,10 @@
   id: OrganCyberArmEngineerLeft
   name: left engineer arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_engineer_arm
@@ -381,6 +441,10 @@
   id: OrganCyberArmEngineerRight
   name: right engineer arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_engineer_arm
@@ -411,6 +475,10 @@
   id: OrganCyberArmAngelLeft
   name: left angel arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_angel_arm
@@ -426,6 +494,10 @@
   id: OrganCyberArmAngelRight
   name: right angel arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_angel_arm
@@ -455,6 +527,10 @@
   id: OrganCyberArmGorillaLeft
   name: left G.O.R.I.L.L.A. arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_gorilla_arm
@@ -470,6 +546,10 @@
   id: OrganCyberArmGorillaRight
   name: right G.O.R.I.L.L.A. arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_gorilla_arm
@@ -498,6 +578,10 @@
   id: OrganCyberArmHeraklesLeft
   name: left herakles arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: l_bulwark_arm
@@ -513,6 +597,10 @@
   id: OrganCyberArmHeraklesRight
   name: right herakles arm
   components:
+  - type: ContainerContainer
+    containers:
+      Wounds: !type:Container
+      storagebase: !type:Container
   - type: Sprite
     sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
     state: r_bulwark_arm
