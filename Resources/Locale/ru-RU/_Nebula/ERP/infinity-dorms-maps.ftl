@@ -40,3 +40,6 @@ infinity-dorm-room-desc-pcclub = Мерцающие мониторы и игры
 
 infinity-dorm-room-name-xenoborgshuttle = Шаттл ксеноборгов
 infinity-dorm-room-desc-xenoborgshuttle = Отдых на борту захваченного шаттла ксеноборгов.
+
+infinity-dorm-room-name-pirateship = Пиратский корабль
+infinity-dorm-room-desc-pirateship = Свой корабль с пушкой, рулём и сундуком монет.
