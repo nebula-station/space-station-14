@@ -99,24 +99,4 @@ public sealed partial class MarkingsViewModel
         index = layerMarkings.FindIndex(it => it.MarkingId == markingId);
         return index != -1;
     }
-
-    // Nebula start - WolfGate
-    public void TrySetMarkingSize(
-        ProtoId<OrganCategoryPrototype> organ,
-        HumanoidVisualLayers layer,
-        ProtoId<MarkingPrototype> markingId,
-        int size)
-    {
-        if (!TryGetLayerMarking(organ, layer, markingId, out var markings, out var index)
-            || !_prototype.TryIndex(markingId, out var markingProto))
-            return;
-
-        var sanitized = markingProto.SanitizeSize(size);
-        if (markings[index].Size == sanitized)
-            return;
-
-        markings[index] = markings[index] with { Size = sanitized };
-        MarkingsChanged?.Invoke(organ, layer);
-    }
-    // Nebula end
 }

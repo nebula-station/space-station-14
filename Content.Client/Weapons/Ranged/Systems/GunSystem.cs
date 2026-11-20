@@ -310,11 +310,6 @@ public sealed partial class GunSystem : SharedGunSystem
         };
 
         _animPlayer.Play(ent, anim, "muzzle-flash");
-
-        // Nebula - Monolith: lets client effects follow the shot, e.g. the powder smoke particles
-        var flashed = new Content.Shared._LuaM.Weapons.GunMuzzleFlashedEvent(message.Angle);
-        RaiseLocalEvent(gunUid, ref flashed);
-
         if (!TryComp(gunUid, out PointLightComponent? light))
         {
             light = Factory.GetComponent<PointLightComponent>();

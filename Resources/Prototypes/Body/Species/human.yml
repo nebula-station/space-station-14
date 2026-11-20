@@ -1,7 +1,6 @@
 - type: markingsGroup
   parent: Undergarments
   id: Human
-  artTone: _s # Nebula - WolfGate, human body sprites need the skin-toned genital art
   limits:
     enum.HumanoidVisualLayers.HeadTop:
       limit: 6

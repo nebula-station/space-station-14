@@ -21,7 +21,7 @@
   name: bloodloss
   components:
   - type: StutteringAccent
-  # - type: DrunkStatusEffect # Nebula - Monolith, the bloodloss screen effect (Content.Client/_LuaM/Body) replaces the drunk one
+  - type: DrunkStatusEffect
 
 - type: entity
   abstract: true

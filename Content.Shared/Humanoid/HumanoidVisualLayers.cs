@@ -41,12 +41,6 @@ namespace Content.Shared.Humanoid
         Ensnare,
         Fire,
         BodyOverlay, // Nebula edit
-        // Nebula start - WolfGate
-        Breasts,
-        BreastsBehind,
-        Vagina,
-        Penis,
-        // Nebula end
 
     }
 }
