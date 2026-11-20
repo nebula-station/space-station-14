@@ -47,6 +47,10 @@
   - NodeScanner
   - AnalysisComputerCircuitboard
   - ArtifactAnalyzerMachineCircuitboard
+  # Nebula start
+  - OrganCyberArmInvestigatorLeft
+  - OrganCyberArmInvestigatorRight
+  # Nebula end
   # Goobstation R&D Console rework start
   position: -5,-5
   technologyPrerequisites:
@@ -99,6 +103,10 @@
   cost: 10000
   recipeUnlocks:
   - WeaponGauntletGorilla
+  # Nebula start
+  - OrganCyberArmGorillaLeft
+  - OrganCyberArmGorillaRight
+  # Nebula end
   # Goobstation R&D Console rework start
   position: -6,-4
   technologyPrerequisites:

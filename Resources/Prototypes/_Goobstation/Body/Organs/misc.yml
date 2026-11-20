@@ -5,27 +5,16 @@
   parent: [ OrganHumanHeart, BaseSyndicateContraband ]
   id: OrganSyndicateHeart
   components:
+  # Nebula start
+  - type: CyberwareHumanity
+    cost: 2
+  # Nebula end
   - type: Sprite
     layers:
     - state: icon
     scale: 0.5, 0.5
   - type: UnremoveableOrgan # fuck sec chuds
   - type: Cybernetics # zap
-
-- type: entity
-  parent: OrganSyndicateHeart
-  id: OrganHeartSandevistan
-  name: Sandevistan
-  description: Illegal cyberware that replaces the user's heart and allows them to greatly increase their speed for the cost of the endurance.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Objects/Misc/sandevistan.rsi
-  - type: OrganActions
-    actions:
-    - ActionToggleSandevistan
-  - type: OrganComponents
-    onAdd:
-    - type: SandevistanUser
 
 - type: entity
   parent: OrganSyndicateHeart

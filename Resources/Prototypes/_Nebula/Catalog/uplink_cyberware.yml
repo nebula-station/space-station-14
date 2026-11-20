@@ -1,0 +1,229 @@
+- type: listing
+  id: UplinkAutosurgeonMantisBladesPlasteel
+  productEntity: AutosurgeonMantisBladesPlasteel
+  cost:
+    Telecrystal: 35
+  categories:
+  - UplinkImplants
+
+- type: listing
+  id: UplinkAutosurgeonMantisBladesMieyo
+  productEntity: AutosurgeonMantisBladesMieyo
+  cost:
+    Telecrystal: 60
+  categories:
+  - UplinkImplants
+
+- type: listing
+  id: UplinkAutosurgeonMantisBladesMaxTac
+  productEntity: AutosurgeonMantisBladesMaxTac
+  cost:
+    Telecrystal: 65
+  categories:
+  - UplinkImplants
+
+- type: listing
+  id: UplinkAutosurgeonDermalArmorPDV
+  productEntity: AutosurgeonDermalArmorPDV
+  cost:
+    Telecrystal: 25
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonDermalArmorPDVNukeops
+  productEntity: AutosurgeonDermalArmorPDV
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonOpticalCamoPDV
+  productEntity: AutosurgeonOpticalCamoPDV
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkImplants
+
+- type: listing
+  id: UplinkAutosurgeonHumanityChipMk1
+  productEntity: AutosurgeonHumanityChipMk1
+  cost:
+    Telecrystal: 25
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonHumanityChipMk1Nukeops
+  productEntity: AutosurgeonHumanityChipMk1
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonHumanityChipMk2
+  productEntity: AutosurgeonHumanityChipMk2
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonHumanityChipMk2Nukeops
+  productEntity: AutosurgeonHumanityChipMk2
+  cost:
+    Telecrystal: 65
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonHumanityChipMk3
+  productEntity: AutosurgeonHumanityChipMk3
+  cost:
+    Telecrystal: 60
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonHumanityChipMk3Nukeops
+  productEntity: AutosurgeonHumanityChipMk3
+  cost:
+    Telecrystal: 90
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonCombatMedipen
+  productEntity: AutosurgeonCombatMedipen
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonCombatMedipenNukeops
+  productEntity: AutosurgeonCombatMedipen
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonStimulant
+  productEntity: AutosurgeonStimulant
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonStimulantNukeops
+  productEntity: AutosurgeonStimulant
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonMuscleFibersMieyo
+  productEntity: AutosurgeonMuscleFibersMieyo
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkImplants
+
+- type: listing
+  id: UplinkAutosurgeonSandevistanTSF
+  productEntity: AutosurgeonSandevistanTSF
+  cost:
+    Telecrystal: 45
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonSandevistanMieyo
+  productEntity: AutosurgeonSandevistanMieyo
+  cost:
+    Telecrystal: 80
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonKerenzikovUSSP
+  productEntity: AutosurgeonKerenzikovUSSP
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkImplants

@@ -1,0 +1,470 @@
+# Gorilla
+
+- type: entity
+  parent: WeaponGauntletGorilla
+  id: WeaponGauntletGorillaCyber
+  name: G.O.R.I.L.L.A. gauntlet arm attachment
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    state: gorillagauntlet
+  - type: PhysicalComposition
+    materialComposition: {}
+
+- type: entity
+  parent: WeaponPistolCHIMP
+  id: WeaponPistolCHIMPCyber
+  name: C.H.I.M.P. handcannon arm attachment
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    layers:
+    - state: chimphandcannon
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-1
+      visible: false
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: BatterySelfRecharger
+    autoRechargeRate: 2 # takes 6 minutes to charge itself back to full
+  - type: StaticPrice
+    price: 0
+  - type: PhysicalComposition
+    materialComposition: {}
+
+# Riplet
+
+- type: entity
+  parent: BaseItem
+  id: CyberEquipmentGrabber
+  name: riplet clamp
+  description: Gives you the ability to carry things, like a tiny Ripley!
+  components:
+  - type: LargeGrabber
+    maxContents: 1
+    dropOnContainerChange: true
+  - type: ContainerContainer
+    containers:
+      item-container: !type:Container
+      cell_slot: !type:ContainerSlot { }
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        whitelist:
+          components:
+          - PowerCell
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    layers:
+    - state: ripletclaw
+    - state: ripletclaw-full
+      map: [ "enum.ToggleableVisuals.Layer" ]
+      visible: false
+  - type: DoAfter
+  - type: ItemToggle
+    onActivate: false
+    onUse: false
+    soundActivate:
+      path: /Audio/Items/change_jaws.ogg
+    soundDeactivate:
+      path: /Audio/Items/change_jaws.ogg
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+
+# Persephone
+
+- type: entity
+  parent: BaseItem
+  id: CyberReagentGrinder
+  name: integrated reagent grinder
+  description: From BlenderTech. Will It Blend? Let's find out!
+  components:
+  - type: ReagentGrinder
+    storageMaxEntities: 2
+  - type: ActivatableUI
+    key: enum.ReagentGrinderUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ReagentGrinderUiKey.Key:
+        type: ReagentGrinderBoundUserInterface
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ReagentGrinderVisualState.BeakerAttached:
+        grinder:
+          True: { state: "handheldgrinder-beaker-attached" }
+          False: { state: "handheldgrinder-empty" }
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    layers:
+    - state: handheldgrinder
+    - state: handheldgrinder-empty
+      map: [ "grinder" ]
+  - type: ItemSlots
+    slots:
+      beakerSlot:
+        whitelist:
+          components:
+          - FitsInDispenser
+  - type: ContainerContainer
+    containers:
+      beakerSlot: !type:ContainerSlot
+      inputContainer: !type:Container
+
+# Scribe
+
+- type: entity
+  parent: BaseItem
+  id: PrinterCyber
+  name: cybernetic printer
+  description: The dream of every paperwork afficionado.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    layers:
+    - state: printer
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: printer_inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: Lathe
+    producingSound: /Audio/Machines/scanning.ogg
+    idleState: printer
+    runningState: printer_printing
+    staticPacks:
+    - PaperForms
+  - type: DocumentPrinter
+  - type: MaterialStorage
+    materialWhiteList:
+    - Paper
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+  - type: Appearance
+
+- type: entity
+  parent: BaseItem
+  id: StampCyber
+  name: cybernetic multistamp
+  description: The bad boy can fit so many (3) stamps in it!
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    layers:
+    - state: multistamp
+    - state: stamp
+      color: '#ffffff'
+  - type: ItemSlots
+    slots:
+      stamp_slot_1:
+        name: stamp-slot-component-slot-name-stamp
+        whitelist:
+          components:
+          - Stamp
+        blacklist:
+          components:
+          - Multistamp
+      stamp_slot_2:
+        name: stamp-slot-component-slot-name-stamp
+        whitelist:
+          components:
+          - Stamp
+        blacklist:
+          components:
+          - Multistamp
+      stamp_slot_3:
+        name: stamp-slot-component-slot-name-stamp
+        whitelist:
+          components:
+          - Stamp
+        blacklist:
+          components:
+          - Multistamp
+  - type: ContainerContainer
+    containers:
+      stamp_slot_1: !type:ContainerSlot
+      stamp_slot_2: !type:ContainerSlot
+      stamp_slot_3: !type:ContainerSlot
+  - type: Stamp
+  - type: Multistamp
+
+- type: entity
+  parent: [ BaseItem, BaseBagOpenClose ]
+  id: FilingCabinetCyber
+  name: cybernetic file keeper
+  description: Keeping all your forms organised since 2524!
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    state: cabinet
+    layers:
+    - state: cabinet
+    - state: cabinet_open
+      map: ["openLayer"]
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 12
+    soundHit:
+      collection: MetalSlam
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,4,3
+    whitelist:
+      tags:
+      - Document
+  - type: Appearance
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: InteractionOutline
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+
+# Herakles
+
+- type: entity
+  parent: BaseItem
+  id: HoloRestrainerCyber
+  name: holorestrainer
+  description: Creates solid, but temporary holographic cuffs.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: holorestrainer
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: holorestrainer_powered
+      shader: unshaded
+      visible: false
+  - type: Appearance
+  - type: BatteryVisuals
+  - type: GenericVisualizer
+    visuals:
+      enum.BatteryVisuals.State:
+        enum.PowerCellVisualLayers.Unshaded:
+          Full: { visible: true }
+          Neither: { visible: true }
+          Empty: { visible: false }
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot {}
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+        whitelist:
+          components:
+          - PowerCell
+  - type: HoloItem
+    itemPrototype: HandcuffsHolographic
+    chargeUse: 90
+    requiredComponents:
+    - type: Cuffable
+  - type: UseDelay
+
+- type: entity
+  parent: Handcuffs
+  id: HandcuffsHolographic
+  name: holocuffs
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    state: holorestrainer_powered
+  - type: TimedDespawn
+    lifetime: 180
+  - type: Handcuff
+    cuffedRSI: Objects/Misc/handcuffs.rsi
+    bodyIconState: body-overlay
+  - type: PhysicalComposition
+    materialComposition: {}
+
+- type: entity
+  parent: BaseItem
+  id: MeleeWeaponCyberHerakles
+  name: Herakles fist
+  description: An ostensibly nonlethal arm replacement. Strong enough to toss people around and pry open doors.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    state: herakles
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcFist
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      path: "/Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg"
+  - type: StaminaDamageOnHit
+    damage: 20
+  - type: MeleeThrowOnHit
+    speed: 15
+    distance: 5
+  - type: DamageOnAttackedProtection
+    damageProtection:
+      flatReductions:
+        Heat: 100
+        Cold: 100
+        Radiation: 100
+    slots: NONE
+  - type: Prying
+    speedModifier: 1.5
+    pryPowered: true
+    useSound: /Audio/Items/jaws_pry.ogg
+
+# Investigator
+
+- type: entity
+  parent: [ SolutionBeaker, SolutionTiny, BaseItem ]
+  id: VialCyber
+  name: cybernetic vial
+  description: Fluid storage, integrated right into your arm!
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Vial
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    layers:
+    - state: cyber_vial
+    - state: cyber_vial-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: cyber_vial-
+  - type: Edible
+    edible: Drink
+    solution: beaker
+    destroyOnEmpty: false
+    utensil: None
+  - type: ExaminableSolution
+    solution: beaker
+    exactVolume: true
+  - type: DrawableSolution
+    solution: beaker
+  - type: Spillable
+    solution: beaker
+  - type: SolutionTransfer
+    maxTransferAmount: 30
+    canChangeTransferAmount: true
+  - type: SolutionItemStatus
+    solution: beaker
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: MeleeWeapon
+    soundNoDamage:
+      path: "/Audio/Effects/Fluids/splat.ogg"
+    damage:
+      types:
+        Blunt: 0
+
+- type: entity
+  parent: VialCyber
+  id: VialCyberEmpty
+  components:
+  - type: MixableSolution
+    solution: beaker
+  - type: RefillableSolution
+    solution: beaker
+  - type: DrainableSolution
+    solution: beaker
+
+- type: entity
+  parent: VialCyber
+  id: VialCyberWater
+  description: Fluid storage, integrated right into your arm! This one slowly draws water from the air.
+  suffix: Water
+  components:
+  - type: SolutionRegeneration
+    generated:
+      reagents:
+      - ReagentId: Water
+        Quantity: 0.5
+
+- type: entity
+  parent: VialCyber
+  id: VialCyberBlood
+  description: Fluid storage, integrated right into your arm! This one slowly draws blood from... somewhere. It does not seem to be yours..?
+  suffix: Blood
+  components:
+  - type: SolutionRegeneration
+    generated:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 0.5
+
+- type: entity
+  parent: BaseWeaponBatterySmall
+  id: RadcasterCyber
+  name: cybernetic radcaster
+  description: This seems a little unsafe...
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    layers:
+    - state: radcaster
+      map: ["enum.GunVisualLayers.Base"]
+    - state: radcaster-mag-unshaded-1
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
+    cameraRecoilScalar: 0.1
+    projectileSpeed: 2.0
+  - type: BatteryAmmoProvider
+    proto: RadOrb
+    fireCost: 1000
+  - type: BatterySelfRecharger
+    autoRechargeRate: 100
+  - type: MagazineVisuals
+    magState: radcaster-mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  parent: BaseWeaponBatterySmall
+  id: FreezeRayCyber
+  name: cybernetic freeze ray
+  description: Brr...! Cold!
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+    cameraRecoilScalar: 0.1
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    state: freeze_ray
+  - type: BatterySelfRecharger
+    autoRechargeRate: 100
+  - type: BatteryAmmoProvider
+    proto: ProjectileIcicle
+    fireCost: 1000

@@ -1,0 +1,120 @@
+# Subdermal armor
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenSubdermal
+  name: Open Cavity For Subdermal Armor
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: Subdermal
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertSubdermal
+  name: Insert Subdermal Armor
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: Subdermal
+  - type: SurgeryOrganSlotCondition
+    organSlot: Subdermal
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveSubdermal
+  name: Remove Subdermal Armor
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepClampInternalBleeders
+    - SurgeryStepRemoveOrgan
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: Subdermal
+
+# CNS implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenCns
+  name: Open Cavity For CNS Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: Cns
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertCns
+  name: Insert CNS Implant
+  components:
+  - type: Surgery
+    steps:
+    - SurgeryStepSawBones
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: Cns
+  - type: SurgeryOrganSlotCondition
+    organSlot: Cns
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveCns
+  name: Remove CNS Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: Cns
+
+# Neural stabilizer chip
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenHumanityChip
+  name: Open Cavity For Neural Stabilizer Chip
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: HumanityChip
+
+- type: entity
+  parent: BaseSurgeryInsertOrgan
+  id: SurgeryInsertHumanityChip
+  name: Insert Neural Stabilizer Chip
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: HumanityChip
+  - type: SurgeryOrganSlotCondition
+    organSlot: HumanityChip
+
+- type: entity
+  parent: BaseSurgeryRemoveOrgan
+  id: SurgeryRemoveHumanityChip
+  name: Remove Neural Stabilizer Chip
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: HumanityChip

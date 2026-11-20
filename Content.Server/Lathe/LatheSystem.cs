@@ -247,7 +247,7 @@ namespace Content.Server.Lathe
                 var currentRecipe = ProtoMan.Index(comp.CurrentRecipe.Value);
                 if (currentRecipe.Result is { } resultProto)
                 {
-                    var result = Spawn(resultProto, Transform(uid).Coordinates);
+                    var result = Spawn(resultProto, _transform.GetMapCoordinates(uid)); // Nebula edit
                     _stack.TryMergeToContacts(result);
                     // <Trauma>
                     var ev = new ProducedByLatheEvent();

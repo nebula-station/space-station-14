@@ -1,0 +1,33 @@
+- type: entity
+  parent: BaseAction
+  id: ActionToggleAntiDrop
+  name: Toggle grip lock
+  description: Lock or release the item in the implanted hand.
+  components:
+  - type: Action
+    useDelay: 1
+    itemIconStyle: BigAction
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/bm_implants.rsi
+    layers:
+    - state: brain_implant
+    - state: brain_implant_overlay
+      color: "#DE7E00"
+  - type: InstantAction
+    event: !type:ToggleAntiDropEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionToggleImplantShield
+  name: Deploy or retract shield
+  description: Project the hardlight shield into the hand of the implanted arm, or retract it.
+  components:
+  - type: Action
+    useDelay: 1
+    itemIconStyle: BigAction
+  - type: Sprite
+    sprite: _Nebula/Objects/Weapons/Melee/implant_shield.rsi
+    layers:
+    - state: icon
+  - type: InstantAction
+    event: !type:ToggleImplantShieldEvent

@@ -405,7 +405,7 @@
     - MedicalCybernetics
     - AdvancedCybernetics
     - PowerAugments
-    - ToolAugments
+    # - ToolAugments # Nebula edit
     - PowerCells
     # <Trauma>
     - TraumaCybernetics
@@ -526,6 +526,7 @@
     - MechWeaponsSecurityHeavy
     - SecurityAmmoGoob
     - SecurityCybernetics
+    - CyberwareSecurity # Nebula edit
     # - ServiceWeapons
     - SpecOpsGoogles
     - PowerCells
@@ -641,6 +642,10 @@
     - TraumaCybernetics
     # </Trauma>
     - Chemistry
+    # Nebula start
+    - CyberwareMedical
+    - CyberwareCommon
+    # Nebula end
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

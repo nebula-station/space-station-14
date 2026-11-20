@@ -57,6 +57,7 @@
     - TraumaScienceClothing
     - UpgradeKits
     - ReactorCircuitboards
+    - CyberwareEngineering # Nebula edit
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NailgunEvilStatic
@@ -123,6 +124,10 @@
     - ScienceClothing
     - TraumaScienceClothing
     - ConstructionBagOfHolding
+    # Nebula start
+    - CyberwareCargo
+    - CyberwareCommon
+    # Nebula end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SalvageExplosivesStatic # Seismic charges - they're pretty cheap in salvage vendor anyway so why not
@@ -211,6 +216,7 @@
     # Einstein Engines Packs
     - Translators
     - TranslatorImplanters
+    - CyberwareScience # Nebula edit
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - MechBoardsSecurity
@@ -269,6 +275,10 @@
     - SharedBoards
     - CameraBoards
     - ServiceTools
+    # Nebula start
+    - CyberwareService
+    - CyberwareCommon
+    # Nebula end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ServiceBoardsEvilStatic # Donk Co microwave circiutboard

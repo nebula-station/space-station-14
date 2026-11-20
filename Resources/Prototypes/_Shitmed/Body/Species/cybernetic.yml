@@ -7,6 +7,10 @@
   parent: OrganBase
   id: OrganCybernetic
   components:
+  # Nebula start
+  - type: CyberwareHumanity
+    cost: 1
+  # Nebula end
   - type: Damageable
   - type: Injurable
     damageContainer: Silicon

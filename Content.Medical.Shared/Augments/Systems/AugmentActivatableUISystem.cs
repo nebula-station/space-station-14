@@ -16,7 +16,7 @@ public sealed partial class AugmentActivatableUISystem : EntitySystem
 
     private void OnAugmentAction(Entity<AugmentActivatableUIComponent> augment, ref AugmentActionEvent args)
     {
-        if (_augment.GetBody(augment) is not {} body ||
+        if (args.Handled || _augment.GetBody(augment) is not {} body || // Nebula edit
             augment.Comp.Key is not {} key ||
             !_ui.HasUi(augment, key))
             return;

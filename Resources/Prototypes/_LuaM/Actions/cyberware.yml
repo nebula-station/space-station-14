@@ -1,0 +1,175 @@
+- type: entity
+  parent: BaseAction
+  id: ActionToggleMantisBlades
+  name: Toggle Mantis Blades
+  description: Extend or retract the mantis blades in both of your arms.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Melee/mantis_blade.rsi
+    layers:
+    - state: icon
+  - type: Action
+    checkCanInteract: false
+    useDelay: 2
+    itemIconStyle: NoItem
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Items/unsheath.ogg
+  - type: InstantAction
+    event: !type:ToggleMantisBladesEvent
+
+- type: entity
+  parent: ActionToggleMantisBlades
+  id: ActionToggleMantisBladesPlasteel
+  name: Toggle Plasteel Mantis Blades
+  description: Extend or retract the plasteel mantis blades in both of your arms.
+  components:
+  - type: Sprite
+    sprite: _LuaM/Objects/Weapons/Melee/mantis_blade_plasteel.rsi
+
+- type: entity
+  parent: ActionToggleMantisBlades
+  id: ActionToggleMantisBladesMaxTac
+  name: Toggle Max-Tac Mantis Blades
+  description: Extend or retract the Max-Tac mantis blades in both of your arms.
+  components:
+  - type: Sprite
+    sprite: _LuaM/Objects/Weapons/Melee/mantis_blade_maxtac.rsi
+
+- type: entity
+  parent: BaseAction
+  id: ActionMantisBladeDash
+  name: mantis blade dash
+  description: Dash forward with both mantis blades extended.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Melee/mantis_blade.rsi
+    layers:
+    - state: icon
+  - type: Action
+    useDelay: 30
+    itemIconStyle: NoItem
+    sound: !type:SoundPathSpecifier
+      path: /Audio/_Goobstation/Weapons/MantisBlades/mantis_extend.ogg
+  - type: TargetAction
+    checkCanAccess: false
+    range: 0
+  - type: WorldTargetAction
+    event: !type:DashActionEvent
+      distance: 4
+      affectedBySpeed: false
+
+- type: entity
+  parent: ActionMantisBladeDash
+  id: ActionMantisBladeDashPlasteel
+  name: plasteel mantis blade dash
+  description: Dash forward with both plasteel mantis blades extended.
+  components:
+  - type: Sprite
+    sprite: _LuaM/Objects/Weapons/Melee/mantis_blade_plasteel.rsi
+
+- type: entity
+  parent: ActionMantisBladeDash
+  id: ActionMantisBladeDashMaxTac
+  name: Max-Tac mantis blade dash
+  description: Dash forward with both Max-Tac mantis blades extended.
+  components:
+  - type: Sprite
+    sprite: _LuaM/Objects/Weapons/Melee/mantis_blade_maxtac.rsi
+
+- type: entity
+  parent: BaseAction
+  id: ActionDashMuscleFibersImplant
+  name: muscle fibers dash
+  description: Use your muscle fibers implant to do a quick dash.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Misc/cybernetics.rsi
+    layers:
+    - state: muscule
+  - type: Action
+    useDelay: 7
+    itemIconStyle: NoItem
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Effects/Footsteps/tacsuit_step_02.ogg
+      params:
+        volume: 1
+  - type: TargetAction
+    checkCanAccess: false
+    range: 0
+  - type: WorldTargetAction
+    event: !type:DashActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionToggleCnsSandevistan
+  name: Toggle Sandevistan
+  description: Enable or disable your improved reflexes provided by the Sandevistan.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Misc/cybernetics.rsi
+    layers:
+    - state: leuko
+  - type: Action
+    checkCanInteract: false
+    useDelay: 8
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:ToggleCnsSandevistanEvent
+
+- type: entity
+  parent: ActionToggleCnsSandevistan
+  id: ActionToggleKerenzikov
+  name: Toggle Kerenzikov
+  description: Enable or disable your boosted reflexes. You can shoot while it runs, but it hurts you every second, three times harder after 10 seconds.
+  components:
+  - type: Sprite
+    layers:
+    - state: booster
+
+- type: entity
+  parent: BaseAction
+  id: ActionActivateOpticalCamo
+  name: Optical Camo
+  description: Turn fully invisible for 7 seconds and move 10% faster. Attacking or taking damage breaks the camo, the first hit deals 40% more damage.
+  components:
+  - type: Sprite
+    sprite: _LuaM/Objects/Misc/optical_camo.rsi
+    layers:
+    - state: icon
+  - type: Action
+    checkCanInteract: false
+    useDelay: 60
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:ActivateOpticalCamoEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionActivateCombatMedipenImplant
+  name: Inject Combat Medipen
+  description: Injects a dose of the combat medipen. Each charge recharges in 40 seconds.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: morphen
+  - type: LimitedCharges
+    maxCharges: 3
+  - type: AutoRecharge
+    rechargeDuration: 40
+  - type: Action
+    checkCanInteract: false
+    itemIconStyle: BigAction
+    priority: -20
+  - type: InstantAction
+    event: !type:UseInjectorImplantEvent
+
+- type: entity
+  parent: ActionActivateCombatMedipenImplant
+  id: ActionActivateStimulantImplant
+  name: Inject Stimulants
+  description: Injects a dose of stimulants. Each charge recharges in 40 seconds.
+  components:
+  - type: Sprite
+    layers:
+    - state: stimpen

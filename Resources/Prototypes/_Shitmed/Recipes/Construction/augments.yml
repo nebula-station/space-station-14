@@ -35,36 +35,6 @@
 # Arm
 
 - type: construction
-  id: AugmentToolsPanel
-  graph: AugmentToolsPanel
-  startNode: start
-  targetNode: "utility tools panel"
-  category: construction-category-utilities
-  canBuildInImpassable: false
-  theory:
-    ElectronicsKnowledge: 2
-
-- type: construction
-  id: AugmentBotanyPanel
-  graph: AugmentToolsPanel
-  startNode: start
-  targetNode: "botany tools panel"
-  category: construction-category-utilities
-  canBuildInImpassable: false
-  theory:
-    ElectronicsKnowledge: 2
-
-- type: construction
-  id: AugmentSurgicalPanel
-  graph: AugmentToolsPanel
-  startNode: start
-  targetNode: "surgery tools panel"
-  category: construction-category-utilities
-  canBuildInImpassable: false
-  theory:
-    ElectronicsKnowledge: 2
-
-- type: construction
   id: AugmentStrength
   graph: AugmentStrength
   startNode: start

@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Mechwright tools taken from tgstation, other tools by Maitake",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "gorillagauntlet",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Maitake"
+    },
+    {
+      "name": "chimphandcannon",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Maitake"
+    },
+    {
+      "name": "mag-unshaded-1",
+      "copyright": "Citrea"
+    },
+    {
+      "name": "mag-unshaded-2",
+      "copyright": "Citrea"
+    },
+    {
+      "name": "ripletclaw",
+      "delays": [
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Maitake"
+    },
+    {
+      "name": "ripletclaw-full",
+      "copyright": "Citrea"
+    },
+    {
+      "name": "handheldgrinder",
+      "delays": [
+        [
+          0.3,
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Maitake"
+    },
+    {
+      "name": "handheldgrinder-empty",
+      "copyright": "None (this is an empty image)"
+    },
+    {
+      "name": "handheldgrinder-beaker-attached",
+      "copyright": "Maitake"
+    },
+    {
+      "name": "printer",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "printer_printing",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "printer_inserting",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "multistamp",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "stamp",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "herakles",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Modified from gorillagauntlet, by Citrea"
+    },
+    {
+      "name": "holorestrainer",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "holorestrainer_powered",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "cyber_vial",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Modified from gorillagauntlet, by Citrea"
+    },
+    {
+      "name": "radcaster",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Modified from gorillagauntlet, by Citrea"
+    },
+    {
+      "name": "freeze_ray",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Modified from gorillagauntlet, by Citrea"
+    },
+    {
+      "name": "radcaster-mag-unshaded-0",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "radcaster-mag-unshaded-1",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "cabinet",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "cabinet_open",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ],
+      "copyright": "Citrea"
+    },
+    {
+      "name": "cyber_vial-1",
+      "copyright": "Citrea"
+    },
+    {
+      "name": "cyber_vial-2",
+      "copyright": "Citrea"
+    },
+    {
+      "name": "cyber_vial-3",
+      "copyright": "Citrea"
+    },
+    {
+      "name": "cyber_vial-4",
+      "copyright": "Citrea"
+    },
+    {
+      "name": "cyber_vial-5",
+      "copyright": "Citrea"
+    },
+    {
+      "name": "cyber_vial-6",
+      "copyright": "Citrea"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+- type: guideEntry
+  id: ColossusHumanity
+  name: guide-entry-colossus-humanity
+  text: /ServerInfo/_LuaM/Guidebook/Humanity.xml

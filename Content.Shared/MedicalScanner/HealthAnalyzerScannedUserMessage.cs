@@ -40,6 +40,10 @@ public struct HealthAnalyzerUiState
     public NetEntity? Part;
     // </Traumaa>
     public bool? Unrevivable;
+    // Nebula start
+    public float? HumanityLeft;
+    public float? HumanityMax;
+    // Nebula end
 
     public HealthAnalyzerUiState() {}
 

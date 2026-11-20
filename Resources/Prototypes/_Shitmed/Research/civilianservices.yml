@@ -21,6 +21,11 @@
   - AdvancedBoneGel
   - BorgModuleAdvancedSurgery
   - MedicalBiofabMachineBoard
+  # Nebula start
+  - OrganCyberArmReaperLeft
+  - OrganCyberArmReaperRight
+  - ChestImplantInternalAnalyzer
+  # Nebula end
   technologyPrerequisites:
   - AdvancedEntertainment
   position: -1,4
@@ -56,6 +61,12 @@
   - AutodocUpgradeKitBluespace
   - OmnimedTool
   - BorgModuleAdvancedOmniSurgery
+  # Nebula start
+  - OrganCyberArmAngelLeft
+  - OrganCyberArmAngelRight
+  - ChestImplantThermal
+  - ChestImplantHemostatic
+  # Nebula end
   technologyPrerequisites:
   - Autodoc
   position: -1,6

@@ -1,0 +1,79 @@
+- type: entity
+  abstract: true
+  parent: MantisBlade
+  id: BaseMantisBladeColossus
+  components:
+  - type: MeleeWeapon
+    heavyStaminaCost: 0
+    clickPartDamageMultiplier: 2
+    damage:
+      types:
+        Slash: 26
+        Piercing: 11
+        Structural: 50
+  - type: Prying
+    speedModifier: 3.0
+    pryPowered: true
+    useSound: /Audio/Items/jaws_pry.ogg
+  - type: Reflect
+    reflectProb: 0
+  - type: MantisBladeCombo
+
+- type: entity
+  categories: [ DoNotMap ]
+  parent: BaseMantisBladeColossus
+  id: MantisBladeMieyo
+  name: mantis blade
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        reagents:
+        - ReagentId: Phlogiston
+          Quantity: 2.5
+        - ReagentId: Napalm
+          Quantity: 2.5
+  - type: MeleeChemicalInjector
+    solution: melee
+    transferAmount: 1
+
+- type: entity
+  categories: [ DoNotMap ]
+  parent: BaseMantisBladeColossus
+  id: MantisBladePlasteel
+  name: plasteel mantis blade
+  description: A cheap civilian take on the mantis blade. Plain plasteel, no heating, no tricks.
+  components:
+  - type: Sprite
+    sprite: _LuaM/Objects/Weapons/Melee/mantis_blade_plasteel.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 13
+        Piercing: 5.5
+        Structural: 25
+  - type: MantisBladeCombo
+    reflectProb: 0.175
+    dashAction: ActionMantisBladeDashPlasteel
+
+- type: entity
+  categories: [ DoNotMap ]
+  parent: BaseMantisBladeColossus
+  id: MantisBladeMaxTac
+  name: Max-Tac mantis blade
+  description: Standard issue of the Max-Tac cyberpsycho squad. By the time you see the blue lights, it is already over.
+  components:
+  - type: Sprite
+    sprite: _LuaM/Objects/Weapons/Melee/mantis_blade_maxtac.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 31
+        Piercing: 13
+        Structural: 60
+      armorPenetration: 0.3
+  - type: MantisBladeCombo
+    reflectProb: 0.45
+    dashAction: ActionMantisBladeDashMaxTac

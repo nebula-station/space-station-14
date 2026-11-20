@@ -6,6 +6,10 @@
   name: mi13 statveka sandevistan
   description: A cybernetic heart implant that drastically improves the user's speed and reflexes for a short duration, at the cost of endurance. Once used by a certain mercenary.
   components:
+  # Nebula start
+  - type: CyberwareHumanity
+    cost: 2
+  # Nebula end
   - type: Cybernetics
   - type: Sprite
     sprite: _Goobstation/Objects/Misc/sandevistan.rsi
