@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2026 yellow-apple34
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: randomHumanoidSettings
+  id: ERTLeader
+  components:
+  - type: KnowledgeGrant
+    skills:
+      LanguageTauCetiBasic: 100
+
+- type: randomHumanoidSettings
+  id: CBURNAgent
+  components:
+  - type: KnowledgeGrant
+    skills:
+      LanguageTauCetiBasic: 100
