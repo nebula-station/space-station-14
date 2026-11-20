@@ -6,7 +6,7 @@ namespace Content.Trauma.Client.Particles;
 
 /// <summary>
 /// Spawns a particle effect on this client when an entity with
-/// <see cref="ParticleEmitterComponent"/> enters the local view (ComponentStartup).
+/// <see cref="ParticleEmitterComponent"/> enters the local view (MapInitEvent).
 /// </summary>
 public sealed partial class ParticleEmitterSystem : EntitySystem
 {
@@ -17,12 +17,10 @@ public sealed partial class ParticleEmitterSystem : EntitySystem
     {
         base.Initialize();
 
-        // Nebula - Monolith: MapInitEvent -> ComponentStartup, the client never raises map init for entities
-        // created from server state, so emitters spawned by the server (explosion visuals) never started.
-        SubscribeLocalEvent<ParticleEmitterComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<ParticleEmitterComponent, MapInitEvent>(OnMapInit);
     }
 
-    private void OnStartup(Entity<ParticleEmitterComponent> ent, ref ComponentStartup args) // Nebula - Monolith
+    private void OnMapInit(Entity<ParticleEmitterComponent> ent, ref MapInitEvent args)
     {
         var coords = _transform.GetMapCoordinates(ent.Owner);
         var emitter = _particles.SpawnEffect(ent.Comp.Effect, coords, ent.Owner, ent.Comp.ColorOverride);

@@ -1,6 +1,5 @@
 using System.Numerics;
 using Content.Shared.Explosion.Components;
-using Content.Shared._LuaM.Explosion; // Nebula - Monolith
 using JetBrains.Annotations;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
@@ -44,10 +43,6 @@ public sealed partial class ExplosionOverlay : Overlay
         while (query.MoveNext(out var uid, out var visuals, out var textures))
         {
             if (visuals.Epicenter.MapId != args.MapId)
-                continue;
-
-            // Nebula - Monolith: this explosion uses the animated visuals instead of the fire tiles
-            if (_entMan.HasComponent<ExplosionHideFireComponent>(uid))
                 continue;
 
             if (!_appearance.TryGetData(uid, ExplosionAppearanceData.Progress, out int index))

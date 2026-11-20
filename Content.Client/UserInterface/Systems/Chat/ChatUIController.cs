@@ -136,11 +136,6 @@ public sealed partial class ChatUIController : UIController
         new();
 
     /// <summary>
-    ///     Nebula - Monolith: speaker name bubbles above runs of say/whisper messages of an entity.
-    /// </summary>
-    private readonly Dictionary<EntityUid, List<SpeakerNameSpeechBubble>> _speakerHeaders = new();
-
-    /// <summary>
     ///     Speech bubbles that are to-be-sent because of the "rate limit" they have.
     /// </summary>
     private readonly Dictionary<EntityUid, SpeechBubbleQueueData> _queuedSpeechBubbles
@@ -470,35 +465,8 @@ public sealed partial class ChatUIController : UIController
 
     private void CreateSpeechBubble(EntityUid entity, SpeechBubbleData speechData)
     {
-        // Nebula start - Monolith: consecutive say/whisper messages share one speaker name above them,
-        // it stays there until the last message of the run is gone.
-        var fancy = speechData.Type is SpeechBubble.SpeechType.Say or SpeechBubble.SpeechType.Whisper
-                    && _config.GetCVar(CCVars.ChatEnableFancyBubbles);
-        SpeakerNameSpeechBubble? header = null;
-        if (fancy
-            && _activeSpeechBubbles.TryGetValue(entity, out var active)
-            && active.Count > 0
-            && active[^1] is FancyTextSpeechBubble lastFancy
-            && _speakerHeaders.TryGetValue(entity, out var headers))
-        {
-            header = headers.Find(h => h.Members.Contains(lastFancy));
-        }
-
         var bubble =
-            SpeechBubble.CreateSpeechBubble(speechData.Type, speechData.Message, entity, !fancy);
-        var pushUp = bubble.ContentSize.Y;
-
-        SpeakerNameSpeechBubble? newHeader = null;
-        if (fancy && header == null)
-        {
-            var styleClass = speechData.Type == SpeechBubble.SpeechType.Whisper ? "whisperBox" : "sayBox";
-            newHeader = new SpeakerNameSpeechBubble(speechData.Message, entity, styleClass);
-            newHeader.OnDied += SpeakerHeaderDied;
-            newHeader.SnapVerticalOffset(0f);
-            pushUp += newHeader.ContentSize.Y;
-            header = newHeader;
-        }
-        // Nebula end
+            SpeechBubble.CreateSpeechBubble(speechData.Type, speechData.Message, entity);
 
         bubble.OnDied += SpeechBubbleDied;
 
@@ -507,7 +475,7 @@ public sealed partial class ChatUIController : UIController
             // Push up existing bubbles above the mob's head.
             foreach (var existingBubble in existing)
             {
-                existingBubble.VerticalOffset += pushUp; // Nebula - Monolith: bubble.ContentSize.Y -> pushUp
+                existingBubble.VerticalOffset += bubble.ContentSize.Y;
             }
         }
         else
@@ -518,21 +486,6 @@ public sealed partial class ChatUIController : UIController
 
         existing.Add(bubble);
         _speechBubbleRoot.AddChild(bubble);
-
-        // Nebula start - Monolith
-        header?.Members.Add(bubble);
-        if (newHeader != null)
-        {
-            if (!_speakerHeaders.TryGetValue(entity, out var entityHeaders))
-            {
-                entityHeaders = new List<SpeakerNameSpeechBubble>();
-                _speakerHeaders.Add(entity, entityHeaders);
-            }
-
-            entityHeaders.Add(newHeader);
-            _speechBubbleRoot.AddChild(newHeader);
-        }
-        // Nebula end
 
         if (existing.Count > SpeechBubbleCap)
         {
@@ -570,20 +523,7 @@ public sealed partial class ChatUIController : UIController
     {
         bubble.Dispose();
 
-        // Nebula start - Monolith: release the speaker name once its last message is gone
-        if (_speakerHeaders.TryGetValue(entityUid, out var headers))
-        {
-            foreach (var header in headers)
-            {
-                if (header.Members.Remove(bubble) && header.Members.Count == 0)
-                    header.ReleasePersistent();
-            }
-        }
-
-        if (!_activeSpeechBubbles.TryGetValue(entityUid, out var list)) // was _activeSpeechBubbles[entityUid]
-            return;
-        // Nebula end
-
+        var list = _activeSpeechBubbles[entityUid];
         list.Remove(bubble);
 
         if (list.Count == 0)
@@ -591,20 +531,6 @@ public sealed partial class ChatUIController : UIController
             _activeSpeechBubbles.Remove(entityUid);
         }
     }
-
-    // Nebula start - Monolith
-    private void SpeakerHeaderDied(EntityUid entity, SpeechBubble bubble)
-    {
-        bubble.Dispose();
-
-        if (bubble is not SpeakerNameSpeechBubble header || !_speakerHeaders.TryGetValue(entity, out var headers))
-            return;
-
-        headers.Remove(header);
-        if (headers.Count == 0)
-            _speakerHeaders.Remove(entity);
-    }
-    // Nebula end
 
     private void UpdateChannelPermissions()
     {
@@ -770,17 +696,6 @@ public sealed partial class ChatUIController : UIController
 
             SetBubbles(bubs, true);
         }
-
-        // Nebula start - Monolith: a speaker name is shown or hidden with its messages
-        foreach (var headers in _speakerHeaders.Values)
-        {
-            foreach (var header in headers)
-            {
-                if (header.Members.Count > 0)
-                    header.Visible = header.Members[0].Visible;
-            }
-        }
-        // Nebula end
     }
 
     private void SetBubbles(List<SpeechBubble> bubbles, bool visible)

@@ -1,6 +1,5 @@
 using Robust.Client.UserInterface.RichText; // Trauma
 using System.Numerics;
-using System.Text; // Nebula - Monolith
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Speech;
@@ -52,13 +51,6 @@ namespace Content.Client.Chat.UI
         /// </summary>
         private static readonly TimeSpan FadeTime = TimeSpan.FromSeconds(0.25f);
 
-        // Nebula start - Monolith (Arcane): the text is typed out letter by letter, spaces take a bit longer
-        private const float RevealRunesPerSecond = 15.5f;
-        private const float SpaceRevealWeight = 2.25f;
-        private static readonly TimeSpan MaxRevealTime = TimeSpan.FromSeconds(4);
-        protected virtual float RevealSpeedMultiplier => 1f;
-        // Nebula end
-
         /// <summary>
         ///     The distance in world space to offset the speech bubble from the center of the entity.
         ///     i.e. greater -> higher above the mob's head.
@@ -72,20 +64,10 @@ namespace Content.Client.Chat.UI
 
         private readonly EntityUid _senderEntity;
 
-        // Nebula - Monolith: Die() can be queued from several frames before it runs, the bubble must only report its death once.
-        private bool _dead;
-
         /// <summary>
         /// The time at which this bubble will die.
         /// </summary>
         private TimeSpan _deathTime;
-
-        // Nebula start - Monolith (Arcane)
-        private readonly TimeSpan _creationTime;
-        private readonly TimeSpan _revealTime;
-        private readonly float _maxRevealWeight;
-        private readonly List<SpeechTextReveal> _textReveals = new();
-        // Nebula end
 
         public float VerticalOffset { get; set; }
         private float _verticalOffsetAchieved;
@@ -95,7 +77,7 @@ namespace Content.Client.Chat.UI
         // man down
         public event Action<EntityUid, SpeechBubble>? OnDied;
 
-        public static SpeechBubble CreateSpeechBubble(SpeechType type, ChatMessage message, EntityUid senderEntity, bool showSpeaker = true) // Nebula - Monolith
+        public static SpeechBubble CreateSpeechBubble(SpeechType type, ChatMessage message, EntityUid senderEntity)
         {
             switch (type)
             {
@@ -103,10 +85,10 @@ namespace Content.Client.Chat.UI
                     return new TextSpeechBubble(message, senderEntity, "emoteBox");
 
                 case SpeechType.Say:
-                    return new FancyTextSpeechBubble(message, senderEntity, "sayBox", showSpeaker: showSpeaker); // Nebula - Monolith
+                    return new FancyTextSpeechBubble(message, senderEntity, "sayBox");
 
                 case SpeechType.Whisper:
-                    return new FancyTextSpeechBubble(message, senderEntity, "whisperBox", showSpeaker: showSpeaker); // Nebula - Monolith
+                    return new FancyTextSpeechBubble(message, senderEntity, "whisperBox");
 
                 case SpeechType.Looc:
                     return new TextSpeechBubble(message, senderEntity, "emoteBox", Color.FromHex("#48d1cc"));
@@ -116,7 +98,7 @@ namespace Content.Client.Chat.UI
             }
         }
 
-        public SpeechBubble(ChatMessage message, EntityUid senderEntity, string speechStyleClass, Color? fontColor = null, bool showSpeaker = true) // Nebula - Monolith
+        public SpeechBubble(ChatMessage message, EntityUid senderEntity, string speechStyleClass, Color? fontColor = null)
         {
             IoCManager.InjectDependencies(this);
             _senderEntity = senderEntity;
@@ -125,11 +107,7 @@ namespace Content.Client.Chat.UI
             // Use text clipping so new messages don't overlap old ones being pushed up.
             RectClipContent = true;
 
-            var bubble = BuildBubble(message, speechStyleClass, fontColor, showSpeaker); // Nebula - Monolith
-            // Nebula start - Monolith (Arcane)
-            bubble.HorizontalAlignment = HAlignment.Center;
-            bubble.VerticalAlignment = VAlignment.Bottom;
-            // Nebula end
+            var bubble = BuildBubble(message, speechStyleClass, fontColor);
 
             AddChild(bubble);
 
@@ -137,33 +115,23 @@ namespace Content.Client.Chat.UI
 
             bubble.Measure(Vector2Helpers.Infinity);
             ContentSize = bubble.DesiredSize;
-            // Nebula start - Monolith (Arcane): the bubble keeps its full size while the text is typed out,
-            // and stays on screen for the usual time after the text is complete.
-            bubble.MinWidth = ContentSize.X;
-            _creationTime = _timing.RealTime;
-            _maxRevealWeight = GetMaxRevealWeight();
-            _revealTime = GetRevealTime(_maxRevealWeight);
-            _deathTime = _creationTime + TotalTime + _revealTime;
-            UpdateTextReveal();
-            // Nebula end
             _verticalOffsetAchieved = -ContentSize.Y;
+            _deathTime = _timing.RealTime + TotalTime;
         }
 
-        protected abstract Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor, bool showSpeaker); // Nebula - Monolith
+        protected abstract Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor = null);
 
         protected override void FrameUpdate(FrameEventArgs args)
         {
             base.FrameUpdate(args);
 
-            var timeLeft = _persistent ? float.MaxValue : (float)(_deathTime - _timing.RealTime).TotalSeconds; // Nebula - Monolith
+            var timeLeft = (float)(_deathTime - _timing.RealTime).TotalSeconds;
             if (_entityManager.Deleted(_senderEntity) || timeLeft <= 0)
             {
                 // Timer spawn to prevent concurrent modification exception.
                 Timer.Spawn(0, Die);
                 return;
             }
-
-            UpdateTextReveal(); // Nebula - Monolith (Arcane)
 
             // Lerp to our new vertical offset if it's been modified.
             if (MathHelper.CloseToPercent(_verticalOffsetAchieved - VerticalOffset, 0, 0.1))
@@ -212,210 +180,13 @@ namespace Content.Client.Chat.UI
 
         private void Die()
         {
-            if (_dead || Disposed) // Nebula - Monolith
+            if (Disposed)
             {
                 return;
             }
 
-            _dead = true; // Nebula - Monolith
             OnDied?.Invoke(_senderEntity, this);
         }
-
-        // Nebula start - Monolith (Arcane): letter by letter text
-        protected void SetRevealedMessage(RichTextLabel label, FormattedMessage message)
-        {
-            label.SetMessage(message, AllowedTags);
-
-            var revealWeight = CountRevealWeight(message);
-            if (revealWeight <= 0f)
-                return;
-
-            _textReveals.Add(new SpeechTextReveal(label, message, revealWeight));
-        }
-
-        private float GetMaxRevealWeight()
-        {
-            var revealWeight = 0f;
-
-            foreach (var reveal in _textReveals)
-            {
-                revealWeight = Math.Max(revealWeight, reveal.RevealWeight);
-            }
-
-            return revealWeight;
-        }
-
-        private TimeSpan GetRevealTime(float revealWeight)
-        {
-            if (revealWeight <= 0f)
-                return TimeSpan.Zero;
-
-            var seconds = revealWeight / (RevealRunesPerSecond * RevealSpeedMultiplier);
-            return TimeSpan.FromSeconds(MathF.Min(seconds, (float) MaxRevealTime.TotalSeconds));
-        }
-
-        private void UpdateTextReveal()
-        {
-            if (_textReveals.Count == 0)
-                return;
-
-            var progress = _revealTime <= TimeSpan.Zero
-                ? 1f
-                : MathHelper.Clamp((float) ((_timing.RealTime - _creationTime).TotalSeconds / _revealTime.TotalSeconds), 0f, 1f);
-
-            var visibleWeight = _maxRevealWeight * progress;
-
-            foreach (var reveal in _textReveals)
-            {
-                var visibleRunes = CountVisibleRunes(reveal.Message, Math.Min(visibleWeight, reveal.RevealWeight));
-                if (visibleRunes == reveal.LastVisibleRunes)
-                    continue;
-
-                reveal.LastVisibleRunes = visibleRunes;
-                reveal.Label.SetMessage(CreateRevealedMessage(reveal.Message, visibleRunes), AllowedTags);
-            }
-        }
-
-        private static float CountRevealWeight(FormattedMessage message)
-        {
-            var weight = 0f;
-
-            foreach (var node in message.Nodes)
-            {
-                if (node.Name != null || node.Value.StringValue == null)
-                    continue;
-
-                foreach (var rune in node.Value.StringValue.EnumerateRunes())
-                {
-                    weight += GetRevealWeight(rune);
-                }
-            }
-
-            return weight;
-        }
-
-        private static int CountVisibleRunes(FormattedMessage message, float visibleWeight)
-        {
-            var remaining = visibleWeight;
-            var count = 0;
-
-            foreach (var node in message.Nodes)
-            {
-                if (node.Name != null)
-                    continue;
-
-                var text = node.Value.StringValue;
-                if (text == null || remaining <= 0f)
-                    continue;
-
-                foreach (var rune in text.EnumerateRunes())
-                {
-                    if (remaining <= 0f)
-                        break;
-
-                    count++;
-                    remaining -= GetRevealWeight(rune);
-                }
-            }
-
-            return count;
-        }
-
-        /// <summary>
-        /// Copies the message with the text after the first <paramref name="visibleRunes"/> letters made transparent,
-        /// so the bubble keeps its final layout while the text appears.
-        /// </summary>
-        private static FormattedMessage CreateRevealedMessage(FormattedMessage message, int visibleRunes)
-        {
-            var result = new FormattedMessage(message.Count);
-            var remaining = visibleRunes;
-
-            foreach (var node in message.Nodes)
-            {
-                if (node.Name != null)
-                {
-                    // Permissive: this runs every frame while the text appears, a tag that doesn't survive
-                    // the round trip through markup must not throw in the UI update.
-                    result.AddMarkupPermissive(node.ToString());
-                    continue;
-                }
-
-                var text = node.Value.StringValue;
-                if (text == null)
-                    continue;
-
-                AddRevealedText(result, text, ref remaining);
-            }
-
-            return result;
-        }
-
-        private static void AddRevealedText(FormattedMessage result, string text, ref int remainingVisibleRunes)
-        {
-            var visible = new StringBuilder();
-            var hidden = new StringBuilder();
-
-            foreach (var rune in text.EnumerateRunes())
-            {
-                if (remainingVisibleRunes > 0)
-                {
-                    visible.Append(rune);
-                    remainingVisibleRunes--;
-                    continue;
-                }
-
-                hidden.Append(rune);
-            }
-
-            if (visible.Length > 0)
-                result.AddText(visible.ToString());
-
-            if (hidden.Length == 0)
-                return;
-
-            result.PushColor(Color.Transparent);
-            result.AddText(hidden.ToString());
-            result.Pop();
-        }
-
-        private static float GetRevealWeight(Rune rune)
-        {
-            return rune.Value is ' ' or '\n' or '\t'
-                ? SpaceRevealWeight
-                : 1f;
-        }
-
-        private sealed class SpeechTextReveal(RichTextLabel label, FormattedMessage message, float revealWeight)
-        {
-            public readonly RichTextLabel Label = label;
-            public readonly FormattedMessage Message = message;
-            public readonly float RevealWeight = revealWeight;
-            public int LastVisibleRunes = -1;
-        }
-        // Nebula end
-
-        // Nebula start - Monolith: the speaker name stays above the messages until the last one is gone
-        private bool _persistent;
-
-        protected void MakePersistent()
-        {
-            _persistent = true;
-        }
-
-        public void SnapVerticalOffset(float offset)
-        {
-            _verticalOffsetAchieved = offset;
-        }
-
-        public void ReleasePersistent()
-        {
-            if (!_persistent)
-                return;
-
-            _persistent = false;
-            _deathTime = _timing.RealTime + FadeTime;
-        }
-        // Nebula end
 
         /// <summary>
         ///     Causes the speech bubble to start fading IMMEDIATELY.
@@ -446,14 +217,12 @@ namespace Content.Client.Chat.UI
 
     public sealed class TextSpeechBubble : SpeechBubble
     {
-        protected override float RevealSpeedMultiplier => 3f; // Nebula - Monolith (Arcane): emotes and LOOC appear faster
-
         public TextSpeechBubble(ChatMessage message, EntityUid senderEntity, string speechStyleClass, Color? fontColor = null)
             : base(message, senderEntity, speechStyleClass, fontColor)
         {
         }
 
-        protected override Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor, bool showSpeaker) // Nebula - Monolith
+        protected override Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor = null)
         {
             var label = new RichTextLabel
             {
@@ -461,7 +230,7 @@ namespace Content.Client.Chat.UI
                 OutlineColorOverride = TextOutline.Default.Color,
             };
 
-            SetRevealedMessage(label, FormatSpeech(message.WrappedMessage, fontColor)); // Nebula - Monolith (Arcane), sets AllowedTags too
+            label.SetMessage(FormatSpeech(message.WrappedMessage, fontColor), AllowedTags); // Trauma - added AllowedTags
 
             var panel = new PanelContainer
             {
@@ -477,12 +246,12 @@ namespace Content.Client.Chat.UI
     public sealed class FancyTextSpeechBubble : SpeechBubble
     {
 
-        public FancyTextSpeechBubble(ChatMessage message, EntityUid senderEntity, string speechStyleClass, Color? fontColor = null, bool showSpeaker = true) // Nebula - Monolith
-            : base(message, senderEntity, speechStyleClass, fontColor, showSpeaker) // Nebula - Monolith
+        public FancyTextSpeechBubble(ChatMessage message, EntityUid senderEntity, string speechStyleClass, Color? fontColor = null)
+            : base(message, senderEntity, speechStyleClass, fontColor)
         {
         }
 
-        protected override Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor, bool showSpeaker) // Nebula - Monolith
+        protected override Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor = null)
         {
             if (!ConfigManager.GetCVar(CCVars.ChatEnableFancyBubbles))
             {
@@ -492,7 +261,7 @@ namespace Content.Client.Chat.UI
                     OutlineColorOverride = TextOutline.Default.Color,
                 };
 
-                SetRevealedMessage(label, ExtractAndFormatSpeechSubstring(message, "BubbleContent", fontColor)); // Nebula - Monolith (Arcane), sets AllowedTags too
+                label.SetMessage(ExtractAndFormatSpeechSubstring(message, "BubbleContent", fontColor), AllowedTags); // Trauma - added AllowedTags
 
                 var unfanciedPanel = new PanelContainer
                 {
@@ -506,7 +275,7 @@ namespace Content.Client.Chat.UI
             var bubbleHeader = new RichTextLabel
             {
                 ModulateSelfOverride = Color.White.WithAlpha(ConfigManager.GetCVar(CCVars.SpeechBubbleSpeakerOpacity)),
-                Margin = new Thickness(1, 1, 1, 1), // Nebula - Monolith: 2, 0, 2, 0 -> 1, 1, 1, 1
+                Margin = new Thickness(2, 0, 2, 0),
                 OutlineColorOverride = TextOutline.Default.Color,
             };
 
@@ -514,14 +283,14 @@ namespace Content.Client.Chat.UI
             {
                 ModulateSelfOverride = Color.White.WithAlpha(ConfigManager.GetCVar(CCVars.SpeechBubbleTextOpacity)),
                 MaxWidth = SpeechMaxWidth,
-                Margin = new Thickness(2, 2, 2, 2), // Nebula - Monolith: 2, 0, 2, 0 -> 2, 2, 2, 2
+                Margin = new Thickness(2, 0, 2, 0),
                 StyleClasses = { "bubbleContent" },
                 OutlineColorOverride = TextOutline.Default.Color,
             };
 
             //We'll be honest. *Yes* this is hacky. Doing this in a cleaner way would require a bottom-up refactor of how saycode handles sending chat messages. -Myr
             bubbleHeader.SetMessage(ExtractAndFormatSpeechSubstring(message, "BubbleHeader", fontColor), AllowedTags); // Trauma - added AllowedTags
-            SetRevealedMessage(bubbleContent, ExtractAndFormatSpeechSubstring(message, "BubbleContent", fontColor)); // Nebula - Monolith (Arcane), sets AllowedTags too
+            bubbleContent.SetMessage(ExtractAndFormatSpeechSubstring(message, "BubbleContent", fontColor), AllowedTags); // Trauma - added AllowedTags
 
             //As for below: Some day this could probably be converted to xaml. But that is not today. -Myr
             var mainPanel = new PanelContainer
@@ -530,14 +299,9 @@ namespace Content.Client.Chat.UI
                 Children = { bubbleContent },
                 ModulateSelfOverride = Color.White.WithAlpha(ConfigManager.GetCVar(CCVars.SpeechBubbleBackgroundOpacity)),
                 HorizontalAlignment = HAlignment.Center,
-                // Nebula - Monolith: the header sits above in a box now, instead of over a 20 px top margin
-                Margin = new Thickness(4, 0, 4, 2)
+                VerticalAlignment = VAlignment.Bottom,
+                Margin = new Thickness(4, 20, 4, 2)
             };
-
-            // Nebula start - Monolith: the speaker name is a separate bubble shared by consecutive messages
-            if (!showSpeaker)
-                return mainPanel;
-            // Nebula end
 
             var headerPanel = new PanelContainer
             {
@@ -548,64 +312,12 @@ namespace Content.Client.Chat.UI
                 VerticalAlignment = VAlignment.Top
             };
 
-            // Nebula - Monolith: PanelContainer -> vertical BoxContainer, the header above the message
-            var panel = new BoxContainer
+            var panel = new PanelContainer
             {
-                Orientation = BoxContainer.LayoutOrientation.Vertical,
-                HorizontalAlignment = HAlignment.Center,
-                Children = { headerPanel, mainPanel }
+                Children = { mainPanel, headerPanel }
             };
 
             return panel;
         }
     }
-
-    // Nebula start - Monolith: the speaker name above a run of messages, it stays until the last of them is gone
-    public sealed class SpeakerNameSpeechBubble : SpeechBubble
-    {
-        public readonly List<SpeechBubble> Members = new();
-
-        public SpeakerNameSpeechBubble(ChatMessage message, EntityUid senderEntity, string speechStyleClass)
-            : base(message, senderEntity, speechStyleClass)
-        {
-            MakePersistent();
-        }
-
-        protected override Control BuildBubble(ChatMessage message, string speechStyleClass, Color? fontColor, bool showSpeaker)
-        {
-            var header = new RichTextLabel
-            {
-                ModulateSelfOverride = Color.White.WithAlpha(ConfigManager.GetCVar(CCVars.SpeechBubbleSpeakerOpacity)),
-                Margin = new Thickness(1, 1, 1, 1),
-                OutlineColorOverride = TextOutline.Default.Color,
-            };
-            header.SetMessage(ExtractAndFormatSpeechSubstring(message, "BubbleHeader", fontColor), AllowedTags);
-
-            return new PanelContainer
-            {
-                StyleClasses = { "speechBox", speechStyleClass },
-                Children = { header },
-                ModulateSelfOverride = Color.White.WithAlpha(ConfigManager.GetCVar(CCVars.ChatFancyNameBackground) ? ConfigManager.GetCVar(CCVars.SpeechBubbleBackgroundOpacity) : 0f),
-                HorizontalAlignment = HAlignment.Center,
-            };
-        }
-
-        protected override void FrameUpdate(FrameEventArgs args)
-        {
-            // Sit right on top of the highest message of the run.
-            if (Members.Count > 0)
-            {
-                var top = 0f;
-                foreach (var member in Members)
-                {
-                    top = MathF.Max(top, member.VerticalOffset + member.ContentSize.Y);
-                }
-
-                VerticalOffset = top;
-            }
-
-            base.FrameUpdate(args);
-        }
-    }
-    // Nebula end
 }
