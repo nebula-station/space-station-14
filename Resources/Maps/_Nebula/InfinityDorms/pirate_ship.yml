@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 11/19/2026 20:20:47
-  entityCount: 970
+  entityCount: 971
 maps: []
 grids:
 - 2
@@ -3660,6 +3660,13 @@ entities:
     - type: Transform
       parent: 2
       pos: 16.5,-30.5
+- proto: InfiniteDormSpawnMarker
+  entities:
+  - uid: 972
+    components:
+    - type: Transform
+      parent: 2
+      pos: 16.5,-29.5
 - proto: Jukebox
   entities:
   - uid: 436
