@@ -1,0 +1,12 @@
+- type: soundCollection
+  id: SecurityReminders
+  files:
+  - /Audio/_Nebula/Security/Reminders/reminder_disobedience.ogg
+  - /Audio/_Nebula/Security/Reminders/reminder_memory.ogg
+  - /Audio/_Nebula/Security/Reminders/reminder_loyalty.ogg
+  - /Audio/_Nebula/Security/Reminders/reminder_threat.ogg
+  - /Audio/_Nebula/Security/Reminders/reminder_sensors.ogg
+  - /Audio/_Nebula/Security/Reminders/reminder_patrol.ogg
+  - /Audio/_Nebula/Security/Reminders/reminder_dismissal.ogg
+  - /Audio/_Nebula/Security/Reminders/reminder_leader.ogg
+  - /Audio/_Nebula/Security/Reminders/reminder_complaint.ogg

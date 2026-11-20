@@ -22,6 +22,8 @@ public sealed class SquadTabletBoundUserInterface(EntityUid owner, Enum uiKey) :
         _window.Monitor.PlaceOrderPressed += (squad, order, coordinates)
             => SendMessage(new SquadTabletPlaceOrderMessage(squad, order, coordinates));
         _window.Monitor.CancelOrderPressed += order => SendMessage(new SquadTabletCancelOrderMessage(order));
+        _window.Monitor.VoiceCommandPressed += (squad, command)
+            => SendMessage(new SquadTabletVoiceCommandMessage(squad, command));
         _window.Roster.CreateSquadPressed += (name, color, members)
             => SendMessage(new SquadTabletCreateSquadMessage(name, color, members));
         _window.Roster.DeleteSquadPressed += squad => SendMessage(new SquadTabletDeleteSquadMessage(squad));

@@ -1,0 +1,87 @@
+- type: squadVoiceCommand
+  id: Heal
+  name: squad-voice-heal
+  description: squad-voice-heal-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/heal.ogg
+  order: 0
+
+- type: squadVoiceCommand
+  id: WaitReinforcements
+  name: squad-voice-wait-reinforcements
+  description: squad-voice-wait-reinforcements-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/wait_reinforcements.ogg
+  order: 1
+
+- type: squadVoiceCommand
+  id: Suppress
+  name: squad-voice-suppress
+  description: squad-voice-suppress-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/suppress.ogg
+  order: 2
+
+- type: squadVoiceCommand
+  id: PrepareAssault
+  name: squad-voice-prepare-assault
+  description: squad-voice-prepare-assault-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/prepare_assault.ogg
+  order: 3
+
+- type: squadVoiceCommand
+  id: PrepareRetreat
+  name: squad-voice-prepare-retreat
+  description: squad-voice-prepare-retreat-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/prepare_retreat.ogg
+  order: 4
+
+- type: squadVoiceCommand
+  id: Report
+  name: squad-voice-report
+  description: squad-voice-report-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/report.ogg
+  order: 5
+
+- type: squadVoiceCommand
+  id: Arrest
+  name: squad-voice-arrest
+  description: squad-voice-arrest-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/arrest.ogg
+  order: 6
+
+- type: squadVoiceCommand
+  id: Kill
+  name: squad-voice-kill
+  description: squad-voice-kill-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/kill.ogg
+  order: 7
+
+- type: squadVoiceCommand
+  id: NoRetreat
+  name: squad-voice-no-retreat
+  description: squad-voice-no-retreat-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/no_retreat.ogg
+  order: 8
+
+- type: squadVoiceCommand
+  id: ReturnPatrol
+  name: squad-voice-return-patrol
+  description: squad-voice-return-patrol-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/return_patrol.ogg
+  order: 9
+
+- type: squadVoiceCommand
+  id: Armory
+  name: squad-voice-armory
+  description: squad-voice-armory-desc
+  sound:
+    path: /Audio/_Nebula/Security/VoiceCommands/armory.ogg
+  order: 10

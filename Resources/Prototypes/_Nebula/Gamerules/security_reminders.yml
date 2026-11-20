@@ -1,0 +1,7 @@
+- type: entity
+  parent: BaseSilentGameRule
+  id: SecurityReminderRule
+  components:
+  - type: SecurityReminderRule
+    sound:
+      collection: SecurityReminders

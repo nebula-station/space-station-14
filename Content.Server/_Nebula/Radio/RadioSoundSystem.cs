@@ -3,7 +3,9 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Server.Radio.EntitySystems;
+using Content.Shared.Inventory;
 using Content.Shared.Radio;
+using Content.Shared.Radio.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
@@ -19,6 +21,9 @@ public sealed partial class RadioSoundSystem : EntitySystem
     [Dependency] private IPrototypeManager _proto = default!;
     [Dependency] private RadioSystem _radio = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+
+    private const string EarsSlot = "ears";
 
     /// <summary>
     /// Radio sending the message right now, so nested radio messages sent meanwhile aren't counted.
@@ -53,6 +58,26 @@ public sealed partial class RadioSoundSystem : EntitySystem
 
         _audio.PlayGlobal(sound, listeners, true);
         return listeners;
+    }
+
+    /// <summary>
+    /// Whether the mob wears a working headset that receives <paramref name="channel"/>.
+    /// </summary>
+    public bool WearsHeadset(EntityUid mob, ProtoId<RadioChannelPrototype> channel)
+    {
+        return _inventory.TryGetSlotEntity(mob, EarsSlot, out var ears)
+            && IsWornHeadset(ears.Value, channel);
+    }
+
+    /// <summary>
+    /// Whether the headset is worn, enabled and receives <paramref name="channel"/>.
+    /// </summary>
+    public bool IsWornHeadset(EntityUid headset, ProtoId<RadioChannelPrototype> channel)
+    {
+        return TryComp<HeadsetComponent>(headset, out var comp)
+            && comp is { Enabled: true, IsEquipped: true }
+            && TryComp<EncryptionKeyHolderComponent>(headset, out var keys)
+            && keys.Channels.Contains(channel);
     }
 
     [SubscribeLocalEvent]

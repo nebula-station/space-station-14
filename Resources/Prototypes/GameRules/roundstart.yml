@@ -532,6 +532,7 @@
   - type: RoundstartStationVariationRule
     rules:
     - id: GhostCafeMapRule # Nebula edit
+    - id: SecurityReminderRule # Nebula edit
     - id: BasicTrashVariationPass
     - id: SolidWallRustingVariationPass
     - id: ReinforcedWallRustingVariationPass

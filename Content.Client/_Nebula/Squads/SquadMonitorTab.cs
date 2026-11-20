@@ -14,34 +14,47 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
 namespace Content.Client._Nebula.Squads;
 
 /// <summary>
 /// Sensor map with squad members and orders on the left, collapsible squads on the right.
-/// Clicking a squad plate selects it for orders, clicking a member centers the map on them.
+/// Clicking a squad plate selects it for orders and voice commands, clicking a member centers the map on them.
 /// </summary>
 public sealed partial class SquadMonitorTab : BoxContainer
 {
     [Dependency] private IEntityManager _entMan = default!;
     [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     private const float ListWidth = 280f;
+    private const float VoiceListHeight = 180f;
+    private static readonly TimeSpan VoiceCheckInterval = TimeSpan.FromSeconds(0.2);
+
+    /// <summary>
+    /// Client time runs ahead of the server by the ping, so the buttons wait a bit longer than the server cooldown.
+    /// </summary>
+    private static readonly TimeSpan VoiceCooldownMargin = TimeSpan.FromSeconds(0.3);
     private static readonly ResPath BlipTexture = new("/Textures/Interface/NavMap/beveled_circle.png");
 
     public event Action<int, ProtoId<SquadOrderPrototype>, NetCoordinates>? PlaceOrderPressed;
     public event Action<int>? CancelOrderPressed;
+    public event Action<int, ProtoId<SquadVoiceCommandPrototype>>? VoiceCommandPressed;
 
     public readonly SquadNavMapControl Map;
 
     private readonly SpriteSystem _sprite;
     private readonly BoxContainer _squads;
     private readonly BoxContainer _hint;
+    private readonly BoxContainer _voiceCommands;
     private readonly HashSet<int> _expanded = [];
     private SimpleRadialMenu? _menu;
     private SquadTabletState? _state;
     private int? _selected;
+    private (int? Squad, bool Ready) _voiceShown;
+    private TimeSpan _nextVoiceCheck;
 
     public SquadMonitorTab()
     {
@@ -66,9 +79,30 @@ public sealed partial class SquadMonitorTab : BoxContainer
         var column = SquadUi.Column(Loc.GetString("squad-tablet-squads"), _squads, width: ListWidth);
         column.AddChild(_hint);
 
+        var voiceLabel = CyberDraw.Label(Loc.GetString("squad-tablet-voice-commands").ToUpperInvariant(),
+            CyberPalette.Red,
+            11,
+            true);
+        voiceLabel.Margin = new Thickness(14, 4, 12, 6);
+        column.AddChild(voiceLabel);
+
+        _voiceCommands = new BoxContainer
+        {
+            Orientation = LayoutOrientation.Vertical,
+            SeparationOverride = 4,
+            Margin = new Thickness(12, 2, 10, 10),
+        };
+        column.AddChild(new ScrollContainer
+        {
+            SetHeight = VoiceListHeight,
+            HScrollEnabled = false,
+            Children = { _voiceCommands },
+        });
+
         AddChild(mapPanel);
         AddChild(column);
         SetHint();
+        RebuildVoiceCommands();
     }
 
     protected override void ExitedTree()
@@ -93,6 +127,19 @@ public sealed partial class SquadMonitorTab : BoxContainer
         UpdateMap();
         if (!same)
             Rebuild();
+        else
+            UpdateVoiceCommands();
+    }
+
+    protected override void FrameUpdate(FrameEventArgs args)
+    {
+        base.FrameUpdate(args);
+
+        if (_timing.CurTime < _nextVoiceCheck)
+            return;
+
+        _nextVoiceCheck = _timing.CurTime + VoiceCheckInterval;
+        UpdateVoiceCommands();
     }
 
     /// <summary>
@@ -186,6 +233,56 @@ public sealed partial class SquadMonitorTab : BoxContainer
         }
 
         SetHint();
+        RebuildVoiceCommands();
+    }
+
+    /// <summary>
+    /// The buttons are rebuilt only when the selected squad or its cooldown changes, so a press is not lost.
+    /// </summary>
+    private void UpdateVoiceCommands()
+    {
+        if (GetVoiceState() != _voiceShown)
+            RebuildVoiceCommands();
+    }
+
+    private (int? Squad, bool Ready) GetVoiceState()
+    {
+        if (_state == null
+            || _selected is not { } selected
+            || !SquadUi.TryGetSquad(_state, selected, out var squad))
+            return (null, false);
+
+        return (selected, _timing.CurTime >= squad.NextVoiceCommand + VoiceCooldownMargin);
+    }
+
+    private void RebuildVoiceCommands()
+    {
+        _voiceCommands.RemoveAllChildren();
+        _voiceShown = GetVoiceState();
+
+        var accent = CyberPalette.Cyan;
+        if (_state != null && _voiceShown.Squad is { } id && SquadUi.TryGetSquad(_state, id, out var squad))
+            accent = squad.Color;
+
+        foreach (var command in _proto.EnumeratePrototypes<SquadVoiceCommandPrototype>().OrderBy(c => c.Order))
+        {
+            var button = new CyberButton(Loc.GetString(command.Name), CyberButtonStyle.Row)
+            {
+                Accent = accent,
+                HorizontalExpand = true,
+                MinHeight = 28,
+                ToolTip = Loc.GetString(command.Description),
+                Disabled = !_voiceShown.Ready,
+            };
+            button.Label.FontOverride = CyberDraw.Font(11);
+            var commandId = command.ID;
+            button.OnPressed += _ =>
+            {
+                if (_selected is { } selected)
+                    VoiceCommandPressed?.Invoke(selected, commandId);
+            };
+            _voiceCommands.AddChild(button);
+        }
     }
 
     private Control CreateSquad(SquadTabletSquad squad)
