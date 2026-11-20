@@ -59,6 +59,11 @@
   category: Unusual
   gridPath: /Maps/_Nebula/InfinityDorms/pc_club.yml
 
+- type: infinityDormRoom
+  id: PirateShip
+  category: Unusual
+  gridPath: /Maps/_Nebula/InfinityDorms/pirate_ship.yml
+
 # endregion
 
 # region Exotic
