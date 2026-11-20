@@ -3,6 +3,7 @@
 // <Trauma>
 using Content.Trauma.Common.Throwing;
 // </Trauma>
+using Content.Shared._ES.Camera;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Camera;
 using Content.Shared.Coordinates;
@@ -31,6 +32,12 @@ public abstract partial class SharedDamageOtherOnHitSystem
     [Dependency] private SharedGunSystem _gun = default!;
     [Dependency] private SharedCameraRecoilSystem _recoil = default!;
     [Dependency] private SharedColorFlashEffectSystem _color = default!;
+
+    // Nebula start
+    [Dependency] private ESScreenshakeSystem _shake = default!;
+
+    private static readonly ESScreenshakeParameters HitShake = new(0.35f, 1.4f, 0.014f);
+    // Nebula end
 
     private List<EntityUid> _target = new(1);
 
@@ -82,7 +89,8 @@ public abstract partial class SharedDamageOtherOnHitSystem
         if (TryComp<PhysicsComponent>(uid, out var body) && body.LinearVelocity.LengthSquared() > 0f)
         {
             var direction = body.LinearVelocity.Normalized();
-            _recoil.KickCamera(args.Target, direction);
+            _recoil.KickCamera(args.Target, direction * 0.1f); // Nebula edit
+            _shake.Screenshake(args.Target, HitShake, null); // Nebula edit
         }
     }
 }

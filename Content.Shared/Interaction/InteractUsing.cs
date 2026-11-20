@@ -30,6 +30,8 @@ public sealed class InteractUsingEvent : HandledEntityEventArgs
     /// </summary>
     public EntityCoordinates ClickLocation { get; }
 
+    public bool InteractionParticle = true; // Nebula edit
+
     public InteractUsingEvent(EntityUid user, EntityUid used, EntityUid target, EntityCoordinates clickLocation)
     {
         // Interact using should not have the same used and target.

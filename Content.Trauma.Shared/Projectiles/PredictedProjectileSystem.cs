@@ -2,6 +2,7 @@
 
 using Content.Goobstation.Common.Weapons.Penetration;
 using Content.Medical.Common.Targeting;
+using Content.Shared._ES.Camera;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Destructible;
 using Content.Shared.Effects;
@@ -46,6 +47,12 @@ public sealed partial class PredictedProjectileSystem : EntitySystem
     [Dependency] private EntityQuery<ProjectileComponent> _query = default!;
     [Dependency] private EntityQuery<PhysicsComponent> _physicsQuery = default!;
     [Dependency] private EntityQuery<FixturesComponent> _fixturesQuery = default!;
+
+    // Nebula start
+    [Dependency] private ESScreenshakeSystem _shake = default!;
+
+    private static readonly ESScreenshakeParameters HitShake = new(0.45f, 1.1f, 0.04f);
+    // Nebula end
 
     [SubscribeLocalEvent]
     private void OnStartCollide(Entity<ProjectileComponent> ent, ref StartCollideEvent args)
@@ -200,7 +207,8 @@ public sealed partial class PredictedProjectileSystem : EntitySystem
                 _gun.PlayImpactSound(target, dmg, comp.SoundHit, comp.ForceSound);
 
                 if (!ourBody.LinearVelocity.IsLengthZero() && _timing.IsFirstTimePredicted)
-                    _recoil.KickCamera(target, ourBody.LinearVelocity.Normalized());
+                    _recoil.KickCamera(target, ourBody.LinearVelocity.Normalized() * 0.08f); // Nebula edit
+                _shake.Screenshake(target, HitShake, null); // Nebula edit
             }
 
             if (comp.DeleteOnCollide && comp.ProjectileSpent)

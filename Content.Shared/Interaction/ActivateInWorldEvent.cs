@@ -28,6 +28,8 @@ public sealed class ActivateInWorldEvent : HandledEntityEventArgs
     /// </summary>
     public bool WasLogged { get; set; }
 
+    public bool InteractionParticle = true; // Nebula edit
+
     public ActivateInWorldEvent(EntityUid user, EntityUid target, bool complex)
     {
         User = user;

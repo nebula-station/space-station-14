@@ -38,6 +38,7 @@
                 <Label Text="{Loc 'ui-options-preferences'}"
                        StyleClasses="LabelKeyText"/>
                 <CheckBox Name="AutoFocusSearchOnBuildMenuCheckBox" Text="{Loc 'ui-options-auto-focus-search-on-build-menu'}" />
+                <ui:OptionSlider Name="InHandInteractionParticleScaleSlider" Title="{Loc 'ui-options-inhand-interaction-particle-scale'}" /> <!-- Nebula edit -->
                 <!-- Goobstation Edit End -->
                 <!-- Nebula start -->
                 <Label Text="{Loc 'ui-options-general-erp'}"

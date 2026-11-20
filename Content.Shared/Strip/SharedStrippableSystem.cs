@@ -2,6 +2,7 @@
 using Content.Trauma.Common.Heretic;
 // </Trauma>
 using System.Linq;
+using Content.Shared._Starfall.Offering;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CombatMode;
 using Content.Shared.Cuffs;
@@ -330,7 +331,7 @@ public abstract partial class SharedStrippableSystem : EntitySystem
         var prefix = stealth ? "stealthily " : "";
         _adminLogger.Add(LogType.Stripping, LogImpact.Low, $"{ToPrettyString(user):actor} is trying to {prefix}strip the item {ToPrettyString(item):item} from {ToPrettyString(target):target}'s {slot} slot");
 
-        _interactionSystem.DoContactInteraction(user, item);
+        _interactionSystem.DoContactInteraction(user, item, null, true, interactionParticles: !stealth); // Nebula edit
 
         var doAfterArgs = new DoAfterArgs(EntityManager, user, time, new StrippableDoAfterEvent(false, true, slot), user, target, item)
         {
@@ -364,7 +365,9 @@ public abstract partial class SharedStrippableSystem : EntitySystem
 
         RaiseLocalEvent(item, new DroppedEvent(user), true); // Gas tank internals etc.
 
+        _interactionSystem.SetInteractionParticlesSuppressed(stealth); // Nebula edit
         _handsSystem.PickupOrDrop(user, item, animateUser: stealth, animate: !stealth);
+        _interactionSystem.SetInteractionParticlesSuppressed(false); // Nebula edit
         _adminLogger.Add(LogType.Stripping, LogImpact.High, $"{ToPrettyString(user):actor} has stripped the item {ToPrettyString(item):item} from {ToPrettyString(target):target}'s {slot} slot");
     }
 
@@ -446,7 +449,13 @@ public abstract partial class SharedStrippableSystem : EntitySystem
             DuplicateCondition = DuplicateConditions.SameTool
         };
 
-        _doAfterSystem.TryStartDoAfter(doAfterArgs);
+        // Nebula start
+        if (!_doAfterSystem.TryStartDoAfter(doAfterArgs, out var doAfterId))
+            return;
+
+        var offerAttempt = new StripHandInsertAttemptEvent(user.Owner, target.Owner, held, handName, doAfterId.Value.Index);
+        RaiseLocalEvent(ref offerAttempt);
+        // Nebula end
     }
 
     /// <summary>
@@ -467,7 +476,9 @@ public abstract partial class SharedStrippableSystem : EntitySystem
             return;
 
         _handsSystem.TryDrop(user, checkActionBlocker: false);
+        _interactionSystem.SetInteractionParticlesSuppressed(stealth); // Nebula edit
         _handsSystem.TryPickup(target, held, handName, checkActionBlocker: false, animateUser: stealth, animate: !stealth, handsComp: target.Comp);
+        _interactionSystem.SetInteractionParticlesSuppressed(false); // Nebula edit
         _adminLogger.Add(LogType.Stripping, LogImpact.Medium, $"{ToPrettyString(user):actor} has placed the item {ToPrettyString(held):item} in {ToPrettyString(target):target}'s hands");
 
         // Hand update will trigger strippable update.
@@ -530,6 +541,13 @@ public abstract partial class SharedStrippableSystem : EntitySystem
         if (!CanStripRemoveHand(user, target, item, handName))
             return;
 
+        // Nebula start
+        var offerAttempt = new StripHandRemoveAttemptEvent(user.Owner, target.Owner, item, handName);
+        RaiseLocalEvent(item, ref offerAttempt);
+        if (offerAttempt.Handled)
+            return;
+        // Nebula end
+
         var (time, stealth) = GetStripTimeModifiers(user, target, null, targetStrippable.HandStripDelay);
 
         if (!stealth)
@@ -545,7 +563,7 @@ public abstract partial class SharedStrippableSystem : EntitySystem
         var prefix = stealth ? "stealthily " : "";
         _adminLogger.Add(LogType.Stripping, LogImpact.Low, $"{ToPrettyString(user):actor} is trying to {prefix}strip the item {ToPrettyString(item):item} from {ToPrettyString(target):target}'s hands");
 
-        _interactionSystem.DoContactInteraction(user, item);
+        _interactionSystem.DoContactInteraction(user, item, null, true, interactionParticles: !stealth); // Nebula edit
 
         var doAfterArgs = new DoAfterArgs(EntityManager, user, time, new StrippableDoAfterEvent(false, false, handName), user, target, item)
         {
@@ -579,7 +597,9 @@ public abstract partial class SharedStrippableSystem : EntitySystem
             return;
 
         _handsSystem.TryDrop(target, item, checkActionBlocker: false);
+        _interactionSystem.SetInteractionParticlesSuppressed(stealth); // Nebula edit
         _handsSystem.PickupOrDrop(user, item, animateUser: stealth, animate: !stealth, handsComp: user.Comp);
+        _interactionSystem.SetInteractionParticlesSuppressed(false); // Nebula edit
         _adminLogger.Add(LogType.Stripping, LogImpact.High, $"{ToPrettyString(user):actor} has stripped the item {ToPrettyString(item):item} from {ToPrettyString(target):target}'s hands");
 
         // Hand update will trigger strippable update.
@@ -644,7 +664,10 @@ public abstract partial class SharedStrippableSystem : EntitySystem
             return;
 
         if (TryOpenStrippingUi(args.User, (uid, component)))
+        {
             args.Handled = true;
+            args.InteractionParticle = false; // Nebula edit
+        }
     }
 
     /// <summary>

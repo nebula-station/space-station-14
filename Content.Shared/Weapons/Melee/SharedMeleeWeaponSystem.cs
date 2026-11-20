@@ -715,6 +715,7 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
             if (damageResult.GetTotal() > FixedPoint2.Zero)
             {
                 DoDamageEffect(targets, user, targetXform);
+                DoMeleeScreenshake(user, targets); // Nebula edit
                 ResetUndamagedSwingsCount((meleeUid, component));
             }
             else
@@ -894,6 +895,8 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
             _meleeSound.PlayHitSound(target, user, GetHighestDamageSound(appliedDamage, ProtoMan), hitEvent.HitSoundOverride, component);
         }
 
+        DoMeleeScreenshake(user, targets); // Nebula edit
+
         if (targets.Count > 0)
         {
             if (appliedDamage.GetTotal() > FixedPoint2.Zero)
@@ -1056,7 +1059,7 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
         // </Trauma>
 
         PhysicalShove(user, target);
-        Interaction.DoContactInteraction(user, target);
+        Interaction.DoContactInteraction(user, target, null, true); // Nebula edit
 
         if (MobState.IsIncapacitated(target))
             return true;
