@@ -138,9 +138,12 @@ public sealed partial class SecurityNeuroSystem : EntitySystem
     {
         // A member sees their squad, the head of security has none and sees all squads instead.
         List<SkewedHudLine> squad = [];
+        if (neuro.SquadName != null)
+            squad.Add(SecurityHud.SquadName(neuro.SquadName, neuro.SquadColor));
+
         foreach (var member in neuro.Squad)
         {
-            squad.Add(SecurityHud.Member(member.Name, member.State));
+            squad.Add(SecurityHud.Member(member.Name, member.State, member.Leader));
         }
 
         if (squad.Count == 0)
@@ -175,11 +178,11 @@ public sealed partial class SecurityNeuroSystem : EntitySystem
                 _ => SecurityHudTaskKind.Wanted,
             };
 
-            // The description is not shown on the HUD, a task with one gets a mark after its title.
-            var text = task.Description.Length == 0
-                ? task.Title
-                : Loc.GetString("skewed-hud-task-described", ("title", task.Title));
-            tasks.Add(SecurityHud.Task(kind, text));
+            // The description is not shown on the HUD, a task with one gets a mark after its title and a tooltip.
+            if (task.Description.Length == 0)
+                tasks.Add(SecurityHud.Task(kind, task.Title));
+            else
+                tasks.Add(SecurityHud.Task(kind, Loc.GetString("skewed-hud-task-described", ("title", task.Title)), task.Description));
         }
 
         _hud.SetTasks(SecurityHud.Source, tasks);

@@ -28,6 +28,7 @@ public sealed class SquadTabletBoundUserInterface(EntityUid owner, Enum uiKey) :
             => SendMessage(new SquadTabletCreateSquadMessage(name, color, members));
         _window.Roster.DeleteSquadPressed += squad => SendMessage(new SquadTabletDeleteSquadMessage(squad));
         _window.Roster.AssignPressed += (record, squad) => SendMessage(new SquadTabletAssignMessage(record, squad));
+        _window.Roster.SetLeaderPressed += (squad, record) => SendMessage(new SquadTabletSetLeaderMessage(squad, record));
         _window.Tasks.CreateTaskPressed += (squad, record, title, description)
             => SendMessage(new SquadTabletCreateTaskMessage(squad, record, title, description));
         _window.Tasks.DeleteTaskPressed += task => SendMessage(new SquadTabletDeleteTaskMessage(task));

@@ -27,6 +27,9 @@ squad-tablet-create = Создать
 squad-tablet-create-hint = Выберите название и свободный цвет, затем перетащите сотрудников в отряд.
 squad-tablet-delete = Расформировать
 squad-tablet-drop-hint = Перетащите сотрудников сюда.
+squad-tablet-leader = Лидер
+squad-tablet-make-leader = Назначить
+squad-tablet-make-leader-tooltip = Назначить лидером отряда. Лидер всегда первый в списке.
 
 squad-order-advance = Выдвинуться
 squad-order-hold = Удерживать

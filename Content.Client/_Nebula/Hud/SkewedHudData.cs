@@ -22,6 +22,11 @@ public struct SkewedHudTask
     public required string Text;
 
     /// <summary>
+    /// Shown in a tooltip while the mouse is over the task.
+    /// </summary>
+    public string? Description;
+
+    /// <summary>
     /// Lower goes higher on the HUD.
     /// </summary>
     public int Order;

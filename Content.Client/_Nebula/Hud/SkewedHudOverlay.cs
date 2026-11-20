@@ -13,6 +13,7 @@ using Content.Client.UserInterface.Systems.Alerts.Widgets;
 using Content.Client.UserInterface.Systems.MenuBar.Widgets;
 using Content.Shared.Mobs;
 using Robust.Client.Graphics;
+using Robust.Client.Input;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
 using Robust.Shared.Enums;
@@ -27,7 +28,7 @@ namespace Content.Client._Nebula.Hud;
 /// tasks sections of <c>LABEL :: value</c> lines on faint plates. The whole column is sheared along Y so it falls
 /// to the right while glyphs stay upright. A service header with the shift time sits on top, plates carry faint
 /// scanlines. With the separated chat the tasks move to the top right corner, mirrored. Sections slide in one by one when the HUD is turned on,
-/// and a random line glitches now and then.
+/// and a random line glitches now and then. Hovering a task with a description shows it in a tooltip.
 /// </summary>
 public sealed class SkewedHudOverlay : Overlay
 {
@@ -75,6 +76,9 @@ public sealed class SkewedHudOverlay : Overlay
     private const float BannerCloseTime = 0.25f;
     private const float BannerCollapseTime = 0.3f;
     private const float BannerFlickerChance = 0.1f;
+    private const float TooltipWidth = 300f;
+    private const float TooltipOffset = 16f;
+    private const float TooltipPadding = 8f;
     private static readonly TimeSpan GlitchTime = TimeSpan.FromMilliseconds(60);
     private static readonly float SkewAngle = MathHelper.DegreesToRadians(3f);
 
@@ -83,6 +87,7 @@ public sealed class SkewedHudOverlay : Overlay
     private static readonly Color BannerColor = Color.FromHex("#f2625c");
     private static readonly Color BannerTextColor = Color.FromHex("#4a0d0d");
     private static readonly Color PlateColor = Color.FromHex("#061018").WithAlpha(0.35f);
+    private static readonly Color TooltipColor = Color.FromHex("#061018").WithAlpha(0.9f);
 
     private static readonly Vector2[] GlowOffsets =
     [
@@ -93,12 +98,14 @@ public sealed class SkewedHudOverlay : Overlay
     private readonly ISharedPlayerManager _player;
     private readonly IEyeManager _eye;
     private readonly IUserInterfaceManager _ui;
+    private readonly IInputManager _input;
     private readonly IGameTiming _timing;
     private readonly IRobustRandom _random;
     private readonly Font _headerFont;
     private readonly Font _labelFont;
     private readonly Font _valueFont;
     private readonly Font _bannerFont;
+    private readonly Font _tooltipFont;
     private readonly List<Section> _sections = [];
     private readonly List<Row> _rows = [];
     private readonly StringBuilder _decrypted = new();
@@ -116,6 +123,20 @@ public sealed class SkewedHudOverlay : Overlay
     private int _glitchRow;
     private float _glitchShift;
 
+    /// <summary>
+    /// Row with a description under the mouse this frame, -1 when none.
+    /// </summary>
+    private int _hovered = -1;
+
+    /// <summary>
+    /// Wrapped description of <see cref="_tooltipRow"/>, rebuilt when the rows or the scale change.
+    /// </summary>
+    private readonly List<string> _tooltipLines = [];
+    private int _tooltipRow = -1;
+    private int _tooltipVersion = -1;
+    private float _tooltipScale;
+    private Vector2 _tooltipSize;
+
     public override OverlaySpace Space => OverlaySpace.ScreenSpace;
 
     private Color Accent => _hud.Profile?.Accent ?? DefaultAccent;
@@ -127,6 +148,7 @@ public sealed class SkewedHudOverlay : Overlay
         ISharedPlayerManager player,
         IEyeManager eye,
         IUserInterfaceManager ui,
+        IInputManager input,
         IResourceCache cache,
         IGameTiming timing,
         IRobustRandom random)
@@ -135,12 +157,14 @@ public sealed class SkewedHudOverlay : Overlay
         _player = player;
         _eye = eye;
         _ui = ui;
+        _input = input;
         _timing = timing;
         _random = random;
         _headerFont = cache.GetFont("/Fonts/RobotoMono/RobotoMono-Bold.ttf", 10);
         _labelFont = cache.GetFont("/Fonts/Boxfont-round/Boxfont Round.ttf", 10);
         _valueFont = cache.GetFont("/Fonts/RobotoMono/RobotoMono-Bold.ttf", 13);
         _bannerFont = cache.GetFont("/Fonts/RobotoMono/RobotoMono-Bold.ttf", 15);
+        _tooltipFont = cache.GetFont("/Fonts/RobotoMono/RobotoMono-Regular.ttf", 11);
         ZIndex = NebulaDeathOverlay.ZOrder + 1;
     }
 
@@ -189,25 +213,35 @@ public sealed class SkewedHudOverlay : Overlay
 
         UpdateGlitch();
 
-        handle.SetTransform(Matrix3x2.CreateSkew(0f, SkewAngle) * Matrix3x2.CreateTranslation(anchor + new Vector2(MarginX, MarginY) * scale));
+        var mouse = _input.MouseScreenPosition.Position;
+        _hovered = -1;
+
+        var left = Matrix3x2.CreateSkew(0f, SkewAngle) * Matrix3x2.CreateTranslation(anchor + new Vector2(MarginX, MarginY) * scale);
+        handle.SetTransform(left);
+        var leftMouse = ToLocal(left, mouse);
 
         var y = DrawHeader(handle, scale);
         for (var s = 0; s < _sections.Count; s++)
         {
             if (!_sections[s].Right)
-                y += DrawSection(handle, _sections[s], s + 1, y, scale) + SectionGap * scale;
+                y += DrawSection(handle, _sections[s], s + 1, y, scale, leftMouse) + SectionGap * scale;
         }
 
-        handle.SetTransform(Matrix3x2.CreateSkew(0f, -SkewAngle) * Matrix3x2.CreateTranslation(rightAnchor + new Vector2(-MarginX, MarginY) * scale));
+        var right = Matrix3x2.CreateSkew(0f, -SkewAngle) * Matrix3x2.CreateTranslation(rightAnchor + new Vector2(-MarginX, MarginY) * scale);
+        handle.SetTransform(right);
+        var rightMouse = ToLocal(right, mouse);
 
         var rightY = 0f;
         for (var s = 0; s < _sections.Count; s++)
         {
             if (_sections[s].Right)
-                rightY += DrawSection(handle, _sections[s], s + 1, rightY, scale) + SectionGap * scale;
+                rightY += DrawSection(handle, _sections[s], s + 1, rightY, scale, rightMouse) + SectionGap * scale;
         }
 
         handle.SetTransform(Matrix3x2.Identity);
+        if (_hovered >= 0)
+            DrawTooltip(handle, bounds, mouse, scale);
+
         DrawSignalBanner(handle, bounds, scale);
     }
 
@@ -249,9 +283,9 @@ public sealed class SkewedHudOverlay : Overlay
             {
                 var task = _hud.Tasks[i];
                 if (task.Urgent)
-                    AddRow(task.Label, task.Text, Alert, task.ChangedAt, Alert.WithAlpha(0.65f), true);
+                    AddRow(task.Label, task.Text, Alert, task.ChangedAt, Alert.WithAlpha(0.65f), true, description: task.Description);
                 else
-                    AddRow(task.Label, task.Text, Accent, task.ChangedAt);
+                    AddRow(task.Label, task.Text, Accent, task.ChangedAt, description: task.Description);
             }
 
             if (_hud.Tasks.Count > visible)
@@ -287,10 +321,12 @@ public sealed class SkewedHudOverlay : Overlay
         TimeSpan changedAt,
         Color? labelColor = null,
         bool pulse = false,
-        bool lags = false)
+        bool lags = false,
+        string? description = null)
     {
         _rows.Add(new Row
         {
+            Description = description,
             Label = label,
             LabelColor = labelColor ?? AccentDim,
             Text = text,
@@ -407,7 +443,8 @@ public sealed class SkewedHudOverlay : Overlay
     /// Draws a section plate with its rows and returns the plate height. While the HUD boots, the section fades
     /// and slides in after the previous ones, and its rows decrypt once it has arrived.
     /// </summary>
-    private float DrawSection(DrawingHandleScreen handle, Section section, int index, float top, float scale)
+    /// <param name="mouse">Mouse position in the coordinates of the section, to find the hovered row.</param>
+    private float DrawSection(DrawingHandleScreen handle, Section section, int index, float top, float scale, Vector2? mouse)
     {
         var delay = BootStagger * index;
         var boot = BootProgress(index);
@@ -442,6 +479,17 @@ public sealed class SkewedHudOverlay : Overlay
                 y += lineHeight;
                 continue;
             }
+
+            if (row.Description != null
+                && broken == null
+                && !lost
+                && boot >= 1f
+                && mouse is { } m
+                && m.X >= plate.Left
+                && m.X <= plate.Right
+                && m.Y >= y
+                && m.Y < y + lineHeight)
+                _hovered = i;
 
             var lagging = lost && row.Lags;
             var glitch = (glitching && i == _glitchRow) || broken >= 0f || lagging && _random.Prob(LagGlitchChance);
@@ -615,6 +663,83 @@ public sealed class SkewedHudOverlay : Overlay
         _plate[2] = new DrawVertexUV2DColor(box.TopRight, right);
         _plate[3] = new DrawVertexUV2DColor(box.BottomRight, right);
         handle.DrawPrimitives(DrawPrimitiveTopology.TriangleStrip, Texture.White, _plate);
+    }
+
+    private static Vector2? ToLocal(Matrix3x2 transform, Vector2 screen)
+    {
+        return Matrix3x2.Invert(transform, out var inverse) ? Vector2.Transform(screen, inverse) : null;
+    }
+
+    /// <summary>
+    /// Description of the hovered task on an upright plate next to the mouse, kept inside the viewport.
+    /// </summary>
+    private void DrawTooltip(DrawingHandleScreen handle, UIBox2 bounds, Vector2 mouse, float scale)
+    {
+        if (_rows[_hovered].Description is not { } description)
+            return;
+
+        if (_tooltipRow != _hovered
+            || _tooltipVersion != _builtVersion
+            || _tooltipScale != scale)
+        {
+            _tooltipRow = _hovered;
+            _tooltipVersion = _builtVersion;
+            _tooltipScale = scale;
+            WrapTooltip(handle, description, scale);
+        }
+
+        var pad = TooltipPadding * scale;
+        var size = _tooltipSize + new Vector2(pad * 2);
+        var position = mouse + new Vector2(TooltipOffset * scale);
+        position.X = Math.Clamp(position.X, bounds.Left, Math.Max(bounds.Left, bounds.Right - size.X));
+        position.Y = Math.Clamp(position.Y, bounds.Top, Math.Max(bounds.Top, bounds.Bottom - size.Y));
+
+        var box = UIBox2.FromDimensions(position, size);
+        handle.DrawRect(box, TooltipColor);
+        handle.DrawRect(new UIBox2(box.Left, box.Top, box.Left + AccentWidth * scale, box.Bottom), Accent);
+
+        var lineHeight = _tooltipFont.GetLineHeight(scale);
+        var y = box.Top + pad;
+        foreach (var line in _tooltipLines)
+        {
+            handle.DrawString(_tooltipFont, new Vector2(box.Left + pad, y), line, scale, Accent);
+            y += lineHeight;
+        }
+    }
+
+    /// <summary>
+    /// Splits the description by words into lines no wider than <see cref="TooltipWidth"/>, a longer word keeps
+    /// a line of its own.
+    /// </summary>
+    private void WrapTooltip(DrawingHandleScreen handle, string text, float scale)
+    {
+        _tooltipLines.Clear();
+        var maxWidth = TooltipWidth * scale;
+        var width = 0f;
+        foreach (var paragraph in text.Split('\n'))
+        {
+            var line = string.Empty;
+            foreach (var word in paragraph.Split(' ', StringSplitOptions.RemoveEmptyEntries))
+            {
+                var candidate = line.Length == 0 ? word : line + " " + word;
+                if (line.Length > 0 && handle.GetDimensions(_tooltipFont, candidate, scale).X > maxWidth)
+                {
+                    _tooltipLines.Add(line);
+                    line = word;
+                }
+                else
+                    line = candidate;
+            }
+
+            _tooltipLines.Add(line);
+        }
+
+        foreach (var line in _tooltipLines)
+        {
+            width = Math.Max(width, handle.GetDimensions(_tooltipFont, line, scale).X);
+        }
+
+        _tooltipSize = new Vector2(width, _tooltipFont.GetLineHeight(scale) * _tooltipLines.Count);
     }
 
     private void UpdateGlitch()
@@ -894,6 +1019,7 @@ public sealed class SkewedHudOverlay : Overlay
 
     private struct Row
     {
+        public string? Description;
         public string Label;
         public Color LabelColor;
         public string Text;

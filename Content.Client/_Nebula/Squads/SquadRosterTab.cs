@@ -24,6 +24,7 @@ public sealed class SquadRosterTab : BoxContainer
     public event Action<string, int, List<uint>>? CreateSquadPressed;
     public event Action<int>? DeleteSquadPressed;
     public event Action<uint, int?>? AssignPressed;
+    public event Action<int, uint>? SetLeaderPressed;
 
     private readonly BoxContainer _free;
     private readonly BoxContainer _squads;
@@ -85,7 +86,7 @@ public sealed class SquadRosterTab : BoxContainer
         panel.AddChild(_panel);
 
         AddChild(_freeColumn);
-        AddChild(SquadUi.Column(Loc.GetString("squad-tablet-squads"), _squads, newSquad, 250f));
+        AddChild(SquadUi.Column(Loc.GetString("squad-tablet-squads"), _squads, newSquad, 320f));
         AddChild(panel);
 
         _nameEdit = CyberDraw.Input(new LineEdit
@@ -178,7 +179,7 @@ public sealed class SquadRosterTab : BoxContainer
             if (_pending.Exists(p => p.Record == member.Record))
                 continue;
 
-            _free.AddChild(CreateMember(member, null, false));
+            _free.AddChild(CreateMember(member, null, false, false));
             free++;
         }
 
@@ -220,9 +221,9 @@ public sealed class SquadRosterTab : BoxContainer
         };
         card.AddChild(header);
 
-        foreach (var member in squad.Members)
+        for (var i = 0; i < squad.Members.Count; i++)
         {
-            card.AddChild(CreateMember(member, squad.Id, false));
+            card.AddChild(CreateMember(squad.Members[i], squad.Id, false, i == 0));
         }
 
         return card;
@@ -356,23 +357,47 @@ public sealed class SquadRosterTab : BoxContainer
             list.AddChild(hint);
         }
 
-        foreach (var member in members)
+        for (var i = 0; i < members.Count; i++)
         {
-            list.AddChild(CreateMember(member, squad, pending));
+            list.AddChild(CreateMember(members[i], squad, pending, i == 0));
         }
 
         box.AddChild(list);
         return box;
     }
 
-    private Control CreateMember(SquadTabletMember member, int? squad, bool pending)
+    /// <param name="first">The first member of a squad leads it, the others get a button to take the lead.</param>
+    private Control CreateMember(SquadTabletMember member, int? squad, bool pending, bool first)
     {
         var row = new CyberButton(member.Name, CyberButtonStyle.Row) { MinHeight = 28 };
         row.Label.HorizontalExpand = true;
         row.Label.ClipText = true;
+        if (squad is { } id && !pending)
+            row.Content.AddChild(first ? CreateLeaderTag() : CreateLeaderButton(id, member.Record));
+
         row.Content.AddChild(CyberDraw.Label(member.Job, CyberPalette.Muted, 11));
         _drag.Attach(row, new RosterDrag(member, squad, pending), member.Name);
         return row;
+    }
+
+    private static Control CreateLeaderTag()
+    {
+        var tag = CyberDraw.Label(Loc.GetString("squad-tablet-leader").ToUpperInvariant(), CyberPalette.Cyan, 11, true);
+        tag.VerticalAlignment = VAlignment.Center;
+        return tag;
+    }
+
+    private Control CreateLeaderButton(int squad, uint record)
+    {
+        var button = new CyberButton(Loc.GetString("squad-tablet-make-leader").ToUpperInvariant())
+        {
+            ToolTip = Loc.GetString("squad-tablet-make-leader-tooltip"),
+            VerticalAlignment = VAlignment.Center,
+        };
+        button.Content.Margin = new Thickness(6, 1);
+        button.Label.FontOverride = CyberDraw.Font(10, true);
+        button.OnPressed += _ => SetLeaderPressed?.Invoke(squad, record);
+        return button;
     }
 
     #endregion

@@ -7,6 +7,7 @@ using Content.Shared._Nebula.Hud;
 using Content.Shared.GameTicking;
 using Content.Shared.Mobs;
 using Robust.Client.Graphics;
+using Robust.Client.Input;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
 using Robust.Shared.Player;
@@ -28,6 +29,7 @@ public sealed partial class SkewedHudSystem : EntitySystem
     [Dependency] private IResourceCache _cache = default!;
     [Dependency] private ISharedPlayerManager _player = default!;
     [Dependency] private IUserInterfaceManager _ui = default!;
+    [Dependency] private IInputManager _input = default!;
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private ClientGameTicker _ticker = default!;
@@ -120,7 +122,7 @@ public sealed partial class SkewedHudSystem : EntitySystem
     {
         base.Initialize();
 
-        _overlay.AddOverlay(new SkewedHudOverlay(this, _player, _eye, _ui, _cache, _timing, _random));
+        _overlay.AddOverlay(new SkewedHudOverlay(this, _player, _eye, _ui, _input, _cache, _timing, _random));
     }
 
     public override void Shutdown()

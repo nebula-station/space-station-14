@@ -179,6 +179,9 @@ public sealed partial class SecuritySquadSystem : EntitySystem
             return;
 
         ent.Comp.Record = null;
+        if (!TerminatingOrDeleted(ent))
+            RemComp<SquadLeaderComponent>(ent);
+
         if (TryGetSquad(key, out var squads, out var squad))
             RefreshSquad(squads, squad);
     }
@@ -258,6 +261,23 @@ public sealed partial class SecuritySquadSystem : EntitySystem
         return true;
     }
 
+    /// <summary>
+    /// Moves the member to the top of their squad, the first member leads it. False when nothing changed.
+    /// </summary>
+    public bool TrySetLeader(StationRecordKey member, int squadId)
+    {
+        if (!TryGetSquad(member, out var squads, out var squad)
+            || squad.Id != squadId
+            || squad.Members[0].Equals(member))
+            return false;
+
+        squad.Members.Remove(member);
+        squad.Members.Insert(0, member);
+        RefreshSquad(squads, squad);
+        UpdateTablets(squads);
+        return true;
+    }
+
     public bool TryGetSquad(StationRecordKey member, [NotNullWhen(true)] out SecuritySquad? squad)
     {
         return TryGetSquad(member, out _, out squad);
@@ -331,7 +351,12 @@ public sealed partial class SecuritySquadSystem : EntitySystem
             if (!_records.TryGetRecord<GeneralStationRecord>(key, out var record))
                 continue;
 
-            members.Add((key, new SecurityNeuroSquadMember { Name = record.Name, State = GetState(mobs, key) }));
+            members.Add((key, new SecurityNeuroSquadMember
+            {
+                Name = record.Name,
+                State = GetState(mobs, key),
+                Leader = key.Equals(squad.Members[0]),
+            }));
         }
 
         List<SecurityNeuroMark> marks = [];
@@ -363,11 +388,24 @@ public sealed partial class SecuritySquadSystem : EntitySystem
                     others.Add(other.Member);
             }
 
+            // Others see the leader icon whatever the leader's own link is doing.
+            if (key.Equals(squad.Members[0]))
+                EnsureComp<SquadLeaderComponent>(mob);
+            else
+                RemComp<SquadLeaderComponent>(mob);
+
             // Without a link the squad and its orders stay as they were last seen.
             if (HasComp<NeuroSignalLostComponent>(mob))
             {
                 RefreshTasks(mob, wanted);
                 continue;
+            }
+
+            if (mob.Comp.SquadName != squad.Name || mob.Comp.SquadColor != squad.Color)
+            {
+                mob.Comp.SquadName = squad.Name;
+                mob.Comp.SquadColor = squad.Color;
+                DirtyFields(mob, mob.Comp, null, nameof(SecurityNeuroComponent.SquadName), nameof(SecurityNeuroComponent.SquadColor));
             }
 
             if (!others.SequenceEqual(mob.Comp.Squad))
@@ -449,6 +487,13 @@ public sealed partial class SecuritySquadSystem : EntitySystem
             if (neuro.Record is not { } key
                 || !key.Equals(member))
                 continue;
+
+            RemComp<SquadLeaderComponent>(uid);
+            if (neuro.SquadName != null)
+            {
+                neuro.SquadName = null;
+                DirtyField(uid, neuro, nameof(SecurityNeuroComponent.SquadName));
+            }
 
             if (neuro.Squad.Count > 0)
             {
