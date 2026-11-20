@@ -8,6 +8,8 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-ert-delta5-enroute
+    startAudio:
+      path: /Audio/_Nebula/Announcements/ERT/delta5.ogg
   - type: ConditionalSpawnRule
     key: ertdelta5
 
@@ -17,6 +19,8 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-ert-epsilon6-enroute
+    startAudio:
+      path: /Audio/_Nebula/Announcements/ERT/epsilon6.ogg
   - type: ConditionalSpawnRule
     key: ertepsilon6
 
@@ -26,6 +30,8 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-ert-nu7-enroute
+    startAudio:
+      path: /Audio/_Nebula/Announcements/ERT/nu7.ogg
   - type: ConditionalSpawnRule
     key: ertnu7
 
@@ -35,6 +41,8 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-ert-alpha9-enroute
+    startAudio:
+      path: /Audio/_Nebula/Announcements/ERT/alpha9.ogg
   - type: ConditionalSpawnRule
     key: ertalpha9
 
@@ -44,6 +52,8 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-ert-eta77-enroute
+    startAudio:
+      path: /Audio/_Nebula/Announcements/ERT/eta77.ogg
   - type: ConditionalSpawnRule
     key: erteta77
 
@@ -53,6 +63,8 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-ert-theta4-enroute
+    startAudio:
+      path: /Audio/_Nebula/Announcements/ERT/theta4.ogg
   - type: ConditionalSpawnRule
     key: erttheta4
 
@@ -62,5 +74,7 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-ert-beta7-enroute
+    startAudio:
+      path: /Audio/_Nebula/Announcements/ERT/beta7.ogg
   - type: ConditionalSpawnRule
     key: ertbeta7
