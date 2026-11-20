@@ -5,6 +5,7 @@
   - type: Sprite
     layers:
     - map: [ "enum.HumanoidVisualLayers.WingsBehind" ] # Trauma
+    - map: [ "enum.HumanoidVisualLayers.BreastsBehind" ] # Nebula - WolfGate
 
     # Torso
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
@@ -22,6 +23,11 @@
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: [ "enum.HumanoidVisualLayers.BodyOverlay" ] # Nebula edit
+    # Nebula start - WolfGate, genitals over the body and under underwear and clothing
+    - map: [ "enum.HumanoidVisualLayers.Vagina" ]
+    - map: [ "enum.HumanoidVisualLayers.Penis" ]
+    - map: [ "enum.HumanoidVisualLayers.Breasts" ]
+    # Nebula end
 
     # Lua start
     - map: [ "underwearb" ]

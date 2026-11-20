@@ -1,0 +1,5 @@
+# Nebula - Monolith: the Arcan accent trait is copied to clones like the other accents.
+- type: cloningSettings
+  id: Body
+  components:
+  - ArcanAccent

@@ -65,6 +65,7 @@ public abstract partial class SharedVisualBodySystem : EntitySystem
                 IsChildMarking = marking.IsChildMarking, // Trauma
                 Forced = marking.Forced,
                 Gradient = marking.Gradient, // Nebula edit
+                Size = marking.Size, // Nebula - WolfGate
             };
             if (appearances.GetValueOrDefault(prototype.BodyPart) is { MatchSkin: true } appearance && skinColor is { } color)
             {

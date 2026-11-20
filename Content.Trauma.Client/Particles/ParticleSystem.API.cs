@@ -24,10 +24,11 @@ public sealed partial class ParticleSystem
         ProtoId<ParticleEffectPrototype> effectId,
         EntityUid entity,
         Color? colorOverride = null,
-        bool attach = true)
+        bool attach = true,
+        ParticleRuntimeOverrides? overrides = null) // Nebula - Monolith
     {
         var coords = _transform.GetMapCoordinates(entity);
-        return SpawnEffect(effectId, coords, attach ? entity : null, colorOverride);
+        return SpawnEffect(effectId, coords, attach ? entity : null, colorOverride, overrides); // Nebula - Monolith
     }
 
     /// <summary>

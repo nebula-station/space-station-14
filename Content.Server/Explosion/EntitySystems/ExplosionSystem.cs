@@ -6,6 +6,8 @@ using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Destructible; // Trauma - Destructible moved to shared
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NPC.Pathfinding;
+using Content.Server._Funkystation.Explosion.EntitySystems; // Nebula - Monolith
+using Content.Shared._LuaM.Explosion; // Nebula - Monolith
 using Content.Shared.Armor;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Camera;
@@ -55,6 +57,7 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     [Dependency] private FlammableSystem _flammableSystem = default!;
     [Dependency] private SharedDestructibleSystem _destructibleSystem = default!; // Trauma - use shared version
     [Dependency] private AtmosphereSystem _atmosphere = default!;
+    [Dependency] private ExplosionEffectSystem _explosionEffect = default!; // Nebula - Monolith
 
     [Dependency] private EntityQuery<FlammableComponent> _flammableQuery = default!;
     [Dependency] private EntityQuery<PhysicsComponent> _physicsQuery = default!;
@@ -339,6 +342,16 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
         var (area, iterationIntensity, spaceData, gridData, spaceMatrix) = results.Value;
 
         var visualEnt = CreateExplosionVisualEntity(pos, queued.Proto.ID, spaceMatrix, spaceData, gridData.Values, iterationIntensity);
+
+        // Nebula start - Monolith: animated explosion visuals (flash, shockwave, embers, shrapnel) scaled by the radius,
+        // for every explosion with the plain fire. Its fire tiles are hidden so the two animations don't stack,
+        // coloured (radioactive, cryo) and transparent fire stays as it is.
+        if (queued.Proto.FireColor == null)
+        {
+            AddComp<ExplosionHideFireComponent>(visualEnt);
+            _explosionEffect.SpawnEffects(pos, iterationIntensity.Count);
+        }
+        // Nebula end
 
         // camera shake
         CameraShake(iterationIntensity.Count * 4f, pos, queued.TotalIntensity);

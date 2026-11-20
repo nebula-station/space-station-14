@@ -1,0 +1,363 @@
+# Ported from WolfGate by Nebula.
+# Genital shapes from the WolfGate anatomy creator as torso markings. The art is picked per size step and,
+# for groups with an artTone, from the skin-toned "_s" variant that matches the human body sprites.
+
+# Breasts always follow the skin colour: the front on the Breasts layer, the part behind the body on BreastsBehind.
+- type: marking
+  id: GenitalBreastsPair
+  bodyPart: Breasts
+  forcedColoring: true
+  childMarkingsSuffix: [ Behind ]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, huge, massive, giga, impossible ]
+    default: 2
+    states: [ "breasts_pair_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/breasts.rsi
+    state: breasts_pair_c_0_FRONT
+
+- type: marking
+  id: GenitalBreastsPairBehind
+  bodyPart: BreastsBehind
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, huge, massive, giga, impossible ]
+    default: 2
+    states: [ "breasts_pair_{size}{tone}_0_BEHIND" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/breasts.rsi
+    state: breasts_pair_d_0_BEHIND
+
+- type: marking
+  id: GenitalBreastsPairRound
+  bodyPart: Breasts
+  forcedColoring: true
+  childMarkingsSuffix: [ Behind ]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, huge, massive, giga, impossible ]
+    default: 2
+    states: [ "breasts_pairround_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/breasts.rsi
+    state: breasts_pairround_c_0_FRONT
+
+- type: marking
+  id: GenitalBreastsPairRoundBehind
+  bodyPart: BreastsBehind
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, huge, massive, giga, impossible ]
+    default: 2
+    states: [ "breasts_pairround_{size}{tone}_0_BEHIND" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/breasts.rsi
+    state: breasts_pairround_d_0_BEHIND
+
+- type: marking
+  id: GenitalBreastsQuad
+  bodyPart: Breasts
+  forcedColoring: true
+  childMarkingsSuffix: [ Behind ]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, huge, massive, giga, impossible ]
+    default: 2
+    states: [ "breasts_quad_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/breasts.rsi
+    state: breasts_quad_c_0_FRONT
+
+- type: marking
+  id: GenitalBreastsQuadBehind
+  bodyPart: BreastsBehind
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, huge, massive, giga, impossible ]
+    default: 2
+    states: [ "breasts_quad_{size}{tone}_0_BEHIND" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/breasts.rsi
+    state: breasts_quad_d_0_BEHIND
+
+- type: marking
+  id: GenitalBreastsSextuple
+  bodyPart: Breasts
+  forcedColoring: true
+  childMarkingsSuffix: [ Behind ]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, huge, massive, giga, impossible ]
+    default: 2
+    states: [ "breasts_sextuple_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/breasts.rsi
+    state: breasts_sextuple_c_0_FRONT
+
+- type: marking
+  id: GenitalBreastsSextupleBehind
+  bodyPart: BreastsBehind
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, huge, massive, giga, impossible ]
+    default: 2
+    states: [ "breasts_sextuple_{size}{tone}_0_BEHIND" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/breasts.rsi
+    state: breasts_sextuple_d_0_BEHIND
+
+# Penises take the skin colour by default and can be recoloured.
+- type: marking
+  id: GenitalPenisHuman
+  bodyPart: Penis
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1, 2, 3, 4 ]
+    default: 1
+    states: [ "penis_human_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/penis.rsi
+    state: penis_human_2_0_FRONT
+
+- type: marking
+  id: GenitalPenisKnotted
+  bodyPart: Penis
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1, 2, 3, 4 ]
+    default: 1
+    states: [ "penis_knotted_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/penis.rsi
+    state: penis_knotted_2_0_FRONT
+
+- type: marking
+  id: GenitalPenisFlared
+  bodyPart: Penis
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1, 2, 3, 4 ]
+    default: 1
+    states: [ "penis_flared_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/penis.rsi
+    state: penis_flared_2_0_FRONT
+
+- type: marking
+  id: GenitalPenisBarbedKnotted
+  bodyPart: Penis
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1, 2, 3, 4 ]
+    default: 1
+    states: [ "penis_barbknot_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/penis.rsi
+    state: penis_barbknot_2_0_FRONT
+
+- type: marking
+  id: GenitalPenisTapered
+  bodyPart: Penis
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1, 2, 3, 4 ]
+    default: 1
+    states: [ "penis_tapered_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/penis.rsi
+    state: penis_tapered_2_0_FRONT
+
+- type: marking
+  id: GenitalPenisHemi
+  bodyPart: Penis
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1, 2, 3, 4 ]
+    default: 1
+    states: [ "penis_hemi_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/penis.rsi
+    state: penis_hemi_2_0_FRONT
+
+- type: marking
+  id: GenitalPenisHemiKnotted
+  bodyPart: Penis
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1, 2, 3, 4 ]
+    default: 1
+    states: [ "penis_hemiknot_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/penis.rsi
+    state: penis_hemiknot_2_0_FRONT
+
+- type: marking
+  id: GenitalPenisTentacle
+  bodyPart: Penis
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1, 2, 3, 4 ]
+    default: 1
+    states: [ "penis_tentacle_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/penis.rsi
+    state: penis_tentacle_2_0_FRONT
+
+# Vaginas have one size; the single step only fills in the state name.
+- type: marking
+  id: GenitalVaginaHuman
+  bodyPart: Vagina
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1 ]
+    default: 0
+    states: [ "vagina_human_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/vagina.rsi
+    state: vagina_human_1_0_FRONT
+
+- type: marking
+  id: GenitalVaginaOpen
+  bodyPart: Vagina
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1 ]
+    default: 0
+    states: [ "vagina_gaping_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/vagina.rsi
+    state: vagina_gaping_1_0_FRONT
+
+- type: marking
+  id: GenitalVaginaTentacle
+  bodyPart: Vagina
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1 ]
+    default: 0
+    states: [ "vagina_tentacle_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/vagina.rsi
+    state: vagina_tentacle_1_0_FRONT
+
+- type: marking
+  id: GenitalVaginaDentate
+  bodyPart: Vagina
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1 ]
+    default: 0
+    states: [ "vagina_dentata_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/vagina.rsi
+    state: vagina_dentata_1_0_FRONT
+
+- type: marking
+  id: GenitalVaginaHairy
+  bodyPart: Vagina
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1 ]
+    default: 0
+    states: [ "vagina_hairy_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/vagina.rsi
+    state: vagina_hairy_1_0_FRONT
+
+- type: marking
+  id: GenitalVaginaFurred
+  bodyPart: Vagina
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1 ]
+    default: 0
+    states: [ "vagina_furred_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/vagina.rsi
+    state: vagina_furred_1_0_FRONT
+
+- type: marking
+  id: GenitalVaginaSpade
+  bodyPart: Vagina
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sizedStates:
+    steps: [ 1 ]
+    default: 0
+    states: [ "vagina_spade_{size}{tone}_0_FRONT" ]
+  sprites:
+  - sprite: _WolfGate/Mobs/Customization/Genitals/vagina.rsi
+    state: vagina_spade_1_0_FRONT
