@@ -294,7 +294,7 @@ public abstract partial class SharedHandsSystem
             return;
         }
 
-        _interactionSystem.DoContactInteraction(uid, entity); //Possibly fires twice if manually picked up via interacting with the object
+        _interactionSystem.DoContactInteraction(uid, entity, null, true); // Nebula edit
 
         if (log)
             _adminLogger.Add(LogType.Pickup, LogImpact.Low, $"{ToPrettyString(uid):user} picked up {ToPrettyString(entity):entity}");

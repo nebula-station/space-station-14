@@ -199,7 +199,7 @@ public sealed partial class EyeLerpingSystem : EntitySystem
 
             if (!NeedsLerp(mover))
             {
-                _eye.SetRotation(entity, lerpInfo.TargetRotation, eye);
+                _eye.SetRotation(entity, lerpInfo.TargetRotation + GetShakeRotation(entity), eye); // Nebula edit
                 continue;
             }
 
@@ -207,11 +207,11 @@ public sealed partial class EyeLerpingSystem : EntitySystem
 
             if (Math.Abs(shortest.Theta) < lerpMinimum)
             {
-                _eye.SetRotation(entity, lerpInfo.TargetRotation, eye);
+                _eye.SetRotation(entity, lerpInfo.TargetRotation + GetShakeRotation(entity), eye); // Nebula edit
                 continue;
             }
 
-            _eye.SetRotation(entity, shortest * tickFraction + lerpInfo.LastRotation, eye);
+            _eye.SetRotation(entity, shortest * tickFraction + lerpInfo.LastRotation + GetShakeRotation(entity), eye); // Nebula edit
         }
     }
 }

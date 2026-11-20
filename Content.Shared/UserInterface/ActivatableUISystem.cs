@@ -75,7 +75,7 @@ public sealed partial class ActivatableUISystem : EntitySystem
 
         args.Verbs.Add(new ActivationVerb
         {
-            Act = () => InteractUI(args.User, uid, component),
+            Act = () => InteractUI(args.User, (uid, component)), // Nebula edit
             Text = Loc.GetString(component.VerbText),
             // TODO VERB ICON find a better icon
             Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/settings.svg.192dpi.png")),
@@ -89,7 +89,7 @@ public sealed partial class ActivatableUISystem : EntitySystem
 
         args.Verbs.Add(new Verb
         {
-            Act = () => InteractUI(args.User, uid, component),
+            Act = () => InteractUI(args.User, (uid, component)), // Nebula edit
             Text = Loc.GetString(component.VerbText),
             // TODO VERB ICON find a better icon
             Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/settings.svg.192dpi.png")),
@@ -150,7 +150,7 @@ public sealed partial class ActivatableUISystem : EntitySystem
         if (component.RequiredItems != null)
             return;
 
-        args.Handled = InteractUI(args.User, uid, component);
+        args.Handled = InteractUI(args.User, uid, component, null, ref args.InteractionParticle); // Nebula edit
     }
 
     private void OnInteractUsing(EntityUid uid, ActivatableUIComponent component, InteractUsingEvent args)
@@ -167,7 +167,7 @@ public sealed partial class ActivatableUISystem : EntitySystem
         if (_whitelistSystem.IsWhitelistFail(component.RequiredItems, args.Used))
             return;
 
-        args.Handled = InteractUI(args.User, uid, component);
+        args.Handled = InteractUI(args.User, uid, component, null, ref args.InteractionParticle); // Nebula edit
     }
 
     private void OnUIClose(EntityUid uid, ActivatableUIComponent component, BoundUIClosedEvent args)
@@ -193,7 +193,7 @@ public sealed partial class ActivatableUISystem : EntitySystem
             args.Cancel();
     }
 
-    public bool InteractUI(EntityUid user, EntityUid uiEntity, ActivatableUIComponent aui, Enum? key = null) // Trauma - made public, added key
+    private bool InteractUI(EntityUid user, EntityUid uiEntity, ActivatableUIComponent aui, Enum? key, ref bool interactionParticle) // Nebula edit
     {
         // <Trauma> - replace aui.Key with key, default to the comp's key
         key ??= aui.Key;
@@ -202,6 +202,7 @@ public sealed partial class ActivatableUISystem : EntitySystem
 
         if (_uiSystem.IsUiOpen(uiEntity, key, user))
         {
+            interactionParticle = false; // Nebula edit
             _uiSystem.CloseUi(uiEntity, key, user);
             return true;
         }
@@ -258,6 +259,7 @@ public sealed partial class ActivatableUISystem : EntitySystem
         //Let the component know a user opened it so it can do whatever it needs to do
         var aae = new AfterActivatableUIOpenEvent(user);
         RaiseLocalEvent(uiEntity, aae);
+        interactionParticle = aae.InteractionParticle; // Nebula edit
 
         return true;
     }
