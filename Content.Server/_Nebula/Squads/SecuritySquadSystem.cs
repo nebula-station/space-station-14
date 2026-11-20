@@ -5,6 +5,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server._Nebula.Hud;
+using Content.Server._Nebula.Radio;
 using Content.Server.Administration.Logs;
 using Content.Server.Inventory;
 using Content.Server.Pinpointer;
@@ -24,6 +25,7 @@ using Content.Shared.StationRecords.Components;
 using Content.Shared.StationRecords.Events;
 using Content.Shared.StationRecords.Systems;
 using Robust.Server.GameObjects;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -52,6 +54,8 @@ public sealed partial class SecuritySquadSystem : EntitySystem
     [Dependency] private TransformSystem _transform = default!;
     [Dependency] private SharedMapSystem _map = default!;
     [Dependency] private ServerInventorySystem _inventory = default!;
+    [Dependency] private RadioSoundSystem _radioSound = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
     [Dependency] private EntityQuery<StationRecordKeyStorageComponent> _keyStorageQuery = default!;
     [Dependency] private EntityQuery<MobStateComponent> _mobStateQuery = default!;

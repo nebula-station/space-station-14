@@ -136,6 +136,17 @@ public sealed partial class SecuritySquadSystem
     }
 
     [SubscribeLocalEvent]
+    private void HandleVoiceCommandMessage(Entity<SquadTabletComponent> ent, ref SquadTabletVoiceCommandMessage args)
+    {
+        if (!TryGetActorStation(ent, args.Actor, out var station)
+            || !TryPlayVoiceCommand(station, args.Squad, args.Command))
+            return;
+
+        _adminLog.Add(LogType.Action, LogImpact.Low,
+            $"{ToPrettyString(args.Actor):user} gave voice command {args.Command} to security squad {args.Squad}");
+    }
+
+    [SubscribeLocalEvent]
     private void HandleCreateTaskMessage(Entity<SquadTabletComponent> ent, ref SquadTabletCreateTaskMessage args)
     {
         if (!TryGetActorStation(ent, args.Actor, out var station))
@@ -286,7 +297,14 @@ public sealed partial class SecuritySquadSystem
                         members.Add(BuildMember(key.Id, record, mobs, sensors));
                 }
 
-                squadStates.Add(new SquadTabletSquad { Id = squad.Id, Name = squad.Name, Color = squad.Color, Members = members });
+                squadStates.Add(new SquadTabletSquad
+                {
+                    Id = squad.Id,
+                    Name = squad.Name,
+                    Color = squad.Color,
+                    Members = members,
+                    NextVoiceCommand = squad.NextVoiceCommand,
+                });
             }
 
             foreach (var order in squads.Orders)

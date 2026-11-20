@@ -37,6 +37,8 @@ public static class SquadLimits
     /// Head of security tasks on one station, squad and personal ones together.
     /// </summary>
     public const int MaxTasks = 40;
+
+    public static readonly TimeSpan VoiceCommandCooldown = TimeSpan.FromSeconds(5);
 }
 
 public static class SquadOrders
@@ -91,6 +93,11 @@ public struct SquadTabletSquad
     public required string Name;
     public required Color Color;
     public required List<SquadTabletMember> Members;
+
+    /// <summary>
+    /// Game time the squad can get the next voice command at.
+    /// </summary>
+    public TimeSpan NextVoiceCommand;
 }
 
 /// <summary>
@@ -236,6 +243,14 @@ public sealed class SquadTabletPlaceOrderMessage(int squad, ProtoId<SquadOrderPr
 public sealed class SquadTabletCancelOrderMessage(int order) : BoundUserInterfaceMessage
 {
     public int Order { get; } = order;
+}
+
+[Serializable, NetSerializable]
+public sealed class SquadTabletVoiceCommandMessage(int squad, ProtoId<SquadVoiceCommandPrototype> command)
+    : BoundUserInterfaceMessage
+{
+    public int Squad { get; } = squad;
+    public ProtoId<SquadVoiceCommandPrototype> Command { get; } = command;
 }
 
 /// <summary>

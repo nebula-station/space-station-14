@@ -50,6 +50,8 @@ public sealed class SecuritySquad
     /// Members are tracked by station record, so a member stays in the squad while their body changes.
     /// </summary>
     public readonly List<StationRecordKey> Members = [];
+
+    public TimeSpan NextVoiceCommand;
 }
 
 /// <summary>

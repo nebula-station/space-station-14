@@ -1,0 +1,4 @@
+- files: ["heal.ogg", "wait_reinforcements.ogg", "suppress.ogg", "prepare_assault.ogg", "prepare_retreat.ogg", "report.ogg", "arrest.ogg", "kill.ogg", "no_retreat.ogg", "return_patrol.ogg", "armory.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Made by emilanik (discord) for Nebula"
+  source: "https://github.com/nebula-station/space-station-14"
