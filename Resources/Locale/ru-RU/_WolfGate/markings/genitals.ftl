@@ -1,0 +1,24 @@
+# Ported from WolfGate by Nebula.
+marking-GenitalBreastsPair = Грудь: пара
+marking-GenitalBreastsPairBehind = Грудь: пара (сзади)
+marking-GenitalBreastsPairRound = Грудь: пара, округлая
+marking-GenitalBreastsPairRoundBehind = Грудь: пара, округлая (сзади)
+marking-GenitalBreastsQuad = Грудь: четыре
+marking-GenitalBreastsQuadBehind = Грудь: четыре (сзади)
+marking-GenitalBreastsSextuple = Грудь: шесть
+marking-GenitalBreastsSextupleBehind = Грудь: шесть (сзади)
+marking-GenitalPenisHuman = Пенис: человеческий
+marking-GenitalPenisKnotted = Пенис: с узлом
+marking-GenitalPenisFlared = Пенис: раструбный
+marking-GenitalPenisBarbedKnotted = Пенис: с шипами и узлом
+marking-GenitalPenisTapered = Пенис: заострённый
+marking-GenitalPenisHemi = Пенис: гемипенис
+marking-GenitalPenisHemiKnotted = Пенис: гемипенис с узлом
+marking-GenitalPenisTentacle = Пенис: щупальце
+marking-GenitalVaginaHuman = Вагина: человеческая
+marking-GenitalVaginaOpen = Вагина: раскрытая
+marking-GenitalVaginaTentacle = Вагина: со щупальцами
+marking-GenitalVaginaDentate = Вагина: зубастая
+marking-GenitalVaginaHairy = Вагина: с волосами
+marking-GenitalVaginaFurred = Вагина: пушистая
+marking-GenitalVaginaSpade = Вагина: звериная

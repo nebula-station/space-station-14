@@ -207,7 +207,7 @@ public sealed partial class WaggingSystem : EntitySystem
                 if (!ProtoMan.HasIndex<MarkingPrototype>(newMarkingId))
                     continue;
 
-                layerMarkings[i] = new Marking(newMarkingId, layerMarkings[i].MarkingColors) { Gradient = layerMarkings[i].Gradient }; // Nebula edit
+                layerMarkings[i] = new Marking(newMarkingId, layerMarkings[i].MarkingColors) { Gradient = layerMarkings[i].Gradient, Size = layerMarkings[i].Size }; // Nebula edit
                 changed = true;
             }
         }

@@ -6,6 +6,7 @@ using Robust.Client.ResourceManagement;
 using Robust.Shared.Configuration;
 using Robust.Shared.Graphics.RSI;
 using Robust.Shared.Map;
+using Robust.Shared.Physics.Components; // Nebula - Monolith
 using Robust.Shared.Random;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 using Robust.Shared.Timing;
@@ -124,7 +125,8 @@ public sealed partial class ParticleSystem : EntitySystem
         [ForbidLiteral] ProtoId<ParticleEffectPrototype> effectId,
         MapCoordinates coords,
         EntityUid? attachedEntity = null,
-        Color? colorOverride = null)
+        Color? colorOverride = null,
+        ParticleRuntimeOverrides? overrides = null) // Nebula - Monolith: burst particles are emitted right here, later overrides miss them
     {
         if (!_timing.IsFirstTimePredicted)
             return null;
@@ -151,9 +153,16 @@ public sealed partial class ParticleSystem : EntitySystem
 
         var emitter = CreateEmitter(proto, coords, attachedEntity);
         emitter.ColorOverride = colorOverride;
+        emitter.Overrides = overrides; // Nebula - Monolith
 
         if (proto.Burst)
+        {
+            // Nebula - Monolith: the emitter velocity is only measured in the tick loop, a burst needs the carrier's velocity now
+            if (TryComp<PhysicsComponent>(attachedEntity, out var physics))
+                emitter.EmitterVelocity = physics.LinearVelocity;
+
             BurstEmit(emitter);
+        }
 
         _emitters.Add(emitter);
         return emitter;

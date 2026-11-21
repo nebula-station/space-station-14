@@ -10,6 +10,20 @@
       limit: 6
       required: false
     # Nebula end
+    # Nebula start - WolfGate, genitals are opt-in and never rolled for random profiles
+    enum.HumanoidVisualLayers.Breasts:
+      limit: 1
+      required: false
+      weight: 0
+    enum.HumanoidVisualLayers.Vagina:
+      limit: 1
+      required: false
+      weight: 0
+    enum.HumanoidVisualLayers.Penis:
+      limit: 1
+      required: false
+      weight: 0
+    # Nebula end
     enum.HumanoidVisualLayers.UndergarmentTop:
       limit: 1
       required: false
@@ -75,6 +89,11 @@
       # - UndergarmentTop # Nebula edit
       # - UndergarmentBottom # Nebula edit
       - Special
+      # Nebula start - WolfGate
+      - Breasts
+      - Vagina
+      - Penis
+      # Nebula end
 
 - type: entity
   parent:

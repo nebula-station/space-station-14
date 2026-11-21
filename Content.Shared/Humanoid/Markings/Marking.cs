@@ -42,6 +42,12 @@ public partial record struct Marking
     /// </summary>
     [DataField]
     public MarkingGradient? Gradient;
+
+    /// <summary>
+    /// Nebula - WolfGate. Size step for markings with <see cref="MarkingPrototype.SizedStates"/>, null for the default step.
+    /// </summary>
+    [DataField]
+    public int? Size;
     // Nebula end
 
     public Marking()
@@ -65,12 +71,13 @@ public partial record struct Marking
         return MarkingId.Equals(other.MarkingId)
             && MarkingColors.SequenceEqual(other.MarkingColors)
             && Forced.Equals(other.Forced)
-            && Gradient.Equals(other.Gradient); // Nebula edit
+            && Gradient.Equals(other.Gradient) // Nebula edit
+            && Size == other.Size; // Nebula - WolfGate
     }
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(MarkingId, MarkingColors, Forced, Gradient); // Nebula edit
+        return HashCode.Combine(MarkingId, MarkingColors, Forced, Gradient, Size); // Nebula edit
     }
 
     public Marking WithColor(Color color) =>
