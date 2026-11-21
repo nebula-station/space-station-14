@@ -30,6 +30,7 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
     public override void Initialize()
     {
         base.Initialize();
+        InitializeGenitals(); // Nebula - WolfGate
 
         SubscribeLocalEvent<VisualOrganComponent, OrganGotInsertedEvent>(OnOrganGotInserted);
         SubscribeLocalEvent<VisualOrganComponent, OrganGotRemovedEvent>(OnOrganGotRemoved);
@@ -168,16 +169,17 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
     private IEnumerable<Marking> AllMarkings(Entity<VisualOrganMarkingsComponent> ent)
     {
         var censorNudity = _cfg.GetCVar(CCVars.AccessibilityClientCensorNudity) || _cfg.GetCVar(CCVars.AccessibilityServerCensorNudity); // Nebula - WolfGate, moved up
+        var hideGenitals = censorNudity || GenitalsCovered(ent); // Nebula - WolfGate
         foreach (var (layer, markings) in ent.Comp.Markings) // Nebula - WolfGate
         {
-            // Nebula - WolfGate, genitals are never drawn under the nudity censor
-            if (censorNudity && GenitalLayers.IsGenital(layer))
+            // Nebula - WolfGate, genitals are not drawn under the nudity censor or under clothing
+            if (hideGenitals && GenitalLayers.IsGenital(layer))
                 continue;
 
             foreach (var marking in markings)
             {
                 // Nebula - WolfGate, child markings like the back half of breasts are stored on the parent's layer
-                if (censorNudity && _marking.TryGetMarking(marking, out var markingProto) && GenitalLayers.IsGenital(markingProto.BodyPart))
+                if (hideGenitals && _marking.TryGetMarking(marking, out var markingProto) && GenitalLayers.IsGenital(markingProto.BodyPart))
                     continue;
 
                 yield return marking;

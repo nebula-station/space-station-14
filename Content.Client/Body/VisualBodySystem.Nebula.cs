@@ -2,10 +2,15 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Shared._Nebula.Humanoid.Markings;
 using Content.Shared.Body;
+using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
+using Content.Shared.Inventory;
+using Content.Shared.Inventory.Events;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
+using Robust.Shared.Containers;
 
 namespace Content.Client.Body;
 
@@ -14,6 +19,63 @@ namespace Content.Client.Body;
 /// </summary>
 public sealed partial class VisualBodySystem
 {
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private SharedContainerSystem _containers = default!;
+
+    /// <summary>
+    /// Slots that cover the chest and groin, the same ones the ERP panel checks for exposed body parts.
+    /// </summary>
+    private const SlotFlags GenitalCoveringSlots = SlotFlags.INNERCLOTHING | SlotFlags.OUTERCLOTHING;
+
+    private void InitializeGenitals()
+    {
+        SubscribeLocalEvent<HumanoidProfileComponent, DidEquipEvent>(OnGenitalsEquip);
+        SubscribeLocalEvent<HumanoidProfileComponent, DidUnequipEvent>(OnGenitalsUnequip);
+    }
+
+    private void OnGenitalsEquip(EntityUid uid, HumanoidProfileComponent comp, DidEquipEvent args)
+    {
+        if ((args.SlotFlags & GenitalCoveringSlots) != 0)
+            RefreshGenitals(uid);
+    }
+
+    private void OnGenitalsUnequip(EntityUid uid, HumanoidProfileComponent comp, DidUnequipEvent args)
+    {
+        if ((args.SlotFlags & GenitalCoveringSlots) != 0)
+            RefreshGenitals(uid);
+    }
+
+    /// <summary>
+    /// Redraws the markings of organs that can carry genitals, so they hide or show with the clothing.
+    /// </summary>
+    private void RefreshGenitals(EntityUid body)
+    {
+        if (!_containers.TryGetContainer(body, BodyComponent.ContainerID, out var organs))
+            return;
+
+        foreach (var organ in organs.ContainedEntities)
+        {
+            if (!TryComp<VisualOrganMarkingsComponent>(organ, out var markings)
+                || !markings.MarkingData.Layers.Contains(HumanoidVisualLayers.Breasts))
+                continue;
+
+            RemoveMarkings((organ, markings), body);
+            ApplyMarkings((organ, markings), body);
+        }
+    }
+
+    /// <summary>
+    /// Jumpsuits and outer clothing cover the genitals; undergarment markings don't, like on the ERP panel.
+    /// </summary>
+    private bool GenitalsCovered(Entity<VisualOrganMarkingsComponent> organ)
+    {
+        if (Comp<OrganComponent>(organ).Body is not { } body
+            || !_inventory.TryGetContainerSlotEnumerator(body, out var slots, GenitalCoveringSlots))
+            return false;
+
+        return slots.NextItem(out _);
+    }
+
     private void ApplySizedState(Entity<VisualOrganMarkingsComponent> organ,
         Entity<SpriteComponent> target,
         int spriteLayer,
