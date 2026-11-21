@@ -11,6 +11,8 @@ using Content.Server.Ghost;
 using Content.Shared._Nebula.Implants;
 using Content.Shared.Atmos.Rotting;
 using Content.Shared.Body;
+using Content.Shared.Body.Components;
+using Content.Shared.Body.Systems;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Mind;
@@ -31,6 +33,7 @@ namespace Content.Server._Nebula.Implants;
 public sealed partial class HeartReviverSystem : EntitySystem
 {
     [Dependency] private AudioSystem _audio = default!;
+    [Dependency] private BloodstreamSystem _bloodstream = default!;
     [Dependency] private BodySystem _body = default!;
     [Dependency] private DamageableSystem _damageable = default!;
     [Dependency] private EuiManager _eui = default!;
@@ -101,6 +104,7 @@ public sealed partial class HeartReviverSystem : EntitySystem
     {
         ent.Comp.DeadSince = null;
         _audio.PlayPvs(ent.Comp.ReviveSound, body);
+        RestoreBlood(body);
         _mobState.ChangeMobState(body, MobState.Critical);
         _popup.PopupEntity(Loc.GetString("heart-reviver-popup-revive"), body, PopupType.MediumCaution);
 
@@ -116,5 +120,17 @@ public sealed partial class HeartReviverSystem : EntitySystem
         var cost = internalOrgan.IntegrityCap * ent.Comp.HeartIntegrityCost;
         if (!_trauma.TryChangeOrganDamageModifier((heart, internalOrgan), cost, ent.Owner, HeartModifierId))
             _trauma.TryCreateOrganDamageModifier((heart, internalOrgan), cost, ent.Owner, HeartModifierId);
+    }
+
+    /// <summary>
+    /// Stops the bleeding and refills the blood, otherwise the body bleeds out again right after the revive.
+    /// </summary>
+    private void RestoreBlood(EntityUid body)
+    {
+        if (!TryComp<BloodstreamComponent>(body, out var bloodstream))
+            return;
+
+        _bloodstream.TryModifyBleedAmount((body, bloodstream), -bloodstream.BleedAmount);
+        _bloodstream.TryModifyBloodLevel((body, bloodstream), bloodstream.BloodReferenceSolution.Volume);
     }
 }

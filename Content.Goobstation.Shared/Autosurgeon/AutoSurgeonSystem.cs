@@ -86,7 +86,7 @@ public sealed partial class AutoSurgeonSystem : EntitySystem
         _audio.Stop(ent.Comp.ActiveSound);
         ent.Comp.ActiveSound = null;
 
-        if (args.Cancelled || ent.Comp.Used || args.Target is not {} target)
+        if (args.Cancelled || args.Handled || ent.Comp.Used || args.Target is not {} target) // Nebula edit
             return;
 
         var coords = Transform(target).Coordinates;

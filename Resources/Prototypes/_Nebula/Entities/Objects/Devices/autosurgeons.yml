@@ -1,0 +1,65 @@
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonHeartReviver
+  name: autosurgeon (reviver implant)
+  description: Attaches a reviver implant to the heart. It patches up and defibrillates its dead owner, at the cost of the heart.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: HeartImplantReviver
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonBreathingTube
+  name: autosurgeon (breathing tube implant)
+  description: Installs an internals connector into the throat, so a tank can be used without a mask.
+  components:
+  - type: CyberAutoSurgeon
+    targetPart: Head
+    newOrgan: ThroatImplantBreathingTube
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonAntiDrop
+  name: autosurgeon (anti-drop implant)
+  description: Installs an anti-drop implant into the hand of your active arm.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: HandImplantAntiDrop
+    activeSide: true
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonCnsRebooter
+  name: autosurgeon (CNS rebooter implant)
+  description: Wires a CNS rebooter into the central nervous system, replacing any other CNS implant.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: CnsImplantRebooter
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonRiotShield
+  name: autosurgeon (arm-mounted riot shield)
+  description: Installs a hardlight riot shield projector into your active arm, replacing its other arm augment.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: ArmImplantRiotShield
+    activeSide: true
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonAngelArmLeft
+  name: autosurgeon (left angel arm)
+  description: Replaces your left arm with an angel medical cyberarm. The hand and its implants are moved to the new arm.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganCyberArmAngelLeft
+
+- type: entity
+  parent: AutosurgeonAngelArmLeft
+  id: AutosurgeonAngelArmRight
+  name: autosurgeon (right angel arm)
+  description: Replaces your right arm with an angel medical cyberarm. The hand and its implants are moved to the new arm.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganCyberArmAngelRight

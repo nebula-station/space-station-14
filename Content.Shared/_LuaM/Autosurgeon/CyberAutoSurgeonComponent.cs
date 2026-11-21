@@ -27,6 +27,13 @@ public sealed partial class CyberAutoSurgeonComponent : Component
     public EntProtoId<OrganComponent>? NewOrgan;
 
     /// <summary>
+    /// Puts <see cref="NewOrgan"/> on the side of the active hand instead of <see cref="TargetPart"/>:
+    /// into the hand itself or the arm above it, whichever the organ can be a child of.
+    /// </summary>
+    [DataField]
+    public bool ActiveSide;
+
+    /// <summary>
     /// Puts a new organ of this prototype into every body part of <see cref="PartType"/>,
     /// like a mantis blade into both arms. Parts that already have their slot taken are skipped.
     /// </summary>

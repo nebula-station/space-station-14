@@ -161,6 +161,7 @@
   name: left hand
   abstract: true
   components:
+  - type: ParentOrgan # Nebula edit
   - type: Organ
     category: HandLeft
   - type: HandOrgan
@@ -186,6 +187,7 @@
   name: right hand
   abstract: true
   components:
+  - type: ParentOrgan # Nebula edit
   - type: Organ
     category: HandRight
   - type: HandOrgan
