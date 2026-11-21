@@ -1,0 +1,5 @@
+- type: guideEntry
+  id: NebulaRuleset
+  name: guide-entry-rules
+  priority: 60
+  text: "/ServerInfo/_Nebula/Guidebook/Rules.xml"
