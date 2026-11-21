@@ -22,11 +22,16 @@ public sealed partial class DashActionSystem : EntitySystem
 
     [SubscribeLocalEvent]
     private void OnDashAction(Entity<DashActionComponent> ent, ref DashActionEvent args)
+    // Nebula start
+        => TryDash(ent, args);
+
+    public void TryDash(EntityUid ent, DashActionEvent args)
+    // Nebula end
     {
         if (args.Handled)
             return;
 
-        if (args.NeedsGravity && _gravity.IsWeightless(ent.Owner))
+        if (args.NeedsGravity && _gravity.IsWeightless(ent)) // Nebula edit
             return;
 
         args.Handled = true;
@@ -45,7 +50,7 @@ public sealed partial class DashActionSystem : EntitySystem
         if (args.StaminaDrain != null)
             _stamina.TakeStaminaDamage(ent, args.StaminaDrain.Value, visual: false, immediate: false);
 
-        if (args.Emote is {} emote)
+        if (args.Emote is { } emote)
             _animatedEmotes.PlayEmoteAnimation(ent, emote);
     }
 

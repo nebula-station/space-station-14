@@ -36,6 +36,14 @@
   - type: MeleeChemicalInjector
     solution: melee
     transferAmount: 1
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 17
+        Piercing: 8
+        Structural: 25
+  - type: MantisBladeCombo
+    reflectProb: 0.2
 
 - type: entity
   categories: [ DoNotMap ]
@@ -50,11 +58,11 @@
   - type: MeleeWeapon
     damage:
       types:
-        Slash: 13
-        Piercing: 5.5
-        Structural: 25
+        Slash: 10
+        Piercing: 4
+        Structural: 15
   - type: MantisBladeCombo
-    reflectProb: 0.175
+    reflectProb: 0.15
     dashAction: ActionMantisBladeDashPlasteel
 
 - type: entity
@@ -70,10 +78,10 @@
   - type: MeleeWeapon
     damage:
       types:
-        Slash: 31
-        Piercing: 13
-        Structural: 60
+        Slash: 20
+        Piercing: 10
+        Structural: 40
       armorPenetration: 0.3
   - type: MantisBladeCombo
-    reflectProb: 0.45
+    reflectProb: 0.25
     dashAction: ActionMantisBladeDashMaxTac

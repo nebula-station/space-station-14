@@ -245,7 +245,7 @@
   parent: BaseOrganCNSImplant
   id: OrganCNSKerenzikov
   name: USSP "Kerenzikov" reflex booster
-  description: A crude USSP reflex booster wired into the central nervous system. Unlike the Sandevistan it lets you shoot while it runs, but it burns your cells and tears your body the whole time, and three times harder after 10 seconds.
+  description: A crude USSP reflex booster wired into the central nervous system. Unlike the Sandevistan it lets you shoot while it runs, but it tears your body the whole time, and three times harder after 10 seconds.
   components:
   - type: Sprite
     state: booster
@@ -263,7 +263,6 @@
       overloadInterval: 1
       overloadDamage:
         types:
-          Cellular: 3
           Piercing: 0.5
           Blunt: 0.5
           Slash: 0.5
@@ -271,7 +270,6 @@
       heavyOverloadWarning: kerenzikov-cns-burn-soon
       heavyOverloadDamage:
         types:
-          Cellular: 9
           Piercing: 1.5
           Blunt: 1.5
           Slash: 1.5

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Ported from https://github.com/bluestarwing/monolith-ds/blob/169a1543ef/Content.Shared/_LuaM/MantisBlades/MantisBladeComboComponent.cs
 
+using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared._LuaM.MantisBlades;
@@ -34,7 +35,7 @@ public sealed partial class MantisBladeComboComponent : Component
 /// <summary>
 /// Keeps the combo dash action of a mantis blade user and its cooldown between blade extensions.
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class MantisBladeComboUserComponent : Component
 {
     [ViewVariables]

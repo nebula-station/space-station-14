@@ -18,7 +18,7 @@
     animationRotation: 120
     swingLeft: true
     wideAnimationRotation: 135
-    attackRate: 1.5
+    attackRate: 1 # Nebula edit
     # Nebula start
     damage:
       types:
