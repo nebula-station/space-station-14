@@ -77,3 +77,21 @@ Entries:
   url: https://github.com/nebula-station/space-station-14/pull/103
   avatar_url: https://avatars.githubusercontent.com/u/302218122?v=4
   title: '[Add] Fax pagers'
+- author: yellow-apple34
+  changes:
+    - type: Add
+      message: Добавлена озвучка ОБР
+  id: 9
+  time: '2026-11-20T21:31:14.0000000+00:00'
+  url: https://github.com/nebula-station/space-station-14/pull/114
+  avatar_url: https://avatars.githubusercontent.com/u/302218122?v=4
+  title: '[Add] ERT announcement sounds'
+- author: plasmagh0st
+  changes:
+    - type: Fix
+      message: исправил ОБР не знает языков
+  id: 10
+  time: '2026-11-20T21:31:42.0000000+00:00'
+  url: https://github.com/nebula-station/space-station-14/pull/113
+  avatar_url: https://avatars.githubusercontent.com/u/302218122?v=4
+  title: '[Fix] ERT TauCetiBasic language'

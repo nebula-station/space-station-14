@@ -107,6 +107,14 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
 
         DamageLabel.Text = _damageable.GetTotalDamage(target.Value).ToString();
 
+        // Nebula start
+        var showHumanity = state.HumanityLeft != null && state.HumanityMax != null;
+        HumanityTextLabel.Visible = showHumanity;
+        HumanityLabel.Visible = showHumanity;
+        HumanityLabel.Text = showHumanity ? $"{state.HumanityLeft:0.#}/{state.HumanityMax:0.#}" : string.Empty;
+        HumanityLabel.FontColorOverride = state.HumanityLeft < 0 ? Color.Red : null;
+        // Nebula end
+
         // Alerts
 
         var showAlerts = state.Unrevivable == true || state.Bleeding.Count > 0; // Shitmed - check if any limbs bleeding

@@ -1,4 +1,5 @@
 using Content.Medical.Common.Targeting;
+using Content.Shared._ES.Camera;
 using Content.Shared.Body;
 using Content.Shared.Damage.Events;
 using Content.Shared.Random.Helpers;
@@ -16,6 +17,7 @@ namespace Content.Shared.Weapons.Ranged.Systems;
 public abstract partial class SharedGunSystem
 {
     [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private ESScreenshakeSystem _shake = default!; // Nebula edit
 
     private HashSet<Entity<BodyComponent>> _bodies = new();
 
@@ -54,4 +56,12 @@ public abstract partial class SharedGunSystem
 
     public int GetProjectilePenetration(ProjectileComponent p)
         => p.IgnoreResistances ? 100 : (int)Math.Round(p.Damage.ArmorPenetration * 100);
+
+    // Nebula start
+    private void GunScreenshake(EntityUid user, Entity<GunComponent> gun)
+    {
+        var rotation = new ESScreenshakeParameters(0.085f * gun.Comp.CameraRecoilScalarModified, 1.2f, 0.008f);
+        _shake.Screenshake(user, null, rotation);
+    }
+    // Nebula end
 }

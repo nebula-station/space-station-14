@@ -10,9 +10,6 @@
   id: AugmentRechargerBoard
 
 - type: Tag
-  id: AugmentBotanyToolElectronics
-
-- type: Tag
   id: AugmentCellCasing
 
 - type: Tag
@@ -20,15 +17,6 @@
 
 - type: Tag
   id: AugmentStationBoard
-
-- type: Tag
-  id: AugmentSurgeryToolElectronics
-
-- type: Tag
-  id: AugmentToolPanelCasing
-
-- type: Tag
-  id: AugmentUtilityToolElectronics
 
 - type: Tag
   id: AugmentStrengthElectronics

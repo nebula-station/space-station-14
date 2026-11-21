@@ -6,6 +6,10 @@
   name: SmartLink left hand
   description: A cybernetic left hand that allows its wearer to shoot "smart" bullets from any weapon.
   components:
+  # Nebula start
+  - type: CyberwareHumanity
+    cost: 2
+  # Nebula end
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Cybernetics/morpheus/morpheus_main.rsi
   - type: VisualOrgan
@@ -19,6 +23,10 @@
   name: SmartLink right hand
   description: A cybernetic right hand that allows its wearer to shoot "smart" bullets from any weapon.
   components:
+  # Nebula start
+  - type: CyberwareHumanity
+    cost: 2
+  # Nebula end
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Cybernetics/morpheus/morpheus_main.rsi
   - type: VisualOrgan
@@ -32,6 +40,10 @@
   name: recoil absorbing left hand
   description: A cybernetic left hand that absorbs most of ranged weapons recoil.
   components:
+  # Nebula start
+  - type: CyberwareHumanity
+    cost: 2
+  # Nebula end
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
   - type: VisualOrgan
@@ -45,6 +57,10 @@
   name: recoil absorbing right hand
   description: A cybernetic right hand that absorbs most of ranged weapons recoil.
   components:
+  # Nebula start
+  - type: CyberwareHumanity
+    cost: 2
+  # Nebula end
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
   - type: VisualOrgan

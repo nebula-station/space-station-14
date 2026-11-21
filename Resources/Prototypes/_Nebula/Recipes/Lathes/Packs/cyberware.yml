@@ -1,0 +1,68 @@
+- type: latheRecipePack
+  id: CyberwareSecurity
+  recipes:
+  - OrganDermalArmor
+  - OrganDermalArmorReflective
+  - OrganDermalArmorHeavyUSSP
+  - OrganCyberArmHeraklesLeft
+  - OrganCyberArmHeraklesRight
+  - HandImplantClaws
+  - HandImplantForensics
+  - ArmImplantRiotShield
+
+- type: latheRecipePack
+  id: CyberwareMedical
+  recipes:
+  - OrganHumanityChipMk1
+  - AutosurgeonPlateletFactoriesPDV
+  - OrganCyberArmReaperLeft
+  - OrganCyberArmReaperRight
+  - ChestImplantInternalAnalyzer
+  - OrganCyberArmAngelLeft
+  - OrganCyberArmAngelRight
+  - ChestImplantThermal
+  - ChestImplantHemostatic
+  - HandImplantAntiDrop
+  - CnsImplantRebooter
+  - HeartImplantReviver
+  - ThroatImplantBreathingTube
+
+- type: latheRecipePack
+  id: CyberwareEngineering
+  recipes:
+  - OrganCyberArmMechwrightLeft
+  - OrganCyberArmMechwrightRight
+  - OrganCyberArmEngineerLeft
+  - OrganCyberArmEngineerRight
+  - HandImplantInsulated
+
+- type: latheRecipePack
+  id: CyberwareScience
+  recipes:
+  - OrganCyberArmInvestigatorLeft
+  - OrganCyberArmInvestigatorRight
+  - OrganCyberArmGorillaLeft
+  - OrganCyberArmGorillaRight
+
+- type: latheRecipePack
+  id: CyberwareService
+  recipes:
+  - OrganCyberArmScribeLeft
+  - OrganCyberArmScribeRight
+  - OrganCyberArmPersephoneLeft
+  - OrganCyberArmPersephoneRight
+
+- type: latheRecipePack
+  id: CyberwareCargo
+  recipes:
+  - OrganCyberArmSpacerLeft
+  - OrganCyberArmSpacerRight
+  - OrganCyberArmRipletLeft
+  - OrganCyberArmRipletRight
+  - HandImplantThrusters
+
+- type: latheRecipePack
+  id: CyberwareCommon
+  recipes:
+  - NoseImplantOlfactory
+  - BrainImplantComms

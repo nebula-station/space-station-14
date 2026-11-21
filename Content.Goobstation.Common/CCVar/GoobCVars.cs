@@ -377,4 +377,12 @@ public sealed partial class GoobCVars
     /// </summary>
     public static readonly CVarDef<bool> RoundIntroEnabled =
         CVarDef.Create("game.round_intro", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    // Nebula start
+    public static readonly CVarDef<bool> InteractionParticlesEnabled =
+        CVarDef.Create("particles.interaction_enabled", true, CVar.SERVER | CVar.REPLICATED);
+
+    public static readonly CVarDef<float> InHandInteractionParticleScale =
+        CVarDef.Create("particles.inhand_interaction_scale", 1f, CVar.CLIENTONLY | CVar.ARCHIVE);
+    // Nebula end
 }

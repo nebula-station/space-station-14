@@ -20,6 +20,12 @@
   - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
   - ClothingShoesBootsJump
+  # Nebula start
+  - OrganCyberArmSpacerLeft
+  - OrganCyberArmSpacerRight
+  - OrganCyberArmRipletLeft
+  - OrganCyberArmRipletRight
+  # Nebula end
   # Goobstation R&D Console rework start
   position: 0,-1
   technologyPrerequisites:
@@ -38,6 +44,10 @@
   recipeUnlocks:
   - RadarConsoleCircuitboard
   - HandHeldMassScanner
+  # Nebula start
+  - OrganCyberArmMechwrightLeft
+  - OrganCyberArmMechwrightRight
+  # Nebula end
   # Goobstation R&D Console rework start
   position: 0,0
   technologyPrerequisites:
@@ -222,7 +232,12 @@
     - PowerDrill
     - JawsOfLife
     - BorgModuleAdvancedTool
-    - InducerEngineering # Nebula edit
+    # Nebula start
+    - InducerEngineering
+    - OrganCyberArmEngineerLeft
+    - OrganCyberArmEngineerRight
+    - HandImplantInsulated
+    # Nebula end
   # Goobstation R&D Console rework start
   position: 2,-2
   technologyPrerequisites:

@@ -18,6 +18,8 @@ public sealed class InteractHandEvent : HandledEntityEventArgs
     /// </summary>
     public EntityUid Target { get; }
 
+    public bool InteractionParticle = true; // Nebula edit
+
     public InteractHandEvent(EntityUid user, EntityUid target)
     {
         User = user;

@@ -1,0 +1,3 @@
+ent-ESDebugScreenshake = отладочная тряска экрана
+    .desc = Ох, моя голова...
+    .suffix = ES, DEBUG

@@ -24,6 +24,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 using Content.Server.Body.Systems;
 using Content.Shared.Body.Systems;
+using Content.Server._LuaM.Cyberware;
 
 namespace Content.Server.Medical;
 
@@ -39,6 +40,7 @@ public sealed partial class HealthAnalyzerSystem : EntitySystem
     [Dependency] private TransformSystem _transformSystem = default!;
     [Dependency] private SharedPopupSystem _popupSystem = default!;
     [Dependency] private BloodstreamSystem _bloodstreamSystem = default!;
+    [Dependency] private HumanitySystem _humanity = default!; // Nebula edit
 
     public override void Initialize()
     {
@@ -224,6 +226,7 @@ public sealed partial class HealthAnalyzerSystem : EntitySystem
 
         var uiState = GetHealthAnalyzerUiState(healthAnalyzer, target); // Trauma - pass the health analyzer...
         uiState.ScanMode = scanMode;
+        _humanity.FillAnalyzerState(target, ref uiState); // Nebula edit
 
         _uiSystem.ServerSendUiMessage(
             healthAnalyzer,

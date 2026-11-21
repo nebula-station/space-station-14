@@ -1297,7 +1297,18 @@ ClothingShoesWizard: ClothingShoesSandalsBrown
 # Nebula start
 AegisOfChampions: null
 AirlockHatchInteQVanguardLocked: AirlockHatchSyndicateLocked
+AugmentBotanyPanel: null
+AugmentBotanyPanelElectronics: null
 AugmentPaperworkPanel: null
+AugmentSurgeryPanelElectronics: null
+AugmentSurgicalPanel: null
+AugmentToolPanelCables: null
+AugmentToolPanelCasing: null
+AugmentToolsPanel: null
+AugmentUtilityPanelElectronics: null
+AutosurgeonLeftMantisBlade: null
+AutosurgeonRightMantisBlade: null
+AutosurgeonSandevistan: null
 BaseChestHuman: null
 BodyBagNanoTrasenFolded: BodyBagFolded
 BodyBagRadiationFolded: BodyBagFolded
@@ -1321,6 +1332,7 @@ ItemFlagMiniInteQ: SyndieHandyFlag
 LockerShaftMinerFilled: LockerSalvageSpecialistFilled
 MicroServoStockPart: MicroManipulatorStockPart
 OperatingTableFilled: OperatingTable
+OrganHeartSandevistan: null
 OrganSpaceAnimalHeart: OrganAnimalHeart
 Paintbrush: null
 PaintCanBlack: null

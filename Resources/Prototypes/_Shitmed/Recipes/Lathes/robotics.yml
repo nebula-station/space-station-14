@@ -342,26 +342,6 @@
 
 - type: latheRecipe
   parent: BaseAugmentRecipe
-  id: AugmentToolPanelCasing
-  result: AugmentToolPanelCasing
-
-- type: latheRecipe
-  parent: BaseAugmentRecipe
-  id: AugmentUtilityPanelElectronics
-  result: AugmentUtilityPanelElectronics
-
-- type: latheRecipe
-  parent: BaseAugmentRecipe
-  id: AugmentBotanyPanelElectronics
-  result: AugmentBotanyPanelElectronics
-
-- type: latheRecipe
-  parent: BaseAugmentRecipe
-  id: AugmentSurgeryPanelElectronics
-  result: AugmentSurgeryPanelElectronics
-
-- type: latheRecipe
-  parent: BaseAugmentRecipe
   id: AugmentStrengthCasing
   result: AugmentStrengthCasing
 

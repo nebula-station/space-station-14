@@ -184,6 +184,7 @@ entities:
       bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
+    - type: CyberpsychosisBlocker
     - type: BecomesStation
       id: centcomm
     - type: Gravity

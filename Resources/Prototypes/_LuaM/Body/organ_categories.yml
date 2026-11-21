@@ -1,0 +1,8 @@
+- type: organCategory
+  id: Subdermal
+
+- type: organCategory
+  id: Cns
+
+- type: organCategory
+  id: HumanityChip

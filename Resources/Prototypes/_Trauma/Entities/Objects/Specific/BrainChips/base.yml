@@ -7,6 +7,10 @@
   name: brain chip
   description: A sterilized microchip assembly that can directly interface with the brain.
   components:
+  # Nebula start
+  - type: CyberwareHumanity
+    cost: 1
+  # Nebula end
   - type: Sprite
     sprite: _Trauma/Objects/Specific/brain_chips.rsi
     layers:

@@ -1,0 +1,35 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: CombatMedipenImplant
+  name: combat medipen implant
+  description: Injects a combat medipen dose on demand and automatically when the owner goes critical.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionActivateCombatMedipenImplant
+  - type: CyberwareHumanity
+    cost: 1
+  - type: InjectorImplant
+    solution:
+      reagents:
+      - ReagentId: Omnizine
+        Quantity: 25
+      - ReagentId: TranexamicAcid
+        Quantity: 5
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: StimulantImplant
+  name: stimulant implant
+  description: Injects a dose of stimulants on demand and automatically when the owner goes critical.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionActivateStimulantImplant
+  - type: CyberwareHumanity
+    cost: 1
+  - type: InjectorImplant
+    solution:
+      reagents:
+      - ReagentId: Stimulants
+        Quantity: 30

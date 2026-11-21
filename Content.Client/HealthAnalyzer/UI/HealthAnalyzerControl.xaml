@@ -74,6 +74,10 @@
                     <Label Name="DamageLabelHeadingVital" Text="{Loc 'health-analyzer-window-entity-damage-vital-text'}"/>
                     <Label Name="DamageLabelVital"/>
                     <!-- </Goob> -->
+                    <!-- Nebula start -->
+                    <Label Name="HumanityTextLabel" Text="{Loc 'health-analyzer-window-entity-humanity-text'}" Visible="False"/>
+                    <Label Name="HumanityLabel" Visible="False"/>
+                    <!-- Nebula end -->
                 </GridContainer>
             </BoxContainer>
 
