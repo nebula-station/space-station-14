@@ -34,3 +34,8 @@
     component:
       - type: StationAiVision
         range: 4
+  # Nebula start
+  - type: Bodycam
+  - type: ActiveRadio
+    receiveAllChannels: true
+  # Nebula end

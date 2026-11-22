@@ -1,0 +1,4 @@
+- type: latheRecipe
+  parent: [ BaseCircuitboardRecipe, BaseSecurityComputerRecipeCategory ]
+  id: BodycamFootageComputerCircuitboard
+  result: BodycamFootageComputerCircuitboard

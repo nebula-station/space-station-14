@@ -1,0 +1,46 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="{Loc bodycam-footage-window-title}"
+                      MinSize="720 460"
+                      SetSize="820 520">
+    <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="8">
+        <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+            <Label Name="RoundTimeLabel" HorizontalExpand="True" />
+            <Label Name="AvailabilityLabel" StyleClasses="LabelSubText" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" VerticalExpand="True" SeparationOverride="8">
+            <BoxContainer Orientation="Vertical" MinWidth="260" SeparationOverride="4">
+                <Label Text="{Loc bodycam-footage-cameras}" StyleClasses="LabelHeading" />
+                <ItemList Name="CameraList" SelectMode="Single" VerticalExpand="True" />
+            </BoxContainer>
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="6">
+                <Label Text="{Loc bodycam-footage-segments}" StyleClasses="LabelHeading" />
+                <ScrollContainer VerticalExpand="True" HScrollEnabled="False">
+                    <BoxContainer Name="SegmentList" Orientation="Vertical" SeparationOverride="2" />
+                </ScrollContainer>
+                <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+                    <Label Text="{Loc bodycam-footage-from}" />
+                    <LineEdit Name="FromEdit" MinWidth="90" PlaceHolder="00:00:00" />
+                    <Label Text="{Loc bodycam-footage-to}" />
+                    <LineEdit Name="ToEdit" MinWidth="90" PlaceHolder="00:00:00" />
+                    <Label Name="LengthLabel" HorizontalExpand="True" StyleClasses="LabelSubText" />
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal" SeparationOverride="6">
+                    <Label Text="{Loc bodycam-footage-last}" />
+                    <Button Name="Last5Button" Text="5" />
+                    <Button Name="Last10Button" Text="10" />
+                    <Button Name="Last15Button" Text="15" />
+                    <Button Name="Last30Button" Text="30" />
+                    <Label Text="{Loc bodycam-footage-minutes}" />
+                </BoxContainer>
+                <CheckBox Name="UnfilteredCheck" Text="{Loc bodycam-footage-unfiltered}" Visible="False" />
+                <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                    <Button Name="RequestButton" Text="{Loc bodycam-footage-request}" HorizontalExpand="True" Disabled="True" />
+                    <Button Name="WatchButton" Text="{Loc bodycam-footage-watch}" StyleClasses="positive" HorizontalExpand="True" Disabled="True" />
+                </BoxContainer>
+                <RichTextLabel Name="StatusLabel" />
+                <Label Text="{Loc bodycam-footage-watch-note}" StyleClasses="LabelSubText" />
+            </BoxContainer>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

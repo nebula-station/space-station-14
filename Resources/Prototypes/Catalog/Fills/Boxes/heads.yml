@@ -74,6 +74,7 @@
         children:
         - id: SecurityTechFabCircuitboard
         - id: CargoRequestSecurityComputerCircuitboard
+        - id: BodycamFootageComputerCircuitboard # Nebula
 
 - type: entity
   parent: ToteBase

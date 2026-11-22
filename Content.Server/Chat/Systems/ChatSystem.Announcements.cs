@@ -1,3 +1,4 @@
+using Content.Server._Nebula.Bodycam; // Nebula
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Station.Components;
@@ -22,6 +23,7 @@ public sealed partial class ChatSystem
 
         var wrappedMessage = Loc.GetString("chat-manager-sender-announcement-wrap-message", ("sender", sender), ("message", FormattedMessage.EscapeText(message)));
         _chatManager.ChatMessageToAll(ChatChannel.Radio, message, wrappedMessage, default, false, true, colorOverride);
+        RaiseLocalEvent(new BodycamAnnouncementEvent(null, null, message, wrappedMessage, colorOverride)); // Nebula
         if (playSound)
         {
             _audio.PlayGlobal(announcementSound ?? DefaultAnnouncementSound, Filter.Broadcast(), true, AudioParams.Default.WithVolume(-2f));
@@ -43,6 +45,7 @@ public sealed partial class ChatSystem
 
         var wrappedMessage = Loc.GetString("chat-manager-sender-announcement-wrap-message", ("sender", sender), ("message", FormattedMessage.EscapeText(message)));
         _chatManager.ChatMessageToManyFiltered(filter, ChatChannel.Radio, message, wrappedMessage, source ?? default, false, true, colorOverride);
+        RaiseLocalEvent(new BodycamAnnouncementEvent(filter, null, message, wrappedMessage, colorOverride)); // Nebula
         if (playSound)
         {
             _audio.PlayGlobal(announcementSound ?? DefaultAnnouncementSound, filter, true, AudioParams.Default.WithVolume(-2f));
@@ -75,6 +78,7 @@ public sealed partial class ChatSystem
         var filter = _stationSystem.GetInStation(stationDataComp);
 
         _chatManager.ChatMessageToManyFiltered(filter, ChatChannel.Radio, message, wrappedMessage, source, false, true, colorOverride);
+        RaiseLocalEvent(new BodycamAnnouncementEvent(filter, station, message, wrappedMessage, colorOverride)); // Nebula
 
         if (playDefaultSound)
         {
