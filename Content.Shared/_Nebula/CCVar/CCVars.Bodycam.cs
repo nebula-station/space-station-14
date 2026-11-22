@@ -12,7 +12,7 @@ public sealed partial class NCCVars
         CVarDef.Create("bodycam.max_clip_minutes", 30, CVar.SERVERONLY);
 
     public static readonly CVarDef<int> BodycamAdminMaxClipMinutes =
-        CVarDef.Create("bodycam.admin_max_clip_minutes", 120, CVar.SERVERONLY);
+        CVarDef.Create("bodycam.admin_max_clip_minutes", 60, CVar.SERVERONLY);
 
     public static readonly CVarDef<float> BodycamViewRange =
         CVarDef.Create("bodycam.view_range", 14f, CVar.SERVERONLY);
