@@ -12,10 +12,10 @@ namespace Content.Shared._Nebula.Bodycam;
 public sealed partial class BodycamComponent : Component
 {
     [DataField, AutoNetworkedField]
-    public bool Enabled = true;
+    public bool Enabled;
 
     [DataField]
-    public SoundSpecifier ToggleSound = new SoundPathSpecifier("/Audio/Machines/button.ogg");
+    public SoundSpecifier ToggleSound = new SoundPathSpecifier("/Audio/_Nebula/Bodycam/toggle.ogg");
 }
 
 [ByRefEvent]

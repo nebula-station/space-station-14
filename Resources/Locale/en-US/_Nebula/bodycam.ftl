@@ -4,6 +4,7 @@ bodycam-examine-enabled = The recording light is [color=red]on[/color].
 bodycam-examine-disabled = The recording light is off.
 bodycam-popup-enabled = Bodycam recording started
 bodycam-popup-disabled = Bodycam recording stopped
+bodycam-pocket-denied = The bodycam can't record from inside a pocket.
 
 bodycam-record-name = #{ $id } { $name }
 bodycam-wearer-none = nobody

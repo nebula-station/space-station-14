@@ -3,6 +3,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Shared.Examine;
+using Content.Shared.Inventory;
+using Content.Shared.Inventory.Events;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
@@ -24,6 +26,7 @@ public abstract partial class SharedBodycamSystem : EntitySystem
 
         SubscribeLocalEvent<BodycamComponent, GetVerbsEvent<AlternativeVerb>>(OnGetVerbs);
         SubscribeLocalEvent<BodycamComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<BodycamComponent, BeingEquippedAttemptEvent>(OnBeingEquipped);
     }
 
     private void OnGetVerbs(Entity<BodycamComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
@@ -39,6 +42,15 @@ public abstract partial class SharedBodycamSystem : EntitySystem
             Icon = ToggleIcon,
             Act = () => SetEnabled(ent, enable, user),
         });
+    }
+
+    private void OnBeingEquipped(Entity<BodycamComponent> ent, ref BeingEquippedAttemptEvent args)
+    {
+        if ((args.SlotFlags & SlotFlags.POCKET) == 0)
+            return;
+
+        args.Cancel();
+        args.Reason = "bodycam-pocket-denied";
     }
 
     private void OnExamined(Entity<BodycamComponent> ent, ref ExaminedEvent args)

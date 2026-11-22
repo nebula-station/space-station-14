@@ -4,6 +4,7 @@ bodycam-examine-enabled = Индикатор записи [color=red]горит[
 bodycam-examine-disabled = Индикатор записи не горит.
 bodycam-popup-enabled = Запись бодикамеры включена
 bodycam-popup-disabled = Запись бодикамеры выключена
+bodycam-pocket-denied = Из кармана бодикамера ничего не запишет.
 
 bodycam-record-name = №{ $id } { $name }
 bodycam-wearer-none = никто
