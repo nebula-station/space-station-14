@@ -1,0 +1,36 @@
+- type: entity
+  parent: BaseComputer
+  id: ComputerBodycamFootage
+  name: bodycam footage console
+  description: Pulls recorded security bodycam footage from the station archive. Access is restricted to the Head of Security and the Captain.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: security
+    - map: ["computerLayerKeys"]
+      state: security_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+    board: BodycamFootageComputerCircuitboard
+  - type: BodycamFootageConsole
+  - type: AccessReader
+    access: [["HeadOfSecurity"], ["Captain"]]
+  - type: ActivatableUI
+    key: enum.BodycamFootageConsoleUiKey.Key
+  - type: ActivatableUIRequiresVision
+  - type: UserInterface
+    interfaces:
+      enum.BodycamFootageConsoleUiKey.Key:
+        type: BodycamFootageConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#e6e227"

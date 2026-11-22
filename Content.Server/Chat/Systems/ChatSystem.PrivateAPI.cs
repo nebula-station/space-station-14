@@ -1,3 +1,4 @@
+using Content.Server._Nebula.Bodycam; // Nebula
 // <Trauma>
 using Content.Goobstation.Common.Traits;
 using Content.Trauma.Common.Language;
@@ -90,6 +91,7 @@ public sealed partial class ChatSystem
 
         var ev = new EntitySpokeEvent(source, message, null, false, language); // Trauma - changed second null to false, added language
         RaiseLocalEvent(source, ev, true);
+        RaiseLocalEvent(new BodycamSpeechEvent(source, false, message, obfuscated, name, name, language, colorOverride)); // Nebula
 
         // To avoid logging any messages sent by entities that are not players, like vendors, cloning, etc.
         // Also doesn't log if hideLog is true.
@@ -216,6 +218,7 @@ public sealed partial class ChatSystem
 
         var ev = new EntitySpokeEvent(source, message, channel, false, language); // Trauma - changed second null to false, added language
         RaiseLocalEvent(source, ev, true);
+        RaiseLocalEvent(new BodycamSpeechEvent(source, true, message, languageObfuscatedMessage, name, nameIdentity, language, colorOverride)); // Nebula
         if (!hideLog)
             if (originalMessage == message)
             {

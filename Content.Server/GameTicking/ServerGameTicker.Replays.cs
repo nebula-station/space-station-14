@@ -17,6 +17,7 @@ public sealed partial class ServerGameTicker
 
 
     private ISawmill _sawmillReplays = default!;
+    public ResPath? CurrentReplayPath { get; private set; } // Nebula
 
     private void InitializeReplays()
     {
@@ -68,6 +69,8 @@ public sealed partial class ServerGameTicker
             {
                 _sawmillReplays.Error("Can't start automatic replay recording!");
             }
+            else
+                CurrentReplayPath = new ResPath(Cfg.GetCVar(CVars.ReplayDirectory)).ToRootedPath() / recordPath; // Nebula
         }
         catch (Exception e)
         {
@@ -120,6 +123,7 @@ public sealed partial class ServerGameTicker
 
     private void ReplaysOnRecordingStopped(MappingDataNode metadata)
     {
+        CurrentReplayPath = null; // Nebula
         // Write round info like map and round end summery into the replay_final.yml file. Useful for external parsers.
 
         metadata["map"] = new ValueDataNode(_gameMapManager.GetSelectedMap()?.MapName);

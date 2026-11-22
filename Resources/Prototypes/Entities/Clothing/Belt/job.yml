@@ -434,6 +434,7 @@
       - DoorRemote
       - Whistle
       - BalloonPopper
+      - Bodycam # Nebula
   - type: ItemMapper
     sprite: *BeltOverlay
     mapLayers:
