@@ -35,12 +35,14 @@
   - type: Clothing
     sprite: _Goobstation/Clothing/Neck/Misc/nopro.rsi
     quickEquip: true
-    slots: # Nebula
-    - neck # Nebula
-    - belt # Nebula
-    clothingVisuals: # Nebula
-      belt: # Nebula
-      - state: equipped-NECK # Nebula
-  - type: Bodycam # Nebula
-  - type: ActiveRadio # Nebula
-    receiveAllChannels: true # Nebula
+    # Nebula start
+    slots:
+    - neck
+    - belt
+    clothingVisuals:
+      belt:
+      - state: equipped-NECK
+  - type: Bodycam
+  - type: ActiveRadio
+    receiveAllChannels: true
+  # Nebula end

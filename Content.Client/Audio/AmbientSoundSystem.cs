@@ -179,11 +179,13 @@ public sealed partial class AmbientSoundSystem : SharedAmbientSoundSystem
         ProcessNearbyAmbience(xform);
     }
 
-    private void OnReplaySeek() // Nebula
-    { // Nebula
-        ClearSounds(); // Nebula
-        _targetTime = TimeSpan.Zero; // Nebula
-    } // Nebula
+    // Nebula start
+    private void OnReplaySeek()
+    {
+        ClearSounds();
+        _targetTime = TimeSpan.Zero;
+    }
+    // Nebula end
 
     private void ClearSounds()
     {
