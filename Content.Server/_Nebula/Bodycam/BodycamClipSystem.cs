@@ -19,6 +19,8 @@ using Robust.Shared.Network.Transfer;
 using Robust.Shared.Player;
 using Robust.Shared.Serialization;
 using Content.Shared._Nebula.Bodycam;
+using Content.Shared._Nebula.CCVar;
+using Robust.Shared.Configuration;
 
 namespace Content.Server._Nebula.Bodycam;
 
@@ -39,12 +41,14 @@ public sealed partial class BodycamClipSystem : EntitySystem
     [Dependency] private ITransferManager _transfer = default!;
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private ITaskManager _tasks = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private BodycamFootageConsoleSystem _console = default!;
 
     private readonly Queue<BodycamClipJob> _queue = new();
     private readonly ConcurrentQueue<BodycamClipJob> _finished = new();
     private readonly ConcurrentQueue<BodycamClipJob> _sent = new();
     private BodycamClipJob? _running;
+    private readonly Dictionary<NetUserId, TimeSpan> _cooldowns = new();
     private HashSet<ushort>? _hidden;
     private HashSet<ushort>? _gridComponents;
 
@@ -123,6 +127,38 @@ public sealed partial class BodycamClipSystem : EntitySystem
         }
 
         return false;
+    }
+
+    public bool IsUserBusy(NetUserId user)
+    {
+        if (_running?.Session.UserId == user)
+            return true;
+
+        foreach (var job in _queue)
+        {
+            if (job.Session.UserId == user)
+                return true;
+        }
+
+        return false;
+    }
+
+    public TimeSpan CooldownRemaining(NetUserId user)
+    {
+        if (!_cooldowns.TryGetValue(user, out var ready))
+            return TimeSpan.Zero;
+
+        var remaining = ready - _timing.RealTime;
+        if (remaining > TimeSpan.Zero)
+            return remaining;
+
+        _cooldowns.Remove(user);
+        return TimeSpan.Zero;
+    }
+
+    private void Done(BodycamClipJob job)
+    {
+        _cooldowns[job.Session.UserId] = _timing.RealTime + TimeSpan.FromSeconds(_cfg.GetCVar(NCCVars.BodycamRequestCooldown));
     }
 
     public void Enqueue(BodycamClipJob job)
@@ -208,15 +244,22 @@ public sealed partial class BodycamClipSystem : EntitySystem
             _running = null;
 
             if (job.Error != null || job.Result == null)
+            {
                 _console.SetStatus(job.Console, BodycamFootageStatus.Failed, Loc.GetString(job.Error ?? "bodycam-footage-error-internal"));
+                Done(job);
+            }
             else
+            {
                 Send(job);
+            }
 
             StartNext();
         }
 
         while (_sent.TryDequeue(out var job))
         {
+            Done(job);
+
             if (job.Error != null)
             {
                 _console.SetStatus(job.Console, BodycamFootageStatus.Failed, Loc.GetString(job.Error));
@@ -233,6 +276,7 @@ public sealed partial class BodycamClipSystem : EntitySystem
         if (job.Session.Status != SessionStatus.InGame || job.Session.Channel is not { IsConnected: true } channel)
         {
             _console.SetStatus(job.Console, BodycamFootageStatus.Failed, Loc.GetString("bodycam-footage-error-disconnected"));
+            Done(job);
             return;
         }
 
@@ -247,6 +291,7 @@ public sealed partial class BodycamClipSystem : EntitySystem
         {
             Log.Error($"Could not start bodycam footage transfer: {e}");
             _console.SetStatus(job.Console, BodycamFootageStatus.Failed, Loc.GetString("bodycam-footage-error-internal"));
+            Done(job);
             return;
         }
 

@@ -174,6 +174,20 @@ public sealed partial class BodycamFootageConsoleSystem : EntitySystem
         if (_clips.IsBusy(ent))
             return;
 
+        var userId = actor.PlayerSession.UserId;
+        if (_clips.IsUserBusy(userId))
+        {
+            _popup.PopupEntity(Loc.GetString("bodycam-footage-error-user-busy"), ent, user);
+            return;
+        }
+
+        var wait = _clips.CooldownRemaining(userId);
+        if (wait > TimeSpan.Zero)
+        {
+            _popup.PopupEntity(Loc.GetString("bodycam-footage-error-cooldown", ("seconds", (int) Math.Ceiling(wait.TotalSeconds))), ent, user);
+            return;
+        }
+
         if (!_bodycam.TryGetRecord(args.CameraId, out var record))
         {
             Fail(ent, "bodycam-footage-error-camera");

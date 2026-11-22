@@ -51,6 +51,8 @@ bodycam-footage-error-empty = There is no recorded footage in that time range ye
 bodycam-footage-error-pending = That part of the footage has not reached the archive yet. Try again in a minute.
 bodycam-footage-error-internal = The archive failed to extract the footage.
 bodycam-footage-error-disconnected = The requester disconnected before the footage was delivered.
+bodycam-footage-error-user-busy = Your previous request is still being processed.
+bodycam-footage-error-cooldown = You can make another request in { $seconds } s.
 bodycam-footage-disconnect-reason = Watching bodycam footage
 
 cmd-bodycam_cut-desc = Cuts a clip out of a server replay file.

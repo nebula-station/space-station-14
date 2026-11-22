@@ -51,6 +51,8 @@ bodycam-footage-error-empty = В этом отрезке времени ещё �
 bodycam-footage-error-pending = Эта часть записи ещё не попала в архив. Попробуйте через минуту.
 bodycam-footage-error-internal = Архиву не удалось извлечь запись.
 bodycam-footage-error-disconnected = Запросивший отключился до получения записи.
+bodycam-footage-error-user-busy = Ваш прошлый запрос ещё обрабатывается.
+bodycam-footage-error-cooldown = Следующий запрос можно сделать через { $seconds } с.
 bodycam-footage-disconnect-reason = Просмотр записи бодикамеры
 
 cmd-bodycam_cut-desc = Вырезает отрывок из файла повтора сервера.

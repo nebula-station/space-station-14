@@ -19,4 +19,7 @@ public sealed partial class NCCVars
 
     public static readonly CVarDef<float> BodycamSampleInterval =
         CVarDef.Create("bodycam.sample_interval", 0.5f, CVar.SERVERONLY);
+
+    public static readonly CVarDef<float> BodycamRequestCooldown =
+        CVarDef.Create("bodycam.request_cooldown", 10f, CVar.SERVERONLY);
 }
