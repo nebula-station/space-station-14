@@ -12,8 +12,10 @@ using Content.Shared._Nebula.Bodycam;
 using Content.Shared._Nebula.CCVar;
 using Content.Shared.Access.Systems;
 using Content.Shared.Chat;
+using Content.Shared.Examine;
 using Content.Shared.Eye;
 using Content.Shared.GameTicking;
+using Content.Shared.Storage;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
 using Content.Shared.Mobs.Components;
@@ -66,6 +68,7 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
     [Dependency] private SharedIdCardSystem _idCard = default!;
     [Dependency] private StationSystem _station = default!;
     [Dependency] private PvsOverrideSystem _pvsOverride = default!;
+    [Dependency] private ExamineSystemShared _examine = default!;
 
     private static readonly FieldInfo? GlobalOverrideField =
         typeof(PvsOverrideSystem).GetField("GlobalOverride", BindingFlags.Instance | BindingFlags.NonPublic);
@@ -82,11 +85,14 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
     private readonly List<EntityUid> _pendingSpawns = new();
     private readonly HashSet<EntityUid> _lookupSet = new();
     private readonly HashSet<EntityUid> _viewSet = new();
+    private readonly HashSet<EntityUid> _traversed = new();
     private List<Entity<MapGridComponent>> _grids = new();
     private EntityQuery<VisibilityComponent> _visibilityQuery;
     private EntityQuery<MapGridComponent> _gridQuery;
     private EntityQuery<MapComponent> _mapQuery;
     private EntityQuery<MobStateComponent> _mobQuery;
+    private EntityQuery<StorageComponent> _storageQuery;
+    private EntityQuery<AudioComponent> _audioQuery;
     private int _nextId = 1;
     private bool _wasRecording;
     private float _range;
@@ -102,12 +108,15 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
         _gridQuery = GetEntityQuery<MapGridComponent>();
         _mapQuery = GetEntityQuery<MapComponent>();
         _mobQuery = GetEntityQuery<MobStateComponent>();
+        _storageQuery = GetEntityQuery<StorageComponent>();
+        _audioQuery = GetEntityQuery<AudioComponent>();
 
         SubscribeLocalEvent<BodycamComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<BodycamComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<BodycamComponent, BodycamToggledEvent>(OnToggled);
         SubscribeLocalEvent<BodycamComponent, RadioReceiveEvent>(OnRadioReceive);
         SubscribeLocalEvent<BodycamSpeechEvent>(OnSpeech);
+        SubscribeLocalEvent<BodycamEmoteEvent>(OnEmote);
         SubscribeLocalEvent<BodycamAnnouncementEvent>(OnAnnouncement);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
 
@@ -354,7 +363,16 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
                     continue;
 
                 var pos = _transform.GetMapCoordinates(spawned);
-                if (pos.MapId != cameraPos.MapId || (pos.Position - cameraPos.Position).Length() > _range)
+                var range = _range;
+                if (_audioQuery.TryComp(spawned, out var audio))
+                {
+                    if (audio.Global || !AudibleTo(audio, uid))
+                        continue;
+
+                    range = MathF.Max(range, audio.Params.MaxDistance);
+                }
+
+                if (pos.MapId != cameraPos.MapId || (pos.Position - cameraPos.Position).Length() > range)
                     continue;
 
                 if (!IsObservable(spawned))
@@ -388,6 +406,7 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
     private void BuildView(EntityUid camera, HashSet<EntityUid> result)
     {
         result.Clear();
+        _traversed.Clear();
         AddWithAncestors(camera, result);
 
         var mapCoords = _transform.GetMapCoordinates(camera);
@@ -427,20 +446,22 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
                 continue;
 
             var distance = (_transform.GetWorldPosition(xform) - mapCoords.Position).Length();
-            if (distance <= MathF.Max(_range, comp.Params.MaxDistance) && IsObservable(uid))
+            if (distance <= MathF.Max(_range, comp.Params.MaxDistance) && AudibleTo(comp, camera) && IsObservable(uid))
                 AddWithAncestors(uid, result);
         }
     }
 
     private void AddTree(EntityUid uid, HashSet<EntityUid> result)
     {
-        if (!AddWithAncestors(uid, result))
+        if (!_traversed.Add(uid))
             return;
+
+        AddWithAncestors(uid, result);
 
         var enumerator = Transform(uid).ChildEnumerator;
         while (enumerator.MoveNext(out var child))
         {
-            if (_container.TryGetContainingContainer((child, null, null), out var container) && !container.ShowContents)
+            if (_container.TryGetContainingContainer((child, null, null), out var container) && !IsShown(container))
                 continue;
 
             if (IsVisible(child))
@@ -463,7 +484,21 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
     private bool IsVisible(EntityUid uid)
     {
         return !_visibilityQuery.TryComp(uid, out var visibility)
-               || (visibility.Layer & (int) VisibilityFlags.Normal) != 0;
+               || (visibility.Layer & ~(int) VisibilityFlags.Normal) == 0;
+    }
+
+    private bool IsShown(BaseContainer container)
+    {
+        return !_storageQuery.TryComp(container.Owner, out var storage) || storage.Container != container;
+    }
+
+    private bool AudibleTo(AudioComponent audio, EntityUid camera)
+    {
+        if (audio.IncludedEntities == null)
+            return true;
+
+        var listener = GetWearer(camera) ?? camera;
+        return Enumerable.Contains(audio.IncludedEntities, listener);
     }
 
     private bool IsObservable(EntityUid uid)
@@ -474,7 +509,7 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
             if (!IsVisible(current))
                 return false;
 
-            if (_container.TryGetContainingContainer((current, null, null), out var container) && !container.ShowContents)
+            if (_container.TryGetContainingContainer((current, null, null), out var container) && !IsShown(container))
                 return false;
 
             current = Transform(current).ParentUid;
@@ -508,23 +543,58 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
             if (ev.Whisper)
             {
                 channel = ChatChannel.Whisper;
-                if (distance <= SharedChatSystem.WhisperClearRange)
+                if (!ev.Language.SpeechOverride.RequireLOS && distance <= SharedChatSystem.WhisperClearRange
+                    || _examine.InRangeUnOccluded(ev.Source, uid, SharedChatSystem.WhisperClearRange))
                 {
                     wrapped = _chat.WrapWhisperMessage(ev.Source, "chat-manager-entity-whisper-wrap-message", ev.Name, text, ev.Language, ev.Color);
                 }
-                else
+                else if (_examine.InRangeUnOccluded(ev.Source, uid, SharedChatSystem.WhisperMuffledRange))
                 {
                     text = _chat.ObfuscateMessageReadability(text, _random);
                     wrapped = _chat.WrapWhisperMessage(ev.Source, "chat-manager-entity-whisper-wrap-message", ev.NameIdentity, text, ev.Language, ev.Color);
                 }
+                else
+                {
+                    if (ev.Language.SpeechOverride.RequireLOS)
+                        continue;
+
+                    text = _chat.ObfuscateMessageReadability(text, _random);
+                    wrapped = _chat.WrapWhisperMessage(ev.Source, "chat-manager-entity-whisper-unknown-wrap-message", string.Empty, text, ev.Language, ev.Color);
+                }
             }
             else
             {
+                if ((ChatSystem.SpeakRespectsLOS || ev.Language.SpeechOverride.RequireLOS)
+                    && !_examine.InRangeUnOccluded(ev.Source, uid, SharedChatSystem.VoiceRange))
+                {
+                    continue;
+                }
+
                 channel = ChatChannel.Local;
                 wrapped = _chat.WrapPublicMessage(ev.Source, ev.Name, text, _chat.GetSpeechVerb(ev.Source, text), ev.Language, ev.Color);
             }
 
-            var message = new ChatMessage(channel, text, wrapped, GetNetEntity(ev.Source), null);
+            var message = new ChatMessage(channel, text, wrapped, GetNetEntity(ev.Source), null, ev.Range == ChatTransmitRange.HideChat);
+            _replay.RecordServerMessage(new BodycamReplayChatEvent(GetNetEntity(uid), message));
+        }
+    }
+
+    private void OnEmote(BodycamEmoteEvent ev)
+    {
+        if (_active.Count == 0 || !_replay.IsRecording)
+            return;
+
+        var sourcePos = _transform.GetMapCoordinates(ev.Source);
+        foreach (var uid in _active.Keys)
+        {
+            var pos = _transform.GetMapCoordinates(uid);
+            if (pos.MapId != sourcePos.MapId || (pos.Position - sourcePos.Position).Length() > SharedChatSystem.VoiceRange)
+                continue;
+
+            if (ChatSystem.EmoteRespectsLOS && !_examine.InRangeUnOccluded(ev.Source, uid, SharedChatSystem.VoiceRange))
+                continue;
+
+            var message = new ChatMessage(ChatChannel.Emotes, ev.Message, ev.Wrapped, GetNetEntity(ev.Source), null, ev.Range == ChatTransmitRange.HideChat);
             _replay.RecordServerMessage(new BodycamReplayChatEvent(GetNetEntity(uid), message));
         }
     }

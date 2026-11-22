@@ -73,11 +73,11 @@ public sealed class ReplayClipWriter : IDisposable
         FlushBatch();
     }
 
-    public byte[] Finish()
+    public ArraySegment<byte> Finish()
     {
         FlushBatch();
         _zip.Dispose();
-        return _output.ToArray();
+        return new ArraySegment<byte>(_output.GetBuffer(), 0, (int) _output.Length);
     }
 
     private void FlushBatch()

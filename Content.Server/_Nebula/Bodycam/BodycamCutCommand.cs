@@ -4,7 +4,6 @@
 
 using System.IO;
 using Content.Server.Administration;
-using Content.Server._Nebula.Bodycam.Replay;
 using Content.Shared.Administration;
 using Robust.Shared;
 using Robust.Shared.Configuration;
@@ -20,7 +19,6 @@ public sealed partial class BodycamCutCommand : LocalizedEntityCommands
 {
     [Dependency] private IResourceManager _resources = default!;
     [Dependency] private IConfigurationManager _cfg = default!;
-    [Dependency] private IGameTiming _timing = default!;
     [Dependency] private BodycamClipSystem _clips = default!;
 
     public override string Command => "bodycam_cut";
@@ -55,24 +53,24 @@ public sealed partial class BodycamCutCommand : LocalizedEntityCommands
             return;
         }
 
+        var output = replays / "bodycam" / $"{Path.GetFileNameWithoutExtension(args[0])}-{from}-{to}{(camera == null ? "-full" : $"-{camera}")}.zip";
+        var request = _clips.CreateRequest(
+            Path.Combine(root, source.ToRelativeSystemPath()),
+            new GameTick(from),
+            new GameTick(to),
+            camera,
+            args[0]);
+
         var watch = new Stopwatch();
         watch.Start();
-        try
+        _clips.CutDetached(request, (result, error) =>
         {
-            var result = _clips.CutNow(new BodycamClipRequest
+            if (result == null)
             {
-                SourcePath = Path.Combine(root, source.ToRelativeSystemPath()),
-                FromTick = new GameTick(from),
-                ToTick = new GameTick(to),
-                TickRate = _timing.TickRate,
-                HiddenComponents = _clips.HiddenComponents,
-                GridComponents = _clips.GridComponents,
-                MapComponent = _clips.MapComponentId,
-                Camera = camera,
-                Label = args[0],
-            });
+                shell.WriteError(Loc.GetString(error ?? "bodycam-footage-error-internal"));
+                return;
+            }
 
-            var output = replays / "bodycam" / $"{Path.GetFileNameWithoutExtension(args[0])}-{from}-{to}{(camera == null ? "-full" : $"-{camera}")}.zip";
             _resources.UserData.CreateDir(output.Directory);
             using (var file = _resources.UserData.OpenWrite(output))
             {
@@ -81,14 +79,10 @@ public sealed partial class BodycamCutCommand : LocalizedEntityCommands
 
             shell.WriteLine(Loc.GetString("cmd-bodycam_cut-done",
                 ("path", output),
-                ("size", result.Zip.Length / 1024),
+                ("size", result.Zip.Count / 1024),
                 ("first", result.FirstTick.Value),
                 ("last", result.LastTick.Value),
                 ("time", watch.Elapsed.TotalSeconds.ToString("0.0"))));
-        }
-        catch (BodycamClipException e)
-        {
-            shell.WriteError(Loc.GetString(e.Reason));
-        }
+        });
     }
 }

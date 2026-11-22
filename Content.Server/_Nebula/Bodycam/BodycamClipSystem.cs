@@ -5,8 +5,13 @@
 using System.Collections.Concurrent;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Content.Server._Nebula.Bodycam.Replay;
+using Content.Shared.Atmos.Components;
+using Robust.Shared.Asynchronous;
+using Robust.Shared.Audio.Components;
+using Robust.Shared.Timing;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Enums;
 using Robust.Shared.Network;
@@ -32,6 +37,8 @@ public sealed partial class BodycamClipSystem : EntitySystem
     [Dependency] private IRobustSerializer _serializer = default!;
     [Dependency] private IComponentFactory _factory = default!;
     [Dependency] private ITransferManager _transfer = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private ITaskManager _tasks = default!;
     [Dependency] private BodycamFootageConsoleSystem _console = default!;
 
     private readonly Queue<BodycamClipJob> _queue = new();
@@ -55,9 +62,10 @@ public sealed partial class BodycamClipSystem : EntitySystem
                 return _hidden;
 
             _hidden = new HashSet<ushort>();
+            var audio = _factory.GetRegistration<AudioComponent>().NetID;
             foreach (var registration in _factory.GetAllRegistrations())
             {
-                if (registration.NetID is not { } netId)
+                if (registration.NetID is not { } netId || netId == audio)
                     continue;
 
                 var component = _factory.GetComponent(registration);
@@ -85,7 +93,23 @@ public sealed partial class BodycamClipSystem : EntitySystem
         }
     }
 
-    public ushort? MapComponentId => _factory.GetRegistration<MapComponent>().NetID;
+    public BodycamClipRequest CreateRequest(string sourcePath, GameTick from, GameTick to, NetEntity? camera, string label)
+    {
+        return new BodycamClipRequest
+        {
+            SourcePath = sourcePath,
+            FromTick = from,
+            ToTick = to,
+            TickRate = _timing.TickRate,
+            HiddenComponents = HiddenComponents,
+            GridComponents = GridComponents,
+            MapComponent = _factory.GetRegistration<MapComponent>().NetID,
+            GasOverlayComponent = _factory.GetRegistration<GasTileOverlayComponent>().NetID,
+            UserInterfaceComponent = _factory.GetRegistration<UserInterfaceComponent>().NetID,
+            Camera = camera,
+            Label = label,
+        };
+    }
 
     public bool IsBusy(EntityUid console)
     {
@@ -108,9 +132,40 @@ public sealed partial class BodycamClipSystem : EntitySystem
         StartNext();
     }
 
-    public BodycamClipResult CutNow(BodycamClipRequest request)
+    public void CutDetached(BodycamClipRequest request, Action<BodycamClipResult?, string?> done)
     {
-        return new BodycamClipCutter(_serializer).Cut(request);
+        var serializer = _serializer;
+        StartCutThread(() =>
+        {
+            BodycamClipResult? result = null;
+            string? error = null;
+            try
+            {
+                result = new BodycamClipCutter(serializer).Cut(request);
+            }
+            catch (BodycamClipException e)
+            {
+                error = e.Reason;
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Bodycam footage cut failed: {e}");
+                error = "bodycam-footage-error-internal";
+            }
+
+            _tasks.RunOnMainThread(() => done(result, error));
+        });
+    }
+
+    private static void StartCutThread(Action action)
+    {
+        var thread = new Thread(() => action())
+        {
+            Name = "Bodycam footage cutter",
+            IsBackground = true,
+            Priority = ThreadPriority.BelowNormal,
+        };
+        thread.Start();
     }
 
     private void StartNext()
@@ -122,7 +177,7 @@ public sealed partial class BodycamClipSystem : EntitySystem
         _console.SetStatus(job.Console, BodycamFootageStatus.Processing);
 
         var serializer = _serializer;
-        Task.Run(() =>
+        StartCutThread(() =>
         {
             try
             {
@@ -168,7 +223,7 @@ public sealed partial class BodycamClipSystem : EntitySystem
                 continue;
             }
 
-            var size = job.Result!.Zip.Length / (1024f * 1024f);
+            var size = job.Result!.Zip.Count / (1024f * 1024f);
             _console.SetStatus(job.Console, BodycamFootageStatus.Sent, Loc.GetString("bodycam-footage-status-sent-detail", ("size", MathF.Round(size, 1))));
         }
     }

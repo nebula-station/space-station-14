@@ -69,8 +69,8 @@ public sealed partial class ServerGameTicker
             {
                 _sawmillReplays.Error("Can't start automatic replay recording!");
             }
-            else
-                CurrentReplayPath = new ResPath(Cfg.GetCVar(CVars.ReplayDirectory)).ToRootedPath() / recordPath; // Nebula
+            else // Nebula
+                CurrentReplayPath = new ResPath(Cfg.GetCVar(CVars.ReplayDirectory)).ToRootedPath() / (recordPath.Clean().Extension == "zip" ? recordPath.Clean() : recordPath.Clean().WithName(recordPath.Filename + ".zip")); // Nebula
         }
         catch (Exception e)
         {

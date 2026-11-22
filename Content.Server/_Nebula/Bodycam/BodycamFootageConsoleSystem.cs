@@ -207,18 +207,12 @@ public sealed partial class BodycamFootageConsoleSystem : EntitySystem
         }
 
         var unfiltered = args.Unfiltered && admin;
-        var request = new BodycamClipRequest
-        {
-            SourcePath = Path.Combine(root, replayPath.ToRelativeSystemPath()),
-            FromTick = RoundTimeToTick(from),
-            ToTick = RoundTimeToTick(to),
-            TickRate = _timing.TickRate,
-            HiddenComponents = _clips.HiddenComponents,
-            GridComponents = _clips.GridComponents,
-            MapComponent = _clips.MapComponentId,
-            Camera = unfiltered ? null : record.Camera,
-            Label = $"{record.Name} {FormatTime(from)}–{FormatTime(to)}",
-        };
+        var request = _clips.CreateRequest(
+            Path.Combine(root, replayPath.ToRelativeSystemPath()),
+            RoundTimeToTick(from),
+            RoundTimeToTick(to),
+            unfiltered ? null : record.Camera,
+            $"{record.Name} {FormatTime(from)}–{FormatTime(to)}");
 
         _adminLog.Add(LogType.Action, LogImpact.Low,
             $"{ToPrettyString(user):user} requested {(unfiltered ? "unfiltered " : "")}bodycam footage of {record.Name} from {FormatTime(from)} to {FormatTime(to)}");

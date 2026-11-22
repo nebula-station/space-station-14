@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using Content.Client.Launcher;
 using Content.Client.Replay;
+using Content.Client.Replay.UI.Loading;
 using Content.Shared._Nebula.Bodycam;
 using Robust.Client;
 using Robust.Client.Replays.Loading;
@@ -55,6 +56,16 @@ public sealed partial class BodycamFootageManager
         _sawmill = Logger.GetSawmill("bodycam");
         _transfer.RegisterTransferMessage(BodycamFootageTransfer.Key, OnReceived, NetMessageAccept.Client);
         _playback.ReplayPlaybackStopped += OnPlaybackStopped;
+        _state.OnStateChanged += OnStateChanged;
+    }
+
+    private void OnStateChanged(StateChangedEventArgs args)
+    {
+        if (!_watching || args.NewState is not ReplayLoadingFailed)
+            return;
+
+        _watching = false;
+        Timer.Spawn(TimeSpan.FromSeconds(5), Reconnect);
     }
 
     private async void OnReceived(TransferReceivedEvent ev)
@@ -69,13 +80,15 @@ public sealed partial class BodycamFootageManager
 
             var nameBytes = new byte[length];
             await ev.DataStream.ReadExactlyAsync(nameBytes);
-            var name = Sanitize(Encoding.UTF8.GetString(nameBytes));
+            var name = $"{DateTime.UtcNow:yyyyMMdd-HHmmss}-{Sanitize(Encoding.UTF8.GetString(nameBytes))}";
+            var dir = Directory;
+            _resources.UserData.CreateDir(dir);
+            await using (var file = _resources.UserData.OpenWrite(dir / name))
+            {
+                await ev.DataStream.CopyToAsync(file);
+            }
 
-            using var data = new MemoryStream();
-            await ev.DataStream.CopyToAsync(data);
-            var bytes = data.ToArray();
-
-            _tasks.RunOnMainThread(() => Store(name, bytes));
+            _tasks.RunOnMainThread(() => Store(name));
         }
         catch (Exception e)
         {
@@ -83,15 +96,9 @@ public sealed partial class BodycamFootageManager
         }
     }
 
-    private void Store(string name, byte[] bytes)
+    private void Store(string name)
     {
         var dir = Directory;
-        _resources.UserData.CreateDir(dir);
-        using (var file = _resources.UserData.OpenWrite(dir / name))
-        {
-            file.Write(bytes);
-        }
-
         var old = _resources.UserData.DirectoryEntries(dir)
             .Where(x => x.EndsWith(".zip") && x != name)
             .OrderByDescending(x => x)

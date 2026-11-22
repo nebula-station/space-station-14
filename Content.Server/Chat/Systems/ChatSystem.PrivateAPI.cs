@@ -91,7 +91,7 @@ public sealed partial class ChatSystem
 
         var ev = new EntitySpokeEvent(source, message, null, false, language); // Trauma - changed second null to false, added language
         RaiseLocalEvent(source, ev, true);
-        RaiseLocalEvent(new BodycamSpeechEvent(source, false, message, obfuscated, name, name, language, colorOverride)); // Nebula
+        RaiseLocalEvent(new BodycamSpeechEvent(source, false, message, obfuscated, name, name, language, colorOverride, range)); // Nebula
 
         // To avoid logging any messages sent by entities that are not players, like vendors, cloning, etc.
         // Also doesn't log if hideLog is true.
@@ -218,7 +218,7 @@ public sealed partial class ChatSystem
 
         var ev = new EntitySpokeEvent(source, message, channel, false, language); // Trauma - changed second null to false, added language
         RaiseLocalEvent(source, ev, true);
-        RaiseLocalEvent(new BodycamSpeechEvent(source, true, message, languageObfuscatedMessage, name, nameIdentity, language, colorOverride)); // Nebula
+        RaiseLocalEvent(new BodycamSpeechEvent(source, true, message, languageObfuscatedMessage, name, nameIdentity, language, colorOverride, range)); // Nebula
         if (!hideLog)
             if (originalMessage == message)
             {
@@ -269,6 +269,7 @@ public sealed partial class ChatSystem
 
         // Trauma - add name, empty obfuscation strings and checkLOS
         SendInVoiceRange(ChatChannel.Emotes, name, action, wrappedMessage, "", "", source, range, author, checkLOS: EmoteRespectsLOS);
+        RaiseLocalEvent(new BodycamEmoteEvent(source, action, wrappedMessage, range)); // Nebula
         if (!hideLog)
             if (name != Name(source))
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Emote from {source} as {name}: {action}");

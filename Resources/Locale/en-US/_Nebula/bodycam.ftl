@@ -48,6 +48,7 @@ bodycam-footage-error-too-long = The requested footage is too long. Maximum is {
 bodycam-footage-error-corrupt = The archive file is damaged.
 bodycam-footage-error-version = The archive was recorded by a different server version.
 bodycam-footage-error-empty = There is no recorded footage in that time range yet.
+bodycam-footage-error-pending = That part of the footage has not reached the archive yet. Try again in a minute.
 bodycam-footage-error-internal = The archive failed to extract the footage.
 bodycam-footage-error-disconnected = The requester disconnected before the footage was delivered.
 bodycam-footage-disconnect-reason = Watching bodycam footage

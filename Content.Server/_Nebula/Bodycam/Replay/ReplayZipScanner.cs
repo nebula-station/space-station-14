@@ -24,7 +24,15 @@ public sealed class ReplayZipScanner : IDisposable
     public ReplayZipScanner(string path)
     {
         _file = OpenShared(path);
-        Scan();
+        try
+        {
+            Scan();
+        }
+        catch
+        {
+            _file.Dispose();
+            throw;
+        }
     }
 
     public bool Exists(string name) => _entries.ContainsKey(name);
@@ -73,6 +81,9 @@ public sealed class ReplayZipScanner : IDisposable
             var extraLength = BitConverter.ToUInt16(header, 28);
 
             if ((flags & 0x8) != 0 || method is not (0 or 8))
+                break;
+
+            if (position + LocalHeaderSize + nameLength + extraLength > length)
                 break;
 
             var nameBytes = new byte[nameLength];

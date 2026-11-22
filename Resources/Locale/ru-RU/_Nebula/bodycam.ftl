@@ -48,6 +48,7 @@ bodycam-footage-error-too-long = Запрошенная запись слишк�
 bodycam-footage-error-corrupt = Файл архива повреждён.
 bodycam-footage-error-version = Архив записан другой версией сервера.
 bodycam-footage-error-empty = В этом отрезке времени ещё нет записи.
+bodycam-footage-error-pending = Эта часть записи ещё не попала в архив. Попробуйте через минуту.
 bodycam-footage-error-internal = Архиву не удалось извлечь запись.
 bodycam-footage-error-disconnected = Запросивший отключился до получения записи.
 bodycam-footage-disconnect-reason = Просмотр записи бодикамеры

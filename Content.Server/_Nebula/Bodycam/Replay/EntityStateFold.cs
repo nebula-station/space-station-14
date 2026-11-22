@@ -79,7 +79,7 @@ public sealed class EntityStateFold
         Entities.Remove(entity);
     }
 
-    public EntityState? Snapshot(NetEntity entity, HashSet<ushort>? hidden)
+    public EntityState? Snapshot(NetEntity entity, HashSet<ushort>? hidden, bool includePending = true)
     {
         if (!Entities.TryGetValue(entity, out var entry))
             return null;
@@ -91,10 +91,13 @@ public sealed class EntityStateFold
                 changes.Add(change);
         }
 
-        foreach (var (netId, change) in entry.PendingDeltas)
+        if (includePending)
         {
-            if (hidden == null || !hidden.Contains(netId))
-                changes.Add(change);
+            foreach (var (netId, change) in entry.PendingDeltas)
+            {
+                if (hidden == null || !hidden.Contains(netId))
+                    changes.Add(change);
+            }
         }
 
         HashSet<ushort>? netComps = null;

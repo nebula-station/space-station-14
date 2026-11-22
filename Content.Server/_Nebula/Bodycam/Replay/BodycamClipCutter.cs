@@ -9,6 +9,9 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using Content.Shared._Nebula.Bodycam;
+using Content.Shared.Atmos;
+using Content.Shared.Atmos.Components;
+using Content.Shared.Atmos.EntitySystems;
 using Content.Shared.Chat;
 using Content.Shared.Popups;
 using Robust.Shared.GameStates;
@@ -37,13 +40,15 @@ public sealed class BodycamClipRequest
     public required HashSet<ushort> HiddenComponents;
     public required HashSet<ushort> GridComponents;
     public ushort? MapComponent;
+    public ushort? GasOverlayComponent;
+    public ushort? UserInterfaceComponent;
     public NetEntity? Camera;
     public string Label = string.Empty;
 }
 
 public sealed class BodycamClipResult
 {
-    public required byte[] Zip;
+    public required ArraySegment<byte> Zip;
     public required GameTick FirstTick;
     public required GameTick LastTick;
 }
@@ -54,6 +59,7 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
     public const string MetaKeyLabel = "bodycamLabel";
 
     private static readonly ConcurrentDictionary<Type, FieldInfo[]> ReferenceFields = new();
+    private static readonly ConcurrentDictionary<Type, FieldInfo?> ActorFields = new();
 
     private sealed class CameraState
     {
@@ -62,6 +68,7 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
         public NetCoordinates Position;
         public float Range;
         public bool Dirty = true;
+        public bool Moved = true;
     }
 
     public BodycamClipResult Cut(BodycamClipRequest request)
@@ -87,14 +94,20 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
             new TimeSpan(long.Parse(Value(meta, MetaKeyBaseTime) ?? "0")),
             new GameTick(uint.Parse(Value(meta, MetaKeyBaseTick) ?? "0")));
         var earlyUploads = new List<object>();
+        var tickUploads = new List<object>();
         var grids = new HashSet<NetEntity>();
         var maps = new HashSet<NetEntity>();
+        var seenMaps = new HashSet<NetEntity>();
+        var gasGrids = new HashSet<NetEntity>();
+        var sentGas = new Dictionary<NetEntity, HashSet<Vector2i>>();
 
         using var writer = new ReplayClipWriter(serializer);
         GameTick? first = null;
         var last = GameTick.Zero;
         var clipVisible = new HashSet<NetEntity>();
         var clipKnown = new HashSet<NetEntity>();
+        var clientFull = new Dictionary<NetEntity, HashSet<ushort>>();
+        var lastSeen = GameTick.Zero;
 
         foreach (var (state, messages) in reader.ReadHistory())
         {
@@ -102,11 +115,16 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
             if (tick > request.ToTick)
                 break;
 
+            lastSeen = tick;
+
             foreach (var player in state.PlayerStates.Span)
                 players[player.UserId] = player;
 
             foreach (var entity in state.EntityStates.Span)
             {
+                if (filtered)
+                    StripActors(entity, request.UserInterfaceComponent);
+
                 fold.Apply(entity);
                 foreach (var change in entity.ComponentChanges.Span)
                 {
@@ -114,6 +132,8 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
                         grids.Add(entity.NetEntity);
                     if (change.NetID == request.MapComponent)
                         maps.Add(entity.NetEntity);
+                    if (change.NetID == request.GasOverlayComponent)
+                        gasGrids.Add(entity.NetEntity);
                 }
             }
 
@@ -122,10 +142,14 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
                 fold.Delete(deleted);
                 grids.Remove(deleted);
                 maps.Remove(deleted);
+                seenMaps.Remove(deleted);
+                gasGrids.Remove(deleted);
+                sentGas.Remove(deleted);
                 if (camera.View.Remove(deleted))
                     camera.Dirty = true;
             }
 
+            tickUploads.Clear();
             foreach (var message in messages.Messages)
             {
                 switch (message)
@@ -135,15 +159,23 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
                         if (!status.Enabled)
                             camera.View.Clear();
                         camera.Dirty = true;
+                        camera.Moved = true;
                         break;
                     case BodycamReplayViewEvent view when view.Camera == request.Camera:
                         if (view.Reset)
                             camera.View.Clear();
                         camera.View.UnionWith(view.Entered);
                         camera.View.ExceptWith(view.Left);
+                        foreach (var entity in view.Entered)
+                        {
+                            if (maps.Contains(entity))
+                                seenMaps.Add(entity);
+                        }
+
                         camera.Position = view.Position;
                         camera.Range = view.Range;
                         camera.Dirty = true;
+                        camera.Moved = true;
                         break;
                     case ReplayMessage.CvarChangeMsg cvar when first == null:
                         foreach (var (name, value) in cvar.ReplicatedCvars)
@@ -152,32 +184,39 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
                         break;
                     case EntityEventArgs:
                     case ChatMessage:
+                    case ReplayMessage.CvarChangeMsg:
                         break;
                     default:
-                        if (first == null && tick < request.FromTick)
-                            earlyUploads.Add(message);
+                        tickUploads.Add(message);
                         break;
                 }
             }
 
-            if (tick < request.FromTick)
+            if (first == null && (tick < request.FromTick || filtered && (!camera.Enabled || camera.View.Count == 0)))
+            {
+                earlyUploads.AddRange(tickUploads);
                 continue;
-
-            if (first == null && filtered && (!camera.Enabled || camera.View.Count == 0))
-                continue;
+            }
 
             if (first == null)
             {
                 first = tick;
-                var visible = filtered ? CurrentVisible(camera, fold, maps) : fold.Entities.Keys.ToHashSet();
+                var visible = filtered ? CurrentVisible(camera, fold, seenMaps) : fold.Entities.Keys.ToHashSet();
                 camera.Dirty = false;
 
                 var states = new List<EntityState>(visible.Count);
                 foreach (var entity in visible)
                 {
-                    if (fold.Snapshot(entity, filtered ? hidden : null) is { } snapshot)
+                    if (fold.Snapshot(entity, filtered ? hidden : null, !filtered) is { } snapshot)
+                    {
                         states.Add(snapshot);
+                        if (filtered)
+                            TrackFull(clientFull, snapshot);
+                    }
                 }
+
+                if (filtered)
+                    FilterGas(states, request.GasOverlayComponent, fold, camera, gasGrids, visible, sentGas);
 
                 var firstMessages = new List<object>();
                 if (cvars.Count > 0)
@@ -215,7 +254,7 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
             var newVisible = clipVisible;
             if (camera.Dirty || state.EntityDeletions.Span.Length > 0)
             {
-                newVisible = CurrentVisible(camera, fold, maps);
+                newVisible = CurrentVisible(camera, fold, seenMaps);
                 camera.Dirty = false;
             }
 
@@ -223,7 +262,7 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
             foreach (var entity in state.EntityStates.Span)
             {
                 if (newVisible.Contains(entity.NetEntity) && clipVisible.Contains(entity.NetEntity))
-                    outStates.Add(EntityStateFold.Strip(entity, hidden));
+                    outStates.Add(StripForClient(entity, hidden, clientFull));
             }
 
             if (!ReferenceEquals(newVisible, clipVisible))
@@ -233,19 +272,23 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
                     if (clipVisible.Contains(entity))
                         continue;
 
-                    if (fold.Snapshot(entity, hidden) is { } snapshot)
+                    if (fold.Snapshot(entity, hidden, false) is { } snapshot)
                     {
                         outStates.Add(snapshot);
+                        TrackFull(clientFull, snapshot);
                         clipKnown.Add(entity);
                     }
                 }
             }
+
+            FilterGas(outStates, request.GasOverlayComponent, fold, camera, gasGrids, newVisible, sentGas);
 
             var deletions = new List<NetEntity>();
             foreach (var deleted in state.EntityDeletions.Span)
             {
                 if (clipKnown.Remove(deleted))
                     deletions.Add(deleted);
+                clientFull.Remove(deleted);
             }
 
             var outMessages = Filter(messages, true, request.Camera, camera, newVisible, grids);
@@ -272,7 +315,7 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
         }
 
         if (first == null)
-            throw new BodycamClipException("bodycam-footage-error-empty");
+            throw new BodycamClipException(lastSeen < request.ToTick ? "bodycam-footage-error-pending" : "bodycam-footage-error-empty");
 
         writer.WriteRaw(FileStrings, reader.ReadRaw(FileStrings), CompressionLevel.Optimal);
         writer.WriteRaw(FileCvars, reader.ReadRaw(FileCvars), CompressionLevel.Optimal);
@@ -322,7 +365,7 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
         return new BodycamClipResult { Zip = bytes, FirstTick = first.Value, LastTick = last };
     }
 
-    private static byte[] FinishWithFinal(ReplayClipWriter writer, MappingDataNode final)
+    private static ArraySegment<byte> FinishWithFinal(ReplayClipWriter writer, MappingDataNode final)
     {
         writer.Flush();
         final[MetaFinalKeyFileCount] = new ValueDataNode(writer.FileCount.ToString());
@@ -330,6 +373,59 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
         final[MetaFinalKeyUncompressedSize] = new ValueDataNode(writer.UncompressedSize.ToString());
         writer.WriteYaml(FileMetaFinal, final);
         return writer.Finish();
+    }
+
+    private static void TrackFull(Dictionary<NetEntity, HashSet<ushort>> clientFull, EntityState state)
+    {
+        if (!clientFull.TryGetValue(state.NetEntity, out var set))
+        {
+            set = new HashSet<ushort>();
+            clientFull[state.NetEntity] = set;
+        }
+
+        foreach (var change in state.ComponentChanges.Span)
+        {
+            if (change.State is not IComponentDeltaState)
+                set.Add(change.NetID);
+        }
+    }
+
+    private static EntityState StripForClient(EntityState state, HashSet<ushort> hidden, Dictionary<NetEntity, HashSet<ushort>> clientFull)
+    {
+        if (!clientFull.TryGetValue(state.NetEntity, out var full))
+        {
+            full = new HashSet<ushort>();
+            clientFull[state.NetEntity] = full;
+        }
+
+        var span = state.ComponentChanges.Span;
+        var changes = new List<ComponentChange>(span.Length);
+        foreach (var change in span)
+        {
+            if (hidden.Contains(change.NetID))
+                continue;
+
+            if (change.State is IComponentDeltaState)
+            {
+                if (!full.Contains(change.NetID))
+                    continue;
+            }
+            else
+            {
+                full.Add(change.NetID);
+            }
+
+            changes.Add(change);
+        }
+
+        HashSet<ushort>? netComps = null;
+        if (state.NetComponents != null)
+        {
+            netComps = new HashSet<ushort>(state.NetComponents);
+            netComps.ExceptWith(hidden);
+        }
+
+        return new EntityState(state.NetEntity, changes, state.EntityLastModified, netComps);
     }
 
     private static HashSet<NetEntity> CurrentVisible(CameraState camera, EntityStateFold fold, HashSet<NetEntity> maps)
@@ -345,6 +441,143 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
         }
 
         return set;
+    }
+
+    private static void StripActors(EntityState state, ushort? uiComponent)
+    {
+        if (uiComponent == null)
+            return;
+
+        foreach (var change in state.ComponentChanges.Span)
+        {
+            if (change.NetID != uiComponent || change.State == null)
+                continue;
+
+            var field = ActorFields.GetOrAdd(change.State.GetType(), t => t.GetField("Actors", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+            if (field?.GetValue(change.State) is IDictionary actors)
+                actors.Clear();
+        }
+    }
+
+    private static void FilterGas(
+        List<EntityState> states,
+        ushort? gasComponent,
+        EntityStateFold fold,
+        CameraState camera,
+        HashSet<NetEntity> gasGrids,
+        HashSet<NetEntity> visible,
+        Dictionary<NetEntity, HashSet<Vector2i>> sent)
+    {
+        if (gasComponent is not { } gasId)
+            return;
+
+        HashSet<NetEntity>? handled = null;
+        for (var i = 0; i < states.Count; i++)
+        {
+            var state = states[i];
+            var span = state.ComponentChanges.Span;
+            var index = -1;
+            for (var j = 0; j < span.Length; j++)
+            {
+                if (span[j].NetID == gasId)
+                {
+                    index = j;
+                    break;
+                }
+            }
+
+            if (index < 0)
+                continue;
+
+            var changes = span.ToArray().ToList();
+            changes[index] = BuildGas(state.NetEntity, gasId, fold, camera, span[index].LastModifiedTick, sent);
+            states[i] = new EntityState(state.NetEntity, changes, state.EntityLastModified, state.NetComponents);
+            (handled ??= new()).Add(state.NetEntity);
+        }
+
+        if (!camera.Moved)
+            return;
+
+        camera.Moved = false;
+        foreach (var grid in gasGrids)
+        {
+            if (handled?.Contains(grid) == true || !visible.Contains(grid))
+                continue;
+
+            var keys = GasKeys(grid, gasId, fold, camera);
+            if (sent.TryGetValue(grid, out var previous) && previous.SetEquals(keys))
+                continue;
+
+            if (!fold.Entities.TryGetValue(grid, out var entry))
+                continue;
+
+            var change = BuildGas(grid, gasId, fold, camera, entry.LastModified, sent);
+            states.Add(new EntityState(grid, new List<ComponentChange> { change }, entry.LastModified, null));
+        }
+    }
+
+    private static GasTileOverlayState? FullGas(NetEntity grid, ushort gasId, EntityStateFold fold)
+    {
+        return fold.Entities.TryGetValue(grid, out var entry)
+               && entry.Components.TryGetValue(gasId, out var change)
+            ? change.State as GasTileOverlayState
+            : null;
+    }
+
+    private static bool InRange(Vector2i index, CameraState camera)
+    {
+        if (!camera.Enabled)
+            return false;
+
+        var size = SharedGasTileOverlaySystem.ChunkSize;
+        var minX = index.X * size;
+        var minY = index.Y * size;
+        var p = camera.Position.Position;
+        var dx = MathF.Max(MathF.Max(minX - p.X, 0), p.X - (minX + size));
+        var dy = MathF.Max(MathF.Max(minY - p.Y, 0), p.Y - (minY + size));
+        var range = camera.Range + 1;
+        return dx * dx + dy * dy <= range * range;
+    }
+
+    private static HashSet<Vector2i> GasKeys(NetEntity grid, ushort gasId, EntityStateFold fold, CameraState camera)
+    {
+        var keys = new HashSet<Vector2i>();
+        if (camera.Position.NetEntity != grid || FullGas(grid, gasId, fold) is not { } full)
+            return keys;
+
+        foreach (var index in full.Chunks.Keys)
+        {
+            if (InRange(index, camera))
+                keys.Add(index);
+        }
+
+        return keys;
+    }
+
+    private static ComponentChange BuildGas(
+        NetEntity grid,
+        ushort gasId,
+        EntityStateFold fold,
+        CameraState camera,
+        GameTick modified,
+        Dictionary<NetEntity, HashSet<Vector2i>> sent)
+    {
+        var chunks = new Dictionary<Vector2i, GasOverlayChunk>();
+        var keys = new HashSet<Vector2i>();
+        if (camera.Position.NetEntity == grid && FullGas(grid, gasId, fold) is { } full)
+        {
+            foreach (var (index, chunk) in full.Chunks)
+            {
+                if (!InRange(index, camera))
+                    continue;
+
+                chunks[index] = chunk;
+                keys.Add(index);
+            }
+        }
+
+        sent[grid] = keys;
+        return new ComponentChange(gasId, new GasTileOverlayState(chunks), modified);
     }
 
     private static List<object> Filter(
@@ -369,8 +602,6 @@ public sealed class BodycamClipCutter(IRobustSerializer serializer)
                     break;
                 case ChatMessage chat:
                     if (!filtered)
-                        result.Add(chat);
-                    else if (camera.Enabled && chat.Channel == ChatChannel.Emotes && visible.Contains(chat.SenderEntity))
                         result.Add(chat);
                     break;
                 case PopupCursorEvent:
