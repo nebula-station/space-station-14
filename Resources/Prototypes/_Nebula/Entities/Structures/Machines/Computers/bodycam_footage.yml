@@ -2,7 +2,7 @@
   parent: BaseComputer
   id: ComputerBodycamFootage
   name: bodycam footage console
-  description: Pulls recorded security bodycam footage from the station archive. Access is restricted to the Head of Security, the Warden and the Captain.
+  description: Pulls recorded security bodycam footage from the station archive. Access is restricted to the Head of Security, the Warden, the Captain and Internal Affairs.
   components:
   - type: Sprite
     layers:
@@ -20,7 +20,7 @@
     board: BodycamFootageComputerCircuitboard
   - type: BodycamFootageConsole
   - type: AccessReader
-    access: [["HeadOfSecurity"], ["Captain"], ["Armory"]]
+    access: [["HeadOfSecurity"], ["Captain"], ["Armory"], ["Lawyer", "Command"]]
   - type: ActivatableUI
     key: enum.BodycamFootageConsoleUiKey.Key
   - type: ActivatableUIRequiresVision
