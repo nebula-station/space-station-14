@@ -89,6 +89,9 @@ public sealed partial class BodycamFootageConsoleSystem : EntitySystem
 
     public void SetStatus(EntityUid console, BodycamFootageStatus status, string? text = null)
     {
+        if (TerminatingOrDeleted(console))
+            return;
+
         _status[console] = (status, text);
         UpdateState(console);
     }

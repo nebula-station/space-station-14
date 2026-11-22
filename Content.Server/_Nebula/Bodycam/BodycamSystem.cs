@@ -5,6 +5,7 @@
 using System.Linq;
 using System.Numerics;
 using System.Reflection;
+using System.Text;
 using Content.Server.Chat.Systems;
 using Content.Shared.Station.Systems;
 using Content.Server.SurveillanceCamera;
@@ -12,10 +13,12 @@ using Content.Shared._Nebula.Bodycam;
 using Content.Shared._Nebula.CCVar;
 using Content.Shared.Access.Systems;
 using Content.Shared.Chat;
+using Content.Shared.Emp;
 using Content.Shared.Examine;
 using Content.Shared.Eye;
 using Content.Shared.GameTicking;
 using Content.Shared.Storage;
+using Content.Shared.SurveillanceCamera.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
 using Content.Shared.Mobs.Components;
@@ -33,6 +36,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
 namespace Content.Server._Nebula.Bodycam;
 
@@ -114,6 +118,8 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
         SubscribeLocalEvent<BodycamComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<BodycamComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<BodycamComponent, BodycamToggledEvent>(OnToggled);
+        SubscribeLocalEvent<BodycamComponent, EmpPulseEvent>(OnEmpPulse, after: [typeof(SurveillanceCameraSystem)]);
+        SubscribeLocalEvent<BodycamComponent, EmpDisabledRemovedEvent>(OnEmpDisabledRemoved, after: [typeof(SurveillanceCameraSystem)]);
         SubscribeLocalEvent<BodycamComponent, RadioReceiveEvent>(OnRadioReceive);
         SubscribeLocalEvent<BodycamSpeechEvent>(OnSpeech);
         SubscribeLocalEvent<BodycamEmoteEvent>(OnEmote);
@@ -154,9 +160,9 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
 
     private void OnMapInit(Entity<BodycamComponent> ent, ref MapInitEvent args)
     {
-        _camera.SetActive(ent, ent.Comp.Enabled);
-        if (ent.Comp.Enabled)
-            Activate(ent);
+        if (TryComp<SurveillanceCameraComponent>(ent, out var camera))
+            _camera.SetActive(ent, ent.Comp.Enabled, camera);
+        SyncRecording(ent);
     }
 
     private void OnShutdown(Entity<BodycamComponent> ent, ref ComponentShutdown args)
@@ -166,8 +172,26 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
 
     private void OnToggled(Entity<BodycamComponent> ent, ref BodycamToggledEvent args)
     {
-        _camera.SetActive(ent, args.Enabled);
-        if (args.Enabled)
+        if (TryComp<SurveillanceCameraComponent>(ent, out var camera))
+            _camera.SetActive(ent, args.Enabled, camera);
+        SyncRecording(ent);
+    }
+
+    private void OnEmpPulse(Entity<BodycamComponent> ent, ref EmpPulseEvent args)
+    {
+        SyncRecording(ent);
+    }
+
+    private void OnEmpDisabledRemoved(Entity<BodycamComponent> ent, ref EmpDisabledRemovedEvent args)
+    {
+        if (!ent.Comp.Enabled && TryComp<SurveillanceCameraComponent>(ent, out var camera) && camera.Active)
+            _camera.SetActive(ent, false, camera);
+        SyncRecording(ent);
+    }
+
+    private void SyncRecording(Entity<BodycamComponent> ent)
+    {
+        if (ent.Comp.Enabled && (!TryComp<SurveillanceCameraComponent>(ent, out var camera) || camera.Active))
             Activate(ent);
         else
             Deactivate(ent);
@@ -608,14 +632,63 @@ public sealed partial class BodycamSystem : SharedBodycamSystem
             return;
 
         var source = _language.CanUnderstand(wearer, args.Language.ID) ? args.OriginalChatMsg : args.LanguageObfuscatedChatMsg;
-        var muffled = _chat.ObfuscateMessageReadability(source.Message, _random);
-        var index = source.WrappedMessage.IndexOf(source.Message, StringComparison.Ordinal);
-        var wrapped = index < 0
-            ? source.WrappedMessage
-            : source.WrappedMessage[..index] + muffled + source.WrappedMessage[(index + source.Message.Length)..];
+        var (muffled, wrapped) = MuffleRadio(source.WrappedMessage);
 
         var message = new ChatMessage(ChatChannel.Radio, muffled, wrapped, source.SenderEntity, null, colorOverride: source.MessageColorOverride);
         _replay.RecordServerMessage(new BodycamReplayChatEvent(GetNetEntity(ent), message));
+    }
+
+    private (string Message, string Wrapped) MuffleRadio(string wrapped)
+    {
+        var nodes = FormattedMessage.FromMarkupPermissive(wrapped).Nodes;
+        var start = -1;
+        for (var i = 0; i < nodes.Count; i++)
+        {
+            if (nodes[i].Name == "font" && !nodes[i].Closing)
+            {
+                start = i;
+                break;
+            }
+        }
+
+        var result = new StringBuilder(wrapped.Length);
+        var message = new StringBuilder();
+        var depth = 0;
+        for (var i = 0; i < nodes.Count; i++)
+        {
+            var node = nodes[i];
+            if (i == start)
+            {
+                depth = 1;
+                result.Append(node);
+                continue;
+            }
+
+            if (depth > 0 && node.Name == "font")
+            {
+                depth += node.Closing ? -1 : 1;
+                if (depth == 0)
+                {
+                    result.Append(node);
+                    continue;
+                }
+            }
+
+            var inside = start < 0 || depth > 0;
+            if (node.IsPlainText && inside)
+            {
+                var muffled = new MarkupNode(_chat.ObfuscateMessageReadability(node.Value.StringValue ?? string.Empty, _random));
+                result.Append(muffled);
+                message.Append(muffled);
+                continue;
+            }
+
+            result.Append(node);
+            if (depth > 0)
+                message.Append(node);
+        }
+
+        return (message.ToString(), result.ToString());
     }
 
     private bool WearerHears(EntityUid wearer, string channel)

@@ -48,6 +48,7 @@ public sealed partial class BodycamClipSystem : EntitySystem
     private readonly ConcurrentQueue<BodycamClipJob> _finished = new();
     private readonly ConcurrentQueue<BodycamClipJob> _sent = new();
     private BodycamClipJob? _running;
+    private readonly List<BodycamClipJob> _sending = new();
     private readonly Dictionary<NetUserId, TimeSpan> _cooldowns = new();
     private HashSet<ushort>? _hidden;
     private HashSet<ushort>? _gridComponents;
@@ -126,6 +127,12 @@ public sealed partial class BodycamClipSystem : EntitySystem
                 return true;
         }
 
+        foreach (var job in _sending)
+        {
+            if (job.Console == console)
+                return true;
+        }
+
         return false;
     }
 
@@ -135,6 +142,12 @@ public sealed partial class BodycamClipSystem : EntitySystem
             return true;
 
         foreach (var job in _queue)
+        {
+            if (job.Session.UserId == user)
+                return true;
+        }
+
+        foreach (var job in _sending)
         {
             if (job.Session.UserId == user)
                 return true;
@@ -258,6 +271,7 @@ public sealed partial class BodycamClipSystem : EntitySystem
 
         while (_sent.TryDequeue(out var job))
         {
+            _sending.Remove(job);
             Done(job);
 
             if (job.Error != null)
@@ -295,6 +309,7 @@ public sealed partial class BodycamClipSystem : EntitySystem
             return;
         }
 
+        _sending.Add(job);
         var name = Encoding.UTF8.GetBytes(job.FileName);
         var zip = job.Result!.Zip;
         Task.Run(async () =>

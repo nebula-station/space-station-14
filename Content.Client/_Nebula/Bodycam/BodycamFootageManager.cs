@@ -70,6 +70,7 @@ public sealed partial class BodycamFootageManager
 
     private async void OnReceived(TransferReceivedEvent ev)
     {
+        ResPath? target = null;
         try
         {
             var lengthBytes = new byte[4];
@@ -83,7 +84,8 @@ public sealed partial class BodycamFootageManager
             var name = $"{DateTime.UtcNow:yyyyMMdd-HHmmss}-{Sanitize(Encoding.UTF8.GetString(nameBytes))}";
             var dir = Directory;
             _resources.UserData.CreateDir(dir);
-            await using (var file = _resources.UserData.OpenWrite(dir / name))
+            target = dir / name;
+            await using (var file = _resources.UserData.OpenWrite(target.Value))
             {
                 await ev.DataStream.CopyToAsync(file);
             }
@@ -93,6 +95,23 @@ public sealed partial class BodycamFootageManager
         catch (Exception e)
         {
             _sawmill.Error($"Failed to receive bodycam footage: {e}");
+            DeletePartial(target);
+        }
+    }
+
+    private void DeletePartial(ResPath? path)
+    {
+        if (path is not { } partial)
+            return;
+
+        try
+        {
+            if (_resources.UserData.Exists(partial))
+                _resources.UserData.Delete(partial);
+        }
+        catch (Exception e)
+        {
+            _sawmill.Error($"Failed to delete partial bodycam footage {partial}: {e}");
         }
     }
 
