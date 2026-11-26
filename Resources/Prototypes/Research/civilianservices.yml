@@ -161,6 +161,7 @@
   - CryoPodMachineCircuitboard
   - CryostasisBeaker
   - SyringeCryostasis
+  - ChestImplantAdrenaline # Nebula edit
   # Goobstation R&D Console rework start
   position: 3,5
   technologyPrerequisites:

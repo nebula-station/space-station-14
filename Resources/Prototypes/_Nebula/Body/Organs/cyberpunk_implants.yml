@@ -1,0 +1,238 @@
+- type: entity
+  abstract: true
+  parent: BaseCyberImplant
+  id: BaseCyberpunkImplantHead
+  components:
+  - type: ChildOrgan
+    parents: [ Head ]
+
+- type: entity
+  abstract: true
+  parent: BaseCyberImplant
+  id: BaseCyberpunkImplantTorso
+  components:
+  - type: ChildOrgan
+    parents: [ Torso ]
+
+# Head
+
+- type: entity
+  parent: BaseCyberpunkImplantHead
+  id: HeadImplantFacePanel
+  name: imprinted face panel
+  description: Rebuilds the face of its owner into a random person for ten minutes, along with the name, DNA and fingerprints.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/face_panel.rsi
+    state: icon
+  - type: Organ
+    category: FacePanelImplant
+  - type: CyberwareHumanity
+    cost: 1
+  - type: OrganActions
+    actions:
+    - ActionFacePanel
+  - type: FacePanelImplant
+
+- type: entity
+  parent: BaseCyberpunkImplantHead
+  id: HeadImplantVisualCortex
+  name: visual cortex stimulator
+  description: Sharpens the aim of its owner at range. Ranged damage grows by 1% per tile to the target, up to 30%.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/visual_cortex.rsi
+    state: icon
+  - type: Organ
+    category: VisualCortexImplant
+  - type: OrganComponents
+    onAdd:
+    - type: RangedDistanceBonus
+
+- type: entity
+  parent: BaseCyberpunkImplantHead
+  id: HeadImplantQuantumRegulator
+  name: quantum regulator
+  description: Makes a chosen recharging implant ready at once, and makes all other implants recharge 15% faster.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/quantum_regulator.rsi
+    state: icon
+  - type: Organ
+    category: QuantumImplant
+  - type: CyberwareHumanity
+    cost: 2
+  - type: OrganActions
+    actions:
+    - ActionQuantumRegulator
+  - type: QuantumRegulator
+  - type: OrganComponents
+    onAdd:
+    - type: ImplantCooldownModifier
+  - type: CyberwareIncompatible
+    incompatible:
+    - HeadImplantAxolotl
+    - HeadImplantNewton
+  - type: UserInterface
+    interfaces:
+      enum.QuantumRegulatorUiKey.Key:
+        type: QuantumRegulatorBoundUserInterface
+        interactionRange: 0
+
+- type: entity
+  parent: BaseCyberpunkImplantHead
+  id: HeadImplantAxolotl
+  name: axolotl implant
+  description: Every time its owner puts someone into crit, the remaining cooldowns of all implants drop by 5%.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/axolotl.rsi
+    state: icon
+  - type: Organ
+    category: AxolotlImplant
+  - type: OrganComponents
+    onAdd:
+    - type: CritCooldownRefund
+      fraction: 0.05
+  - type: CyberwareIncompatible
+    incompatible:
+    - HeadImplantNewton
+
+- type: entity
+  parent: BaseCyberpunkImplantHead
+  id: HeadImplantNewton
+  name: newtonian module
+  description: Every time its owner puts someone into crit, the remaining cooldowns of all implants drop by 15%. Only takes to a mindshielded body.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/newton_module.rsi
+    state: icon
+  - type: Organ
+    category: NewtonImplant
+  - type: OrganComponents
+    onAdd:
+    - type: CritCooldownRefund
+      fraction: 0.15
+  - type: CyberwareIncompatible
+    requireMindShield: true
+    incompatible:
+    - HeadImplantAxolotl
+
+# Torso
+
+- type: entity
+  parent: BaseCyberpunkImplantTorso
+  id: ChestImplantAdrenaline
+  name: adrenaline implant
+  description: Injects ephedrine and tranexamic acid when its owner takes a heavy hit. Has three doses.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/adrenaline.rsi
+    state: icon
+  - type: Organ
+    category: AdrenalineImplant
+  - type: AdrenalineImplant
+    solution:
+      reagents:
+      - ReagentId: Ephedrine
+        Quantity: 15
+      - ReagentId: TranexamicAcid
+        Quantity: 5
+  - type: OrganComponents
+    onAdd:
+    - type: AdrenalineHost
+  - type: CyberwareIncompatible
+    incompatible:
+    - CombatMedipenImplant
+    - StimulantImplant
+
+- type: entity
+  parent: BaseCyberpunkImplantTorso
+  id: ChestImplantIsometricStabilizer
+  name: isometric stabilizer
+  description: Steadies the body of its owner, adding 25 stamina.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/isometric_stabilizer.rsi
+    state: icon
+  - type: Organ
+    category: StabilizerImplant
+  - type: OrganComponents
+    onAdd:
+    - type: StaminaBonus
+
+- type: entity
+  parent: BaseCyberpunkImplantTorso
+  id: ChestImplantRareBird
+  name: rare bird implant
+  description: Makes the dermal armor of its owner protect 20% better against everything. Useless without dermal armor.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/rare_bird.rsi
+    state: icon
+  - type: Organ
+    category: RareBirdImplant
+  - type: OrganComponents
+    onAdd:
+    - type: DermalArmorBoost
+
+- type: entity
+  parent: BaseCyberpunkImplantTorso
+  id: ChestImplantPeripheralInverter
+  name: peripheral inverter
+  description: Cuts damage from attackers within three tiles by 20%, but raises damage from those further away by 10%.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/peripheral_inverter.rsi
+    state: icon
+  - type: Organ
+    category: InverterImplant
+  - type: OrganComponents
+    onAdd:
+    - type: PeripheralInverter
+
+- type: entity
+  parent: BaseOrganSubdermalArmor
+  id: OrganDermalChitin
+  name: chitin dermal plating
+  description: Takes the place of dermal armor. Slowly mends physical injuries while the owner has less than 50 damage.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/chitin.rsi
+    state: icon
+  - type: OrganComponents
+    onAdd:
+    - type: ChitinRegeneration
+  - type: CyberwareIncompatible
+    incompatible:
+    - ChestImplantRareBird
+
+- type: entity
+  parent: BaseCyberpunkImplantTorso
+  id: ChestImplantEmpCoating
+  name: impulse coating
+  description: Shields every implant of its owner from EMP pulses.
+  components:
+  - type: Sprite
+    sprite: _LuaM/Objects/Misc/optical_camo.rsi
+    state: icon
+  - type: Organ
+    category: EmpCoatingImplant
+  - type: OrganComponents
+    onAdd:
+    - type: EmpCoating
+
+# Hand
+
+- type: entity
+  parent: BaseCyberImplantHand
+  id: HandImplantAmortizer
+  name: amortizer implant
+  description: Steadies the hand of its owner, raising the damage of hits aimed at the head by 10%.
+  components:
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/amortizer.rsi
+    state: icon
+  - type: OrganComponents
+    onAdd:
+    - type: HeadshotBonus

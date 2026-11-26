@@ -381,3 +381,76 @@
     Glass: 3000
     Gold: 1500
     Plasteel: 1000
+
+- type: latheRecipe
+  id: HeadImplantVisualCortex
+  result: HeadImplantVisualCortex
+  completetime: 10
+  materials:
+    Glass: 2000
+    Gold: 1000
+    Plasma: 1500
+
+- type: latheRecipe
+  id: HeadImplantNewton
+  result: HeadImplantNewton
+  completetime: 10
+  materials:
+    Gold: 3000
+    Plasma: 2000
+    Uranium: 1000
+    BSCrystal: 100
+
+- type: latheRecipe
+  id: ChestImplantAdrenaline
+  result: ChestImplantAdrenaline
+  completetime: 10
+  materials:
+    Plastic: 2000
+    Plasma: 1500
+    Glass: 500
+
+- type: latheRecipe
+  id: ChestImplantIsometricStabilizer
+  result: ChestImplantIsometricStabilizer
+  completetime: 10
+  materials:
+    Steel: 1000
+    Silver: 1500
+    Plasma: 500
+
+- type: latheRecipe
+  id: ChestImplantRareBird
+  result: ChestImplantRareBird
+  completetime: 10
+  materials:
+    BSCrystal: 500
+    Plasteel: 3000
+    Uranium: 1000
+
+- type: latheRecipe
+  id: ChestImplantPeripheralInverter
+  result: ChestImplantPeripheralInverter
+  completetime: 10
+  materials:
+    BSCrystal: 200
+    Plastic: 1500
+    Silver: 2000
+    Uranium: 500
+
+- type: latheRecipe
+  id: OrganDermalChitin
+  result: OrganDermalChitin
+  completetime: 10
+  materials:
+    Uranium: 3000
+    Plasteel: 1000
+
+- type: latheRecipe
+  id: HandImplantAmortizer
+  result: HandImplantAmortizer
+  completetime: 10
+  materials:
+    Uranium: 2000
+    Plasma: 1500
+    Plasteel: 500

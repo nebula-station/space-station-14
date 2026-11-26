@@ -46,6 +46,7 @@
   - ClothingMaskMuzzleSecure
   - ClothingMaskMuzzleShock
   - WeaponBillyClub
+  - ChestImplantPeripheralInverter # Nebula edit
   position: 5,3
   technologyPrerequisites:
   - SalvageWeapons

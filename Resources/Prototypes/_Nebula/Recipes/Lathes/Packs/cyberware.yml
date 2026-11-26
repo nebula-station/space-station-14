@@ -9,6 +9,12 @@
   - HandImplantClaws
   - HandImplantForensics
   - ArmImplantRiotShield
+  - HeadImplantVisualCortex
+  - HeadImplantNewton
+  - ChestImplantRareBird
+  - ChestImplantPeripheralInverter
+  - OrganDermalChitin
+  - HandImplantAmortizer
 
 - type: latheRecipePack
   id: CyberwareMedical
@@ -26,6 +32,8 @@
   - CnsImplantRebooter
   - HeartImplantReviver
   - ThroatImplantBreathingTube
+  - ChestImplantAdrenaline
+  - ChestImplantIsometricStabilizer
 
 - type: latheRecipePack
   id: CyberwareEngineering

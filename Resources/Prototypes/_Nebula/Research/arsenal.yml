@@ -10,6 +10,7 @@
   recipeUnlocks:
   - OrganDermalArmor
   - OrganDermalArmorReflective
+  - OrganDermalChitin
   position: 6,-1
   technologyPrerequisites:
   - WeaponLaserCellRevolverTech
@@ -26,6 +27,7 @@
   cost: 15000
   recipeUnlocks:
   - OrganDermalArmorHeavyUSSP
+  - ChestImplantRareBird
   position: 6,-2
   technologyPrerequisites:
   - DermalArmorTech

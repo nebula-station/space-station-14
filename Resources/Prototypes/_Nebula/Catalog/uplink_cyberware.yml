@@ -330,3 +330,258 @@
   - !type:BuyBeforeCondition
     blacklist:
     - UplinkAutosurgeonAngelArmLeft
+
+- type: listing
+  id: UplinkAutosurgeonFacePanel
+  productEntity: AutosurgeonFacePanel
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonVisualCortex
+  productEntity: AutosurgeonVisualCortex
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonVisualCortexNukeops
+  productEntity: AutosurgeonVisualCortex
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonQuantumRegulator
+  productEntity: AutosurgeonQuantumRegulator
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonQuantumRegulatorNukeops
+  productEntity: AutosurgeonQuantumRegulator
+  cost:
+    Telecrystal: 75
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonAxolotl
+  productEntity: AutosurgeonAxolotl
+  cost:
+    Telecrystal: 15
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonAxolotlNukeops
+  productEntity: AutosurgeonAxolotl
+  cost:
+    Telecrystal: 25
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonIsometricStabilizer
+  productEntity: AutosurgeonIsometricStabilizer
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonIsometricStabilizerNukeops
+  productEntity: AutosurgeonIsometricStabilizer
+  cost:
+    Telecrystal: 15
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkImplantRareBird
+  productEntity: ChestImplantRareBird
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkImplantRareBirdNukeops
+  productEntity: ChestImplantRareBird
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonPeripheralInverter
+  productEntity: AutosurgeonPeripheralInverter
+  cost:
+    Telecrystal: 25
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonPeripheralInverterNukeops
+  productEntity: AutosurgeonPeripheralInverter
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonDermalChitin
+  productEntity: AutosurgeonDermalChitin
+  cost:
+    Telecrystal: 15
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonDermalChitinNukeops
+  productEntity: AutosurgeonDermalChitin
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonEmpCoating
+  productEntity: AutosurgeonEmpCoating
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonEmpCoatingNukeops
+  productEntity: AutosurgeonEmpCoating
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonGorillaArms
+  productEntity: AutosurgeonGorillaArms
+  cost:
+    Telecrystal: 45
+  categories:
+  - UplinkImplants
+
+- type: listing
+  id: UplinkAutosurgeonAmortizer
+  productEntity: AutosurgeonAmortizer
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonAmortizerNukeops
+  productEntity: AutosurgeonAmortizer
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink

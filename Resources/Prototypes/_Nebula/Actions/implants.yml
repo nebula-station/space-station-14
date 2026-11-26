@@ -31,3 +31,56 @@
     - state: icon
   - type: InstantAction
     event: !type:ToggleImplantShieldEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionFacePanel
+  name: Toggle face imprint
+  description: Put on a random face, name, DNA and fingerprints for ten minutes, or take them off early.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/face_panel.rsi
+    layers:
+    - state: icon
+  - type: InstantAction
+    event: !type:FacePanelActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionQuantumRegulator
+  name: Quantum reset
+  description: Make one of your recharging implants ready at once. Its next cooldown lasts twice as long.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+  - type: Sprite
+    sprite: _Nebula/Objects/Specific/Medical/Cyberware/quantum_regulator.rsi
+    layers:
+    - state: icon
+  - type: InstantAction
+    event: !type:QuantumRegulatorActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionGorillaSlam
+  name: Ground slam
+  description: Dash forward and slam the floor, hitting everyone around the landing spot.
+  components:
+  - type: Action
+    useDelay: 180
+    itemIconStyle: NoItem
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Effects/thudswoosh.ogg
+  - type: Sprite
+    sprite: _Starlight/Objects/Tools/cyberling.rsi
+    layers:
+    - state: gorillagauntlet
+  - type: TargetAction
+    checkCanAccess: false
+    range: 0
+  - type: WorldTargetAction
+    event: !type:DashActionEvent
+      distance: 4
+      emote: null

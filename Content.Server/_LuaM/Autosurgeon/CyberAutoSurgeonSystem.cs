@@ -3,6 +3,7 @@
 
 using System.Linq;
 using Content.Goobstation.Shared.Autosurgeon;
+using Content.Shared._Nebula.Implants;
 using Content.Medical.Shared.Body;
 using Content.Shared._LuaM.Autosurgeon;
 using Content.Shared._LuaM.Cyberware;
@@ -42,6 +43,17 @@ public sealed partial class CyberAutoSurgeonSystem : EntitySystem
 
         var coords = Transform(target).Coordinates;
 
+        // Nebula start
+        if (!CanInstall(target, ent.Comp.NewOrgan)
+            || !CanInstall(target, ent.Comp.OrganForEachPart)
+            || !CanInstall(target, ent.Comp.Implant)
+            || ent.Comp.NewOrgans.Any(organ => !CanInstall(target, organ)))
+        {
+            args.Handled = true;
+            return;
+        }
+        // Nebula end
+
         if (ent.Comp.NewOrgan is { } organProto)
         {
             var part = ent.Comp.ActiveSide
@@ -57,6 +69,14 @@ public sealed partial class CyberAutoSurgeonSystem : EntitySystem
                 return;
             }
         }
+
+        // Nebula start
+        foreach (var organ in ent.Comp.NewOrgans)
+        {
+            if (_body.GetOrgan(target, ent.Comp.TargetPart) is { } newOrganPart)
+                TryInstall(newOrganPart, SpawnAtPosition(organ, coords), replace: true);
+        }
+        // Nebula end
 
         if (ent.Comp.OrganForEachPart is { } eachProto)
         {
@@ -79,6 +99,21 @@ public sealed partial class CyberAutoSurgeonSystem : EntitySystem
         var ev = new CyberwareInstalledEvent();
         RaiseLocalEvent(target, ref ev);
     }
+
+    // Nebula start
+    private bool CanInstall(EntityUid target, EntProtoId? cyberware)
+    {
+        if (cyberware is not { } id)
+            return true;
+
+        var ev = new CyberwareInstallAttemptEvent(id);
+        RaiseLocalEvent(target, ref ev);
+        if (ev.Cancelled && ev.Reason != null)
+            _popup.PopupEntity(ev.Reason, target, target, PopupType.MediumCaution);
+
+        return !ev.Cancelled;
+    }
+    // Nebula end
 
     /// <summary>
     /// Puts the organ into the part, opening a slot for it if the part has none.

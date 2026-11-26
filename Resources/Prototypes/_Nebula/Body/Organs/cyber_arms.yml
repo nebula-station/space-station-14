@@ -610,3 +610,50 @@
       state: r_bulwark_arm
   - type: AugmentAction
     action: ActionCyberToolArmRight
+
+# Combat gorilla arms
+
+- type: entity
+  parent: OrganCyberneticArmLeft
+  id: OrganCombatArmGorillaLeft
+  name: left gorilla combat arm
+  description: A massive combat arm. Unarmed hits crush for 40 damage, shoves knock the wind out, and once a minute a grab goes straight to a hard grab.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: l_bulwark_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: l_bulwark_arm
+  - type: CyberwareHumanity
+    cost: 1
+  - type: OrganActions
+    actions:
+    - ActionGorillaSlam
+  - type: GorillaSlam
+    damage:
+      types:
+        Blunt: 30
+  - type: OrganComponents
+    onAdd:
+    - type: GorillaArms
+      unarmedDamage:
+        types:
+          Blunt: 40
+    - type: Shoving
+      staminaDamage: 20
+
+- type: entity
+  parent: OrganCyberneticArmRight
+  id: OrganCombatArmGorillaRight
+  name: right gorilla combat arm
+  description: A massive combat arm, the pair of the left one that holds all its strength.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+    state: r_bulwark_arm
+  - type: VisualOrgan
+    data:
+      sprite: _Starlight/Mobs/Species/Cyberlimbs/parts.rsi
+      state: r_bulwark_arm
