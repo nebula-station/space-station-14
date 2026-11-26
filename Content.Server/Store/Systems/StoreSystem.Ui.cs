@@ -168,6 +168,8 @@ public sealed partial class StoreSystem
 
             RaiseLocalEvent(product, new ItemPurchasedEvent(buyer));
 
+            ArcaneHandleUplinkRefundable(uid, cost, product); // Nebula edit
+
             HandleRefundComp(uid, component, product, cost, listing); // Trauma - added cost and listing
 
             var xForm = Transform(product);
