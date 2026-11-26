@@ -503,6 +503,7 @@ public sealed partial class AdminLogsControl : Control
             }
 
             LogsContainer.AddChild(label);
+            GoobAddLogControls(label); // Nebula edit
             LogsContainer.AddChild(separator);
         }
 

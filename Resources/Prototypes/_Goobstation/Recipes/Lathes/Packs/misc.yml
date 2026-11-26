@@ -27,6 +27,7 @@
   recipes:
   - ToolboxMechanical
   - Pen
+  - PaintCan
 
 - type: latheRecipePack
   id: SyndicateCartridgesStatic
