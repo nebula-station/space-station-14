@@ -26,6 +26,14 @@ public sealed partial class CyberAutoSurgeonComponent : Component
     [DataField]
     public EntProtoId<OrganComponent>? NewOrgan;
 
+    // Nebula start
+    /// <summary>
+    /// If set, <see cref="NewOrgan"/> goes into the user's active hand or into the arm holding that hand instead of <see cref="TargetPart"/>.
+    /// </summary>
+    [DataField]
+    public BodyPartType? ActiveHandPart;
+    // Nebula end
+
     /// <summary>
     /// Puts a new organ of this prototype into every body part of <see cref="PartType"/>,
     /// like a mantis blade into both arms. Parts that already have their slot taken are skipped.

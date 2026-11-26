@@ -130,7 +130,7 @@
   parent: BaseAction
   id: ActionActivateOpticalCamo
   name: Optical Camo
-  description: Turn fully invisible for 7 seconds and move 10% faster. Attacking or taking damage breaks the camo, the first hit deals 40% more damage.
+  description: Turn fully invisible for a minute and move 10% faster. Attacking or taking damage breaks the camo, the first hit deals 40% more damage.
   components:
   - type: Sprite
     sprite: _LuaM/Objects/Misc/optical_camo.rsi

@@ -768,7 +768,6 @@
     whitelist:
     - UplinkAutosurgeonMantisBladesPlasteel # Nebula edit
     - UplinkAutosurgeonMantisBladesMieyo # Nebula edit
-    - UplinkAutosurgeonMantisBladesMaxTac # Nebula edit
     - UplinkAutosurgeonStatvekaSandevistan
   - !type:BuyerWhitelistCondition
     blacklist:

@@ -1,0 +1,11 @@
+# Hand implants need the hand to be their parent organ.
+
+- type: entity
+  id: OrganBaseHandLeft
+  components:
+  - type: ParentOrgan
+
+- type: entity
+  id: OrganBaseHandRight
+  components:
+  - type: ParentOrgan

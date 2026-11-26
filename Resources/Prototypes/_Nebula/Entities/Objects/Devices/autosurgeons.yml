@@ -1,0 +1,65 @@
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonHeartReviver
+  name: autosurgeon (reviver implant)
+  description: Attaches a reviver implant to the heart.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: HeartImplantReviver
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonBreathingTube
+  name: autosurgeon (breathing tube implant)
+  description: Installs a breathing tube implant into the throat.
+  components:
+  - type: CyberAutoSurgeon
+    targetPart: Head
+    newOrgan: ThroatImplantBreathingTube
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonAntiDrop
+  name: autosurgeon (anti-drop implant)
+  description: Installs an anti-drop implant into the hand of the active arm.
+  components:
+  - type: CyberAutoSurgeon
+    activeHandPart: Hand
+    newOrgan: HandImplantAntiDrop
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonCnsRebooter
+  name: autosurgeon (CNS rebooter implant)
+  description: Wires a CNS rebooter into the central nervous system, replacing the current CNS implant.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: CnsImplantRebooter
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonRiotShieldArm
+  name: autosurgeon (arm-mounted riot shield)
+  description: Installs an arm-mounted riot shield into the active arm.
+  components:
+  - type: CyberAutoSurgeon
+    activeHandPart: Arm
+    newOrgan: ArmImplantRiotShield
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonCyberArmAngelLeft
+  name: autosurgeon (left angel arm)
+  description: Replaces the left arm with an angel medical cyberarm. The hand and its implants are kept.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganCyberArmAngelLeft
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonCyberArmAngelRight
+  name: autosurgeon (right angel arm)
+  description: Replaces the right arm with an angel medical cyberarm. The hand and its implants are kept.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganCyberArmAngelRight

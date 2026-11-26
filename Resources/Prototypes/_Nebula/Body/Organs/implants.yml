@@ -231,6 +231,7 @@
     healing:
       types:
         Asphyxiation: -5
+        Bloodloss: -5
         Blunt: -2
         Slash: -2
         Piercing: -2

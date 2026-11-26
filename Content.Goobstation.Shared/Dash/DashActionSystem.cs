@@ -23,10 +23,26 @@ public sealed partial class DashActionSystem : EntitySystem
     [SubscribeLocalEvent]
     private void OnDashAction(Entity<DashActionComponent> ent, ref DashActionEvent args)
     {
+        // Nebula start
+        Dash(ent, args);
+    }
+
+    /// <summary>
+    /// Dashes the performer of actions without a dash component, like the mantis blade combo.
+    /// </summary>
+    [SubscribeLocalEvent]
+    private void OnDashBroadcast(DashActionEvent args)
+    {
+        Dash(args.Performer, args);
+    }
+
+    private void Dash(EntityUid ent, DashActionEvent args)
+    {
+        // Nebula end
         if (args.Handled)
             return;
 
-        if (args.NeedsGravity && _gravity.IsWeightless(ent.Owner))
+        if (args.NeedsGravity && _gravity.IsWeightless(ent)) // Nebula edit
             return;
 
         args.Handled = true;

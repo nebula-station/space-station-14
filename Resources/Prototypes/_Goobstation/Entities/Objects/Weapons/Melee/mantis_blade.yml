@@ -18,8 +18,8 @@
     animationRotation: 120
     swingLeft: true
     wideAnimationRotation: 135
-    attackRate: 1.5
     # Nebula start
+    attackRate: 1
     damage:
       types:
         Slash: 12
