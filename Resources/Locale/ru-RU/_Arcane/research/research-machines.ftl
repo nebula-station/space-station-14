@@ -30,10 +30,12 @@ research-machine-experimental-destructive-scanner-completed = { $count ->
     [one] Завершён { $count } эксперимент.
     [few] Завершено { $count } эксперимента.
    *[many] Завершено { $count } экспериментов.
+    }
 research-machine-experimental-destructive-scanner-completed-named = { $count ->
     [one] Завершён { $count } эксперимент: { $experiments }.
     [few] Завершено { $count } эксперимента: { $experiments }.
    *[many] Завершено { $count } экспериментов: { $experiments }.
+    }
 research-machine-destructive-run = Запустить анализ
 research-machine-eject-button = Извлечь предмет
 research-machine-destructive-item-loaded = Образец загружен.
@@ -53,6 +55,7 @@ research-machine-experimental-destructive-scanner-processing = { $count ->
     [one] Сканер закрылся и начал обработку { $count } образца.
     [few] Сканер закрылся и начал обработку { $count } образца.
    *[many] Сканер закрылся и начал обработку { $count } образцов.
+    }
 research-machine-experimental-destructive-scanner-state-processing = обработка...
 research-machine-experimental-destructive-scanner-status = Статус
 research-machine-destructive-method-deconstruct = Деконструкция
