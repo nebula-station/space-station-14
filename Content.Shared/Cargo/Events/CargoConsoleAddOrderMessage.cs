@@ -13,6 +13,12 @@ public sealed class CargoConsoleAddOrderMessage : BoundUserInterfaceMessage
     public string CargoProductId;
     public int Amount;
 
+    // Nebula start
+    public string? DeliveryDestination;
+    public bool SecuredDelivery;
+    public bool PayPrivately;
+    // Nebula end
+
     public CargoConsoleAddOrderMessage(string requester, string reason, string cargoProductId, int amount)
     {
         Requester = requester;

@@ -55,6 +55,15 @@
                        VerticalExpand="True"
                        StyleClasses="LabelSubText"
                        ClipText="True" />
+
+                <!-- Nebula start -->
+                <Label Name="DeliveryDestination"
+                       Access="Public"
+                       HorizontalExpand="True"
+                       VerticalExpand="True"
+                       StyleClasses="LabelSubText"
+                       ClipText="True" />
+                <!-- Nebula end -->
             </BoxContainer>
         </BoxContainer>
 

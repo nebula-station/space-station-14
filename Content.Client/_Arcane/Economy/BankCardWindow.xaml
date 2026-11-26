@@ -1,0 +1,18 @@
+<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc 'bank-card-window-title'}"
+               MinSize="320 200">
+    <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="6">
+        <Label Name="AccountLabel" StyleClasses="LabelSubText" />
+        <BoxContainer Orientation="Horizontal" SeparationOverride="4">
+            <Label Text="{Loc 'bank-card-balance'}" />
+            <Label Name="BalanceLabel" StyleClasses="LabelHeading" />
+        </BoxContainer>
+        <Label Text="{Loc 'bank-card-withdraw-section'}" />
+        <BoxContainer Orientation="Horizontal" SeparationOverride="4">
+            <LineEdit Name="AmountInput" HorizontalExpand="True" PlaceHolder="{Loc 'bank-card-withdraw-amount'}" />
+            <Button Name="MaxButton" Text="{Loc 'bank-card-withdraw-max'}" />
+        </BoxContainer>
+        <Button Name="WithdrawButton" Text="{Loc 'bank-card-withdraw-button'}" />
+        <Label Text="{Loc 'bank-card-withdraw-hint'}" StyleClasses="LabelSubText" />
+    </BoxContainer>
+</DefaultWindow>

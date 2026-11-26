@@ -260,7 +260,15 @@ namespace Content.Client.Cargo.UI
                             Loc.GetString(
                                 "cargo-console-menu-order-row-product-description",
                                 ("orderReason", Loc.GetString("cargo-console-menu-order-row-alerts-reason-absent")))
-                    }
+                    },
+
+                    // Nebula start
+                    DeliveryDestination =
+                    {
+                        Text = Loc.GetString("cargo-console-menu-order-row-product-delivery-destination",
+                            ("destination", order.DeliveryDestination ?? Loc.GetString("cargo-console-paper-delivery-destination-default"))),
+                    },
+                    // Nebula end
                 };
 
                 row.Cancel.OnPressed += (args) => { OnOrderCanceled?.Invoke(order); };

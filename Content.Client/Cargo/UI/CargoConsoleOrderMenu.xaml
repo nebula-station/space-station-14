@@ -28,7 +28,17 @@
                    StyleClasses="LabelKeyText" />
 
             <LineEdit Name="Requester"
-                      Access="Public" />
+                      Access="Public"
+                      Editable="False" /> <!-- Nebula edit -->
+
+            <!-- Nebula start -->
+            <Label Text="{Loc 'cargo-console-order-menu-delivery-destination'}"
+                   StyleClasses="LabelKeyText" />
+
+            <LineEdit Name="DeliveryDestination"
+                      Access="Public"
+                      PlaceHolder="{Loc 'cargo-console-paper-delivery-destination-default'}" />
+            <!-- Nebula end -->
 
             <Label Text="{Loc 'cargo-console-order-menu-reason-label'}"
                    StyleClasses="LabelKeyText" />
@@ -43,6 +53,15 @@
                      Access="Public"
                      HorizontalExpand="True"
                      Value="1" />
+
+            <!-- Nebula start -->
+            <Control />
+            <CheckBox Name="SecureDelivery"
+                      Access="Public" />
+            <Control />
+            <CheckBox Name="PayPrivately"
+                      Access="Public" />
+            <!-- Nebula end -->
         </GridContainer>
         <Control VerticalExpand="True"/>
         <controls:Separator StyleClasses="LowDivider" Margin="0 6 0 2"/>

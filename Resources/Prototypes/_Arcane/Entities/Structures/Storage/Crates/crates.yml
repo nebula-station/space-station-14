@@ -1,0 +1,7 @@
+- type: entity
+  parent: CratePrivateSecure
+  id: CratePrivateCargoSecure
+  name: secure cargo crate
+  components:
+  - type: AccessReader
+    access: [["Cargo"]]
