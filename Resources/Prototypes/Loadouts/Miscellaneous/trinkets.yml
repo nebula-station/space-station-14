@@ -88,9 +88,9 @@
 
 - type: loadout
   id: CigarCase
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: Command
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: Command # Nebula edit
   storage:
     back:
     - CigarCase

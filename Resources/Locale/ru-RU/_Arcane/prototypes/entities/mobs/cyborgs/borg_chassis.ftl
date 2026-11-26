@@ -1,0 +1,12 @@
+ent-BorgChassisGenericBugborg = борг "жук"
+    .desc = { ent-BorgChassisGeneric.desc }
+ent-BorgChassisMiningBugborg = борг-шахтёр "жук"
+    .desc = { ent-BorgChassisMining.desc }
+ent-BorgChassisEngineerBug = борг-инженер "жук"
+    .desc = { ent-BorgChassisEngineer.desc }
+ent-BorgChassisServiceSlenderbug = борг-официант "жук-слендер"
+    .desc = { ent-BorgChassisService.desc }
+ent-BorgChassisServiceBugtractor = борг-официант "жук-трактор"
+    .desc = { ent-BorgChassisService.desc }
+ent-BorgChassisServiceBugdj = борг-уборщик "жук"
+    .desc = { ent-BorgChassisService.desc }

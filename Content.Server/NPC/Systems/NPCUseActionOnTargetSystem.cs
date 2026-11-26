@@ -20,6 +20,7 @@ public sealed partial class NPCUseActionOnTargetSystem : EntitySystem
     private void OnMapInit(Entity<NPCUseActionOnTargetComponent> ent, ref MapInitEvent args)
     {
         ent.Comp.ActionEnt = _actions.AddAction(ent, ent.Comp.ActionId);
+        AddExtraActions(ent); // Nebula edit
     }
 
     public bool TryUseTentacleAttack(Entity<NPCUseActionOnTargetComponent?> user, EntityUid target)
@@ -27,7 +28,7 @@ public sealed partial class NPCUseActionOnTargetSystem : EntitySystem
         if (!Resolve(user, ref user.Comp, false))
             return false;
 
-        if (_actions.GetAction(user.Comp.ActionEnt) is not {} action)
+        if (_actions.GetAction(PickAction(user.Comp)) is not {} action) // Nebula edit
             return false;
 
         if (!_actions.ValidAction(action))

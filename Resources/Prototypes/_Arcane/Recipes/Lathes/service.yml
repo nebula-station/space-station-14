@@ -1,0 +1,9 @@
+- type: latheRecipe
+  id: ConfettiGrenade
+  result: ConfettiGrenade
+  categories:
+  - Service
+  completetime: 3
+  materials:
+    Steel: 20
+    Plastic: 500

@@ -250,6 +250,11 @@
     - state: icon-unlit
       shader: unshaded
   # Nebula start
+  - type: Construction
+    graph: BagOfHoldingDuffel
+    node: bag_of_holding
+  # Nebula end
+  # Nebula start
   - type: ClothingSpeedModifier
     sprintModifier: 1
     walkModifier: 1

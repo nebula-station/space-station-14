@@ -36,6 +36,6 @@
   id: ResearchDirectorLabCoatPurple
   equipment:
     outerClothing: ClothingOuterCoatRDPurple
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterRD
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: MasterRD # Nebula edit

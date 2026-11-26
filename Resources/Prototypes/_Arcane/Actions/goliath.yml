@@ -1,0 +1,71 @@
+- type: entity
+  parent: ActionGoliathTentacle
+  id: ActionGoliathTentacleSquare
+  name: "[color=red]Tentacle Square Slam[/color]"
+  description: Use your tentacles to grab and stun a target player!
+  components:
+  - type: Action
+    raiseOnUser: true
+    sound:
+      path: "/Audio/Weapons/slash.ogg"
+    useDelay: 12
+  - type: WorldTargetAction
+    event: !type:GoliathSummonTentaclePatternAction
+      pattern: Square
+      size: 3
+
+- type: entity
+  parent: ActionGoliathTentacle
+  id: ActionGoliathTentacleHollowSquare
+  name: "[color=red]Tentacle Hollow Square Slam[/color]"
+  description: Use your tentacles to grab and stun a target player!
+  components:
+  - type: Action
+    raiseOnUser: true
+    sound:
+      path: "/Audio/Weapons/slash.ogg"
+    useDelay: 14
+  - type: WorldTargetAction
+    event: !type:GoliathSummonTentaclePatternAction
+      pattern: HollowSquare
+      size: 5
+
+- type: entity
+  parent: ActionGoliathTentacle
+  id: ActionGoliathTentacleDiagonalCross
+  name: "[color=red]Tentacle Diagonal Cross Slam[/color]"
+  description: Use your tentacles to grab and stun a target player!
+  components:
+  - type: Action
+    raiseOnUser: true
+    sound:
+      path: "/Audio/Weapons/slash.ogg"
+    useDelay: 10
+  - type: WorldTargetAction
+    event: !type:GoliathSummonTentaclePatternAction
+      pattern: DiagonalCross
+      size: 5
+
+- type: entity
+  parent: BaseAction
+  id: ActionGoliathSpawnBaby
+  name: "[color=green]Rise Goliath Baby[/color]"
+  description: Attack!
+  components:
+  - type: Action
+    raiseOnUser: true
+    sound:
+      path: "/Audio/Weapons/slash.ogg"
+    useDelay: 45
+  - type: Sprite
+    sprite: _Arcane/Interface/Actions/broodmother.rsi
+    layers:
+    - state: spawn_children
+      map: ["enum.ActionVisuals.Icon"]
+    - state: spawn_children_on
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  - type: TargetAction
+    range: 4
+  - type: WorldTargetAction
+    event: !type:GoliathSummonBabyAction

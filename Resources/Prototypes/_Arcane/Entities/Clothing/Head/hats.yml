@@ -357,3 +357,14 @@
     sprite: _Arcane/Clothing/Head/Hats/inteq_headband.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/Head/Hats/inteq_headband.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretCaptainWhite
+  name: white captain beret
+  description: A white captain beret, an icon of style.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Hats/white_beret.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Hats/white_beret.rsi

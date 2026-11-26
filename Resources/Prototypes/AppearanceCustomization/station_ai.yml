@@ -46,6 +46,17 @@
   - StationAiHologramFace
   - StationAiHologramCat
   - StationAiHologramDog
+  # Nebula start
+  - StationAiHologramAlgalone
+  - StationAiHologramFractalsnowflake
+  - StationAiHologramHensonsnode
+  - StationAiHologramLongrun
+  - StationAiHologramNtpaint
+  - StationAiHologramPuredata
+  - StationAiHologramRorschach
+  - StationAiHologramSeraphim
+  - StationAiHologramTripleaffirmative
+  # Nebula end
 
 # Iconography
 - type: stationAiCustomization

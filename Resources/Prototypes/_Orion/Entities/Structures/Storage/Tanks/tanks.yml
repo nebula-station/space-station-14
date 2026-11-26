@@ -1,0 +1,21 @@
+- type: entity
+  parent: StorageTank
+  id: KvassTank
+  name: kvass tank
+  description: That very barrel of refreshing bread nectar.
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Storage/kvass.rsi
+    state: kvass
+
+- type: entity
+  parent: KvassTank
+  id: KvassTankFull
+  suffix: Full
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Kvass
+        Quantity: 500

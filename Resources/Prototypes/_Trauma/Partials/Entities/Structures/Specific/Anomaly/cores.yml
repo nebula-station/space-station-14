@@ -89,6 +89,7 @@
     tags:
     - AnomalyCoreBluespace
     - ForceableFollow
+    - BluespaceAnomalyCore # Nebula edit
 
 - type: entity
   id: AnomalyCoreElectricity

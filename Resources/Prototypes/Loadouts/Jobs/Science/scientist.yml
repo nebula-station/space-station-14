@@ -17,9 +17,9 @@
 - type: loadout
   id: ScientificBeret
   startingGear: ScientificBeret
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: SeniorResearcher # Nebula edit
 
 - type: loadout
   id: RoboticistCap

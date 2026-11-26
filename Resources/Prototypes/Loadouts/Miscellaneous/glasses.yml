@@ -28,17 +28,17 @@
 # Jamjar
 - type: loadout
   id: GlassesJamjar
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: JamjarTimer
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: JamjarTimer # Nebula edit
   equipment:
     eyes: ClothingEyesGlassesJamjar
 
 # Jensen
 - type: loadout
   id: GlassesJensen
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: JensenTimer
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: JensenTimer # Nebula edit
   equipment:
     eyes: ClothingEyesGlassesJensen

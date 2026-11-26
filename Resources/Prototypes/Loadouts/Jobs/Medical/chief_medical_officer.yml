@@ -40,9 +40,9 @@
   id: ChiefMedicalOfficerMantle
   equipment:
     neck: ClothingNeckMantleCMO
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterCMO
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: MasterCMO # Nebula edit
 
 # Outer clothing
 - type: loadout

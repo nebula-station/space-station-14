@@ -1,0 +1,9 @@
+station-ai-hologram-algalone = Алгал Один
+station-ai-hologram-fractalsnowflake = Фрактальная снежинка
+station-ai-hologram-hensonsnode = Узел Хенсона
+station-ai-hologram-longrun = Долгий забег
+station-ai-hologram-ntpaint = НТкраски
+station-ai-hologram-puredata = Чистые данные
+station-ai-hologram-rorschach = Роршах
+station-ai-hologram-seraphim = Серафим
+station-ai-hologram-tripleaffirmative = Тройное подтверждение

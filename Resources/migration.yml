@@ -250,7 +250,7 @@ GunSafeAdjutantShotgun: null
 GunSafeEnergyGunMini: null
 GunSafeVulcanRifle: null
 HatSpawner: null
-KvassTankFull: null
+# KvassTankFull: null # Nebula edit
 LockerForensicMantisFilled: null
 LunchboxSecurityFilledRandom: null
 MagazineBoxSpecialPractice: null

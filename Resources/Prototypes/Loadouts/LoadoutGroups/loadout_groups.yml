@@ -158,6 +158,12 @@
   loadouts:
   - CaptainHead
   - CaptainCap
+  # Nebula start
+  - CaptainWhiteBeret
+  - SheriffBeret
+  - CaptainWhiteCap
+  - SheriffCap
+  # Nebula end
 
 - type: loadoutGroup
   id: CaptainJumpsuit
@@ -169,6 +175,13 @@
   - CaptainFormalSkirt
   - CaptainJumpsuitMilitary # goob
   - CaptainSummerShirt # also goob
+  # Nebula start
+  - CaptainWhiteJumpsuit
+  - CaptainWhiteJumpskirt
+  - CaptainWhiteTurtleneck
+  - CaptainCommandJumpsuit
+  - SheriffJumpsuit
+  # Nebula end
 
 - type: loadoutGroup
   id: CaptainNeck
@@ -179,6 +192,12 @@
   - CaptainCloakFormal
   - CaptainMantle
   - VeteranCaptainCloak # goob
+  # Nebula start
+  - CaptainWideCloak
+  - CaptainRoyalCloak
+  - CaptainWhiteMantle
+  - CaptainWhiteShoulderMantle
+  # Nebula end
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -196,6 +215,10 @@
   - CaptainOuterClothing
   # - CaptainWintercoat
   - CaptainJacket # Goobstation
+  # Nebula start
+  - CaptainWhiteCoat
+  - CaptainSheriffCoat
+  # Nebula end
 
 #- type: loadoutGroup
 #  id: CaptainJobTrinkets
@@ -1080,6 +1103,7 @@
   minLimit: 0
   loadouts:
   - ResearchDirectorBeret
+  - TinfoilHat # Nebula edit
 
 - type: loadoutGroup
   id: ResearchDirectorNeck
@@ -1128,6 +1152,7 @@
   #- RoboticistCap
   #- SkullBandana
   - ScientificBeret
+  - TinfoilHat # Nebula edit
 
 - type: loadoutGroup
   id: ScientistNeck
@@ -1301,6 +1326,7 @@
   - SecurityHat
   - TrooperHat
   - SergeantBeret # Trauma
+  - SecuritySideCap # Nebula edit
 
 - type: loadoutGroup
   id: SecurityJumpsuit

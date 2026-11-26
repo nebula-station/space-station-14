@@ -31,6 +31,6 @@
   id: WardenCoatBlue
   equipment:
     outerClothing: ClothingOuterCoatWardenBlue
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorWarden
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: SeniorWarden # Nebula edit

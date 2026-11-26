@@ -8,3 +8,14 @@
     sprite: _Arcane/Clothing/Head/Soft/inteq_softhat.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/Head/Soft/inteq_softhat.rsi
+
+- type: entity
+  parent: ClothingHeadHatBeretSecurity
+  id: ClothingHeadHatSecuritySideCap
+  name: security side cap
+  description: Security side cap, cool.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Soft/security_side_cap.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Soft/security_side_cap.rsi

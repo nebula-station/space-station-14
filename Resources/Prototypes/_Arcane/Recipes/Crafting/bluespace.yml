@@ -1,0 +1,43 @@
+- type: construction
+  id: ClothingBackpackHolding
+  graph: BagOfHoldingBackpack
+  startNode: start
+  targetNode: bag_of_holding
+  category: construction-category-storage
+  objectType: Item
+  # <Trauma>
+  theory:
+    FabricationKnowledge: 0
+
+- type: construction
+  id: ClothingBackpackSatchelHolding
+  graph: BagOfHoldingSatchel
+  startNode: start
+  targetNode: bag_of_holding
+  category: construction-category-storage
+  objectType: Item
+  # <Trauma>
+  theory:
+    FabricationKnowledge: 0
+
+- type: construction
+  id: ClothingBackpackDuffelHolding
+  graph: BagOfHoldingDuffel
+  startNode: start
+  targetNode: bag_of_holding
+  category: construction-category-storage
+  objectType: Item
+  # <Trauma>
+  theory:
+    FabricationKnowledge: 0
+
+- type: construction
+  id: ClothingBackpackMessengerHolding
+  graph: BagOfHoldingMessenger
+  startNode: start
+  targetNode: bag_of_holding
+  category: construction-category-storage
+  objectType: Item
+  # <Trauma>
+  theory:
+    FabricationKnowledge: 0

@@ -53,9 +53,9 @@
   id: HoPMantle
   equipment:
     neck: ClothingNeckMantleHOP
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterHoP
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: MasterHoP # Nebula edit
 
 - type: startingGear
   id: HoPMantle

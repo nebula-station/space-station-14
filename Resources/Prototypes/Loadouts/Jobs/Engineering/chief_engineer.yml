@@ -65,9 +65,9 @@
   id: ChiefEngineerMantle
   equipment:
     neck: ClothingNeckMantleCE
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterCE
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: MasterCE # Nebula edit
 
 - type: startingGear
   id: ChiefEngineerMantle

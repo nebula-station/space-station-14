@@ -1,0 +1,4 @@
+- type: loadout
+  id: SecuritySideCap
+  equipment:
+    head: ClothingHeadHatSecuritySideCap

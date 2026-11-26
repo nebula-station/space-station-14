@@ -11,9 +11,9 @@
 
 - type: loadout
   id: BotanistBeret
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterBotanist
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: MasterBotanist # Nebula edit
   equipment:
     head: ClothingHeadHatBeretSeniorBotanist
 

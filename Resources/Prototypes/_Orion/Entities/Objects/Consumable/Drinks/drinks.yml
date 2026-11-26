@@ -1,0 +1,13 @@
+- type: entity
+  parent: DrinkGlass
+  id: DrinkKvassGlass
+  suffix: kvass
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Kvass
+        Quantity: 30
+  - type: Icon
+    sprite: _Orion/Objects/Consumable/Drinks/kvass.rsi
+    state: icon
