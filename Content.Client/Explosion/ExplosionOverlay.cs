@@ -15,7 +15,7 @@ public sealed partial class ExplosionOverlay : Overlay
 {
     private static readonly ProtoId<ShaderPrototype> UnshadedShader = "unshaded";
 
-    [Dependency] private IRobustRandom _robustRandom = default!;
+    // [Dependency] private IRobustRandom _robustRandom = default!; // Nebula edit
     [Dependency] private IEntityManager _entMan = default!;
     [Dependency] private IPrototypeManager _proto = default!;
     private readonly SharedTransformSystem _transformSystem;
@@ -110,6 +110,7 @@ public sealed partial class ExplosionOverlay : Overlay
 
             var frameIndex = (int) Math.Min(visuals.Intensity[j] / textures.IntensityPerState, textures.FireFrames.Count - 1);
             var frames = textures.FireFrames[frameIndex];
+            var texture = GetAnimatedFrame(frames, textures.FireDelays[frameIndex]); // Nebula edit
 
             foreach (var tile in tiles)
             {
@@ -118,7 +119,7 @@ public sealed partial class ExplosionOverlay : Overlay
                 if (!gridBounds.Contains(centre))
                     continue;
 
-                var texture = _robustRandom.Pick(frames);
+                // var texture = _robustRandom.Pick(frames); // Nebula edit
                 drawHandle.DrawTextureRect(texture, Box2.CenteredAround(centre, new Vector2(tileSize, tileSize)), textures.FireColor);
             }
         }
