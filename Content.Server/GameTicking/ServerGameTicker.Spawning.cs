@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
+using Content.Server._Orion.Ghost;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
 using Content.Server.GameTicking.Events;
@@ -216,6 +217,11 @@ namespace Content.Server.GameTicking
                 // This does not utilize overflow job slots, so if the character profile
                 // had no available job priorities (ie Captain on Dev) set, then the player will spawn as a ghost
             }
+
+            // Nebula start
+            if (lateJoin && !EntityManager.System<GhostReturnToRoundSystem>().CanLateJoinAs(player, character))
+                return;
+            // Nebula end
 
             // We raise this event to allow other systems to handle spawning this player themselves. (e.g. late-join wizard, etc)
             var bev = new PlayerBeforeSpawnEvent(player, character, jobId, lateJoin, station);
