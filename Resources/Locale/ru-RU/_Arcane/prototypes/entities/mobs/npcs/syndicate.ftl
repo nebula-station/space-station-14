@@ -1,10 +1,15 @@
 ent-MobSimpleSyndicateBlade = солдат синдиката
+    .desc = Наёмник Синдиката.
     .suffix = ИИ, Энергетический меч
 ent-MobSimpleSyndicateKnife = солдат синдиката
+    .desc = Наёмник Синдиката.
     .suffix = ИИ, Ножик
 ent-MobSimpleSyndicatePistol = солдат синдиката
+    .desc = Наёмник Синдиката.
     .suffix = ИИ, Пистолет
 ent-MobSimpleSyndicateShotgun = солдат синдиката
+    .desc = Наёмник Синдиката.
     .suffix = ИИ, Дробовик
 ent-MobSimpleSyndicateSMG = солдат синдиката
+    .desc = Наёмник Синдиката.
     .suffix = ИИ, ПП

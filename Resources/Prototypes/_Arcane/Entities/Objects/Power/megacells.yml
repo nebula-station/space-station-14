@@ -21,7 +21,6 @@
   - type: Tag
     tags:
     - MegaCell
-    - DroneUsable # Goobstation
 
 - type: entity
   parent: BaseMegaCell
