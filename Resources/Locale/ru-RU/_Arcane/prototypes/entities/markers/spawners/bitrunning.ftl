@@ -1,0 +1,9 @@
+ent-SpawnMobExperimentalSoldierBitrunning = Спавнер экспериментального солдата Синдиката
+    .suffix = ИИ, Битраннинг
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobNukeopsSoldierBitrunning = Спавнер солдата ядерного оперативника
+    .suffix = ИИ, Битраннинг
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobSyndicateSoldierBitrunning = Спавнер солдата Синдиката
+    .suffix = ИИ, Битраннинг
+    .desc = { ent-MarkerBase.desc }

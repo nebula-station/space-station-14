@@ -1,0 +1,124 @@
+- type: entity
+  parent: BaseStructure
+  id: RMCMachinePropBase
+  abstract: true
+  name: machinery
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Arcane/RMC14/Structures/hybrisa_machine_props.rsi
+    offset: 0,0.5
+    state: buildingventbig1
+  - type: Appearance
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 75
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  id: RMCMachinePropBaseOverhead
+  abstract: true
+  name: machinery
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: SpriteFade
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    noRot: true
+    sprite: _Arcane/RMC14/Structures/hybrisa_machine_props.rsi
+    offset: 0.25,0.5
+    state: buildingventbig11
+    drawdepth: Overdoors
+  - type: Anchorable
+  - type: Clickable
+
+- type: entity
+  id: RMCMachinePropBaseWall
+  abstract: true
+  name: machinery
+  components:
+  - type: Transform
+  - type: Sprite
+    sprite: _Arcane/RMC14/Structures/hybrisa_machine_wall_props.rsi
+    drawdepth: WallMountedItems
+  - type: Appearance
+  - type: WallMount
+    arc: 360
+
+- type: entity
+  parent: RMCMachinePropBase
+  id: RMCMachinePropBaseWide
+  abstract: true
+  components:
+  - type: Sprite
+    offset: 0.5,0.5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0,-0.25,1,0.25"
+        density: 75
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  parent: RMCMachinePropBase
+  id: RMCMachinePropBig1
+  components:
+  - type: Sprite
+    sprite: _Arcane/RMC14/Structures/hybrisa_machine_props.rsi
+    state: buildingventbig1
+
+- type: entity
+  parent: RMCMachinePropBase
+  id: RMCMachinePropBig10
+  components:
+  - type: Sprite
+    sprite: _Arcane/RMC14/Structures/hybrisa_machine_props.rsi
+    state: buildingventbig10
+
+- type: entity
+  parent: RMCMachinePropBaseOverhead
+  id: RMCMachinePropBig11
+  components:
+  - type: Sprite
+    sprite: _Arcane/RMC14/Structures/hybrisa_machine_props.rsi
+    state: buildingventbig11
+
+- type: entity
+  parent: RMCMachinePropBaseWide
+  id: RMCMachinePropBig6
+  components:
+  - type: Sprite
+    sprite: _Arcane/RMC14/Structures/hybrisa_machine_props.rsi
+    state: buildingventbig6
+
+- type: entity
+  parent: RMCMachinePropBaseWide
+  id: RMCMachinePropBig7
+  components:
+  - type: Sprite
+    sprite: _Arcane/RMC14/Structures/hybrisa_machine_props.rsi
+    state: buildingventbig7
+
+- type: entity
+  parent: RMCMachinePropBaseWall
+  id: RMCMachinePropSmallVent2
+  name: wall vent
+  components:
+  - type: Sprite
+    state: smallwallvent2
