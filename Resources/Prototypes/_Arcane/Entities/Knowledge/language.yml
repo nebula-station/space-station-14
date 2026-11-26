@@ -1,0 +1,6 @@
+- type: entity
+  parent: BaseLanguageKnowledge
+  id: LanguageOldFastCodes
+  components:
+  - type: LanguageKnowledge
+    languageId: OldFastCodes

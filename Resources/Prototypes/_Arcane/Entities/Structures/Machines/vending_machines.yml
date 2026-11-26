@@ -85,3 +85,38 @@
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
   # Nebula edit
+
+- type: entity
+  parent: VendingMachineInteQDrobe
+  id: VendingMachineInteQDrobeNerf
+  suffix: For station hiden places
+  components:
+  - type: VendingMachine
+    pack: InteQDrobeNerfInventory
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineInteQDrobe
+  name: InteQDrobe
+  description: Wardrobe machine encoded by the InteQ, contains elite outfits for various operations.
+  components:
+  - type: VendingMachine
+    pack: InteQDrobeInventory
+  - type: SpeakOnUIClosed
+    pack: InteQDrobeAds
+  - type: Sprite
+    sprite: _Arcane/Structures/Machines/VendingMachines/inteqdrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#FF8C00"
+  - type: AccessReader
+    access: [["InteQVanguardLeader"], ["InteQVanguard"]]

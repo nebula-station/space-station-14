@@ -1,0 +1,31 @@
+- type: construction
+  id: UraniumWindowDirectionalCorner
+  graph: WindowDirectionalCorner
+  startNode: start
+  targetNode: uraniumWindowDirectionalCorner
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+  - !type:EmptyOrWindowValidInTile
+  - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  # <Trauma>
+  theory:
+    FabricationKnowledge: 0
+
+- type: construction
+  id: UraniumReinforcedWindowDirectionalCorner
+  graph: WindowDirectionalCorner
+  startNode: start
+  targetNode: uraniumReinforcedWindowDirectionalCorner
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+  - !type:EmptyOrWindowValidInTile
+  - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  # <Trauma>
+  theory:
+    FabricationKnowledge: 0

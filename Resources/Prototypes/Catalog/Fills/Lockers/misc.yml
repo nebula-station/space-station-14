@@ -219,6 +219,11 @@
     - id: KnittedBalaclava
       prob: 0.35
     # </Trauma>
+    # Nebula start
+    - !type:NestedSelector
+      tableId: InteQMaintLoot
+      prob: 0.05
+    # Nebula end
     # Tools
     - !type:NestedSelector
       tableId: MaintToolsTable

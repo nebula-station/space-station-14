@@ -18,6 +18,7 @@
       - id: FoodPacketRaisinsTrash
       - id: FoodPacketSemkiTrash
       - id: FoodPacketSusTrash
+      - id: FoodPacketInteQCookiesTrash # Nebula edit
       - id: FoodPacketSyndiTrash
       - id: FoodSnackLollypopTrash # Goobstation - Lollypops
       - id: FoodPacketLollypopTrash # Goobstation - Lollypops

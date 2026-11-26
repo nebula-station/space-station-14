@@ -83,6 +83,7 @@
   - TowelColorSilver
   - TowelColorGold
   # </Trauma>
+  - InteQMiniFlag # Nebula edit
 
 - type: loadoutGroup
   id: AssistiveItems
@@ -302,6 +303,10 @@
   minLimit: 0
   loadouts:
   - PassengerWintercoat
+  # Nebula start
+  - InteQWinter
+  - InteQHoodie
+  # Nebula end
 
 - type: loadoutGroup
   id: PassengerShoes

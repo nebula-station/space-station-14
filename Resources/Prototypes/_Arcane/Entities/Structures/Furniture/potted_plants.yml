@@ -1,0 +1,13 @@
+- type: entity
+  parent: PottedPlantBase
+  id: PottedPlantPlasmaPlant
+  name: plastic potted plasma plant
+  description: Pretty plant, it seems safe? Considering what it's made of.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Structures/Furniture/potted_plants.rsi
+    state: plasma_plant
+  - type: AlwaysHot # Funny
+  - type: PointLight
+    radius: 2
+    color: "#8A2BE2"

@@ -952,7 +952,7 @@
     - Snout
 
 - type: entity
-  parent: ClothingMaskBase
+  parent: ClothingMaskPullableBase # Nebula edit
   id: ClothingMaskNeckGaiter
   name: neck gaiter
   description: Stylish neck gaiter for your neck, can protect from the cosmic wind?...
@@ -967,6 +967,7 @@
     tags:
     - WhitelistChameleon
     - IPCMaskWearable # EE - IPCs
+  - type: BreathMask # Nebula edit
 
 - type: entity
   parent: ClothingMaskNeckGaiter

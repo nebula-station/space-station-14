@@ -1,0 +1,18 @@
+- type: entity
+  parent: CryogenicSleepUnit
+  id: CryostasisSleeper
+  name: cryostasis sleeper
+  description: Although comfortable, this sleeper won't function as anything but a bed ever again.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Structures/cryostasis_sleeper.rsi
+    offset: "0.01,0.08"
+    layers: # no unshaded overlay states in this sprite
+    - state: sleeper_0
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CryostorageVisuals.Full:
+        base:
+          True: { state: sleeper_1 }
+          False: { state: sleeper_0 }

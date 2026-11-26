@@ -1,0 +1,15 @@
+- type: entity
+  parent: BaseGameRule
+  id: InteQAgentInvasion
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-inteqagent-start-announcement
+    startAudio:
+      path: /Audio/Effects/metal_break1.ogg
+    weight: 6
+    minimumPlayers: 15
+    earliestStart: 30
+    reoccurrenceDelay: 50
+  - type: RandomSpawnRule
+    prototype: SpawnMobInteQAgent

@@ -1,0 +1,76 @@
+- type: entity
+  parent: FoodSnackBase
+  id: FoodSnackInteQCookies
+  name: InteQ cookies
+  description: Cookies with something black.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - fortunecookie
+  - type: Sprite
+    sprite: _Arcane/Objects/Consumable/Food/inteq_cookies.rsi
+    state: inteq_cookies
+  - type: Item
+  - type: Edible
+    trash:
+    - FoodPacketInteQCookiesTrash
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: FoodPacketInteQCookiesTrash
+  name: InteQ cookies packet
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Consumable/Food/inteq_cookies.rsi
+    state: inteq_cookies_trash
+
+- type: entity
+  parent: FoodSnackBase
+  id: FoodSnackCoalCrunch
+  name: coal crunch
+  description: Cracker rounds fashioned from refined coal. Delicious to Synths!
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bitter
+    - chalky
+  - type: Sprite
+    sprite: _Arcane/Objects/Consumable/Food/snacks.rsi
+    state: coalcrunch
+  - type: Solution
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 5
+      - ReagentId: Carbon
+        Quantity: 4.3
+      - ReagentId: Hydrogen
+        Quantity: 0.5
+      - ReagentId: Sulfur
+        Quantity: 0.2
+  - type: Item
+    sprite: _Arcane/Objects/Consumable/Food/snacks.rsi
+    heldPrefix: coalcrunch
+  - type: Edible
+    trash:
+    - FoodPacketCoalCrunchTrash
+
+- type: entity
+  parent: FoodPacketTrash
+  id: FoodPacketCoalCrunchTrash
+  categories: [ HideSpawnMenu ]
+  name: coal crunch wrapper
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Consumable/Food/snacks.rsi
+    state: coalcrunch-trash
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: trash-inhand-left
+        color: "#5180D5"
+      right:
+      - state: trash-inhand-right
+        color: "#5180D5"

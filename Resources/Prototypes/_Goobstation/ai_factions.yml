@@ -3,6 +3,10 @@
 - type: npcFaction
   id: DevilFaction
   hostile:
+  # Nebula start
+  - InteQ
+  - InteQHostile
+  # Nebula end
   - NanoTrasen
   - Syndicate
   - Zombie

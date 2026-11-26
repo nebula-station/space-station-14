@@ -1,0 +1,52 @@
+- type: entity
+  parent: IDCardStandard
+  id: InteQVanguardIDCard
+  name: InteQ ID card
+  components:
+  - type: Sprite
+    layers:
+    - sprite: _Arcane/Objects/Misc/id_cards.rsi
+      state: brown
+    - sprite: _Arcane/Objects/Misc/id_cards.rsi
+      state: sword
+  - type: PresetIdCard
+    job: InteQVanguard
+  - type: Access
+    tags:
+    - InteQVanguard
+    - Maintenance
+
+- type: entity
+  parent: InteQVanguardLeaderIDCard
+  id: ERTInteQVanguardLeaderIDCard
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PresetIdCard
+    job: ERTInteQVanguardLeader
+
+- type: entity
+  parent: InteQVanguardIDCard
+  id: ERTInteQVanguardIDCard
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PresetIdCard
+    job: ERTInteQVanguard
+
+- type: entity
+  parent: IDCardStandard
+  id: InteQVanguardLeaderIDCard
+  name: InteQ ID card
+  components:
+  - type: Sprite
+    layers:
+    - sprite: _Arcane/Objects/Misc/id_cards.rsi
+      state: brown
+    - sprite: _Arcane/Objects/Misc/id_cards.rsi
+      state: sword
+  - type: PresetIdCard
+    job: InteQVanguardLeader
+  - type: Access
+    groups:
+    - InteQ
+    tags:
+    - Maintenance

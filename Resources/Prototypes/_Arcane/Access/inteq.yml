@@ -1,0 +1,11 @@
+- type: accessGroup
+  id: InteQ
+  tags:
+  - InteQVanguardLeader
+  - InteQVanguard
+
+- type: accessLevel
+  id: InteQVanguard
+
+- type: accessLevel
+  id: InteQVanguardLeader

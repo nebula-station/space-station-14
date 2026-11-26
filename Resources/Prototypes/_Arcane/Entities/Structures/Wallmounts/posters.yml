@@ -1,0 +1,49 @@
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandInteQRecruitment
+  name: Recruitment to the InteQ
+  description: Recruitment to the InteQ.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Structures/Wallmounts/Posters/inteq_posters.rsi
+    state: inteq_poster1
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandInteQWorkship
+  name: Workship with InteQ
+  description: Workship with InteQ.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Structures/Wallmounts/Posters/inteq_posters.rsi
+    state: inteq_poster2
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandInteQWorkship2
+  name: Workship with InteQ
+  description: Workship with InteQ.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Structures/Wallmounts/Posters/inteq_posters.rsi
+    state: inteq_poster3
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandInteQ
+  name: InteQ
+  description: InteQ.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Structures/Wallmounts/Posters/inteq_posters.rsi
+    state: inteq_poster4
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandInteQVulp
+  name: InteQ Vulp
+  description: We even take furry freaks, join us!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Structures/Wallmounts/Posters/inteq_posters.rsi
+    state: inteq_poster6

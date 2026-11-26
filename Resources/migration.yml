@@ -1369,3 +1369,20 @@ DormNotifierMarker: null
 ClothingBackpackSatchelDrone: ClothingBackpackSatchel
 GunSafePulseCarbine: null
 # Nebula end
+
+# Nebula start
+InteQLaserShield: EnergyShieldInteQ
+DefaultStationBeaconInteQSizo37: DefaultStationBeaconInteQSizo73
+MagazineBoxLight57x28InteQ: MagazineBoxPistolInteQ
+MagazineBoxLight762x39InteQ: MagazineBoxLightRifleInteQ
+AirlockHatchBasik: AirlockHatchInteQVanguardLocked
+BackmenVendingMachineCigs: RandomVending
+BackmenVendingMachineCola: RandomVending
+BackmenVendingMachineDonut: RandomVending
+BackmenVendingMachineShamblersJuice: RandomVending
+BackmenVendingMachineSnackGreen: RandomVending
+BackmenVendingMachineSovietSoda: RandomVending
+FloorHardCatwalkDarkIron: Catwalk
+PrinterDoc: null
+AntiPsychicKnife: null
+# Nebula end

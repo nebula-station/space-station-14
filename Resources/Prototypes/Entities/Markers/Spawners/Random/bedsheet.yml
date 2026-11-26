@@ -28,6 +28,7 @@
         - id: BedsheetGrey
         - id: BedsheetWhite
         - id: BedsheetRainbow
+        - id: BedsheetInteQ # Nebula edit
       - !type:GroupSelector
         weight: 3
         children:

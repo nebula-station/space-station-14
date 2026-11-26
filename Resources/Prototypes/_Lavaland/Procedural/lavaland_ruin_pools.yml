@@ -25,6 +25,9 @@
     Shelter: 1
     Ratvar: 1
     MiningPost: 3
+    # Nebula start
+    InteQSizo: 1
+    # Nebula end
     AbductorDebris: 1
     CultBase: 1
     Hunter: 1

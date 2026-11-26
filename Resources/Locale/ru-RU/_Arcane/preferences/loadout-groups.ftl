@@ -12,3 +12,4 @@ loadout-group-command-maid-belt = Горничная командования, �
 loadout-group-command-maid-mask = Горничная командования, маска
 loadout-group-command-maid-socks = Горничная командования, носки
 loadout-group-iaa-jumpsuit = Агент внутренних дел, комбинезон
+loadout-group-passenger-head = Ассистент, голова

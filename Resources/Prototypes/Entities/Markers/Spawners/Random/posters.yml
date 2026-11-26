@@ -12,6 +12,15 @@
     - id: PosterContrabandGreyTide
     - id: PosterContrabandMissingGloves
     - id: PosterContrabandHackingGuide
+    # Nebula start
+    - id: PosterContrabandInteQRecruitment
+    - id: PosterContrabandInteQWorkship
+    - id: PosterContrabandInteQWorkship2
+    - id: PosterContrabandInteQ
+    - id: PosterContrabandInteQNoSex
+    - id: PosterContrabandInteQVulp
+    - id: PosterContrabandInteQJulie
+    # Nebula end
     - id: PosterContrabandRIPBadger
     - id: PosterContrabandAmbrosiaVulgaris
     - id: PosterContrabandDonutCorp
@@ -66,6 +75,8 @@
     - id: PosterContrabandExoAcid
     - id: PosterContrabandExoRun
     - id: PosterContrabandExoChomp
+    # Nebula start
+    # Nebula end
 
 - type: entityTable
   id: LegitPosterTable
