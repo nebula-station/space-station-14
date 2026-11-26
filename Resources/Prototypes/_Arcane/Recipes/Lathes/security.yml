@@ -1,0 +1,10 @@
+- type: latheRecipe
+  id: ClothingAggressionInhibitor
+  result: ClothingAggressionInhibitor
+  categories:
+  - Clothing
+  completetime: 4
+  materials:
+    Steel: 500
+    Plastic: 250
+    Cloth: 500

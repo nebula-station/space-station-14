@@ -82,6 +82,7 @@
   id: SecurityEquipment
   recipes:
   - ClothingBackpackElectropack
+  - ClothingAggressionInhibitor # Nebula edit
   - HoloprojectorSecurity
   - HoloprojectorSecurityAdvanced # Goob
   - AntiMindControlDevice # Goob
