@@ -2,3 +2,36 @@
   id: ArcaneService
   recipes:
   - ConfettiGrenade
+
+- type: latheRecipePack
+  id: BasicService
+  recipes:
+  - ConfettiGrenade
+  - FoamCrossbow
+  - FishingRod
+  - ParcelWrap
+  - RadioHandheld
+  - ClothingHeadset
+  - PetCarrier
+  - Broomstick
+  - Flare
+  - CandyBowl
+  - BarSpoon
+  - Spoon
+  - SpoonPlastic
+  - Fork
+  - ForkPlastic
+  - KitchenKnife
+  - KnifePlastic
+  - DrinkShaker
+  - PairedChopsticks
+  - ClothingHeadHatCardborg
+  - ClothingOuterCardborg
+
+- type: latheRecipePack
+  id: Hydroponic
+  recipes:
+  - HydroponicsToolSpade
+  - HydroponicsToolMiniHoe
+  - HydroponicsToolClippers
+  - HydroponicsToolHatchet

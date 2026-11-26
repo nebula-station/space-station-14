@@ -1,0 +1,17 @@
+- type: latheRecipe
+  id: Bloodpack
+  result: Bloodpack
+  categories:
+  - Medical
+  completetime: 4
+  materials:
+    Plastic: 200
+
+- type: latheRecipe
+  id: ClothingNeckStethoscope
+  result: ClothingNeckStethoscope
+  categories:
+  - Medical
+  completetime: 4
+  materials:
+    Steel: 200

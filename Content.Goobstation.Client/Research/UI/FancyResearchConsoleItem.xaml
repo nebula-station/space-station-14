@@ -26,6 +26,26 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 TextureScale="2 2"
                 Stretch="KeepAspectCentered">
             </TextureRect>
+
+            <!-- Nebula start -->
+            <PanelContainer Name="DisciplineBadge"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            SetSize="16 16"
+                            MouseFilter="Ignore">
+                <PanelContainer.PanelOverride>
+                    <graphics:StyleBoxFlat BackgroundColor="#00000000"
+                                           BorderColor="#00000000"
+                                           BorderThickness="0"/>
+                </PanelContainer.PanelOverride>
+                <TextureRect Name="DisciplineDisplay"
+                             SetSize="16 16"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"
+                             Stretch="KeepAspectCentered"
+                             TextureScale="2 2"/>
+            </PanelContainer>
+            <!-- Nebula end -->
         </PanelContainer>
     </BoxContainer>
 </LayoutContainer>

@@ -348,6 +348,7 @@
     - CameraBoards
     #- MechBoards - Goobstation - split between departmental lathes
     - ShuttleBoards
+    - AILawboards # Nebula edit
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
@@ -652,6 +653,7 @@
     - CyberwareMedical
     - CyberwareCommon
     # Nebula end
+    - AbductorMedical # Nebula edit
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

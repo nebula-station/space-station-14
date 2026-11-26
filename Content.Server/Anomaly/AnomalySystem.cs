@@ -18,6 +18,7 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Server.Research.Systems;
 
 namespace Content.Server.Anomaly;
 
@@ -38,6 +39,7 @@ public sealed partial class AnomalySystem : SharedAnomalySystem
     [Dependency] private RadiationSystem _radiation = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private UserInterfaceSystem _ui = default!;
+    [Dependency] private ResearchSystem _research = default!; // Nebula edit
 
     public const float MinParticleVariation = 0.8f;
     public const float MaxParticleVariation = 1.2f;

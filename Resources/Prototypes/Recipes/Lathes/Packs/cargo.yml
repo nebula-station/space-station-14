@@ -32,6 +32,9 @@
   - AdvancedMineralScannerEmpty
   - OreBagOfHolding
   - DrillHead # Trauma
+  # Nebula start
+  - MarkerBeacon
+  # Nebula end
 
 - type: latheRecipePack
   id: CargoBoards
@@ -39,3 +42,8 @@
   - OreProcessorIndustrialMachineCircuitboard
   - CargoTelepadMachineCircuitboard
   #- ShuttleGunKineticCircuitboard - Goobstation - Moved to MiningBoards
+  # Nebula start
+  - CargoRequestComputerCircuitboard
+  - CargoBountyComputerCircuitboard
+  - MaterialSiloMachineCircuitboard
+  # Nebula end

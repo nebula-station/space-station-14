@@ -81,6 +81,13 @@
 - type: latheRecipePack
   id: SecurityEquipment
   recipes:
+  # Nebula start
+  - ClothingEyesNightVisionSecurityGoggles
+  - SurveillanceWirelessCameraBodySecurity
+  - PepperSpray
+  - FlashlightSeclite
+  - SmokeGrenade
+  # Nebula end
   - ClothingBackpackElectropack
   - ClothingAggressionInhibitor # Nebula edit
   - HoloprojectorSecurity
@@ -157,6 +164,11 @@
   - WeaponLaserCannon
   - WeaponLaserCarbine
   - WeaponXrayCannon
+# Nebula start
+#  - WeaponTemperatureGun
+
+  - RiotBulletShield
+# Nebula end
 
 - type: latheRecipePack
   id: SecurityDisablers

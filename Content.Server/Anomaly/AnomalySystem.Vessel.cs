@@ -5,6 +5,7 @@ using Content.Shared.Anomaly.Components;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Research.Components;
+using Content.Shared.Research;
 
 namespace Content.Server.Anomaly;
 
@@ -21,7 +22,6 @@ public sealed partial class AnomalySystem
         SubscribeLocalEvent<AnomalyVesselComponent, MapInitEvent>(OnVesselMapInit);
         SubscribeLocalEvent<AnomalyVesselComponent, InteractUsingEvent>(OnVesselInteractUsing);
         SubscribeLocalEvent<AnomalyVesselComponent, ExaminedEvent>(OnExamined);
-        SubscribeLocalEvent<AnomalyVesselComponent, ResearchServerGetPointsPerSecondEvent>(OnVesselGetPointsPerSecond);
         SubscribeLocalEvent<AnomalyShutdownEvent>(OnVesselAnomalyShutdown);
     }
 
@@ -68,14 +68,26 @@ public sealed partial class AnomalySystem
         _radiation.SetSourceEnabled(uid, true);
         UpdateVesselAppearance(uid,  component);
         Popup.PopupEntity(Loc.GetString("anomaly-vessel-component-anomaly-assigned"), uid);
+
+        // Nebula start
+        if (_research.TryGetClientServer(uid, out var serverUid, out _))
+            _research.LogNetworkEvent(serverUid.Value, "anomaly", Loc.GetString("research-netlog-anomaly-vessel-bound", ("vessel", MetaData(uid).EntityName), ("anomaly", MetaData(anomaly).EntityName)));
+        // Nebula end
     }
 
-    private void OnVesselGetPointsPerSecond(EntityUid uid, AnomalyVesselComponent component, ref ResearchServerGetPointsPerSecondEvent args)
+    [SubscribeLocalEvent] // Nebula edit
+    private void OnVesselGetPointsPerSecond(EntityUid uid, AnomalyVesselComponent component, ref ResearchServerGetPointsPerSecondByTypeEvent args) // Nebula edit
     {
         if (!this.IsPowered(uid, EntityManager) || component.Anomaly is not {} anomaly)
             return;
 
-        args.Points += (int) (GetAnomalyPointValue(anomaly) * component.PointMultiplier);
+        // Nebula start
+        args.Points.Add(new ResearchPointAmount
+        {
+            Type = "General",
+            Amount = (int) (GetAnomalyPointValue(anomaly) * component.PointMultiplier),
+        });
+        // Nebula end
     }
 
     private void OnVesselAnomalyShutdown(ref AnomalyShutdownEvent args)

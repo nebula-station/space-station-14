@@ -38,6 +38,9 @@
   - Drill
   - Saw
   - Hemostat
+  # Nebula start
+  - SawElectric
+  # Nebula end
 
 - type: latheRecipePack
   id: MedicalStatic
@@ -51,6 +54,12 @@
   - OffsetCane
   - OffsetCaneWood
   #- JetInjector # Trauma - le quirky syringe
+  # Nebula start
+  - Bloodpack
+  - ClothingNeckStethoscope
+  - ClothingEyesHudMedical
+  - MedicalBeamGunSyndicate
+  # Nebula end
 
 - type: latheRecipePack
   id: RollerBedsStatic
@@ -65,6 +74,9 @@
   - ClothingHandsGlovesLatex
   - ClothingHandsGlovesNitrile
   - ClothingMaskSterile
+  # Nebula start
+  - ClothingEyesNightVisionMedicalGoggles
+  # Nebula end
 
 # These are all empty
 - type: latheRecipePack
@@ -91,6 +103,14 @@
   - CondenserMachineCircuitBoard
   - HotplateMachineCircuitboard
   - EnergyChemDispenserMachineCircuitboard #Goob edit - all things that get base med boards get E-Chem
+  # Nebula start
+  - MedicalScannerMachineCircuitboard
+  - MedicalRecordsComputerCircuitboard
+  - CrewMonitoringComputerCircuitboard
+  - MedicalBiofabMachineBoard
+  - DiagnoserMachineCircuitboard
+  - VaccinatorMachineCircuitboard
+  # Nebula end
 
 ## Dynamic
 

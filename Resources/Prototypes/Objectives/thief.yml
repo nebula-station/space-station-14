@@ -97,16 +97,25 @@
     difficulty: 1.5
 
 - type: entity
-  parent: BaseThiefStealCollectionObjective
+  parent: BaseThiefObjective # Nebula edit
   id: TechnologyDiskStealCollectionObjective
   components:
   - type: NotJobRequirement
     jobs: [ Scientist ]
-  - type: StealCondition
-    stealGroup: TechnologyDisk
-    minCollectionSize: 5
-    maxCollectionSize: 15
-    verifyMapExistence: false
+# Nebula start
+#  - type: StealCondition
+#    stealGroup: TechnologyDisk
+#    minCollectionSize: 5
+#    maxCollectionSize: 15
+#    verifyMapExistence: false
+
+
+  - type: ResearchDiskCondition
+    minTechnologyCount: 5
+    maxTechnologyCount: 15
+    objectiveText: objective-condition-research-disk-title
+    descriptionText: objective-condition-research-disk-description
+# Nebula end
   - type: Objective
     difficulty: 0.8
 

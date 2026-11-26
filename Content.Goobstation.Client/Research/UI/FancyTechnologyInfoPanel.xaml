@@ -62,22 +62,66 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                           Visible="False">
                 <Label Text="{Loc 'research-console-required-text'}"
                         HorizontalAlignment="Center"/>
-                <controls:Separator StyleClasses="LowDivider" Margin="0 0 0 10" Orientation="Horizontal"/>
-                <PanelContainer VerticalExpand="True">
-                    <PanelContainer.PanelOverride>
-                        <gfx:StyleBoxFlat BackgroundColor="#1B1B1E"/>
-                    </PanelContainer.PanelOverride>
-                    <ScrollContainer
-                        HScrollEnabled="False"
-                        HorizontalExpand="True"
-                        VerticalExpand="True">
-                        <BoxContainer
-                            Name="RequiredTechContainer"
-                            Orientation="Vertical"
+                <!-- Nebula start -->
+                <BoxContainer Name="RequiredExperimentsBlock"
+                              Orientation="Vertical"
+                              HorizontalExpand="True"
+                              VerticalExpand="False"
+                              Margin="0 4 0 6"
+                              SeparationOverride="2">
+                    <Label Text="{Loc 'research-console-tech-required-experiments-title'}"
+                           Modulate="#DDA0DD"/>
+                    <PanelContainer MinHeight="64" VerticalExpand="False">
+                        <PanelContainer.PanelOverride>
+                            <gfx:StyleBoxFlat BackgroundColor="#23232A" BorderThickness="1" BorderColor="#4A4A56"/>
+                        </PanelContainer.PanelOverride>
+                        <ScrollContainer
+                            HScrollEnabled="False"
+                            HorizontalExpand="True"
                             VerticalExpand="True">
-                        </BoxContainer>
-                    </ScrollContainer>
-                </PanelContainer>
+                            <BoxContainer Name="RequiredExperimentsContainer"
+                                          Orientation="Vertical"
+                                          Margin="6"
+                                          SeparationOverride="2"
+                                          HorizontalExpand="True"
+                                          RectClipContent="True"/>
+                        </ScrollContainer>
+                    </PanelContainer>
+                    <RichTextLabel Name="MissingExperimentsLabel" Visible="False"/>
+                </BoxContainer>
+                <BoxContainer Name="RequiredTechnologiesSection"
+                              Orientation="Vertical"
+                              HorizontalExpand="True"
+                              VerticalExpand="False"
+                              Visible="False">
+                    <controls:Separator Name="RequiredTechnologiesSeparator" StyleClasses="LowDivider" Orientation="Horizontal"
+                                               Margin="0 0 0 10"/>
+                    <Label Name="RequiredTechnologiesTitle"
+                           Text="{Loc 'research-console-tech-required-technologies-title'}"
+                           HorizontalAlignment="Center"
+                           Margin="0 0 0 4"/>
+                    <BoxContainer Name="RequiredTechnologiesBlock"
+                                  Orientation="Vertical"
+                                  HorizontalExpand="True"
+                                  VerticalExpand="False">
+                        <PanelContainer MinHeight="64" VerticalExpand="False">
+                            <PanelContainer.PanelOverride>
+                                <gfx:StyleBoxFlat BackgroundColor="#1B1B1E"/>
+                            </PanelContainer.PanelOverride>
+                            <ScrollContainer
+                                HScrollEnabled="False"
+                                HorizontalExpand="True"
+                                VerticalExpand="True">
+                                <BoxContainer
+                                    Name="RequiredTechContainer"
+                                    Orientation="Vertical"
+                                    VerticalExpand="True">
+                                </BoxContainer>
+                            </ScrollContainer>
+                        </PanelContainer>
+                    </BoxContainer>
+                </BoxContainer>
+                <!-- Nebula end -->
             </BoxContainer>
             <BoxContainer
                 Name="RecipesContainer"
@@ -87,7 +131,8 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 Margin="5">
                 <Label Text="{Loc 'research-console-unlocks-text'}" HorizontalAlignment="Center"/>
                 <controls:Separator StyleClasses="LowDivider" Margin="0 0 0 10" Orientation="Horizontal"/>
-                <PanelContainer VerticalExpand="True">
+ <!-- Nebula edit -->
+                <PanelContainer Name="UnlocksPanel" VerticalExpand="True">
                     <PanelContainer.PanelOverride>
                         <gfx:StyleBoxFlat BackgroundColor="#1B1B1E"/>
                     </PanelContainer.PanelOverride>
@@ -102,6 +147,16 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                         </BoxContainer>
                     </ScrollContainer>
                 </PanelContainer>
+                <!-- Nebula start -->
+                <controls:StripeBack Name="EmptyUnlocksStripe"
+                                     Visible="False"
+                                     Margin="0 8 0 0">
+                    <Label Name="EmptyUnlocksLabel"
+                           HorizontalExpand="True"
+                           Align="Center"
+                           Margin="4 2"/>
+                </controls:StripeBack>
+                <!-- Nebula end -->
             </BoxContainer>
         </BoxContainer>
     </BoxContainer>

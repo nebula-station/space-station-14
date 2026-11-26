@@ -627,6 +627,15 @@
     board: ResearchComputerCircuitboard
   - type: AccessReader
     access: [["Research"]]
+  # Nebula start
+  - type: Speech
+    speechSounds: Borg
+    speechVerb: Robotic
+  - type: Grammar
+    attributes:
+      gender: female
+      proper: true
+  # Nebula end
   - type: PointLight
     radius: 1.5
     energy: 1.6

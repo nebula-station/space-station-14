@@ -29,10 +29,44 @@
   - type: Tag
     tags:
     - ForceableFollow
+    - AnomalyCore # Nebula edit
   - type: AnomalyCore
     timeToDecay: 600
     startPrice: 10000
     endPrice: 200
+  # Nebula start
+    reactivationReagentAmount: 5
+    reactivationReagents:
+    - Bluespace
+    hazardousReactivationReagents:
+    - Plasma
+    - UnstableMutagen
+    hazardousFailureChance: 0.65
+
+
+  - type: Solution
+    id: reactivation
+    solution:
+      maxVol: 5
+  - type: RefillableSolution
+    solution: reactivation
+  - type: InjectableSolution
+    solution: reactivation
+
+
+  - type: ResearchAnalyzable
+    supportedMethods:
+    - Deconstruct
+    methodPointRewards:
+      Deconstruct:
+      - type: General
+        amount: 900
+      - type: Experimental
+        amount: 500
+    discoveryTrigger: machine:anomaly-core
+    experimentActions:
+    - analyze_anomaly_core
+  # Nebula end
 
 - type: entity
   parent: BaseAnomalyCore

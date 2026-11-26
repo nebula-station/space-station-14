@@ -59,6 +59,7 @@
     - UpgradeKits
     - ReactorCircuitboards
     - CyberwareEngineering # Nebula edit
+    - AbductorEngineering # Nebula edit
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NailgunEvilStatic
@@ -281,6 +282,10 @@
     # Nebula start
     - CyberwareService
     - CyberwareCommon
+    # Nebula end
+    # Nebula start
+    - BasicService
+    - Hydroponic
     # Nebula end
   - type: EmagLatheRecipes
     emagStaticPacks:

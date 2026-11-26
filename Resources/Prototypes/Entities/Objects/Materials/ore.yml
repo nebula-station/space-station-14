@@ -11,6 +11,18 @@
   - type: Tag
     tags:
     - Ore
+  # Nebula start
+  - type: ResearchAnalyzable
+    supportedMethods:
+    - Deconstruct
+    methodPointRewards:
+      Deconstruct:
+      - type: General
+        amount: 250
+      - type: Experimental
+        amount: 30
+    discoveryTrigger: machine:ore-sample
+  # Nebula end
   - type: Fixtures
     fixtures:
       fix1:

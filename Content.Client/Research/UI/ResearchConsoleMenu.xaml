@@ -1,5 +1,7 @@
+ <!-- Nebula edit -->
 <controls:FancyWindow xmlns="https://spacestation14.io"
                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                       Title="{Loc 'research-console-menu-title'}"
                       MinSize="625 400"
                       SetSize="700 550">
@@ -81,6 +83,36 @@
                         </BoxContainer>
                     </ScrollContainer>
                 </PanelContainer>
+                <!-- Nebula start -->
+                <Control MinHeight="8"/>
+                <controls:StripeBack>
+                    <Label Text="{Loc 'research-console-experiments-title'}" HorizontalAlignment="Center" Margin="0 2"/>
+                </controls:StripeBack>
+                <controls:Separator StyleClasses="LowDivider" Margin="0 0 0 8" Orientation="Horizontal"/>
+                <PanelContainer VerticalExpand="True" MinSize="0 140">
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                    </PanelContainer.PanelOverride>
+                    <ScrollContainer
+                        HScrollEnabled="False"
+                        HorizontalExpand="True"
+                        VerticalExpand="True">
+                        <BoxContainer Orientation="Vertical" Margin="6" SeparationOverride="6" HorizontalExpand="True" VerticalExpand="True">
+                            <RichTextLabel
+                                Name="ExperimentsLabel"
+                                HorizontalExpand="True"
+                                VerticalExpand="True"/>
+                            <controls:StripeBack>
+                                <Label Text="{Loc 'research-console-journal-recent-logs'}" HorizontalAlignment="Center" Margin="0 2"/>
+                            </controls:StripeBack>
+                            <RichTextLabel
+                                Name="RecentLogsLabel"
+                                HorizontalExpand="True"
+                                VerticalExpand="True"/>
+                        </BoxContainer>
+                    </ScrollContainer>
+                </PanelContainer>
+                <!-- Nebula end -->
             </BoxContainer>
         </BoxContainer>
     </BoxContainer>

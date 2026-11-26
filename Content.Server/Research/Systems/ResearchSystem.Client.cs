@@ -30,7 +30,7 @@ public sealed partial class ResearchSystem
             return;
 
         // Validate that we can access this server.
-        if (!GetServers(uid).Contains((serveruid.Value, serverComponent)))
+        if (!GetServers(uid).Any(server => server.Owner == serveruid.Value)) // Nebula edit
             return;
 
         UnregisterClient(uid, component);
@@ -61,10 +61,19 @@ public sealed partial class ResearchSystem
         UpdateClientInterface(uid, component);
     }
 
+    // Nebula start
+    [SubscribeLocalEvent] // Nebula edit
+    private void OnClientDatabaseModified(EntityUid uid, ResearchClientComponent component, ref TechnologyDatabaseModifiedEvent args)
+    {
+        SyncClientWithServer(uid, clientComponent: component);
+    }
+    // Nebula end
+
     private void OnClientMapInit(EntityUid uid, ResearchClientComponent component, MapInitEvent args)
     {
-        if (GetServers(uid).FirstOrNull() is { } server)
-            RegisterClient(uid, server, component, server);
+        // Nebula start
+        TryAutoRegisterClient(uid, component);
+        // Nebula end
     }
 
     private void OnClientShutdown(EntityUid uid, ResearchClientComponent component, ComponentShutdown args)
@@ -84,14 +93,30 @@ public sealed partial class ResearchSystem
             if (ent.Comp.Server is not null)
                 return;
 
-            if (GetServers(ent).FirstOrNull() is { } server)
-                RegisterClient(ent, server, ent, server);
+            // Nebula start
+            TryAutoRegisterClient(ent, ent.Comp);
+            // Nebula end
         }
         else
         {
             UnregisterClient(ent, ent.Comp);
         }
     }
+
+    // Nebula start
+    private void TryAutoRegisterClient(EntityUid uid, ResearchClientComponent component)
+    {
+        if (component.Server is not null)
+            return;
+
+        var servers = GetServers(uid);
+        if (servers.Count == 0)
+            return;
+
+        var server = servers[0];
+        RegisterClient(uid, server, component, server);
+    }
+    // Nebula end
 
     private void UpdateClientInterface(EntityUid uid, ResearchClientComponent? component = null)
     {

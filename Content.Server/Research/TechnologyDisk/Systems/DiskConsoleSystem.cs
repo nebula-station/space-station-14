@@ -6,6 +6,10 @@ using Content.Shared.Research.Components;
 using Robust.Server.Audio;
 using Robust.Server.GameObjects;
 using Robust.Shared.Timing;
+// Nebula start
+using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Popups;
+// Nebula end
 
 namespace Content.Server.Research.TechnologyDisk.Systems;
 
@@ -15,6 +19,10 @@ public sealed partial class DiskConsoleSystem : EntitySystem
     [Dependency] private AudioSystem _audio = default!;
     [Dependency] private ResearchSystem _research = default!;
     [Dependency] private UserInterfaceSystem _ui = default!;
+    // Nebula start
+    [Dependency] private SharedHandsSystem _hands = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    // Nebula end
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -37,8 +45,20 @@ public sealed partial class DiskConsoleSystem : EntitySystem
             if (printing.FinishTime > _timing.CurTime)
                 continue;
 
+            // Nebula start
+            var disk = SpawnAtPosition(console.DiskPrototype, xform.Coordinates);
+            if (printing.Actor is { } actor && !TerminatingOrDeleted(actor))
+            {
+                if (!_hands.TryPickupAnyHand(actor, disk))
+                    _popup.PopupEntity(Loc.GetString("research-disk-terminal-print-complete"), actor, actor);
+            }
+
+            if (printing.Server is { } server)
+                _research.LogNetworkEvent(server, "disk", Loc.GetString("research-netlog-disk-printed", ("points", printing.Price), ("user", _research.GetResearchLogUserName(printing.Actor))), printing.Actor);
+            // Nebula end
+
             RemComp(uid, printing);
-            Spawn(console.DiskPrototype, xform.Coordinates);
+//            Spawn(console.DiskPrototype, xform.Coordinates); // Nebula edit
         }
     }
 
@@ -54,10 +74,16 @@ public sealed partial class DiskConsoleSystem : EntitySystem
             return;
 
         _research.ModifyServerPoints(server.Value, -component.PricePerDisk, serverComp);
+        _research.LogNetworkEvent(server.Value, "disk", Loc.GetString("research-netlog-disk-printing-started", ("points", component.PricePerDisk), ("user", _research.GetResearchLogUserName(args.Actor))), args.Actor, serverComp); // Nebula edit
         _audio.PlayPvs(component.PrintSound, uid);
 
         var printing = EnsureComp<DiskConsolePrintingComponent>(uid);
         printing.FinishTime = _timing.CurTime + component.PrintDuration;
+        // Nebula start
+        printing.Actor = args.Actor;
+        printing.Server = server.Value;
+        printing.Price = component.PricePerDisk;
+        // Nebula end
         UpdateUserInterface(uid, component);
     }
 

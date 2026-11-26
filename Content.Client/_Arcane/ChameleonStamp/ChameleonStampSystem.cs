@@ -32,7 +32,7 @@ public sealed partial class ChameleonStampSystem : SharedChameleonStampSystem
     {
         if (!TryComp<SpriteComponent>(entity, out var sprite)
             || !Proto.TryIndex<EntityPrototype>(entity.Comp.SelectedStampSpritePrototype, out var proto)
-            || !proto.TryGetComponent<SpriteComponent>(out var presetSprite, Factory))
+            || !proto.TryComp<SpriteComponent>(out var presetSprite, Factory))
             return;
 
         sprite.CopyFrom(presetSprite);

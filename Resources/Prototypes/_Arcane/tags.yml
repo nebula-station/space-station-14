@@ -69,3 +69,6 @@
 
 - type: Tag
   id: MegaCell
+
+- type: Tag
+  id: AnomalyCore

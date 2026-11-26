@@ -25,6 +25,16 @@
   - DeviceDesynchronizer
   - ClothingBackpackHarmpack
   - TeleporterChipBlank
+  # Nebula start
+  - ModularGrenade
+  - TrackingImplanter
+  - SadTromboneImplanter
+  - ClothingEyesHudMedical
+  - ClothingEyesHudDiagnostic
+  - SlimeScannerXenobio
+  - ExperiScanner
+  - ResearchDataDisk
+  # Nebula end
 
 - type: latheRecipePack
   id: ScienceClothing
@@ -36,6 +46,11 @@
   - ClothingBackpackHolding
   - ClothingBackpackSatchelHolding
   - ClothingBackpackDuffelHolding
+  # Nebula start
+  - ClothingBackpackMessengerHolding # Frontier
+
+  - ClothingEyesNightVisionDiagnosticGoggles
+  # Nebula end
 
 - type: latheRecipePack
   id: PowerCells
@@ -90,6 +105,15 @@
   - ArtifactCrusherMachineCircuitboard
   - StationTeleportersControlCircuitboard
   - StationTeleporterMachineCircuitboard
+  # Nebula start
+  - ResearchAndDevelopmentServerMachineCircuitboard
+  - ResearchServerControlConsoleCircuitboard
+  - ResearchComputerCircuitboard
+  - ResearchDestructiveAnalyzerMachineCircuitboard
+  - ResearchExperimentalDestructiveScannerMachineCircuitboard
+  - XenobiologyBountyComputerCircuitboard
+  - StationAiUploadCircuitboard
+  # Nebula end
 
 - type: latheRecipePack
   id: CameraBoards
@@ -113,6 +137,10 @@
   - HonkerTargetingElectronics
   - HamtrCentralElectronics
   - HamtrPeripheralsElectronics
+  # Nebula start
+  - GygaxCentralElectronics
+  - DurandCentralElectronics
+  # Nebula end
 
 - type: latheRecipePack
   id: ShuttleBoards

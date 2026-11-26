@@ -23,6 +23,13 @@
   - HandheldStationMap
   - ClothingHeadHatWelding
   - ClothingHeadHatCone
+  # Nebula start
+  - WelderMini
+  - Crowbar
+  - Shovel
+  - RemoteSignaller
+  - GeigerCounter
+  # Nebula end
 
 - type: latheRecipePack
   id: AtmosStatic
@@ -48,6 +55,10 @@
   - CellRechargerCircuitboard
   - WeaponCapacitorRechargerCircuitboard
   - FreezerElectronics
+  # Nebula start
+  - ScreenTimerElectronics
+  - PowerComputerCircuitboard
+  # Nebula end
 
 - type: latheRecipePack
   id: EngineeringBoardsStatic
@@ -70,6 +81,13 @@
   id: AtmosTools
   recipes:
   - HolofanProjector
+  # Nebula start
+  - OxygenTank
+  - PlasmaTank
+  - FireExtinguisher
+  - FireExtinguisherMini
+  - ClothingShoesBootsMag
+  # Nebula end
 
 - type: latheRecipePack
   id: EngineeringWeapons
@@ -94,3 +112,11 @@
   - HolopadMachineCircuitboard
   - TeslaCoilCircuitboard
   - RadiationCollectorCircuitboard
+  # Nebula start
+  - CommsComputerCircuitboard
+  - AlertsComputerCircuitboard
+  - BlockGameArcadeComputerCircuitboard
+  - SpaceVillainArcadeComputerCircuitboard
+  - MaterialSiloMachineCircuitboard
+  - TeslaGroundingRod
+  # Nebula end
