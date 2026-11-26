@@ -64,6 +64,12 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
+  # Nebula start
+  - MegaCellSuper
+  - MegaCellHyper
+  - MegaCellHigh
+  - PowerCellSuper
+  # Nebula end
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
   - SMESAdvancedMachineCircuitboard
@@ -290,13 +296,23 @@
   id: OptimizedMicrogalvanism
   name: research-technology-optimized-microgalvanism
   icon:
-    sprite: Objects/Power/power_cells.rsi
-    state: microreactor
+    # sprite: Objects/Power/power_cells.rsi # Nebula edit
+    # state: microreactor # Nebula edit
+    # Nebula start
+    sprite: _Arcane/Objects/Power/power_cells.rsi
+    state: bluespace
+    # Nebula end
   discipline: Industrial
   tier: 3
   cost: 15000 # Goobstation 10000 -> 15000
   recipeUnlocks:
-  - PowerCellMicroreactor
+  # - PowerCellMicroreactor # Nebula edit
+  # Nebula start
+  - MegaCellBluespace
+  - PowerCellBluespace
+  - PowerCellBluespaceReactor
+  - PowerCellVortex
+  # Nebula end
   - PowerCellHyper
   technologyPrerequisites:
   - AdvancedToolsTechnology  # Goobstation R&D Console rework

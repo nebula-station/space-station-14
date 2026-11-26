@@ -13,10 +13,16 @@ public sealed partial class RandomSpawnRule : StationEventSystem<RandomSpawnRule
     {
         base.Started(ent, ref args);
 
-        if (Station.TryFindRandomTile(out _, out _, out _, out var coords))
+        // Nebula start
+        var count = RobustRandom.Next(ent.Comp1.MinCount, ent.Comp1.MaxCount + 1);
+        for (var i = 0; i < count; i++)
         {
+            if (!Station.TryFindRandomTile(out _, out _, out _, out var coords))
+                continue;
+
             Sawmill.Info($"Spawning {ent.Comp1.Prototype} at {coords}");
             Spawn(ent.Comp1.Prototype, coords);
         }
+        // Nebula end
     }
 }

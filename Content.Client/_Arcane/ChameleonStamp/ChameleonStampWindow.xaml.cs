@@ -107,7 +107,7 @@ public sealed partial class ChameleonStampWindow : FancyWindow
         if (meta is null)
             return;
 
-        if (!_proto.Index<EntityPrototype>((string) meta).TryGetComponent<SpriteComponent>(out _))
+        if (!_proto.Index<EntityPrototype>((string) meta).TryGetComponent<SpriteComponent>(out _, _entMan.ComponentFactory))
             return;
 
         StampStateOptionButton.Select(obj.Id);
@@ -119,7 +119,7 @@ public sealed partial class ChameleonStampWindow : FancyWindow
         if (meta is null)
             return;
 
-        if (!_proto.Index<EntityPrototype>((string) meta).TryGetComponent<SpriteComponent>(out var presetSprite))
+        if (!_proto.Index<EntityPrototype>((string) meta).TryGetComponent<SpriteComponent>(out var presetSprite, _entMan.ComponentFactory))
             return;
 
         if (!_entMan.TryGetComponent<SpriteComponent>(_preview, out var previewSprite))
@@ -142,7 +142,7 @@ public sealed partial class ChameleonStampWindow : FancyWindow
         if (meta is null)
             return;
 
-        if (!_proto.Index<EntityPrototype>((string) meta).TryGetComponent<StampComponent>(out var stamp))
+        if (!_proto.Index<EntityPrototype>((string) meta).TryGetComponent<StampComponent>(out var stamp, _entMan.ComponentFactory))
             return;
 
         StampColorSelector.Color = stamp.StampedColor;

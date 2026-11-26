@@ -40,9 +40,15 @@
 - type: latheRecipePack
   id: PowerCells
   recipes:
-  - PowerCellMicroreactor
+  #- PowerCellMicroreactor # Nebula edit
   - PowerCellHigh
   - PowerCellHyper
+  # Nebula start
+  - PowerCellSuper
+  - PowerCellBluespace
+  - PowerCellBluespaceReactor
+  - PowerCellVortex
+  # Nebula end
   - InducerScientific # Nebula edit
 
 - type: latheRecipePack

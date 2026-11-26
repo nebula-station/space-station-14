@@ -31,7 +31,7 @@ public abstract partial class SharedChameleonStampSystem : EntitySystem
 
         foreach (var proto in prototypes)
         {
-            if (proto.Abstract || proto.HideSpawnMenu || !proto.TryGetComponent<StampComponent>(out _))
+            if (proto.Abstract || proto.HideSpawnMenu || !proto.TryGetComponent<StampComponent>(out _, Factory))
                 continue;
 
             _stampsPresets.Add(proto);
@@ -45,7 +45,7 @@ public abstract partial class SharedChameleonStampSystem : EntitySystem
 
         if (!_stampsPresets.Contains(preset.Id)
             || !Proto.TryIndex<EntityPrototype>(preset, out presetPrototype)
-            || !presetPrototype.TryGetComponent(out presetStampComponent))
+            || !presetPrototype.TryGetComponent(out presetStampComponent, Factory))
             return false;
 
         return true;

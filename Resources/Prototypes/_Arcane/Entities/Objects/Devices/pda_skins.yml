@@ -1,0 +1,515 @@
+# PDA skins from Orion #302 (Better PDA). Applied on the client by PdaSkinSystem.
+
+- type: pdaSkin
+  id: BasePDA
+  layers:
+  - state: pda_buttons
+
+- type: pdaSkin
+  id: PassengerPDA
+  baseColor: "#717059"
+  layers:
+  - state: pda_buttons
+  borderColor: "#717059"
+
+- type: pdaSkin
+  id: TechnicalAssistantPDA
+  baseColor: "#FFA500"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#FFFF00"
+  borderColor: "#FFA500"
+  accentColor: "#FFFF00"
+
+- type: pdaSkin
+  id: MedicalInternPDA
+  baseColor: "#E0FFFF"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#00BFFF"
+  borderColor: "#E0FFFF"
+  accentColor: "#00BFFF"
+
+- type: pdaSkin
+  id: SecurityCadetPDA
+  baseColor: "#A32D26"
+  layers:
+  - state: pda_buttons
+  borderColor: "#A32D26"
+
+- type: pdaSkin
+  id: ResearchAssistantPDA
+  baseColor: "#E0FFFF"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#9932CC"
+  borderColor: "#E0FFFF"
+  accentColor: "#9932CC"
+
+- type: pdaSkin
+  id: ServiceWorkerPDA
+  baseColor: "#717059"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#00cc35"
+  borderColor: "#717059"
+  accentColor: "#00cc35"
+
+- type: pdaSkin
+  id: ChefPDA
+  baseColor: "#d7d7d0"
+  layers:
+  - state: pda_buttons
+  borderColor: "#d7d7d0"
+
+- type: pdaSkin
+  id: BotanistPDA
+  baseColor: "#32CD32"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#87CEEB"
+  borderColor: "#32CD32"
+  accentColor: "#87CEEB"
+
+- type: pdaSkin
+  id: ClownPDA
+  baseColor: "#dc428f"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_clown
+  borderColor: "#dc428f"
+
+- type: pdaSkin
+  id: MimePDA
+  baseColor: "#d7d7d0"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_mime
+  borderColor: "#d7d7d0"
+
+- type: pdaSkin
+  id: ChaplainPDA
+  baseColor: "#333333"
+  layers:
+  - state: pda_buttons
+  - state: pda_cross
+  borderColor: "#333333"
+  accentColor: "#FFD700"
+
+- type: pdaSkin
+  id: QuartermasterPDA
+  baseColor: "#B8860B"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#8B4513"
+  borderColor: "#B8860B"
+  accentColor: "#8B4513"
+
+- type: pdaSkin
+  id: CargoPDA
+  baseColor: "#B8860B"
+  layers:
+  - state: pda_buttons
+  borderColor: "#B8860B"
+
+- type: pdaSkin
+  id: SalvagePDA
+  baseColor: "#B8860B"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#9932CC"
+  borderColor: "#B8860B"
+  accentColor: "#9932CC"
+
+- type: pdaSkin
+  id: BartenderPDA
+  baseColor: "#333333"
+  layers:
+  - state: pda_buttons
+  borderColor: "#333333"
+
+- type: pdaSkin
+  id: LibrarianPDA
+  baseColor: "#858585"
+  layers:
+  - state: pda_buttons
+  borderColor: "#858585"
+
+- type: pdaSkin
+  id: LawyerPDA
+  baseColor: "#003153"
+  layers:
+  - state: pda_buttons
+  borderColor: "#003153"
+
+- type: pdaSkin
+  id: JanitorPDA
+  baseColor: "#9932CC"
+  layers:
+  - state: pda_buttons
+  borderColor: "#9932CC"
+
+- type: pdaSkin
+  id: CaptainPDA
+  baseColor: "#E0FFFF"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#FFD700"
+  borderColor: "#E0FFFF"
+  accentColor: "#FFD700"
+
+- type: pdaSkin
+  id: HoPPDA
+  baseColor: "#003153"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#A32D26"
+  - state: pda_stripe_head
+  borderColor: "#003153"
+  accentColor: "#A32D26"
+
+- type: pdaSkin
+  id: CEPDA
+  baseColor: "#FFA500"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#E0FFFF"
+  - state: pda_stripe_head
+  borderColor: "#FFA500"
+  accentColor: "#E0FFFF"
+
+- type: pdaSkin
+  id: EngineerPDA
+  baseColor: "#FFA500"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#FFFF00"
+  borderColor: "#FFA500"
+  accentColor: "#FFFF00"
+
+- type: pdaSkin
+  id: CMOPDA
+  baseColor: "#E0FFFF"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#00BFFF"
+  - state: pda_stripe_head
+  borderColor: "#E0FFFF"
+  accentColor: "#447987"
+
+- type: pdaSkin
+  id: MedicalPDA
+  baseColor: "#E0FFFF"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#00BFFF"
+  borderColor: "#E0FFFF"
+  accentColor: "#00BFFF"
+
+- type: pdaSkin
+  id: ParamedicPDA
+  baseColor: "#E0FFFF"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#00BFFF"
+  borderColor: "#E0FFFF"
+  accentColor: "#00BFFF"
+
+- type: pdaSkin
+  id: ChemistryPDA
+  baseColor: "#E0FFFF"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#FF4500"
+  borderColor: "#E0FFFF"
+  accentColor: "#FF4500"
+
+- type: pdaSkin
+  id: RnDPDA
+  baseColor: "#E0FFFF"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#9932CC"
+  - state: pda_stripe_head
+  borderColor: "#E0FFFF"
+  accentColor: "#8900c9"
+
+- type: pdaSkin
+  id: SciencePDA
+  baseColor: "#E0FFFF"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#9932CC"
+  borderColor: "#E0FFFF"
+  accentColor: "#9932CC"
+
+- type: pdaSkin
+  id: HoSPDA
+  baseColor: "#A32D26"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_head
+  borderColor: "#A32D26"
+
+- type: pdaSkin
+  id: WardenPDA
+  baseColor: "#A32D26"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_split
+    color: "#293133"
+  borderColor: "#293133"
+  accentColor: "#A32D26"
+
+- type: pdaSkin
+  id: SecurityPDA
+  baseColor: "#A32D26"
+  layers:
+  - state: pda_buttons
+  borderColor: "#A32D26"
+
+- type: pdaSkin
+  id: CentcomPDA
+  baseColor: "#00842e"
+  layers:
+  - state: pda_buttons
+  borderColor: "#00842e"
+
+- type: pdaSkin
+  id: MusicianPDA
+  baseColor: "#333333"
+  layers:
+  - state: pda_buttons
+  borderColor: "#333333"
+
+- type: pdaSkin
+  id: AtmosPDA
+  baseColor: "#FFD700"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#808080"
+  borderColor: "#FFD700"
+  accentColor: "#808080"
+
+- type: pdaSkin
+  id: ClearPDA
+  baseColor: "#288e4d"
+  layers:
+  - state: pda_buttons
+  borderColor: "#288e4d"
+
+- type: pdaSkin
+  id: SyndiPDA
+  baseColor: "#891417"
+  layers:
+  - state: pda_buttons
+  borderColor: "#891417"
+
+- type: pdaSkin
+  id: ERTLeaderPDA
+  baseColor: "#A32D26"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#447987"
+  - state: pda_stripe_double
+    color: "#447987"
+  borderColor: "#A32D26"
+  accentColor: "#447987"
+
+- type: pdaSkin
+  id: PsychologistPDA
+  baseColor: "#d7d7d0"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#447987"
+  borderColor: "#d7d7d0"
+  accentColor: "#447987"
+
+- type: pdaSkin
+  id: ReporterPDA
+  baseColor: "#3f3f74"
+  layers:
+  - state: pda_buttons
+  borderColor: "#3f3f74"
+
+- type: pdaSkin
+  id: DetectivePDA
+  baseColor: "#774705"
+  layers:
+  - state: pda_buttons
+  borderColor: "#774705"
+
+- type: pdaSkin
+  id: BrigmedicPDA
+  baseColor: "#A32D26"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#d7d7d0"
+  - state: pda_stripe_double
+    color: "#d7d7d0"
+  borderColor: "#A32D26"
+  accentColor: "#d7d7d0"
+
+- type: pdaSkin
+  id: CluwnePDA
+  baseColor: "#1c8f4d"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_clown
+  borderColor: "#1c8f4d"
+
+- type: pdaSkin
+  id: SeniorEngineerPDA
+  baseColor: "#FFA500"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#CD6900"
+  borderColor: "#FFA500"
+  accentColor: "#CD6900"
+
+- type: pdaSkin
+  id: SeniorResearcherPDA
+  baseColor: "#d7d7d0"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#8900c9"
+  - state: pda_stripe_double
+    color: "#8900c9"
+  borderColor: "#d7d7d0"
+  accentColor: "#8900c9"
+
+- type: pdaSkin
+  id: SeniorPhysicianPDA
+  baseColor: "#d7d7d0"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#B34200"
+  - state: pda_stripe_double
+    color: "#447987"
+  borderColor: "#d7d7d0"
+  accentColor: "#B34200"
+
+- type: pdaSkin
+  id: SeniorOfficerPDA
+  baseColor: "#A32D26"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#DFDFDF"
+  borderColor: "#A32D26"
+  accentColor: "#DFDFDF"
+
+- type: pdaSkin
+  id: PiratePDA
+  baseColor: "#891417"
+  layers:
+  - state: pda_buttons
+
+- type: pdaSkin
+  id: ChameleonPDA
+  baseColor: "#717059"
+  layers:
+  - state: pda_buttons
+  borderColor: "#717059"
+
+- type: pdaSkin
+  id: WizardPDA
+  baseColor: "#6A5ACD"
+  layers:
+  - state: pda_buttons
+  borderColor: "#6A5ACD"
+
+- type: pdaSkin
+  id: ChronoPDA
+  baseColor: "#dee4e7"
+  layers:
+  - state: pda_buttons
+  borderColor: "#dee4e7"
+  accentColor: "#59bcee"
+
+- type: pdaSkin
+  id: GmanPDA
+  baseColor: "#dee4e7"
+  layers:
+  - state: pda_buttons
+  borderColor: "#dee4e7"
+  accentColor: "#59bcee"
+
+- type: pdaSkin
+  id: HelldiverPDA
+  baseColor: "#272727"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#cec100"
+  borderColor: "#272727"
+  accentColor: "#cec100"
+
+- type: pdaSkin
+  id: DeathsquadPDA
+  baseColor: "#04040a"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#16bab5"
+  borderColor: "#04040a"
+  accentColor: "#16bab5"
+
+- type: pdaSkin
+  id: HighCommandPDA
+  baseColor: "#04040a"
+  layers:
+  - state: pda_buttons
+  borderColor: "#891417"
+
+- type: pdaSkin
+  id: VirologistPDA
+  baseColor: "#d7d7d0"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#447987"
+  - state: pda_stripe_double
+    color: "#228B22"
+  borderColor: "#d7d7d0"
+  accentColor: "#447987"
+
+- type: pdaSkin
+  id: RoboticistPDA
+  baseColor: "#A32D26"
+  layers:
+  - state: pda_buttons
+  - state: pda_stripe_thick
+    color: "#293133"
+  borderColor: "#A32D26"
+  accentColor: "#293133"
+
+- type: pdaSkin
+  id: RadioHostPDA
+  baseColor: "#717059"
+  layers:
+  - state: pda_buttons

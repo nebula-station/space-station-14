@@ -48,6 +48,11 @@
       path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
   - type: TimedDespawn
     lifetime: 10
+  # Nebula start
+  - type: Tracer
+    color: "#FFFFFFFF"
+    length: 3
+  # Nebula end
 
 - type: entity
   parent: BaseBullet
@@ -87,6 +92,11 @@
     damage:
       types:
         Blunt: 1
+  # Nebula start
+  - type: Tracer
+    color: "#CCCCCCFF"
+    length: 3
+  # Nebula end
 
 - type: entity
   parent: BaseBullet
@@ -108,6 +118,11 @@
     energy: 7.0
   - type: IgniteOnCollide
     fireStacks: 0.5 # Trauma - was 0.25
+  # Nebula start
+  - type: Tracer
+    color: "#D1B479FF"
+    length: 3
+  # Nebula end
 
 - type: entity
   parent: BaseBullet
@@ -126,6 +141,11 @@
         Piercing: 11
     # Nebula end
     ignoreResistances: true # Nebula
+  # Nebula start
+  - type: Tracer
+    color: "#71C978FF"
+    length: 3
+  # Nebula end
 
 - type: entity
   parent: BaseBullet
@@ -146,3 +166,8 @@
     damage:
       types:
         Radiation: 11
+  # Nebula start
+  - type: Tracer
+    color: "#71C978FF"
+    length: 3
+  # Nebula end

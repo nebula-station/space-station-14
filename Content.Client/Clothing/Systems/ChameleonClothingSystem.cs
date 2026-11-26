@@ -3,6 +3,7 @@ using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;
 using Robust.Client.GameObjects;
 using Robust.Shared.Prototypes;
+using Content.Client._Arcane.Clothing;
 
 namespace Content.Client.Clothing.Systems;
 
@@ -50,5 +51,10 @@ public sealed partial class ChameleonClothingSystem : SharedChameleonClothingSys
             borderColor.AccentHColor = otherBorderColor.AccentHColor;
             borderColor.AccentVColor = otherBorderColor.AccentVColor;
         }
+
+        // Nebula start
+        var ev = new ChameleonSpriteUpdatedEvent(proto);
+        RaiseLocalEvent(uid, ref ev);
+        // Nebula end
     }
 }

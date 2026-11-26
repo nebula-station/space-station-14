@@ -52,16 +52,16 @@
     Gold: 200
     Silver: 300
 
-- type: latheRecipe
-  parent: BasePowerCellRecipe
-  id: PowerCellMicroreactor
-  result: PowerCellMicroreactorPrinted
-  completetime: 10
-  materials:
-    Steel: 500
-    Glass: 400
-    Uranium: 200
-    Gold: 100
+# - type: latheRecipe # Nebula edit
+#   parent: BasePowerCellRecipe # Nebula edit
+#   id: PowerCellMicroreactor # Nebula edit
+#   result: PowerCellMicroreactorPrinted # Nebula edit
+#   completetime: 10 # Nebula edit
+#   materials: # Nebula edit
+#     Steel: 500 # Nebula edit
+#     Glass: 400 # Nebula edit
+#     Uranium: 200 # Nebula edit
+#     Gold: 100 # Nebula edit
 
 # Power cages
 - type: latheRecipe

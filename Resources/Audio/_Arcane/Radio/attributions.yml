@@ -1,0 +1,4 @@
+- files: ["basic.ogg", "cargo.ogg", "cc.ogg", "command.ogg", "common.ogg", "eng.ogg", "handheld.ogg", "med.ogg", "science.ogg", "security.ogg", "service.ogg", "syndie.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Orion-Station-14 contributors, radio barks from PRs #452 and #456. No per-file license given, licensed under the repository's media default."
+  source: "https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14/pull/456"

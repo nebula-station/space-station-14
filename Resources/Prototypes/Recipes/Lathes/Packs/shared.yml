@@ -31,6 +31,7 @@
 - type: latheRecipePack
   id: PowerCellsStatic
   recipes:
+  - MegaCellSmall # Nebula edit
   - PowerCellSmall
   - PowerCellMedium
 

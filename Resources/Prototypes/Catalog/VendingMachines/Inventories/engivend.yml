@@ -9,6 +9,7 @@
     Multitool: 4
     NetworkConfigurator: 5
     PowerCellMedium: 5
+    MegaCellHigh: 5 # Nebula edit
     # ClothingHandsGlovesColorYellow: 6 # Trauma
     BoxInflatable: 2
     ClothingHeadHatCone: 4

@@ -3,6 +3,7 @@
 
 using Content.Shared._Arcane.ChameleonStamp;
 using Robust.Client.GameObjects;
+using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client._Arcane.ChameleonStamp;
@@ -31,7 +32,7 @@ public sealed partial class ChameleonStampSystem : SharedChameleonStampSystem
     {
         if (!TryComp<SpriteComponent>(entity, out var sprite)
             || !Proto.TryIndex<EntityPrototype>(entity.Comp.SelectedStampSpritePrototype, out var proto)
-            || !proto.TryGetComponent<SpriteComponent>(out var presetSprite))
+            || !proto.TryGetComponent<SpriteComponent>(out var presetSprite, Factory))
             return;
 
         sprite.CopyFrom(presetSprite);

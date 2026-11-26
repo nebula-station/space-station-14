@@ -66,3 +66,6 @@
 
 - type: Tag
   id: InertBagOfHoldingMessenger
+
+- type: Tag
+  id: MegaCell

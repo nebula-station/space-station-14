@@ -63,6 +63,7 @@ public sealed partial class BrainSystem : EntitySystem
         Dirty(uid, brain);
         if (!HasBrain(args.Target))
         {
+            TryRenameBrain((uid, brain), args.Target); // Nebula edit
             // Prevents revival, should kill the user within a given timespan too.
             if (!TerminatingOrDeleted(args.Target) && !_timing.ApplyingState)
                 EnsureComp<DebrainedComponent>(args.Target);

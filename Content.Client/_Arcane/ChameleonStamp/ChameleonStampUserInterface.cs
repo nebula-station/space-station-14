@@ -64,7 +64,7 @@ public sealed class ChameleonStampUserInterface : BoundUserInterface
         {
             _window.OnClose -= Close;
             _window.ApplyButton.OnButtonDown -= ApplyButton_OnButtonDown;
-            _window.Dispose();
+            _window.Orphan();
             _window = null;
         }
 

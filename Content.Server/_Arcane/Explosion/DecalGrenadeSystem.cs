@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Ported from https://github.com/ArcaneSS14/arcane-new/blob/0045faba82b100c782c32fb14427c1428578628d/Content.Arcane.Server/Explosion/DecalGrenadeSystem.cs
 
-using Content.Shared._Arcane.Explosion;
+using System.Numerics;
 using Content.Server.Decals;
 using Content.Shared.Trigger;
+using Content.Shared._Arcane.Explosion;
 using Robust.Shared.Random;
 
 namespace Content.Server._Arcane.Explosion;

@@ -2,6 +2,7 @@
 // Ported from https://github.com/ArcaneSS14/arcane-new/blob/0045faba82b100c782c32fb14427c1428578628d/Content.Arcane.Shared/Abilities/Goliath/GoliathPatternActions.cs
 
 using Content.Shared.Actions;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Arcane.Abilities.Goliath;
 

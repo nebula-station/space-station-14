@@ -5,6 +5,20 @@
   name: PDA
   description: Personal Data Assistant.
   components:
+  # Nebula start
+  - type: PdaScreen
+    programScreens:
+      NotekeeperCartridge: accounting
+      NanoTaskCartridge: menu
+      NewsReaderCartridge: comm_monitor
+      CrewManifestCartridge: crew
+      NetProbeCartridge: signal
+      LogProbeCartridge: comm_logs
+      WantedListCartridge: bounty
+      MedTekCartridge: alert-red
+      AstroNavCartridge: radarntos
+      NanoChatCartridge: request
+  # Nebula end
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:

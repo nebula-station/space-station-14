@@ -46,6 +46,7 @@
     - AtmosTools
     - EngineeringWeapons
     - PowerCells
+    - MegaCells # Nebula edit
     - Equipment
     - SpecOpsGoogles
     - EngineeringBoards
@@ -109,6 +110,7 @@
     - AdvancedTools
     - Mining
     - PowerCells
+    - MegaCells # Nebula edit
     - Equipment
     # - ServiceWeapons
     - MiningWeapons
@@ -195,6 +197,7 @@
     - AtmosTools
     - EngineeringWeapons
     - PowerCells
+    - MegaCells # Nebula edit
     - Chemistry
     - Janitor
     - Equipment

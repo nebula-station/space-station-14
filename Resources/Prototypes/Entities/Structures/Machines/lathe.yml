@@ -246,6 +246,7 @@
     #- ChemistryStatic
     #- SurgeryStatic
     dynamicPacks:
+    - BodyBagsDynamic # Nebula edit
     - AdvancedTools
     #- ScienceEquipment - Goobstation - Moved to Scifab
     #- ScienceExplosives - Goobstation - Moved to Scifab
@@ -274,6 +275,10 @@
     - TraumaScienceClothing
     # </Trauma>
   - type: EmagLatheRecipes
+    # Nebula start
+    emagStaticPacks:
+    - BodyBagsSyndicateStatic
+    # Nebula end
     emagDynamicPacks:
     - SecurityAmmo
     - SecurityExplosives

@@ -5,9 +5,10 @@ using Content.Shared.Maps;
 using Content.Shared.Physics;
 using Content.Shared.Popups;
 using Content.Shared.Stunnable;
-using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Map;
 using Robust.Shared.Network;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
 namespace Content.Shared._Arcane.Abilities.Goliath;
@@ -86,7 +87,7 @@ public sealed partial class GoliathPatternSystem : EntitySystem
                 continue;
             }
 
-            Spawn(proto, pos);
+            SpawnAtPosition(proto, pos);
         }
     }
 }

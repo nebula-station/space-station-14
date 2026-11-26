@@ -8,7 +8,7 @@
   - type: ContainerFill
     containers:
       cell_slot:
-      - PowerCellAntiqueProto
+      - PowerCellVortex # Nebula edit
 
 - type: entity
   abstract: true
@@ -18,4 +18,4 @@
   - type: ContainerFill
     containers:
       cell_slot:
-      - PowerCellMicroreactor
+      - PowerCellBluespaceReactor # Nebula edit
