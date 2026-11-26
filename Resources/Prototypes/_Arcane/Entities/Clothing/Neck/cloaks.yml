@@ -1,0 +1,29 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakNTRBlack
+  categories: [ HideSpawnMenu ]
+  name: NTR's black cloak
+  description: A black cloak with gold trim, made for the best in his field.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Sponsor/NTR_black_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakNTRTricolor
+  categories: [ HideSpawnMenu ]
+  name: NTR's tricolor cloak
+  description: Green stripe? Looks exquisitely.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Sponsor/NTR_white_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakIan
+  categories: [ HideSpawnMenu ]
+  name: Ian cloak
+  description: We assure you that this is not a real dog, but a plush toy sewn into a coat.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Neck/Sponsor/ian_cloak.rsi

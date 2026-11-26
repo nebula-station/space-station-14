@@ -1,0 +1,8 @@
+- type: nebulaWardrobeCategory
+  id: Misc
+  name: nebula-wardrobe-category-misc
+  order: 10
+  sets:
+  - tier: 2
+    items:
+    - RadioHostMicrophone

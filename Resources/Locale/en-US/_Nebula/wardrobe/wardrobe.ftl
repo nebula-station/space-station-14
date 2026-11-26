@@ -16,6 +16,9 @@ nebula-wardrobe-category-shoes = Shoes
 nebula-wardrobe-category-uniform = Jumpsuits
 nebula-wardrobe-category-outer = Outerwear
 nebula-wardrobe-category-neck = Neck and accessories
+nebula-wardrobe-category-belt = Belts
+nebula-wardrobe-category-underwear = Underwear and socks
+nebula-wardrobe-category-misc = Miscellaneous
 
 nebula-wardrobe-tier-restriction = Requires a Boosty subscription of tier { $tier } or higher.
 nebula-wardrobe-items-skipped = Some wardrobe items were not given: they are not available for your job or subscription tier.

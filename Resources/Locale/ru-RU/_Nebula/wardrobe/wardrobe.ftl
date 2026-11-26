@@ -16,6 +16,9 @@ nebula-wardrobe-category-shoes = Обувь
 nebula-wardrobe-category-uniform = Комбинезоны
 nebula-wardrobe-category-outer = Верхняя одежда
 nebula-wardrobe-category-neck = Шея и аксессуары
+nebula-wardrobe-category-belt = Пояса
+nebula-wardrobe-category-underwear = Бельё и носки
+nebula-wardrobe-category-misc = Прочее
 
 nebula-wardrobe-tier-restriction = Требуется подписка Boosty уровня { $tier } или выше.
 nebula-wardrobe-items-skipped = Некоторые предметы из гардероба не были выданы: они недоступны для вашей должности или уровня подписки.

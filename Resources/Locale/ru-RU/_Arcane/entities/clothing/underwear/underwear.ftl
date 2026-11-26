@@ -28,3 +28,6 @@ ent-ClothingUnderwearAx = трусы Акса
     .desc = Уга буга.
 ent-ClothingUnderwearBeerPants = пивные трусы
     .desc = Пивные трусы.
+
+ent-ClothingUnderwearJesterPants = портки шута
+    .desc = Портки шута.

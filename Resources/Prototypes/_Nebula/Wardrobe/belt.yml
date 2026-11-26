@@ -1,0 +1,8 @@
+- type: nebulaWardrobeCategory
+  id: Belt
+  name: nebula-wardrobe-category-belt
+  order: 8
+  sets:
+  - tier: 2
+    items:
+    - ClothingBeltServiceApron
