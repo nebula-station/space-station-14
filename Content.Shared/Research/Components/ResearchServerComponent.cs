@@ -26,14 +26,14 @@ public sealed partial class ResearchServerComponent : Component
     /// </summary>
     [AutoNetworkedField]
     [DataField]
-    public List<ResearchPointAmount> PointBalances = new()
-    {
+    public List<ResearchPointAmount> PointBalances =
+    [
         new()
         {
             Type = "General",
             Amount = 0,
-        }
-    };
+        },
+    ];
 
     /// <summary>
     /// Network key used for grouping related RnD servers.

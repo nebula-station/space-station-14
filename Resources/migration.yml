@@ -1354,7 +1354,9 @@ PlushieLizardJobNanotrasenRepresentative: null
 PlushieLizardJobShaftMiner: null
 PlushieLizardJobVirologist: null
 PollBooth: null
-PowerCellBluespaceReactor: PowerCellMicroreactor
+# PowerCellBluespaceReactor: PowerCellMicroreactor # Nebula edit
+PowerCellMicroreactor: PowerCellBluespaceReactor # Nebula edit
+PowerCellMicroreactorPrinted: PowerCellBluespaceReactorPrinted # Nebula edit
 ResearchDestructiveAnalyzer: null
 ResearchExperimentalDestructiveScanner: null
 RightFootSkeleton: OrganSkeletonPersonFootRight
