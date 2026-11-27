@@ -1,0 +1,10 @@
+flavor-complex-jobfueleng = like a fizzy break from work in the endless void
+flavor-complex-jobfuelmed = like medicine and painkillers
+flavor-complex-jobfuelsrv = like a suspiciously tasty sweet banana milkshake
+flavor-complex-jobfuelsec = like a burnt-out chip with hints of layered liquor
+flavor-complex-jobfuelcrg = like the purest freedom on Silly Island
+flavor-complex-jobfuelrndlight = like a morning shot of liquor with coffee
+flavor-complex-jobfuelrnddark = like a late-night dose of explosive coffee
+flavor-complex-jobfuelcmd = like luxury coffee for the most important people
+flavor-complex-stationblessing = like a wish of good luck with a hint of doubt
+flavor-complex-jobfuelsyndie = like fizzy burnt gunpowder

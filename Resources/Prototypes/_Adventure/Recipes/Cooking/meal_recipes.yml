@@ -1,0 +1,86 @@
+- type: microwaveMealRecipe
+  id: RecipeChocolatePizza
+  name: chocolate pizza recipe
+  result: FoodPizzaChocolate
+  time: 30
+  group: Pizza
+  reagents:
+    Sugar: 5
+    Cream: 10
+  solids:
+    FoodDoughFlat: 1
+    FoodSnackChocolateBar: 3
+
+- type: microwaveMealRecipe
+  id: RecipeSeafoodPizza
+  name: seafood pizza recipe
+  result: FoodPizzaSeafood
+  time: 30
+  group: Pizza
+  solids:
+    FoodDoughFlat: 1
+    FoodMeatFish: 2
+    FoodTomato: 2
+    FoodCheeseSlice: 2
+
+- type: microwaveMealRecipe
+  id: RecipeMexicanPizza
+  name: mexican pizza recipe
+  result: FoodPizzaMexican
+  time: 30
+  group: Pizza
+  solids:
+    FoodDoughFlat: 1
+    FoodCorn: 1
+    FoodTomato: 2
+    FoodChiliPepper: 2
+    FoodCheeseSlice: 1
+
+- type: microwaveMealRecipe
+  id: RecipePumpkinPizza
+  name: pumpkin pizza recipe
+  result: FoodPizzaPumpkin
+  time: 30
+  group: Pizza
+  solids:
+    FoodDoughFlat: 1
+    FoodPumpkin: 1
+    FoodCheeseSlice: 2
+
+- type: microwaveMealRecipe
+  id: RecipeBBQPizza
+  name: barbecue pizza recipe
+  result: FoodPizzaBBQ
+  time: 30
+  group: Pizza
+  reagents:
+    BbqSauce: 5
+  solids:
+    FoodDoughFlat: 1
+    FoodMeatCutlet: 2
+    FoodOnionSlice: 2
+
+- type: microwaveMealRecipe
+  id: RecipeBakedNugget
+  name: chicken nugget recipe
+  result: FoodBakedNugget
+  time: 5
+  group: Savory
+  reagents:
+    OilOlive: 5
+  solids:
+    FoodMeatChickenCutlet: 1
+
+- type: microwaveMealRecipe
+  id: RecipeSoupDad
+  name: dad's soup recipe
+  result: FoodDadSoup
+  time: 20
+  group: Savory
+  reagents:
+    Flour: 10
+    Water: 15
+  solids:
+    FoodTomato: 2
+    FoodOnionSlice: 2
+    FoodChiliPepper: 2

@@ -1,0 +1,301 @@
+- type: entity
+  name: chocolate pizza
+  parent: [FoodPizzaBase, BaseSlicingRefinableFood]
+  id: FoodPizzaChocolate
+  description: For those who can't choose between chocolate and pizza.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - sweet
+    - chocolate
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: chocolate
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodPizzaChocolateSlice
+      amount: 8
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 120
+      - ReagentId: Vitamin
+        Quantity: 12
+      - ReagentId: Theobromine
+        Quantity: 20
+      - ReagentId: CocoaPowder
+        Quantity: 10
+
+- type: entity
+  name: slice of chocolate pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaChocolateSlice
+  description: A sweet tooth's dream. Won't it get too sticky?
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - sweet
+    - chocolate
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: chocolate-slice
+  - type: Item
+    heldPrefix: chocolate-slice
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 10
+      - ReagentId: Vitamin
+        Quantity: 1
+      - ReagentId: Theobromine
+        Quantity: 2
+      - ReagentId: CocoaPowder
+        Quantity: 0.8
+
+- type: entity
+  name: seafood pizza
+  parent: [FoodPizzaBase, BaseSlicingRefinableFood]
+  id: FoodPizzaSeafood
+  description: Seafood pizza, shame there are no shrimp.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - fishy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: seafood
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodPizzaSeafoodSlice
+      amount: 8
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 120
+      - ReagentId: Vitamin
+        Quantity: 12
+      - ReagentId: CarpoToxin
+        Quantity: 6
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+
+- type: entity
+  name: slice of seafood pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaSeafoodSlice
+  description: The juicy fish melts in your mouth first, then your throat goes numb.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - fishy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: seafood-slice
+  - type: Item
+    heldPrefix: seafood-slice
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 10
+      - ReagentId: Vitamin
+        Quantity: 1
+      - ReagentId: CarpoToxin
+        Quantity: 0.5
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - ReptilianFood
+    - Slice
+
+- type: entity
+  name: mexican pizza
+  parent: [FoodPizzaBase, BaseSlicingRefinableFood]
+  id: FoodPizzaMexican
+  description: The taste of Mexico.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - meaty
+    - corn
+    - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: mexican
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodPizzaMexicanSlice
+      amount: 8
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 120
+      - ReagentId: Vitamin
+        Quantity: 12
+      - ReagentId: CapsaicinOil
+        Quantity: 24
+
+- type: entity
+  name: slice of mexican pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaMexicanSlice
+  description: A slice of Mexico.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - meaty
+    - corn
+    - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: mexican-slice
+  - type: Item
+    heldPrefix: mexican-slice
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 10
+      - ReagentId: Vitamin
+        Quantity: 1
+      - ReagentId: CapsaicinOil
+        Quantity: 2
+
+- type: entity
+  name: pumpkin pizza
+  parent: [FoodPizzaBase, BaseSlicingRefinableFood]
+  id: FoodPizzaPumpkin
+  description: The taste of Halloween.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - pumpkin
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: pumpkin
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodPizzaPumpkinSlice
+      amount: 8
+
+- type: entity
+  name: slice of pumpkin pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaPumpkinSlice
+  description: A slice of Halloween.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - pumpkin
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: pumpkin-slice
+  - type: Item
+    heldPrefix: pumpkin-slice
+
+- type: entity
+  name: barbecue pizza
+  parent: [FoodPizzaBase, BaseSlicingRefinableFood]
+  id: FoodPizzaBBQ
+  description: The smell of embers and juicy meat lures in even vegetarians.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - smokey
+    - meaty
+    - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: bbq
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodPizzaBBQSlice
+      amount: 8
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 120
+      - ReagentId: Vitamin
+        Quantity: 12
+      - ReagentId: CapsaicinOil
+        Quantity: 12
+      - ReagentId: BbqSauce
+        Quantity: 12
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+
+- type: entity
+  name: slice of barbecue pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaBBQSlice
+  description: A slice smelling of embers and juicy meat.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - smokey
+    - meaty
+    - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: bbq-slice
+  - type: Item
+    heldPrefix: bbq-slice
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 10
+      - ReagentId: Vitamin
+        Quantity: 1
+      - ReagentId: CapsaicinOil
+        Quantity: 1
+      - ReagentId: BbqSauce
+        Quantity: 1
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - ReptilianFood
+    - Slice
