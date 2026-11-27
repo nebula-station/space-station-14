@@ -4,6 +4,7 @@
 using Content.Client._Nebula.Chat;
 using Content.Client.Chat.TypingIndicator;
 using JetBrains.Annotations;
+using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
 
 namespace Content.Client._Arcane.Chat.DirectionalEmote;

@@ -158,6 +158,7 @@ namespace Content.Server.Administration.UI
             _adminManager.ReloadAdminsWithRank(rr.Id);
 
             _webhooks.SendRankDeletedMessage(Player.UserId, rank); // Nebula edit
+            OnRankRemoved(rank); // Nebula edit
         }
 
         private async Task HandleUpdateAdminRank(UpdateAdminRank ur)
@@ -202,6 +203,7 @@ namespace Content.Server.Administration.UI
             _adminManager.ReloadAdminsWithRank(ur.Id);
 
             _webhooks.SendRankChangedMessage(Player.UserId, oldRank, rank); // Nebula add
+            OnRankUpdated(oldRank, ur.Flags); // Nebula edit
         }
 
         private async Task HandleAddAdminRank(AddAdminRank ar)
@@ -252,6 +254,7 @@ namespace Content.Server.Administration.UI
             }
 
             _webhooks.SendAdminDeletedMessage(Player.UserId, admin); // Nebula edit
+            OnAdminRemoved(record?.LastSeenUserName ?? ra.UserId.ToString()); // Nebula edit
         }
 
         private async Task HandleUpdateAdmin(UpdateAdmin ua)
@@ -318,6 +321,7 @@ namespace Content.Server.Administration.UI
                 admin.AdminRank = null;
 
             _webhooks.SendAdminChangedMessage(Player.UserId, oldAdmin, admin);
+            OnAdminUpdated(name, oldAdmin, admin);
             // Nebula end
         }
 
@@ -417,6 +421,7 @@ namespace Content.Server.Administration.UI
             {
                 // Can't create an admin with higher perms than yourself, obviously.
                 _sawmill.Warning($"{Player} tried to grant admin powers above their authorization.");
+                OnRankEscalation(); // Nebula edit
                 return false;
             }
 

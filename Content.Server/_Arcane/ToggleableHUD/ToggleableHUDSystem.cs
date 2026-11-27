@@ -12,8 +12,8 @@ namespace Content.Server._Arcane.ToggleableHUD;
 
 public sealed partial class ToggleableHUDSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
 
     [SubscribeLocalEvent]
     private void OnMapInit(Entity<ToggleableHUDComponent> ent, ref MapInitEvent args)

@@ -767,6 +767,11 @@ namespace Content.Server.Administration.Systems
                 return;
             }
 
+            // Nebula start
+            if (!senderAHelpAdmin && CheckAHelpSpam(senderSession, message.Text))
+                return;
+            // Nebula end
+
             if (_rateLimit.CountAction(eventArgs.SenderSession, RateLimitKey) != RateLimitStatus.Allowed)
                 return;
 

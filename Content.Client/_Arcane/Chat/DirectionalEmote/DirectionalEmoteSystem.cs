@@ -12,8 +12,8 @@ namespace Content.Client._Arcane.Chat.DirectionalEmote;
 
 public sealed partial class DirectionalEmoteSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IUserInterfaceManager _ui = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IUserInterfaceManager _ui = default!;
 
     private static readonly SpriteSpecifier VerbIcon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/emotes.svg.192dpi.png"));
 

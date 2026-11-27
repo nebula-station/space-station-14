@@ -22,12 +22,12 @@ namespace Content.Server._Arcane.Chat.Systems;
 /// </summary>
 public sealed partial class DirectionalEmoteSystem : EntitySystem
 {
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IChatManager _chat = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
-    [Dependency] private readonly ExamineSystemShared _examine = default!;
+    [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private IChatManager _chat = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private ActionBlockerSystem _actionBlocker = default!;
+    [Dependency] private ExamineSystemShared _examine = default!;
 
     [SubscribeNetworkEvent]
     private void OnSendDirectionalEmote(SendDirectionalEmoteEvent args, EntitySessionEventArgs session)

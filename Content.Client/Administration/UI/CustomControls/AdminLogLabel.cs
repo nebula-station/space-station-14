@@ -5,7 +5,7 @@ using Robust.Client.UserInterface.Controls;
 
 namespace Content.Client.Administration.UI.CustomControls;
 
-public sealed class AdminLogLabel : RichTextLabel
+public sealed partial class AdminLogLabel : RichTextLabel // Nebula edit
 {
     public AdminLogLabel(ref SharedAdminLog log, Separator separator)
     {
@@ -14,7 +14,7 @@ public sealed class AdminLogLabel : RichTextLabel
 
         var localTime = log.Date.ToLocalTime();
 
-        SetMessage($"{localTime:HH:mm:ss}: {log.Message}");
+        SetMessage(FormatLog(log, localTime)); // Nebula edit
         OnVisibilityChanged += VisibilityChanged;
     }
 
