@@ -3,6 +3,7 @@ using Content.Medical.Common.Body;
 // </Trauma>
 using System.Linq;
 using Content.Client._Nebula.Humanoid;
+using Content.Shared._Nebula.Humanoid.Markings; // Nebula - WolfGate
 using Content.Client.DisplacementMap;
 using Content.Shared.Body;
 using Content.Shared.CCVar;
@@ -29,6 +30,7 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
     public override void Initialize()
     {
         base.Initialize();
+        InitializeGenitals(); // Nebula - WolfGate
 
         SubscribeLocalEvent<VisualOrganComponent, OrganGotInsertedEvent>(OnOrganGotInserted);
         SubscribeLocalEvent<VisualOrganComponent, OrganGotRemovedEvent>(OnOrganGotRemoved);
@@ -166,15 +168,24 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
 
     private IEnumerable<Marking> AllMarkings(Entity<VisualOrganMarkingsComponent> ent)
     {
-        foreach (var markings in ent.Comp.Markings.Values)
+        var censorNudity = _cfg.GetCVar(CCVars.AccessibilityClientCensorNudity) || _cfg.GetCVar(CCVars.AccessibilityServerCensorNudity); // Nebula - WolfGate, moved up
+        var hideGenitals = censorNudity || GenitalsCovered(ent); // Nebula - WolfGate
+        foreach (var (layer, markings) in ent.Comp.Markings) // Nebula - WolfGate
         {
+            // Nebula - WolfGate, genitals are not drawn under the nudity censor or under clothing
+            if (hideGenitals && GenitalLayers.IsGenital(layer))
+                continue;
+
             foreach (var marking in markings)
             {
+                // Nebula - WolfGate, child markings like the back half of breasts are stored on the parent's layer
+                if (hideGenitals && _marking.TryGetMarking(marking, out var markingProto) && GenitalLayers.IsGenital(markingProto.BodyPart))
+                    continue;
+
                 yield return marking;
             }
         }
 
-        var censorNudity = _cfg.GetCVar(CCVars.AccessibilityClientCensorNudity) || _cfg.GetCVar(CCVars.AccessibilityServerCensorNudity);
         if (!censorNudity)
             yield break;
 
@@ -247,6 +258,7 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
                     _sprite.LayerSetColor(target, spriteLayer, Color.White);
 
                 _gradient.Apply((target, target.Comp), spriteLayer, proto, marking, i, rsi); // Nebula edit
+                ApplySizedState(ent, (target, target.Comp), spriteLayer, proto, marking, i); // Nebula - WolfGate
 
                 if (displacement != null && proto.CanBeDisplaced)
                 {

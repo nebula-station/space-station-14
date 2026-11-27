@@ -1,0 +1,353 @@
+# Ported from Monolith-DS by Nebula.
+# Nebula: the TSFMC racks are the army racks here, there is no TSF in our lore.
+
+## Command
+# HoP PDW racks (SR in Frontier)
+- type: entity
+  id: StructurePistolRackLockSR
+  parent: StructurePistolRackLock
+  suffix: HoP, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol
+      color: "#1f6626"
+    - state: lock
+      color: "#1f6626"
+    - state: base-pistol-decal
+      color: "#f1b223"
+    - state: pistol-0
+    - map: ["enum.StorageFillLayers.Fill"]
+    - state: locked
+      map: [ enum.LockVisualLayers.Lock ]
+      shader: unshaded
+  - type: AccessReader
+    access: [ ["HeadOfPersonnel"] ]
+  - type: Lock
+    locked: true
+
+- type: entity
+  id: StructurePistolRackLockSRWallmounted
+  parent: StructurePistolRackLockWallmounted
+  suffix: HoP, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol-wall
+      color: "#1f6626"
+    - state: lock
+      color: "#1f6626"
+    - state: base-pistol-wall-decal
+      color: "#f1b223"
+    - state: pistol-0
+    - map: ["enum.StorageFillLayers.Fill"]
+    - state: locked
+      map: [ enum.LockVisualLayers.Lock ]
+      shader: unshaded
+  - type: AccessReader
+    access: [ ["HeadOfPersonnel"] ]
+  - type: Lock
+    locked: true
+
+# HoS PDW racks (Sheriff in Frontier)
+- type: entity
+  id: StructurePistolRackLockSheriff
+  parent: StructurePistolRackLock
+  suffix: HoS, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol
+      color: "#40454a"
+    - state: lock
+      color: "#1f6626"
+    - state: base-pistol-decal
+      color: "#f1b223"
+    - state: pistol-0
+    - map: ["enum.StorageFillLayers.Fill"]
+    - state: locked
+      map: [ enum.LockVisualLayers.Lock ]
+      shader: unshaded
+  - type: AccessReader
+    access: [ ["HeadOfSecurity"] ]
+  - type: Lock
+    locked: true
+
+- type: entity
+  id: StructurePistolRackLockSheriffWallmounted
+  parent: StructurePistolRackLockWallmounted
+  suffix: HoS, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol-wall
+      color: "#40454a"
+    - state: lock
+      color: "#1f6626"
+    - state: base-pistol-wall-decal
+      color: "#f1b223"
+    - state: pistol-0
+    - map: ["enum.StorageFillLayers.Fill"]
+    - state: locked
+      map: [ enum.LockVisualLayers.Lock ]
+      shader: unshaded
+  - type: AccessReader
+    access: [ ["HeadOfSecurity"] ]
+  - type: Lock
+    locked: true
+
+## Mercenary
+# Gun racks
+- type: entity
+  id: StructureGunRackMercenary
+  parent: StructureGunRack
+  suffix: Mercenary, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-gun
+      color: "#7b7b3f"
+    - state: base-gun-decal
+      color: "#b8b873"
+
+- type: entity
+  id: StructureGunRackWallmountedMercenary
+  parent: StructureGunRackWallmounted
+  suffix: Mercenary, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-gun-wall
+      color: "#7b7b3f"
+    - state: base-gun-wall-decal
+      color: "#b8b873"
+
+# Melee weapon racks
+- type: entity
+  id: StructureMeleeWeaponRackMercenary
+  parent: StructureMeleeWeaponRack
+  suffix: Mercenary, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-melee
+      color: "#7b7b3f"
+    - state: base-melee-decal
+      color: "#b8b873"
+
+- type: entity
+  id: StructureMeleeWeaponRackWallmountedMercenary
+  parent: StructureMeleeWeaponRackWallmounted
+  suffix: Mercenary, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-melee-wall
+      color: "#7b7b3f"
+    - state: base-melee-wall-decal
+      color: "#b8b873"
+
+# Sidearm racks
+- type: entity
+  id: StructurePistolRackMercenary
+  parent: StructurePistolRack
+  suffix: Mercenary, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol
+      color: "#7b7b3f"
+    - state: base-pistol-decal
+      color: "#b8b873"
+
+- type: entity
+  id: StructurePistolRackWallmountedMercenary
+  parent: StructurePistolRackWallmounted
+  suffix: Mercenary, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol-wall
+      color: "#7b7b3f"
+    - state: base-pistol-wall-decal
+      color: "#b8b873"
+
+## Salvage
+# Gun racks
+- type: entity
+  id: StructureGunRackSalvage
+  parent: StructureGunRack
+  suffix: Salvage, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-gun
+      color: "#765428"
+    - state: base-gun-decal
+      color: "#9a54bf"
+
+- type: entity
+  id: StructureGunRackWallmountedSalvage
+  parent: StructureGunRackWallmounted
+  suffix: Salvage, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-gun-wall
+      color: "#765428"
+    - state: base-gun-wall-decal
+      color: "#9a54bf"
+
+# Melee weapon racks
+- type: entity
+  id: StructureMeleeWeaponRackSalvage
+  parent: StructureMeleeWeaponRack
+  suffix: Salvage, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-melee
+      color: "#765428"
+    - state: base-melee-decal
+      color: "#9a54bf"
+
+- type: entity
+  id: StructureMeleeWeaponRackWallmountedSalvage
+  parent: StructureMeleeWeaponRackWallmounted
+  suffix: Salvage, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-melee-wall
+      color: "#765428"
+    - state: base-melee-wall-decal
+      color: "#9a54bf"
+
+# Sidearm racks
+- type: entity
+  id: StructurePistolRackSalvage
+  parent: StructurePistolRack
+  suffix: Salvage, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol
+      color: "#765428"
+    - state: base-pistol-decal
+      color: "#9a54bf"
+
+- type: entity
+  id: StructurePistolRackWallmountedSalvage
+  parent: StructurePistolRackWallmounted
+  suffix: Salvage, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol-wall
+      color: "#765428"
+    - state: base-pistol-wall-decal
+      color: "#9a54bf"
+
+## Army (NFSD/TSFMC in Frontier)
+# Gun racks
+- type: entity
+  id: StructureGunRackArmy
+  parent: StructureGunRack
+  suffix: Army, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-gun
+      color: "#40454a"
+    - state: base-gun-decal
+      color: "#455470"
+
+- type: entity
+  id: StructureGunRackWallmountedArmy
+  parent: StructureGunRackWallmounted
+  suffix: Army, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-gun-wall
+      color: "#40454a"
+    - state: base-gun-wall-decal
+      color: "#455470"
+
+# Melee weapon racks
+- type: entity
+  id: StructureMeleeWeaponRackArmy
+  parent: StructureMeleeWeaponRack
+  suffix: Army, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-melee
+      color: "#40454a"
+    - state: base-melee-decal
+      color: "#455470"
+
+- type: entity
+  id: StructureMeleeWeaponRackWallmountedArmy
+  parent: StructureMeleeWeaponRackWallmounted
+  suffix: Army, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-melee-wall
+      color: "#40454a"
+    - state: base-melee-wall-decal
+      color: "#455470"
+
+# Sidearm racks
+- type: entity
+  id: StructurePistolRackArmy
+  parent: StructurePistolRack
+  suffix: Army, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol
+      color: "#40454a"
+    - state: base-pistol-decal
+      color: "#455470"
+
+- type: entity
+  id: StructurePistolRackWallmountedArmy
+  parent: StructurePistolRackWallmounted
+  suffix: Army, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol-wall
+      color: "#40454a"
+    - state: base-pistol-wall-decal
+      color: "#455470"
+
+## Blood Cult
+# Melee weapon racks
+- type: entity
+  id: StructureMeleeWeaponRackBloodCult
+  parent: StructureMeleeWeaponRack
+  suffix: Blood Cult, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-melee
+      color: "#776756"
+    - state: base-melee-decal
+      color: "#562f2f"
+
+## Pirates/Freelancers
+# Sidearm racks
+- type: entity
+  id: StructurePistolRackPirates
+  parent: StructurePistolRack
+  suffix: Pirate, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol
+      color: "#4c3117"
+    - state: base-pistol-decal
+      color: "#23211f"

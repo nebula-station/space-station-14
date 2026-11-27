@@ -2,6 +2,7 @@ using Content.Shared.Audio;
 using Content.Shared.CCVar;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
+using Robust.Client.Replays.Playback; // Nebula
 using Robust.Shared.Audio;
 using Robust.Shared.Configuration;
 using Robust.Shared.Physics;
@@ -28,6 +29,7 @@ public sealed partial class AmbientSoundSystem : SharedAmbientSoundSystem
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private IGameTiming _gameTiming = default!;
     [Dependency] private IOverlayManager _overlayManager = default!;
+    [Dependency] private IReplayPlaybackManager _replayPlayback = default!; // Nebula
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private IRobustRandom _random = default!;
 
@@ -95,6 +97,7 @@ public sealed partial class AmbientSoundSystem : SharedAmbientSoundSystem
         base.Initialize();
         UpdatesOutsidePrediction = true;
         UpdatesAfter.Add(typeof(AmbientSoundTreeSystem));
+        _replayPlayback.AfterSetTick += OnReplaySeek; // Nebula
 
         Subs.CVar(_cfg, CCVars.AmbientCooldown, SetCooldown, true);
         Subs.CVar(_cfg, CCVars.MaxAmbientSources, SetAmbientCount, true);
@@ -134,6 +137,7 @@ public sealed partial class AmbientSoundSystem : SharedAmbientSoundSystem
     public override void Shutdown()
     {
         base.Shutdown();
+        _replayPlayback.AfterSetTick -= OnReplaySeek; // Nebula
         ClearSounds();
     }
 
@@ -174,6 +178,14 @@ public sealed partial class AmbientSoundSystem : SharedAmbientSoundSystem
 
         ProcessNearbyAmbience(xform);
     }
+
+    // Nebula start
+    private void OnReplaySeek()
+    {
+        ClearSounds();
+        _targetTime = TimeSpan.Zero;
+    }
+    // Nebula end
 
     private void ClearSounds()
     {

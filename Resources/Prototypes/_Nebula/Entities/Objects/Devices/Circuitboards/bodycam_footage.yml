@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: BodycamFootageComputerCircuitboard
+  name: bodycam footage console board
+  description: A computer printed circuit board for a bodycam footage console.
+  components:
+  - type: Sprite
+    state: cpu_security
+  - type: ComputerBoard
+    prototype: ComputerBodycamFootage

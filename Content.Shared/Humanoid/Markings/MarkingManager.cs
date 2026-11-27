@@ -183,7 +183,8 @@ public sealed partial class MarkingManager
 
                 // Nebula start
                 var gradient = markings[i].Gradient?.Sanitized();
-                markings[i] = markings[i] with { Gradient = gradient };
+                var size = marking.SanitizeSize(markings[i].Size); // Nebula - WolfGate
+                markings[i] = markings[i] with { Gradient = gradient, Size = size }; // Nebula - WolfGate
                 // Nebula end
 
                 var existingColors = markings[i].MarkingColors;
@@ -205,12 +206,12 @@ public sealed partial class MarkingManager
                         missingColors = Enumerable.Repeat(existingColors[^1], numMissingColors);
                     }
 
-                    markings[i] = new Marking(marking.ID, existingColors.Concat(missingColors)) { Gradient = gradient }; // Nebula edit
+                    markings[i] = new Marking(marking.ID, existingColors.Concat(missingColors)) { Gradient = gradient, Size = size }; // Nebula edit
                 }
                 // If there are more colors than sprites, drop the extras
                 else if (marking.Sprites.Count < existingColors.Count)
                 {
-                    markings[i] = new Marking(marking.ID, existingColors.Take(marking.Sprites.Count)) { Gradient = gradient }; // Nebula edit
+                    markings[i] = new Marking(marking.ID, existingColors.Take(marking.Sprites.Count)) { Gradient = gradient, Size = size }; // Nebula edit
                 }
             }
         }

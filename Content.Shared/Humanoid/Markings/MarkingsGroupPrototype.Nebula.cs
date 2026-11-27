@@ -16,3 +16,17 @@ public sealed partial class MarkingsLimits
     [DataField]
     public HashSet<ProtoId<MarkingPrototype>> Blacklist = new();
 }
+
+/// <summary>
+/// Nebula - WolfGate
+/// </summary>
+public sealed partial class MarkingsGroupPrototype
+{
+    /// <summary>
+    /// Suffix of the art variant drawn to match this group's body sprites, put in place of <c>{tone}</c>
+    /// in <see cref="MarkingSizedStates"/>. Human body sprites have a warm tint baked in, so neutral grey genital art
+    /// comes out paler than the skin around it; the skin-toned "_s" art matches them.
+    /// </summary>
+    [DataField]
+    public string ArtTone = string.Empty;
+}

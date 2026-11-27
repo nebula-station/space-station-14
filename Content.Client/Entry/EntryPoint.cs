@@ -1,3 +1,4 @@
+using Content.Client._Nebula.Bodycam; // Nebula
 using Content.Client._Nebula.Stylesheets;
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
@@ -54,6 +55,7 @@ namespace Content.Client.Entry
         [Dependency] private IConfigurationManager _configManager = default!;
         [Dependency] private IStylesheetManager _stylesheetManager = default!;
         [Dependency] private NebulaThemeManager _nebulaTheme = default!; // Nebula
+        [Dependency] private BodycamFootageManager _bodycamFootage = default!; // Nebula
         [Dependency] private IScreenshotHook _screenshotHook = default!;
         [Dependency] private FullscreenHook _fullscreenHook = default!;
         [Dependency] private ChangelogManager _changelogManager = default!;
@@ -154,6 +156,7 @@ namespace Content.Client.Entry
             base.PostInit();
 
             _nebulaTheme.Initialize(); // Nebula
+            _bodycamFootage.Initialize(); // Nebula
             _stylesheetManager.Initialize();
 
             // Setup key contexts
@@ -163,6 +166,7 @@ namespace Content.Client.Entry
 
             _overlayManager.AddOverlay(new SingularityOverlay());
             _overlayManager.AddOverlay(new RadiationPulseOverlay());
+            _overlayManager.AddOverlay(new Content.Client._Funkystation.Explosion.ExplosionShockWaveOverlay()); // Nebula - Monolith: explosion shockwave
             _chatManager.Initialize();
             _clientPreferencesManager.Initialize();
             _euiManager.Initialize();

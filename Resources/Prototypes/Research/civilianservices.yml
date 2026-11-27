@@ -70,6 +70,7 @@
   - SurveillanceWirelessCameraAnchoredCircuitboard
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
+  - BodycamFootageComputerCircuitboard # Nebula
   - TelecomServerCircuitboard
   - HolopadMachineCircuitboard
   # Goobstation R&D Console rework start

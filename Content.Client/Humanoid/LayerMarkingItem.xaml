@@ -15,5 +15,7 @@
         </Button>
     </BoxContainer>
 
+    <!-- Nebula - WolfGate -->
+    <BoxContainer Name="SizeContainer" Visible="False" Orientation="Horizontal" SeparationOverride="4" />
     <BoxContainer Name="ColorsContainer" Visible="False" Orientation="Vertical" />
 </BoxContainer>

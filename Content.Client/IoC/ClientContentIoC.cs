@@ -1,3 +1,4 @@
+using Content.Client._Nebula.Bodycam; // Nebula
 using Content.Client._Nebula.Stylesheets;
 using Content.Client.Administration.Managers;
 using Content.Client.Audio.Midi;
@@ -72,6 +73,7 @@ namespace Content.Client.IoC
             collection.Register<MidiFileCollectionManager>();
             collection.Register<DiscordLinkingManager>(); // Nebula
             collection.Register<NebulaThemeManager>(); // Nebula
+            collection.Register<BodycamFootageManager>(); // Nebula
         }
     }
 }

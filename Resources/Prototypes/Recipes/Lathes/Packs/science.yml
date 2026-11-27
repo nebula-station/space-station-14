@@ -91,6 +91,7 @@
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
+  - BodycamFootageComputerCircuitboard # Nebula
   - SurveillanceCameraWirelessRouterCircuitboard
   - ComputerTelevisionCircuitboard
   - SurveillanceWirelessCameraMovableCircuitboard
