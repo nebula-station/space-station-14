@@ -98,6 +98,7 @@
     prefix: "ghost_"
   - type: GhostHearing
   - type: ShowElectrocutionHUD
+  - type: ToggleableHUD # Nebula edit
   - type: IntrinsicRadioReceiver
   - type: ActiveRadio
     receiveAllChannels: true
