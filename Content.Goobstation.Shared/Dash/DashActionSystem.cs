@@ -22,15 +22,26 @@ public sealed partial class DashActionSystem : EntitySystem
 
     [SubscribeLocalEvent]
     private void OnDashAction(Entity<DashActionComponent> ent, ref DashActionEvent args)
-    // Nebula start
-        => TryDash(ent, args);
+    {
+        // Nebula start
+        TryDash(ent, args);
+    }
+
+    /// <summary>
+    /// Dashes the performer of actions without a dash component, like the mantis blade combo.
+    /// </summary>
+    [SubscribeLocalEvent]
+    private void OnDashBroadcast(DashActionEvent args)
+    {
+        TryDash(args.Performer, args);
+    }
 
     /// <summary>
     /// Dashes the entity towards the action target. Returns whether the throw started.
     /// </summary>
     public bool TryDash(EntityUid ent, DashActionEvent args)
-    // Nebula end
     {
+        // Nebula end
         if (args.Handled)
             return false; // Nebula edit
 
@@ -53,7 +64,7 @@ public sealed partial class DashActionSystem : EntitySystem
         if (args.StaminaDrain != null)
             _stamina.TakeStaminaDamage(ent, args.StaminaDrain.Value, visual: false, immediate: false);
 
-        if (args.Emote is { } emote)
+        if (args.Emote is {} emote)
             _animatedEmotes.PlayEmoteAnimation(ent, emote);
 
         return thrown; // Nebula

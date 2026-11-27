@@ -81,6 +81,8 @@ public sealed partial class HeartReviverSystem : EntitySystem
             if (damage > reviver.MaxDamage)
                 continue;
 
+            RestoreBlood(body);
+
             if (damage > reviver.ReviveDamage)
             {
                 _damageable.TryChangeDamage(body, reviver.Healing, true, false,
@@ -90,6 +92,19 @@ public sealed partial class HeartReviverSystem : EntitySystem
 
             Revive((uid, reviver), body);
         }
+    }
+
+    /// <summary>
+    /// Refills the blood and stops the bleeding, otherwise a body that bled out dies again right after the revive.
+    /// </summary>
+    private void RestoreBlood(EntityUid body)
+    {
+        if (!TryComp<BloodstreamComponent>(body, out var blood))
+            return;
+
+        _bloodstream.TryModifyBloodLevel((body, blood), _bloodstream.GetMissingBlood((body, blood)));
+        if (blood.BleedAmount > 0)
+            _bloodstream.TryModifyBleedAmount((body, blood), -blood.BleedAmount);
     }
 
     private bool CanRevive(EntityUid body)
@@ -104,7 +119,6 @@ public sealed partial class HeartReviverSystem : EntitySystem
     {
         ent.Comp.DeadSince = null;
         _audio.PlayPvs(ent.Comp.ReviveSound, body);
-        RestoreBlood(body);
         _mobState.ChangeMobState(body, MobState.Critical);
         _popup.PopupEntity(Loc.GetString("heart-reviver-popup-revive"), body, PopupType.MediumCaution);
 
@@ -120,17 +134,5 @@ public sealed partial class HeartReviverSystem : EntitySystem
         var cost = internalOrgan.IntegrityCap * ent.Comp.HeartIntegrityCost;
         if (!_trauma.TryChangeOrganDamageModifier((heart, internalOrgan), cost, ent.Owner, HeartModifierId))
             _trauma.TryCreateOrganDamageModifier((heart, internalOrgan), cost, ent.Owner, HeartModifierId);
-    }
-
-    /// <summary>
-    /// Stops the bleeding and refills the blood, otherwise the body bleeds out again right after the revive.
-    /// </summary>
-    private void RestoreBlood(EntityUid body)
-    {
-        if (!TryComp<BloodstreamComponent>(body, out var bloodstream))
-            return;
-
-        _bloodstream.TryModifyBleedAmount((body, bloodstream), -bloodstream.BleedAmount);
-        _bloodstream.TryModifyBloodLevel((body, bloodstream), bloodstream.BloodReferenceSolution.Volume);
     }
 }

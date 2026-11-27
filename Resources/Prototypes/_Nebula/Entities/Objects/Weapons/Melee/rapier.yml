@@ -13,7 +13,7 @@
     attackRate: 1.25
     damage:
       types:
-        Piercing: 15
+        Piercing: 19
     resistanceBypass: true
     resistanceBypassLightOnly: true
     soundHit:
