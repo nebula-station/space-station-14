@@ -39,7 +39,6 @@
   result: MagazineRifle
   materials:
     Steel: 475
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -48,7 +47,6 @@
   materials:
     Steel: 25
     Plastic: 450
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoRecipe # Trauma
@@ -56,7 +54,6 @@
   result: MagazineRiflePractice
   materials:
     Steel: 175
-    Gunpowder: 150 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -66,7 +63,6 @@
     Steel: 25
     Plastic: 300
     Uranium: 300
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -74,7 +70,6 @@
   result: MagazineBoxRifle
   materials:
     Steel: 750
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -82,7 +77,6 @@
   result: MagazineBoxRifleIncendiary
   materials:
     Plastic: 750
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoBoxRecipe # Trauma
@@ -90,7 +84,6 @@
   result: MagazineBoxRiflePractice
   materials:
     Steel: 250
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -99,7 +92,6 @@
   materials:
     Plastic: 500
     Uranium: 500
-    Gunpowder: 500 # Trauma
 
 # .25 Caseless
 - type: latheRecipe
@@ -108,7 +100,6 @@
   result: MagazinePistolCaselessRifle
   materials:
     Steel: 145
-    Gunpowder: 150 # Trauma
 
 # .30 Rifle
 - type: latheRecipe
@@ -124,7 +115,6 @@
   result: MagazineLightRifle
   materials:
     Steel: 500 # Orion edit
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -133,7 +123,6 @@
   materials:
     Steel: 25
     Plastic: 475 # Orion edit
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoRecipe # Trauma
@@ -141,7 +130,6 @@
   result: MagazineLightRiflePractice
   materials:
     Steel: 175 # Orion edit
-    Gunpowder: 150 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -153,7 +141,6 @@
     Plastic: 325
     Uranium: 325
     # Orion end
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -161,7 +148,6 @@
   result: MagazineBoxLightRifle
   materials:
     Steel: 775 # Orion edit
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -169,7 +155,6 @@
   result: MagazineBoxLightRifleIncendiary
   materials:
     Plastic: 775 # Orion edit
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoBoxRecipe # Trauma
@@ -177,7 +162,6 @@
   result: MagazineBoxLightRiflePractice
   materials:
     Steel: 200 # Orion edit
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -188,7 +172,6 @@
     Plastic: 550
     Uranium: 550
     # Orion end
-    Gunpowder: 500 # Trauma
 
 # .35 Auto
 - type: latheRecipe
@@ -204,7 +187,6 @@
   result: MagazinePistol
   materials:
     Steel: 145
-    Gunpowder: 150 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -213,7 +195,6 @@
   materials:
     Steel: 25
     Plastic: 120
-    Gunpowder: 150 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoRecipe # Trauma
@@ -221,7 +202,6 @@
   result: MagazinePistolPractice
   materials:
     Steel: 85
-    Gunpowder: 150 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -231,7 +211,6 @@
     Steel: 25
     Plastic: 65
     Uranium: 120
-    Gunpowder: 150 # Trauma
 
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
@@ -239,7 +218,6 @@
   result: MagazinePistolSubMachineGunEmpty
   materials:
     Steel: 30
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -247,7 +225,6 @@
   result: MagazinePistolSubMachineGun
   materials:
     Steel: 300
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -256,7 +233,6 @@
   materials:
     Steel: 25
     Plastic: 275
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoRecipe # Trauma
@@ -264,7 +240,6 @@
   result: MagazinePistolSubMachineGunPractice
   materials:
     Steel: 150
-    Gunpowder: 150 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -274,7 +249,6 @@
     Steel: 25
     Plastic: 250
     Uranium: 250
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
@@ -289,7 +263,6 @@
   result: MagazinePistolSubMachineGunTopMounted
   materials:
     Steel: 300
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -297,7 +270,6 @@
   result: MagazineBoxPistol
   materials:
     Steel: 600
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -305,7 +277,6 @@
   result: MagazineBoxPistolIncendiary
   materials:
     Plastic: 600
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoBoxRecipe # Trauma
@@ -313,7 +284,6 @@
   result: MagazineBoxPistolPractice
   materials:
     Steel: 300
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -322,7 +292,6 @@
   materials:
     Plastic: 300
     Uranium: 600
-    Gunpowder: 500 # Trauma
 
 # .45 Magnum
 - type: latheRecipe
@@ -338,7 +307,6 @@
   result: SpeedLoaderMagnum
   materials:
     Steel: 190
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoRecipe # Trauma
@@ -347,7 +315,6 @@
   materials:
     Steel: 50
     Plastic: 150
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoRecipe # Trauma
@@ -355,7 +322,6 @@
   result: SpeedLoaderMagnumPractice
   materials:
     Steel: 90
-    Gunpowder: 150 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoRecipe # Trauma
@@ -365,7 +331,6 @@
     Steel: 50
     Plastic: 150
     Uranium: 110
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoBoxRecipe # Trauma
@@ -373,7 +338,6 @@
   result: MagazineBoxMagnum
   materials:
     Steel: 240
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoBoxRecipe # Trauma
@@ -381,7 +345,6 @@
   result: MagazineBoxMagnumIncendiary
   materials:
     Plastic: 240
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoBoxRecipe # Trauma
@@ -389,7 +352,6 @@
   result: MagazineBoxMagnumPractice
   materials:
     Steel: 60
-    Gunpowder: 250 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoBoxRecipe # Trauma
@@ -398,7 +360,6 @@
   materials:
     Plastic: 240
     Uranium: 180
-    Gunpowder: 500 # Trauma
 
 # .50 Shell
 - type: latheRecipe
@@ -414,7 +375,6 @@
   result: MagazineShotgun
   materials:
     Steel: 240
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -423,7 +383,6 @@
   materials:
     Steel: 100
     Plastic: 190
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -432,7 +391,6 @@
   materials:
     Steel: 150
     Plastic: 140
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -441,7 +399,6 @@
   materials:
     Steel: 190
     Plastic: 100
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -449,7 +406,6 @@
   result: BoxLethalshot
   materials:
     Steel: 320
-    Gunpowder: 1000 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -458,7 +414,6 @@
   materials:
     Steel: 80
     Plastic: 320
-    Gunpowder: 1000 # Trauma
 
 - type: latheRecipe
   parent: BasePracticeAmmoBoxRecipe # Trauma
@@ -466,7 +421,6 @@
   result: BoxShotgunPractice
   materials:
     Steel: 80
-    Gunpowder: 500 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -475,7 +429,6 @@
   materials:
     Plastic: 320
     Uranium: 240
-    Gunpowder: 1000 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -484,7 +437,6 @@
   materials:
     Steel: 160
     Plastic: 240
-    Gunpowder: 1000 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -493,7 +445,6 @@
   materials:
     Steel: 240
     Plastic: 160
-    Gunpowder: 1000 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -505,7 +456,6 @@
     Glass: 80
     Plasma: 160
     Silver: 80
-    Gunpowder: 1000 # Trauma
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -514,7 +464,6 @@
   materials:
     Steel: 80
     Plastic: 80
-    Gunpowder: 500 # Trauma
 
 # .60 anti-materiel
 - type: latheRecipe
@@ -523,7 +472,6 @@
   result: MagazineBoxAntiMateriel
   materials:
     Steel: 1500 # Goob - was 200
-    Gunpowder: 1000 # Trauma
 
 # Encampment ammo
 - type: latheRecipe
@@ -557,7 +505,6 @@
     Steel: 450
     Plastic: 300
     Gold: 150
-    Gunpowder: 200 # Trauma
 
 - type: latheRecipe
   id: GrenadeFlash
@@ -569,4 +516,3 @@
     Steel: 150
     Plastic: 100
     Glass: 20
-    Gunpowder: 500 # Trauma

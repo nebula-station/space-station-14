@@ -113,7 +113,7 @@
   parent: BaseOrganSubdermalArmor
   id: OrganOpticalCamo
   name: optical camo implant
-  description: A mesh of light-bending fibers under the skin. Makes you fully invisible for a few seconds, attacking or getting hurt breaks it.
+  description: A mesh of light-bending fibers under the skin. Makes you fully invisible for a minute, attacking or getting hurt breaks it.
   components:
   - type: Sprite
     sprite: _LuaM/Objects/Misc/optical_camo.rsi
@@ -121,6 +121,7 @@
   - type: OrganComponents
     onAdd:
     - type: OpticalCamo
+      duration: 60
       activateSound:
         path: /Audio/Effects/stealthoff.ogg
         params:

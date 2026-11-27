@@ -16,4 +16,4 @@ heart-reviver-popup-revive = Тело содрогается от разряда
 implant-shield-popup-broken = Призрачный щит перегружается и гаснет!
 implant-shield-popup-no-hand = Нет кисти, чтобы развернуть щит.
 implant-shield-popup-hand-busy = Кисть руки с имплантом занята.
-cyber-autosurgeon-no-active-side = Автохирургу некуда установить имплант: нет активной руки.
+cyber-autosurgeon-popup-no-hand = Нет кисти, в которую можно вживить имплант.

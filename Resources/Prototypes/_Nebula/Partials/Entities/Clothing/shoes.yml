@@ -1,0 +1,116 @@
+- type: entity
+  id: ClothingShoesBootsJack
+  components:
+  - type: Armor
+    coverage:
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+
+- type: entity
+  id: ClothingShoesBootsJackAdvanced
+  components:
+  - type: Armor
+    coverage:
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+
+- type: entity
+  id: ClothingShoesBootsJackTall
+  components:
+  - type: Armor
+    coverage:
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+
+- type: entity
+  id: ClothingShoesBootsJackTallHeels
+  components:
+  - type: Armor
+    coverage:
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+
+- type: entity
+  id: ClothingShoesBootsJackToeless
+  components:
+  - type: Armor
+    coverage:
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+
+- type: entity
+  id: ClothingShoesBootsCombat
+  components:
+  - type: Armor
+    coverage:
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+
+- type: entity
+  id: ClothingShoesBootsMagSyndie
+  components:
+  - type: Armor
+    coverage:
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.45
+        Slash: 0.45
+        Piercing: 0.45
+        Heat: 0.45
+
+- type: entity
+  id: ClothingShoesBootsMagERT
+  components:
+  - type: Armor
+    coverage:
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.45
+        Slash: 0.45
+        Piercing: 0.45
+        Heat: 0.45
+
+- type: entity
+  id: ClothingShoesChameleonNoSlips
+  components:
+  - type: Armor
+    coverage:
+    - Foot
+    modifiers:
+      coefficients:
+        Blunt: 0.45
+        Slash: 0.45
+        Piercing: 0.45
+        Heat: 0.45

@@ -281,8 +281,8 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkAutosurgeonRiotShield
-  productEntity: AutosurgeonRiotShield
+  id: UplinkAutosurgeonRiotShieldArm
+  productEntity: AutosurgeonRiotShieldArm
   cost:
     Telecrystal: 20
   categories:
@@ -296,8 +296,8 @@
     stock: 1
 
 - type: listing
-  id: UplinkAutosurgeonAngelArmLeft
-  productEntity: AutosurgeonAngelArmLeft
+  id: UplinkAutosurgeonCyberArmAngelLeft
+  productEntity: AutosurgeonCyberArmAngelLeft
   cost:
     Telecrystal: 15
   categories:
@@ -311,11 +311,11 @@
     stock: 1
   - !type:BuyBeforeCondition
     blacklist:
-    - UplinkAutosurgeonAngelArmRight
+    - UplinkAutosurgeonCyberArmAngelRight
 
 - type: listing
-  id: UplinkAutosurgeonAngelArmRight
-  productEntity: AutosurgeonAngelArmRight
+  id: UplinkAutosurgeonCyberArmAngelRight
+  productEntity: AutosurgeonCyberArmAngelRight
   cost:
     Telecrystal: 15
   categories:
@@ -329,4 +329,36 @@
     stock: 1
   - !type:BuyBeforeCondition
     blacklist:
-    - UplinkAutosurgeonAngelArmLeft
+    - UplinkAutosurgeonCyberArmAngelLeft
+
+- type: listing
+  id: UplinkAutosurgeonBerserker
+  name: uplink-autosurgeon-berserker-heart-name
+  description: uplink-autosurgeon-berserker-heart-desc
+  icon: { sprite: _Goobstation/Objects/Misc/berserker_heart.rsi, state: icon }
+  productEntity: AutosurgeonBerserker
+  cost:
+    Telecrystal: 45
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAutosurgeonBerserkerNukeops
+  name: uplink-autosurgeon-berserker-heart-name
+  description: uplink-autosurgeon-berserker-heart-desc
+  icon: { sprite: _Goobstation/Objects/Misc/berserker_heart.rsi, state: icon }
+  productEntity: AutosurgeonBerserker
+  cost:
+    Telecrystal: 70
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink

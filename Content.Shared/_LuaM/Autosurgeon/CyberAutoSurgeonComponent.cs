@@ -26,12 +26,13 @@ public sealed partial class CyberAutoSurgeonComponent : Component
     [DataField]
     public EntProtoId<OrganComponent>? NewOrgan;
 
+    // Nebula start
     /// <summary>
-    /// Puts <see cref="NewOrgan"/> on the side of the active hand instead of <see cref="TargetPart"/>:
-    /// into the hand itself or the arm above it, whichever the organ can be a child of.
+    /// If set, <see cref="NewOrgan"/> goes into the user's active hand or into the arm holding that hand instead of <see cref="TargetPart"/>.
     /// </summary>
     [DataField]
-    public bool ActiveSide;
+    public BodyPartType? ActiveHandPart;
+    // Nebula end
 
     /// <summary>
     /// Puts a new organ of this prototype into every body part of <see cref="PartType"/>,
