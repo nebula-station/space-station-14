@@ -7,7 +7,7 @@ namespace Content.Trauma.Shared._Nebula.Implants.Cyberpunk;
 /// <summary>
 /// Makes the protection of the dermal armor in the body stronger.
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class DermalArmorBoostComponent : Component
 {
     [DataField(readOnly: true)]

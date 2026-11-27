@@ -15,7 +15,7 @@ public sealed partial class GorillaArmsComponent : Component
     /// <summary>
     /// Damage of an unarmed hit, replacing the usual one.
     /// </summary>
-    [DataField(required: true)]
+    [DataField(required: true), AutoNetworkedField]
     public DamageSpecifier UnarmedDamage = new();
 
     [DataField(readOnly: true)]

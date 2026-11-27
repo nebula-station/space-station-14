@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Medical.Shared.Abductor;
+using Content.Shared.Actions;
 using Content.Shared.Body;
 using Content.Shared.Forensics;
 using Content.Shared.Forensics.Components;
@@ -21,6 +22,7 @@ namespace Content.Trauma.Server._Nebula.Implants;
 /// </summary>
 public sealed partial class FacePanelImplantSystem : EntitySystem
 {
+    [Dependency] private SharedActionsSystem _actions = default!;
     [Dependency] private BodySystem _body = default!;
     [Dependency] private ImplantCooldownSystem _cooldown = default!;
     [Dependency] private AbductorVestDisguiseSystem _disguise = default!;
@@ -39,16 +41,22 @@ public sealed partial class FacePanelImplantSystem : EntitySystem
             return;
 
         args.Handled = true;
-        if (ent.Comp.DisguiseEnd != null)
-            TakeOff(ent, body);
-        else
+        if (ent.Comp.DisguiseEnd == null)
+        {
+            _actions.SetUseDelay(args.Action.AsNullable(), null);
             PutOn(ent, body);
+            return;
+        }
+
+        // PerformAction clears the cooldown after this handler, so a manual take-off recharges through the use delay
+        _actions.SetUseDelay(args.Action.AsNullable(), ent.Comp.Cooldown);
+        TakeOff(ent, body, startCooldown: false);
     }
 
     [SubscribeLocalEvent]
     private void OnRemoved(Entity<FacePanelImplantComponent> ent, ref OrganGotRemovedEvent args)
     {
-        if (ent.Comp.DisguiseEnd != null)
+        if (ent.Comp.DisguiseEnd != null && !TerminatingOrDeleted(args.Target))
             TakeOff(ent, args.Target);
     }
 
@@ -91,7 +99,7 @@ public sealed partial class FacePanelImplantSystem : EntitySystem
         _popup.PopupEntity(Loc.GetString("face-panel-popup-on"), body, body);
     }
 
-    private void TakeOff(Entity<FacePanelImplantComponent> ent, EntityUid body)
+    private void TakeOff(Entity<FacePanelImplantComponent> ent, EntityUid body, bool startCooldown = true)
     {
         ent.Comp.DisguiseEnd = null;
         _disguise.RestoreAppearance(body, raiseRenameEvents: false);
@@ -110,7 +118,9 @@ public sealed partial class FacePanelImplantSystem : EntitySystem
             Dirty(body, fingerprint);
         }
 
-        _cooldown.StartCooldown(ent, _cooldown.ModifyCooldown(body, ent, ent.Comp.Cooldown));
+        if (startCooldown)
+            _cooldown.StartCooldown(ent, _cooldown.ModifyCooldown(body, ent, ent.Comp.Cooldown));
+
         _popup.PopupEntity(Loc.GetString("face-panel-popup-off"), body, body);
     }
 }

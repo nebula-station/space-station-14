@@ -7,7 +7,7 @@ namespace Content.Trauma.Shared._Nebula.Implants.Cyberpunk;
 /// <summary>
 /// Raises the stamina crit threshold of its owner.
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class StaminaBonusComponent : Component
 {
     [DataField(readOnly: true)]

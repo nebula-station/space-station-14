@@ -24,6 +24,19 @@ public sealed partial class CyberwareCompatibilitySystem : EntitySystem
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private IPrototypeManager _proto = default!;
 
+    /// <summary>
+    /// Prototypes that can clash with something: those with <see cref="CyberwareIncompatibleComponent"/> and those listed in it.
+    /// Null until first needed or after a prototype reload.
+    /// </summary>
+    private HashSet<EntProtoId>? _involved;
+
+    [SubscribeLocalEvent]
+    private void OnPrototypesReloaded(PrototypesReloadedEventArgs args)
+    {
+        if (args.WasModified<EntityPrototype>())
+            _involved = null;
+    }
+
     [SubscribeLocalEvent]
     private void OnOrganInsertAttempt(Entity<BodyComponent> ent, ref OrganInsertAttemptEvent args)
     {
@@ -67,6 +80,10 @@ public sealed partial class CyberwareCompatibilitySystem : EntitySystem
     public bool CanInstall(EntityUid body, EntProtoId cyberware, out string reason, EntityUid? ignore = null)
     {
         reason = string.Empty;
+        _involved ??= BuildInvolved();
+        if (!_involved.Contains(cyberware))
+            return true;
+
         var incoming = GetIncompatible(cyberware);
         if (incoming?.RequireMindShield == true && !HasComp<MindShieldComponent>(body))
         {
@@ -108,6 +125,21 @@ public sealed partial class CyberwareCompatibilitySystem : EntitySystem
         {
             yield return implant;
         }
+    }
+
+    private HashSet<EntProtoId> BuildInvolved()
+    {
+        HashSet<EntProtoId> involved = [];
+        foreach (var proto in _proto.EnumeratePrototypes<EntityPrototype>())
+        {
+            if (!proto.TryComp<CyberwareIncompatibleComponent>(out var comp, Factory))
+                continue;
+
+            involved.Add(proto.ID);
+            involved.UnionWith(comp.Incompatible);
+        }
+
+        return involved;
     }
 
     private CyberwareIncompatibleComponent? GetIncompatible(EntProtoId cyberware)

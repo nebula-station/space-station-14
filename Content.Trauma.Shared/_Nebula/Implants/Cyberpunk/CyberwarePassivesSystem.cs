@@ -96,13 +96,13 @@ public sealed partial class CyberwarePassivesSystem : EntitySystem
     [SubscribeLocalEvent]
     private void OnStaminaBonusStartup(Entity<StaminaBonusComponent> ent, ref ComponentStartup args)
     {
-        _stamina.RefreshStaminaCritThreshold(ent.Owner);
+        RefreshStamina(ent);
     }
 
     [SubscribeLocalEvent]
     private void OnStaminaBonusShutdown(Entity<StaminaBonusComponent> ent, ref ComponentShutdown args)
     {
-        _stamina.RefreshStaminaCritThreshold(ent.Owner);
+        RefreshStamina(ent);
     }
 
     [SubscribeLocalEvent]
@@ -110,6 +110,12 @@ public sealed partial class CyberwarePassivesSystem : EntitySystem
     {
         if (ent.Comp.LifeStage < ComponentLifeStage.Stopping)
             args.ThresholdValue += ent.Comp.Bonus;
+    }
+
+    private void RefreshStamina(EntityUid uid)
+    {
+        if (TryComp<StaminaComponent>(uid, out var stamina))
+            _stamina.RefreshStaminaCritThreshold((uid, stamina));
     }
 
     #endregion

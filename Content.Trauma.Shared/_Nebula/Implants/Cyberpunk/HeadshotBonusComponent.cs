@@ -7,7 +7,7 @@ namespace Content.Trauma.Shared._Nebula.Implants.Cyberpunk;
 /// <summary>
 /// Raises the damage its owner deals while aiming at the head.
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class HeadshotBonusComponent : Component
 {
     [DataField(readOnly: true)]

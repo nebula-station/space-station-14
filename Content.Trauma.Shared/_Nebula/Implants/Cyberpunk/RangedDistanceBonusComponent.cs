@@ -7,7 +7,7 @@ namespace Content.Trauma.Shared._Nebula.Implants.Cyberpunk;
 /// <summary>
 /// Raises the ranged damage of its owner by the distance to the target.
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class RangedDistanceBonusComponent : Component
 {
     [DataField(readOnly: true)]

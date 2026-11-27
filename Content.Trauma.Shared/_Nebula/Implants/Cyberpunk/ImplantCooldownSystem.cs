@@ -76,6 +76,12 @@ public sealed partial class ImplantCooldownSystem : EntitySystem
     }
 
     [SubscribeLocalEvent]
+    private void OnRebooterGetCooldown(Entity<CnsRebooterComponent> ent, ref GetImplantCooldownEvent args)
+    {
+        args.Cooldown = ModifyCooldown(args.Body, ent, args.Cooldown);
+    }
+
+    [SubscribeLocalEvent]
     private void OnRebooterReset(Entity<CnsRebooterComponent> ent, ref ImplantCooldownResetEvent args)
     {
         ent.Comp.NextUse = _timing.CurTime;

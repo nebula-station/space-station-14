@@ -56,8 +56,7 @@ public sealed partial class GorillaArmsSystem : EntitySystem
         if (args.Handled || _body.GetBody(ent) is not { } body)
             return;
 
-        _dash.TryDash(body, args);
-        if (args.Handled && HasComp<ThrownItemComponent>(body))
+        if (_dash.TryDash(body, args))
             EnsureComp<GorillaSlammingComponent>(body).Arm = ent;
     }
 
