@@ -133,6 +133,12 @@ public sealed partial class CargoSystem
         msg.AddMarkupOrThrow(Loc.GetString("bounty-console-manifest-reward", ("reward", ev.Reward)));
         // </Trauma>
         _paperSystem.SetContent((uid, paper), msg.ToMarkup());
+
+        // Nebula start
+        var entries = string.Join(", ", prototype.Entries.Select(e =>
+            Loc.GetString("cargo-console-bounty-manifest-name-entry", ("name", Loc.GetString(e.Name)), ("amount", e.Amount))));
+        _metaSystem.SetEntityName(uid, Loc.GetString("cargo-console-bounty-manifest-name", ("entries", entries)));
+        // Nebula end
     }
 
     /// <summary>

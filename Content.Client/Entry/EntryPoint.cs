@@ -40,6 +40,7 @@ using Robust.Shared.ContentPack;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Replays;
 using Robust.Shared.Timing;
+using Content.Client._Arcane.JoinQueue;
 
 namespace Content.Client.Entry
 {
@@ -56,6 +57,7 @@ namespace Content.Client.Entry
         [Dependency] private IStylesheetManager _stylesheetManager = default!;
         [Dependency] private NebulaThemeManager _nebulaTheme = default!; // Nebula
         [Dependency] private BodycamFootageManager _bodycamFootage = default!; // Nebula
+        [Dependency] private JoinQueueManager _joinQueue = default!; // Nebula edit
         [Dependency] private IScreenshotHook _screenshotHook = default!;
         [Dependency] private FullscreenHook _fullscreenHook = default!;
         [Dependency] private ChangelogManager _changelogManager = default!;
@@ -157,6 +159,7 @@ namespace Content.Client.Entry
 
             _nebulaTheme.Initialize(); // Nebula
             _bodycamFootage.Initialize(); // Nebula
+            _joinQueue.Initialize(); // Nebula edit
             _stylesheetManager.Initialize();
 
             // Setup key contexts

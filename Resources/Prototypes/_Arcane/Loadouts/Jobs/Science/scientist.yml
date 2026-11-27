@@ -1,0 +1,7 @@
+- type: loadout
+  id: TinfoilHat
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorResearcher
+  equipment:
+    head: ClothingHeadHatTinfoilHat

@@ -28,6 +28,7 @@ using Robust.Shared.Utility;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
+using Content.Shared._Arcane.MassMedia;
 
 namespace Content.Server.MassMedia.Systems;
 
@@ -174,7 +175,7 @@ public sealed partial class NewsSystem : SharedNewsSystem
         var authorName = _identity.GetIdentityShortInfo(msg.Actor, ent);
 
         var title = FormattedMessage.EscapeText(msg.Title.Trim()); // Goob Sanitize Text
-        var content = FormattedMessage.EscapeText(msg.Content.Trim()); // Goob Sanitize Text
+        var content = SafeMarkup.SanitizeBasic(msg.Content.Trim()); // Nebula edit
 
         if (TryAddNews(ent, title, content, out var article, authorName, msg.Actor))
         {
@@ -387,8 +388,14 @@ public sealed partial class NewsSystem : SharedNewsSystem
 
     private void OnNewsWriterDraftUpdatedMessage(Entity<NewsWriterComponent> ent, ref NewsWriterSaveDraftMessage args)
     {
-        ent.Comp.DraftTitle = FormattedMessage.EscapeText(args.DraftTitle); // Goob Sanitize Text
-        ent.Comp.DraftContent = FormattedMessage.EscapeText(args.DraftContent); // Goob Sanitize Text
+        // Nebula start
+        ent.Comp.DraftTitle = args.DraftTitle.Length > SharedNewsSystem.MaxTitleLength
+            ? args.DraftTitle[..SharedNewsSystem.MaxTitleLength]
+            : args.DraftTitle;
+        ent.Comp.DraftContent = args.DraftContent.Length > SharedNewsSystem.MaxContentLength
+            ? args.DraftContent[..SharedNewsSystem.MaxContentLength]
+            : args.DraftContent;
+        // Nebula end
     }
 
     private void OnRequestArticleDraftMessage(Entity<NewsWriterComponent> ent, ref NewsWriterRequestDraftMessage msg)

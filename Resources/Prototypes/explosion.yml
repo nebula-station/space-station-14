@@ -11,7 +11,7 @@
   tileBreakIntensity: [0, 10, 30] # Nebula
   tileBreakRerollReduction: 25
   lightColor: Orange
-  texturePath: /Textures/Effects/fire.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode.rsi # Nebula edit
   fireStates: 3
   temperature: 800
 
@@ -28,7 +28,7 @@
   tileBreakRerollReduction: 25
   lightColor: Orange
   fireColor: Red
-  texturePath: /Textures/Effects/fire_greyscale.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode_grayscale.rsi # Nebula edit
   fireStates: 3
   temperature: 800
 
@@ -46,7 +46,7 @@
   tileBreakIntensity: [ 0, 10, 30 ] # Nebula
   tileBreakRerollReduction: 25
   lightColor: Orange
-  texturePath: /Textures/Effects/fire.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode.rsi # Nebula edit
   fireStates: 3
   temperature: 800
 
@@ -65,7 +65,7 @@
   tileBreakRerollReduction: 30
   intensityPerState: 20
   lightColor: Orange
-  texturePath: /Textures/Effects/fire.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode.rsi # Nebula edit
   fireStates: 3
   temperature: 800
 
@@ -81,7 +81,7 @@
   # Nebula end
   lightColor: Green
   fireColor: Green
-  texturePath: /Textures/Effects/fire_greyscale.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode_grayscale.rsi # Nebula edit
   fireStates: 3
 
 - type: explosion
@@ -97,7 +97,7 @@
   tileBreakIntensity: [0]
   lightColor: Blue
   fireColor: Blue
-  texturePath: /Textures/Effects/fire_greyscale.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode_grayscale.rsi # Nebula edit
   fireStates: 3
 
 - type: explosion
@@ -113,7 +113,7 @@
   tileBreakIntensity: [0, 10, 30] # Nebula
   tileBreakRerollReduction: 20
   lightColor: Orange
-  texturePath: /Textures/Effects/fire.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode.rsi # Nebula edit
   fireStates: 3
   temperature: 800
 
@@ -130,7 +130,7 @@
   tileBreakRerollReduction: 3
   intensityPerState: 20
   lightColor: Orange
-  texturePath: /Textures/Effects/fire.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode.rsi # Nebula edit
   fireStates: 3
   temperature: 800
 
@@ -149,7 +149,7 @@
   tileBreakRerollReduction: 10
   intensityPerState: 20
   lightColor: Orange
-  texturePath: /Textures/Effects/fire.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode.rsi # Nebula edit
   fireStates: 3
   temperature: 800
 
@@ -161,7 +161,7 @@
       Blunt: 2
       Piercing: 3
   lightColor: Orange
-  texturePath: /Textures/Effects/fire.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode.rsi # Nebula edit
   fireStates: 3
   fireStacks: 2
   temperature: 1500
@@ -176,6 +176,6 @@
       Structural: 50
   lightColor: Blue
   fireColor: Blue
-  texturePath: /Textures/Effects/fire_greyscale.rsi
+  texturePath: /Textures/_Arcane/Effects/tile_fire_explode_grayscale.rsi # Nebula edit
   fireStates: 3
   temperature: 800

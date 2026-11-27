@@ -41,6 +41,6 @@
   id: HoPLongcoat
   equipment:
     outerClothing: ClothingOuterCoatHoPLong
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterHoP
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: MasterHoP # Nebula edit

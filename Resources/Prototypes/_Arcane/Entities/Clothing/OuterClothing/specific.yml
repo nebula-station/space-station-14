@@ -1,0 +1,77 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCleanerJumpsuit
+  categories: [ HideSpawnMenu ]
+  name: cleaner jumpsuit
+  description: Cheap jumpsuit with big pocket in the middle.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/cleaner_overall.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/cleaner_overall.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCookApron
+  categories: [ HideSpawnMenu ]
+  name: cook apron
+  description: Cook apron.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/cook_apron.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/cook_apron.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterMusicianJacket
+  categories: [ HideSpawnMenu ]
+  name: musician jacket
+  description: Rock you like a hurricane!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/musician_jacket.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/musician_jacket.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterRadioHostJacket
+  categories: [ HideSpawnMenu ]
+  name: radio host's jacket
+  description: Never gonna give you up!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/radio_host_jacket.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/radio_host_jacket.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterCow
+  categories: [ HideSpawnMenu ]
+  name: mimicry costume
+  description: Moo.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/cow.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/cow.rsi
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingHatCow
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container {}
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterServiceJacket
+  categories: [ HideSpawnMenu ]
+  name: service jacket
+  description: Black jacket.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/service_jacket.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/OuterClothing/Sponsor/service_jacket.rsi

@@ -50,6 +50,7 @@ public sealed partial class TechnologyDiskSystem : EntitySystem
         if (ent.Comp.Recipes != null)
             return;
 
+        var rolled = !ent.Comp.Tier.HasValue; // Nebula edit
         int tier;
         if (ent.Comp.Tier.HasValue)
         {
@@ -62,20 +63,15 @@ public sealed partial class TechnologyDiskSystem : EntitySystem
             ent.Comp.Tier = tier;
         }
 
-        // get a list of every distinct recipe in all the technologies.
-        var bundles = new HashSet<(ProtoId<LatheRecipePrototype> recipe, ProtoId<TechDisciplinePrototype> discipline)>();
-        foreach (var tech in ProtoMan.EnumeratePrototypes<TechnologyPrototype>())
+        // Nebula start
+        var bundles = GetRecipeBundles(tier, ent.Comp.Discipline);
+        while (rolled && bundles.Count == 0 && tier > 1)
         {
-            if (tech.Tier != tier)
-                continue;
-            if (ent.Comp.Discipline != null && tech.Discipline != ent.Comp.Discipline.Value)
-                continue;
-
-            foreach (var recipe in tech.RecipeUnlocks)
-            {
-                bundles.Add((recipe, tech.Discipline));
-            }
+            tier--;
+            ent.Comp.Tier = tier;
+            bundles = GetRecipeBundles(tier, ent.Comp.Discipline);
         }
+        // Nebula end
 
         if (bundles.Count == 0)
         {
@@ -91,6 +87,32 @@ public sealed partial class TechnologyDiskSystem : EntitySystem
         Dirty(ent);
         _nameModifier.RefreshNameModifiers(ent.Owner);
     }
+
+    // Nebula start
+    /// <summary>
+    /// Every distinct recipe of the technologies in a tier and, if given, a discipline.
+    /// </summary>
+    private HashSet<(ProtoId<LatheRecipePrototype> recipe, ProtoId<TechDisciplinePrototype> discipline)> GetRecipeBundles(
+        int tier,
+        ProtoId<TechDisciplinePrototype>? discipline)
+    {
+        HashSet<(ProtoId<LatheRecipePrototype> recipe, ProtoId<TechDisciplinePrototype> discipline)> bundles = [];
+        foreach (var tech in ProtoMan.EnumeratePrototypes<TechnologyPrototype>())
+        {
+            if (tech.Tier != tier)
+                continue;
+            if (discipline != null && tech.Discipline != discipline.Value)
+                continue;
+
+            foreach (var recipe in tech.RecipeUnlocks)
+            {
+                bundles.Add((recipe, tech.Discipline));
+            }
+        }
+
+        return bundles;
+    }
+    // Nebula end
 
     /// <summary>
     /// Attempts to set tier and discipline visuals based on chosen tier and discipline.
@@ -128,14 +150,20 @@ public sealed partial class TechnologyDiskSystem : EntitySystem
         if (args.Handled || !args.CanReach || args.Target is not { } target)
             return;
 
-        if (!HasComp<ResearchServerComponent>(target) || !TryComp<TechnologyDatabaseComponent>(target, out var database))
+        if (!HasComp<ResearchServerComponent>(target)) // Nebula edit
             return;
+
+        // Nebula start
+        var effective = _research.GetEffectiveServer(target);
+        if (!TryComp<TechnologyDatabaseComponent>(effective, out var database))
+            return;
+        // Nebula end
 
         if (ent.Comp.Recipes != null)
         {
             foreach (var recipe in ent.Comp.Recipes)
             {
-                _research.AddLatheRecipe(target, recipe, database);
+                _research.AddLatheRecipe(effective, recipe, database); // Nebula edit
             }
         }
         _popup.PopupEntity(Loc.GetString("tech-disk-inserted"), target, args.User);

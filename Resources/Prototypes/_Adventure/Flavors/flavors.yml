@@ -1,0 +1,49 @@
+- type: flavor
+  id: jobfueleng
+  flavorType: Complex
+  description: flavor-complex-jobfueleng
+
+- type: flavor
+  id: jobfuelmed
+  flavorType: Complex
+  description: flavor-complex-jobfuelmed
+
+- type: flavor
+  id: jobfuelsrv
+  flavorType: Complex
+  description: flavor-complex-jobfuelsrv
+
+- type: flavor
+  id: jobfuelsec
+  flavorType: Complex
+  description: flavor-complex-jobfuelsec
+
+- type: flavor
+  id: jobfuelcrg
+  flavorType: Complex
+  description: flavor-complex-jobfuelcrg
+
+- type: flavor
+  id: jobfuelrndlight
+  flavorType: Complex
+  description: flavor-complex-jobfuelrndlight
+
+- type: flavor
+  id: jobfuelrnddark
+  flavorType: Complex
+  description: flavor-complex-jobfuelrnddark
+
+- type: flavor
+  id: jobfuelcmd
+  flavorType: Complex
+  description: flavor-complex-jobfuelcmd
+
+- type: flavor
+  id: stationblessing
+  flavorType: Complex
+  description: flavor-complex-stationblessing
+
+- type: flavor
+  id: jobfuelsyndie
+  flavorType: Complex
+  description: flavor-complex-jobfuelsyndie

@@ -123,6 +123,16 @@
         - id: DrinkShakeWhite
         - id: DrinkTheMartinez
         - id: DrinkMoonshineGlass
+        # Nebula start
+        - id: DrinkEngFuel
+        - id: DrinkMedFuel
+        - id: DrinkSrvFuel
+        - id: DrinkSecFuel
+        - id: DrinkCrgFuel
+        - id: DrinkRNDLightFuel
+        - id: DrinkRNDDarkFuel
+        - id: DrinkCmdFuel
+        # Nebula end
       - !type:GroupSelector #rare
         weight: 0.05
         children:
@@ -139,4 +149,6 @@
         - id: DrinkHoochGlass
         - id: DrinkBeepskySmashGlass
         - id: DrinkBacchusBlessing
+        - id: DrinkSyndieFuel # Nebula edit
+        - id: DrinkStationBlessing # Nebula edit
     offset: 0.0

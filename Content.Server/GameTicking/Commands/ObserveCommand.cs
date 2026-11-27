@@ -2,6 +2,7 @@ using Content.Server.Administration.Managers;
 using Content.Shared.Administration;
 using Content.Shared.GameTicking;
 using Robust.Shared.Console;
+using Robust.Shared.Enums;
 
 namespace Content.Server.GameTicking.Commands
 {
@@ -23,6 +24,10 @@ namespace Content.Server.GameTicking.Commands
                 return;
             }
 
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                return;
+            // Nebula end
             var ticker = _e.System<ServerGameTicker>();
 
             if (ticker.RunLevel == GameRunLevel.PreRoundLobby)

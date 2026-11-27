@@ -137,6 +137,16 @@
   name: Solar Control Interface
   description: View a Solar Control Interface.
   components:
+  # Nebula start
+  - type: Sprite
+    sprite: _Arcane/Interface/Actions/consoles.rsi
+    layers:
+    - state: solar
+      map: ["enum.ActionVisuals.Icon"]
+    - state: solar
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  # Nebula end
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.SolarControlConsoleUiKey.Key }
 
@@ -149,10 +159,16 @@
   - type: Action
     keywords: [ "AI", "console", "interface" ]
     priority: -4
+  # Nebula start
   - type: Sprite
-    sprite: Interface/Actions/actions_ai.rsi
+    sprite: _Arcane/Interface/Actions/consoles.rsi
     layers:
-    - state: comms_console
+    - state: communication
+      map: ["enum.ActionVisuals.Icon"]
+    - state: communication
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  # Nebula end
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.CommunicationsConsoleUiKey.Key }
 
@@ -165,14 +181,16 @@
   - type: Action
     keywords: [ "AI", "console", "interface" ]
     priority: -6
+  # Nebula start
   - type: Sprite
-    sprite: Interface/Actions/actions_ai.rsi
+    sprite: _Arcane/Interface/Actions/consoles.rsi
     layers:
-    - state: mass_scanner
+    - state: radar
       map: ["enum.ActionVisuals.Icon"]
-    - state: comms_console
+    - state: radar
       map: ["enum.ActionVisuals.IconToggled"]
       visible: false
+  # Nebula end
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.RadarConsoleUiKey.Key }
 
@@ -182,6 +200,16 @@
   name: Cargo Ordering Interface
   description: View a Cargo Ordering Interface.
   components:
+  # Nebula start
+  - type: Sprite
+    sprite: _Arcane/Interface/Actions/consoles.rsi
+    layers:
+    - state: cargo
+      map: ["enum.ActionVisuals.Icon"]
+    - state: cargo
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  # Nebula end
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.CargoConsoleUiKey.Orders }
 
@@ -194,10 +222,16 @@
   - type: Action
     keywords: [ "AI", "console", "interface" ]
     priority: -8
+  # Nebula start
   - type: Sprite
-    sprite: Interface/Actions/actions_ai.rsi
+    sprite: _Arcane/Interface/Actions/consoles.rsi
     layers:
-    - state: crew_monitor
+    - state: crew
+      map: ["enum.ActionVisuals.Icon"]
+    - state: crew
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  # Nebula end
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.CrewMonitoringUIKey.Key }
 
@@ -210,9 +244,15 @@
   - type: Action
     keywords: [ "AI", "console", "interface" ]
     priority: -7
+  # Nebula start
   - type: Sprite
-    sprite: Interface/Actions/actions_ai.rsi
+    sprite: _Arcane/Interface/Actions/consoles.rsi
     layers:
-    - state: station_records
+    - state: records
+      map: ["enum.ActionVisuals.Icon"]
+    - state: records
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  # Nebula end
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.GeneralStationRecordConsoleKey.Key }

@@ -17,6 +17,7 @@
     MysteryFigureBox: 2
     BooksBag: 3
     Magic9Ball: 2
+    PokerChipsBox: 1 # Nebula edit
   contrabandInventory:
     Basketball: 1
     FoodSnackBoritos: 3

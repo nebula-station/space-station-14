@@ -46,6 +46,7 @@
     - AtmosTools
     - EngineeringWeapons
     - PowerCells
+    - MegaCells # Nebula edit
     - Equipment
     - SpecOpsGoogles
     - EngineeringBoards
@@ -58,6 +59,7 @@
     - UpgradeKits
     - ReactorCircuitboards
     - CyberwareEngineering # Nebula edit
+    - AbductorEngineering # Nebula edit
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NailgunEvilStatic
@@ -109,6 +111,7 @@
     - AdvancedTools
     - Mining
     - PowerCells
+    - MegaCells # Nebula edit
     - Equipment
     # - ServiceWeapons
     - MiningWeapons
@@ -195,6 +198,7 @@
     - AtmosTools
     - EngineeringWeapons
     - PowerCells
+    - MegaCells # Nebula edit
     - Chemistry
     - Janitor
     - Equipment
@@ -278,6 +282,10 @@
     # Nebula start
     - CyberwareService
     - CyberwareCommon
+    # Nebula end
+    # Nebula start
+    - BasicService
+    - Hydroponic
     # Nebula end
   - type: EmagLatheRecipes
     emagStaticPacks:

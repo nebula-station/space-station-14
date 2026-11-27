@@ -193,3 +193,178 @@
     sprite: _Arcane/Clothing/Head/headband_kitsune.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/Head/headband_kitsune.rsi
+
+- type: entity
+  parent: ClothingHeadHatArmoredPlus
+  id: ClothingHatNTRBlackBeret
+  categories: [ HideSpawnMenu ]
+  name: NTR's black beret
+  description: NTR's black beret.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/NTR_beret.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/NTR_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatBotanist
+  categories: [ HideSpawnMenu ]
+  name: botanical hat
+  description: A wide-brimmed hat for working in the sun.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/botanist.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/botanist.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatCamouflage
+  categories: [ HideSpawnMenu ]
+  name: camouflage hat
+  description: Camouflage hat.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/camouflage.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/camouflage.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatClownCilinder
+  categories: [ HideSpawnMenu ]
+  name: clown's cilinder
+  description: Funny stripped cilinder.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/clown_cilinder.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/clown_cilinder.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatCow
+  categories: [ HideSpawnMenu ]
+  name: cow helmet
+  description: Cow.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/cow.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/cow.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatFishCookBandana
+  categories: [ HideSpawnMenu ]
+  name: cook's fish bandana
+  description: Fish cutter's bandana.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/fish_cook_bandana.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/fish_cook_bandana.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatCookHigh
+  categories: [ HideSpawnMenu ]
+  name: high cook hat
+  description: Probably hides a rat.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/high_cook_hat.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/high_cook_hat.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatCookInclined
+  categories: [ HideSpawnMenu ]
+  name: inclined cook hat
+  description: Inclined cook hat.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/inclined_cook_hat.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/inclined_cook_hat.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatJester
+  categories: [ HideSpawnMenu ]
+  name: jester's hat
+  description: Old-fashioned clown hat.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/jester_hat.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/jester_hat.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHatCookRed
+  categories: [ HideSpawnMenu ]
+  name: red cook hat
+  description: Red cook hat.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Sponsor/red_cook_hat.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Sponsor/red_cook_hat.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadInteQBeret
+  name: InteQ beret
+  description: Brown beret with a gold emblem on it.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Hats/inteq_beret.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Hats/inteq_beret.rsi
+
+- type: entity
+  parent: [ClothingHeadBase, BaseMinorContraband]
+  id: ClothingHeadInteQHonorableBeret
+  name: InteQ honorable beret
+  description: White beret with a emblem on it.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Hats/inteq_honorable_beret.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Hats/inteq_honorable_beret.rsi
+
+- type: entity
+  parent: [ClothingHeadBase, BaseMinorContraband]
+  id: ClothingHeadHatInteQMAA
+  name: InteQ master at arms hat
+  description: Master at arms hat, looks intimidating, I doubt that you will like to communicate with its owner...
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Hats/inteq_peaked.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Hats/inteq_peaked.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatInteQTacticalMaidHeadband
+  name: tactical maid headband
+  description: White headband - dont imagine yourself a Buster.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Hats/inteq_headband.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Hats/inteq_headband.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretCaptainWhite
+  name: white captain beret
+  description: A white captain beret, an icon of style.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Head/Hats/white_beret.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Head/Hats/white_beret.rsi

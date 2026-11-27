@@ -100,6 +100,7 @@
   - type: PowerCellSlot
     cellSlotId: charger_slot
     # fitsInCharger is true i dont think this will ever affect anything negatively but it lets it function
+  - type: MegaCellSlot # Nebula edit
   - type: ItemSlots
     slots:
       charger_slot:
@@ -107,6 +108,7 @@
         name: power-cell-slot-component-slot-name-default
         whitelist:
           tags:
+          - MegaCell # Nebula edit
           - PowerCell
           - PowerCellSmall
         blacklist:

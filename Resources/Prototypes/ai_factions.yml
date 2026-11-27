@@ -1,6 +1,10 @@
 - type: npcFaction
   id: Dragon
   hostile:
+  # Nebula start
+  - InteQ
+  - InteQHostile
+  # Nebula end
   - NanoTrasen
   - Syndicate
   - Xeno
@@ -14,6 +18,9 @@
 - type: npcFaction
   id: NanoTrasen
   hostile:
+  # Nebula start
+  - InteQHostile
+  # Nebula end
   - SimpleHostile
   - Syndicate
   - Xeno
@@ -39,6 +46,9 @@
   friendly:
   - NanoTrasen
   hostile:
+  # Nebula start
+  - InteQHostile
+  # Nebula end
   - Mouse
   - SimpleHostile
   - Zombie
@@ -49,6 +59,10 @@
 - type: npcFaction
   id: SimpleHostile
   hostile:
+  # Nebula start
+  - InteQ
+  - InteQHostile
+  # Nebula end
   - NanoTrasen
   - Syndicate
   - Passive
@@ -63,10 +77,19 @@
 
 - type: npcFaction
   id: SimpleNeutral
+  # Nebula start
+  hostile:
+
+  - InteQHostile
+  # Nebula end
 
 - type: npcFaction
   id: Syndicate
   hostile:
+  # Nebula start
+  - InteQ
+  - InteQHostile
+  # Nebula end
   - NanoTrasen
   - SimpleHostile
   - Xeno
@@ -80,6 +103,10 @@
 - type: npcFaction
   id: Xeno
   hostile:
+  # Nebula start
+  - InteQ
+  - InteQHostile
+  # Nebula end
   - NanoTrasen
   - Syndicate
   - Passive
@@ -94,6 +121,10 @@
 - type: npcFaction
   id: Zombie
   hostile:
+  # Nebula start
+  - InteQ
+  - InteQHostile
+  # Nebula end
   - NanoTrasen
   - SimpleNeutral
   - SimpleHostile
@@ -109,6 +140,9 @@
 - type: npcFaction
   id: Revolutionary
   hostile:
+  # Nebula start
+  - InteQHostile
+  # Nebula end
   - NanoTrasen
   - Zombie
   - SimpleHostile
@@ -154,6 +188,10 @@
 - type: npcFaction
   id: Xenoborg
   hostile:
+  # Nebula start
+  - InteQ
+  - InteQHostile
+  # Nebula end
   # they have brains
   - NanoTrasen
   - Syndicate

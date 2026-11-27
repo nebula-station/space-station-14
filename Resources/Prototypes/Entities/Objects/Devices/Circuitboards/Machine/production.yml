@@ -645,9 +645,9 @@
         Manipulator: 1
         CableHV: 10
       componentRequirements:
-        PowerCell:
+        MegaCell: # Nebula edit
           amount: 4
-          defaultPrototype: PowerCellSmall
+          defaultPrototype: MegaCellSmall # Nebula edit
 
 - type: entity
   id: SMESAdvancedMachineCircuitboard
@@ -664,9 +664,9 @@
       Manipulator: 2
       CableHV: 20
     componentRequirements:
-      PowerCell:
+      MegaCell: # Nebula edit
         amount: 4
-        defaultPrototype: PowerCellMedium
+        defaultPrototype: MegaCellHigh # Nebula edit
 
 - type: entity
   id: CellRechargerCircuitboard
@@ -805,9 +805,9 @@
         CableMV: 5
         CableHV: 5
       componentRequirements:
-        PowerCell:
+        MegaCell: # Nebula edit
           amount: 1
-          defaultPrototype: PowerCellSmall
+          defaultPrototype: MegaCellSmall # Nebula edit
     - type: PhysicalComposition #Goobstation - Recycle update
       materialComposition:
         Glass: 125

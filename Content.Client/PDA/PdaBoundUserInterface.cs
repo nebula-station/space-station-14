@@ -7,6 +7,7 @@ using Content.Shared.Containers.ItemSlots;
 using Content.Shared.PDA;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
+using Content.Shared._Arcane.PDA;
 
 namespace Content.Client.PDA
 {
@@ -54,6 +55,8 @@ namespace Content.Client.PDA
             {
                 SendPredictedMessage(new ItemSlotButtonPressedEvent(PdaComponent.PdaPaiSlotId));
             };
+
+            _menu.PowerOffButton.OnPressed += _ => SendMessage(new PdaPowerOffMessage()); // Nebula edit
 
             _menu.ActivateMusicButton.OnPressed += _ =>
             {

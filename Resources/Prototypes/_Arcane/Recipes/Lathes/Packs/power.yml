@@ -1,0 +1,8 @@
+- type: latheRecipePack
+  id: MegaCells
+  recipes:
+  - MegaCellHigh
+  - MegaCellHyper
+  - MegaCellSuper
+  - MegaCellBluespace
+  - InducerScientific

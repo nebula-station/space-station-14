@@ -171,6 +171,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
 
         _sawmill.Info(logMessage);
         _chat.SendAdminAlert(logMessage);
+        RaiseBanPlaced(banInfo, adminName, targetName); // Nebula edit
 
         KickMatchingConnectedPlayers(banDef, "newly placed ban");
     }

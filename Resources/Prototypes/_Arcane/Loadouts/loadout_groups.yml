@@ -110,3 +110,14 @@
   name: loadout-group-iaa-jumpsuit
   loadouts:
   - IAAJumpsuit
+
+- type: loadoutGroup
+  id: PassengerHead
+  name: loadout-group-passenger-head
+  minLimit: 0
+  loadouts:
+  - BartenderHead
+  - BartenderBowler
+  - ChemistUshanka
+  - InteQBeret
+  - InteQHatSoft

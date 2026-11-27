@@ -101,8 +101,8 @@
             min: 1
             max: 1
   - type: Puller
-  - type: Body
-    prototype: AnimalHuman
+#  - type: Body # Nebula edit
+#    prototype: AnimalHuman # Nebula edit
   - type: Butcherable
     spawned:
     - id: FoodMeat

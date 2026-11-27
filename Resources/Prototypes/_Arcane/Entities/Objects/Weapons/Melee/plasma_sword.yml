@@ -1,0 +1,26 @@
+- type: entity
+  parent: BaseMeleeWeaponPlasma
+  id: PlasmaSword
+  name: plasma sword
+  description: Blade is made of pure plasma heated from two to nine thousand degrees at the request of the owner. Power module made in the form of a handle heats up the gas and maintains its shape with a strong magnetic field. It seems that such blades have not been produced since the discovery of lightsabers.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Weapons/Melee/plasma_sword.rsi
+    layers:
+    - state: icon
+    - state: icon-on
+      color: "#FFFFFF"
+      visible: false
+      shader: unshaded
+      map: [ "blade" ]
+  - type: Item
+    sprite: _Arcane/Objects/Weapons/Melee/plasma_sword-inhands.rsi
+
+- type: entity
+  parent: PlasmaSword
+  id: PlasmaSwordAlt
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Weapons/Melee/plasma_sword_alt.rsi
+  - type: Item
+    sprite: _Arcane/Objects/Weapons/Melee/plasma_sword_alt-inhands.rsi

@@ -6,6 +6,7 @@ using Content.Shared.Emag.Components;
 using Content.Shared.Emp;
 using Content.Shared.VendingMachines.Components;
 using Robust.Shared.Audio;
+using Content.Shared._Arcane.Economy;
 
 namespace Content.Shared.VendingMachines;
 
@@ -152,6 +153,16 @@ public abstract partial class SharedVendingMachineSystem
             Deny((uid, vendComponent), ejectComponent: ejectComponent);
             return;
         }
+
+        // Nebula start
+        var purchase = new VendingPurchaseAttemptEvent(user, entry.ID, (int) type);
+        RaiseLocalEvent(uid, ref purchase);
+        if (purchase.Cancelled)
+        {
+            Deny((uid, vendComponent), user, ejectComponent);
+            return;
+        }
+        // Nebula end
 
         // Start Ejecting and prevent users from ordering while anim playing
         ejectComponent.EjectEnd = Timing.CurTime + ejectComponent.EjectDelay;

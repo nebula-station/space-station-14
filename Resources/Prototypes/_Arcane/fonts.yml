@@ -1,0 +1,7 @@
+- type: font
+  id: Supernatural
+  path: /Fonts/_Arcane/supernatural.ttf
+
+- type: font
+  id: Schoolbell
+  path: /Fonts/_Arcane/Schoolbell/Schoolbell.ttf

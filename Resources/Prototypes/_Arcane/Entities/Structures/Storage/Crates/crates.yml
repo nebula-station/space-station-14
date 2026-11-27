@@ -1,0 +1,16 @@
+- type: entity
+  parent: CratePrivateSecure
+  id: CratePrivateCargoSecure
+  name: secure cargo crate
+  components:
+  - type: AccessReader
+    access: [["Cargo"]]
+
+- type: entity
+  parent: [ CrateBaseSecure, CrateGenericSteel ]
+  id: CrateInterdyneSecure
+  components:
+  - type: Icon
+    sprite: _Arcane/Structures/Storage/Crates/interdyne_secure.rsi
+  - type: Sprite
+    sprite: _Arcane/Structures/Storage/Crates/interdyne_secure.rsi

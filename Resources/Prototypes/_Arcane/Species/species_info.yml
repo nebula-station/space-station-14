@@ -1,0 +1,87 @@
+- type: speciesInfo
+  id: Human
+  category: Classic
+
+- type: speciesInfo
+  id: Arachnid
+  category: Classic
+
+- type: speciesInfo
+  id: Diona
+  category: Classic
+
+- type: speciesInfo
+  id: Moth
+  category: Classic
+
+- type: speciesInfo
+  id: Reptilian
+  category: Classic
+
+- type: speciesInfo
+  id: SlimePerson
+  category: Classic
+
+- type: speciesInfo
+  id: Vox
+  category: Classic
+
+- type: speciesInfo
+  id: Vulpkanin
+  category: Classic
+
+- type: speciesInfo
+  id: Tajaran
+  category: Classic
+
+- type: speciesInfo
+  id: Felinid
+  category: Classic
+
+- type: speciesInfo
+  id: Oni
+  category: Unusual
+
+- type: speciesInfo
+  id: Dwarf
+  category: Unusual
+
+- type: speciesInfo
+  id: IPC
+  category: Unusual
+
+- type: speciesInfo
+  id: Shadowkin
+  category: Unusual
+
+- type: speciesInfo
+  id: Feroxi
+  category: Unusual
+
+- type: speciesInfo
+  id: Plasmaman
+  category: Unusual
+
+- type: speciesInfo
+  id: Harpy
+  category: Unusual
+
+- type: speciesInfo
+  id: Goblin
+  category: Unusual
+
+- type: speciesInfo
+  id: Decapoid
+  category: Unusual
+
+- type: speciesInfo
+  id: Protogen
+  category: Unusual
+
+- type: speciesInfo
+  id: Ariral
+  category: Unusual
+
+- type: speciesInfo
+  id: Demon
+  category: Special

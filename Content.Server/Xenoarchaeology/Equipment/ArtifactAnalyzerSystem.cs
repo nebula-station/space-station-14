@@ -15,6 +15,10 @@ public sealed partial class ArtifactAnalyzerSystem : SharedArtifactAnalyzerSyste
     [Dependency] private ResearchSystem _research = default!;
     [Dependency] private XenoArtifactSystem _xenoArtifact = default!;
 
+    // Nebula start
+    private const int ArtifactNodeExperimentalReward = 180;
+    // Nebula end
+
     /// <inheritdoc/>
     public override void Initialize()
     {
@@ -44,6 +48,7 @@ public sealed partial class ArtifactAnalyzerSystem : SharedArtifactAnalyzerSyste
             return;
 
         _research.ModifyServerPoints(server.Value, sumResearch, serverComponent);
+        _research.ModifyServerPoints(server.Value, "Experimental", ArtifactNodeExperimentalReward, serverComponent); // Nebula edit
         _audio.PlayPvs(ent.Comp.ExtractSound, artifact.Value);
         _popup.PopupEntity(Loc.GetString("analyzer-artifact-extract-popup"), artifact.Value, PopupType.Large);
     }

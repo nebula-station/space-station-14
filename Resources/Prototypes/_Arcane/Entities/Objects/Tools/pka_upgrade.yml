@@ -1,0 +1,10 @@
+- type: entity
+  parent: PKAUpgradeDamage
+  id: BroodmotherTongue
+  name: broodmother tongue
+  description: The tongue of a broodmother. If attached a certain way, makes for a suitable trophy. It also feels very spongey, I wonder what would happen if you squeezed it?...
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Tools/upgrade.rsi
+    layers:
+    - state: broodmother_tongue

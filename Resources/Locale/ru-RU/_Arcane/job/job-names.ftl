@@ -1,2 +1,10 @@
 job-name-adjutant = адъютант
 job-name-iaa = агент внутренних дел
+job-name-inteq-vanguard-leader = Коммандер авангарда
+job-description-inteq-vanguard-leader = Доведите этих ребят до цели.
+job-name-inteq-vanguard = Авангард
+job-description-inteq-vanguard = Следуйте за целью.
+job-title-vanguard-leader = { job-name-inteq-vanguard-leader }
+job-title-vanguard = { job-name-inteq-vanguard }
+job-name-ert-inteq-vanguard-leader = ОБР коммандер авангарда
+job-name-ert-inteq-vanguard = ОБР авангард

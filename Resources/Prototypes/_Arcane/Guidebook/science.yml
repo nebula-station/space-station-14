@@ -1,0 +1,5 @@
+- type: guideEntry
+  id: ArcaneRnDMachines
+  name: guide-entry-arcane-rnd-machines
+  priority: 4
+  text: "/ServerInfo/_Arcane/Guidebook/Science/RnDMachines.xml"

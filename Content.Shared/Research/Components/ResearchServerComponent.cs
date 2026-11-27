@@ -20,6 +20,36 @@ public sealed partial class ResearchServerComponent : Component
     [DataField("points"), ViewVariables(VVAccess.ReadWrite)]
     public int Points;
 
+    // Nebula start
+    /// <summary>
+    /// Multi-point balance for research network economy.
+    /// </summary>
+    [AutoNetworkedField]
+    [DataField]
+    public List<ResearchPointAmount> PointBalances =
+    [
+        new()
+        {
+            Type = "General",
+            Amount = 0,
+        },
+    ];
+
+    /// <summary>
+    /// Network key used for grouping related RnD servers.
+    /// </summary>
+    [AutoNetworkedField]
+    [DataField]
+    public string NetworkId = "ResearchNet";
+
+    /// <summary>
+    /// Snapshot of network log entries for connected clients.
+    /// </summary>
+    [AutoNetworkedField]
+    [DataField]
+    public List<ResearchLogEntry> Logs = [];
+    // Nebula end
+
     /// <summary>
     /// A unique numeric id representing the server
     /// </summary>
@@ -52,6 +82,12 @@ public sealed partial class ResearchServerComponent : Component
 [ByRefEvent]
 public readonly record struct ResearchServerPointsChangedEvent(EntityUid Server, int Total, int Delta);
 
+// Nebula start
+[ByRefEvent]
+public readonly record struct ResearchServerPointTypeChangedEvent(EntityUid Server, string Type, int Total, int Delta);
+// Nebula end
+
+/* // Nebula edit
 /// <summary>
 /// Event raised every second to calculate the amount of points added to the server.
 /// </summary>
@@ -59,3 +95,14 @@ public readonly record struct ResearchServerPointsChangedEvent(EntityUid Server,
 /// <param name="Points"></param>
 [ByRefEvent]
 public record struct ResearchServerGetPointsPerSecondEvent(EntityUid Server, int Points);
+*/
+
+// Nebula start
+/// <summary>
+/// Event raised every second to calculate the amount of points added to the server.
+/// </summary>
+/// <param name="Server"></param>
+/// <param name="Points"></param>
+[ByRefEvent]
+public record struct ResearchServerGetPointsPerSecondByTypeEvent(EntityUid Server, List<ResearchPointAmount> Points);
+// Nebula end

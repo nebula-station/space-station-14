@@ -13,6 +13,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Robust.Shared.Enums;
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -49,7 +50,7 @@ public sealed partial class RespawnRuleSystem : GameRuleSystem<RespawnDeadRuleCo
                 if (_timing.CurTime < time)
                     continue;
 
-                if (!_playerManager.TryGetSessionById(player, out var session))
+                if (!_playerManager.TryGetSessionById(player, out var session) || session.Status != SessionStatus.InGame) // Nebula edit
                     continue;
 
                 if (session.GetMind() is { } mind && TryComp<MindComponent>(mind, out var mindComp) && mindComp.OwnedEntity.HasValue)
@@ -100,6 +101,10 @@ public sealed partial class RespawnRuleSystem : GameRuleSystem<RespawnDeadRuleCo
     /// </summary>
     public bool RespawnPlayer(Entity<ActorComponent> player, Entity<RespawnTrackerComponent> respawnTracker)
     {
+        // Nebula start
+        if (player.Comp.PlayerSession.Status != SessionStatus.InGame)
+            return false;
+        // Nebula end
         if (!respawnTracker.Comp.Players.Contains(player.Comp.PlayerSession.UserId) || respawnTracker.Comp.RespawnQueue.ContainsKey(player.Comp.PlayerSession.UserId))
             return false;
 

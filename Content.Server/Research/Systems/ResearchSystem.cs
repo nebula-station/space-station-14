@@ -9,6 +9,7 @@ using Content.Shared.Research.Systems;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Shared.Timing;
+using Robust.Shared.Random;
 
 namespace Content.Server.Research.Systems
 {
@@ -22,6 +23,7 @@ namespace Content.Server.Research.Systems
         [Dependency] private UserInterfaceSystem _uiSystem = default!;
         [Dependency] private SharedPopupSystem _popup = default!;
         [Dependency] private RadioSystem _radio = default!;
+        [Dependency] private IRobustRandom _random = default!; // Nebula edit
 
         public override void Initialize()
         {
@@ -77,15 +79,20 @@ namespace Content.Server.Research.Systems
             return GetServers(client).Select(x => x.Comp.Id).ToArray();
         }
 
-        public HashSet<Entity<ResearchServerComponent>> GetServers(EntityUid client)
+        public List<Entity<ResearchServerComponent>> GetServers(EntityUid client) // Nebula edit
         {
             var clientXform = Transform(client);
             if (clientXform.GridUid is not { } grid)
-                return [];
+                return []; // Nebula edit
 
-            var set = new HashSet<Entity<ResearchServerComponent>>();
-            _lookup.GetGridEntities(grid, set);
-            return set;
+            // Nebula start
+            HashSet<Entity<ResearchServerComponent>> servers = [];
+            _lookup.GetGridEntities(grid, servers);
+
+            return servers
+                .OrderBy(ent => ent.Comp.Id)
+                .ToList();
+            // Nebula end
         }
 
         public override void Update(float frameTime)

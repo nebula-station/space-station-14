@@ -1,0 +1,69 @@
+- type: entity
+  parent: MobGoliath
+  id: MobGoliathBroodmother
+  name: goliath broodmother
+  description: An example of sexual dimorphism, this female goliath looks much different than the males of her species. She is, however, just as dangerous, if not more.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Mobs/Bosses/broodmother.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 2.5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      350: Dead
+  - type: MeleeWeapon
+    range: 1.12
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+    angle: 0
+    attackRate: 0.40
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Blunt: 25
+        Slash: 15
+  - type: HTN
+    constantlyReplan: false
+    rootTask:
+      task: GoliathCompound
+    blackboard:
+      VisionRadius: !type:Single
+        15
+      AggroVisionRadius: !type:Single
+        18
+      NavSmash: !type:Bool
+        true
+  - type: NPCUseActionOnTarget
+    actionId: ActionGoliathTentacle
+    extraActionIds:
+    - ActionGoliathTentacleSquare
+    - ActionGoliathTentacleHollowSquare
+    - ActionGoliathTentacleDiagonalCross
+    - ActionGoliathSpawnBaby
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodMeatGoliath
+      amount: 5
+    - id: MaterialGoliathHide1
+      amount: 10
+    - id: BroodmotherTongue
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Dead
+  - type: SpawnOnTrigger
+    proto: LavalandCrateNecropolisFilled
+  - type: Speech
+    speechVerb: LargeMob
+  - type: Damageable
+    damageModifierSet: Broodmother

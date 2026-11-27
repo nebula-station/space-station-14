@@ -11,7 +11,7 @@
       storagebase: !type:AllSelector
         children:
         - id: SyndiCrewMonitorEmpty
-        - id: PowerCellMicroreactor
+        - id: PowerCellBluespaceReactor # Nebula edit
         - id: ClothingEyesGlassesHiddenSecurity
         - id: CameraBug
 

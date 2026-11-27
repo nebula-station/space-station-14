@@ -28,3 +28,15 @@ ent-ClothingShoesBeer = пивные тапочки
     .desc = Пивные тапочки.
 ent-ClothingShoesOldFashionedMedical = старомодные туфли врача
     .desc = Классические туфли эпохи возрождения.
+
+ent-ClothingShoesJesters = ботинки шута
+    .desc = Старомодные туфли клоуна.
+
+ent-ClothingShoesTwilightSparkle = ботинки книжного червя
+    .desc = Почему они такие высокие?
+
+ent-ClothingShoesWorkerBoots = ботинки рабочего
+    .desc = Удобные ботинки, чтобы бегать по станции.
+
+ent-ClothingShoesMusicianBoots = ботинки музыканта
+    .desc = Высокие сапоги с пряжками.

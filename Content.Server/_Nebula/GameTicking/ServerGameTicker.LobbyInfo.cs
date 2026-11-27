@@ -4,6 +4,7 @@
 
 using Content.Shared.GameTicking;
 using Content.Shared.Station.Components;
+using Robust.Shared.Enums;
 using Robust.Shared.Player;
 
 namespace Content.Server.GameTicking;
@@ -25,8 +26,8 @@ public sealed partial class ServerGameTicker
 
         _lobbyInfoQueued = false;
 
-        var filter = Filter.Empty().AddWhere(session =>
-            !_playerGameStatuses.TryGetValue(session.UserId, out var status) || status != PlayerGameStatus.JoinedGame);
+        var filter = Filter.Empty().AddWhere(session => session.Status == SessionStatus.InGame
+            && (!_playerGameStatuses.TryGetValue(session.UserId, out var status) || status != PlayerGameStatus.JoinedGame));
 
         RaiseNetworkEvent(GetInfoMsg(), filter);
     }

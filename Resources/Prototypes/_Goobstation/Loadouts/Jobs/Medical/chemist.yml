@@ -11,9 +11,9 @@
 
 - type: loadout
   id: ChemistUshanka
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterChemist
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: MasterChemist # Nebula edit
   equipment:
     head: ClothingHeadHatUshanka
 

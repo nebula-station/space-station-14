@@ -4,34 +4,34 @@
 
 - type: loadout
   id: FoodSnackLollypopWrapped
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:OverallPlaytimeRequirement
-      time: 36000 # 10hr
+#  effects: # Nebula edit
+#  - !type:JobRequirementLoadoutEffect # Nebula edit
+#    requirement: # Nebula edit
+#      !type:OverallPlaytimeRequirement # Nebula edit
+#      time: 36000 # 10hr # Nebula edit
   storage:
     back:
     - FoodSnackLollypopWrapped
 
 - type: loadout
   id: FoodSnackLollypopWrappedRainbow
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:OverallPlaytimeRequirement
-      time: 1800000 # 500hr
+#  effects: # Nebula edit
+#  - !type:JobRequirementLoadoutEffect # Nebula edit
+#    requirement: # Nebula edit
+#      !type:OverallPlaytimeRequirement # Nebula edit
+#      time: 1800000 # 500hr # Nebula edit
   storage:
     back:
     - FoodSnackLollypopWrappedRainbow
 
 - type: loadout
   id: FoodSnackLollypopWrappedCarp
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobSalvageSpecialist
-      time: 360000 # 100hr
+#  effects: # Nebula edit
+#  - !type:JobRequirementLoadoutEffect # Nebula edit
+#    requirement: # Nebula edit
+#      !type:RoleTimeRequirement # Nebula edit
+#      role: JobSalvageSpecialist # Nebula edit
+#      time: 360000 # 100hr # Nebula edit
   storage:
     back:
     - FoodSnackLollypopWrappedCarp

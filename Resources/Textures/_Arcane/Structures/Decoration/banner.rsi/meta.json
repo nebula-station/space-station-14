@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "banner_inteq by PuroSlavKing (Github), TG-style resprite by PuroSlavKing (Github) | banner_spiderclan sprited by UmbiMax",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "banner_inteq"
+    },
+    {
+      "name": "banner_spiderclan"
+    }
+  ]
+}

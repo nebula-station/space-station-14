@@ -150,7 +150,7 @@
 
 - type: latheRecipe
   id: ClothingBackpackHolding
-  result: ClothingBackpackHolding
+  result: ClothingBackpackHoldingInert # Nebula edit
   completetime: 5
   materials:
     Steel: 2000
@@ -162,12 +162,12 @@
 - type: latheRecipe
   parent: ClothingBackpackHolding
   id: ClothingBackpackSatchelHolding
-  result: ClothingBackpackSatchelHolding
+  result: ClothingBackpackSatchelHoldingInert # Nebula edit
 
 - type: latheRecipe
   parent: ClothingBackpackHolding
   id: ClothingBackpackDuffelHolding
-  result: ClothingBackpackDuffelHolding
+  result: ClothingBackpackDuffelHoldingInert # Nebula edit
 
 - type: latheRecipe
   parent: ClothingBackpackHolding

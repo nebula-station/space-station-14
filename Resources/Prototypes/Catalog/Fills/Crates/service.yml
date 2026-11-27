@@ -176,6 +176,10 @@
           - id: ClothingMaskMime
           - id: ClothingBeltSuspendersRed
           - id: ClothingBeltSuspendersBlack
+        # Nebula start
+        - id: ConfettiGrenade
+          amount: 3
+        # Nebula end
         - !type:AllSelector # Performer starter kit
           children:
           - id: ClothingUniformJumpskirtPerformer

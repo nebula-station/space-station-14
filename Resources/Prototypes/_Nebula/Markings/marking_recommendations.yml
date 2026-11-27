@@ -57,6 +57,7 @@
   id: Reptilian
   group: Reptilian
   paths: [ reptilian ]
+  markings: [ LizardSnoutEasternDragon, LizardSnoutEasternDragonUsiki, TailSnakeStripe, TailSnakeStripeAlt, TailSnakeDual, TailSnakeUnder ]
 
 - type: markingRecommendation
   id: Shadow

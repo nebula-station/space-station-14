@@ -368,6 +368,11 @@
     - state: holding
     - state: holding-unlit
       shader: unshaded
+  # Nebula start
+  - type: Construction
+    graph: BagOfHoldingBackpack
+    node: bag_of_holding
+  # Nebula end
 
 - type: entity
   parent: ClothingBackpackClown

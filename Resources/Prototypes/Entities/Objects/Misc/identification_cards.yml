@@ -45,6 +45,15 @@
     - WhitelistChameleonIdCard
   - type: StealTarget
     stealGroup: IDCard
+  # Nebula start
+  - type: BankCard
+  - type: ActivatableUI
+    key: enum.BankCardUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.BankCardUiKey.Key:
+        type: BankCardBoundUserInterface
+  # Nebula end
 
 #IDs with layers
 

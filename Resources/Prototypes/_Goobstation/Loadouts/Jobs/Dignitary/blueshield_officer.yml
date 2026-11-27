@@ -92,9 +92,9 @@
 # Neck
 - type: loadout
   id: BlueshieldOfficerOuterBlueshieldMantle
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorBlueshieldOfficer
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: SeniorBlueshieldOfficer # Nebula edit
   equipment:
     neck: ClothingNeckMantleBlueshield
 

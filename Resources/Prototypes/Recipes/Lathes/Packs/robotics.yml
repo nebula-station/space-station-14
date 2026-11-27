@@ -33,6 +33,13 @@
   id: Robotics
   recipes:
   - ProximitySensor
+  # Nebula start
+  - Intellicard
+  - PersonalAI
+  - SyndicatePersonalAI
+  - ClothingHeadHatCardborg
+  - ClothingOuterCardborg
+  # Nebula end
 
 - type: latheRecipePack
   id: BorgModules
@@ -42,6 +49,10 @@
   - BorgModuleAdvancedClowning
   #- BorgModuleAdvancedTopical # Goob
   - BorgModuleAdvancedMining
+  # Nebula start
+  - BorgModuleMartyr
+  - BorgModuleSyndicateWeapon
+  # Nebula end
 
 - type: latheRecipePack
   id: MechParts
@@ -69,3 +80,11 @@
     - MechEquipmentGrabber
     - MechEquipmentHorn
     - MechEquipmentGrabberSmall
+    # Nebula start
+    - MechEquipmentHonkerBananaMortar
+    - MechEquipmentHonkerMousetrapMortar
+    - WeaponMechCombatMissileRack6
+    - WeaponMechChainSword
+    - WeaponMechCombatTeslaCannon
+    - WeaponMechMeleeDrill
+    # Nebula end

@@ -196,7 +196,7 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellMicroreactor
+        startingItem: PowerCellBluespaceReactor # Nebula edit
   - type: Puller
     needsHands: false
   - type: Eye

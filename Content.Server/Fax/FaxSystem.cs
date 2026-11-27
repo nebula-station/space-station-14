@@ -312,6 +312,9 @@ public sealed partial class FaxSystem : EntitySystem
 
     private void OnCopyButtonPressed(EntityUid uid, FaxMachineComponent component, FaxCopyMessage args)
     {
+        if (CopyHandledByItem((uid, component), args)) // Nebula edit
+            return; // Nebula edit
+
         if (HasComp<MobStateComponent>(component.PaperSlot.Item))
             _faxecute.Faxecute(uid, component); // when button pressed it will hurt the mob.
         else

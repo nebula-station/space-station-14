@@ -1,0 +1,10 @@
+- type: entity
+  parent: [BaseCase, BaseMinorContraband]
+  id: CaseInteQ
+  name: brown case
+  suffix: InteQ, Empty
+  description: Brown briefcase with a gold logo, I wonder what's in there?
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Storage/inteq_case.rsi
+    state: icon

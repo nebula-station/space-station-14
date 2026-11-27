@@ -63,6 +63,16 @@
     tags:
     - Ore
     - Ingot
+  # Nebula start
+  - type: Extractable
+    grindableSolutionName: bluespace
+  - type: Solution
+    id: bluespace
+    solution:
+      reagents:
+      - ReagentId: Bluespace
+        Quantity: 20
+  # Nebula end
 
 - type: entity
   parent: MaterialBSCrystal
@@ -85,6 +95,14 @@
     stackType: BSCrystalUnprocessed
   - type: UnclaimedOre
     miningPoints: 250
+  # Nebula start
+  - type: Solution
+    id: bluespace
+    solution:
+      reagents:
+      - ReagentId: Bluespace
+        Quantity: 5
+  # Nebula end
 
 - type: entity
   parent: MaterialBSCrystalUnprocessed

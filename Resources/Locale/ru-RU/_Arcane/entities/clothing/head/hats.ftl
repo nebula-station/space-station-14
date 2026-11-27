@@ -30,3 +30,33 @@ ent-ClothingHeadbandFox = лисьи ушки
     .desc = Рыжий ободок с пушистыми лисьими ушками.
 ent-ClothingHeadbandKitsune = ушки кицунэ
     .desc = Традиционный элемент костюма в стиле мифической лисы.
+
+ent-ClothingHatNTRBlackBeret = чёрный берет представителя NanoTrasen
+    .desc = Элегантный головной убор.
+
+ent-ClothingHatBotanist = ботаническая шляпа
+    .desc = Шляпа с широкими полями для работы на солнце.
+
+ent-ClothingHatCamouflage = камуфляжная шляпа
+    .desc = Камуфляжная шляпа.
+
+ent-ClothingHatClownCilinder = клоунский цилиндр
+    .desc = Забавный полосатый цилиндр.
+
+ent-ClothingHatCow = коровий шлем
+    .desc = Корова.
+
+ent-ClothingHatFishCookBandana = рыбная бандана повара
+    .desc = Бандана резчика рыбы.
+
+ent-ClothingHatCookHigh = высокий поварской колпак
+    .desc = Возможно, под ним прячется крыса.
+
+ent-ClothingHatCookInclined = наклоненный поварской колпак
+    .desc = Наклоненный поварской колпак.
+
+ent-ClothingHatJester = колпак шута
+    .desc = Старомодный клоунский колпак.
+
+ent-ClothingHatCookRed = красный поварской колпак
+    .desc = Красный поварской колпак.

@@ -132,3 +132,13 @@
   components:
   - type: Sprite
     sprite: _Arcane/Clothing/Underwear/beer_pants.rsi
+
+- type: entity
+  parent: ClothingUnderwearBase
+  id: ClothingUnderwearJesterPants
+  categories: [ HideSpawnMenu ]
+  name: jester's pants
+  description: Jester's pants.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Underwear/Sponsor/jester_underwear.rsi

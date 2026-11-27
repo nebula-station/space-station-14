@@ -64,3 +64,11 @@
     items:
     - ClothingOuterArmorMamluk
     - ClothingOuterArmorAdept
+  - tier: 2
+    items:
+    - ClothingOuterCleanerJumpsuit
+    - ClothingOuterCookApron
+    - ClothingOuterCow
+    - ClothingOuterMusicianJacket
+    - ClothingOuterRadioHostJacket
+    - ClothingOuterServiceJacket

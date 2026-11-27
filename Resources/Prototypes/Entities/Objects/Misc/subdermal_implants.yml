@@ -293,7 +293,7 @@
     - type: TriggerOnMobstateChange #activates the timer
       mobState:
       - Dead
-      preventSuicide: true
+      preventSuicide: false # Nebula edit
     - type: TimerTrigger
       delay: 7
       beepSound:

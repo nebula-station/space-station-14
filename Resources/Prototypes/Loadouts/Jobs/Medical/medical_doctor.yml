@@ -9,9 +9,9 @@
 
 - type: loadout
   id: MedicalHeadMirror
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MedicalJourneymanTimer
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: MedicalJourneymanTimer # Nebula edit
   equipment:
     head: ClothingHeadMirror
 

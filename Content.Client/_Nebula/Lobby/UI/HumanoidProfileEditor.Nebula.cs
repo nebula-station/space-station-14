@@ -17,6 +17,24 @@ public sealed partial class HumanoidProfileEditor
 {
     private JobAlternateTitleSystem? _jobAltTitles;
 
+    /// <summary>
+    /// Picks a species the same way the species dropdown does.
+    /// </summary>
+    public void SelectSpecies(string species)
+    {
+        var index = _species.FindIndex(x => x.ID == species);
+        if (index < 0)
+            return;
+
+        var previousSpecies = Profile?.Species;
+        SpeciesButton.SelectId(index);
+        SetSpecies(species);
+        OnSkinColorOnValueChanged();
+        ResetWidthAndHeight();
+        if (previousSpecies != Profile?.Species)
+            ResetMarkings();
+    }
+
     private void ResetMarkings()
     {
         if (Profile == null)

@@ -101,7 +101,7 @@ public sealed partial class AtmosphereSystem
         // Start applying fire effects and spreading to adjacent tiles.
         if (tile.Hotspot.Bypassing)
         {
-            tile.Hotspot.State = 3;
+            // tile.Hotspot.State = 3; // Nebula edit
 
             var gridUid = ent.Owner;
             var tilePos = tile.GridIndices;
@@ -148,11 +148,13 @@ public sealed partial class AtmosphereSystem
                 }
             }
         }
-        else
-        {
-            // Little baby fire. Set the sprite state based on the current size of the fire.
-            tile.Hotspot.State = (byte)(tile.Hotspot.Volume > Atmospherics.CellVolume * 0.4f ? 2 : 1);
-        }
+        // Nebula start
+        // else
+        // {
+        //     // Little baby fire. Set the sprite state based on the current size of the fire.
+        //     tile.Hotspot.State = (byte)(tile.Hotspot.Volume > Atmospherics.CellVolume * 0.4f ? 2 : 1);
+        // }
+        // Nebula end
 
         if (tile.Hotspot.Temperature > tile.MaxFireTemperatureSustained)
             tile.MaxFireTemperatureSustained = tile.Hotspot.Temperature;
@@ -166,8 +168,8 @@ public sealed partial class AtmosphereSystem
             // The greater the fire state, the greater the volume.
             _audio.PlayPvs(HotspotSound,
                 coordinates,
-                HotspotSound.Params.WithVariation(0.15f / tile.Hotspot.State)
-                    .WithVolume(-5f + 5f * tile.Hotspot.State));
+                HotspotSound.Params.WithVariation(0.15f / GetFireSoundState(tile.Hotspot.State)) // Nebula edit
+                    .WithVolume(-5f + 5f * GetFireSoundState(tile.Hotspot.State))); // Nebula edit
         }
 
         if (_hotspotSoundCooldown > HotspotSoundCooldownCycles)
@@ -274,6 +276,8 @@ public sealed partial class AtmosphereSystem
             tile.Hotspot.Volume = affected.ReactionResults[(byte)GasReaction.Fire] * Atmospherics.FireGrowthRate;
             Merge(tile.Air, affected);
         }
+
+        tile.Hotspot.State = GetFireState(tile.Hotspot.Temperature); // Nebula edit
 
         var fireEvent = new TileFireEvent(tile.Hotspot.Temperature, tile.Hotspot.Volume);
         _entSet.Clear();

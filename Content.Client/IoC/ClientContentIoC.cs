@@ -32,6 +32,7 @@ using Content.Shared.IoC;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Players.RateLimiting;
 using Content.Client._Nebula.Discord.Linking;
+using Content.Client._Arcane.JoinQueue;
 
 namespace Content.Client.IoC
 {
@@ -74,6 +75,7 @@ namespace Content.Client.IoC
             collection.Register<DiscordLinkingManager>(); // Nebula
             collection.Register<NebulaThemeManager>(); // Nebula
             collection.Register<BodycamFootageManager>(); // Nebula
+            collection.Register<JoinQueueManager>(); // Nebula edit
         }
     }
 }

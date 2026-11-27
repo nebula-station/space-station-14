@@ -4,6 +4,10 @@
   keycode: ";"
   frequency: 145.9
   color: "#2cdb2c"
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/common.ogg
+  # Nebula end
 
 - type: radioChannel
   id: CentCom
@@ -12,6 +16,10 @@
   frequency: 133.7
   color: "#2681a5"
   longRange: true
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/cc.ogg
+  # Nebula end
 
 - type: radioChannel
   id: Command
@@ -19,6 +27,10 @@
   keycode: 'к' # RU-Localization
   frequency: 135.3
   color: "#fcdf03"
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/command.ogg
+  # Nebula end
 
 - type: radioChannel
   id: Engineering
@@ -26,6 +38,10 @@
   keycode: 'и' # RU-Localization
   frequency: 135.7
   color: "#ff733c"
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/eng.ogg
+  # Nebula end
 
 - type: radioChannel
   id: Medical
@@ -33,6 +49,10 @@
   keycode: 'м' # RU-Localization
   frequency: 135.5
   color: "#57b8f0"
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/med.ogg
+  # Nebula end
 
 - type: radioChannel
   id: Science
@@ -40,6 +60,10 @@
   keycode: 'н' # RU-Localization
   frequency: 135.1
   color: "#cd7ccd"
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/science.ogg
+  # Nebula end
 
 - type: radioChannel
   id: Security
@@ -47,6 +71,10 @@
   keycode: 'о' # RU-Localization
   frequency: 135.9
   color: "#ff4242"
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/security.ogg
+  # Nebula end
 
 - type: radioChannel
   id: Service
@@ -54,6 +82,10 @@
   keycode: 'с' # RU-Localization
   frequency: 134.9
   color: "#539c00"
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/service.ogg
+  # Nebula end
 
 - type: radioChannel
   id: Supply
@@ -61,6 +93,10 @@
   keycode: 'п' # RU-Localization
   frequency: 134.7
   color: "#b48b57"
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/cargo.ogg
+  # Nebula end
 
 - type: radioChannel
   id: Syndicate
@@ -69,6 +105,10 @@
   frequency: 121.3
   color: "#8f4a4b"
   longRange: true
+  # Nebula start
+  onSendSound:
+    path: /Audio/_Arcane/Radio/syndie.ogg
+  # Nebula end
 
 - type: radioChannel
   id: Handheld
@@ -77,6 +117,20 @@
   color: "#967101"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+# Nebula start
+# commented out so anyone trying to use it gets errors and sees this
+# if you ARE one of said anyones, instead go copy yml of anything with collective mind
+#- type: radioChannel
+#  id: Binary
+#  name: chat-radio-binary
+#  keycode: 'b'
+#  frequency: 100.1
+#  color: "#5ed7aa"
+#  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+#  longRange: true
+  onSendSound:
+    path: /Audio/_Arcane/Radio/handheld.ogg
+# Nebula end
 
 # Goobstation - replaced with collective mind
 # commented out so anyone trying to use it gets errors and sees this

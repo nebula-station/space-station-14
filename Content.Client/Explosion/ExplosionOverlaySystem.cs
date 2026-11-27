@@ -86,6 +86,7 @@ public sealed partial class ExplosionOverlaySystem : EntitySystem
         foreach (var state in fireRsi)
         {
             textures.FireFrames.Add(state.GetFrames(RsiDirection.South));
+            textures.FireDelays.Add(state.GetDelays()); // Nebula edit
             if (textures.FireFrames.Count == type.FireStates)
                 break;
         }

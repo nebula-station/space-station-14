@@ -1,0 +1,5 @@
+- type: stack
+  id: CreditHolochip
+  name: stack-credit-holochip
+  icon: { sprite: _Arcane/Objects/Economy/holochip.rsi, state: holochip }
+  spawn: CreditHolochip

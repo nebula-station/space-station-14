@@ -1,0 +1,16 @@
+<BoxContainer xmlns="https://spacestation14.io"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              Orientation="Vertical" SeparationOverride="4" HorizontalAlignment="Center">
+    <BoxContainer Orientation="Horizontal" SeparationOverride="4" HorizontalAlignment="Center">
+        <Button Name="GyrussButton" Text="{Loc 'queue-minigame-gyruss'}" />
+        <Button Name="GoGoShitcurityButton" Text="{Loc 'queue-minigame-gogo-shitcurity'}" />
+        <Button Name="SpaceInvadersButton" Text="{Loc 'queue-minigame-space-invaders'}" />
+    </BoxContainer>
+    <BoxContainer Name="HudBar" Orientation="Horizontal" SeparationOverride="0" Margin="0 2 0 0">
+        <Label Name="ScoreLabel" HorizontalExpand="True" StyleClasses="LabelKeyText" Align="Left" Margin="6 0 0 0" />
+        <Label Name="WaveLabel" HorizontalExpand="True" StyleClasses="LabelKeyText" Align="Center" />
+        <Label Name="LivesLabel" HorizontalExpand="True" StyleClasses="LabelKeyText" Align="Right" />
+        <Button Name="MuteButton" Text="{Loc 'queue-minigame-mute'}" MinWidth="32" Margin="4 0 4 0" />
+    </BoxContainer>
+    <Control Name="GameHolder" HorizontalAlignment="Center" />
+</BoxContainer>

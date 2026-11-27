@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseWeaponBallisticTurret
+  id: WeaponTurretInteQ
+  suffix: InteQ
+  components:
+  - type: NpcFactionMember
+    factions:
+    - InteQHostile
+  - type: BallisticAmmoProvider
+    capacity: 1500

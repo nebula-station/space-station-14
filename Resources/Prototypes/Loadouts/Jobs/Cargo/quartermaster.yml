@@ -68,9 +68,9 @@
   id: QuartermasterMantle
   equipment:
     neck: ClothingNeckMantleQM
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterQM
+#  effects: # Nebula edit
+#  - !type:GroupLoadoutEffect # Nebula edit
+#    proto: MasterQM # Nebula edit
 
 - type: startingGear
   id: QuartermasterMantle

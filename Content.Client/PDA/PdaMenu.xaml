@@ -47,6 +47,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         <pda:PdaNavigationButton Name="EjectPenButton" Access="Public" SetWidth="32"/>
         <pda:PdaNavigationButton Name="EjectIdButton" Access="Public" SetWidth="32"/>
         <pda:PdaNavigationButton Name="EjectPaiButton" Access="Public" SetWidth="32"/>
+        <pda:PdaNavigationButton Name="PowerOffButton" Access="Public" SetWidth="32"/> <!-- Nebula edit -->
     </BoxContainer>
     <BoxContainer Name="ViewContainer" HorizontalExpand="True" VerticalExpand="True" Access="Public">
         <BoxContainer Orientation="Vertical"

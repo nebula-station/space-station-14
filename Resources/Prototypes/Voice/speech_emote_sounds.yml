@@ -94,6 +94,10 @@
   params:
     variation: 0.125
   sounds:
+    # Nebula start
+    Hiss:
+      collection: ReptilianHisses
+    # Nebula end
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:
@@ -120,6 +124,10 @@
   params:
     variation: 0.125
   sounds:
+    # Nebula start
+    Hiss:
+      collection: ReptilianHisses
+    # Nebula end
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:

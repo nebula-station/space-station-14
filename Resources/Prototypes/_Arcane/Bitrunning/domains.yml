@@ -1,0 +1,11 @@
+- type: bitrunningVirtualDomain
+  id: ExperimentalSoldier
+  name: bitrunning-domain-experimental-soldier-name
+  description: bitrunning-domain-experimental-soldier-desc
+  difficulty: Hard
+  cost: 3
+  serverRewardPoints: 6
+  bitrunningRewardPoints: 600
+  forcedLoadout: BitrunnerAvatarERTSecurityGear
+  mapPath: /Maps/_Arcane/Bitrun/Experimental-Soldier.yml
+  objectiveType: CollectEncryptedCaches

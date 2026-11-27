@@ -1,0 +1,10 @@
+flavor-complex-jobfueleng = как шипучий отдых от работы в бескрайнем космосе
+flavor-complex-jobfuelmed = как лекарство и обезболивающее
+flavor-complex-jobfuelsrv = как подозрительно вкусный сладкий банановый милкшейк
+flavor-complex-jobfuelsec = как подгоревший чип с нотками многослойного алкоголя
+flavor-complex-jobfuelcrg = как чистейшая свобода на Силли Айленде
+flavor-complex-jobfuelrndlight = как утренний приём алкоголя с кофе
+flavor-complex-jobfuelrnddark = как ночной приём взрывного кофе
+flavor-complex-jobfuelcmd = как роскошный кофе для самых важных персон
+flavor-complex-stationblessing = как пожелание удачи с ноткой неуверенности
+flavor-complex-jobfuelsyndie = как шипучий прогоревший порох

@@ -14,6 +14,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Server._Arcane.ServerProtection;
 
 namespace Content.Server.Chat.Systems;
 
@@ -269,6 +270,10 @@ public sealed partial class ChatSystem
 
         // Trauma - add name, empty obfuscation strings and checkLOS
         SendInVoiceRange(ChatChannel.Emotes, name, action, wrappedMessage, "", "", source, range, author, checkLOS: EmoteRespectsLOS);
+        // Nebula start
+        var emoteSentEv = new EntityEmoteSentEvent(source);
+        RaiseLocalEvent(ref emoteSentEv);
+        // Nebula end
         RaiseLocalEvent(new BodycamEmoteEvent(source, action, wrappedMessage, range)); // Nebula
         if (!hideLog)
             if (name != Name(source))

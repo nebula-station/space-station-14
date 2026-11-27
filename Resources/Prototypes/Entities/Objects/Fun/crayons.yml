@@ -29,6 +29,12 @@
     maxCharges: 25
   - type: StaticPrice
     price: 5
+  # Nebula start
+  - type: PaintTool
+    colorMode: Crayon
+    maxBrushSize: 3
+    pixelsPerCharge: 256
+  # Nebula end
 
 - type: entity
   abstract: true

@@ -12,6 +12,7 @@ public abstract partial class SharedResearchStealerSystem : EntitySystem
     [Dependency] private SharedDoAfterSystem _doAfter = default!;
     [Dependency] private SharedNinjaGlovesSystem _gloves = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedResearchSystem _research = default!; // Nebula edit
 
     public override void Initialize()
     {
@@ -37,7 +38,7 @@ public abstract partial class SharedResearchStealerSystem : EntitySystem
         args.Handled = true;
 
         // fail fast if theres no techs to steal right now
-        if (database.UnlockedTechnologies.Count == 0)
+        if (_research.GetRemovableTechnologies(database).Count == 0) // Nebula edit
         {
             _popup.PopupEntity(Loc.GetString("ninja-download-fail"), uid, uid);
             return;

@@ -1,3 +1,5 @@
+using Content.Shared.Research;
+
 namespace Content.Server.Research.Disk
 {
     [RegisterComponent]
@@ -5,6 +7,11 @@ namespace Content.Server.Research.Disk
     {
         [DataField("points"), ViewVariables(VVAccess.ReadWrite)]
         public int Points = 1000;
+
+        // Nebula start
+        [DataField]
+        public List<ResearchPointAmount> PointBalances = [];
+        // Nebula end
 
         /// <summary>
         /// If true, the value of this disk will be set to the sum

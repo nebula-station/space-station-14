@@ -167,9 +167,12 @@ public sealed partial class AlertLevelSystem : EntitySystem
         var stationName = MetaData(station.Owner).EntityName;
 
         // The full announcement to be spat out into chat.
-        var announcementFull = Loc.GetString("alert-level-announcement",
-            ("name", prototype.LocalizedName),
-            ("announcement", AlertLevelAnnouncement(prototype)));
+        // Nebula start
+        var announcementFull = Loc.GetString("alert-level-announcement-full",
+            ("name", prototype.LocalizedName.ToUpperInvariant()),
+            ("announcement", AlertLevelAnnouncement(prototype)),
+            ("instructions", AlertLevelInstructions(prototype)));
+        // Nebula end
 
         var ev = new AlertLevelChangedEvent(station, level);
         RaiseLocalEvent(station, ref ev, true); // Trauma - raise it on the station as well as broadcast

@@ -1,0 +1,26 @@
+- type: entity
+  parent: SpawnMobExperimentalSoldier
+  id: SpawnMobExperimentalSoldierBitrunning
+  suffix: AI, Bitrunning
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+
+- type: entity
+  parent: SpawnMobNukeopsSoldier
+  id: SpawnMobNukeopsSoldierBitrunning
+  suffix: AI, Bitrunning
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+
+- type: entity
+  parent: SpawnMobSyndicateSoldier
+  id: SpawnMobSyndicateSoldierBitrunning
+  suffix: AI, Bitrunning
+  components:
+  - type: Sprite
+    layers:
+    - state: red

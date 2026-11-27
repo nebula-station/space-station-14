@@ -151,6 +151,20 @@
   - type: PhysicalComposition
     materialComposition:
       ArtifactFragment: 100
+  # Nebula start
+  - type: ResearchAnalyzable
+    supportedMethods:
+    - Deconstruct
+    methodPointRewards:
+      Deconstruct:
+      - type: General
+        amount: 250
+      - type: Experimental
+        amount: 30
+    discoveryTrigger: machine:artifact-fragment
+    experimentActions:
+    - analyze_artifact_fragment
+  # Nebula end
   # Lavaland Change end
 
 - type: entity

@@ -601,6 +601,7 @@
     contents:
     - id: VehicleClowncarTrainee
     - id: ClownMegaphone # goob - loudspeakers
+    - id: PaintingFrameClown # Nebula edit
 
 # Mime
 - type: entity
@@ -615,6 +616,11 @@
     stateBaseClosed: mime
     stateDoorOpen: mime_open
     stateDoorClosed: mime_door
+  # Nebula start
+  - type: StorageFill
+    contents:
+    - id: PaintingFrameFrog
+  # Nebula end
 
 # Representative
 - type: entity

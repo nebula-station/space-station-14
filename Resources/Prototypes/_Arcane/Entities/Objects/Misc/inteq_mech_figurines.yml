@@ -1,0 +1,9 @@
+- type: entity
+  parent: BaseFigurineMech
+  id: ToyAres
+  name: Ares toy
+  description: Mini-Mecha action figure! 'Mecha InteQ. 1/2' is written on the back.
+  components:
+    - type: Sprite
+      sprite: _Arcane/Objects/Fun/inteq_mech_figurines.rsi
+      state: ares

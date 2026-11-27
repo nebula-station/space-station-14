@@ -30,6 +30,13 @@ public sealed partial class VendingMachineMenu : FancyWindow
 
     public event Action<GUIBoundKeyEventArgs, ListData>? OnItemSelected;
 
+    // Nebula start
+    /// <summary>
+    /// Gets the price of an item for the local player.
+    /// </summary>
+    public Func<string, InventoryType, int>? GetPrice;
+    // Nebula end
+
     public VendingMachineMenu()
     {
         MinSize = SetSize = new Vector2(250, 150);
@@ -111,7 +118,7 @@ public sealed partial class VendingMachineMenu : FancyWindow
                 continue;
             }
 
-            var itemText = GetItemText(prototype, entry.Amount);
+            var itemText = GetItemText(prototype, entry.Amount, entry.Type); // Nebula edit
             var key = new VendorItemKey(entry.Type, prototype.ID);
             _amounts[key] = entry.Amount;
 
@@ -147,14 +154,14 @@ public sealed partial class VendingMachineMenu : FancyWindow
             var amount = entry.Amount;
             _amounts[key] = amount;
 
-            var text = GetItemText(prototype, amount);
+            var text = GetItemText(prototype, amount, key.Type); // Nebula edit
 
             button.Item.SetText(text);
             button.Button.Disabled = !enabled || amount == 0;
         }
     }
 
-    private string GetItemText(EntityPrototype prototype, uint amount)
+    private string GetItemText(EntityPrototype prototype, uint amount, InventoryType type) // Nebula edit
     {
         var itemName = prototype.Name;
 
@@ -165,6 +172,11 @@ public sealed partial class VendingMachineMenu : FancyWindow
                 ("baseName", itemName),
                 ("label", _loc.GetString(locId)));
         }
+
+        // Nebula start
+        if (GetPrice?.Invoke(prototype.ID, type) is > 0 and var price)
+            return _loc.GetString("vending-machine-item-with-price", ("amount", amount), ("name", itemName), ("price", price));
+        // Nebula end
 
         return $"[{amount}] {itemName}";
     }

@@ -1,0 +1,50 @@
+- type: entity
+  parent: MobGoliath
+  id: MobGoliathBaby
+  name: baby goliath
+  description: A not-so-massive baby beast that uses long tentacles to ensnare its prey, threatening them is not advised under any conditions.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Mobs/Aliens/Asteroid/goliath_baby.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: goliath
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 10
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead # Like 2 PKA shots, 1 crusher destabilised hits
+  - type: MeleeWeapon
+    range: 1.12
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+    angle: 0
+    attackRate: 0.40
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Blunt: 5
+        Slash: 3
+  - type: NPCUseActionOnTarget
+    actionId: ActionGoliathTentacle
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodMeatGoliath
+      amount: 2
+    - id: MaterialGoliathHide1
+      amount: 1
+  - type: ConditionalSpawner # spawn animation
+    prototypes:
+    - GoliathTentacle
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Dead
+  - type: ExplosionOnTrigger # small blast on death, the corpse stays
+    maxTileIntensity: 5
+    intensitySlope: 3
+    totalIntensity: 5
+    canCreateVacuum: false

@@ -1,0 +1,25 @@
+- type: entity
+  parent: FoodMealBase
+  id: FoodDadSoup
+  name: dad's soup
+  description: Hellish slop, better not sniff it.
+  components:
+  - type: Item
+    storedOffset: 3,-7
+  - type: FlavorProfile
+    flavors:
+    - tomato
+    - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/dadsoup.rsi
+    state: dadsoup
+  - type: Solution
+    solution:
+      maxVol: 45
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 30
+      - ReagentId: Vitamin
+        Quantity: 5
+      - ReagentId: CapsaicinOil
+        Quantity: 8

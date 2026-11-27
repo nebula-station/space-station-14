@@ -32,6 +32,7 @@
     - BaseStationAllEventsEligible
     - BaseStationNanotrasen
     - BaseStationDeliveries
+    - BaseStationGoal # Nebula edit
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform

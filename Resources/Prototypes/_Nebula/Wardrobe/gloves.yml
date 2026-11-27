@@ -49,3 +49,7 @@
     - ClothingHandsGlovesSecurityBlue
     - ClothingHandsGlovesCombat
     - ClothingHandsGlovesChronoLegioneer
+  - tier: 2
+    items:
+    - ClothingHandsMimeMittens
+    - ClothingHandsQMLongGloves

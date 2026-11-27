@@ -246,6 +246,7 @@
     #- ChemistryStatic
     #- SurgeryStatic
     dynamicPacks:
+    - BodyBagsDynamic # Nebula edit
     - AdvancedTools
     #- ScienceEquipment - Goobstation - Moved to Scifab
     #- ScienceExplosives - Goobstation - Moved to Scifab
@@ -258,6 +259,7 @@
     #- Chemistry - Goobstation
     - Janitor
     - Instruments
+    - ArcaneService # Nebula edit
     - Equipment # Goobstation note: handheld mass scanner is removed
     # Goobstation Packs
     # - ServiceWeapons
@@ -273,6 +275,10 @@
     - TraumaScienceClothing
     # </Trauma>
   - type: EmagLatheRecipes
+    # Nebula start
+    emagStaticPacks:
+    - BodyBagsSyndicateStatic
+    # Nebula end
     emagDynamicPacks:
     - SecurityAmmo
     - SecurityExplosives
@@ -342,6 +348,7 @@
     - CameraBoards
     #- MechBoards - Goobstation - split between departmental lathes
     - ShuttleBoards
+    - AILawboards # Nebula edit
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
@@ -646,6 +653,7 @@
     - CyberwareMedical
     - CyberwareCommon
     # Nebula end
+    - AbductorMedical # Nebula edit
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

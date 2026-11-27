@@ -6,6 +6,14 @@
   radioChannel: Supply
   acquisitionSlip: PaperAcquisitionSlipCargo
   approveAccess: Cargo # Trauma
+  # Nebula start
+  departmentDestinationName: cargo-account-cargo-destination
+  secureCratePrototype: CratePrivateCargoSecure
+  secureCrateOrderAccess:
+  - Cargo
+  - Salvage
+  - Quartermaster
+  # Nebula end
 
 - type: cargoAccount
   id: Engineering
@@ -15,6 +23,14 @@
   radioChannel: Engineering
   acquisitionSlip: PaperAcquisitionSlipEngineering
   approveAccess: ChiefEngineer # Trauma
+  # Nebula start
+  departmentDestinationName: cargo-account-engineering-destination
+  secureCratePrototype: CrateEngineeringSecure
+  secureCrateOrderAccess:
+  - Engineering
+  - Atmospherics
+  - ChiefEngineer
+  # Nebula end
 
 - type: cargoAccount
   id: Medical
@@ -24,6 +40,15 @@
   radioChannel: Medical
   acquisitionSlip: PaperAcquisitionSlipMedical
   approveAccess: ChiefMedicalOfficer # Trauma
+  # Nebula start
+  departmentDestinationName: cargo-account-medical-destination
+  secureCratePrototype: CrateMedicalSecure
+  secureCrateOrderAccess:
+  - Medical
+  - Chemistry
+  - Paramedic
+  - ChiefMedicalOfficer
+  # Nebula end
 
 - type: cargoAccount
   id: Science
@@ -33,6 +58,14 @@
   radioChannel: Science
   acquisitionSlip: PaperAcquisitionSlipScience
   approveAccess: ResearchDirector # Trauma
+  # Nebula start
+  departmentDestinationName: cargo-account-science-destination
+  secureCratePrototype: CrateScienceSecure
+  secureCrateOrderAccess:
+  - ResearchDirector
+  - Research
+  - Robotics
+  # Nebula end
 
 - type: cargoAccount
   id: Security
@@ -42,6 +75,16 @@
   radioChannel: Security
   acquisitionSlip: PaperAcquisitionSlipSecurity
   approveAccess: Armory # Trauma
+  # Nebula start
+  departmentDestinationName: cargo-account-security-destination
+  secureCratePrototype: CrateSecgear
+  secureCrateOrderAccess:
+  - Security
+  - Armory
+  - HeadOfSecurity
+  - Detective
+  - Brig
+  # Nebula end
 
 - type: cargoAccount
   id: Service
@@ -51,3 +94,16 @@
   radioChannel: Service
   acquisitionSlip: PaperAcquisitionSlipService
   approveAccess: HeadOfPersonnel # Trauma
+  # Nebula start
+  departmentDestinationName: cargo-account-service-destination
+  secureCratePrototype: CrateHydroSecure
+  secureCrateOrderAccess:
+  - Bar
+  - Kitchen
+  - Hydroponics
+  - Service
+  - Janitor
+  - Theatre
+  - Chapel
+  - Lawyer
+  # Nebula end

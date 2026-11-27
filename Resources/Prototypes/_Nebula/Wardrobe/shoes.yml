@@ -67,3 +67,9 @@
     items:
     - ClothingShoesBootsJump
     - ClothingShoesBootsMoon
+  - tier: 2
+    items:
+    - ClothingShoesJesters
+    - ClothingShoesMusicianBoots
+    - ClothingShoesTwilightSparkle
+    - ClothingShoesWorkerBoots

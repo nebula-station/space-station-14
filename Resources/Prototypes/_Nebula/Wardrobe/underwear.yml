@@ -1,0 +1,10 @@
+- type: nebulaWardrobeCategory
+  id: Underwear
+  name: nebula-wardrobe-category-underwear
+  order: 9
+  maxLimit: 2
+  sets:
+  - tier: 2
+    items:
+    - ClothingMimeStockings
+    - ClothingUnderwearJesterPants

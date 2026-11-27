@@ -1,0 +1,11 @@
+- type: reaction
+  id: Boyarsky
+  reactants:
+    Vodka:
+      amount: 3
+    Grenadine:
+      amount: 2
+    Hotsauce:
+      amount: 1
+  products:
+    Boyarsky: 6

@@ -23,6 +23,7 @@
     color: "#b211b2"
   - type: LitOnPowered
   - type: ResearchServer
+  - type: ResearchServerControlStatus # Nebula edit
   - type: TechnologyDatabase
     supportedDisciplines:
     - Industrial
@@ -30,6 +31,17 @@
     - Experimental
     - Robotics # Trauma
     - CivilianServices
+    # Nebula start
+    - Engineering
+    - Security
+    - Cargo
+    - Shaft
+    - Scientific
+    - ArcaneRobotics
+    - Medical
+    - Service
+    - Syndicate
+    # Nebula end
   - type: ApcPowerReceiver
     powerLoad: 200
   - type: ExtensionCableReceiver
@@ -72,6 +84,7 @@
     - Science
   - type: ResearchPointSource # Goobstation
     pointspersecond: 15
+    pointType: General # Nebula edit
     active: true
 
 - type: entity
@@ -90,6 +103,7 @@
   - type: ResearchClient
   - type: ResearchPointSource
     pointspersecond: 25
+    pointType: General # Nebula edit
     active: true
   - type: PointLight
     radius: 1.5

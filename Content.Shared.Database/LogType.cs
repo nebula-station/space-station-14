@@ -509,6 +509,13 @@ public enum LogType
     /// </summary>
     AntagObjective = 10004,
 
+    // Nebula start
+    /// <summary>
+    /// Goob - Paintings.
+    /// </summary>
+    Paint = 10006,
+    // Nebula end
+
     /// <summary>
     /// Trauma - Genetics related logs.
     /// </summary>

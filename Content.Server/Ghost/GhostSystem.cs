@@ -194,7 +194,7 @@ namespace Content.Server.Ghost
             }
 
             _eye.RefreshVisibilityMask(uid);
-            var time = _gameTiming.RealTime;
+            var time = _gameTiming.CurTime; // Nebula edit
             component.TimeOfDeath = time;
 
             Dirty(uid, component);

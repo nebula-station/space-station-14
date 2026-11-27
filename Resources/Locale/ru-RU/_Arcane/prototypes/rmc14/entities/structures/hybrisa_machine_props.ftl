@@ -1,0 +1,12 @@
+ent-RMCMachinePropBig1 = оборудование
+    .desc = { "" }
+ent-RMCMachinePropBig10 = оборудование
+    .desc = { "" }
+ent-RMCMachinePropBig11 = оборудование
+    .desc = { "" }
+ent-RMCMachinePropBig6 = оборудование
+    .desc = { "" }
+ent-RMCMachinePropBig7 = оборудование
+    .desc = { "" }
+ent-RMCMachinePropSmallVent2 = настенная вентиляция
+    .desc = { "" }

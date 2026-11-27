@@ -117,6 +117,10 @@
   - type: FaxMachine
     name: "Центральное Командование" # RU-Localization
     notifyAdmins: true
+  # Nebula start
+  - type: StationGoalReceiver
+    allStations: true
+  # Nebula end
 
 - type: entity
   parent: FaxMachineBase
@@ -147,3 +151,4 @@
       receiveNukeCodes: true
     - type: StealTarget
       stealGroup: FaxMachineCaptain
+    - type: StationGoalReceiver # Nebula edit

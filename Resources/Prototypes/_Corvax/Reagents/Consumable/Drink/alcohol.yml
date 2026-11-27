@@ -1,0 +1,22 @@
+- type: reagent
+  id: Boyarsky
+  name: reagent-name-boyarsky
+  parent: BaseAlcohol
+  desc: reagent-desc-boyarsky
+  physicalDesc: reagent-physical-desc-bubbly
+  flavor: alcohol
+  color: "#ea394a"
+  metamorphicSprite:
+    sprite: _Corvax/Objects/Consumable/Drinks/boyarsky.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Digestion:
+      metabolites:
+        Ethanol: 0.1
+      effects:
+      - !type:Satiate
+        satiationType: Thirst
+        factor: 2

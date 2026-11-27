@@ -1,0 +1,29 @@
+- type: entity
+  parent: TimerGrenadeBase
+  id: ConfettiGrenade
+  name: confetti grenade
+  description: Grenade that creates a small but devastating confetti explosion.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Objects/Weapons/Grenades/confetti.rsi
+  - type: TimerTrigger
+    delay: 3
+    beepSound:
+      path: /Audio/Effects/beep1.ogg
+      params:
+        volume: 5
+    initialBeepDelay: 0
+    beepInterval: 2 # 2 beeps total (at 0 and 2)
+  - type: DecalGrenade
+    keysIn:
+    - timer
+    decalPrototypes:
+    - Confetti1
+    - Confetti2
+    - Confetti3
+    - Confetti4
+    decalCount: 25
+    decalRadius: 3
+  - type: DeleteOnTrigger
+    keysIn:
+    - timer

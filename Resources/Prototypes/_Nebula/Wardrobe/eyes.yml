@@ -64,3 +64,6 @@
     removeComponents: [ThermalVision]
     items:
     - ClothingEyesGlassesSecurityAdvanced
+  - tier: 2
+    items:
+    - ClothingEyesBookWorm

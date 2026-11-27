@@ -7,6 +7,7 @@ using Content.Shared.Roles;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Enums;
 
 namespace Content.Server.GameTicking.Commands
 {
@@ -47,6 +48,10 @@ namespace Content.Server.GameTicking.Commands
                 return;
             }
 
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                return;
+            // Nebula end
             var ticker = _entManager.System<ServerGameTicker>();
             var stationJobs = _entManager.System<ServerStationJobsSystem>();
 

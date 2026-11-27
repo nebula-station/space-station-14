@@ -1,0 +1,18 @@
+ghost-respawn-max-players = Функция недоступна, игроков на сервере должно быть меньше { $players }.
+ghost-respawn-window-rules-footer = Пользуясь этой функцией, вы [color=#ff7700]соглашаетесь[/color] [color=#ff0000]не переносить[/color] знания своего прошлого персонажа на нового. За нарушение этого правила возможен [color=#ff0000]бан[/color].
+ghost-respawn-same-character-slightly-changed-name = Вы просто поменяли несколько символов в имени. Вы на приколе?
+ghost-respawn-same-character = Нельзя заходить в раунд за того же персонажа. Поменяйте его в настройках персонажей.
+ghost-respawn-log-character-almost-same = Игрок { $player } { $try ->
+    [true] зашёл
+    *[false] попытался зайти
+} в раунд после возвращения в лобби с похожим именем. Прошлое имя: { $oldName }, текущее: { $newName }.
+ghost-respawn-log-return-to-lobby = { $userName } вернулся в лобби.
+ghost-respawn-command-no-entity = Эту команду может использовать только игрок с привязанной сущностью.
+ghost-respawn-time-left = До возможности вернуться в раунд: { $time }
+
+ghost-gui-return-to-round-ready-button = Вернуться в раунд
+ghost-gui-return-to-round-button = До возвращения: { $time }
+ghost-gui-return-to-round-button-tooltip = Позволяет вернуться в раунд, посредством отправления в лобби.
+
+cmd-returntoround-desc = Возвращает призрака в лобби, когда истёк таймер возвращения в раунд.
+cmd-returntoround-help = Использование: returntoround

@@ -1,0 +1,9 @@
+ent-ClothingOuterHardsuitInteQElite = элитный скафандр Интек
+    .desc = { ent-ClothingOuterHardsuitInteQ.desc }
+ent-ClothingOuterHardsuitInteQ = скафандр Интек
+    .desc = Модернизированная версия боевого скафандра Синдиката, отличающаяся повышенной огнестойкостью, устойчивостью к давлению и превосходной броней.
+ent-ClothingOuterHardsuitSyndicateInteQ = скафандр Интек
+    .desc = { ent-ClothingOuterHardsuitInteQ.desc }
+ent-ClothingOuterHardsuitCybersunDreadnoughtexperimental = Экспериментальный дредноут скафандр Синдиката
+    .suffix = Исцеляющий
+    .desc = В этом экспериментальном скафандре используются наниты для непрерывной регенерации тканей. ПРЕДУПРЕЖДЕНИЕ! Побочные эффекты нанитов необратимы, продолжительность вашей жизни сокращается до одного года.

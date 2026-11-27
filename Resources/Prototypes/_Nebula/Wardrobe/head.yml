@@ -117,3 +117,18 @@
     - ClothingHeadHatTapewizardReal
     - ClothingHeadHatCrimsonReal
     - ClothingHeadHatBeretSergeant
+  - tier: 2
+    items:
+    - ClothingHatBotanist
+    - ClothingHatCamouflage
+    - ClothingHatClownCilinder
+    - ClothingHatCow
+    - ClothingHatFishCookBandana
+    - ClothingHatCookHigh
+    - ClothingHatCookInclined
+    - ClothingHatCookRed
+    - ClothingHatJester
+  - tier: 2
+    removeComponents: [Armor]
+    items:
+    - ClothingHatNTRBlackBeret

@@ -82,6 +82,7 @@ namespace Content.Client.Cargo.BUI
                 _orderMenu.Requester.Text = orderRequester;
                 _orderMenu.Reason.Text = "";
                 _orderMenu.Amount.Value = 1;
+                SetupArcaneOrderMenu(_orderMenu, localPlayer); // Nebula edit
 
                 _orderMenu.OpenCentered();
                 _orderMenu.SetPositionLast();
@@ -173,7 +174,14 @@ namespace Content.Client.Cargo.BUI
                 _orderMenu?.Requester.Text ?? "",
                 _orderMenu?.Reason.Text ?? "",
                 _product?.ID ?? "",
-                orderAmt));
+                orderAmt)
+            {
+                // Nebula start
+                DeliveryDestination = _orderMenu?.DeliveryDestination.Text,
+                SecuredDelivery = _orderMenu?.SecureDelivery.Pressed ?? false,
+                PayPrivately = _orderMenu?.PayPrivately.Pressed ?? false,
+                // Nebula end
+            });
 
             return true;
         }

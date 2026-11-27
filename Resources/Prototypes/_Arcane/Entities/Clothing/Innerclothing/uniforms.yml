@@ -43,3 +43,243 @@
     sprite: _Arcane/Clothing/Innerclothing/USSP/investigator.rsi
   - type: Clothing
     sprite: _Arcane/Clothing/Innerclothing/USSP/investigator.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformNTRBlack
+  categories: [ HideSpawnMenu ]
+  name: NTR's black uniform
+  description: An indicator of skill and sense of style.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/NTR_black.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/NTR_black.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformNTRBlackSkirt
+  categories: [ HideSpawnMenu ]
+  name: NTR's black uniform with skirt
+  description: An indicator of skill and sense of style.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/NTR_black_skirt.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/NTR_black_skirt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformNTRWhiteSkirt
+  categories: [ HideSpawnMenu ]
+  name: NTR's white uniform with skirt
+  description: An indicator of skill and sense of style.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/NTR_white_skirt.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/NTR_white_skirt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformNTRWhite
+  categories: [ HideSpawnMenu ]
+  name: NTR's white uniform
+  description: An indicator of skill and sense of style.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/NTR_white.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/NTR_white.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformTwilightSparkle
+  categories: [ HideSpawnMenu ]
+  name: bookworm's clothes
+  description: For those who love to read and dress brightly.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/twilight_sparkle.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/twilight_sparkle.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformBotanist
+  categories: [ HideSpawnMenu ]
+  name: botanist uniform
+  description: Special clothes for working with plants.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/botanist.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/botanist.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformBotanistWhithStraps
+  categories: [ HideSpawnMenu ]
+  name: botanist jumpsuit with straps
+  description: Special clothes for working with plants.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/botanist_straps.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/botanist_straps.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformCamouflage
+  categories: [ HideSpawnMenu ]
+  name: camouflage jumpsuit
+  description: I am a bush.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/camouflage.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/camouflage.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformChiefCook
+  categories: [ HideSpawnMenu ]
+  name: chief's uniform
+  description: FOOLS!!!
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/chief_cook.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/chief_cook.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformFreeClothes
+  categories: [ HideSpawnMenu ]
+  name: free clothes
+  description: Cheep and angrily.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/cleaner.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/cleaner.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformCook
+  categories: [ HideSpawnMenu ]
+  name: cook's uniform
+  description: French restaurant uniform.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/cook.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/cook.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformDancer
+  categories: [ HideSpawnMenu ]
+  name: dancer's dress
+  description: Dress for bright perfomances.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/dancer.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/dancer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformFeminine
+  categories: [ HideSpawnMenu ]
+  name: feminine uniform
+  description: Allez venez, Milord.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/feminine_form.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/feminine_form.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformFeminineEmpty
+  categories: [ HideSpawnMenu ]
+  name: empty feminine uniform
+  description: Allez venez, Milord.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/feminine_form_empty.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/feminine_form_empty.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJesterCostume
+  categories: [ HideSpawnMenu ]
+  name: jester's costume
+  description: Old-fashioned clown costume.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/jester_costume.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/jester_costume.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformPerfomanceDress
+  categories: [ HideSpawnMenu ]
+  name: perfomance dress
+  description: Chick and shine.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/perfomance_dress.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/perfomance_dress.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformComfortableUniform
+  categories: [ HideSpawnMenu ]
+  name: comfortable uniform
+  description: Comfortable uniform.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/radio_host.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/radio_host.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformServiceShirt
+  categories: [ HideSpawnMenu ]
+  name: shirt
+  description: White shirt.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/service.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/service.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformServiceShirtSkirt
+  categories: [ HideSpawnMenu ]
+  name: shirt with skirt
+  description: White shirt with black skirt.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/service_skirt.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/service_skirt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSterileUniform
+  categories: [ HideSpawnMenu ]
+  name: sterile uniform
+  description: Veterinarian clothing.
+  components:
+  - type: Sprite
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/sterile.rsi
+  - type: Clothing
+    sprite: _Arcane/Clothing/Innerclothing/Sponsor/sterile.rsi

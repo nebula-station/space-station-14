@@ -250,7 +250,7 @@ GunSafeAdjutantShotgun: null
 GunSafeEnergyGunMini: null
 GunSafeVulcanRifle: null
 HatSpawner: null
-KvassTankFull: null
+# KvassTankFull: null # Nebula edit
 LockerForensicMantisFilled: null
 LunchboxSecurityFilledRandom: null
 MagazineBoxSpecialPractice: null
@@ -1354,7 +1354,9 @@ PlushieLizardJobNanotrasenRepresentative: null
 PlushieLizardJobShaftMiner: null
 PlushieLizardJobVirologist: null
 PollBooth: null
-PowerCellBluespaceReactor: PowerCellMicroreactor
+# PowerCellBluespaceReactor: PowerCellMicroreactor # Nebula edit
+PowerCellMicroreactor: PowerCellBluespaceReactor # Nebula edit
+PowerCellMicroreactorPrinted: PowerCellBluespaceReactorPrinted # Nebula edit
 ResearchDestructiveAnalyzer: null
 ResearchExperimentalDestructiveScanner: null
 RightFootSkeleton: OrganSkeletonPersonFootRight
@@ -1368,4 +1370,21 @@ WeaponWaterPistolFilledFire: null
 DormNotifierMarker: null
 ClothingBackpackSatchelDrone: ClothingBackpackSatchel
 GunSafePulseCarbine: null
+# Nebula end
+
+# Nebula start
+InteQLaserShield: EnergyShieldInteQ
+DefaultStationBeaconInteQSizo37: DefaultStationBeaconInteQSizo73
+MagazineBoxLight57x28InteQ: MagazineBoxPistolInteQ
+MagazineBoxLight762x39InteQ: MagazineBoxLightRifleInteQ
+AirlockHatchBasik: AirlockHatchInteQVanguardLocked
+BackmenVendingMachineCigs: RandomVending
+BackmenVendingMachineCola: RandomVending
+BackmenVendingMachineDonut: RandomVending
+BackmenVendingMachineShamblersJuice: RandomVending
+BackmenVendingMachineSnackGreen: RandomVending
+BackmenVendingMachineSovietSoda: RandomVending
+FloorHardCatwalkDarkIron: Catwalk
+PrinterDoc: null
+AntiPsychicKnife: null
 # Nebula end

@@ -193,6 +193,11 @@
     - state: icon
     - state: icon-unlit
       shader: unshaded
+  # Nebula start
+  - type: Construction
+    graph: BagOfHoldingSatchel
+    node: bag_of_holding
+  # Nebula end
 
 - type: entity
   parent: ClothingBackpackSatchelHolding

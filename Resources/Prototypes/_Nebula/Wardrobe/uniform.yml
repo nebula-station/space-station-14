@@ -294,3 +294,25 @@
     removeComponents: [IgniteFromGasImmunity, SelfExtinguisher]
     items:
     - ClothingUniformEnvirosuitCaptain
+  - tier: 2
+    items:
+    - ClothingUniformNTRBlack
+    - ClothingUniformNTRBlackSkirt
+    - ClothingUniformNTRWhite
+    - ClothingUniformNTRWhiteSkirt
+    - ClothingUniformTwilightSparkle
+    - ClothingUniformBotanist
+    - ClothingUniformBotanistWhithStraps
+    - ClothingUniformCamouflage
+    - ClothingUniformChiefCook
+    - ClothingUniformFreeClothes
+    - ClothingUniformCook
+    - ClothingUniformDancer
+    - ClothingUniformFeminine
+    - ClothingUniformFeminineEmpty
+    - ClothingUniformJesterCostume
+    - ClothingUniformPerfomanceDress
+    - ClothingUniformComfortableUniform
+    - ClothingUniformServiceShirt
+    - ClothingUniformServiceShirtSkirt
+    - ClothingUniformSterileUniform

@@ -35,7 +35,7 @@ public abstract partial class SharedGhostSystem : EntitySystem
 
     private void OnGhostExamine(EntityUid uid, GhostComponent component, ExaminedEvent args)
     {
-        var timeSinceDeath = _gameTiming.RealTime.Subtract(component.TimeOfDeath);
+        var timeSinceDeath = _gameTiming.CurTime.Subtract(component.TimeOfDeath); // Nebula edit
         var deathTimeInfo = timeSinceDeath.Minutes > 0
             ? Loc.GetString("comp-ghost-examine-time-minutes", ("minutes", timeSinceDeath.Minutes))
             : Loc.GetString("comp-ghost-examine-time-seconds", ("seconds", timeSinceDeath.Seconds));

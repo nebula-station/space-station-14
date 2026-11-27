@@ -10,6 +10,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Content.Shared.Power;
+using System.Linq;
 
 namespace Content.Server.Anomaly;
 
@@ -173,6 +174,13 @@ public sealed partial class AnomalySystem
         }
 
         SpawnOnRandomGridLocation(grid, component.SpawnerPrototype);
+
+        // Nebula start
+        var fallbackServer = _research.GetServers(grid).OrderBy(server => server.Comp.Id).FirstOrDefault();
+        if (fallbackServer != default && fallbackServer.Owner != EntityUid.Invalid && Exists(fallbackServer.Owner))
+            _research.LogNetworkEvent(fallbackServer.Owner, "anomaly", Loc.GetString("research-netlog-anomaly-generator-spawned", ("generator", MetaData(uid).EntityName)));
+        // Nebula end
+
         RemComp<GeneratingAnomalyGeneratorComponent>(uid);
         Appearance.SetData(uid, AnomalyGeneratorVisuals.Generating, false);
         Audio.PlayPvs(component.GeneratingFinishedSound, uid);

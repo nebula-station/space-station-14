@@ -125,6 +125,7 @@
   cost: 5000
   recipeUnlocks:
   - ClothingBackpackElectropack
+  - ClothingAggressionInhibitor # Nebula edit
 
 # Tier 2
 

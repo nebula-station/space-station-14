@@ -1,0 +1,19 @@
+- type: entity
+  parent: PokerChip25
+  id: PokerChip25Five
+  suffix: Value 25, 5
+  components:
+  - type: Sprite
+    state: chip_25-5
+  - type: Stack
+    count: 5
+
+- type: entity
+  parent: PokerChip100
+  id: PokerChip100Five
+  suffix: Value 100, 5
+  components:
+  - type: Sprite
+    state: chip_100-5
+  - type: Stack
+    count: 5

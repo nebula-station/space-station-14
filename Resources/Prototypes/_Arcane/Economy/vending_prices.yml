@@ -1,0 +1,298 @@
+- type: vendingPrices
+  id: AtmosDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Engineering
+
+- type: vendingPrices
+  id: AutoDrobeInventory
+  defaultPrice: 40
+  extraPrice: 100
+
+- type: vendingPrices
+  id: BarDrobeInventory
+  discountDepartment: Service
+
+- type: vendingPrices
+  id: BoozeOMatInventory
+  defaultPrice: 55
+  extraPrice: 155
+  discountDepartment: Service
+  prices:
+    DrinkGlass: 25
+    DrinkShotGlass: 20
+    DrinkGlassCoupeShaped: 25
+    DrinkFlaskBar: 200
+    DrinkVacuumFlask: 200
+    ChemistryBottleEthanol: 100
+    DrinkJuiceLemonCarton: 50
+    DrinkJuiceLimeCarton: 50
+    DrinkJuiceOrangeCarton: 50
+    DrinkMilkCarton: 50
+    DrinkCreamCarton: 50
+    DrinkJuiceTomatoCarton: 50
+    DrinkSodaWaterCan: 45
+    DrinkSolDryCan: 45
+    DrinkColaBottleFull: 45
+    DrinkBeerBottleFull: 45
+    DrinkBeerCan: 45
+
+- type: vendingPrices
+  id: CaptainDrobeInventory
+  defaultPrice: 100
+  extraPrice: 200
+
+- type: vendingPrices
+  id: CargoDrobeInventory
+  discountDepartment: Cargo
+
+- type: vendingPrices
+  id: CentDrobeInventory
+  defaultPrice: 150
+  extraPrice: 300
+
+- type: vendingPrices
+  id: ChefDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Service
+
+- type: vendingPrices
+  id: ChefvendInventory
+  discountDepartment: Service
+
+- type: vendingPrices
+  id: ChemDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Medical
+
+- type: vendingPrices
+  id: ChemVendInventory
+  discountDepartment: Medical
+
+- type: vendingPrices
+  id: CigaretteMachineInventory
+  defaultPrice: 50
+  extraPrice: 150
+  prices:
+    Matchbox: 20
+    CheapLighter: 55
+    PackPaperRollingFilters: 25
+    FlippoLighter: 155
+
+- type: vendingPrices
+  id: ClothesMateInventory
+  defaultPrice: 35
+  extraPrice: 100
+
+- type: vendingPrices
+  id: CuraDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Service
+
+- type: vendingPrices
+  id: DetDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Security
+
+- type: vendingPrices
+  id: DinnerwareInventory
+  defaultPrice: 40
+  extraPrice: 75
+  discountDepartment: Service
+  prices:
+    RollingPin: 75
+    Spoon: 50
+    Fork: 25
+    FoodBowlBig: 30
+    FoodPlate: 40
+    FoodPlateSmall: 40
+    FoodPlateTin: 40
+    FoodPlateMuffinTin: 40
+    DrinkGlass: 25
+
+- type: vendingPrices
+  id: DrGibbInventory
+  defaultPrice: 45
+  extraPrice: 95
+
+- type: vendingPrices
+  id: EngiDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Engineering
+
+- type: vendingPrices
+  id: EngiVendInventory
+  defaultPrice: 50
+  extraPrice: 150
+  discountDepartment: Engineering
+
+- type: vendingPrices
+  id: GeneDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Medical
+
+- type: vendingPrices
+  id: GetmoreChocolateCorpInventory
+  defaultPrice: 30
+  prices:
+    FoodSnackRaisins: 35
+    FoodSnackSemki: 10
+    FoodSnackSwirlLollipop: 50
+
+- type: vendingPrices
+  id: HotDrinksMachineInventory
+  extraPrice: 60
+
+- type: vendingPrices
+  id: HyDrobeInventory
+  discountDepartment: Service
+
+- type: vendingPrices
+  id: JaniDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Service
+
+- type: vendingPrices
+  id: LawDrobeInventory
+  discountDepartment: Security
+
+- type: vendingPrices
+  id: MailDrobeInventory
+  discountDepartment: Cargo
+
+- type: vendingPrices
+  id: MediDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Medical
+
+- type: vendingPrices
+  id: NanoMedInventory
+  discountDepartment: Medical
+
+- type: vendingPrices
+  id: NanoMedPlusInventory
+  discountDepartment: Medical
+  prices:
+    HandheldHealthAnalyzer: 100
+    Gauze: 100
+    Tourniquet: 100
+
+- type: vendingPrices
+  id: NutriMaxInventory
+  defaultPrice: 40
+  extraPrice: 100
+  discountDepartment: Service
+  prices:
+    Dropper: 25
+    Syringe: 25
+
+- type: vendingPrices
+  id: PTechInventory
+  defaultPrice: 100
+  extraPrice: 150
+
+- type: vendingPrices
+  id: PietyVendInventory
+  discountDepartment: Service
+
+- type: vendingPrices
+  id: PwrGameInventory
+  defaultPrice: 45
+  extraPrice: 95
+
+- type: vendingPrices
+  id: RoboDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Science
+
+- type: vendingPrices
+  id: RoboticsInventory
+  defaultPrice: 20
+  discountDepartment: Science
+  prices:
+    CableApcStack: 5
+
+- type: vendingPrices
+  id: RobustSoftdrinksInventory
+  defaultPrice: 45
+  extraPrice: 95
+
+- type: vendingPrices
+  id: SciDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Science
+
+- type: vendingPrices
+  id: SecDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Security
+
+- type: vendingPrices
+  id: SecTechInventory
+  defaultPrice: 50
+  extraPrice: 150
+  discountDepartment: Security
+  prices:
+    Handcuffs: 35
+    Zipties: 35
+    BolaEnergy: 35
+    ClothingBeltSecurityWebbing: 300
+
+- type: vendingPrices
+  id: ShamblersJuiceInventory
+  defaultPrice: 45
+  extraPrice: 95
+
+- type: vendingPrices
+  id: SodaInventory
+  defaultPrice: 45
+  extraPrice: 95
+
+- type: vendingPrices
+  id: SpaceUpInventory
+  defaultPrice: 45
+  extraPrice: 95
+
+- type: vendingPrices
+  id: StarkistInventory
+  defaultPrice: 45
+  extraPrice: 95
+
+- type: vendingPrices
+  id: SyndieDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+
+- type: vendingPrices
+  id: VendomatInventory
+  defaultPrice: 35
+
+- type: vendingPrices
+  id: ViroDrobeInventory
+  defaultPrice: 50
+  extraPrice: 100
+  discountDepartment: Medical
+
+- type: vendingPrices
+  id: YouToolInventory
+  defaultPrice: 50
+  extraPrice: 150
+  discountDepartment: Engineering
+  prices:
+    CableApcStack: 20
+    GasAnalyzer: 25
+    trayScanner: 20
+    ClothingBeltUtility: 100
+    Multitool: 150
+    ClothingHandsGlovesColorYellow: 600

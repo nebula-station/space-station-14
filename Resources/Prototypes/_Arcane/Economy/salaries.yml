@@ -1,0 +1,295 @@
+- type: jobSalary
+  id: AtmosphericTechnician
+  salary: 85
+  department: Engineering
+
+- type: jobSalary
+  id: Bartender
+  salary: 55
+  department: Service
+
+- type: jobSalary
+  id: Botanist
+  salary: 55
+  department: Service
+
+- type: jobSalary
+  id: Brigmedic
+  salary: 80
+  department: Security
+
+- type: jobSalary
+  id: CBURN
+  salary: 180
+
+- type: jobSalary
+  id: Captain
+  salary: 140
+
+- type: jobSalary
+  id: CargoTechnician
+  salary: 70
+  department: Cargo
+
+- type: jobSalary
+  id: CentralCommandOfficial
+  salary: 300
+
+- type: jobSalary
+  id: Chaplain
+  salary: 55
+  department: Service
+
+- type: jobSalary
+  id: Chef
+  salary: 55
+  department: Service
+
+- type: jobSalary
+  id: Chemist
+  salary: 85
+  department: Medical
+
+- type: jobSalary
+  id: ChiefEngineer
+  salary: 120
+  department: Engineering
+
+- type: jobSalary
+  id: ChiefMedicalOfficer
+  salary: 120
+  department: Medical
+
+- type: jobSalary
+  id: Clown
+  salary: 30
+  department: Service
+
+- type: jobSalary
+  id: CommandMaid
+  salary: 80
+
+- type: jobSalary
+  id: Conquest
+  salary: 200
+
+- type: jobSalary
+  id: DeathSquad
+  salary: 300
+
+- type: jobSalary
+  id: Detective
+  salary: 80
+  department: Security
+
+- type: jobSalary
+  id: Diplomat
+  salary: 100
+
+- type: jobSalary
+  id: ERTChaplain
+  salary: 180
+
+- type: jobSalary
+  id: ERTEngineer
+  salary: 180
+
+- type: jobSalary
+  id: ERTInteQVanguard
+  salary: 200
+
+- type: jobSalary
+  id: ERTInteQVanguardLeader
+  salary: 300
+
+- type: jobSalary
+  id: ERTJanitor
+  salary: 180
+
+- type: jobSalary
+  id: ERTLeader
+  salary: 200
+
+- type: jobSalary
+  id: ERTMedical
+  salary: 180
+
+- type: jobSalary
+  id: ERTSecurity
+  salary: 180
+
+- type: jobSalary
+  id: HeadOfPersonnel
+  salary: 110
+
+- type: jobSalary
+  id: HeadOfSecurity
+  salary: 120
+  department: Security
+
+- type: jobSalary
+  id: Inspector
+  salary: 120
+
+- type: jobSalary
+  id: InteQVanguard
+  salary: 150
+
+- type: jobSalary
+  id: InteQVanguardLeader
+  salary: 200
+
+- type: jobSalary
+  id: Janitor
+  salary: 45
+  department: Service
+
+- type: jobSalary
+  id: Lawyer
+  salary: 50
+  department: Service
+
+- type: jobSalary
+  id: Librarian
+  salary: 45
+  department: Service
+
+- type: jobSalary
+  id: MedicalDoctor
+  salary: 80
+  department: Medical
+
+- type: jobSalary
+  id: MedicalIntern
+  salary: 35
+  department: Medical
+
+- type: jobSalary
+  id: Mime
+  salary: 30
+  department: Service
+
+- type: jobSalary
+  id: Musician
+  salary: 35
+  department: Service
+
+- type: jobSalary
+  id: NanotrasenRepresentative
+  salary: 120
+
+- type: jobSalary
+  id: NavyCaptain
+  salary: 200
+
+- type: jobSalary
+  id: NavyOfficer
+  salary: 160
+
+- type: jobSalary
+  id: NavyOfficerUndercover
+  salary: 160
+
+- type: jobSalary
+  id: Paramedic
+  salary: 75
+  department: Medical
+
+- type: jobSalary
+  id: PartyMaker
+  salary: 40
+  department: Service
+
+- type: jobSalary
+  id: Passenger
+  salary: 35
+  department: Service
+
+- type: jobSalary
+  id: Psychologist
+  salary: 60
+  department: Medical
+
+- type: jobSalary
+  id: Quartermaster
+  salary: 100
+  department: Cargo
+
+- type: jobSalary
+  id: RadioHost
+  salary: 40
+  department: Service
+
+- type: jobSalary
+  id: Reporter
+  salary: 40
+  department: Service
+
+- type: jobSalary
+  id: ResearchAssistant
+  salary: 40
+  department: Science
+
+- type: jobSalary
+  id: ResearchDirector
+  salary: 120
+  department: Science
+
+- type: jobSalary
+  id: Roboticist
+  salary: 80
+  department: Science
+
+- type: jobSalary
+  id: SalvageSpecialist
+  salary: 85
+  department: Cargo
+
+- type: jobSalary
+  id: Scientist
+  salary: 80
+  department: Science
+
+- type: jobSalary
+  id: SecurityCadet
+  salary: 45
+  department: Security
+
+- type: jobSalary
+  id: SecurityClown
+  salary: 45
+  department: Security
+
+- type: jobSalary
+  id: SecurityOfficer
+  salary: 85
+  department: Security
+
+- type: jobSalary
+  id: ServiceWorker
+  salary: 45
+  department: Service
+
+- type: jobSalary
+  id: StationEngineer
+  salary: 80
+  department: Engineering
+
+- type: jobSalary
+  id: TechnicalAssistant
+  salary: 35
+  department: Engineering
+
+- type: jobSalary
+  id: Virologist
+  salary: 85
+  department: Medical
+
+- type: jobSalary
+  id: Visitor
+  salary: 25
+
+- type: jobSalary
+  id: Warden
+  salary: 90
+  department: Security
