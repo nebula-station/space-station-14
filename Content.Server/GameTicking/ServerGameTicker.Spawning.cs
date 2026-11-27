@@ -26,6 +26,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Robust.Shared.Enums;
 
 namespace Content.Server.GameTicking
 {
@@ -138,6 +139,10 @@ namespace Content.Server.GameTicking
             bool lateJoin = true,
             bool silent = false)
         {
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                return;
+            // Nebula end
             var character = GetPlayerProfile(player);
 
             var jobBans = _banManager.GetJobBans(player.UserId);
@@ -163,6 +168,10 @@ namespace Content.Server.GameTicking
             bool lateJoin = true,
             bool silent = false)
         {
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                return;
+            // Nebula end
             // Can't spawn players with a dummy ticker!
             if (DummyTicker)
                 return;
@@ -371,6 +380,10 @@ namespace Content.Server.GameTicking
 
         public void Respawn(ICommonSession player)
         {
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                return;
+            // Nebula end
             Mind.WipeMind(player);
             Admin.Add(LogType.Respawn, LogImpact.Medium, $"Player {player} was respawned.");
 
@@ -383,6 +396,10 @@ namespace Content.Server.GameTicking
         /// <inheritdoc/>
         public override void MakeJoinGame(ICommonSession player, EntityUid station, string? jobId = null, bool silent = false)
         {
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                return;
+            // Nebula end
             if (!_playerGameStatuses.ContainsKey(player.UserId))
                 return;
 
@@ -397,6 +414,10 @@ namespace Content.Server.GameTicking
         /// </summary>
         public void JoinAsObserver(ICommonSession player)
         {
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                return;
+            // Nebula end
             // Can't spawn players with a dummy ticker!
             if (DummyTicker)
                 return;
@@ -411,6 +432,10 @@ namespace Content.Server.GameTicking
         /// </summary>
         public void SpawnObserver(ICommonSession player)
         {
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                return;
+            // Nebula end
             if (DummyTicker)
                 return;
 

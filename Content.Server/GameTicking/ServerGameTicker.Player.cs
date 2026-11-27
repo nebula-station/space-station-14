@@ -12,6 +12,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Server.GameTicking.Events;
 
 namespace Content.Server.GameTicking
 {
@@ -53,9 +54,13 @@ namespace Content.Server.GameTicking
                         session.Data.ContentDataUncast = data;
                     }
 
-                    // Make the player actually join the game.
-                    // timer time must be > tick length
-                    Timer.Spawn(0, () => _playerManager.JoinGame(args.Session));
+                    // Nebula start
+                    var joining = new PlayerJoinRequestedEvent(session);
+                    RaiseLocalEvent(ref joining);
+                    _userDb.ClientConnected(session);
+                    if (!joining.Deferred)
+                        Timer.Spawn(0, () => _playerManager.JoinGame(args.Session));
+                    // Nebula end
 
                     var record = await _db.GetPlayerRecordByUserId(args.Session.UserId);
                     var firstConnection = record != null &&
@@ -72,18 +77,19 @@ namespace Content.Server.GameTicking
                             Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
                             audioParams: new AudioParams { Volume = -5f });
 
-                    if (LobbyEnabled && _roundStartCountdownHasNotStartedYetDueToNoPlayers)
-                    {
-                        _roundStartCountdownHasNotStartedYetDueToNoPlayers = false;
-                        _roundStartTime = Timing.CurTime + LobbyDuration;
-                    }
 
                     break;
                 }
 
                 case SessionStatus.InGame:
                 {
-                    _userDb.ClientConnected(session);
+                    // Nebula start
+                    if (LobbyEnabled && _roundStartCountdownHasNotStartedYetDueToNoPlayers)
+                    {
+                        _roundStartCountdownHasNotStartedYetDueToNoPlayers = false;
+                        _roundStartTime = Timing.CurTime + LobbyDuration;
+                    }
+                    // Nebula end
                     if (mind == null)
                     {
                         if (LobbyEnabled)
@@ -190,6 +196,10 @@ namespace Content.Server.GameTicking
 
         public override void PlayerJoinGame(ICommonSession session, bool silent = false)
         {
+            // Nebula start
+            if (session.Status != SessionStatus.InGame)
+                return;
+            // Nebula end
             if (!silent)
                 _chatManager.DispatchServerMessage(session, Loc.GetString("game-ticker-player-join-game-message"));
 

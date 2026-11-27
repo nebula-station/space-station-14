@@ -8,6 +8,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using System.Text;
 using Content.Shared.Station.Components;
+using Robust.Shared.Enums;
 
 namespace Content.Server.GameTicking;
 
@@ -58,7 +59,7 @@ public sealed partial class ServerGameTicker
             return string.Empty;
         }
 
-        var playerCount = $"{_playerManager.PlayerCount}";
+        var playerCount = $"{GetAdmittedPlayerCount()}"; // Nebula edit
         var readyCount = CountLobbyPlayers().Ready; // Nebula edit
 
         var stationNames = new StringBuilder();
@@ -116,6 +117,10 @@ public sealed partial class ServerGameTicker
     {
         foreach (var player in _playerManager.Sessions)
         {
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                continue;
+            // Nebula end
             RaiseNetworkEvent(GetStatusMsg(player), player.Channel);
         }
     }
@@ -169,15 +174,21 @@ public sealed partial class ServerGameTicker
         var status = ready ? PlayerGameStatus.ReadyToPlay : PlayerGameStatus.NotReadyToPlay;
         foreach (var playerUserId in _playerGameStatuses.Keys)
         {
-            _playerGameStatuses[playerUserId] = status;
-            if (!_playerManager.TryGetSessionById(playerUserId, out var playerSession))
+            // Nebula start
+            if (!_playerManager.TryGetSessionById(playerUserId, out var playerSession) || playerSession.Status != SessionStatus.InGame)
                 continue;
+            _playerGameStatuses[playerUserId] = status;
+            // Nebula end
             RaiseNetworkEvent(GetStatusMsg(playerSession), playerSession.Channel);
         }
     }
 
     public void ToggleReady(ICommonSession player, bool ready)
     {
+        // Nebula start
+        if (player.Status != SessionStatus.InGame)
+            return;
+        // Nebula end
         if (!_playerGameStatuses.ContainsKey(player.UserId))
             return;
 

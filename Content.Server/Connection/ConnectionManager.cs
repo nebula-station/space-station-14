@@ -2,6 +2,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using Content.Goobstation.Common.CCVar;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection.IPIntel;
@@ -29,6 +30,11 @@ namespace Content.Server.Connection
     {
         void Initialize();
         void PostInit();
+
+        // Nebula start
+        /// <summary>Checks existing Trauma soft-cap exemptions. Other connection checks still apply.</summary>
+        Task<bool> HasPrivilegedJoin(NetUserId user);
+        // Nebula end
 
         /// <summary>
         /// Temporarily allow a user to bypass regular connection requirements.
@@ -298,13 +304,17 @@ namespace Content.Server.Connection
                             status == PlayerGameStatus.JoinedGame;
             var adminBypass = _cfg.GetCVar(CCVars.AdminBypassMaxPlayers) && adminData != null;
             var softPlayerCount = _plyMgr.PlayerCount;
+            // Nebula start
+            if (_cfg.GetCVar(GoobCVars.QueueEnabled) && _ticker != null)
+                softPlayerCount = _ticker.AdmittedPlayerCount;
+            // Nebula end
 
             if (!_cfg.GetCVar(CCVars.AdminsCountForMaxPlayers))
             {
                 softPlayerCount -= _adminManager.ActiveAdmins.Count();
             }
 
-            if ((softPlayerCount >= _cfg.GetCVar(CCVars.SoftMaxPlayers) && !adminBypass) && !wasInGame)
+            if ((softPlayerCount >= _cfg.GetCVar(CCVars.SoftMaxPlayers) && !adminBypass) && !wasInGame && !_cfg.GetCVar(GoobCVars.QueueEnabled)) // Nebula edit
             {
                 return (ConnectionDenyReason.Full, Loc.GetString("soft-player-cap-full"), null);
             }

@@ -1,0 +1,72 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+         xmlns:parallax="clr-namespace:Content.Client.Parallax;assembly=Content.Client"
+         xmlns:queue="clr-namespace:Content.Client._Arcane.JoinQueue"
+         xmlns:nc="clr-namespace:Content.Client._Nebula.UserInterface.Controls"
+         xmlns:arcaneQueue="clr-namespace:Content.Client._Arcane.JoinQueue;assembly=Content.Client">
+    <parallax:ParallaxControl />
+    <Control Name="MiniGameLeaderboardPanel" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="96 0 0 0">
+        <nc:ShapedPanel StyleClasses="NebulaPanel" />
+        <arcaneQueue:QueueMiniGameLeaderboardControl Name="MiniGameLeaderboard"
+                                                     Margin="12 8" />
+    </Control>
+    <Control Name="QueueTimeLeaderboardPanel" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 96 0">
+        <nc:ShapedPanel StyleClasses="NebulaPanel" />
+        <arcaneQueue:QueueTimeLeaderboardControl Name="QueueTimeLeaderboard"
+                                                 Margin="12 8" />
+    </Control>
+
+    <Control Name="QueueCenterPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <nc:ShapedPanel StyleClasses="NebulaPanel" />
+        <BoxContainer Orientation="Vertical" MinSize="300 0" Margin="12 8">
+            <!-- Header -->
+            <BoxContainer Orientation="Horizontal" Margin="0 0 0 4">
+                <Label Text="{Loc 'queue-title'}"
+                       StyleClasses="NebulaTitle" VerticalAlignment="Center"
+                       HorizontalExpand="True" />
+                <nc:ShapedButton Name="QuitButton" Text="{Loc 'queue-quit'}"
+                                 StyleClasses="NebulaButtonTonal negative"
+                                 HorizontalAlignment="Right" />
+            </BoxContainer>
+            <PanelContainer StyleClasses="NebulaDivider" MinHeight="1" />
+
+            <!-- Queue stats -->
+            <BoxContainer Orientation="Horizontal" Margin="0 16 0 8"
+                          HorizontalAlignment="Center" SeparationOverride="24">
+                <BoxContainer Orientation="Vertical" HorizontalAlignment="Center">
+                    <Label Text="{Loc 'queue-position-label'}"
+                           StyleClasses="NebulaTextMuted" Align="Center" />
+                    <Label Name="QueuePosition"
+                           StyleClasses="LabelHeadingBigger" Align="Center"
+                           Margin="0 2 0 0" />
+                </BoxContainer>
+                <BoxContainer Orientation="Vertical" HorizontalAlignment="Center">
+                    <Label Text="{Loc 'queue-total-label'}"
+                           StyleClasses="NebulaTextMuted" Align="Center" />
+                    <Label Name="QueueTotal"
+                           StyleClasses="LabelHeadingBigger" Align="Center"
+                           Margin="0 2 0 0" />
+                </BoxContainer>
+            </BoxContainer>
+
+            <!-- Estimated wait -->
+            <Label Name="EstimatedWait"
+                   StyleClasses="NebulaTextMuted" Align="Center"
+                   Margin="0 0 0 8" />
+
+            <PanelContainer StyleClasses="NebulaDivider" MinHeight="1" />
+
+            <!-- Server info -->
+            <Label Name="ServerInfo"
+                   StyleClasses="NebulaTextMuted" Align="Center"
+                   Margin="0 8 0 4" />
+            <PanelContainer StyleClasses="NebulaDivider" MinHeight="1" Margin="0 8 0 4" />
+            <arcaneQueue:QueueMiniGameHostControl Name="MiniGameHost" Margin="0 4 0 0" HorizontalAlignment="Center" />
+        </BoxContainer>
+    </Control>
+    <queue:QueueCritterWalk Name="CritterWalk"
+                            VerticalAlignment="Bottom"
+                            HorizontalExpand="True"
+                            MinHeight="116" />
+</Control>

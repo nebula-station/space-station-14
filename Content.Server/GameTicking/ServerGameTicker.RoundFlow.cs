@@ -28,6 +28,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Robust.Shared.Enums;
 
 namespace Content.Server.GameTicking;
 
@@ -306,7 +307,7 @@ public sealed partial class ServerGameTicker
             if (LobbyEnabled && status == PlayerGameStatus.NotReadyToPlay)
                 continue;
 
-            if (!_playerManager.TryGetSessionById(userId, out _))
+            if (!_playerManager.TryGetSessionById(userId, out var session) || session.Status != SessionStatus.InGame) // Nebula edit
                 continue;
 
             total++;
@@ -345,7 +346,7 @@ public sealed partial class ServerGameTicker
             if (LobbyEnabled && status != PlayerGameStatus.ReadyToPlay)
                 continue;
 
-            if (!_playerManager.TryGetSessionById(userId, out var session))
+            if (!_playerManager.TryGetSessionById(userId, out var session) || session.Status != SessionStatus.InGame) // Nebula edit
                 continue;
 
             if (autoDeAdmin && _adminManager.IsAdmin(session))
@@ -653,7 +654,7 @@ public sealed partial class ServerGameTicker
         }
         else
         {
-            if (_playerManager.PlayerCount == 0)
+            if (GetAdmittedPlayerCount() == 0) // Nebula edit
                 _roundStartCountdownHasNotStartedYetDueToNoPlayers = true;
             else
                 _roundStartTime = Timing.CurTime + LobbyDuration;
@@ -693,6 +694,10 @@ public sealed partial class ServerGameTicker
         // Move everybody currently in the server to lobby.
         foreach (var player in _playerManager.Sessions)
         {
+            // Nebula start
+            if (player.Status != SessionStatus.InGame)
+                continue;
+            // Nebula end
             PlayerJoinLobby(player);
         }
 
@@ -734,6 +739,10 @@ public sealed partial class ServerGameTicker
         _playerGameStatuses.Clear();
         foreach (var session in _playerManager.Sessions)
         {
+            // Nebula start
+            if (session.Status != SessionStatus.InGame)
+                continue;
+            // Nebula end
             _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
         }
     }
