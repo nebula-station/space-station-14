@@ -266,32 +266,6 @@
   position: 10,1
 
 - type: technology
-  id: NightVision
-  name: research-technology-night-vision-name
-  description: research-technology-night-vision-desc
-  icon:
-    sprite: _White/Clothing/Eyes/Goggles/nightvision.rsi
-    state: icon
-  discipline: Engineering
-  tier: 4
-  announceChannels:
-  - Engineering
-  - Security
-  - Science
-  - Medical
-  pointCosts:
-  - type: General
-    amount: 10000
-  technologyPrerequisites:
-  - HUD
-  recipeUnlocks:
-  - ClothingEyesNightVisionGoggles
-  - ClothingEyesNightVisionSecurityGoggles
-  - ClothingEyesNightVisionMedicalGoggles
-  - ClothingEyesNightVisionDiagnosticGoggles
-  position: 11,0
-
-- type: technology
   id: LocalizedMagnetism
   name: research-technology-localized-magnetism-name
   description: research-technology-localized-magnetism-desc

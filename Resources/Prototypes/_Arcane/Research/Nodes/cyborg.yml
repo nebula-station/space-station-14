@@ -332,7 +332,7 @@
     amount: 12500
   technologyPrerequisites:
   - CyberOrgansUpgraded
-  - NightVision
+  # - NightVision # Nebula edit
   discountExperiments:
   - ScanningPeopleAndroid
   discountExperimentCosts:

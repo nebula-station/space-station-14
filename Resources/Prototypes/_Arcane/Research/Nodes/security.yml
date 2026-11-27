@@ -103,7 +103,7 @@
   technologyPrerequisites:
   - BeamWeapons
   - AnomalyShells
-  - NightVision
+  # - NightVision # Nebula edit
   position: -2,1
 
 - type: technology
