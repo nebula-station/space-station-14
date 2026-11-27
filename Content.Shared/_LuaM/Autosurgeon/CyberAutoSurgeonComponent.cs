@@ -34,6 +34,14 @@ public sealed partial class CyberAutoSurgeonComponent : Component
     public BodyPartType? ActiveHandPart;
     // Nebula end
 
+    // Nebula start
+    /// <summary>
+    /// Organs put into <see cref="TargetPart"/> after <see cref="NewOrgan"/>, each replacing the one in its slot.
+    /// </summary>
+    [DataField]
+    public List<EntProtoId<OrganComponent>> NewOrgans = [];
+    // Nebula end
+
     /// <summary>
     /// Puts a new organ of this prototype into every body part of <see cref="PartType"/>,
     /// like a mantis blade into both arms. Parts that already have their slot taken are skipped.

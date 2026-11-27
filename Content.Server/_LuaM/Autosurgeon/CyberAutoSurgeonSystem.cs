@@ -1,11 +1,13 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Ported from https://github.com/bluestarwing/monolith-ds/blob/169a1543ef/Content.Shared/_Goobstation/Autosurgeon/AutoSurgeonSystem.cs
 
+using System.Linq; // Nebula
 using Content.Goobstation.Shared.Autosurgeon;
 using Content.Medical.Common.Body;
 using Content.Medical.Shared.Body;
 using Content.Shared._LuaM.Autosurgeon;
 using Content.Shared._LuaM.Cyberware;
+using Content.Shared._Nebula.Implants; // Nebula
 using Content.Shared.Body;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Implants;
@@ -48,9 +50,28 @@ public sealed partial class CyberAutoSurgeonSystem : EntitySystem
 
         var coords = Transform(target).Coordinates;
 
+        // Nebula start
+        if (!CanInstall(target, ent.Comp.NewOrgan)
+            || !CanInstall(target, ent.Comp.OrganForEachPart)
+            || !CanInstall(target, ent.Comp.Implant)
+            || ent.Comp.NewOrgans.Any(organ => !CanInstall(target, organ)))
+        {
+            args.Handled = true;
+            return;
+        }
+        // Nebula end
+
         if (ent.Comp.NewOrgan is { } organProto
             && part != null) // Nebula edit
             TryInstall(part.Value, SpawnAtPosition(organProto, coords), replace: true);
+
+        // Nebula start
+        foreach (var organ in ent.Comp.NewOrgans)
+        {
+            if (_body.GetOrgan(target, ent.Comp.TargetPart) is { } newOrganPart)
+                TryInstall(newOrganPart, SpawnAtPosition(organ, coords), replace: true);
+        }
+        // Nebula end
 
         if (ent.Comp.OrganForEachPart is { } eachProto)
         {
@@ -75,6 +96,19 @@ public sealed partial class CyberAutoSurgeonSystem : EntitySystem
     }
 
     // Nebula start
+    private bool CanInstall(EntityUid target, EntProtoId? cyberware)
+    {
+        if (cyberware is not { } id)
+            return true;
+
+        var ev = new CyberwareInstallAttemptEvent(id);
+        RaiseLocalEvent(target, ref ev);
+        if (ev.Cancelled && ev.Reason != null)
+            _popup.PopupEntity(ev.Reason, target, target, PopupType.MediumCaution);
+
+        return !ev.Cancelled;
+    }
+
     private EntityUid? GetTargetPart(CyberAutoSurgeonComponent comp, EntityUid target)
     {
         if (comp.ActiveHandPart is not { } type)

@@ -47,7 +47,9 @@ public sealed partial class CnsRebooterSystem : EntitySystem
             || !TryComp<StaminaComponent>(body, out var stamina))
             return;
 
-        ent.Comp.NextUse = _timing.CurTime + ent.Comp.Cooldown;
+        var cooldown = new GetImplantCooldownEvent(body, ent.Comp.Cooldown);
+        RaiseLocalEvent(ent, ref cooldown);
+        ent.Comp.NextUse = _timing.CurTime + cooldown.Cooldown;
         ent.Comp.Recharging = true;
         Dirty(ent);
 

@@ -15,3 +15,33 @@
 
 - type: organCategory
   id: ThroatImplant
+
+- type: organCategory
+  id: FacePanelImplant
+
+- type: organCategory
+  id: VisualCortexImplant
+
+- type: organCategory
+  id: QuantumImplant
+
+- type: organCategory
+  id: AxolotlImplant
+
+- type: organCategory
+  id: NewtonImplant
+
+- type: organCategory
+  id: AdrenalineImplant
+
+- type: organCategory
+  id: StabilizerImplant
+
+- type: organCategory
+  id: RareBirdImplant
+
+- type: organCategory
+  id: InverterImplant
+
+- type: organCategory
+  id: EmpCoatingImplant

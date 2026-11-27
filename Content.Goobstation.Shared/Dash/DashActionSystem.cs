@@ -24,7 +24,7 @@ public sealed partial class DashActionSystem : EntitySystem
     private void OnDashAction(Entity<DashActionComponent> ent, ref DashActionEvent args)
     {
         // Nebula start
-        Dash(ent, args);
+        TryDash(ent, args);
     }
 
     /// <summary>
@@ -33,17 +33,20 @@ public sealed partial class DashActionSystem : EntitySystem
     [SubscribeLocalEvent]
     private void OnDashBroadcast(DashActionEvent args)
     {
-        Dash(args.Performer, args);
+        TryDash(args.Performer, args);
     }
 
-    private void Dash(EntityUid ent, DashActionEvent args)
+    /// <summary>
+    /// Dashes the entity towards the action target. Returns whether the throw started.
+    /// </summary>
+    public bool TryDash(EntityUid ent, DashActionEvent args)
     {
         // Nebula end
         if (args.Handled)
-            return;
+            return false; // Nebula edit
 
         if (args.NeedsGravity && _gravity.IsWeightless(ent)) // Nebula edit
-            return;
+            return false; // Nebula edit
 
         args.Handled = true;
         var vec = (_transform.ToMapCoordinates(args.Target).Position -
@@ -56,13 +59,15 @@ public sealed partial class DashActionSystem : EntitySystem
             speed *= speedcomp.CurrentSprintSpeed / speedcomp.BaseSprintSpeed;
         }
 
-        _throwing.TryThrow(ent, vec, speed, animated: false);
+        var thrown = _throwing.TryThrow(ent, vec, speed, animated: false); // Nebula edit
 
         if (args.StaminaDrain != null)
             _stamina.TakeStaminaDamage(ent, args.StaminaDrain.Value, visual: false, immediate: false);
 
         if (args.Emote is {} emote)
             _animatedEmotes.PlayEmoteAnimation(ent, emote);
+
+        return thrown; // Nebula
     }
 
     [SubscribeLocalEvent]

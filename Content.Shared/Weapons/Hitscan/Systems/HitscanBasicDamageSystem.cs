@@ -2,6 +2,7 @@
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Map;
 // </Trauma>
+using Content.Shared._Nebula.Weapons.Ranged;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Hitscan.Events;
@@ -30,6 +31,14 @@ public sealed partial class HitscanBasicDamageSystem : EntitySystem
             return;
 
         var dmg = ent.Comp.Damage * _damage.UniversalHitscanDamageModifier;
+        // Nebula start
+        if (args.Data.Shooter is { } shooter)
+        {
+            var userEv = new GetUserRangedDamageEvent(target, dmg);
+            RaiseLocalEvent(shooter, ref userEv);
+            dmg = userEv.Damage;
+        }
+        // Nebula end
 
         // <Trauma> - canBeCancelled
         if(!_damage.TryChangeDamage(target, dmg, out var damageDealt, origin: args.Data.Gun, canBeCancelled: true))

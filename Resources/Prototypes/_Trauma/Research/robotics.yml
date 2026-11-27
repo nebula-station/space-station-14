@@ -208,6 +208,7 @@
   - BasicCyberneticLungs
   - HypoportSecure
   - HandImplantAntiDrop # Nebula edit
+  - ChestImplantIsometricStabilizer # Nebula edit
   position: -6,4
   technologyPrerequisites:
   - BasicAugmentation

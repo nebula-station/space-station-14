@@ -236,3 +236,413 @@
     parts: [ Head ]
   - type: SurgeryOrganCondition
     organ: ThroatImplant
+
+# Face Panel Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenFacePanelImplant
+  name: Open Cavity For Face Panel Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: FacePanelImplant
+
+- type: entity
+  parent: BaseSurgeryInsertOrgan
+  id: SurgeryInsertFacePanelImplant
+  name: Insert Face Panel Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: FacePanelImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: FacePanelImplant
+
+- type: entity
+  parent: BaseSurgeryRemoveOrgan
+  id: SurgeryRemoveFacePanelImplant
+  name: Remove Face Panel Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: FacePanelImplant
+
+# Visual Cortex Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenVisualCortexImplant
+  name: Open Cavity For Visual Cortex Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: VisualCortexImplant
+
+- type: entity
+  parent: BaseSurgeryInsertOrgan
+  id: SurgeryInsertVisualCortexImplant
+  name: Insert Visual Cortex Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: VisualCortexImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: VisualCortexImplant
+
+- type: entity
+  parent: BaseSurgeryRemoveOrgan
+  id: SurgeryRemoveVisualCortexImplant
+  name: Remove Visual Cortex Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: VisualCortexImplant
+
+# Quantum Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenQuantumImplant
+  name: Open Cavity For Quantum Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: QuantumImplant
+
+- type: entity
+  parent: BaseSurgeryInsertOrgan
+  id: SurgeryInsertQuantumImplant
+  name: Insert Quantum Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: QuantumImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: QuantumImplant
+
+- type: entity
+  parent: BaseSurgeryRemoveOrgan
+  id: SurgeryRemoveQuantumImplant
+  name: Remove Quantum Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: QuantumImplant
+
+# Axolotl Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenAxolotlImplant
+  name: Open Cavity For Axolotl Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: AxolotlImplant
+
+- type: entity
+  parent: BaseSurgeryInsertOrgan
+  id: SurgeryInsertAxolotlImplant
+  name: Insert Axolotl Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: AxolotlImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: AxolotlImplant
+
+- type: entity
+  parent: BaseSurgeryRemoveOrgan
+  id: SurgeryRemoveAxolotlImplant
+  name: Remove Axolotl Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: AxolotlImplant
+
+# Newton Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenNewtonImplant
+  name: Open Cavity For Newton Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: NewtonImplant
+
+- type: entity
+  parent: BaseSurgeryInsertOrgan
+  id: SurgeryInsertNewtonImplant
+  name: Insert Newton Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: NewtonImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: NewtonImplant
+
+- type: entity
+  parent: BaseSurgeryRemoveOrgan
+  id: SurgeryRemoveNewtonImplant
+  name: Remove Newton Implant
+  components:
+  - type: SurgeryPartCondition
+    parts: [ Head ]
+  - type: SurgeryOrganCondition
+    organ: NewtonImplant
+
+# Adrenaline Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenAdrenalineImplant
+  name: Open Cavity For Adrenaline Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: AdrenalineImplant
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertAdrenalineImplant
+  name: Insert Adrenaline Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: AdrenalineImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: AdrenalineImplant
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveAdrenalineImplant
+  name: Remove Adrenaline Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepClampInternalBleeders
+    - SurgeryStepRemoveOrgan
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: AdrenalineImplant
+
+# Stabilizer Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenStabilizerImplant
+  name: Open Cavity For Stabilizer Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: StabilizerImplant
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertStabilizerImplant
+  name: Insert Stabilizer Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: StabilizerImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: StabilizerImplant
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveStabilizerImplant
+  name: Remove Stabilizer Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepClampInternalBleeders
+    - SurgeryStepRemoveOrgan
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: StabilizerImplant
+
+# Rare Bird Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenRareBirdImplant
+  name: Open Cavity For Rare Bird Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: RareBirdImplant
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertRareBirdImplant
+  name: Insert Rare Bird Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: RareBirdImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: RareBirdImplant
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveRareBirdImplant
+  name: Remove Rare Bird Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepClampInternalBleeders
+    - SurgeryStepRemoveOrgan
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: RareBirdImplant
+
+# Inverter Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenInverterImplant
+  name: Open Cavity For Inverter Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: InverterImplant
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertInverterImplant
+  name: Insert Inverter Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: InverterImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: InverterImplant
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveInverterImplant
+  name: Remove Inverter Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepClampInternalBleeders
+    - SurgeryStepRemoveOrgan
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: InverterImplant
+
+# Emp Coating Implant
+
+- type: entity
+  parent: SurgeryOpenCavityBase
+  id: SurgeryOpenEmpCoatingImplant
+  name: Open Cavity For Emp Coating Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganSlotCondition
+    organSlot: EmpCoatingImplant
+
+- type: entity
+  parent: SurgeryInstallAugmentBase
+  id: SurgeryInsertEmpCoatingImplant
+  name: Insert Emp Coating Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepInsertOrgan
+    - SurgeryStepSealOrganWound
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: EmpCoatingImplant
+  - type: SurgeryOrganSlotCondition
+    organSlot: EmpCoatingImplant
+
+- type: entity
+  parent: SurgeryRemoveAugmentBase
+  id: SurgeryRemoveEmpCoatingImplant
+  name: Remove Emp Coating Implant
+  components:
+  - type: Surgery
+    requirement: SurgeryOpenIncision
+    steps:
+    - SurgeryStepClampInternalBleeders
+    - SurgeryStepRemoveOrgan
+  - type: SurgeryPartCondition
+    parts: [ Torso ]
+  - type: SurgeryOrganCondition
+    organ: EmpCoatingImplant

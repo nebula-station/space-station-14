@@ -63,3 +63,102 @@
   components:
   - type: CyberAutoSurgeon
     newOrgan: OrganCyberArmAngelRight
+
+# Cyberpunk implants
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonFacePanel
+  name: autosurgeon (imprinted face panel)
+  description: Installs an imprinted face panel into the head.
+  components:
+  - type: CyberAutoSurgeon
+    targetPart: Head
+    newOrgan: HeadImplantFacePanel
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonVisualCortex
+  name: autosurgeon (visual cortex stimulator)
+  description: Wires a visual cortex stimulator into the head.
+  components:
+  - type: CyberAutoSurgeon
+    targetPart: Head
+    newOrgan: HeadImplantVisualCortex
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonQuantumRegulator
+  name: autosurgeon (quantum regulator)
+  description: Wires a quantum regulator into the head.
+  components:
+  - type: CyberAutoSurgeon
+    targetPart: Head
+    newOrgan: HeadImplantQuantumRegulator
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonAxolotl
+  name: autosurgeon (axolotl implant)
+  description: Wires an axolotl implant into the head.
+  components:
+  - type: CyberAutoSurgeon
+    targetPart: Head
+    newOrgan: HeadImplantAxolotl
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonIsometricStabilizer
+  name: autosurgeon (isometric stabilizer)
+  description: Installs an isometric stabilizer into the chest.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: ChestImplantIsometricStabilizer
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonPeripheralInverter
+  name: autosurgeon (peripheral inverter)
+  description: Installs a peripheral inverter into the chest.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: ChestImplantPeripheralInverter
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonDermalChitin
+  name: autosurgeon (chitin dermal plating)
+  description: Grows chitin plating under the skin, replacing any dermal armor.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: OrganDermalChitin
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonEmpCoating
+  name: autosurgeon (impulse coating)
+  description: Coats the implants of the body against EMP pulses.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: ChestImplantEmpCoating
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonAmortizer
+  name: autosurgeon (amortizer implant)
+  description: Installs an amortizer implant into the hand of your active arm.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgan: HandImplantAmortizer
+    activeHandPart: Hand
+
+- type: entity
+  parent: BaseAutosurgeonCyberwareSyndicate
+  id: AutosurgeonGorillaArms
+  name: autosurgeon (gorilla combat arms)
+  description: Replaces both of your arms with gorilla combat arms.
+  components:
+  - type: CyberAutoSurgeon
+    newOrgans:
+    - OrganCombatArmGorillaLeft
+    - OrganCombatArmGorillaRight

@@ -51,6 +51,7 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
+  - HandImplantAmortizer # Nebula edit
 
 - type: technology
   id: NonlethalAmmunition
@@ -220,6 +221,7 @@
   recipeUnlocks:
   - WeaponAdvancedLaser
   - PortableRecharger
+  - HeadImplantNewton # Nebula edit
 
 # Goobstation commented
 # - type: technology

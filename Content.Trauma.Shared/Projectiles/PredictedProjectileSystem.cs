@@ -3,6 +3,7 @@
 using Content.Goobstation.Common.Weapons.Penetration;
 using Content.Medical.Common.Targeting;
 using Content.Shared._ES.Camera;
+using Content.Shared._Nebula.Weapons.Ranged;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Destructible;
 using Content.Shared.Effects;
@@ -152,6 +153,14 @@ public sealed partial class PredictedProjectileSystem : EntitySystem
         var damageEv = new BeforeProjectileHitEvent(comp.Damage, target, shooter);
         RaiseLocalEvent(uid, ref damageEv);
         var dmg = damageEv.Damage * _damageable.UniversalProjectileDamageModifier;
+        // Nebula start
+        if (shooter is { } user)
+        {
+            var userEv = new GetUserRangedDamageEvent(target, dmg);
+            RaiseLocalEvent(user, ref userEv);
+            dmg = userEv.Damage;
+        }
+        // Nebula end
         var ev = new ProjectileHitEvent(dmg, target, shooter);
         RaiseLocalEvent(uid, ref ev);
 
