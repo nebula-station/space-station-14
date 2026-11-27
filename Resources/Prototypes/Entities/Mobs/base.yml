@@ -89,6 +89,7 @@
   - type: RadiationReceiver
   - type: Stamina
   - type: StunVisuals
+  - type: DirectionalEmoteTarget # Nebula edit
   - type: MobState
   - type: MobThresholds
     thresholds:

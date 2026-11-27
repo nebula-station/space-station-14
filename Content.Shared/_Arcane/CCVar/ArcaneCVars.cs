@@ -31,4 +31,22 @@ public sealed partial class ArcaneCVars
     /// </summary>
     public static readonly CVarDef<float> PrivateOrderMarkup =
         CVarDef.Create("economy.private_order_markup", 1.1f, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
+    ///     Enables directional emotes, seen only by the sender and the target.
+    /// </summary>
+    public static readonly CVarDef<bool> DirectionalEmotesEnabled =
+        CVarDef.Create("chat.directional_emotes_enabled", true, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
+    ///     Maximum distance to the target of a directional emote.
+    /// </summary>
+    public static readonly CVarDef<int> DirectionalEmoteRange =
+        CVarDef.Create("chat.directional_emotes_range", 3, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
+    ///     Maximum length of a directional emote.
+    /// </summary>
+    public static readonly CVarDef<int> DirectionalEmoteMaxLength =
+        CVarDef.Create("chat.directional_emotes_max_length", 10000, CVar.SERVER | CVar.REPLICATED);
 }

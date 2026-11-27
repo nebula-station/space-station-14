@@ -17,6 +17,7 @@ public sealed partial class TypingIndicatorSystem : SharedTypingIndicatorSystem
     private TimeSpan _lastTextChange;
     private bool _isClientTyping;
     private bool _isClientChatFocused;
+    private bool _isClientEmoteWindowActive; // Nebula edit
 
     public override void Initialize()
     {
@@ -24,6 +25,14 @@ public sealed partial class TypingIndicatorSystem : SharedTypingIndicatorSystem
 
         Subs.CVar(_cfg, CCVars.ChatShowTypingIndicator, OnShowTypingChanged);
     }
+
+    // Nebula start
+    public void ClientChangedWindowStatus(bool isOpen)
+    {
+        _isClientEmoteWindowActive = isOpen;
+        ClientUpdateTyping();
+    }
+    // Nebula end
 
     public void ClientChangedChatText()
     {
@@ -86,7 +95,7 @@ public sealed partial class TypingIndicatorSystem : SharedTypingIndicatorSystem
             return;
 
         var state = TypingIndicatorState.None;
-        if (_isClientChatFocused)
+        if (_isClientChatFocused || _isClientEmoteWindowActive) // Nebula edit
             state = _isClientTyping ? TypingIndicatorState.Typing : TypingIndicatorState.Idle;
 
         // send a networked event to server

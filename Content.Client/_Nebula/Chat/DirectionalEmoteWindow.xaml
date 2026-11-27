@@ -1,0 +1,20 @@
+<nc:NebulaWindow xmlns="https://spacestation14.io"
+                 xmlns:nc="clr-namespace:Content.Client._Nebula.UserInterface.Controls"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 x:Class="Content.Client._Nebula.Chat.DirectionalEmoteWindow"
+                 Title="{Loc directional-emote-title}"
+                 SetSize="520 260"
+                 MinSize="360 200">
+    <BoxContainer Orientation="Vertical" SeparationOverride="8" VerticalExpand="True">
+        <nc:ShapedPanel StyleClasses="NebulaCard" VerticalExpand="True">
+            <TextEdit Name="MessageInput" VerticalExpand="True" HorizontalExpand="True" Margin="6"/>
+        </nc:ShapedPanel>
+        <BoxContainer Orientation="Horizontal">
+            <Control HorizontalExpand="True"/>
+            <nc:ShapedButton Name="AcceptButton"
+                             StyleClasses="NebulaButtonFilled"
+                             MinWidth="110"
+                             Text="{Loc directional-emote-button}"/>
+        </BoxContainer>
+    </BoxContainer>
+</nc:NebulaWindow>
